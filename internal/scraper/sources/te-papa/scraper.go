@@ -1,21 +1,30 @@
 // Package tepapa scrapes public events from Te Papa Tongarewa, the Museum of New Zealand.
 //
-// TODO: Events are at https://www.tepapa.govt.nz/visit/whats-on
-// The site uses a Drupal CMS. Look for:
-//   - JSON-LD structured data (<script type="application/ld+json">)
-//   - An events API at /api/events or similar
-//   - The events listing page HTML structure
+// The site is a Next.js app that embeds all page data in a
+// <script id="__NEXT_DATA__" type="application/json"> tag, so no JS execution
+// is required.  Events live at:
 //
-// For now returns seed data.
+//	props.pageProps.bodySubscription.initialData.allSubLandingPages[0].content[0].cards[*].linkToPage
+//
+// where linkToPage.__typename == "EventPageRecord".
 package tepapa
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
+	"fmt"
+	"regexp"
+	"strconv"
+	"strings"
 	"time"
 
 	"github.com/jtrotsky/lectures.nz/internal/model"
 	"github.com/jtrotsky/lectures.nz/internal/scraper"
 )
+
+const listingURL = "https://www.tepapa.govt.nz/visit/events"
+const baseURL = "https://www.tepapa.govt.nz/"
 
 type Scraper struct{}
 
@@ -23,43 +32,149 @@ func (s *Scraper) Host() model.Host {
 	return model.Host{
 		Slug:        "te-papa",
 		Name:        "Te Papa Tongarewa",
-		Website:     "https://www.tepapa.govt.nz/visit/whats-on",
+		Website:     "https://www.tepapa.govt.nz/visit/events",
 		Description: "The Museum of New Zealand Te Papa Tongarewa hosts lectures, symposia, and public programmes exploring Aotearoa's natural and cultural heritage.",
 	}
 }
 
-func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	// TODO: Replace with real scraping.
-	// body, err := scraper.Fetch(ctx, "https://www.tepapa.govt.nz/visit/whats-on")
-	// if err != nil { return nil, err }
-	// return parseTePapaHTML(body)
+// nextData mirrors the relevant parts of Next.js __NEXT_DATA__.
+type nextData struct {
+	Props struct {
+		PageProps struct {
+			BodySubscription struct {
+				InitialData struct {
+					AllSubLandingPages []struct {
+						Content []struct {
+							Cards []struct {
+								LinkToPage struct {
+									Typename     string `json:"__typename"`
+									PrimaryTitle string `json:"primaryTitle"`
+									Slug         string `json:"slug"`
+									When         []struct {
+										StartDate string `json:"startDate"`
+										EndDate   string `json:"endDate"`
+										Time      string `json:"time"`
+									} `json:"when"`
+								} `json:"linkToPage"`
+							} `json:"cards"`
+						} `json:"content"`
+					} `json:"allSubLandingPages"`
+				} `json:"initialData"`
+			} `json:"bodySubscription"`
+		} `json:"pageProps"`
+	} `json:"props"`
+}
 
-	now := time.Now()
+var timeRe = regexp.MustCompile(`(?i)(\d{1,2})(?:\.(\d{2}))?\s*([ap]m)?`)
+
+// parseTimeStr extracts the start hour/minute from strings like:
+// "10.00am to 2.00pm", "10.30–11.30am", "7pm", "11am to 11.15am"
+func parseTimeStr(s string) (hour, min int, ok bool) {
+	lower := strings.ToLower(s)
+	m := timeRe.FindStringSubmatch(lower)
+	if m == nil {
+		return 0, 0, false
+	}
+	h, _ := strconv.Atoi(m[1])
+	mn := 0
+	if m[2] != "" {
+		mn, _ = strconv.Atoi(m[2])
+	}
+	period := m[3]
+	if period == "" {
+		// Infer AM/PM from anywhere in the string.
+		if strings.Contains(lower, "am") {
+			period = "am"
+		} else if strings.Contains(lower, "pm") {
+			period = "pm"
+		} else {
+			return 0, 0, false
+		}
+	}
+	if period == "pm" && h != 12 {
+		h += 12
+	} else if period == "am" && h == 12 {
+		h = 0
+	}
+	return h, mn, true
+}
+
+func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
+	body, err := scraper.Fetch(ctx, listingURL)
+	if err != nil {
+		return nil, fmt.Errorf("tepapa: fetch: %w", err)
+	}
+
+	// Extract __NEXT_DATA__ JSON from the HTML.
+	const startTag = `<script id="__NEXT_DATA__" type="application/json">`
+	const endTag = `</script>`
+	start := bytes.Index(body, []byte(startTag))
+	if start < 0 {
+		return nil, fmt.Errorf("tepapa: __NEXT_DATA__ script tag not found")
+	}
+	jsonStart := start + len(startTag)
+	end := bytes.Index(body[jsonStart:], []byte(endTag))
+	if end < 0 {
+		return nil, fmt.Errorf("tepapa: closing </script> not found after __NEXT_DATA__")
+	}
+	raw := body[jsonStart : jsonStart+end]
+
+	var nd nextData
+	if err := json.Unmarshal(raw, &nd); err != nil {
+		return nil, fmt.Errorf("tepapa: unmarshal __NEXT_DATA__: %w", err)
+	}
+
 	loc, _ := time.LoadLocation("Pacific/Auckland")
 	if loc == nil {
 		loc = time.UTC
 	}
 
-	return []model.Lecture{
-		{
-			ID:        scraper.MakeID("https://www.tepapa.govt.nz/events/2026/04/maori-collections-symposium"),
-			Title:     "Taonga Māori Symposium: Collections, Repatriation, and Digital Futures",
-			Link:      "https://www.tepapa.govt.nz/visit/whats-on",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+6, 10, 0, 0, 0, loc),
-			Summary:   "Iwi representatives, curators, and digital archivists discuss the future of taonga Māori in national collections, repatriation processes, and digital access.",
-			Free:      true,
-			Location:  "Te Papa Tongarewa, 55 Cable Street, Wellington",
-			HostSlug:  "te-papa",
-		},
-		{
-			ID:        scraper.MakeID("https://www.tepapa.govt.nz/events/2026/04/ocean-lecture"),
-			Title:     "Moana: New Research on New Zealand's Marine Environment",
-			Link:      "https://www.tepapa.govt.nz/visit/whats-on",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+15, 18, 0, 0, 0, loc),
-			Summary:   "Marine biologists and ocean scientists present the latest findings from New Zealand's vast exclusive economic zone, including deep-sea discoveries and climate impacts.",
-			Free:      true,
-			Location:  "Te Papa Tongarewa, 55 Cable Street, Wellington",
-			HostSlug:  "te-papa",
-		},
-	}, nil
+	pages := nd.Props.PageProps.BodySubscription.InitialData.AllSubLandingPages
+	if len(pages) == 0 || len(pages[0].Content) == 0 {
+		return nil, fmt.Errorf("tepapa: no content sections found in __NEXT_DATA__")
+	}
+
+	var lectures []model.Lecture
+	for _, content := range pages[0].Content {
+		for _, card := range content.Cards {
+			lp := card.LinkToPage
+			if lp.Typename != "EventPageRecord" {
+				continue
+			}
+			if lp.PrimaryTitle == "" || lp.Slug == "" {
+				continue
+			}
+
+			eventURL := baseURL + lp.Slug
+
+			// Use the first date entry that has a startDate.
+			for _, when := range lp.When {
+				if when.StartDate == "" {
+					continue
+				}
+				date, err := time.Parse("2006-01-02", when.StartDate)
+				if err != nil {
+					continue
+				}
+
+				h, mn, ok := parseTimeStr(when.Time)
+				if !ok {
+					h, mn = 10, 0 // default to 10am if unparseable
+				}
+				t := time.Date(date.Year(), date.Month(), date.Day(), h, mn, 0, 0, loc)
+
+				lectures = append(lectures, model.Lecture{
+					ID:       scraper.MakeID(eventURL + when.StartDate),
+					Title:    lp.PrimaryTitle,
+					Link:     eventURL,
+					TimeStart: t,
+					Location: "Te Papa Tongarewa, 55 Cable Street, Wellington",
+					HostSlug: "te-papa",
+				})
+				break // only take the first date per event card
+			}
+		}
+	}
+
+	return lectures, nil
 }
