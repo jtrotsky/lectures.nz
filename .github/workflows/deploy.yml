@@ -11,6 +11,9 @@ on:
 jobs:
   collect-build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
 
     steps:
       - name: Checkout
