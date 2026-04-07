@@ -1,23 +1,26 @@
 // Package auckland scrapes public lecture events from the University of Auckland.
 //
-// TODO: The University of Auckland events page (https://www.auckland.ac.nz/en/news/events.html)
-// is rendered client-side with JavaScript. To scrape it properly you would need either:
-//   - A headless browser (e.g. chromedp)
-//   - Their internal API endpoint (check network tab for XHR/fetch calls)
+// The University of Auckland runs an events portal at https://unievents.auckland.ac.nz/
+// which is an Ionic SPA, but it calls a public API at:
 //
-// The page appears to use an Adobe Experience Manager (AEM) backend. Look for endpoints like:
-//   https://www.auckland.ac.nz/bin/api/events?category=public-lectures&...
+//	https://apis.auckland.ac.nz/events-portal-access/v1/events
 //
-// For now this scraper returns realistic seed data so the site works end-to-end.
+// The API returns all events (168+) including music workshops, campus tours, etc.
+// We filter to lectures, talks, seminars, and similar by keyword and category.
 package auckland
 
 import (
 	"context"
+	"encoding/json"
+	"fmt"
+	"strings"
 	"time"
 
 	"github.com/jtrotsky/lectures.nz/internal/model"
 	"github.com/jtrotsky/lectures.nz/internal/scraper"
 )
+
+const apiURL = "https://apis.auckland.ac.nz/events-portal-access/v1/events"
 
 // Scraper implements scraper.Scraper for University of Auckland.
 type Scraper struct{}
@@ -26,62 +29,129 @@ func (s *Scraper) Host() model.Host {
 	return model.Host{
 		Slug:        "auckland",
 		Name:        "University of Auckland",
-		Website:     "https://www.auckland.ac.nz/en/news/events.html",
+		Website:     "https://unievents.auckland.ac.nz/",
 		Description: "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
-		Icon:        "https://www.auckland.ac.nz/favicon.ico",
 	}
 }
 
-func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	// TODO: Replace with real scraping once the AEM API endpoint is identified.
-	// Attempt:
-	//   body, err := scraper.Fetch(ctx, "https://www.auckland.ac.nz/en/news/events.html")
-	//   if err != nil { return nil, err }
-	//   return parseAucklandHTML(body)
+type apiEvent struct {
+	EventID          string  `json:"eventId"`
+	Name             string  `json:"name"`
+	URL              string  `json:"url"`
+	StartDateTime    string  `json:"startDateTime"`
+	EndDateTime      string  `json:"endDateTime"`
+	Summary          string  `json:"summary"`
+	OrganisationName string  `json:"organisationName"`
+	CategoryName     string  `json:"categoryName"`
+	SubcategoryName  string  `json:"subcategoryName"`
+	IsFree           bool    `json:"isFree"`
+	LowestPrice      float64 `json:"lowestPrice"`
+	HighestPrice     float64 `json:"highestPrice"`
+	Location         struct {
+		Name        string `json:"name"`
+		Address1    string `json:"address1"`
+		Address2    string `json:"address2"`
+		City        string `json:"city"`
+		DisplayName string `json:"displayName"`
+	} `json:"location"`
+}
 
-	now := time.Now()
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
+// lectureKeywords identifies events worth including.
+var lectureKeywords = []string{
+	"lecture", "inaugural lecture", "professorial lecture",
+	"seminar", "symposium", "colloquium",
+	"talk", "keynote", "panel",
+	"forum", "workshop", "discussion",
+	"curator talk", "public talk",
+}
+
+// excludeCategories are broad categories we skip entirely.
+var excludeCategories = map[string]bool{
+	"Music": true,
+}
+
+func isLectureEvent(e apiEvent) bool {
+	if excludeCategories[e.CategoryName] {
+		return false
+	}
+	// Exclude purely online events.
+	if e.Location.Name == "Online" || (e.Location.City == "" && e.Location.Address1 == "") {
+		return false
+	}
+	// Must be in Auckland.
+	if e.Location.City != "" && e.Location.City != "Auckland" {
+		return false
+	}
+	text := strings.ToLower(e.Name + " " + e.Summary + " " + e.SubcategoryName)
+	for _, kw := range lectureKeywords {
+		if strings.Contains(text, kw) {
+			return true
+		}
+	}
+	return false
+}
+
+func buildLocation(e apiEvent) string {
+	loc := e.Location
+	if loc.Name != "" && loc.Address1 != "" {
+		return loc.Name + ", " + loc.Address1 + ", Auckland"
+	}
+	if loc.DisplayName != "" {
+		return loc.DisplayName
+	}
+	if loc.Name != "" {
+		return loc.Name + ", Auckland"
+	}
+	return "Auckland"
+}
+
+func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
+	body, err := scraper.Fetch(ctx, apiURL)
+	if err != nil {
+		return nil, fmt.Errorf("auckland: fetch: %w", err)
 	}
 
-	lectures := []model.Lecture{
-		{
-			ID:        scraper.MakeID("https://www.auckland.ac.nz/events/2026/04/climate-futures"),
-			Title:     "Climate Futures: Science, Policy and Hope",
-			Link:      "https://www.auckland.ac.nz/en/news/events.html",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+3, 18, 0, 0, 0, loc),
-			Summary:   "A public lecture exploring New Zealand's role in addressing the climate crisis, with perspectives from leading researchers and policymakers.",
-			Free:      true,
-			Location:  "Owen G Glenn Building, Level 1, 12 Grafton Road, Auckland City",
-			Speakers: []model.Speaker{
-				{Name: "Professor James Renwick", Bio: "Climate scientist at Victoria University of Wellington, IPCC author"},
-			},
-			HostSlug: "auckland",
-		},
-		{
-			ID:        scraper.MakeID("https://www.auckland.ac.nz/events/2026/04/te-tiriti-today"),
-			Title:     "Te Tiriti o Waitangi Today: Constitutional Conversations",
-			Link:      "https://www.auckland.ac.nz/en/news/events.html",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+7, 17, 30, 0, 0, loc),
-			Summary:   "Distinguished scholars examine the ongoing relevance of Te Tiriti o Waitangi in contemporary New Zealand constitutional arrangements.",
-			Free:      true,
-			Location:  "Faculty of Law, 9 Eden Crescent, Auckland",
-			Speakers: []model.Speaker{
-				{Name: "Associate Professor Carwyn Jones", Bio: "Faculty of Law, University of Auckland"},
-			},
-			HostSlug: "auckland",
-		},
-		{
-			ID:        scraper.MakeID("https://www.auckland.ac.nz/events/2026/04/neuroscience-sleep"),
-			Title:     "The Neuroscience of Sleep: Why Rest is Your Brain's Superpower",
-			Link:      "https://www.auckland.ac.nz/en/news/events.html",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+10, 18, 30, 0, 0, loc),
-			Summary:   "Discover the latest research into sleep, memory consolidation, and what happens to your brain during those vital hours of rest.",
-			Free:      true,
-			Location:  "School of Medical Sciences, 85 Park Road, Grafton, Auckland",
+	var events []apiEvent
+	if err := json.Unmarshal(body, &events); err != nil {
+		return nil, fmt.Errorf("auckland: unmarshal: %w", err)
+	}
+
+	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
+	if nzLoc == nil {
+		nzLoc = time.UTC
+	}
+
+	var lectures []model.Lecture
+	for _, e := range events {
+		if !isLectureEvent(e) {
+			continue
+		}
+		if e.StartDateTime == "" {
+			continue
+		}
+		// API returns local NZ time without timezone, e.g. "2026-05-07T10:30:00"
+		t, err := time.ParseInLocation("2006-01-02T15:04:05", e.StartDateTime, nzLoc)
+		if err != nil {
+			continue
+		}
+
+		cost := ""
+		free := e.IsFree || e.LowestPrice == 0
+		if !free && e.LowestPrice > 0 {
+			cost = fmt.Sprintf("$%.0f", e.LowestPrice)
+		}
+
+		lectures = append(lectures, model.Lecture{
+			ID:        scraper.MakeID(e.URL),
+			Title:     e.Name,
+			Link:      e.URL,
+			TimeStart: t,
+			Summary:   e.Summary,
+			Location:  buildLocation(e),
+			Free:      free,
+			Cost:      cost,
 			HostSlug:  "auckland",
-		},
+		})
 	}
 
 	return lectures, nil
