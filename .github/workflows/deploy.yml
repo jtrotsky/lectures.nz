@@ -1,0 +1,39 @@
+name: Collect, Build & Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Daily at 6:00 AM NZST = 18:00 UTC (previous day)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  collect-build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+          cache: true
+
+      - name: Collect lectures
+        run: go run ./cmd/collect
+        timeout-minutes: 5
+
+      - name: Build site
+        run: go run ./cmd/build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: lectures-nz
+          directory: public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

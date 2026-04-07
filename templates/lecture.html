@@ -1,0 +1,130 @@
+{{define "title"}}{{.Lecture.Title}} — lectures.nz{{end}}
+
+{{define "description"}}{{if .Lecture.Summary}}{{.Lecture.Summary}}{{else}}{{.Lecture.Title}} at {{.Host.Name}}.{{end}}{{end}}
+
+{{define "main"}}
+<div class="page-lecture">
+  <nav class="breadcrumb">
+    <a href="/">lectures.nz</a>
+    <span aria-hidden="true">›</span>
+    <a href="/{{.Host.Slug}}/">{{.Host.Name}}</a>
+    <span aria-hidden="true">›</span>
+    <span>{{.Lecture.Title}}</span>
+  </nav>
+
+  <article class="lecture-detail">
+    <header class="lecture-detail-header">
+      {{if .Lecture.Image}}
+      <div class="lecture-image">
+        <img src="{{.Lecture.Image}}" alt="{{.Lecture.Title}}">
+      </div>
+      {{end}}
+
+      <div class="lecture-host-badge">
+        <a href="/{{.Host.Slug}}/">{{.Host.Name}}</a>
+      </div>
+
+      <h1 class="lecture-detail-title">{{.Lecture.Title}}</h1>
+
+      <div class="lecture-detail-when">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <time datetime="{{.Lecture.TimeStart.Format "2006-01-02T15:04:05Z07:00"}}">
+          {{.Lecture.TimeStart.Format "Monday, 2 January 2006 at 3:04 PM"}}
+        </time>
+        {{if .Lecture.TimeEnd}}
+        – <time datetime="{{.Lecture.TimeEnd.Format "2006-01-02T15:04:05Z07:00"}}">
+            {{.Lecture.TimeEnd.Format "3:04 PM"}}
+          </time>
+        {{end}}
+      </div>
+
+      {{if .Lecture.Location}}
+      <div class="lecture-detail-where">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>{{.Lecture.Location}}</span>
+      </div>
+      {{end}}
+
+      <div class="lecture-detail-cost">
+        {{if .Lecture.Free}}
+        <span class="badge badge-free">Free admission</span>
+        {{else if .Lecture.Cost}}
+        <span class="badge badge-cost">{{.Lecture.Cost}}</span>
+        {{end}}
+      </div>
+    </header>
+
+    {{if .Lecture.Speakers}}
+    <section class="lecture-speakers">
+      <h2>Speaker{{if gt (len .Lecture.Speakers) 1}}s{{end}}</h2>
+      <ul class="speakers-list">
+        {{range .Lecture.Speakers}}
+        <li class="speaker-item">
+          <strong class="speaker-name">{{.Name}}</strong>
+          {{if .Bio}}<p class="speaker-bio">{{.Bio}}</p>{{end}}
+        </li>
+        {{end}}
+      </ul>
+    </section>
+    {{end}}
+
+    {{if .Lecture.SummaryHTML}}
+    <section class="lecture-summary-section">
+      <h2>About this lecture</h2>
+      <div class="lecture-body-text">{{.Lecture.SummaryHTML}}</div>
+    </section>
+    {{else if .Lecture.Summary}}
+    <section class="lecture-summary-section">
+      <h2>About this lecture</h2>
+      <div class="lecture-body-text">
+        <p>{{.Lecture.Summary}}</p>
+      </div>
+    </section>
+    {{end}}
+
+    <footer class="lecture-detail-footer">
+      <a href="{{.Lecture.Link}}" class="btn btn-primary" target="_blank" rel="noopener">
+        Register / More info →
+      </a>
+      <details class="cal-picker">
+        <summary class="btn btn-secondary">Add to calendar ▾</summary>
+        <ul class="cal-picker-list">
+          <li><a href="{{gcalURL .Lecture}}" target="_blank" rel="noopener">Google Calendar</a></li>
+          <li><a href="{{outlookURL .Lecture}}" target="_blank" rel="noopener">Outlook</a></li>
+          <li><a href="{{yahooURL .Lecture}}" target="_blank" rel="noopener">Yahoo Calendar</a></li>
+          <li><a href="/{{.Host.Slug}}/{{.Lecture.ID}}/calendar.ics">Apple / iCal (.ics)</a></li>
+        </ul>
+      </details>
+    </footer>
+  </article>
+
+  <aside class="lecture-more">
+    {{if .MoreLectures}}
+    <h2>More from {{.Host.Name}}</h2>
+    <ul class="lecture-list lecture-list--compact">
+      {{range .MoreLectures}}
+      <li class="lecture-item">
+        <a href="/{{.HostSlug}}/{{.ID}}/" class="lecture-link">
+          <div class="lecture-time">
+            <div class="lecture-date-day">{{.TimeStart.Format "2 Jan"}}</div>
+          </div>
+          <div class="lecture-body">
+            <h3 class="lecture-title">{{.Title}}</h3>
+          </div>
+          <div class="lecture-arrow" aria-hidden="true">→</div>
+        </a>
+      </li>
+      {{end}}
+    </ul>
+    {{end}}
+  </aside>
+</div>
+{{end}}

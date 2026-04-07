@@ -1,0 +1,15 @@
+# Generated data (run `make collect` to regenerate)
+data/
+
+# Generated site (run `make build` to regenerate)
+public/
+
+# Go build artifacts
+*.exe
+*.test
+*.out
+
+# Editor
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,67 @@
+{{define "title"}}lectures.nz — New Zealand Public Lectures{{end}}
+
+{{define "description"}}Upcoming public lectures, seminars, and talks at New Zealand universities and institutions. Free and ticketed events.{{end}}
+
+{{define "main"}}
+<div class="page-index">
+  <div class="index-hero">
+    <h1 class="hero-title">Public lectures<br>in New Zealand</h1>
+    <p class="hero-sub">
+      Upcoming talks at universities and institutions across Aotearoa.
+      Free and ticketed events.
+    </p>
+    <div class="hero-hosts">
+      {{range .Hosts}}
+      <a href="/{{.Slug}}/" class="host-chip">{{.Name}}</a>
+      {{end}}
+    </div>
+  </div>
+
+  <div class="lectures-container" id="lectures-container">
+    <div id="no-results" class="no-results" hidden>
+      <p>No lectures found for "<span id="no-results-query"></span>".</p>
+      <button onclick="clearSearch()">Clear search</button>
+    </div>
+
+    {{range .Groups}}
+    <section class="date-group" data-date="{{.DateKey}}">
+      <h2 class="date-heading">{{.DateLabel}}</h2>
+      <ul class="lecture-list">
+        {{range .Lectures}}
+        <li class="lecture-item" data-id="{{.ID}}" data-host="{{.HostSlug}}">
+          <a href="/{{.HostSlug}}/{{.ID}}/" class="lecture-link">
+            <div class="lecture-time">
+              <time datetime="{{.TimeStart.Format "2006-01-02T15:04:05Z07:00"}}">
+                {{.TimeStart.Format "3:04 PM"}}
+              </time>
+            </div>
+            <div class="lecture-body">
+              <h3 class="lecture-title">{{.Title}}</h3>
+              {{if .Summary}}
+              <p class="lecture-summary">{{.Summary}}</p>
+              {{end}}
+              <div class="lecture-meta">
+                {{if .Location}}<span class="meta-location">{{.Location}}</span>{{end}}
+                {{if .Speakers}}
+                <span class="meta-speakers">
+                  {{range $i, $s := .Speakers}}{{if $i}}, {{end}}{{$s.Name}}{{end}}
+                </span>
+                {{end}}
+                <span class="meta-host">{{.HostSlug}}</span>
+                {{if .Free}}<span class="meta-free">Free</span>{{else if .Cost}}<span class="meta-cost">{{.Cost}}</span>{{end}}
+              </div>
+            </div>
+            <div class="lecture-arrow" aria-hidden="true">→</div>
+          </a>
+        </li>
+        {{end}}
+      </ul>
+    </section>
+    {{else}}
+    <div class="empty-state">
+      <p>No upcoming lectures found. Check back soon.</p>
+    </div>
+    {{end}}
+  </div>
+</div>
+{{end}}
