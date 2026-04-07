@@ -104,21 +104,7 @@
     }, 0);
   }
 
-  // ---- IP-based city detection (runs once if no city stored) ------------
-
-  function detectCity() {
-    if (activeCity) return; // already set
-    fetch('https://ipapi.co/json/')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        const city = data.city || '';
-        // Only auto-set if it's a recognised NZ city
-        if (NZ_CITIES.includes(city)) {
-          setCity(city);
-        }
-      })
-      .catch(function () { /* silently ignore — user can set manually */ });
-  }
+  // City is set manually via the picker — no third-party geolocation calls.
 
   // ---- Fuzzy search -----------------------------------------------------
 
@@ -261,7 +247,6 @@
   // ---- Init ------------------------------------------------------------
 
   renderCityPill();
-  detectCity();
 
   const initialQuery = getQueryFromURL();
   if (initialQuery && searchInput) {
