@@ -312,6 +312,8 @@ ul, ol {
   border: 1px solid var(--border);
   color: var(--fg2);
   font-size: 0.8rem;
+  font-family: var(--font);
+  cursor: pointer;
   transition: all var(--transition);
   text-decoration: none;
 }
@@ -321,6 +323,13 @@ ul, ol {
   border-color: var(--accent);
   color: var(--accent);
   text-decoration: none;
+}
+
+.host-chip--active {
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* ----- Date groups --------------------------------------------------- */

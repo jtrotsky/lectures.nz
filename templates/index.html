@@ -10,9 +10,9 @@
       Upcoming talks at universities and institutions across Aotearoa.
       Free and ticketed events.
     </p>
-    <div class="hero-hosts">
+    <div class="hero-hosts" id="host-chips">
       {{range .Hosts}}
-      <a href="/{{.Slug}}/" class="host-chip">{{.Name}}</a>
+      <button class="host-chip" data-host="{{.Slug}}" type="button">{{.Name}}</button>
       {{end}}
     </div>
   </div>

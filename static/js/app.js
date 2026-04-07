@@ -15,6 +15,28 @@
 
   const NZ_CITIES = ['Auckland', 'Wellington', 'Christchurch', 'Dunedin', 'Hamilton', 'Tauranga', 'Nelson', 'Napier', 'Palmerston North'];
 
+  // ---- Host filter state ------------------------------------------------
+
+  let activeHost = null;
+
+  function setHost(slug) {
+    activeHost = slug;
+    document.querySelectorAll('.host-chip').forEach(function (btn) {
+      btn.classList.toggle('host-chip--active', btn.dataset.host === slug);
+    });
+    applyFilter(currentQuery);
+  }
+
+  const hostChips = document.getElementById('host-chips');
+  if (hostChips) {
+    hostChips.addEventListener('click', function (e) {
+      const btn = e.target.closest('.host-chip');
+      if (!btn) return;
+      // Toggle off if already active
+      setHost(activeHost === btn.dataset.host ? null : btn.dataset.host);
+    });
+  }
+
   // ---- Location state ---------------------------------------------------
 
   const CITY_KEY = 'lectures_city';
@@ -165,6 +187,10 @@
       if (show && activeCity && lecture) {
         const itemCity = extractCity(lecture.location || '');
         show = itemCity === activeCity;
+      }
+
+      if (show && activeHost) {
+        show = item.dataset.host === activeHost;
       }
 
       item.hidden = !show;
