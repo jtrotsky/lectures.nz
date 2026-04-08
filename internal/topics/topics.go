@@ -3,6 +3,37 @@ package topics
 
 import "strings"
 
+// excludeKeywords are title substrings that indicate a non-lecture event.
+// Matched case-insensitively against the full title.
+var excludeKeywords = []string{
+	"open day",
+	"open evening",
+	"open house",
+	"orientation",
+	"graduation",
+	"commencement",
+	"storytime",
+	"story time",
+	"job fair",
+	"career fair",
+	"school holiday",
+	"kids ",
+	"children",
+	"family day",
+}
+
+// IsExcluded reports whether a lecture title looks like a non-lecture event
+// that should be filtered out (open days, orientations, children's events, etc.).
+func IsExcluded(title string) bool {
+	lower := strings.ToLower(title)
+	for _, kw := range excludeKeywords {
+		if strings.Contains(lower, kw) {
+			return true
+		}
+	}
+	return false
+}
+
 // Topic represents a broad subject area used for filtering.
 type Topic struct {
 	Slug     string

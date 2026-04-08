@@ -6,6 +6,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"html"
 	"log"
 	"os"
 	"sort"
@@ -100,6 +101,14 @@ func run() error {
 			}
 			if seen[l.ID] {
 				continue // dedup
+			}
+			// Decode HTML entities in text fields (e.g. &amp; &ndash; &mdash;).
+			l.Title = html.UnescapeString(l.Title)
+			l.Summary = html.UnescapeString(l.Summary)
+			// Skip non-lecture events (open days, orientations, etc.).
+			if topics.IsExcluded(l.Title) {
+				log.Printf("SKIP  [%s]: %q", l.HostSlug, l.Title)
+				continue
 			}
 			seen[l.ID] = true
 			if len(l.Tags) == 0 {
