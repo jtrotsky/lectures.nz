@@ -19,7 +19,10 @@ import (
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland"
 	aucklandartgallery "github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland-art-gallery"
 	artgallerynz "github.com/jtrotsky/lectures.nz/internal/scraper/sources/artgallery-nz"
+	aucklandmuseum "github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland-museum"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/aut"
+	gusfisher "github.com/jtrotsky/lectures.nz/internal/scraper/sources/gus-fisher"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/motat"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/canterbury"
 	nationallibrary "github.com/jtrotsky/lectures.nz/internal/scraper/sources/national-library"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/ockham"
@@ -53,6 +56,9 @@ func run() error {
 		&artgallerynz.Scraper{},
 		&studioone.Scraper{},
 		&publicrecord.Scraper{},
+		&aucklandmuseum.Scraper{},
+		&gusfisher.Scraper{},
+		&motat.Scraper{},
 	}
 
 	type result struct {
