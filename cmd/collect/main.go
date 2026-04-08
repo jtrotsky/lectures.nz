@@ -16,6 +16,7 @@ import (
 	"github.com/jtrotsky/lectures.nz/internal/scraper"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland"
 	aucklandartgallery "github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland-art-gallery"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/aut"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/canterbury"
 	nationallibrary "github.com/jtrotsky/lectures.nz/internal/scraper/sources/national-library"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/ockham"
@@ -36,6 +37,7 @@ func run() error {
 
 	scrapers := []scraper.Scraper{
 		&auckland.Scraper{},
+		&aut.Scraper{},
 		&ockham.Scraper{},
 		&victoria.Scraper{},
 		&otago.Scraper{},
