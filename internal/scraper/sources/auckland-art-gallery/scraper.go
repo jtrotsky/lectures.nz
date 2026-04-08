@@ -1,20 +1,31 @@
 // Package aucklandartgallery scrapes public events from Auckland Art Gallery Toi o Tāmaki.
 //
-// TODO: Events are listed at https://www.aucklandartgallery.com/whats-on
-// The site uses a standard CMS. Check for:
-//   - JSON-LD structured data on event pages
-//   - An events API endpoint (inspect network tab)
-//   - RSS feed at /whats-on/rss or similar
+// The site is a React SPA. Event URLs follow the pattern /whats-on/event/{slug} and are
+// linked from the main /whats-on page. Each event page embeds its data as:
 //
-// For now returns seed data.
+//	window.__INITIAL_STATE__ = {...};
+//
+// We extract all event URLs from the listing page, then fetch each event page and parse
+// the embedded JSON for title, date, location, cost, and description.
 package aucklandartgallery
 
 import (
+	"bytes"
 	"context"
+	"encoding/json"
+	"fmt"
+	"regexp"
+	"strings"
 	"time"
 
 	"github.com/jtrotsky/lectures.nz/internal/model"
 	"github.com/jtrotsky/lectures.nz/internal/scraper"
+)
+
+const (
+	listingURL = "https://www.aucklandartgallery.com/whats-on"
+	baseURL    = "https://www.aucklandartgallery.com"
+	maxEvents  = 30
 )
 
 type Scraper struct{}
@@ -28,39 +39,222 @@ func (s *Scraper) Host() model.Host {
 	}
 }
 
-func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	// TODO: Replace with real scraping.
-	// body, err := scraper.Fetch(ctx, "https://www.aucklandartgallery.com/whats-on")
-	// if err != nil { return nil, err }
-	// return parseAAGHTML(body)
+// eventSlugRe matches /whats-on/event/{slug} hrefs.
+var eventSlugRe = regexp.MustCompile(`/whats-on/event/([a-z0-9\-]+)`)
 
-	now := time.Now()
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
+// lectureKeywords — event titles we consider lecture-like.
+var lectureKeywords = []string{
+	"talk", "lecture", "tour", "artist", "curator", "symposium",
+	"panel", "seminar", "workshop", "discussion", "conversation",
+	"forum", "presentation", "in conversation",
+}
+
+func isLectureLike(title string) bool {
+	lower := strings.ToLower(title)
+	for _, kw := range lectureKeywords {
+		if strings.Contains(lower, kw) {
+			return true
+		}
+	}
+	return false
+}
+
+func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
+	body, err := scraper.Fetch(ctx, listingURL)
+	if err != nil {
+		return nil, fmt.Errorf("auckland-art-gallery: fetch listing: %w", err)
 	}
 
-	return []model.Lecture{
-		{
-			ID:        scraper.MakeID("https://www.aucklandartgallery.com/events/2026/04/artist-talk-mataaho-collective"),
-			Title:     "Artist Talk: Mataaho Collective",
-			Link:      "https://www.aucklandartgallery.com/whats-on",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+5, 12, 0, 0, 0, loc),
-			Summary:   "Join the Mataaho Collective for an in-conversation event exploring their practice, the significance of tukutuku patterning, and their recent international commissions.",
-			Free:      true,
-			Location:  "Auckland Art Gallery Toi o Tāmaki, Cnr Kitchener & Wellesley Streets, Auckland",
-			HostSlug:  "auckland-art-gallery",
-		},
-		{
-			ID:        scraper.MakeID("https://www.aucklandartgallery.com/events/2026/04/curator-tour-modernism"),
-			Title:     "Curator's Tour: New Zealand Modernism",
-			Link:      "https://www.aucklandartgallery.com/whats-on",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+11, 14, 0, 0, 0, loc),
-			Summary:   "Senior curator guides visitors through the gallery's collection of New Zealand modernist works, discussing the movement's emergence and its tensions with international influences.",
-			Free:      false,
-			Cost:      "$15",
-			Location:  "Auckland Art Gallery Toi o Tāmaki, Cnr Kitchener & Wellesley Streets, Auckland",
-			HostSlug:  "auckland-art-gallery",
-		},
+	slugMatches := eventSlugRe.FindAllSubmatch(body, -1)
+	seen := make(map[string]bool)
+	var slugs []string
+	for _, m := range slugMatches {
+		slug := string(m[1])
+		if !seen[slug] {
+			seen[slug] = true
+			slugs = append(slugs, slug)
+		}
+		if len(slugs) >= maxEvents {
+			break
+		}
+	}
+
+	if len(slugs) == 0 {
+		return nil, fmt.Errorf("auckland-art-gallery: no event URLs found on listing page")
+	}
+
+	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
+	if nzLoc == nil {
+		nzLoc = time.UTC
+	}
+	now := time.Now()
+
+	var lectures []model.Lecture
+	for _, slug := range slugs {
+		eventURL := baseURL + "/whats-on/event/" + slug
+		lec, err := scrapeEventPage(ctx, eventURL, nzLoc)
+		if err != nil || lec == nil {
+			continue
+		}
+		if lec.TimeStart.Before(now) {
+			continue
+		}
+		if !isLectureLike(lec.Title) {
+			continue
+		}
+		lectures = append(lectures, *lec)
+	}
+
+	return lectures, nil
+}
+
+func scrapeEventPage(ctx context.Context, eventURL string, loc *time.Location) (*model.Lecture, error) {
+	body, err := scraper.Fetch(ctx, eventURL)
+	if err != nil {
+		return nil, err
+	}
+
+	raw := extractInitialState(body)
+	if raw == nil {
+		return nil, nil
+	}
+
+	var state map[string]interface{}
+	if err := json.Unmarshal(raw, &state); err != nil {
+		return nil, nil
+	}
+
+	event := findEventData(state)
+	if event == nil {
+		return nil, nil
+	}
+
+	title := stringField(event, "name", "title")
+	if title == "" {
+		return nil, nil
+	}
+
+	startMs := int64Field(event, "startDate", "start_date")
+	if startMs == 0 {
+		return nil, nil
+	}
+	t := time.Unix(startMs/1000, 0).In(loc)
+
+	location := stringField(event, "location")
+	if location == "" {
+		location = "Auckland Art Gallery Toi o Tāmaki, Cnr Kitchener & Wellesley Streets, Auckland"
+	} else {
+		location += ", Auckland Art Gallery Toi o Tāmaki, Auckland"
+	}
+
+	cost := stringField(event, "cost", "price")
+	free := cost == "" || strings.EqualFold(cost, "free")
+
+	summary := strings.TrimSpace(stripHTMLTags(stringField(event, "description", "summary")))
+	if len(summary) > 300 {
+		summary = summary[:300] + "…"
+	}
+
+	return &model.Lecture{
+		ID:        scraper.MakeID(eventURL),
+		Title:     title,
+		Link:      eventURL,
+		TimeStart: t,
+		Summary:   summary,
+		Location:  location,
+		Free:      free,
+		Cost:      cost,
+		HostSlug:  "auckland-art-gallery",
 	}, nil
+}
+
+// extractInitialState finds and returns the JSON blob from window.__INITIAL_STATE__ = {...};
+func extractInitialState(body []byte) []byte {
+	const marker = "window.__INITIAL_STATE__"
+	idx := bytes.Index(body, []byte(marker))
+	if idx < 0 {
+		return nil
+	}
+	start := bytes.IndexByte(body[idx:], '{')
+	if start < 0 {
+		return nil
+	}
+	start += idx
+
+	depth := 0
+	inStr := false
+	escaped := false
+	for i := start; i < len(body); i++ {
+		c := body[i]
+		if escaped {
+			escaped = false
+			continue
+		}
+		if c == '\\' && inStr {
+			escaped = true
+			continue
+		}
+		if c == '"' {
+			inStr = !inStr
+			continue
+		}
+		if inStr {
+			continue
+		}
+		if c == '{' {
+			depth++
+		} else if c == '}' {
+			depth--
+			if depth == 0 {
+				return body[start : i+1]
+			}
+		}
+	}
+	return nil
+}
+
+// findEventData searches the __INITIAL_STATE__ map for an object with both "name" and "startDate".
+func findEventData(m map[string]interface{}) map[string]interface{} {
+	if _, ok := m["startDate"]; ok {
+		if _, ok2 := m["name"]; ok2 {
+			return m
+		}
+	}
+	for _, v := range m {
+		if child, ok := v.(map[string]interface{}); ok {
+			if found := findEventData(child); found != nil {
+				return found
+			}
+		}
+	}
+	return nil
+}
+
+func stringField(m map[string]interface{}, keys ...string) string {
+	for _, k := range keys {
+		if v, ok := m[k]; ok {
+			if s, ok := v.(string); ok && s != "" {
+				return s
+			}
+		}
+	}
+	return ""
+}
+
+func int64Field(m map[string]interface{}, keys ...string) int64 {
+	for _, k := range keys {
+		if v, ok := m[k]; ok {
+			if n, ok := v.(float64); ok && n != 0 {
+				return int64(n)
+			}
+		}
+	}
+	return 0
+}
+
+var htmlTagRe = regexp.MustCompile(`<[^>]+>`)
+
+func stripHTMLTags(s string) string {
+	s = htmlTagRe.ReplaceAllString(s, " ")
+	return strings.Join(strings.Fields(s), " ")
 }

@@ -16,6 +16,7 @@ type Lecture struct {
 	Location    string     `json:"location,omitempty"`
 	Image       string     `json:"image,omitempty"`
 	Speakers    []Speaker  `json:"speakers,omitempty"`
+	Tags        []string   `json:"tags,omitempty"`
 	HostSlug    string     `json:"host_slug"`
 }
 

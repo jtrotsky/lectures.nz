@@ -10,17 +10,17 @@
       Upcoming talks at universities and institutions across Aotearoa.
       Free and ticketed events.
     </p>
-    <div class="hero-hosts" id="host-chips">
-      {{range .Hosts}}
-      <button class="host-chip" data-host="{{.Slug}}" type="button">{{.Name}}</button>
+    <div class="hero-topics" id="topic-chips">
+      {{range .Topics}}
+      <button class="topic-chip" data-topic="{{.Slug}}" type="button">{{.Label}}</button>
       {{end}}
     </div>
   </div>
 
   <div class="lectures-container" id="lectures-container">
     <div id="no-results" class="no-results" hidden>
-      <p>No lectures found for "<span id="no-results-query"></span>".</p>
-      <button onclick="clearSearch()">Clear search</button>
+      <p>No lectures found.</p>
+      <button onclick="clearFilter()">Clear filter</button>
     </div>
 
     {{range .Groups}}
@@ -28,7 +28,7 @@
       <h2 class="date-heading">{{.DateLabel}}</h2>
       <ul class="lecture-list">
         {{range .Lectures}}
-        <li class="lecture-item" data-id="{{.ID}}" data-host="{{.HostSlug}}">
+        <li class="lecture-item" data-id="{{.ID}}" data-host="{{.HostSlug}}" data-tags="{{range $i, $t := .Tags}}{{if $i}},{{end}}{{$t}}{{end}}">
           <a href="/{{.HostSlug}}/{{.ID}}/" class="lecture-link">
             <div class="lecture-time">
               <time datetime="{{.TimeStart.Format "2006-01-02T15:04:05Z07:00"}}">

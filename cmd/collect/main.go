@@ -14,6 +14,7 @@ import (
 
 	"github.com/jtrotsky/lectures.nz/internal/model"
 	"github.com/jtrotsky/lectures.nz/internal/scraper"
+	"github.com/jtrotsky/lectures.nz/internal/topics"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland"
 	aucklandartgallery "github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland-art-gallery"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/aut"
@@ -95,6 +96,9 @@ func run() error {
 				continue // dedup
 			}
 			seen[l.ID] = true
+			if len(l.Tags) == 0 {
+				l.Tags = topics.Infer(l.Title, l.Summary)
+			}
 			allLectures = append(allLectures, l)
 		}
 	}

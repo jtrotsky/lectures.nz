@@ -1,5 +1,5 @@
 /**
- * lectures.nz — client-side search, location filter & URL sync
+ * lectures.nz — topic filter, city filter & URL sync
  *
  * Pure vanilla JS, no dependencies.
  * Lectures data is embedded in the page as window.LECTURES_DATA (array of lecture objects).
@@ -8,36 +8,35 @@
 (function () {
   'use strict';
 
-  const searchInput = document.getElementById('search');
   const lectures = window.LECTURES_DATA || [];
 
-  // ---- Known NZ cities (used for location matching & detection) ----------
+  // ---- Known NZ cities -------------------------------------------------
 
   const NZ_CITIES = ['Auckland', 'Wellington', 'Christchurch', 'Dunedin', 'Hamilton', 'Tauranga', 'Nelson', 'Napier', 'Palmerston North'];
 
-  // ---- Host filter state ------------------------------------------------
+  // ---- Topic filter state ----------------------------------------------
 
-  let activeHost = null;
+  let activeTopic = null;
 
-  function setHost(slug) {
-    activeHost = slug;
-    document.querySelectorAll('.host-chip').forEach(function (btn) {
-      btn.classList.toggle('host-chip--active', btn.dataset.host === slug);
+  function setTopic(slug) {
+    activeTopic = slug;
+    document.querySelectorAll('.topic-chip').forEach(function (btn) {
+      btn.classList.toggle('topic-chip--active', btn.dataset.topic === slug);
     });
-    applyFilter(currentQuery);
+    applyFilter();
+    setTopicInURL(slug);
   }
 
-  const hostChips = document.getElementById('host-chips');
-  if (hostChips) {
-    hostChips.addEventListener('click', function (e) {
-      const btn = e.target.closest('.host-chip');
+  const topicChips = document.getElementById('topic-chips');
+  if (topicChips) {
+    topicChips.addEventListener('click', function (e) {
+      const btn = e.target.closest('.topic-chip');
       if (!btn) return;
-      // Toggle off if already active
-      setHost(activeHost === btn.dataset.host ? null : btn.dataset.host);
+      setTopic(activeTopic === btn.dataset.topic ? null : btn.dataset.topic);
     });
   }
 
-  // ---- Location state ---------------------------------------------------
+  // ---- Location state --------------------------------------------------
 
   const CITY_KEY = 'lectures_city';
   let activeCity = localStorage.getItem(CITY_KEY) || null;
@@ -58,7 +57,7 @@
       localStorage.removeItem(CITY_KEY);
     }
     renderCityPill();
-    applyFilter(currentQuery);
+    applyFilter();
   }
 
   function renderCityPill() {
@@ -94,7 +93,6 @@
     allBtn.onclick = function () { setCity(null); picker.remove(); };
     picker.appendChild(allBtn);
 
-    // Only show cities that have lectures
     const availableCities = new Set();
     for (const l of lectures) {
       const c = extractCity(l.location || '');
@@ -115,7 +113,6 @@
       pill.parentNode.insertBefore(picker, pill.nextSibling);
     }
 
-    // Close on outside click
     setTimeout(function () {
       document.addEventListener('click', function close(e) {
         if (!picker.contains(e.target) && e.target !== pill) {
@@ -126,158 +123,80 @@
     }, 0);
   }
 
-  // City is set manually via the picker — no third-party geolocation calls.
+  // ---- Filter logic (topic + city) -------------------------------------
 
-  // ---- Fuzzy search -----------------------------------------------------
-
-  function fuzzyScore(haystack, needle) {
-    if (!needle) return 1;
-    haystack = haystack.toLowerCase();
-    needle = needle.toLowerCase();
-    if (haystack.includes(needle)) return 100;
-    let hi = 0, ni = 0, score = 0;
-    while (hi < haystack.length && ni < needle.length) {
-      if (haystack[hi] === needle[ni]) { score++; ni++; }
-      hi++;
-    }
-    if (ni < needle.length) return 0;
-    return score;
-  }
-
-  function scoreLecture(lecture, query) {
-    if (!query) return 1;
-    const terms = query.trim().split(/\s+/).filter(Boolean);
-    let total = 0;
-    for (const term of terms) {
-      const titleScore    = fuzzyScore(lecture.title || '', term) * 10;
-      const speakerScore  = (lecture.speakers || []).reduce(function (acc, s) { return acc + fuzzyScore(s.name || '', term); }, 0) * 8;
-      const locationScore = fuzzyScore(lecture.location || '', term) * 5;
-      const summaryScore  = fuzzyScore(lecture.summary || '', term) * 2;
-      const hostScore     = fuzzyScore(lecture.host_slug || '', term) * 3;
-      const best = Math.max(titleScore, speakerScore, locationScore, summaryScore, hostScore);
-      if (best === 0) return 0;
-      total += best;
-    }
-    return total;
-  }
-
-  // ---- Filter logic (search + city) ------------------------------------
-
-  let currentQuery = '';
-
-  function applyFilter(query) {
-    currentQuery = query;
-    const q = query.trim();
-
-    const lectureMap = {};
-    for (const l of lectures) { lectureMap[l.id] = l; }
-
+  function applyFilter() {
     const items = document.querySelectorAll('.lecture-item');
     let visibleCount = 0;
 
     items.forEach(function (item) {
-      const id = item.dataset.id;
-      const lecture = lectureMap[id];
       let show = true;
 
-      if (q && lecture) {
-        show = scoreLecture(lecture, q) > 0;
+      if (activeTopic) {
+        const tags = (item.dataset.tags || '').split(',').filter(Boolean);
+        show = tags.includes(activeTopic);
       }
 
-      if (show && activeCity && lecture) {
-        const itemCity = extractCity(lecture.location || '');
+      if (show && activeCity) {
+        const id = item.dataset.id;
+        const lecture = lectures.find(function (l) { return l.id === id; });
+        const itemCity = lecture ? extractCity(lecture.location || '') : null;
         show = itemCity === activeCity;
-      }
-
-      if (show && activeHost) {
-        show = item.dataset.host === activeHost;
       }
 
       item.hidden = !show;
       if (show) visibleCount++;
     });
 
-    // Hide empty date groups
     document.querySelectorAll('.date-group').forEach(function (group) {
       group.hidden = group.querySelectorAll('.lecture-item:not([hidden])').length === 0;
     });
 
-    // No-results message
     const noResults = document.getElementById('no-results');
     if (noResults) {
-      const empty = visibleCount === 0 && (q || activeCity);
-      noResults.hidden = !empty;
-      if (empty) {
-        const qSpan = document.getElementById('no-results-query');
-        if (qSpan) qSpan.textContent = q || activeCity || '';
-      }
+      noResults.hidden = visibleCount > 0 || (!activeTopic && !activeCity);
     }
   }
 
-  // ---- URL query param sync --------------------------------------------
+  // ---- URL topic param sync --------------------------------------------
 
-  function getQueryFromURL() {
-    try { return new URLSearchParams(window.location.search).get('q') || ''; }
+  function getTopicFromURL() {
+    try { return new URLSearchParams(window.location.search).get('topic') || ''; }
     catch (e) { return ''; }
   }
 
-  function setQueryInURL(q) {
+  function setTopicInURL(slug) {
     try {
       const url = new URL(window.location.href);
-      if (q) { url.searchParams.set('q', q); } else { url.searchParams.delete('q'); }
+      if (slug) { url.searchParams.set('topic', slug); } else { url.searchParams.delete('topic'); }
       window.history.replaceState(null, '', url.toString());
     } catch (e) { /* ignore */ }
   }
 
-  // ---- Event wiring ----------------------------------------------------
+  // ---- Public API ------------------------------------------------------
 
-  if (searchInput) {
-    let debounceTimer = null;
-    searchInput.addEventListener('input', function () {
-      clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(function () {
-        const q = searchInput.value;
-        applyFilter(q);
-        setQueryInURL(q);
-      }, 120);
-    });
+  window.clearFilter = function () {
+    setTopic(null);
+  };
 
-    searchInput.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        searchInput.value = '';
-        applyFilter('');
-        setQueryInURL('');
-        searchInput.blur();
-      }
-    });
-
-    document.addEventListener('keydown', function (e) {
-      if (e.key === '/' && document.activeElement !== searchInput) {
-        e.preventDefault();
-        searchInput.focus();
-      }
-    });
-  }
+  // ---- City pill wiring ------------------------------------------------
 
   const cityPill = document.getElementById('city-pill');
   if (cityPill) {
     cityPill.addEventListener('click', showCityPicker);
   }
 
-  window.clearSearch = function () {
-    if (searchInput) searchInput.value = '';
-    applyFilter('');
-    setQueryInURL('');
-  };
-
   // ---- Init ------------------------------------------------------------
 
   renderCityPill();
 
-  const initialQuery = getQueryFromURL();
-  if (initialQuery && searchInput) {
-    searchInput.value = initialQuery;
+  const initialTopic = getTopicFromURL();
+  if (initialTopic) {
+    activeTopic = initialTopic;
+    const chip = document.querySelector('.topic-chip[data-topic="' + initialTopic + '"]');
+    if (chip) chip.classList.add('topic-chip--active');
   }
-  applyFilter(initialQuery);
+
+  applyFilter();
 
 })();

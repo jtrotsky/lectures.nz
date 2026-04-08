@@ -18,6 +18,7 @@ import (
 
 	"github.com/jtrotsky/lectures.nz/internal/calendar"
 	"github.com/jtrotsky/lectures.nz/internal/model"
+	"github.com/jtrotsky/lectures.nz/internal/topics"
 )
 
 // templateDir holds the path to the templates directory, set in run().
@@ -26,6 +27,7 @@ var templateDir string
 // templateData is passed to every page template.
 type templateData struct {
 	Hosts        []model.Host
+	Topics       []topics.Topic
 	LecturesJSON template.JS
 }
 
@@ -91,6 +93,7 @@ func run() error {
 	}
 	base := templateData{
 		Hosts:        hosts,
+		Topics:       topics.All(),
 		LecturesJSON: template.JS(lecturesJSONBytes),
 	}
 
