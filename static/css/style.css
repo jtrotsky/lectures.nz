@@ -206,6 +206,7 @@ ul, ol {
   padding: 0.3rem 0.7rem;
   cursor: pointer;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: color var(--transition), border-color var(--transition), background var(--transition);
 }
 
