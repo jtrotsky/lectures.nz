@@ -26,7 +26,14 @@ jobs:
           cache: true
 
       - name: Collect lectures
-        run: go run ./cmd/collect
+        id: collect
+        run: |
+          go run ./cmd/collect 2>&1 | tee /tmp/collect.log
+          # Write skipped events to the job summary
+          echo "## Collect run summary" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          grep -E 'OK|ERROR|SKIP|Wrote' /tmp/collect.log >> $GITHUB_STEP_SUMMARY || true
+          echo '```' >> $GITHUB_STEP_SUMMARY
         timeout-minutes: 5
 
       - name: Build site

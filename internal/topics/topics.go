@@ -20,6 +20,13 @@ var excludeKeywords = []string{
 	"kids ",
 	"children",
 	"family day",
+	"live day",
+	"nourish",
+	"cooking class",
+	"craft class",
+	"yoga",
+	"tai chi",
+	"knitting",
 }
 
 // IsExcluded reports whether a lecture title looks like a non-lecture event
