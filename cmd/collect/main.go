@@ -17,11 +17,14 @@ import (
 	"github.com/jtrotsky/lectures.nz/internal/topics"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland"
 	aucklandartgallery "github.com/jtrotsky/lectures.nz/internal/scraper/sources/auckland-art-gallery"
+	artgallerynz "github.com/jtrotsky/lectures.nz/internal/scraper/sources/artgallery-nz"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/aut"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/canterbury"
 	nationallibrary "github.com/jtrotsky/lectures.nz/internal/scraper/sources/national-library"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/ockham"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/otago"
+	publicrecord "github.com/jtrotsky/lectures.nz/internal/scraper/sources/public-record"
+	studioone "github.com/jtrotsky/lectures.nz/internal/scraper/sources/studio-one"
 	tepapa "github.com/jtrotsky/lectures.nz/internal/scraper/sources/te-papa"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/victoria"
 )
@@ -46,6 +49,9 @@ func run() error {
 		&aucklandartgallery.Scraper{},
 		&tepapa.Scraper{},
 		&nationallibrary.Scraper{},
+		&artgallerynz.Scraper{},
+		&studioone.Scraper{},
+		&publicrecord.Scraper{},
 	}
 
 	type result struct {
