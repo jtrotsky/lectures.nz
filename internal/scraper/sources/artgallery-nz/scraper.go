@@ -158,7 +158,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		link := baseURL + "/products/" + slug
 		lectures = append(lectures, model.Lecture{
 			ID:        scraper.MakeID(link),
-			Title:     title,
+			Title:     scraper.CleanTitle(title),
 			Link:      link,
 			TimeStart: t,
 			HostSlug:  "artgallery-nz",

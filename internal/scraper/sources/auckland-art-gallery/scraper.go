@@ -157,10 +157,10 @@ func scrapeEventPage(ctx context.Context, eventURL string, loc *time.Location) (
 
 	return &model.Lecture{
 		ID:        scraper.MakeID(eventURL),
-		Title:     title,
+		Title:     scraper.CleanTitle(title),
 		Link:      eventURL,
 		TimeStart: t,
-		Summary:   summary,
+		Summary:   scraper.TruncateSummary(summary, 200),
 		Location:  location,
 		Free:      free,
 		Cost:      cost,
