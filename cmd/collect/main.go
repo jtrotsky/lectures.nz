@@ -31,6 +31,7 @@ import (
 	studioone "github.com/jtrotsky/lectures.nz/internal/scraper/sources/studio-one"
 	tepapa "github.com/jtrotsky/lectures.nz/internal/scraper/sources/te-papa"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/victoria"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/eventbrite"
 )
 
 func main() {
@@ -59,6 +60,7 @@ func run() error {
 		&aucklandmuseum.Scraper{},
 		&gusfisher.Scraper{},
 		&motat.Scraper{},
+		&eventbrite.Scraper{},
 	}
 
 	type result struct {

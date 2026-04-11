@@ -27,6 +27,8 @@ jobs:
 
       - name: Collect lectures
         id: collect
+        env:
+          EVENTBRITE_TOKEN: ${{ secrets.EVENTBRITE_SECRET }}
         run: |
           go run ./cmd/collect 2>&1 | tee /tmp/collect.log
           # Write skipped events to the job summary
