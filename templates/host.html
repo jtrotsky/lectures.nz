@@ -2,73 +2,55 @@
 
 {{define "description"}}Upcoming public lectures from {{.Host.Name}}. {{.Host.Description}}{{end}}
 
+{{define "page-header"}}{{end}}
+
 {{define "main"}}
 <div class="page-host">
-  <div class="host-header">
-    <div class="host-header-inner">
-      {{if .Host.Icon}}
-      <img src="{{.Host.Icon}}" alt="{{.Host.Name}} logo" class="host-icon" width="48" height="48">
+
+  <header class="lecture-site-header">
+    <a href="/" class="lecture-site-title">Lectures NZ</a>
+  </header>
+
+  <section class="host-hero">
+    <div class="host-hero-inner">
+      <h1 class="host-hero-name">{{.Host.Name}}</h1>
+      {{if .Host.Description}}
+      <p class="host-hero-description">{{.Host.Description}}</p>
       {{end}}
-      <div class="host-info">
-        <h1 class="host-name">{{.Host.Name}}</h1>
-        {{if .Host.Description}}
-        <p class="host-description">{{.Host.Description}}</p>
+      <div class="host-hero-links">
+        <a href="{{.Host.Website}}" class="btn btn-secondary" target="_blank" rel="noopener">Official website →</a>
+        {{if .Host.Bluesky}}
+        <a href="https://bsky.app/profile/{{.Host.Bluesky}}" class="btn btn-secondary" target="_blank" rel="noopener">Bluesky</a>
         {{end}}
-        <div class="host-links">
-          <a href="{{.Host.Website}}" class="host-website" target="_blank" rel="noopener">
-            Official website →
-          </a>
-          {{if .Host.Bluesky}}
-          <a href="https://bsky.app/profile/{{.Host.Bluesky}}" class="host-bluesky" target="_blank" rel="noopener">
-            Bluesky
-          </a>
-          {{end}}
-          <a href="/{{.Host.Slug}}/calendar.ics" class="host-cal">
-            Subscribe to calendar
-          </a>
-        </div>
+        <a href="/{{.Host.Slug}}/calendar.ics" class="btn btn-secondary">Subscribe to calendar</a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="lectures-container">
-    {{if .Host.Lectures}}
-    <ul class="lecture-list">
-      {{range .Host.Lectures}}
-      <li class="lecture-item" data-id="{{.ID}}">
-        <a href="/{{.HostSlug}}/{{.ID}}/" class="lecture-link">
-          <div class="lecture-time">
-            <div class="lecture-date-day">{{.TimeStart.Format "2 Jan"}}</div>
-            <time datetime="{{.TimeStart.Format "2006-01-02T15:04:05Z07:00"}}">
-              {{.TimeStart.Format "3:04 PM"}}
-            </time>
-          </div>
-          <div class="lecture-body">
-            <h2 class="lecture-title">{{.Title}}</h2>
-            {{if .Summary}}
-            <p class="lecture-summary">{{.Summary}}</p>
-            {{end}}
-            <div class="lecture-meta">
-              {{if .Location}}<span class="meta-location">{{.Location}}</span>{{end}}
-              {{if .Speakers}}
-              <span class="meta-speakers">
-                {{range $i, $s := .Speakers}}{{if $i}}, {{end}}{{$s.Name}}{{end}}
-              </span>
-              {{end}}
-              {{if .Free}}<span class="meta-free">Free</span>{{else if .Cost}}<span class="meta-cost">{{.Cost}}</span>{{end}}
-            </div>
-          </div>
-          <div class="lecture-arrow" aria-hidden="true">→</div>
-        </a>
-      </li>
+  <section class="host-lectures">
+    <div class="host-lectures-inner">
+      {{if .Host.Lectures}}
+      <ul class="host-lecture-list">
+        {{range .Host.Lectures}}
+        <li>
+          <a href="/{{.HostSlug}}/{{.ID}}/" class="lecture-more-item">
+            <span class="lecture-more-date">{{.TimeStart.Format "Mon 2 Jan"}}</span>
+            <h2 class="lecture-more-title">{{.Title}}</h2>
+            <span class="lecture-more-arrow" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </li>
+        {{end}}
+      </ul>
+      {{else}}
+      <p class="host-empty">No upcoming lectures from {{.Host.Name}} at this time. <a href="{{.Host.Website}}" target="_blank" rel="noopener">Check their website →</a></p>
       {{end}}
-    </ul>
-    {{else}}
-    <div class="empty-state">
-      <p>No upcoming lectures from {{.Host.Name}} at this time.</p>
-      <a href="{{.Host.Website}}" target="_blank" rel="noopener">Check their website →</a>
     </div>
-    {{end}}
-  </div>
+  </section>
+
 </div>
 {{end}}
