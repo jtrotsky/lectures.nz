@@ -98,6 +98,11 @@ var adminKeywords = []string{
 	"campus tour", "alumni get-together", "alumni and friends", "alumni function",
 	"open day", "application round", "enrolment opens", "applications close",
 	"deadline to submit", "admission application", "graduate awards",
+	"programme ends", "program ends",
+	// Fitness/wellness activities (not lectures)
+	"baduanjin",
+	// Language competitions (not public talks)
+	"bridge competition",
 }
 
 // isAdminEvent returns true for administrative/calendar events that aren't public talks.

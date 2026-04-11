@@ -38,6 +38,15 @@ var excludeKeywords = []string{
 	"holiday program",
 	"kids party",
 	"birthday party",
+	"egg hunt",
+	"year olds",
+	// Live performances / concerts (not lectures)
+	"live performance",
+	"live day",
+	"symphony orchestra",
+	// Ceremonies (not educational)
+	"awards night",
+	"awards ceremony",
 }
 
 // IsExcluded reports whether a lecture title looks like a non-lecture event
