@@ -5,28 +5,39 @@ import "strings"
 
 // excludeKeywords are title substrings that indicate a non-lecture event.
 // Matched case-insensitively against the full title.
+//
+// Guiding principle: exclude only when the event clearly has no educational
+// intent — admin events, pure fitness classes, commercial markets.
+// When in doubt, include. Cultural workshops, hands-on learning, and family
+// events with intellectual content should pass through.
 var excludeKeywords = []string{
+	// Admin / institutional
 	"open day",
 	"open evening",
 	"open house",
 	"orientation",
 	"graduation",
 	"commencement",
-	"storytime",
-	"story time",
 	"job fair",
 	"career fair",
-	"school holiday",
-	"kids ",
-	"children",
-	"family day",
-	"live day",
-	"nourish",
-	"cooking class",
-	"craft class",
-	"yoga",
-	"tai chi",
-	"knitting",
+	"enrolment",
+	"enrollment",
+	// Pure fitness (not cultural practice)
+	"yoga class",
+	"fitness class",
+	"gym",
+	"zumba",
+	"pilates",
+	// Commercial / market
+	"market day",
+	"food market",
+	"night market",
+	// Children's entertainment (not educational)
+	"school holiday programme",
+	"holiday programme",
+	"holiday program",
+	"kids party",
+	"birthday party",
 }
 
 // IsExcluded reports whether a lecture title looks like a non-lecture event

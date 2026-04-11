@@ -217,10 +217,9 @@ body:has(.page-index) .site-header {
   top: calc(100% + 4px);
   right: 24px;
   background: var(--bg);
-  border: 1px solid var(--accent);
+  border: 1px solid rgba(56, 13, 37, 0.25);
   min-width: 200px;
   z-index: 200;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 .city-picker-header {

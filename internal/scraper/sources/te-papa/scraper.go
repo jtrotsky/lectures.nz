@@ -55,6 +55,7 @@ type nextData struct {
 										EndDate   string `json:"endDate"`
 										Time      string `json:"time"`
 									} `json:"when"`
+									CardDescription *dastDoc `json:"cardDescription"`
 								} `json:"linkToPage"`
 							} `json:"cards"`
 						} `json:"content"`
@@ -63,6 +64,37 @@ type nextData struct {
 			} `json:"bodySubscription"`
 		} `json:"pageProps"`
 	} `json:"props"`
+}
+
+// dastDoc is a DatoCMS DAST structured-text field.
+type dastDoc struct {
+	Value struct {
+		Document struct {
+			Children []dastNode `json:"children"`
+		} `json:"document"`
+	} `json:"value"`
+}
+
+type dastNode struct {
+	Type     string     `json:"type"`
+	Value    string     `json:"value"`
+	Children []dastNode `json:"children"`
+}
+
+// dastText extracts plain text from a DAST tree by recursively collecting span values.
+func dastText(nodes []dastNode) string {
+	var parts []string
+	for _, n := range nodes {
+		if n.Type == "span" && n.Value != "" {
+			parts = append(parts, n.Value)
+		}
+		if len(n.Children) > 0 {
+			if t := dastText(n.Children); t != "" {
+				parts = append(parts, t)
+			}
+		}
+	}
+	return strings.Join(parts, " ")
 }
 
 var timeRe = regexp.MustCompile(`(?i)(\d{1,2})(?:\.(\d{2}))?\s*([ap]m)?`)
@@ -163,13 +195,18 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 				}
 				t := time.Date(date.Year(), date.Month(), date.Day(), h, mn, 0, 0, loc)
 
+				summary := ""
+				if lp.CardDescription != nil {
+					summary = scraper.TruncateSummary(dastText(lp.CardDescription.Value.Document.Children), 200)
+				}
 				lectures = append(lectures, model.Lecture{
-					ID:       scraper.MakeID(eventURL + when.StartDate),
-					Title:    lp.PrimaryTitle,
-					Link:     eventURL,
+					ID:        scraper.MakeID(eventURL + when.StartDate),
+					Title:     lp.PrimaryTitle,
+					Link:      eventURL,
 					TimeStart: t,
-					Location: "Te Papa Tongarewa, 55 Cable Street, Wellington",
-					HostSlug: "te-papa",
+					Summary:   summary,
+					Location:  "Te Papa Tongarewa, 55 Cable Street, Wellington",
+					HostSlug:  "te-papa",
 				})
 				break // only take the first date per event card
 			}

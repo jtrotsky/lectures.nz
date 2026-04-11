@@ -55,9 +55,9 @@ var (
 	nextPageRe = regexp.MustCompile(`(?i)pagination__item--next`)
 	// ordinalDateRe matches "1st May 2026", "11th Jul 2026", "2nd Jan 2025".
 	ordinalDateRe = regexp.MustCompile(`(?i)(\d{1,2})(?:st|nd|rd|th)?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})`)
-	// articleSummaryRe extracts the first paragraph of the article body.
-	articleSummaryRe = regexp.MustCompile(`(?i)<div[^>]*class="[^"]*rte[^"]*"[^>]*>([\s\S]*?)</div>`)
-	pRe              = regexp.MustCompile(`(?i)<p[^>]*>([\s\S]*?)</p>`)
+	// articleContentMarkerRe finds the article body div opening tag.
+	articleContentMarkerRe = regexp.MustCompile(`(?i)<div[^>]*class="[^"]*article-template__content[^"]*"`)
+	pRe                    = regexp.MustCompile(`(?i)<p[^>]*>([\s\S]*?)</p>`)
 )
 
 var monthMap = map[string]time.Month{
@@ -92,21 +92,30 @@ func parseOrdinalDate(s string, loc *time.Location) (time.Time, bool) {
 	return time.Date(year, month, day, 10, 0, 0, 0, loc), true // default 10am
 }
 
-// fetchSummary fetches an article page and returns its first paragraph of body text.
+// fetchSummary fetches an article page and returns the first paragraph of the article body.
+// It finds the article-template__content div, then extracts the first <p> after it.
 func fetchSummary(ctx context.Context, url string) string {
 	body, err := scraper.Fetch(ctx, url)
 	if err != nil {
 		return ""
 	}
-	dm := articleSummaryRe.FindSubmatch(body)
-	if dm == nil {
+	loc := articleContentMarkerRe.FindIndex(body)
+	if loc == nil {
 		return ""
 	}
-	pm := pRe.FindSubmatch(dm[1])
-	if pm == nil {
-		return ""
+	// Search for the first non-empty <p> within 8 KB after the div opener.
+	end := loc[1] + 8192
+	if end > len(body) {
+		end = len(body)
 	}
-	return innerText(string(pm[1]))
+	all := pRe.FindAllSubmatch(body[loc[1]:end], -1)
+	for _, pm := range all {
+		text := innerText(string(pm[1]))
+		if text != "" {
+			return text
+		}
+	}
+	return ""
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {

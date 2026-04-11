@@ -48,6 +48,8 @@ var (
 	datePart = regexp.MustCompile(`(?i)(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)`)
 	// timePart extracts start time, e.g. "10.30am" (before "–").
 	timePart = regexp.MustCompile(`(?i)(\d{1,2})(?:\.(\d{2}))?\s*(am|pm)`)
+	// jsonLdDescRe extracts the description from JSON-LD structured data.
+	jsonLdDescRe = regexp.MustCompile(`"description"\s*:\s*"((?:[^"\\]|\\.)*)"`)
 )
 
 var monthMap = map[string]time.Month{
@@ -104,6 +106,23 @@ func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
 	return time.Date(year, month, day, hour, min, 0, 0, loc), true
 }
 
+// fetchSummary fetches a product page and extracts the description from JSON-LD.
+func fetchSummary(ctx context.Context, url string) string {
+	body, err := scraper.Fetch(ctx, url)
+	if err != nil {
+		return ""
+	}
+	m := jsonLdDescRe.FindSubmatch(body)
+	if m == nil {
+		return ""
+	}
+	unquoted, err := strconv.Unquote(`"` + string(m[1]) + `"`)
+	if err != nil {
+		return string(m[1])
+	}
+	return unquoted
+}
+
 // cardMarker is a unique substring that starts each event card's image link.
 const cardMarker = `group/slide-image`
 
@@ -156,11 +175,13 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		}
 
 		link := baseURL + "/products/" + slug
+		summary := scraper.TruncateSummary(fetchSummary(ctx, link), 200)
 		lectures = append(lectures, model.Lecture{
 			ID:        scraper.MakeID(link),
 			Title:     scraper.CleanTitle(title),
 			Link:      link,
 			TimeStart: t,
+			Summary:   summary,
 			HostSlug:  "artgallery-nz",
 		})
 	}

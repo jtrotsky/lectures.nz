@@ -51,7 +51,26 @@ var (
 	dateTimeRe    = regexp.MustCompile(`(?s)Date/Time:.*?col-sm-9">(.*?)</div>`)
 	locationRe    = regexp.MustCompile(`(?s)Location:.*?col-sm-9">(.*?)</div>`)
 	timeRe        = regexp.MustCompile(`(?i),\s*(\d{1,2}(?::\d{2})?(?:am|pm))`)
+	jsonLdDescRe  = regexp.MustCompile(`"description"\s*:\s*"((?:[^"\\]|\\.)*)"`)
 )
+
+// fetchSummary fetches an event detail page and extracts the JSON-LD description.
+func fetchSummary(ctx context.Context, url string) string {
+	body, err := scraper.Fetch(ctx, url)
+	if err != nil {
+		return ""
+	}
+	m := jsonLdDescRe.FindSubmatch(body)
+	if m == nil {
+		return ""
+	}
+	// JSON-LD string values use JSON escaping — unquote them.
+	unquoted, err := strconv.Unquote(`"` + string(m[1]) + `"`)
+	if err != nil {
+		return string(m[1])
+	}
+	return unquoted
+}
 
 // stripTags removes HTML tags and normalises whitespace.
 func stripTags(s string) string {
@@ -181,11 +200,13 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			location += ", Auckland"
 		}
 
+		summary := scraper.TruncateSummary(fetchSummary(ctx, eventURL), 200)
 		lectures = append(lectures, model.Lecture{
 			ID:        scraper.MakeID(eventURL),
 			Title:     scraper.CleanTitle(title),
 			Link:      eventURL,
 			TimeStart: t,
+			Summary:   summary,
 			Location:  location,
 			HostSlug:  "aut",
 		})
