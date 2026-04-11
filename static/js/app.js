@@ -163,21 +163,6 @@
       noResults.hidden = visibleCount > 0 || (!activeTopic && !activeCity);
     }
 
-    updateGridSpans();
-  }
-
-  // Ensure items in sparse date groups span extra columns so no orphan whitespace
-  function updateGridSpans() {
-    document.querySelectorAll('.lecture-grid').forEach(function (grid) {
-      var allItems = grid.querySelectorAll('.lecture-item');
-      var visible = Array.from(grid.querySelectorAll('.lecture-item:not([hidden])'));
-      allItems.forEach(function (item) { item.style.gridColumn = ''; });
-      if (visible.length === 1) {
-        visible[0].style.gridColumn = 'span 2';
-      } else if (visible.length === 2) {
-        visible[1].style.gridColumn = 'span 2';
-      }
-    });
   }
 
   // ---- URL topic param sync --------------------------------------------

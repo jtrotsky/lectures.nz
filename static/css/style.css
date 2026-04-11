@@ -197,12 +197,13 @@ body:has(.page-index) .site-header {
 }
 
 .city-pill--active {
-  background: var(--accent);
-  color: #ffffff;
+  background: rgba(56, 13, 37, 0.08);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .city-pill--active .city-pill-icon {
-  stroke: #ffffff;
+  stroke: var(--accent);
 }
 
 .city-pill-icon {
@@ -215,8 +216,8 @@ body:has(.page-index) .site-header {
   position: absolute;
   top: calc(100% + 4px);
   right: 24px;
-  background: #ffffff;
-  border: 1px solid var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--accent);
   min-width: 200px;
   z-index: 200;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
@@ -254,7 +255,7 @@ body:has(.page-index) .site-header {
 }
 
 .city-picker-option:hover {
-  background: rgba(0,0,0,0.05);
+  background: rgba(56, 13, 37, 0.06);
 }
 
 .city-picker-option--active {
@@ -982,10 +983,10 @@ body:has(.page-index) .site-header {
   .news-text { max-width: none; }
 }
 
-/* Desktop — auto-fit with min wide enough to cap at 3 cols around 1100px+ */
+/* Desktop — auto-fit so items always share space equally (no orphan columns) */
 @media (min-width: 900px) {
   .lecture-grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
   }
 
@@ -994,10 +995,10 @@ body:has(.page-index) .site-header {
   }
 }
 
-/* Large desktop — wider min so 4+ cols can't form */
-@media (min-width: 1200px) {
+/* Large desktop — wider min caps grid at 3 cols */
+@media (min-width: 1100px) {
   .lecture-grid {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   }
 }
 
