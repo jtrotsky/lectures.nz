@@ -5,37 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{block "title" .}}lectures.nz{{end}}</title>
   <meta name="description" content="{{block "description" .}}Upcoming public lectures in New Zealand — universities, institutes, and cultural organisations.{{end}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Rethink+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/style.css">
   <link rel="alternate" type="text/calendar" href="/calendar.ics" title="lectures.nz calendar">
   <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="lectures.nz RSS">
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
 </head>
 <body>
+  {{block "page-header" .}}
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="site-logo">
-        <span class="logo-mark">▶</span>
-        <span class="logo-text">lectures.nz</span>
-      </a>
-      <button id="city-pill" class="city-pill" type="button">📍 All cities</button>
-      <nav class="header-nav">
-        <a href="/rss.xml" class="nav-link" title="RSS feed">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <circle cx="6" cy="18" r="2.5"/>
-            <path d="M4 4a1 1 0 0 1 0 2C11.73 6 18 12.27 18 20a1 1 0 0 1-2 0C16 13.37 10.63 8 4 8a1 1 0 0 1 0-2z"/>
-            <path d="M4 10a1 1 0 0 1 0 2c3.86 0 7 3.14 7 7a1 1 0 0 1-2 0c0-2.76-2.24-5-5-5a1 1 0 0 1 0-2z"/>
-          </svg>
-          RSS feed
-        </a>
-        <a href="https://github.com/jtrotsky/lectures.nz" class="nav-link" title="View source on GitHub" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-          GitHub
-        </a>
-      </nav>
+      <a href="/" class="site-logo">lectures.nz</a>
     </div>
   </header>
+  {{end}}
 
   <main class="site-main">
     {{block "main" .}}{{end}}
@@ -43,22 +28,30 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>
-        Upcoming public lectures in New Zealand.
-        Subscribe via <a href="/rss.xml">RSS feed</a> or <a href="/calendar.ics">iCal calendar</a>.
-      </p>
-      <p class="footer-hosts">
-        Sources:
-        {{range .Hosts}}<a href="/{{.Slug}}/">{{.Name}}</a> {{end}}
-      </p>
-      <p class="footer-meta">
-        <a href="https://github.com/sponsors/jtrotsky" class="sponsor-link" target="_blank" rel="noopener">
-          ♥ Support this project
-        </a>
-        &nbsp;·&nbsp;
-        <a href="https://github.com/jtrotsky/lectures.nz" target="_blank" rel="noopener">Open source on GitHub</a>.
-        Data updated daily.
-      </p>
+      <div class="footer-top">
+        <div class="footer-left">
+          <h2 class="footer-brand">Lectures NZ</h2>
+          <div class="footer-contact">
+            <a href="https://github.com/sponsors/jtrotsky" target="_blank" rel="noopener" class="footer-link">Support this project</a>
+            <a href="mailto:hello@lectures.nz" class="footer-link footer-link--underline">hello@lectures.nz</a>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-resource">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/>
+            </svg>
+            <a href="/rss.xml" class="footer-link">RSS Feed</a>
+          </div>
+          <div class="footer-resource">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            <a href="https://github.com/jtrotsky/lectures.nz" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-copyright">© Lectures NZ All rights reserved</p>
     </div>
   </footer>
 

@@ -63,12 +63,18 @@
   function renderCityPill() {
     const pill = document.getElementById('city-pill');
     if (!pill) return;
+    var label = pill.querySelector('.city-pill-label');
+    if (!label) {
+      label = document.createElement('span');
+      label.className = 'city-pill-label';
+      pill.appendChild(label);
+    }
     if (activeCity) {
-      pill.textContent = '📍 ' + activeCity;
+      label.textContent = activeCity;
       pill.classList.add('city-pill--active');
       pill.title = 'Showing ' + activeCity + ' lectures — click to change';
     } else {
-      pill.textContent = '📍 All cities';
+      label.textContent = 'All cities';
       pill.classList.remove('city-pill--active');
       pill.title = 'Click to filter by city';
     }
@@ -156,6 +162,22 @@
     if (noResults) {
       noResults.hidden = visibleCount > 0 || (!activeTopic && !activeCity);
     }
+
+    updateGridSpans();
+  }
+
+  // Ensure items in sparse date groups span extra columns so no orphan whitespace
+  function updateGridSpans() {
+    document.querySelectorAll('.lecture-grid').forEach(function (grid) {
+      var allItems = grid.querySelectorAll('.lecture-item');
+      var visible = Array.from(grid.querySelectorAll('.lecture-item:not([hidden])'));
+      allItems.forEach(function (item) { item.style.gridColumn = ''; });
+      if (visible.length === 1) {
+        visible[0].style.gridColumn = 'span 2';
+      } else if (visible.length === 2) {
+        visible[1].style.gridColumn = 'span 2';
+      }
+    });
   }
 
   // ---- URL topic param sync --------------------------------------------
