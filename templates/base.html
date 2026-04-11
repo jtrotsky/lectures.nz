@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{block "title" .}}lectures.nz{{end}}</title>
   <meta name="description" content="{{block "description" .}}Upcoming public lectures in New Zealand — universities, institutes, and cultural organisations.{{end}}">
+
+  <!-- Open Graph / Discord / Slack / iMessage -->
+  <meta property="og:type" content="{{block "og-type" .}}website{{end}}">
+  <meta property="og:site_name" content="lectures.nz">
+  <meta property="og:title" content="{{block "og-title" .}}lectures.nz{{end}}">
+  <meta property="og:description" content="{{block "og-description" .}}Upcoming public lectures in New Zealand — universities, institutes, and cultural organisations.{{end}}">
+  <meta property="og:url" content="{{block "og-url" .}}https://lectures.nz/{{end}}">
+  <meta property="og:image" content="https://lectures.nz/static/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{block "twitter-title" .}}lectures.nz{{end}}">
+  <meta name="twitter:description" content="{{block "twitter-description" .}}Upcoming public lectures in New Zealand — universities, institutes, and cultural organisations.{{end}}">
+  <meta name="twitter:image" content="https://lectures.nz/static/og-image.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Rethink+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -12,6 +29,8 @@
   <link rel="alternate" type="text/calendar" href="/calendar.ics" title="lectures.nz calendar">
   <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="lectures.nz RSS">
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
 </head>
 <body>
   {{block "page-header" .}}
