@@ -48,6 +48,7 @@ var excludeKeywords = []string{
 	// Ceremonies (not educational)
 	"awards night",
 	"awards ceremony",
+	"book awards", // longlist/prize celebration events
 	// Activity sessions (not lectures)
 	"mandarin corner",   // VUW craft/cultural activity series
 	"sit and sketch",    // art activity

@@ -34,6 +34,11 @@ import (
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/eventbrite"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/nziia"
 	royalsociety "github.com/jtrotsky/lectures.nz/internal/scraper/sources/royal-society"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/massey"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/motu"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/rbnz"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/artspace"
+	nzinitiative "github.com/jtrotsky/lectures.nz/internal/scraper/sources/nz-initiative"
 )
 
 func main() {
@@ -65,6 +70,11 @@ func run() error {
 		&eventbrite.Scraper{},
 		&nziia.Scraper{},
 		&royalsociety.Scraper{},
+		&massey.Scraper{},
+		&motu.Scraper{},
+		&rbnz.Scraper{},
+		&artspace.Scraper{},
+		&nzinitiative.Scraper{},
 	}
 
 	type result struct {

@@ -183,6 +183,8 @@ var excludedEventTypes = map[string]bool{
 	"ceremony":    true,
 	"fitness":     true,
 	"orientation": true,
+	//	"film":        true, // film screenings without lecture/Q&A context
+	"festival": true, // multi-day festivals, not individual lectures
 }
 
 // filterByEventType removes events whose enrichment-assigned type is not

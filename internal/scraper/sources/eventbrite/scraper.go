@@ -43,6 +43,7 @@ type organizer struct {
 // and add an entry here.
 var knownOrganizers = []organizer{
 	{"17255647886", "Faculty of Engineering and Design, University of Auckland"},
+	{"52980282993", "Toi Rāuwharangi College of Creative Arts, Massey University"},
 }
 
 // Scraper implements scraper.Scraper for Eventbrite NZ.
