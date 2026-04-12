@@ -172,10 +172,24 @@
 
       if (visible.length === 1) {
         visible[0].style.gridColumn = '1 / -1';
+      } else if (visible.length === 2) {
+        var lengths = visible.map(function(item) {
+          var title = item.querySelector('.lecture-title');
+          return title ? title.textContent.trim().length : 0;
+        });
+        if (lengths[0] >= lengths[1]) {
+          // First card has longer title: cols 1-2, second gets col 3
+          visible[0].style.gridColumn = '1 / span 2';
+          visible[1].style.gridColumn = '3';
+        } else {
+          // Second card has longer title: first gets col 1, second gets cols 2-3
+          visible[0].style.gridColumn = '1';
+          visible[1].style.gridColumn = '2 / span 2';
+        }
       } else if (visible.length === 4) {
         visible[3].style.gridColumn = '1 / -1';
       }
-      // 2, 3, 5, 6: no overrides — empty columns are acceptable
+      // 3, 5, 6: no overrides — empty columns are acceptable
     });
 
   }

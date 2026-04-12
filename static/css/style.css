@@ -314,6 +314,8 @@ body:has(.page-host) .site-header {
   display: flex;
   flex-direction: column;
   border-bottom: none;
+  min-width: 0;
+  width: 100%;
 }
 
 .page-index .lecture-card {
@@ -339,6 +341,7 @@ body:has(.page-host) .site-header {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--fg);
+  text-align: left;
 }
 
 .page-index .lecture-title {
@@ -354,9 +357,12 @@ body:has(.page-host) .site-header {
 
 .page-index .lecture-meta {
   display: flex;
-  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 16px;
+  align-items: baseline;
+  column-gap: 8px;
+  row-gap: 4px;
+  width: 100%;
+  min-width: 0;
   font-family: var(--font-sans);
   font-weight: 500;
   font-size: 0.75rem;
@@ -364,26 +370,22 @@ body:has(.page-host) .site-header {
   text-transform: uppercase;
 }
 
-.page-index .meta-speaker {
-  color: var(--fg);
-  opacity: 0.5;
-}
+.page-index .meta-speaker { opacity: 0.5; flex-shrink: 0; }
 
 .page-index .meta-venue {
-  color: var(--fg);
   opacity: 0.5;
-  flex: 1;
-  min-width: 0;
   overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+  /* NO flex:1, NO white-space:nowrap, NO margin */
 }
 
 .page-index .meta-free,
 .page-index .meta-cost {
-  color: var(--fg);
   opacity: 0.5;
   flex-shrink: 0;
   white-space: nowrap;
-  margin-left: auto;
+  /* NO margin-left:auto — FREE flows naturally after venue */
 }
 
 /* Expanded card content */
@@ -748,7 +750,7 @@ body:has(.page-host) .site-header {
 
 .lecture-meta span::before { content: "· "; }
 .lecture-meta span:first-child::before { content: ""; }
-.meta-free::before, .meta-cost::before { content: ""; }
+.lecture-meta .meta-free::before, .lecture-meta .meta-cost::before { content: ""; }
 .meta-free { font-weight: 600; }
 .meta-host { text-transform: capitalize; }
 
@@ -1056,6 +1058,11 @@ body:has(.page-host) .site-header {
     padding: 0 24px;
   }
 
+  /* 2-item day: fill full width with 2 equal columns */
+  .lecture-grid:has(> .lecture-item:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .page-index .lecture-title {
     font-size: clamp(32px, 4vw, 64px);
   }
@@ -1159,20 +1166,7 @@ body:has(.page-host) .site-header {
 
   .page-index .lecture-meta {
     flex-direction: column;
-    gap: 8px;
-  }
-
-  .page-index .meta-venue {
-    flex: none;
-    width: 100%;
-    min-width: 0;
-  }
-
-  .page-index .meta-free,
-  .page-index .meta-cost {
-    margin-left: 0;
-    flex-shrink: 0;
-    white-space: nowrap;
+    gap: 4px;
   }
 
   .site-footer {

@@ -321,5 +321,61 @@
     "event_type": "workshop",
     "title": "Women & Non-binary Artist Hui: Tracing Desire Lines",
     "summary": "A creative workshop using printmaking and mindfulness to explore the familiar paths that bring a sense of comfort and connection to our daily routines."
+  },
+  "7c69365a7120b66f": {
+    "event_type": "lecture",
+    "title": "In The Meantime - Adapting To A More Tribal, Less Rational World",
+    "summary": "This lecture explores five interconnected crises in today's world: declining trust in institutions, institutional decay, and a materially comfortable yet complacent civilization.",
+    "speakers": [
+      {
+        "name": "Dr Oliver Hartwich, Executive Director, The New Zealand Initiative"
+      }
+    ]
+  },
+  "77b0a203c71c3323": {
+    "event_type": "lecture",
+    "title": "Canada\u2019s Perspectives on Indigenous Rights, Undrip, And International Indigenous Cooperation",
+    "summary": "This meeting will commence with a brief annual general meeting featuring the chairman's report, treasurer's financial report, and an election for committee vacancies.",
+    "speakers": [
+      {
+        "name": "HE Keith Smith, High Commissioner for Canada in New Zealand"
+      }
+    ]
+  },
+  "6edac8ffc7e3fbf6": {
+    "event_type": "lecture",
+    "title": "Thin Ice 2026: Urgent Update On Our Changing Climate",
+    "summary": "An urgent update on the current state of our changing climate, presented by leading experts in environmental science."
+  },
+  "0ce9fae1b4d99995": {
+    "event_type": "panel",
+    "title": "Global Tensions, Local Perspectives: Diaspora Communities in Uncertain Times",
+    "summary": "The NZIIA Wellington Branch Student Committee presents a panel discussion exploring how diaspora communities worldwide and in New Zealand are navigating challenging times.",
+    "speakers": [
+      {
+        "name": "Student Panel Event"
+      }
+    ]
+  },
+  "95282080ccc6256f": {
+    "event_type": "lecture",
+    "title": "The Fall Of Saigon - 50 Years On",
+    "summary": "Mr Wilson, a former senior New Zealand diplomat with extensive experience in Asia, will discuss the historical event of The Fall of Saigon and its significance fifty years later.",
+    "speakers": [
+      {
+        "name": "Mr Wilson",
+        "bio": "Former senior New Zealand diplomat with a strong career background in Asia."
+      }
+    ]
+  },
+  "7215d531111a9854": {
+    "event_type": "lecture",
+    "title": "Nziiia Agm And Annual Lecture 2026",
+    "summary": "The New Zealand Institute of International Affairs (NZIIA) invites its members to attend the National Annual General Meeting, followed by the annual lecture.",
+    "speakers": [
+      {
+        "name": "Hon Todd McClay, Minister for Trade and Investment"
+      }
+    ]
   }
 }
