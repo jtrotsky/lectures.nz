@@ -748,6 +748,7 @@ body:has(.page-host) .site-header {
 
 .lecture-meta span::before { content: "· "; }
 .lecture-meta span:first-child::before { content: ""; }
+.meta-free::before, .meta-cost::before { content: ""; }
 .meta-free { font-weight: 600; }
 .meta-host { text-transform: capitalize; }
 
@@ -779,7 +780,7 @@ body:has(.page-host) .site-header {
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
-  letter-spacing: 2.88px;
+  letter-spacing: -0.02em;
   color: var(--fg);
 }
 
@@ -975,7 +976,7 @@ body:has(.page-host) .site-header {
 .lecture-more-item {
   display: flex;
   gap: 24px;
-  align-items: center;
+  align-items: flex-start;
   color: var(--fg);
   text-decoration: none;
   transition: opacity var(--transition);
@@ -991,9 +992,10 @@ body:has(.page-host) .site-header {
   text-transform: uppercase;
   color: var(--fg);
   flex-shrink: 0;
+  align-self: flex-start;
   width: 80px;
   white-space: nowrap;
-  padding-top: 22px;
+  padding-top: 8px;
 }
 
 .lecture-more-title {
@@ -1002,7 +1004,7 @@ body:has(.page-host) .site-header {
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
-  letter-spacing: 2.88px;
+  letter-spacing: -0.02em;
   color: var(--fg);
   flex: 1;
   min-width: 0;
@@ -1010,6 +1012,8 @@ body:has(.page-host) .site-header {
 
 .lecture-more-arrow {
   flex-shrink: 0;
+  align-self: flex-start;
+  padding-top: 8px;
   color: var(--fg);
 }
 
@@ -1156,6 +1160,19 @@ body:has(.page-host) .site-header {
   .page-index .lecture-meta {
     flex-direction: column;
     gap: 8px;
+  }
+
+  .page-index .meta-venue {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .page-index .meta-free,
+  .page-index .meta-cost {
+    margin-left: 0;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .site-footer {

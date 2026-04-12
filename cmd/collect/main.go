@@ -32,6 +32,8 @@ import (
 	tepapa "github.com/jtrotsky/lectures.nz/internal/scraper/sources/te-papa"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/victoria"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/eventbrite"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/nziia"
+	royalsociety "github.com/jtrotsky/lectures.nz/internal/scraper/sources/royal-society"
 )
 
 func main() {
@@ -61,6 +63,8 @@ func run() error {
 		&gusfisher.Scraper{},
 		&motat.Scraper{},
 		&eventbrite.Scraper{},
+		&nziia.Scraper{},
+		&royalsociety.Scraper{},
 	}
 
 	type result struct {

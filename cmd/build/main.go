@@ -352,8 +352,6 @@ func groupByDate(lectures []model.Lecture) []dateGroup {
 		nzLoc = time.UTC
 	}
 
-	today := time.Now().In(nzLoc)
-
 	for _, l := range lectures {
 		lTime := l.TimeStart.In(nzLoc)
 		key := lTime.Format("2006-01-02")
