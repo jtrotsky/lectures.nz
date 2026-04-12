@@ -360,14 +360,7 @@ func groupByDate(lectures []model.Lecture) []dateGroup {
 
 		idx, exists := groupIndex[key]
 		if !exists {
-			var label string
-			if sameDay(lTime, today) {
-				label = "Today — " + lTime.Format("Monday 2 January")
-			} else if sameDay(lTime, today.AddDate(0, 0, 1)) {
-				label = "Tomorrow — " + lTime.Format("Monday 2 January")
-			} else {
-				label = lTime.Format("Monday 2 January")
-			}
+			label := lTime.Format("Monday 2 January")
 			groups = append(groups, dateGroup{DateKey: key, DateLabel: label})
 			idx = len(groups) - 1
 			groupIndex[key] = idx

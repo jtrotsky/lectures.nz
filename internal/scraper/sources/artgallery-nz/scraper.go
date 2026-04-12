@@ -78,8 +78,11 @@ func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
 	now := time.Now().In(loc)
 	year := now.Year()
 	candidate := time.Date(year, month, day, 0, 0, 0, 0, loc)
-	if candidate.Before(now.AddDate(0, 0, -1)) {
-		year++
+	if candidate.Before(now) {
+		bumped := time.Date(year+1, month, day, 0, 0, 0, 0, loc)
+		if bumped.Sub(now) <= 90*24*time.Hour {
+			year++
+		}
 	}
 
 	// Extract start time (take first match, before any "–").

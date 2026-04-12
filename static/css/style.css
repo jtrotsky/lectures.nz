@@ -104,7 +104,7 @@ body:has(.page-host) .site-header {
 /* ----- Hero ---------------------------------------------------------- */
 .index-header {
   display: flex;
-  padding: 20px 24px clamp(40px, 8vw, 120px) 24px;
+  padding: 20px 20px clamp(80px, 10vw, 160px) 20px;
   align-items: flex-start;
 }
 
@@ -141,7 +141,7 @@ body:has(.page-host) .site-header {
   font-size: clamp(52px, 8vw, 116px);
   font-weight: 400;
   font-style: normal;
-  line-height: 0.92;
+  line-height: 0.9;
   letter-spacing: -0.02em;
   color: var(--fg);
   flex-shrink: 0;
@@ -290,8 +290,8 @@ body:has(.page-host) .site-header {
 .date-heading {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 0.7rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.2;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--fg);
@@ -302,6 +302,11 @@ body:has(.page-host) .site-header {
   flex-direction: column;
   gap: 40px;
   padding: 24px 24px 40px 0;
+}
+
+/* Single card in a date group spans all columns */
+.lecture-grid > .lecture-item:only-child {
+  grid-column: 1 / -1;
 }
 
 /* ----- Lecture card (index page) ------------------------------------ */
@@ -351,7 +356,7 @@ body:has(.page-host) .site-header {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 4px 12px;
+  gap: 16px;
   font-family: var(--font-sans);
   font-weight: 500;
   font-size: 0.75rem;
@@ -452,7 +457,7 @@ body:has(.page-host) .site-header {
 
 .news-heading {
   font-family: var(--font-serif);
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(36px, 5vw, 64px);
   font-weight: 400;
   font-style: normal;
   line-height: 1;
@@ -479,33 +484,36 @@ body:has(.page-host) .site-header {
 .btn-subscribe {
   display: inline-flex;
   align-items: center;
-  padding: 9px 14px;
-  border: 1px solid var(--fg);
-  background: transparent;
+  padding: 10px 12px;
+  background: var(--accent);
+  border: none;
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--fg);
+  color: var(--bg);
   text-decoration: none;
   width: fit-content;
   transition: opacity var(--transition);
 }
 
-.btn-subscribe:hover { opacity: 0.6; }
+.btn-subscribe:hover { opacity: 0.85; }
 
 /* ----- Footer ------------------------------------------------------- */
 .site-footer {
   border-top: 1px solid var(--fg);
-  padding: 0 24px 24px;
+  padding: 0 20px 20px;
+  min-height: 501px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .footer-inner {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-top: 20px;
 }
 
 .footer-top {
@@ -524,7 +532,7 @@ body:has(.page-host) .site-header {
 
 .footer-brand {
   font-family: var(--font-serif);
-  font-size: clamp(36px, 5vw, 60px);
+  font-size: clamp(36px, 5vw, 64px);
   font-weight: 400;
   font-style: normal;
   line-height: 1;
@@ -541,8 +549,8 @@ body:has(.page-host) .site-header {
 .footer-link {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--fg);
   text-decoration: none;
@@ -771,7 +779,7 @@ body:has(.page-host) .site-header {
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: 2.88px;
   color: var(--fg);
 }
 
@@ -875,8 +883,8 @@ body:has(.page-host) .site-header {
   padding: 10px 12px;
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -978,13 +986,14 @@ body:has(.page-host) .site-header {
 .lecture-more-date {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--fg);
   flex-shrink: 0;
   width: 80px;
   white-space: nowrap;
+  padding-top: 22px;
 }
 
 .lecture-more-title {
@@ -993,7 +1002,7 @@ body:has(.page-host) .site-header {
   font-weight: 400;
   font-style: normal;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: 2.88px;
   color: var(--fg);
   flex: 1;
   min-width: 0;
@@ -1031,12 +1040,16 @@ body:has(.page-host) .site-header {
     line-height: 1.2;
   }
 
+  .hero-title {
+    font-size: 120px;
+  }
+
   .lecture-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: start;
     gap: 24px;
-    padding: 0 24px 40px;
+    padding: 0 24px;
   }
 
   .page-index .lecture-title {
@@ -1056,10 +1069,10 @@ body:has(.page-host) .site-header {
   .news-text { max-width: none; }
 }
 
-/* Desktop — auto-fit so items always share space equally (no orphan columns) */
+/* Desktop — fixed 3-col grid */
 @media (min-width: 900px) {
   .lecture-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
   }
 
@@ -1068,17 +1081,17 @@ body:has(.page-host) .site-header {
   }
 }
 
-/* Large desktop — wider min caps grid at 3 cols */
+/* Large desktop — keep fixed 3-col */
 @media (min-width: 1100px) {
   .lecture-grid {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 /* Mobile adjustments */
 @media (max-width: 639px) {
   .index-header {
-    padding: 20px 20px 36px;
+    padding: 20px 20px 80px;
   }
 
   .hero-content {
@@ -1109,7 +1122,7 @@ body:has(.page-host) .site-header {
 
   .date-group {
     display: grid;
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 134px 1fr;
   }
 
   .section-date {
@@ -1125,19 +1138,29 @@ body:has(.page-host) .site-header {
   }
 
   .date-heading {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.06em;
   }
 
   .lecture-grid {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 64px;
     padding: 20px 20px 48px 0;
   }
 
   .page-index .lecture-title {
     font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .page-index .lecture-meta {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .site-footer {
+    min-height: auto;
+    padding: 20px;
   }
 
   .host-header-inner { flex-direction: column; }
