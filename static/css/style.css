@@ -378,6 +378,10 @@ body:has(.page-host) .site-header {
   color: var(--fg);
   opacity: 0.5;
   flex-shrink: 0;
+  text-align: right;
+}
+
+.page-index .meta-free {
   white-space: nowrap;
 }
 
