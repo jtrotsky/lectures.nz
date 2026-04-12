@@ -1,24 +1,15 @@
 {
   "7fd7ba297f4c93f3": {
-    "event_type": "lecture",
-    "title": "Research Funding in Aotearoa New Zealand: Threats, Trajectories, And The Potential For Transformation",
-    "summary": "Aotearoa has historically invested less in research and development compared to OECD standards. Since 2020-21, this funding landscape faces challenges and opportunities for transformation."
+    "title": "Research funding in Aotearoa New Zealand\u2014Threats, trajectories, and the potential for transformation",
+    "summary": "Details For many generations, Aotearoa has invested comparatively little, certainly by OECD standards, in research and development (R and D). Moreover, since 2020\u201321,..."
   },
   "52cbd11960f48258": {
-    "event_type": "lecture",
-    "title": "A Painter, A Dentist And A Lot Of Ingenuity",
-    "summary": "Curator Shaun Higgins at Auckland Museum presents the story of an Australian World War II prisoner of war who used ingenuity to create stunning portraits despite harsh conditions.",
-    "speakers": [
-      {
-        "name": "Shaun Higgins",
-        "bio": "Curator Pictorial at Auckland Museum"
-      }
-    ]
+    "title": "A Painter, a Dentist and a lot of Ingenuity",
+    "summary": "Join Shaun Higgins, Curator Pictorial here at Auckland Museum, to learn how in the midst of a World War II prisoner of war camp, an Australian prisoner of war was able to create stunning portraits of\u2026"
   },
   "e2788c45a4a1bec8": {
-    "event_type": "lecture",
     "title": "Building Back Better: 15 Years of Earthquake Engineering Lessons from Christchurch",
-    "summary": "Fifteen years after the 2011 Canterbury earthquakes, University of Canterbury engineers reflect on lessons learned, changes in global building codes, and ongoing challenges.",
+    "summary": "Fifteen years after the 2011 Canterbury earthquakes, UC engineers reflect on what they learned, what changed in global building codes, and what still needs to happen.",
     "speakers": [
       {
         "name": "Professor Stefano Pampanin",
@@ -27,41 +18,24 @@
     ]
   },
   "d92b21fc2b42ebf3": {
-    "event_type": "lecture",
     "title": "Work-Integrated Learning Research: Transforming the Future of Practice",
-    "summary": "The International Research Symposium, organized by the World Association for Cooperative and Work-Integrated Education (WACE), focuses on transforming future practice through work-integrated learning."
+    "summary": "The International Research Symposium is an international symposium organised by the World Association for Cooperative and Work-Integrated Education (WACE), in c"
   },
   "2cff4af0fa8b324e": {
-    "event_type": "seminar",
-    "title": "School of Education Research Seminar: Professor Hella Von Unger",
-    "summary": "Join a seminar featuring visiting Professor Hella von Unger from Munich, School of Education at Victoria University. A tea/coffee session will follow the presentation.",
-    "speakers": [
-      {
-        "name": "Professor Hella von Unger",
-        "bio": "Visiting Professor from Munich"
-      }
-    ]
+    "title": "School of Education research seminar: Professor Hella von Unger",
+    "summary": "We invite you to join us for a seminar with visiting Professor Hella von Unger, from Munich. We will have tea/coffee together at..."
   },
   "184d6aaa593d1460": {
-    "event_type": "lecture",
     "title": "Big Tech: Too Big To Fail?",
-    "summary": "Inaugural Professorial Lecture presented by Alexandra Andhov.",
-    "speakers": [
-      {
-        "name": "Alexandra Andhov",
-        "bio": "Presenting the Inaugural Professorial Lecture."
-      }
-    ]
+    "summary": "Inaugural Professorial Lecture: Alexandra Andhov"
   },
   "db21f3bf1d770c7f": {
-    "event_type": "lecture",
-    "title": "Kia Tika, Kia Pono \u2014 For A Just Society",
-    "summary": "In Aotearoa (New Zealand), the lecture addresses pressing issues such as poverty, inequity, ecological destruction, and climate change. The talk aims to explore solutions for a just society."
+    "title": "Kia Tika, Kia Pono\u2014For A Just Society",
+    "summary": "In Aotearoa, we know very well what our most pressing problems are\u2014poverty, inequity, ecological destruction, and climate change. But we are much less..."
   },
   "e1cb94aaa2fee747": {
-    "event_type": "seminar",
     "title": "Philanthropy Along the Supply Chain",
-    "summary": "This seminar features authors Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste discussing how firms strategically use donations to trade partners' affiliated charities as part of their business strategy."
+    "summary": "Authors: Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste Abstract Firms strategically use donations to trade partners\u2019 affiliated charities to achieve..."
   },
   "1e871946e014fdb7": {
     "event_type": "ceremony",
@@ -69,20 +43,12 @@
     "summary": "Celebrate the announcement of the 2026 Ockham New Zealand Book Awards longlist, featuring readings from authors in all four categories."
   },
   "7879b554665913d7": {
-    "event_type": "film",
-    "title": "Welfare Film Screening (1975)",
-    "summary": "Screening of the film 'Welfare' with an introduction and discussion by artist Rangi White on Aotearoa's welfare bureaucracies.",
-    "speakers": [
-      {
-        "name": "Rangi White",
-        "bio": "Artist providing an introduction to the film screening."
-      }
-    ]
+    "title": "Welfare (1975) film screening",
+    "summary": "Join us for a film screening of Welfare, with an introduction by artist Rangi White in a discussion of Aotearoa's welfare bureaucracies"
   },
   "a0102426b2daac5e": {
-    "event_type": "lecture",
-    "title": "The Brain In Pain \u2014 New Frontiers In Chronic Pain Research",
-    "summary": "The annual Otago Distinguished Lecture in Medicine delves into groundbreaking research on the neuroscience of chronic pain and innovative treatment approaches.",
+    "title": "Distinguished Lecture: The Brain in Pain \u2014 New Frontiers in Chronic Pain Research",
+    "summary": "The annual Otago Distinguished Lecture in Medicine explores breakthrough research into the neuroscience of chronic pain and emerging treatments.",
     "speakers": [
       {
         "name": "Professor Rae Frances Irvine",
@@ -91,15 +57,8 @@
     ]
   },
   "8b30fa94d015ef93": {
-    "event_type": "lecture",
     "title": "Welfare (1975)",
-    "summary": "Artist Rangi White uses the aesthetics of a Work and Income office to explore how material and spatial conditions influence personal interactions within such environments.",
-    "speakers": [
-      {
-        "name": "Rangi White",
-        "bio": "Artist whose work explores social and institutional impacts on individuals."
-      }
-    ]
+    "summary": "For Tell us if something changes, artist Rangi White draws on the aesthetics of a Work and Income Office to consider how material and spatial conditions structure a person\u2019s encounters with the\u2026"
   },
   "0f1ea4588f7224e7": {
     "event_type": "workshop",
@@ -107,14 +66,12 @@
     "summary": "A free half-day workshop for Year 9-10 women that combines creativity and engineering skills. Participants will enjoy a complimentary pizza lunch."
   },
   "86b784eecf036925": {
-    "event_type": "lecture",
     "title": "New Zealand's Space Future: From Rocket Lab to National Strategy",
-    "summary": "Explore New Zealand's expanding space industry, scientific advancements through local launches, and regulatory policies."
+    "summary": "An exploration of New Zealand's rapidly growing space sector, the science enabled by domestic launch capability, and the policy frameworks governing our use of space."
   },
   "6c5fc1c057bcfa78": {
-    "event_type": "panel",
     "title": "Writers & Readers: New Zealand Literary Identities",
-    "summary": "A discussion with three New Zealand authors exploring writing from the margins, finding readership, and telling New Zealand stories in a globalized publishing market."
+    "summary": "A conversation with three New Zealand authors about writing from the margins, finding a readership, and what it means to tell New Zealand stories in a globalised publishing market."
   },
   "be71cfa05e7f3e78": {
     "event_type": "workshop",
@@ -122,14 +79,12 @@
     "summary": "A practical nutrition workshop designed to help Auckland University students maintain a healthy diet while studying on campus."
   },
   "62d42dd48958cee6": {
-    "event_type": "lecture",
-    "title": "The Value Of Hackathons",
-    "summary": "Discover the power of hackathons: events where students explore problem-solving, creativity, and real-world impact. An inspiring evening awaits."
+    "title": "The Value of Hackathons",
+    "summary": "Discover the power of HackathonAn event for students curious about problem-solving, creativity and real-world impacts.Join us for an inspiring evening as we hig"
   },
   "1f6536ed97b55103": {
-    "event_type": "lecture",
     "title": "2026 WSBG Climate Festival Fortnight",
-    "summary": "Wellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington is proud to support Wellington City Council\u2019s first Climate Festival Fortnight."
+    "summary": "Register hereWellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington is proud to support Wellington City Council\u2019s first..."
   },
   "3aba32013f4fbb71": {
     "event_type": "lecture",
@@ -143,19 +98,16 @@
     ]
   },
   "e48ddbbc834dc652": {
-    "event_type": "lecture",
-    "title": "Secrets Of The Southern Ocean: Otago's Deep-Sea Research Programme",
-    "summary": "Marine scientists from the University of Otaga reveal findings from recent expeditions to the Southern Ocean, featuring new species discoveries and insights into ecosystem dynamics and fisheries management."
+    "title": "Secrets of the Southern Ocean: Otago's Deep-Sea Research Programme",
+    "summary": "Marine scientists share discoveries from recent voyages to the Southern Ocean, including new species, ecosystem dynamics, and implications for fisheries management."
   },
   "aba91cecd08be353": {
-    "event_type": "seminar",
-    "title": "Arguing About Morphemes",
-    "summary": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars, including discussions on linguistic topics such as morphemes."
+    "title": "Arguing about morphemes",
+    "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the..."
   },
   "b00b8f45e8db70bf": {
-    "event_type": "panel",
-    "title": "In Conversation: The State Of New Zealand Fiction",
-    "summary": "A panel discussion featuring this year's fiction finalists as they explore the themes, craft, and challenges of writing contemporary New Zealand fiction.",
+    "title": "In Conversation: The State of New Zealand Fiction",
+    "summary": "A panel discussion with this year's fiction finalists exploring the themes, craft, and challenges of writing contemporary New Zealand fiction.",
     "speakers": [
       {
         "name": "Paula Morris",
@@ -168,12 +120,10 @@
     ]
   },
   "e885f0a7f721ce37": {
-    "event_type": "lecture",
-    "title": "Canterbury Water: Ecology, Irrigation, And The Future Of Our Freshwater",
-    "summary": "Researchers and community voices will discuss the competing demands on Canterbury's freshwater resources and explore what a sustainable future looks like for the region."
+    "title": "Canterbury Water: Ecology, Irrigation, and the Future of Our Freshwater",
+    "summary": "Researchers and community voices discuss the competing demands on Canterbury's freshwater resources and what a sustainable future looks like for the region."
   },
   "22b6c643fdffc426": {
-    "event_type": "lecture",
     "title": "Equity in Health: Progress and Challenges for M\u0101ori Wellbeing",
     "summary": "A w\u0101nanga-style public discussion on the persistent health inequities facing M\u0101ori communities and what genuine system change would require.",
     "speakers": [
@@ -184,71 +134,47 @@
     ]
   },
   "39f8376b33a79ab2": {
-    "event_type": "lecture",
     "title": "History Recovered: New Discoveries in the Alexander Turnbull Collection",
-    "summary": "Archivists and historians will present new findings from the recently catalogued items within the Alexander Turnbull Library's collection, featuring previously unseen photographs and correspondence."
+    "summary": "Archivists and historians reveal recently catalogued items from the Alexander Turnbull Library collection, including previously unseen photographs and correspondence."
   },
   "3119f8036c8cc821": {
-    "event_type": "panel",
-    "title": "Aviation Conversations: Aerial Mapping Technology Panel Discussion",
-    "summary": "Enjoy an evening at MOTAT's Aviation Hall, where experts will lead a panel discussion on the latest advancements in aerial mapping technology."
+    "title": "Aviation Conversations ",
+    "summary": "Enjoy an evening in the Aviation Hall with a panel discussion exploring aerial mapping technology."
   },
   "2eea4335227e348d": {
-    "event_type": "seminar",
-    "title": "Is There Situational Irony In Satire?",
-    "summary": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars featuring a selection of visiting researchers."
+    "title": "Is there situational irony in satire?",
+    "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the..."
   },
   "82e172e0631b1028": {
-    "event_type": "workshop",
-    "title": "Te Tiriti Workshops: Listening Attentively",
-    "summary": "To mark the signing of Te Tiriti o Waitangi on April 29, 1840, attend a free and educational deep dive into New Zealand\u2019s founding document."
+    "title": "Te Tiriti Workshops: Listening attentively",
+    "summary": "To mark the signing of Te Tiriti o Waitangi on 29 April 1840, join us for a free, educational, deep dive into Aoteaora New Zealand\u2019s founding document."
   },
   "0d0d2141e1bc8a11": {
-    "event_type": "lecture",
-    "title": "Ersha Island",
-    "summary": "A lecture on the subject of Ersha Island, though specific details about the content and speaker are not provided."
+    "title": "Ersha Island"
   },
   "968071dd09d57105": {
-    "event_type": "festival",
-    "title": "Printopia Festival",
-    "summary": "Printopia Festival returns for its fifth edition from 1-3 May 2026, celebrating contemporary printmaking across Aotearoa and the Asia Pacific."
+    "title": "Printopia Festival \u2014",
+    "summary": "Printopia Festival returns for its fifth edition from 1\u20133 May 2026, celebrating contemporary printmaking across Aotearoa and the Asia Pacific."
   },
   "0625a85ce3dcc2fd": {
-    "event_type": "lecture",
-    "title": "Curator Talk \u2013 Standing Tall: A Century Of The Clock Tower",
-    "summary": "Join a captivating exploration of the history and significance of Auckland's iconic Clock Tower, celebrating its centennial year."
+    "title": "Curator talk \u2013 Standing tall: a century of the Clock Tower",
+    "summary": "Come join us for a captivating journey through time as we uncover the secrets behind the iconic Clock Tower in this curator talk!"
   },
   "e32518eb218ec103": {
-    "event_type": "workshop",
-    "title": "Women & Non-binary Artist Hui: Cyanotype Workshop",
-    "summary": "Join a cyanotype workshop where science and creativity intersect. Participants will experiment with exposure, shadow, and UV light to create unique prints using natural materials."
+    "title": "Women & Non-binary Artist Hui: Cyanotype Workshop \u2014",
+    "summary": "In this cyanotype workshop you\u2019ll discover how science and creativity can coincide. Experiment with exposure, shadow, and UV light to create your own unique print using natural materials gathered\u2026"
   },
   "a38c1adb5dea7997": {
-    "event_type": "seminar",
-    "title": "Nz Podcasting Summit",
-    "summary": "Podcast producers, presenters, practitioners and providers from across New Zealand are invited to participate in a full-day event."
+    "title": "NZ Podcasting Summit",
+    "summary": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa\u2026 as well as the podcast curious. Join us for a full day of co"
   },
   "6f8154369b41962d": {
-    "event_type": "lecture",
-    "title": "Speech-Language Therapists Can Talk You Into Anything",
-    "summary": "Professor Clare McCann presents her Inaugural Lecture, exploring the persuasive power and versatility of speech-language therapy.",
-    "speakers": [
-      {
-        "name": "Clare McCann",
-        "bio": "Professor at Auckland University, specializing in speech-language therapy."
-      }
-    ]
+    "title": "Speech-language therapists can talk you into anything",
+    "summary": "Professor Clare McCann's Inaugural Lecture"
   },
   "22f56ba953bbd60d": {
-    "event_type": "lecture",
-    "title": "Inaugural Lecture By Professor Jonathan Barrett",
-    "summary": "Professor Jonathan Barrett discusses the practical application of human rights, focusing on taxation and commercial law in a state that respects equal human dignity.",
-    "speakers": [
-      {
-        "name": "Professor Jonathan Barrett",
-        "bio": "Professor of Law at Victoria University with expertise in the practical application of human rights."
-      }
-    ]
+    "title": "Inaugural Lecture by Professor Jonathan Barrett",
+    "summary": "Respecting equal human dignity: taxation and commercial law in the human rights stateProfessor Barrett\u2019s research concerns the practical application of human rights, particularly..."
   },
   "29e57fcd6effffcd": {
     "event_type": "market",
@@ -256,40 +182,28 @@
     "summary": "Queers & Wares is a market celebrating queer creativity, community, and connection. Browse unique handmade pieces, vintage clothing, and art from local artists."
   },
   "5b4464df305add17": {
-    "event_type": "lecture",
-    "title": "It\u2019s The Little Things That Count: Lessons In Metabolism, Academia And Life",
-    "summary": "Professor Jennifer Miles-Chan presents her inaugural lecture on the significance of small details in metabolism, academia, and life.",
-    "speakers": [
-      {
-        "name": "Jennifer Miles-Chan",
-        "bio": "Professor at [University/Organization], presenting her Inaugural Lecture"
-      }
-    ]
+    "title": "It\u2019s the little things that count: lessons in metabolism, academia and life",
+    "summary": "Professor Jennifer Miles-Chan's Inaugural Lecture"
   },
   "ec949af9f84b83e4": {
-    "event_type": "seminar",
-    "title": "Sports Tech: The Future Of Fitness",
-    "summary": "Explore the future of fitness through a weekend filled with interactive activities and insights into the latest innovations in sports technology."
+    "title": "Sports Tech",
+    "summary": "Find out what the future of fitness looks like with Sports Tech, a whole weekend of fun activities focused on the innovative world of sports technology."
   },
   "189671d66f52d283": {
-    "event_type": "workshop",
-    "title": "T\u0101: Siapo As A Living Practice",
-    "summary": "This two-day workshop introduces participants to the traditional art practice of siapo-making, presenting it as a living and evolving craft."
+    "title": "T\u0101: Siapo as a Living Practice \u2014",
+    "summary": "This two-day workshop introduces participants to the traditional art practice of siapo-making as a living practice."
   },
   "e8cbee17043daa26": {
-    "event_type": "workshop",
-    "title": "Siva Mo Lou Soifua Manuia",
-    "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational steps and their cultural meanings."
+    "title": "Siva Mo Lou Soifua Manuia \u2014",
+    "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings \u2014 gestures that honour\u2026"
   },
   "2411337464843d25": {
-    "event_type": "workshop",
-    "title": "Mamalu: A Lineage Embodied",
-    "summary": "This workshop explores the malu, the Samoan female tattoo, as a living archive of cultural knowledge and ancestral presence."
+    "title": "Mamalu \u2013 A Lineage Embodied \u2014",
+    "summary": "This workshop centres the malu, the Samoan female tattoo, as a living archive of cultural knowledge and ancestral presence."
   },
   "bc36ce59b7e81181": {
-    "event_type": "workshop",
-    "title": "Kintsugi Workshop: Modernised Mending Method/Art Form",
-    "summary": "Explore the traditional Japanese art of kintsugi, a technique used to mend broken pottery with gold or other precious metals, and learn its modern adaptations as both an artistic practice and a philosophical approach to imperfection."
+    "title": "Kintsugi Workshop",
+    "summary": "Kintsugi (Modernised - Mending method / Art form)"
   },
   "80a8f6a8a9efa1b2": {
     "event_type": "lecture",
@@ -323,9 +237,8 @@
     "summary": "A creative workshop using printmaking and mindfulness to explore the familiar paths that bring a sense of comfort and connection to our daily routines."
   },
   "7c69365a7120b66f": {
-    "event_type": "lecture",
-    "title": "In The Meantime - Adapting To A More Tribal, Less Rational World",
-    "summary": "This lecture explores five interconnected crises in today's world: declining trust in institutions, institutional decay, and a materially comfortable yet complacent civilization.",
+    "title": "IN THE MEANTIME - Adapting to a more tribal, less rational world",
+    "summary": "In today's world, we face five interconnected crises: eroding trust in institutions; decay at the institutional core; a civilisation so materially comfortable it had become complacent about the\u2026",
     "speakers": [
       {
         "name": "Dr Oliver Hartwich, Executive Director, The New Zealand Initiative"
@@ -333,9 +246,8 @@
     ]
   },
   "77b0a203c71c3323": {
-    "event_type": "lecture",
-    "title": "Canada\u2019s Perspectives on Indigenous Rights, Undrip, And International Indigenous Cooperation",
-    "summary": "This meeting will commence with a brief annual general meeting featuring the chairman's report, treasurer's financial report, and an election for committee vacancies.",
+    "title": "Canada\u2019s Perspectives on Indigenous Rights, UNDRIP, and International Indigenous Cooperation",
+    "summary": "This month\u2019s meeting will begin with a short AGM, comprising the Chairman\u2019s Report, the Treasurer\u2019s Financial Report, and an election for vacancies on the Committee.",
     "speakers": [
       {
         "name": "HE Keith Smith, High Commissioner for Canada in New Zealand"
@@ -343,14 +255,12 @@
     ]
   },
   "6edac8ffc7e3fbf6": {
-    "event_type": "lecture",
-    "title": "Thin Ice 2026: Urgent Update On Our Changing Climate",
-    "summary": "An urgent update on the current state of our changing climate, presented by leading experts in environmental science."
+    "title": "Thin Ice 2026",
+    "summary": "An urgent update on our changing climate"
   },
   "0ce9fae1b4d99995": {
-    "event_type": "panel",
     "title": "Global Tensions, Local Perspectives: Diaspora Communities in Uncertain Times",
-    "summary": "The NZIIA Wellington Branch Student Committee presents a panel discussion exploring how diaspora communities worldwide and in New Zealand are navigating challenging times.",
+    "summary": "The NZIIA Wellington Branch Student Committee is delighted to welcome you to a panel discussion / Q&A about how diaspora communities worldwide and in New Zealand are grappling with the return of\u2026",
     "speakers": [
       {
         "name": "Student Panel Event"
@@ -358,24 +268,63 @@
     ]
   },
   "95282080ccc6256f": {
-    "event_type": "lecture",
-    "title": "The Fall Of Saigon - 50 Years On",
-    "summary": "Mr Wilson, a former senior New Zealand diplomat with extensive experience in Asia, will discuss the historical event of The Fall of Saigon and its significance fifty years later.",
+    "title": "The Fall of Saigon - 50 years on",
+    "summary": "Mr Wilson is a former senior New Zealand diplomat, with a strong career background in Asia. The topic of his talk will be The Fall of Saigon - 50 years On.",
     "speakers": [
       {
-        "name": "Mr Wilson",
-        "bio": "Former senior New Zealand diplomat with a strong career background in Asia."
+        "name": "Mr Frank Wilson"
       }
     ]
   },
   "7215d531111a9854": {
-    "event_type": "lecture",
-    "title": "Nziiia Agm And Annual Lecture 2026",
-    "summary": "The New Zealand Institute of International Affairs (NZIIA) invites its members to attend the National Annual General Meeting, followed by the annual lecture.",
+    "title": "NZIIA AGM and Annual Lecture 2026",
+    "summary": "NZIIA members are warmly invited to attend the national Annual General Meeting of the New Zealand Institute of International Affairs, followed by our annual lecture.",
     "speakers": [
       {
         "name": "Hon Todd McClay, Minister for Trade and Investment"
       }
     ]
+  },
+  "c2fc63ea6435fa7c": {
+    "title": "Curator's tour at Aotearoa Art Fair"
+  },
+  "78c60ae414094338": {
+    "title": "So you Think you Know About Art? Quiz at Aotearoa Art Fair"
+  },
+  "fdd4532b42c7f1b5": {
+    "title": "Information Session: Business Administration \u2013 Postgraduate Certificate in Business"
+  },
+  "ff8ae22d11fe7fac": {
+    "title": "In Focus: The image that moves me with Selina Ershadi and Nova Paul"
+  },
+  "a244e0dfe41b06b5": {
+    "title": "Kaitohu Director\u2019s Exhibition tour"
+  },
+  "3dff430382117182": {
+    "title": "This Thinking Life: Indigeneity and AI webinar"
+  },
+  "c286231c9816d9f2": {
+    "title": "This Thinking Life: Indigenous psychologies, psychology and Te Tiriti"
+  },
+  "47bff4f0c2afd6c2": {
+    "title": "This Thinking Life: AI and communication"
+  },
+  "69655c25a9a89e49": {
+    "title": "This Thinking Life: Voting and elections in ancient Rome"
+  },
+  "2cb1e777f13f1b20": {
+    "title": "This Thinking Life: Rethinking \u2018normal\u2019 \u2013 the neurodivergent life"
+  },
+  "fea2f6e6b34612a6": {
+    "title": "Evacuation Tapes, a reading by Ruth Buchanan"
+  },
+  "310f8cfdd19d4d16": {
+    "title": "This Thinking Life: Generative AI, contaminated information and rhubarb"
+  },
+  "ac7d494ba6b6c5c1": {
+    "title": "This Thinking Life: Challenging the patriarchy? A reassessment through the lens of ancient women"
+  },
+  "9c702e965742d928": {
+    "title": "This Thinking Life: Sounds historical"
   }
 }
