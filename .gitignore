@@ -1,5 +1,6 @@
 # Generated data (run `make collect` to regenerate)
-data/
+data/*
+!data/enriched-cache.json
 
 # Generated site (run `make build` to regenerate)
 public/

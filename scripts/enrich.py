@@ -25,9 +25,10 @@ import sys
 import urllib.request
 import urllib.error
 
-OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
+CACHE_ONLY = not OLLAMA_HOST  # apply cache without calling Ollama
 INPUT = "data/lectures.json"
 OUTPUT = "data/lectures-enriched.json"
 CACHE = "data/enriched-cache.json"
@@ -110,7 +111,10 @@ def main():
 
     skipped = sum(1 for l in lectures if l.get("id") in cache)
     todo = len(lectures) - skipped
-    print(f"Enriching {todo} lectures ({skipped} cached) using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
+    if CACHE_ONLY:
+        print(f"Applying cache to {len(lectures)} lectures ({skipped} cached, {todo} unenriched)")
+    else:
+        print(f"Enriching {todo} lectures ({skipped} cached) using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
 
     enriched = []
     for i, lec in enumerate(lectures, 1):
@@ -121,6 +125,10 @@ def main():
             out = dict(lec)
             out.update(cache[lid])
             enriched.append(out)
+            continue
+
+        if CACHE_ONLY:
+            enriched.append(lec)
             continue
 
         print(f"[{i:3d}/{len(lectures)}] {title}", end="", flush=True)
