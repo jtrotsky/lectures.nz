@@ -164,27 +164,18 @@
     }
 
     document.querySelectorAll('.lecture-grid').forEach(function (grid) {
+      if (window.innerWidth < 640) return;
       const visible = Array.from(grid.querySelectorAll('.lecture-item:not([hidden])'));
 
-      // Reset all overrides first
+      // Reset all overrides
       visible.forEach(function (item) { item.style.gridColumn = ''; });
 
-      if (window.innerWidth < 640) return;
-
-      const n = visible.length;
-
-      if (n === 1) {
+      if (visible.length === 1) {
         visible[0].style.gridColumn = '1 / -1';
-      } else if (n === 2) {
-        visible[0].style.gridColumn = '1 / span 2';
-        visible[1].style.gridColumn = '3';
-      } else if (n === 4) {
+      } else if (visible.length === 4) {
         visible[3].style.gridColumn = '1 / -1';
-      } else if (n === 5) {
-        visible[3].style.gridColumn = '1 / span 2';
-        visible[4].style.gridColumn = '3';
       }
-      // n === 3 or n === 6: no overrides needed
+      // 2, 3, 5, 6: no overrides — empty columns are acceptable
     });
 
   }
