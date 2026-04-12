@@ -61,6 +61,7 @@ def enrich(lecture: dict) -> dict:
 Given the event below, return ONLY a valid JSON object — no markdown, no explanation.
 
 Fields:
+- "event_type": One word classifying the event. Choose exactly one: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, other.
 - "title": Rewrite in Title Case. Fix genuinely broken formatting only — ALL-CAPS words, leading/trailing junk like "Details", stray dashes or punctuation. Keep subtitles if they add meaning. Preserve good titles as-is. Max ~90 characters.
 - "summary": 2-3 clear sentences for a general audience. Preserve the source's key facts, people, and institutions. Remove hollow openers like "Join us", "We invite you to", "Details". Fix punctuation and style. Do not invent anything not in the source.
 - "speakers": Array of speaker objects, each with "name" (string) and "bio" (string, one sentence describing their role or affiliation). Extract names from the title or summary only. Return [] if no speaker is named.
@@ -85,6 +86,8 @@ Event:
                 raw = raw[4:]
         enriched = json.loads(raw)
         out = dict(lecture)
+        if enriched.get("event_type"):
+            out["event_type"] = enriched["event_type"]
         if enriched.get("title"):
             out["title"] = enriched["title"]
         if enriched.get("summary"):
@@ -140,9 +143,9 @@ def main():
         enriched.append(result)
         print(" ✓")
 
-        # Cache the enriched fields (title, summary, speakers) keyed by ID.
+        # Cache the enriched fields keyed by ID.
         if lid:
-            cache[lid] = {k: result[k] for k in ("title", "summary", "speakers") if k in result}
+            cache[lid] = {k: result[k] for k in ("event_type", "title", "summary", "speakers") if k in result}
 
     # Persist updated cache.
     with open(CACHE, "w") as f:

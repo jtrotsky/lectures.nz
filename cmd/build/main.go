@@ -65,10 +65,15 @@ func main() {
 }
 
 func run() error {
-	lectures, err := loadLectures("data/lectures.json")
+	lecturesPath := "data/lectures.json"
+	if _, err := os.Stat("data/lectures-enriched.json"); err == nil {
+		lecturesPath = "data/lectures-enriched.json"
+	}
+	lectures, err := loadLectures(lecturesPath)
 	if err != nil {
 		return fmt.Errorf("load lectures: %w", err)
 	}
+	lectures = filterByEventType(lectures)
 	hosts, err := loadHosts("data/hosts.json")
 	if err != nil {
 		return fmt.Errorf("load hosts: %w", err)
@@ -168,6 +173,30 @@ func run() error {
 
 	log.Println("Build complete → public/")
 	return nil
+}
+
+// excludedEventTypes are event_type values set by enrichment that indicate
+// non-lecture events. Events with these types are dropped at build time.
+var excludedEventTypes = map[string]bool{
+	"market":      true,
+	"concert":     true,
+	"ceremony":    true,
+	"fitness":     true,
+	"orientation": true,
+}
+
+// filterByEventType removes events whose enrichment-assigned type is not
+// suitable for the site. Events with no event_type (not yet enriched) pass through.
+func filterByEventType(lectures []model.Lecture) []model.Lecture {
+	out := lectures[:0]
+	for _, l := range lectures {
+		if l.EventType != "" && excludedEventTypes[l.EventType] {
+			log.Printf("SKIP  [%s] (type=%s): %q", l.HostSlug, l.EventType, l.Title)
+			continue
+		}
+		out = append(out, l)
+	}
+	return out
 }
 
 // ----- Data loading ---------------------------------------------------

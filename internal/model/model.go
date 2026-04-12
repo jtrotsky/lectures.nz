@@ -18,6 +18,7 @@ type Lecture struct {
 	Speakers    []Speaker  `json:"speakers,omitempty"`
 	Tags        []string   `json:"tags,omitempty"`
 	HostSlug    string     `json:"host_slug"`
+	EventType   string     `json:"event_type,omitempty"` // set by enrichment: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, other
 }
 
 // Speaker represents a speaker at a lecture.

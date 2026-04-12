@@ -38,12 +38,9 @@ jobs:
           echo '```' >> $GITHUB_STEP_SUMMARY
         timeout-minutes: 5
 
-      # Enrichment disabled until a better model is validated
-      # - name: Apply enrichment cache
-      #   run: |
-      #     if [ -f data/enriched-cache.json ]; then
-      #       python3 scripts/enrich.py && cp data/lectures-enriched.json data/lectures.json
-      #     fi
+      - name: Apply enrichment cache
+        run: |
+          python3 scripts/enrich.py
 
       - name: Build site
         run: go run ./cmd/build
