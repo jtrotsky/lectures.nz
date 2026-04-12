@@ -30,6 +30,7 @@ OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3")
 DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
 INPUT = "data/lectures.json"
 OUTPUT = "data/lectures-enriched.json"
+CACHE = "data/enriched-cache.json"
 
 
 def ollama_chat(prompt: str) -> str:
@@ -101,15 +102,39 @@ def main():
     with open(INPUT) as f:
         lectures = json.load(f)
 
-    print(f"Enriching {len(lectures)} lectures using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
+    # Load cache: maps lecture ID → enriched fields from a previous run.
+    cache = {}
+    if os.path.exists(CACHE):
+        with open(CACHE) as f:
+            cache = json.load(f)
+
+    skipped = sum(1 for l in lectures if l.get("id") in cache)
+    todo = len(lectures) - skipped
+    print(f"Enriching {todo} lectures ({skipped} cached) using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
 
     enriched = []
     for i, lec in enumerate(lectures, 1):
+        lid = lec.get("id", "")
         title = lec.get("title", "")[:50]
+        if lid and lid in cache:
+            print(f"[{i:3d}/{len(lectures)}] {title} (cached)")
+            out = dict(lec)
+            out.update(cache[lid])
+            enriched.append(out)
+            continue
+
         print(f"[{i:3d}/{len(lectures)}] {title}", end="", flush=True)
         result = enrich(lec)
         enriched.append(result)
         print(" ✓")
+
+        # Cache the enriched fields (title, summary, speakers) keyed by ID.
+        if lid:
+            cache[lid] = {k: result[k] for k in ("title", "summary", "speakers") if k in result}
+
+    # Persist updated cache.
+    with open(CACHE, "w") as f:
+        json.dump(cache, f, indent=2, default=str)
 
     with open(OUTPUT, "w") as f:
         json.dump(enriched, f, indent=2, default=str)

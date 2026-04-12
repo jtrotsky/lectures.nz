@@ -25,6 +25,12 @@ jobs:
           go-version: "1.22"
           cache: true
 
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v2
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+        continue-on-error: true
+
       - name: Collect lectures
         id: collect
         env:
@@ -37,6 +43,26 @@ jobs:
           grep -E 'OK|ERROR|SKIP|Wrote' /tmp/collect.log >> $GITHUB_STEP_SUMMARY || true
           echo '```' >> $GITHUB_STEP_SUMMARY
         timeout-minutes: 5
+
+      - name: Restore enrichment cache
+        uses: actions/cache@v4
+        with:
+          path: data/enriched-cache.json
+          key: enrichment-cache-${{ github.run_id }}
+          restore-keys: enrichment-cache-
+
+      - name: Enrich lectures
+        env:
+          OLLAMA_HOST: ${{ secrets.OLLAMA_HOST }}
+          OLLAMA_MODEL: ${{ secrets.OLLAMA_MODEL }}
+        run: |
+          if curl -sf "${OLLAMA_HOST}/api/version" > /dev/null 2>&1; then
+            python3 scripts/enrich.py && cp data/lectures-enriched.json data/lectures.json
+            echo "Enrichment complete" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "Ollama unreachable — deploying without enrichment" >> $GITHUB_STEP_SUMMARY
+          fi
+        timeout-minutes: 30
 
       - name: Build site
         run: go run ./cmd/build
