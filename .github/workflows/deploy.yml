@@ -54,7 +54,6 @@ jobs:
       - name: Enrich lectures
         env:
           OLLAMA_HOST: ${{ secrets.OLLAMA_HOST }}
-          OLLAMA_MODEL: ${{ secrets.OLLAMA_MODEL }}
         run: |
           if curl -sf "${OLLAMA_HOST}/api/version" > /dev/null 2>&1; then
             python3 scripts/enrich.py && cp data/lectures-enriched.json data/lectures.json

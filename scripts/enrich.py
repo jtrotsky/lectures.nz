@@ -26,7 +26,7 @@ import urllib.request
 import urllib.error
 
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
-OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
 INPUT = "data/lectures.json"
 OUTPUT = "data/lectures-enriched.json"
