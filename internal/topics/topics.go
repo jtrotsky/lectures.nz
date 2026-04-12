@@ -44,9 +44,26 @@ var excludeKeywords = []string{
 	"live performance",
 	"live day",
 	"symphony orchestra",
+	"bohm presents", // Te Papa live performance series
 	// Ceremonies (not educational)
 	"awards night",
 	"awards ceremony",
+	// Activity sessions (not lectures)
+	"mandarin corner",   // VUW craft/cultural activity series
+	"sit and sketch",    // art activity
+	"sketch & sip",      // social art activity
+	"sketch&sip",        // variant spelling
+	"spell candle",      // craft activity
+	"collage club",      // art activity club
+	"super creative live", // AGANZ entertainment series
+	"make art from plants",
+	// Markets / social events
+	"pride market",
+	"queers & wares", // craft market, not educational
+	// Wellness / self-help (not academic)
+	"nourish me well", // student orientation wellness event
+	// Student workshop series (not public lectures)
+	"ideas challenge",
 }
 
 // IsExcluded reports whether a lecture title looks like a non-lecture event

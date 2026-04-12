@@ -14,9 +14,10 @@ Usage:
     python scripts/enrich.py
 
 Environment variables:
-    OLLAMA_HOST   Ollama base URL (default: http://localhost:11434)
-    OLLAMA_MODEL  Model to use    (default: llama3)
-    DRY_RUN       Set to 1 to print prompts without calling Ollama
+    OLLAMA_HOST      Ollama base URL (default: http://localhost:11434)
+    OLLAMA_MODEL     Model to use    (default: llama3)
+    DRY_RUN          Set to 1 to print prompts without calling Ollama
+    FORCE_REFRESH    Set to 1 to re-enrich all lectures, ignoring the cache
 """
 
 import json
@@ -28,6 +29,7 @@ import urllib.error
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
 DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
+FORCE_REFRESH = os.environ.get("FORCE_REFRESH", "0") == "1"
 CACHE_ONLY = not OLLAMA_HOST  # apply cache without calling Ollama
 INPUT = "data/lectures.json"
 OUTPUT = "data/lectures-enriched.json"
@@ -54,14 +56,14 @@ def enrich(lecture: dict) -> dict:
     summary = lecture.get("summary", "")
     host = lecture.get("host_slug", "")
 
-    prompt = f"""You are helping curate a New Zealand public lectures website.
+    prompt = f"""You are a curator for lectures.nz, a New Zealand public lectures website.
 
-Given the following event details, return a JSON object with these fields:
-- "title": a clear, compelling title (fix ALL-CAPS, clean up punctuation, keep it concise)
-- "summary": 2-3 sentence description suitable for a public audience. Use the existing text as a base — expand if thin, tighten if verbose. Do not invent facts.
-- "speakers": a JSON array of objects with "name" (string) and "bio" (string, 1 sentence, empty string if unknown). Extract from the title/summary if present, otherwise return [].
+Given the event below, return ONLY a valid JSON object — no markdown, no explanation.
 
-Respond with ONLY valid JSON, no explanation.
+Fields:
+- "title": Rewrite in Title Case. Fix genuinely broken formatting only — ALL-CAPS words, leading/trailing junk like "Details", stray dashes or punctuation. Keep subtitles if they add meaning. Preserve good titles as-is. Max ~90 characters.
+- "summary": 2-3 clear sentences for a general audience. Preserve the source's key facts, people, and institutions. Remove hollow openers like "Join us", "We invite you to", "Details". Fix punctuation and style. Do not invent anything not in the source.
+- "speakers": Array of speaker objects, each with "name" (string) and "bio" (string, one sentence describing their role or affiliation). Extract names from the title or summary only. Return [] if no speaker is named.
 
 Event:
   host: {host}
@@ -113,6 +115,8 @@ def main():
     todo = len(lectures) - skipped
     if CACHE_ONLY:
         print(f"Applying cache to {len(lectures)} lectures ({skipped} cached, {todo} unenriched)")
+    elif FORCE_REFRESH:
+        print(f"FORCE_REFRESH: re-enriching all {len(lectures)} lectures using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
     else:
         print(f"Enriching {todo} lectures ({skipped} cached) using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
 
@@ -120,7 +124,7 @@ def main():
     for i, lec in enumerate(lectures, 1):
         lid = lec.get("id", "")
         title = lec.get("title", "")[:50]
-        if lid and lid in cache:
+        if lid and lid in cache and not FORCE_REFRESH:
             print(f"[{i:3d}/{len(lectures)}] {title} (cached)")
             out = dict(lec)
             out.update(cache[lid])

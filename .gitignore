@@ -2,6 +2,9 @@
 data/*
 !data/enriched-cache.json
 
+# AI instructions
+.CLAUDE.md
+
 # Generated site (run `make build` to regenerate)
 public/
 
