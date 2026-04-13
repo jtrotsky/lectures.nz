@@ -18,6 +18,7 @@ Environment variables:
     OLLAMA_MODEL     Model to use    (default: qwen2.5:14b)
     DRY_RUN          Set to 1 to print prompts without calling Ollama
     FORCE_REFRESH    Set to 1 to re-enrich all lectures, ignoring the cache
+    REFRESH_SOURCE   host_slug to re-enrich (e.g. REFRESH_SOURCE=meetup), others stay cached
 """
 
 import json
@@ -30,6 +31,7 @@ OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:14b")
 DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
 FORCE_REFRESH = os.environ.get("FORCE_REFRESH", "0") == "1"
+REFRESH_SOURCE = os.environ.get("REFRESH_SOURCE", "")  # re-enrich events from this host_slug
 CACHE_ONLY = not OLLAMA_HOST  # apply cache without calling Ollama
 INPUT = "data/lectures.json"
 OUTPUT = "data/lectures-enriched.json"
@@ -88,6 +90,22 @@ def _extract_json(raw: str) -> str:
     return raw.strip()
 
 
+import re as _re
+
+# HTML entity pattern (e.g. &mdash; &amp; &#8212;) and pure-punctuation names.
+_JUNK_SPEAKER_RE = _re.compile(r'^(&[a-z#0-9]+;|[—–\-\s\.,:;!?]+)$', _re.IGNORECASE)
+
+
+def _clean_speakers(speakers: list) -> list:
+    """Drop speakers whose name is a HTML entity, punctuation, or empty."""
+    cleaned = []
+    for sp in speakers:
+        name = sp.get("name", "").strip()
+        if name and not _JUNK_SPEAKER_RE.match(name):
+            cleaned.append(sp)
+    return cleaned
+
+
 def enrich(lecture: dict) -> dict:
     title = lecture.get("title", "")
     description = lecture.get("description", "") or lecture.get("summary", "")
@@ -128,7 +146,7 @@ Event:
         if enriched.get("description"):
             out["description"] = enriched["description"]
         if enriched.get("speakers"):
-            out["speakers"] = enriched["speakers"]
+            out["speakers"] = _clean_speakers(enriched["speakers"])
         return out
     except Exception as e:
         print(f"  WARN: {title[:50]}: {e}", file=sys.stderr)
@@ -155,28 +173,41 @@ def main():
         print(f"Applying cache to {len(lectures)} lectures ({skipped} cached, {todo} unenriched)")
     elif FORCE_REFRESH:
         print(f"FORCE_REFRESH: re-enriching all {len(lectures)} lectures using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
+    elif REFRESH_SOURCE:
+        source_count = sum(1 for l in lectures if l.get("host_slug", "") == REFRESH_SOURCE)
+        print(f"REFRESH_SOURCE={REFRESH_SOURCE}: re-enriching {source_count} events, {skipped - source_count} others cached, using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
     else:
         print(f"Enriching {todo} lectures ({skipped} cached) using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
 
     enriched = []
+    # Per-source stats: {slug: {"cached": int, "refreshed": int, "unenriched": int}}
+    source_stats = {}
+
     for i, lec in enumerate(lectures, 1):
         lid = lec.get("id", "")
+        slug = lec.get("host_slug", "unknown")
         title = lec.get("title", "")[:50]
-        if lid and lid in cache and not FORCE_REFRESH:
+        stats = source_stats.setdefault(slug, {"cached": 0, "refreshed": 0, "unenriched": 0})
+
+        is_source_refresh = REFRESH_SOURCE and lec.get("host_slug", "") == REFRESH_SOURCE
+        if lid and lid in cache and not FORCE_REFRESH and not is_source_refresh:
             print(f"[{i:3d}/{len(lectures)}] {title} (cached)")
             out = dict(lec)
             out.update(cache[lid])
             enriched.append(out)
+            stats["cached"] += 1
             continue
 
         if CACHE_ONLY:
             enriched.append(lec)
+            stats["unenriched"] += 1
             continue
 
         print(f"[{i:3d}/{len(lectures)}] {title}", end="", flush=True)
         result = enrich(lec)
         enriched.append(result)
         print(" ✓")
+        stats["refreshed"] += 1
 
         # Cache the enriched fields keyed by ID.
         if lid:
@@ -190,6 +221,14 @@ def main():
         json.dump(enriched, f, indent=2, default=str)
 
     print(f"\nWrote {OUTPUT}")
+
+    # Per-source summary.
+    print(f"\n{'Source':<30} {'Cached':>8} {'Refreshed':>10} {'Unenriched':>12}")
+    print("-" * 62)
+    for slug in sorted(source_stats):
+        s = source_stats[slug]
+        print(f"{slug:<30} {s['cached']:>8} {s['refreshed']:>10} {s['unenriched']:>12}")
+    print()
     print(f"Review with: diff <(jq '.[].title' {INPUT}) <(jq '.[].title' {OUTPUT})")
 
 

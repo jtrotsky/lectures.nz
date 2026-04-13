@@ -72,6 +72,21 @@ func Fetch(ctx context.Context, url string) ([]byte, error) {
 	return nil, fmt.Errorf("all attempts failed for %s: %w", url, lastErr)
 }
 
+// FetchDetail fetches an event detail page and returns the main description
+// text extracted from JSON-LD, OpenGraph, or the first substantial paragraph.
+// Returns an empty string (not an error) when nothing useful is found.
+func FetchDetail(ctx context.Context, url string) (string, error) {
+	body, err := Fetch(ctx, url)
+	if err != nil {
+		return "", err
+	}
+	text := ExtractDescription(body)
+	if LooksLikeGarbage(text) {
+		return "", nil
+	}
+	return text, nil
+}
+
 // MakeID generates a stable MD5-based ID from a URL.
 func MakeID(url string) string {
 	h := md5.Sum([]byte(url))

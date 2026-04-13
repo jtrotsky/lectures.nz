@@ -12,6 +12,7 @@ package studioone
 import (
 	"context"
 	"fmt"
+	"html"
 	"regexp"
 	"strconv"
 	"strings"
@@ -72,9 +73,10 @@ var monthMap = map[string]time.Month{
 	"oct": time.October, "nov": time.November, "dec": time.December,
 }
 
-func innerText(html string) string {
-	s := brRe.ReplaceAllString(html, "\n")
+func innerText(raw string) string {
+	s := brRe.ReplaceAllString(raw, "\n")
 	s = tagStripRe.ReplaceAllString(s, "")
+	s = html.UnescapeString(s) // decode &mdash; → —, &amp; → &, etc.
 	return strings.TrimSpace(s)
 }
 

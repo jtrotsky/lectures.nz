@@ -104,6 +104,8 @@ var adminKeywords = []string{
 	"baduanjin",
 	// Language competitions (not public talks)
 	"bridge competition",
+	// Language-practice social meetups (not public lectures)
+	"mandarin corner",
 }
 
 // isAdminEvent returns true for administrative/calendar events that aren't public talks.
@@ -233,13 +235,23 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 
 		free := md.Cost == "free"
 
+		// The Funnelback API returns a short eventSummary. Fetch the detail
+		// page when that's thin so enrichment has enough text to classify
+		// correctly (e.g. social meetup vs lecture).
+		desc := md.EventSummary
+		if len(strings.TrimSpace(desc)) < 120 {
+			if detail, err := scraper.FetchDetail(ctx, eventURL); err == nil && detail != "" {
+				desc = detail
+			}
+		}
+
 		lectures = append(lectures, model.Lecture{
 			ID:          scraper.MakeID(eventURL),
 			Title:       scraper.CleanTitle(title),
 			Link:        eventURL,
 			TimeStart:   t,
-			Description: md.EventSummary,
-			Summary:     scraper.TruncateSummary(md.EventSummary, 200),
+			Description: desc,
+			Summary:     scraper.TruncateSummary(desc, 200),
 			Location:    location,
 			Free:        free,
 			HostSlug:    "victoria",

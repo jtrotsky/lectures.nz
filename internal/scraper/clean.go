@@ -41,26 +41,29 @@ func CleanTitle(title string) string {
 	return strings.TrimSpace(title)
 }
 
-// TruncateSummary shortens a summary to at most maxLen characters, breaking
-// at the nearest sentence boundary before that limit.  A trailing "…" is
-// appended when the text is shortened.
+// TruncateSummary shortens a summary to at most maxLen characters, always
+// ending on a complete sentence.  If no sentence boundary exists before maxLen
+// it extends up to maxLen+200 to reach the next one.  If still none found it
+// returns the full string — never a mid-sentence truncation with "…".
 func TruncateSummary(s string, maxLen int) string {
 	s = strings.TrimSpace(s)
 	if len(s) <= maxLen {
 		return s
 	}
-	// Try to break at a sentence end (.!?) within the limit.
-	cut := s[:maxLen]
-	for i := len(cut) - 1; i >= maxLen/2; i-- {
-		if cut[i] == '.' || cut[i] == '!' || cut[i] == '?' {
+	// Find the last sentence end (. ! ?) at or before maxLen.
+	for i := maxLen - 1; i >= 0; i-- {
+		if s[i] == '.' || s[i] == '!' || s[i] == '?' {
 			return strings.TrimSpace(s[:i+1])
 		}
 	}
-	// Fall back: break at last space so we don't cut a word in half.
-	if idx := strings.LastIndex(cut, " "); idx > maxLen/2 {
-		return strings.TrimSpace(s[:idx]) + "…"
+	// No sentence boundary before maxLen — extend to the next one.
+	for i := maxLen; i < len(s) && i < maxLen+200; i++ {
+		if s[i] == '.' || s[i] == '!' || s[i] == '?' {
+			return strings.TrimSpace(s[:i+1])
+		}
 	}
-	return cut + "…"
+	// No sentence boundary anywhere in range — return the full summary.
+	return s
 }
 
 // isAllCaps returns true when more than 70 % of the letter runes in s are

@@ -33,11 +33,11 @@
   "2cff4af0fa8b324e": {
     "event_type": "seminar",
     "summary": "Professor Hella von Unger presents research in education.",
-    "description": "Victoria's School of Education hosts a seminar with visiting Professor Hella von Unger from Munich. The session focuses on educational research and includes a networking opportunity over refreshments.",
+    "description": "Victoria's School of Education hosts a seminar featuring visiting Professor Hella von Unger from Munich. The session focuses on educational research and includes networking with tea and coffee.",
     "speakers": [
       {
         "name": "Professor Hella von Unger",
-        "bio": "Munich university scholar"
+        "bio": "Munich University academic"
       }
     ]
   },
@@ -54,31 +54,13 @@
   },
   "db21f3bf1d770c7f": {
     "event_type": "lecture",
-    "summary": "Explore societal issues like poverty, inequity, ecology, and climate with Victoria University",
-    "description": "In Aotearoa, we know very well what our most pressing problems are\u2014poverty, inequity, ecological destruction, and climate change. But we are much less clear on the kind of society that will allow us to address these issues. This lecture will explore pathways towards a just society."
+    "summary": "Discussion on societal issues like poverty and climate change in Aotearoa.",
+    "description": "In Aotearoa, pressing problems such as poverty, inequity, ecological destruction, and climate change are well known. This lecture explores pathways towards a just society addressing these challenges."
   },
   "e1cb94aaa2fee747": {
     "event_type": "lecture",
-    "summary": "Philanthropy Along the Supply Chain by Victoria University authors",
-    "description": "Firms strategically use donations to trade partners' affiliated charities to achieve supply chain goals. Authors include Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste from Victoria University.",
-    "speakers": [
-      {
-        "name": "Huu Nhan Duong",
-        "bio": "Victoria University author"
-      },
-      {
-        "name": "Emdad Islam",
-        "bio": "Victoria University author"
-      },
-      {
-        "name": "Lubna Rahman",
-        "bio": "Victoria University author"
-      },
-      {
-        "name": "Cara Vansteenkiste",
-        "bio": "Victoria University author"
-      }
-    ]
+    "summary": "Victoria hosts a lecture on strategic philanthropy in supply chains.",
+    "description": "Firms strategically use donations to trade partners' affiliated charities to achieve positive public perception and business objectives. Authors: Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste"
   },
   "1e871946e014fdb7": {
     "event_type": "ceremony",
@@ -145,8 +127,8 @@
   },
   "1f6536ed97b55103": {
     "event_type": "seminar",
-    "summary": "2026 WSBG Climate Festival Fortnight supported by Wellington City Council.",
-    "description": "Wellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington is proud to support Wellington City Council\u2019s first Climate Festival Fortnight. Register here for updates and events."
+    "summary": "2026 WSBG Climate Festival Fortnight supported by Wellington City Council",
+    "description": "Wellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington is proud to support Wellington City Council\u2019s first 2026 WSBG Climate Festival Fortnight. Register here."
   },
   "3aba32013f4fbb71": {
     "event_type": "lecture",
@@ -166,8 +148,8 @@
   },
   "aba91cecd08be353": {
     "event_type": "seminar",
-    "summary": "Seminar on linguistics with visiting researchers.",
-    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the school. Each session focuses on specific topics in language studies, including morphemes."
+    "summary": "Victoria hosts seminar on arguing about morphemes.",
+    "description": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars featuring a selection of visiting researchers as well as those from within the university."
   },
   "b00b8f45e8db70bf": {
     "event_type": "seminar",
@@ -212,8 +194,8 @@
   },
   "2eea4335227e348d": {
     "event_type": "seminar",
-    "summary": "Explore situational irony in satire with a linguist.",
-    "description": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars featuring visiting researchers and faculty. This session delves into the nuances of situational irony within satirical contexts."
+    "summary": "Victoria's linguistics seminar explores situational irony in satire.",
+    "description": "The School of Linguistics and Applied Language Studies at Victoria hosts weekly seminars featuring a selection of visiting researchers and local scholars. This week\u2019s discussion delves into the nuances of situational irony within satire."
   },
   "82e172e0631b1028": {
     "event_type": "workshop",
@@ -229,11 +211,7 @@
     "event_type": "festival",
     "summary": "Printopia Festival returns for its fifth edition with expanded programmes.",
     "description": "Printopia Festival returns for its fifth edition from 1\u20133 May 2026, celebrating contemporary printmaking across Aotearoa and the Asia Pacific. The Festival presents a signature programme including the largest print fair in the country, live printing, artist talks, and hands-on workshops. New additions for 2026 include curated exhibitions, guided gallery tours, and experimental performances.",
-    "speakers": [
-      {
-        "name": "&mdash;"
-      }
-    ]
+    "speakers": []
   },
   "0625a85ce3dcc2fd": {
     "event_type": "lecture",
@@ -536,14 +514,14 @@
     "description": "Join Massey University for a thought-provoking lecture that delves into the role and impact of sound in historical contexts. The event encourages attendees to reflect on how auditory experiences shape our understanding of the past."
   },
   "212868d681362f71": {
-    "event_type": "lecture",
-    "summary": "Explore Yongchun lacquer baskets' art and culture.",
-    "description": "Discover the beauty of Yongchun Lacquer Baskets, a traditional craft from Fujian that blends weaving and lacquer art. Learn about its cultural story and try painting your own basket."
+    "event_type": "workshop",
+    "summary": "Explore Yongchun lacquer baskets and paint your own.",
+    "description": "Discover the beauty of Yongchun Lacquer Baskets, a traditional craft from Fujian blending weaving and lacquer art. Learn about its cultural story and create your own lacquer basket under expert guidance."
   },
   "2006b7e3c699fb83": {
     "event_type": "lecture",
-    "summary": "Professor Jonathan Barrett explores human rights through taxation and commercial law.",
-    "description": "Respecting equal human dignity: taxation and commercial law in the human rights state. Professor Barrett\u2019s research concerns the practical application of human rights, particularly focusing on these areas.",
+    "summary": "Inaugural lecture on human rights in taxation and commercial law by Professor Jonathan Barrett",
+    "description": "Respecting equal human dignity: taxation and commercial law in the human rights state. Professor Barrett\u2019s research concerns the practical application of human rights, particularly in legal contexts such as taxation and commercial law.",
     "speakers": [
       {
         "name": "Professor Jonathan Barrett",
@@ -553,28 +531,28 @@
   },
   "844b9ea53dc84eb6": {
     "event_type": "workshop",
-    "summary": "Mandarin Corner meets for Dragon Boat Festival celebration and herbal sachet crafting.",
-    "description": "Relaxed meet-up to practice Mandarin with native speakers. Celebrate the Dragon Boat Festival and craft your own herbal sachet."
+    "summary": "Mandarin Corner celebrates Dragon Boat Festival, crafts herbal sachets.",
+    "description": "Join our Mandarin Corner for a relaxed meet-up to practise Mandarin with native speakers. Celebrate the Dragon Boat Festival and craft your own traditional herbal sachet."
   },
   "87d8cabb11424c41": {
     "event_type": "lecture",
-    "summary": "Experience Chinese shadow puppetry at Mandarin Corner.",
-    "description": "Explore the art of Chinese shadow puppetry through a live demonstration. Learn about its rich history and profound cultural significance."
+    "summary": "Experience Chinese shadow puppetry at Victoria University.",
+    "description": "Experience the storytelling magic of traditional Chinese shadow puppetry. Watch a live demonstration, learn about its history and cultural significance."
   },
   "3755a9be782fce30": {
     "event_type": "workshop",
-    "summary": "Tai Chi workshop at Victoria's Mandarin Corner for language immersion.",
-    "description": "Victoria University hosts a Mandarin Corner event focusing on traditional Chinese martial arts, specifically Tai Chi. Participants will engage in guided basic movements and conversation with native speakers to enhance their language skills."
+    "summary": "Victoria's Mandarin Corner explores Tai Chi basics.",
+    "description": "Victoria University hosts a Mandarin Corner session focused on Tai Chi, inviting participants to practice this traditional Chinese martial art. The event combines language immersion with cultural experience through guided Tai Chi movements."
   },
   "2ef8a4ebd6343108": {
     "event_type": "seminar",
-    "summary": "Mandarin Corner explores Chinese Mid-Autumn Festival traditions.",
-    "description": "Celebrate the Mid-Autumn Festival with Mandarin Corner. Discover the legend of Chang\u2019e, learn about mooncakes and festival customs."
+    "summary": "Mandarin Corner celebrates Mid-Autumn Festival with Chinese legends and traditions.",
+    "description": "Celebrate the Mid-Autumn Festival and explore one of China\u2019s most beloved traditions. Discover the legend of Chang\u2019e, learn about mooncakes and festival customs. Hosted by Victoria University's Mandarin Corner."
   },
   "62204f2d9234daaf": {
-    "event_type": "seminar",
-    "summary": "Victoria hosts Mandarin Corner for Chinese art exploration.",
-    "description": "Victoria's Mandarin Corner is a relaxed meet-up to practice Mandarin with native speakers. Participants will explore the role of gold in Chinese art and create their own simple gold-foil design."
+    "event_type": "workshop",
+    "summary": "Mandarin Corner workshop on Chinese gold-foil burning art.",
+    "description": "Relaxed meet-up to practice Mandarin with native speakers. Explore the use of gold in Chinese art and create a simple gold-foil design."
   },
   "e63364a32a4ba7ef": {
     "event_type": "lecture",
@@ -584,6 +562,53 @@
       {
         "name": "Catherine Grant Makokera",
         "bio": "NZIIA Executive Director, international trade expert"
+      }
+    ]
+  },
+  "6a637e4eaaedf817": {
+    "event_type": "market",
+    "summary": "Printopia Festival returns for its fifth edition celebrating contemporary printmaking.",
+    "description": "Printopia Festival returns for its fifth edition from 1\u20133 May 2026, celebrating contemporary printmaking across Aotearoa and the Asia Pacific. Now a recognised regional arts event, it features the country\u2019s largest print fair, live printing, artist talks, hands-on workshops, curated exhibitions, guided gallery tours, and experimental performances."
+  },
+  "575e90640f923cd8": {
+    "event_type": "workshop",
+    "summary": "Cyanotype workshop led by Lulu for women and non-binary artists.",
+    "description": "In this cyanotype workshop, explore how science intersects with creativity. Experiment with exposure, shadows, and UV light to create unique prints using natural materials. Led by Lulu in a relaxed environment for those interested in art experimentation.",
+    "speakers": [
+      {
+        "name": "Lulu",
+        "bio": "workshop facilitator"
+      }
+    ]
+  },
+  "3139979a01b04c3d": {
+    "event_type": "workshop",
+    "summary": "Explore siapo-making as a living Samoan practice through talanoa.",
+    "description": "This two-day workshop introduces participants to the traditional art practice of siapo-making as a living practice. Through talanoa, we will explore the history of siapo in S\u0101moa, its cultural significance and the ways it continues to be reimagined today.",
+    "speakers": [
+      {
+        "name": "FLORENCE ULUTUNU"
+      }
+    ]
+  },
+  "ce1f249b3c34b63f": {
+    "event_type": "workshop",
+    "summary": "Explore Samoan female tattooing as cultural knowledge.",
+    "description": "This workshop focuses on the malu, a Samoan female tattoo, examining it as a repository of ancestral and cultural heritage. Participants engage in discussion, drawing, writing, and practical sessions to understand how Indigenous knowledge is expressed through bodily markings, and explore themes like gender, identity, sovereignty, and cultural appropriation.",
+    "speakers": [
+      {
+        "name": "Grounded Rosanna",
+        "bio": "artist and practitioner"
+      }
+    ]
+  },
+  "07ddca6f970286a6": {
+    "event_type": "workshop",
+    "summary": "Explore Siva Samoa movements for cultural and physical well-being.",
+    "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings \u2014 gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world.",
+    "speakers": [
+      {
+        "name": "CHARLENE TEDROW"
       }
     ]
   }
