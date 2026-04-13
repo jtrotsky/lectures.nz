@@ -50,7 +50,6 @@ var excludeKeywords = []string{
 	"awards ceremony",
 	"book awards", // longlist/prize celebration events
 	// Activity sessions (not lectures)
-	"mandarin corner",   // VUW craft/cultural activity series
 	"sit and sketch",    // art activity
 	"sketch & sip",      // social art activity
 	"sketch&sip",        // variant spelling
@@ -65,6 +64,8 @@ var excludeKeywords = []string{
 	"nourish me well", // student orientation wellness event
 	// Student workshop series (not public lectures)
 	"ideas challenge",
+	// Pub/social quiz nights
+	"quiz",
 }
 
 // IsExcluded reports whether a lecture title looks like a non-lecture event

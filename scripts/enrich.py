@@ -15,7 +15,7 @@ Usage:
 
 Environment variables:
     OLLAMA_HOST      Ollama base URL (default: http://localhost:11434)
-    OLLAMA_MODEL     Model to use    (default: llama3)
+    OLLAMA_MODEL     Model to use    (default: qwen2.5:14b)
     DRY_RUN          Set to 1 to print prompts without calling Ollama
     FORCE_REFRESH    Set to 1 to re-enrich all lectures, ignoring the cache
 """
@@ -27,7 +27,7 @@ import urllib.request
 import urllib.error
 
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "")
-OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama3.1:8b")
+OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:14b")
 DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
 FORCE_REFRESH = os.environ.get("FORCE_REFRESH", "0") == "1"
 CACHE_ONLY = not OLLAMA_HOST  # apply cache without calling Ollama
@@ -41,14 +41,51 @@ def ollama_chat(prompt: str) -> str:
         "model": OLLAMA_MODEL,
         "prompt": prompt,
         "stream": False,
+        # Disable thinking tokens on reasoning models (qwen3, deepseek-r1).
+        # This keeps output clean JSON rather than <think>...</think> + JSON.
+        "think": False,
     }).encode()
     req = urllib.request.Request(
         f"{OLLAMA_HOST}/api/generate",
         data=payload,
         headers={"Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(req, timeout=60) as resp:
+    with urllib.request.urlopen(req, timeout=120) as resp:
         return json.loads(resp.read())["response"].strip()
+
+
+def _extract_json(raw: str) -> str:
+    """Extract the first JSON object from a model response.
+
+    Handles common wrapping patterns from reasoning models:
+    - <think>...</think> blocks (qwen3, deepseek-r1)
+    - ```json ... ``` or ``` ... ``` fences
+    - Plain JSON object
+    """
+    import re
+
+    # Strip <think>...</think> blocks produced by reasoning models.
+    raw = re.sub(r"<think>.*?</think>", "", raw, flags=re.DOTALL).strip()
+
+    # Strip markdown code fences.
+    if "```" in raw:
+        # Take content between first and last fence pair.
+        parts = raw.split("```")
+        # parts[1] is the fenced block (possibly prefixed with "json\n")
+        if len(parts) >= 3:
+            raw = parts[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
+
+    # Find the first { and last } to extract a JSON object even if there's
+    # trailing text after the closing brace.
+    start = raw.find("{")
+    end = raw.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        raw = raw[start:end + 1]
+
+    return raw.strip()
 
 
 def enrich(lecture: dict) -> dict:
@@ -62,7 +99,6 @@ Given the event below, return ONLY a valid JSON object — no markdown, no expla
 
 Fields:
 - "event_type": One word classifying the event. Choose exactly one: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, other.
-- "title": Rewrite in Title Case. Fix genuinely broken formatting only — ALL-CAPS words, leading/trailing junk like "Details", stray dashes or punctuation. Keep subtitles if they add meaning. Preserve good titles as-is. Max ~90 characters.
 - "summary": 2-3 clear sentences for a general audience. Preserve the source's key facts, people, and institutions. Remove hollow openers like "Join us", "We invite you to", "Details". Fix punctuation and style. Do not invent anything not in the source.
 - "speakers": Array of speaker objects, each with "name" (string) and "bio" (string, one sentence describing their role or affiliation). Extract names from the title or summary only. Return [] if no speaker is named.
 
@@ -79,17 +115,11 @@ Event:
 
     try:
         raw = ollama_chat(prompt)
-        # Strip markdown code fences if present
-        if raw.startswith("```"):
-            raw = raw.split("```")[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
+        raw = _extract_json(raw)
         enriched = json.loads(raw)
         out = dict(lecture)
         if enriched.get("event_type"):
             out["event_type"] = enriched["event_type"]
-        if enriched.get("title"):
-            out["title"] = enriched["title"]
         if enriched.get("summary"):
             out["summary"] = enriched["summary"]
         if enriched.get("speakers"):
@@ -145,7 +175,7 @@ def main():
 
         # Cache the enriched fields keyed by ID.
         if lid:
-            cache[lid] = {k: result[k] for k in ("event_type", "title", "summary", "speakers") if k in result}
+            cache[lid] = {k: result[k] for k in ("event_type", "summary", "speakers") if k in result}
 
     # Persist updated cache.
     with open(CACHE, "w") as f:

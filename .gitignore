@@ -4,6 +4,7 @@ data/*
 
 # AI instructions
 .CLAUDE.md
+CLAUDE.md
 
 # Generated site (run `make build` to regenerate)
 public/
