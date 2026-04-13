@@ -429,5 +429,46 @@
   "9c702e965742d928": {
     "event_type": "lecture",
     "summary": "This lecture explores the history of sound and its impact on our lives, examining how different sounds have shaped cultural practices and perceptions throughout time."
+  },
+  "212868d681362f71": {
+    "event_type": "seminar",
+    "summary": "Explore Yongchun lacquer baskets' art and culture.",
+    "description": "Discover the beauty of Yongchun Lacquer Baskets, a traditional craft from Fujian blending weaving and lacquer art. Learn about its cultural significance and create your own piece."
+  },
+  "2006b7e3c699fb83": {
+    "event_type": "lecture",
+    "summary": "Professor Jonathan Barrett explores human rights through taxation and commercial law.",
+    "description": "Respecting equal human dignity: taxation and commercial law in the human rights state. Professor Barrett\u2019s research concerns the practical application of human rights, particularly focusing on legal frameworks that uphold equality and dignity.",
+    "speakers": [
+      {
+        "name": "Professor Jonathan Barrett",
+        "bio": "Victoria University academic"
+      }
+    ]
+  },
+  "844b9ea53dc84eb6": {
+    "event_type": "seminar",
+    "summary": "Mandarin Corner meets for Dragon Boat Festival celebration and craft activity.",
+    "description": "Join our Mandarin Corner, a relaxed meet-up to practice Mandarin with native speakers. Celebrate the Dragon Boat Festival by crafting your own herbal sachet."
+  },
+  "87d8cabb11424c41": {
+    "event_type": "lecture",
+    "summary": "Explore Chinese shadow puppetry at Victoria University.",
+    "description": "Experience the storytelling magic of traditional Chinese shadow puppetry. Watch a live demonstration, learn about its history and cultural significance. Presented by Victoria University."
+  },
+  "3755a9be782fce30": {
+    "event_type": "workshop",
+    "summary": "Victoria University hosts Tai Chi workshop in Mandarin.",
+    "description": "Victoria University's Mandarin Corner offers a relaxed meet-up for practicing Mandarin with native speakers, introducing participants to the beauty of Tai Chi through guided basic movements. Immersion into traditional Chinese martial arts awaits."
+  },
+  "2ef8a4ebd6343108": {
+    "event_type": "seminar",
+    "summary": "Mandarin Corner celebrates Mid-Autumn Festival with legends and traditions.",
+    "description": "Celebrate the Mid-Autumn Festival and explore one of China\u2019s most beloved traditions. Discover the legend of Chang\u2019e, learn about mooncakes and festival customs."
+  },
+  "62204f2d9234daaf": {
+    "event_type": "seminar",
+    "summary": "Victoria's Mandarin Corner explores Chinese gold-foil burning art.",
+    "description": "Mandarin Corner is a relaxed meet-up to practice Mandarin with native speakers. Participants will explore the use of gold in Chinese art and create their own simple gold-foil design."
   }
 }
