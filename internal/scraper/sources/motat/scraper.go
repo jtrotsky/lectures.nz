@@ -70,6 +70,11 @@ type eventNode struct {
 	} `json:"eventType"`
 }
 
+// excludedTitles are MOTAT event series that are activity weekends, not lectures.
+var excludedTitles = []string{
+	"sports tech", // weekend activity series, not a lecture or seminar
+}
+
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 	body, err := scraper.Fetch(ctx, pageDataURL)
 	if err != nil {
@@ -96,6 +101,19 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 	for _, edge := range edges {
 		node := edge.Node
 		if node.Title == "" || node.Slug == "" || node.StartDate == "" {
+			continue
+		}
+
+		// Skip known activity series that aren't lectures.
+		titleLower := strings.ToLower(node.Title)
+		excluded := false
+		for _, kw := range excludedTitles {
+			if strings.Contains(titleLower, kw) {
+				excluded = true
+				break
+			}
+		}
+		if excluded {
 			continue
 		}
 

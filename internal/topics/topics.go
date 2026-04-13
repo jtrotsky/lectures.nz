@@ -45,10 +45,12 @@ var excludeKeywords = []string{
 	"live day",
 	"symphony orchestra",
 	"bohm presents", // Te Papa live performance series
-	// Ceremonies (not educational)
+	// Ceremonies / admin events (not educational)
 	"awards night",
+	"award night",
 	"awards ceremony",
-	"book awards", // longlist/prize celebration events
+	"book awards",            // longlist/prize celebration events
+	"annual general meeting", // AGM acronym alone is too risky (matches "diagram" etc.)
 	// Activity sessions (not lectures)
 	"sit and sketch",    // art activity
 	"sketch & sip",      // social art activity
@@ -66,6 +68,8 @@ var excludeKeywords = []string{
 	"ideas challenge",
 	// Pub/social quiz nights
 	"quiz",
+	// Museum activity weekends (not lectures)
+	"sports tech", // MOTAT weekend activity series
 }
 
 // IsExcluded reports whether a lecture title looks like a non-lecture event

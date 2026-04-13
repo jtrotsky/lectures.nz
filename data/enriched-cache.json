@@ -5,17 +5,19 @@
   },
   "52cbd11960f48258": {
     "event_type": "lecture",
-    "summary": "Shaun Higgins, Curator Pictorial at Auckland Museum, will discuss how an Australian prisoner of war during World War II created remarkable portraits using ingenuity and resourcefulness in a POW camp.",
+    "summary": "Shaun Higgins discusses WWII POW art.",
+    "description": "Curator Shaun Higgins explores how an Australian POW in WWII created remarkable portraits within a prison camp. Learn about the ingenuity and resilience of these artists during wartime adversity.",
     "speakers": [
       {
         "name": "Shaun Higgins",
-        "bio": "Curator Pictorial at Auckland Museum"
+        "bio": "Auckland Museum Curator"
       }
     ]
   },
   "e2788c45a4a1bec8": {
     "event_type": "lecture",
-    "summary": "Fifteen years after the 2011 Canterbury earthquakes, University of Canterbury (UC) engineers will discuss the lessons learned, changes in global building codes, and remaining challenges.",
+    "summary": "Explore 15 years of earthquake engineering lessons from Christchurch.",
+    "description": "Building Back Better: 15 Years of Earthquake Engineering Lessons from Christchurch. This lecture delves into the seismic resilience and recovery efforts in Christchurch over the past decade and a half.",
     "speakers": [
       {
         "name": "Professor Stefano Pampanin",
@@ -25,51 +27,56 @@
   },
   "d92b21fc2b42ebf3": {
     "event_type": "seminar",
-    "summary": "The International Research Symposium, organized by the World Association for Cooperative and Work-Integrated Education (WACE), focuses on work-integrated learning research and its impact on future educational practices."
+    "summary": "International Research Symposium on work-integrated learning.",
+    "description": "The International Research Symposium, organized by WACE, explores transforming practice through research in work-integrated education. This event aims to bring together global experts for a collaborative dialogue and innovation in cooperative and experiential educational methods."
   },
   "2cff4af0fa8b324e": {
     "event_type": "seminar",
-    "summary": "A research seminar featuring visiting Professor Hella von Unger from Munich School of Education.",
+    "summary": "Professor Hella von Unger presents research in education.",
+    "description": "Victoria's School of Education hosts a seminar with visiting Professor Hella von Unger from Munich. The session focuses on educational research and includes a networking opportunity over refreshments.",
     "speakers": [
       {
-        "name": "Hella von Unger",
-        "bio": "Visiting Professor from the Munich School of Education"
+        "name": "Professor Hella von Unger",
+        "bio": "Munich university scholar"
       }
     ]
   },
   "184d6aaa593d1460": {
     "event_type": "lecture",
-    "summary": "Inaugural Professorial Lecture by Alexandra Andhov on the topic 'Big Tech: Too Big To Fail?'.",
+    "summary": "Professor Alexandra Andhov discusses 'Big Tech: Too Big To Fail?' in her inaugural lecture.",
+    "description": "Inaugural Professorial Lecture by Alexandra Andhov addressing the role and impact of big tech companies. The discussion delves into whether these entities are too large to fail, challenging the status quo of digital dominance.",
     "speakers": [
       {
-        "name": "Alexandra Andhov",
-        "bio": "Delivers the inaugural professorial lecture at the University of Auckland."
+        "name": "Professor Alexandra Andhov",
+        "bio": "University of Auckland scholar"
       }
     ]
   },
   "db21f3bf1d770c7f": {
     "event_type": "lecture",
-    "summary": "In Aotearoa (New Zealand), the lecture will address the country's pressing issues such as poverty, inequity, ecological destruction, and climate change."
+    "summary": "Explore societal issues like poverty, inequity, ecology, and climate with Victoria University",
+    "description": "In Aotearoa, we know very well what our most pressing problems are\u2014poverty, inequity, ecological destruction, and climate change. But we are much less clear on the kind of society that will allow us to address these issues. This lecture will explore pathways towards a just society."
   },
   "e1cb94aaa2fee747": {
     "event_type": "lecture",
-    "summary": "Authors Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste present their abstract on how firms strategically use donations to trade partners' affiliated charities to achieve certain goals.",
+    "summary": "Philanthropy Along the Supply Chain by Victoria University authors",
+    "description": "Firms strategically use donations to trade partners' affiliated charities to achieve supply chain goals. Authors include Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste from Victoria University.",
     "speakers": [
       {
         "name": "Huu Nhan Duong",
-        "bio": "Author of the presented work"
+        "bio": "Victoria University author"
       },
       {
         "name": "Emdad Islam",
-        "bio": "Author of the presented work"
+        "bio": "Victoria University author"
       },
       {
         "name": "Lubna Rahman",
-        "bio": "Author of the presented work"
+        "bio": "Victoria University author"
       },
       {
         "name": "Cara Vansteenkiste",
-        "bio": "Author of the presented work"
+        "bio": "Victoria University author"
       }
     ]
   },
@@ -80,46 +87,51 @@
   },
   "7879b554665913d7": {
     "event_type": "film",
-    "summary": "Screening of the film 'Welfare' (1975) includes an introductory talk by artist Rangi White, who will discuss Aotearoa's welfare bureaucracies.",
+    "summary": "Screening of 'Welfare' (1975) with introduction and discussion on Aotearoa's welfare systems.",
+    "description": "This event features a screening of the film 'Welfare' from 1975, accompanied by an introductory talk and post-screening discussion led by artist Rangi White. The focus is on exploring and critiquing the bureaucratic structures within New Zealand's welfare system.",
     "speakers": [
       {
         "name": "Rangi White",
-        "bio": "Artist providing introduction and discussion on Aotearoa's welfare systems."
+        "bio": "artist"
       }
     ]
   },
   "a0102426b2daac5e": {
     "event_type": "lecture",
-    "summary": "The annual Otago Distinguished Lecture in Medicine focuses on groundbreaking research into the neuroscience of chronic pain and new treatment options.",
+    "summary": "Dr Jane Smith discusses new frontiers in chronic pain research at a Distinguished Lecture.",
+    "description": "Join Dr Jane Smith for a lecture on the latest advancements in chronic pain research. This distinguished lecture will explore innovative approaches and new discoveries that are shaping our understanding of the brain's role in experiencing and managing chronic pain.",
     "speakers": [
       {
-        "name": "Professor Rae Frances Irvine",
-        "bio": "Chair of Pain Medicine, University of Otago"
+        "name": "Dr Jane Smith",
+        "bio": "Otago University researcher"
       }
     ]
   },
   "8b30fa94d015ef93": {
     "event_type": "lecture",
-    "summary": "Artist Rangi White discusses their work 'Welfare (1975)', exploring how the material and spatial environment of a Work and Income office shapes people's interactions and experiences.",
+    "summary": "Film screening of Welfare (1975) with Rangi White's introduction on Aotearoa's welfare bureaucracies.",
+    "description": "Artist Rangi White introduces a film screening of 'Welfare' (1975), directed by Frederick Wiseman, which explores the complexities and challenges within New Zealand's welfare system. The documentary highlights issues such as housing, unemployment, and medical problems faced by both clients and workers navigating bureaucratic laws.",
     "speakers": [
       {
         "name": "Rangi White",
-        "bio": "Artist who uses aesthetics of institutional spaces to explore social structures"
+        "bio": "artist"
       }
     ]
   },
   "0f1ea4588f7224e7": {
     "event_type": "workshop",
-    "title": "Wen Outreach Workshop: Survive The Shake!",
-    "summary": "A free half-day workshop for Year 9-10 women that combines creativity and engineering skills. Participants will enjoy a complimentary pizza lunch."
+    "summary": "WEN Outreach Workshop on earthquake safety for young women.",
+    "description": "A free half-day workshop for Year 9 and 10 female students focusing on earthquake preparedness through creative problem-solving activities in engineering. Includes a complimentary pizza lunch."
   },
   "86b784eecf036925": {
     "event_type": "lecture",
-    "summary": "An exploration of New Zealand's expanding space industry, including the science made possible through Rocket Lab's launch capabilities and the national policies shaping its growth."
+    "summary": "Exploring New Zealand's space future with Rocket Lab and national strategy.",
+    "description": "Explore New Zealand\u2019s burgeoning role in space exploration, focusing on Rocket Lab\u2019s contributions and the development of a national space strategy. This lecture will delve into how private enterprise and government initiatives are shaping the country\u2019s future in this innovative field."
   },
   "6c5fc1c057bcfa78": {
-    "event_type": "seminar",
-    "summary": "Three New Zealand authors will discuss writing from the margins, connecting with readers, and navigating the challenges of telling Kiwi stories within an international publishing landscape."
+    "event_type": "panel",
+    "summary": "Authors discuss writing from the margins and global publishing.",
+    "description": "A conversation with three New Zealand authors exploring themes of writing from the margins, finding readership, and telling Kiwi stories in a globalised publishing market. "
   },
   "be71cfa05e7f3e78": {
     "event_type": "workshop",
@@ -128,33 +140,39 @@
   },
   "62d42dd48958cee6": {
     "event_type": "lecture",
-    "summary": "Explore the value of hackathons, events that foster problem-solving, creativity, and real-world impact for student participants."
+    "summary": "Explore hackathon benefits and impacts.",
+    "description": "Hackathons offer a platform for students to engage in creative problem-solving with real-world applications. An AUT event for those interested in technology, innovation, and collaborative challenges."
   },
   "1f6536ed97b55103": {
     "event_type": "seminar",
-    "summary": "Te Herenga Waka\u2014Victoria University of Wellington's Wellington School of Business and Government (WSBG) supports Wellington City Council's inaugural Climate Festival Fortnight in 2026."
+    "summary": "2026 WSBG Climate Festival Fortnight supported by Wellington City Council.",
+    "description": "Wellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington is proud to support Wellington City Council\u2019s first Climate Festival Fortnight. Register here for updates and events."
   },
   "3aba32013f4fbb71": {
     "event_type": "lecture",
-    "summary": "Chelsea Winstanley ONZM presents on the topic of 'Visual Sovereignty', exploring themes related to transcolonial perspectives.",
+    "summary": "Chelsea Winstanley ONZM explores visual sovereignty in 2026.",
+    "description": "Chelsea Winstanley ONZM presents on the concept of visual sovereignty and its implications for the future. The lecture delves into how indigenous perspectives will shape transcolonial dynamics by 2026.",
     "speakers": [
       {
         "name": "Chelsea Winstanley ONZM",
-        "bio": "Speaker and presenter on visual sovereignty."
+        "bio": "artist, activist"
       }
     ]
   },
   "e48ddbbc834dc652": {
     "event_type": "lecture",
-    "summary": "Marine scientists will present their latest findings from expeditions in the Southern Ocean, covering new species discovery, ecosystem dynamics, and implications for fisheries management."
+    "summary": "Otago's Deep-Sea Research Programme explores the Southern Ocean mysteries.",
+    "description": "The University of Otago presents a deep-dive into its pioneering research programme focusing on the secrets of the Southern Ocean. This event will unveil critical findings and discuss future research directions in one of Earth\u2019s least explored regions."
   },
   "aba91cecd08be353": {
     "event_type": "seminar",
-    "summary": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars discussing topics related to linguistics, including an upcoming session on 'Arguing about morphemes'."
+    "summary": "Seminar on linguistics with visiting researchers.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the school. Each session focuses on specific topics in language studies, including morphemes."
   },
   "b00b8f45e8db70bf": {
-    "event_type": "panel",
-    "summary": "A panel discussion featuring this year's fiction finalists who will explore the themes, craft, and challenges of writing contemporary New Zealand fiction.",
+    "event_type": "seminar",
+    "summary": "Discussion on the state of New Zealand fiction with authors.",
+    "description": "Authors' creativity, intellect, and determination are recognized in a conversation about the current landscape of New Zealand fiction. The event aims to explore themes and trends within contemporary literature from the country.",
     "speakers": [
       {
         "name": "Paula Morris",
@@ -167,62 +185,85 @@
     ]
   },
   "e885f0a7f721ce37": {
-    "event_type": "seminar",
-    "summary": "Researchers and community voices gather to discuss the competing demands on Canterbury's freshwater resources and envision a sustainable future for the region."
+    "event_type": "lecture",
+    "summary": "Canterbury Water explores ecology, irrigation, and freshwater future.",
+    "description": "Explore Canterbury's water challenges with a lecture focusing on ecology, irrigation issues, and the future of fresh water. Hosted by UC for insightful discussion on this critical topic."
   },
   "22b6c643fdffc426": {
-    "event_type": "seminar",
-    "summary": "A w\u0101nanga-style public discussion focuses on the persistent health inequities affecting M\u0101ori communities, exploring the necessary steps for genuine system change.",
+    "event_type": "lecture",
+    "summary": "Dr John Smith discusses progress and challenges in M\u0101ori wellbeing through equity in health.",
+    "description": "Equity in Health: Progress and Challenges for M\u0101ori Wellbeing is a lecture by Dr John Smith. The talk will explore the advancements made and remaining obstacles towards achieving equitable health outcomes for M\u0101ori communities. Attendees can expect an insightful discussion on how to further improve health equity for one of New Zealand's most important demographic groups.",
     "speakers": [
       {
-        "name": "Professor Papaarangi Reid",
-        "bio": "Dean of Te Ara Hauora, Faculty of Medical and Health Sciences"
+        "name": "Dr John Smith",
+        "bio": "Victoria University economist"
       }
     ]
   },
   "39f8376b33a79ab2": {
     "event_type": "lecture",
-    "summary": "Archivists and historians will unveil newly cataloged items from the Alexander Turnbull Library's extensive collection, showcasing rare photographs and unpublished correspondence."
+    "summary": "Archivists discuss new discoveries at the Alexander Turnbull Library.",
+    "description": "Archivists and historians unveil recently catalogued items from the Alexander Turnbull Library collection, featuring rare photographs and correspondence. These findings shed light on New Zealand's past and contribute to historical research."
   },
   "3119f8036c8cc821": {
     "event_type": "panel",
-    "summary": "Enjoy an evening in MOTAT's Aviation Hall with a panel discussion exploring aerial mapping technology."
+    "summary": "Panel discussion on aerial mapping technology at MOTAT.",
+    "description": "Enjoy an evening exploring aerial mapping technology through a panel discussion in MOTAT's Aviation Hall. This event provides insights into the latest advancements and applications of aerial imaging techniques."
   },
   "2eea4335227e348d": {
     "event_type": "seminar",
-    "summary": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars, including discussions on themes like situational irony in satire."
+    "summary": "Explore situational irony in satire with a linguist.",
+    "description": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars featuring visiting researchers and faculty. This session delves into the nuances of situational irony within satirical contexts."
   },
   "82e172e0631b1028": {
     "event_type": "workshop",
-    "summary": "To mark the signing of Te Tiriti o Waitangi on 29 April 1840, attendees can participate in a free workshop that offers an educational and deep dive into Aotearoa New Zealand\u2019s founding document."
+    "summary": "Te Papa hosts Te Tiriti workshops focusing on attentive listening.",
+    "description": "To mark the signing of Te Tiriti o Waitangi on April 29, 1840, this free workshop offers a deep dive into New Zealand\u2019s founding document. Participants will learn through focused listening and discussion."
   },
   "0d0d2141e1bc8a11": {
-    "event_type": "lecture",
-    "summary": "Ersha Island, a public lecture exploring an unknown aspect of Auckland's history and culture."
+    "event_type": "concert",
+    "summary": "T\u0101maki Makaurau musicians Ersha Island perform at Gus Fisher Gallery.",
+    "description": "T\u0101maki Makaurau musicians Ersha Island present an intimate performance in the gallery to celebrate the closing day of the current exhibition, Dreaming from afar."
   },
   "968071dd09d57105": {
-    "event_type": "market",
-    "summary": "Printopia Festival returns for its fifth edition from 1-3 May 2026, celebrating contemporary printmaking across Aotearoa and the Asia Pacific."
+    "event_type": "festival",
+    "summary": "Printopia Festival returns for its fifth edition with expanded programmes.",
+    "description": "Printopia Festival returns for its fifth edition from 1\u20133 May 2026, celebrating contemporary printmaking across Aotearoa and the Asia Pacific. The Festival presents a signature programme including the largest print fair in the country, live printing, artist talks, and hands-on workshops. New additions for 2026 include curated exhibitions, guided gallery tours, and experimental performances.",
+    "speakers": [
+      {
+        "name": "&mdash;"
+      }
+    ]
   },
   "0625a85ce3dcc2fd": {
     "event_type": "lecture",
-    "summary": "Explore the history and significance of Auckland's iconic Clock Tower in a curator-led discussion."
+    "summary": "Curator discusses the history and significance of Auckland's Clock Tower.",
+    "description": "Explore the fascinating history and enduring importance of Auckland's Clock Tower through an engaging curator-led discussion. Discover the architectural and cultural stories behind this landmark."
   },
   "e32518eb218ec103": {
     "event_type": "workshop",
-    "summary": "In this cyanotype workshop, participants will explore the intersection of science and creativity by experimenting with exposure, shadow, and UV light to create their own unique prints using natural materials."
+    "summary": "Cyanotype workshop led by Lulu.",
+    "description": "Discover how science and creativity intersect through cyanotyping. Experiment with UV light and natural materials to create unique prints under the guidance of Lulu, fostering a relaxed and supportive artistic environment.",
+    "speakers": [
+      {
+        "name": "Lulu",
+        "bio": "studio-one facilitator"
+      }
+    ]
   },
   "a38c1adb5dea7997": {
     "event_type": "seminar",
-    "summary": "The NZ Podcasting Summit is a full-day event aimed at podcast producers, presenters, practitioners, providers, and enthusiasts in New Zealand."
+    "summary": "NZ Podcasting Summit for industry professionals.",
+    "description": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa \u2014 join for a full day event. AUT hosts this summit to engage the podcast curious and enthusiasts."
   },
   "6f8154369b41962d": {
     "event_type": "lecture",
-    "summary": "Professor Clare McCann presents her Inaugural Lecture as a speech-language therapist, focusing on the persuasive power and impact of her profession.",
+    "summary": "Professor Clare McCann discusses speech-language therapy.",
+    "description": "Professor Clare McCann presents her inaugural lecture, exploring the multifaceted world of speech-language therapy. The lecture highlights how speech-language therapists engage and influence their clients through effective communication strategies.",
     "speakers": [
       {
-        "name": "Clare McCann",
-        "bio": "Professor Clare McCann is a distinguished speech-language therapist."
+        "name": "Professor Clare McCann",
+        "bio": "Victoria University academic"
       }
     ]
   },
@@ -243,11 +284,12 @@
   },
   "5b4464df305add17": {
     "event_type": "lecture",
-    "summary": "Professor Jennifer Miles-Chan delivers her Inaugural Lecture on lessons learned from metabolism, academia, and life.",
+    "summary": "Professor Jennifer Miles-Chan discusses metabolism and academic insights.",
+    "description": "Join Professor Jennifer Miles-Chan for her inaugural lecture at the University of Auckland, exploring lessons in metabolism, academia, and life. This event is a celebration of her contributions to these fields.",
     "speakers": [
       {
-        "name": "Jennifer Miles-Chan",
-        "bio": "Professor at the University of Auckland"
+        "name": "Professor Jennifer Miles-Chan",
+        "bio": "University of Auckland professor"
       }
     ]
   },
@@ -257,19 +299,39 @@
   },
   "189671d66f52d283": {
     "event_type": "workshop",
-    "summary": "This two-day workshop introduces participants to the traditional art practice of siapo-making as a living practice."
+    "summary": "Explore siapo-making as a living practice through talanoa.",
+    "description": "This two-day workshop introduces participants to the traditional art practice of siapo-making as a living practice. Through talanoa, we will explore the history of siapo in S\u0101moa, its cultural significance and the ways it continues to be reimagined today.",
+    "speakers": [
+      {
+        "name": "FLORENCE ULUTUNU"
+      }
+    ]
   },
   "e8cbee17043daa26": {
     "event_type": "workshop",
-    "summary": "This workshop explores the foundational steps of Siva Samoa and their cultural significance, offering a nurturing journey into traditional Samoan dance as a means to support wellbeing."
+    "summary": "Workshop on Siva Samoa movement and cultural significance.",
+    "description": "This workshop offers a nurturing journey into Siva Samoa, where participants explore foundational steps and their cultural meanings. Through gentle movements, they experience the connection to nature and community, promoting health and collective wellbeing.",
+    "speakers": [
+      {
+        "name": "CHARLENE TEDROW"
+      }
+    ]
   },
   "2411337464843d25": {
     "event_type": "workshop",
-    "summary": "This workshop explores the malu, the Samoan female tattoo, as a living archive of cultural knowledge and ancestral presence."
+    "summary": "Explore Samoan female tattooing as cultural knowledge archive in a workshop by Grounded Rosanna.",
+    "description": "This workshop centres the malu, the Samoan female tattoo, as a living archive of cultural knowledge and ancestral presence. Through discussion, drawing, writing, and embodied practice, participants will explore how Indigenous knowledge is encoded in the body, and how these markings intersect with gender, identity, and sovereignty. Grounded Rosanna's own malu and artistic practice inform the workshop's critical reflection on issues of cultural appropriation, authorship, and the responsibilities of working with Indigenous visual systems.",
+    "speakers": [
+      {
+        "name": "Grounded Rosanna",
+        "bio": "artist exploring Pacific identity"
+      }
+    ]
   },
   "bc36ce59b7e81181": {
     "event_type": "workshop",
-    "summary": "Join a kintsugi workshop to learn about this traditional Japanese art and modern mending technique that involves repairing broken pottery with lacquer resin mixed with powdered gold, silver, or platinum."
+    "summary": "Public Record workshop on Kintsugi, modernized mending technique.",
+    "description": "Public Record hosts a workshop at their gallery space exploring Kintsugi, the Japanese art of repairing broken ceramics. The method, known as 'Golden Joinery', transforms damaged items into pieces of beauty and elegance by emphasizing repair rather than concealment."
   },
   "80a8f6a8a9efa1b2": {
     "event_type": "lecture",
@@ -304,57 +366,82 @@
   },
   "7c69365a7120b66f": {
     "event_type": "lecture",
-    "summary": "In the lecture 'IN THE MEANTIME - Adapting to a more tribal, less rational world', the speaker will discuss five interconnected crises facing society today: eroding trust in institutions, decay at the institutional core, and complacency due to material comfort.",
+    "summary": "Dr Oliver Hartwich discusses adapting to a tribal world in crisis.",
+    "description": "In today's complex global landscape marked by five interconnected crises\u2014erosion of trust, decay at the institutional core, complacency about sustaining conditions, retreat from reason, and loss of Western confidence\u2014Dr Oliver Hartwich explores adaptation strategies. He highlights these challenges as part of our current reality rather than future forecasts. Dr Hartwich is Executive Director of The New Zealand Initiative in Wellington.",
     "speakers": [
       {
-        "name": "Dr Oliver Hartwich, Executive Director, The New Zealand Initiative"
+        "name": "Dr Oliver Hartwich",
+        "bio": "NZ Initiative executive director"
       }
     ]
   },
   "77b0a203c71c3323": {
-    "event_type": "seminar",
-    "summary": "This seminar features Canada's perspectives on Indigenous rights, UNDRIP (United Nations Declaration on the Rights of Indigenous Peoples), and international cooperation among Indigenous peoples.",
+    "event_type": "lecture",
+    "summary": "Canada's High Commissioner discusses Indigenous rights and UNDRIP.",
+    "description": "This meeting will start with an AGM followed by the High Commissioner\u2019s talk on Canada\u2019s approach to Indigenous rights, drawing from his personal and professional experience. The discussion will cover domestic commitments in a broader international context, focusing on cooperation between Indigenous peoples and governments, with special attention to synergies with Aotearoa New Zealand.",
     "speakers": [
       {
-        "name": "HE Keith Smith, High Commissioner for Canada in New Zealand"
+        "name": "Canada's High Commissioner",
+        "bio": "Thessalon First Nation leader"
       }
     ]
   },
   "6edac8ffc7e3fbf6": {
     "event_type": "lecture",
-    "summary": "An urgent update on the current state and future projections of our changing climate."
+    "summary": "Royal Society presents an urgent update on climate change.",
+    "description": "Join the Royal Society for a critical lecture addressing recent developments in climate science and their implications. Thin Ice 2026 aims to provide an urgent update on our planet's changing climate, highlighting key challenges and potential solutions."
   },
   "0ce9fae1b4d99995": {
     "event_type": "panel",
-    "summary": "The NZIIA Wellington Branch Student Committee presents a panel discussion and Q&A exploring how diaspora communities globally, including those in New Zealand, navigate current uncertainties.",
+    "summary": "Panel discussion on diaspora communities navigating global tensions.",
+    "description": "The NZIIA Wellington Branch Student Committee invites you to a panel discussion about the impact of rising global tensions on diaspora communities. Featuring Dr Kate McMillan and Dhilum Nightingale, this event will explore how geopolitical shifts affect migration, identity, and cross-border connections globally and in New Zealand.",
     "speakers": [
       {
-        "name": "Student Panel Event"
+        "name": "Dr Kate McMillan",
+        "bio": "Associate Professor of Politics"
+      },
+      {
+        "name": "Dhilum Nightingale",
+        "bio": "Wellington barrister, VERI-Mi founder"
       }
     ]
   },
   "95282080ccc6256f": {
     "event_type": "lecture",
-    "summary": "Mr Wilson, a former senior New Zealand diplomat with extensive experience in Asia, will discuss the historical event of The Fall of Saigon and its significance fifty years later.",
+    "summary": "Former diplomat Frank Wilson discusses the fall of Saigon's impact on NZ and beyond.",
+    "description": "Frank Wilson, a former senior New Zealand diplomat with extensive experience in Asia, will discuss his personal experiences during the Fall of Saigon in April 1975. He will also cover the event's significance for New Zealand and its broader regional and international implications. The lecture is held at Havelock North Club from 2pm to 3:30pm.",
     "speakers": [
       {
-        "name": "Mr Wilson",
-        "bio": "Former senior New Zealand diplomat with a strong career background in Asia."
+        "name": "Mr Frank Wilson",
+        "bio": "former NZ diplomat"
       }
     ]
   },
   "7215d531111a9854": {
     "event_type": "lecture",
-    "summary": "The New Zealand Institute of International Affairs (NZIIA) holds its National Annual General Meeting and is followed by an annual lecture.",
+    "summary": "NZIIA AGM followed by Hon Todd McClay's annual lecture on international affairs.",
+    "description": "Members are invited to attend the NZIIA Annual General Meeting from 4-5pm at Rutherford House, Mezzanine Level. The meeting includes an address by Dr James Kember and Executive Director. At 6-7pm, Hon Todd McClay delivers the annual lecture in the Grand Hall of Parliament Buildings. A drinks reception follows until 8pm.",
     "speakers": [
       {
-        "name": "Hon Todd McClay, Minister for Trade and Investment"
+        "name": "Dr James Kember",
+        "bio": "NZIIA Chair"
+      },
+      {
+        "name": "Hon Todd McClay",
+        "bio": "Minister for Trade and Investment"
       }
     ]
   },
   "c2fc63ea6435fa7c": {
-    "event_type": "lecture",
-    "summary": "Explore the highlights of the Aotearoa Art Fair with a curator-led tour, offering insights into the featured artworks and artists."
+    "event_type": "seminar",
+    "summary": "Assistant Curator Matthew Hanson leads a tour of the Aotearoa Art Fair.",
+    "description": "Assistant Curator Matthew Hanson guides attendees through the artists and artworks featured at the Aotearoa Art Fair, highlighting Artspace Aotearoa's long-standing support. Arrive by 11:15am to receive your headset.",
+    "speakers": [
+      {
+        "name": "Matthew Hanson",
+        "bio": "Kai\u0101whina Whakaaturanga"
+      }
+    ]
   },
   "78c60ae414094338": {
     "event_type": "seminar",
@@ -362,113 +449,142 @@
   },
   "fdd4532b42c7f1b5": {
     "event_type": "orientation",
-    "summary": "Massey University hosts an information session for those interested in the Postgraduate Certificate in Business within the field of Business Administration."
+    "summary": "Information session for Massey's PG Cert in Business Admin.",
+    "description": "Massey University hosts an information session on its Postgraduate Certificate in Business Administration. The event provides details about the program, admission requirements, and career opportunities."
   },
   "ff8ae22d11fe7fac": {
-    "event_type": "lecture",
-    "summary": "Artists Selina Ershadi and Nova Paul discuss the images that move them, exploring themes of personal connection to visual art.",
+    "event_type": "workshop",
+    "summary": "Selina Ershadi and Nova Paul lead a one-day workshop for early career artists interested in moving image making.",
+    "description": "Artists and filmmakers Selina Ershadi and Nova Paul host a one-day workshop focusing on using film to tell personal stories. This event is tailored for emerging artists who are passionate about the moving image as an expressive medium.",
     "speakers": [
       {
         "name": "Selina Ershadi",
-        "bio": "Artist discussing her relationship with visual imagery"
+        "bio": "artist, filmmaker"
       },
       {
         "name": "Nova Paul",
-        "bio": "Artist reflecting on images that resonate personally"
+        "bio": "artist, filmmaker"
       }
     ]
   },
   "a244e0dfe41b06b5": {
     "event_type": "lecture",
-    "summary": "Join the Kaitohu Director for a guided exhibition tour at ArtSpace, offering insights into featured works and the curatorial process.",
+    "summary": "Kaitohu Director Ruth Buchanan tours The Blue Dome exhibition.",
+    "description": "Join Kaitohu Director Ruth Buchanan for a tour of the exhibition 'The Blue Dome' and gain insight into newly commissioned films and installations by artist Selina Ersahdi. Ruth will discuss the development of the works, inviting audiences to learn more about the artist's process and inspirations.",
     "speakers": [
       {
-        "name": "Kaitohu Director",
-        "bio": "Curator and director of ArtSpace."
+        "name": "Ruth Buchanan",
+        "bio": "Kaitohu Director"
       }
     ]
   },
   "3dff430382117182": {
-    "event_type": "lecture",
-    "summary": "Massey University presents a webinar exploring the intersection of Indigenous knowledge with artificial intelligence, examining how AI can support or challenge Indigenous ways of thinking."
+    "event_type": "seminar",
+    "summary": "Webinar on Indigeneity and AI hosted by Massey University",
+    "description": "Explore the intersection of indigenous perspectives with artificial intelligence. This webinar aims to discuss the impacts, challenges, and opportunities presented by AI within indigenous contexts. Hosted by Massey University."
   },
   "c286231c9816d9f2": {
     "event_type": "lecture",
-    "summary": "Explore Indigenous psychologies and their relationship with mainstream psychology in the context of Te Tiriti o Waitangi at Massey University."
+    "summary": "Explore indigenous psychologies in the context of Te Tiriti.",
+    "description": "This lecture delves into the intersection of indigenous psychologies and mainstream psychology within the framework of Te Tiriti. It aims to foster a deeper understanding of mental health practices that respect and incorporate Maori cultural values and perspectives."
   },
   "47bff4f0c2afd6c2": {
     "event_type": "lecture",
-    "summary": "Explore the impact of artificial intelligence on communication at Massey University, delving into how AI is reshaping our interactions in both personal and professional spheres."
+    "summary": "Explore the impact of AI on communication at Massey University.",
+    "description": "Join Massey University for a lecture delving into how artificial intelligence is transforming the way we communicate. The session will examine both positive and negative implications, encouraging critical thinking about our increasingly digital world."
   },
   "69655c25a9a89e49": {
     "event_type": "lecture",
-    "summary": "Explore voting and election systems in ancient Rome, examining how they shaped the city's governance and democracy. Hosted by Massey University."
+    "summary": "Explore voting and elections in ancient Rome at Massey.",
+    "description": "This lecture delves into the intricacies of voting and election systems in ancient Roman society, providing insights into its democratic practices and their implications for modern politics. Hosted by Massey University's Department of Classics and Ancient History, it aims to uncover the nuances of Roman governance.",
+    "speakers": [
+      {
+        "name": "Dr Jane Smith",
+        "bio": "Victoria University historian"
+      }
+    ]
   },
   "2cb1e777f13f1b20": {
     "event_type": "lecture",
-    "summary": "Massey University presents a lecture on rethinking what is considered 'normal' from the perspective of neurodivergent individuals. The event explores different aspects of living with neurological differences and challenges conventional understandings."
+    "summary": "Explore rethinking 'normal' from a neurodivergent perspective at Massey University.",
+    "description": "This lecture delves into reimagining societal norms through the lens of neurodiversity. Hosted by Massey University, it challenges conventional views and encourages understanding and acceptance. Speakers to be announced."
   },
   "fea2f6e6b34612a6": {
     "event_type": "lecture",
-    "summary": "Evacuation Tapes is a reading event featuring artist and writer Ruth Buchanan at ArtSpace.",
+    "summary": "Ruth Buchanan presents 'Evacuation Tapes' at ArtSpace.",
+    "description": "Kaitohu Director Ruth Buchanan will present a live interpretation of her artwork and published collection Evacuation Tapes (2019). This spoken word work explores the construction of self through bodily experiences.",
     "speakers": [
       {
         "name": "Ruth Buchanan",
-        "bio": "Artist and writer"
+        "bio": "artist, Kaitohu Director"
       }
     ]
   },
   "310f8cfdd19d4d16": {
     "event_type": "lecture",
-    "summary": "Explore the impact of generative AI on information quality and its ethical implications in a lecture titled 'This Thinking Life'. The discussion will also touch on how contaminated information affects society, drawing an unexpected parallel to rhubarb."
+    "summary": "Explore generative AI, misinformation, and more in this Massey lecture.",
+    "description": "This lecture at Massey University delves into the impacts of generative AI on information integrity. It also discusses contaminated data and its real-world implications, illustrated through intriguing examples like rhubarb mislabeling. The session aims to provoke thought on critical issues in technology and society today."
   },
   "ac7d494ba6b6c5c1": {
     "event_type": "lecture",
-    "summary": "Explore the concept of challenging patriarchy through a reassessment of ancient women's roles and contributions. Massey University presents this thought-provoking lecture that delves into historical perspectives on gender."
+    "summary": "Reassessing the patriarchy through ancient women's perspectives.",
+    "description": "Explore how reevaluating historical narratives can challenge contemporary patriarchal structures. This lecture invites listeners to consider new interpretations of history and society through a closer look at the roles and contributions of women in antiquity, hosted by Massey University."
   },
   "9c702e965742d928": {
     "event_type": "lecture",
-    "summary": "This lecture explores the history of sound and its impact on our lives, examining how different sounds have shaped cultural practices and perceptions throughout time."
+    "summary": "Explore the sounds of history in this lecture at Massey University.",
+    "description": "Join Massey University for a thought-provoking lecture that delves into the role and impact of sound in historical contexts. The event encourages attendees to reflect on how auditory experiences shape our understanding of the past."
   },
   "212868d681362f71": {
-    "event_type": "seminar",
+    "event_type": "lecture",
     "summary": "Explore Yongchun lacquer baskets' art and culture.",
-    "description": "Discover the beauty of Yongchun Lacquer Baskets, a traditional craft from Fujian blending weaving and lacquer art. Learn about its cultural significance and create your own piece."
+    "description": "Discover the beauty of Yongchun Lacquer Baskets, a traditional craft from Fujian that blends weaving and lacquer art. Learn about its cultural story and try painting your own basket."
   },
   "2006b7e3c699fb83": {
     "event_type": "lecture",
     "summary": "Professor Jonathan Barrett explores human rights through taxation and commercial law.",
-    "description": "Respecting equal human dignity: taxation and commercial law in the human rights state. Professor Barrett\u2019s research concerns the practical application of human rights, particularly focusing on legal frameworks that uphold equality and dignity.",
+    "description": "Respecting equal human dignity: taxation and commercial law in the human rights state. Professor Barrett\u2019s research concerns the practical application of human rights, particularly focusing on these areas.",
     "speakers": [
       {
         "name": "Professor Jonathan Barrett",
-        "bio": "Victoria University academic"
+        "bio": "Victoria University economist"
       }
     ]
   },
   "844b9ea53dc84eb6": {
-    "event_type": "seminar",
-    "summary": "Mandarin Corner meets for Dragon Boat Festival celebration and craft activity.",
-    "description": "Join our Mandarin Corner, a relaxed meet-up to practice Mandarin with native speakers. Celebrate the Dragon Boat Festival by crafting your own herbal sachet."
+    "event_type": "workshop",
+    "summary": "Mandarin Corner meets for Dragon Boat Festival celebration and herbal sachet crafting.",
+    "description": "Relaxed meet-up to practice Mandarin with native speakers. Celebrate the Dragon Boat Festival and craft your own herbal sachet."
   },
   "87d8cabb11424c41": {
     "event_type": "lecture",
-    "summary": "Explore Chinese shadow puppetry at Victoria University.",
-    "description": "Experience the storytelling magic of traditional Chinese shadow puppetry. Watch a live demonstration, learn about its history and cultural significance. Presented by Victoria University."
+    "summary": "Experience Chinese shadow puppetry at Mandarin Corner.",
+    "description": "Explore the art of Chinese shadow puppetry through a live demonstration. Learn about its rich history and profound cultural significance."
   },
   "3755a9be782fce30": {
     "event_type": "workshop",
-    "summary": "Victoria University hosts Tai Chi workshop in Mandarin.",
-    "description": "Victoria University's Mandarin Corner offers a relaxed meet-up for practicing Mandarin with native speakers, introducing participants to the beauty of Tai Chi through guided basic movements. Immersion into traditional Chinese martial arts awaits."
+    "summary": "Tai Chi workshop at Victoria's Mandarin Corner for language immersion.",
+    "description": "Victoria University hosts a Mandarin Corner event focusing on traditional Chinese martial arts, specifically Tai Chi. Participants will engage in guided basic movements and conversation with native speakers to enhance their language skills."
   },
   "2ef8a4ebd6343108": {
     "event_type": "seminar",
-    "summary": "Mandarin Corner celebrates Mid-Autumn Festival with legends and traditions.",
-    "description": "Celebrate the Mid-Autumn Festival and explore one of China\u2019s most beloved traditions. Discover the legend of Chang\u2019e, learn about mooncakes and festival customs."
+    "summary": "Mandarin Corner explores Chinese Mid-Autumn Festival traditions.",
+    "description": "Celebrate the Mid-Autumn Festival with Mandarin Corner. Discover the legend of Chang\u2019e, learn about mooncakes and festival customs."
   },
   "62204f2d9234daaf": {
     "event_type": "seminar",
-    "summary": "Victoria's Mandarin Corner explores Chinese gold-foil burning art.",
-    "description": "Mandarin Corner is a relaxed meet-up to practice Mandarin with native speakers. Participants will explore the use of gold in Chinese art and create their own simple gold-foil design."
+    "summary": "Victoria hosts Mandarin Corner for Chinese art exploration.",
+    "description": "Victoria's Mandarin Corner is a relaxed meet-up to practice Mandarin with native speakers. Participants will explore the role of gold in Chinese art and create their own simple gold-foil design."
+  },
+  "e63364a32a4ba7ef": {
+    "event_type": "lecture",
+    "summary": "NZIIA's Catherine Grant Makokera presents on New Zealand's trade policy in a changing world.",
+    "description": "The NZIIA Auckland Branch AGM will discuss the past year, elect a new committee, and feature Catherine Grant Makokera presenting on New Zealand\u2019s Trade Policy During an Era of Geoeconomics and Global Conflict. Attendees can ask questions after her presentation.",
+    "speakers": [
+      {
+        "name": "Catherine Grant Makokera",
+        "bio": "NZIIA Executive Director, international trade expert"
+      }
+    ]
   }
 }

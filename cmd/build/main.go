@@ -18,6 +18,7 @@ import (
 
 	"github.com/jtrotsky/lectures.nz/internal/calendar"
 	"github.com/jtrotsky/lectures.nz/internal/model"
+	"github.com/jtrotsky/lectures.nz/internal/scraper"
 	"github.com/jtrotsky/lectures.nz/internal/topics"
 )
 
@@ -73,6 +74,7 @@ func run() error {
 	if err != nil {
 		return fmt.Errorf("load lectures: %w", err)
 	}
+	lectures = filterByTitle(lectures)
 	lectures = filterByEventType(lectures)
 	hosts, err := loadHosts("data/hosts.json")
 	if err != nil {
@@ -175,6 +177,20 @@ func run() error {
 	return nil
 }
 
+// filterByTitle removes events whose titles match the global exclusion list.
+// This catches stale cache entries that slipped through collect-time filtering.
+func filterByTitle(lectures []model.Lecture) []model.Lecture {
+	out := lectures[:0]
+	for _, l := range lectures {
+		if topics.IsExcluded(l.Title) {
+			log.Printf("SKIP  [%s] (title excluded): %q", l.HostSlug, l.Title)
+			continue
+		}
+		out = append(out, l)
+	}
+	return out
+}
+
 // excludedEventTypes are event_type values set by enrichment that indicate
 // non-lecture events. Events with these types are dropped at build time.
 var excludedEventTypes = map[string]bool{
@@ -211,6 +227,10 @@ func loadLectures(path string) ([]model.Lecture, error) {
 	var lectures []model.Lecture
 	if err := json.Unmarshal(data, &lectures); err != nil {
 		return nil, err
+	}
+	// Re-apply title cleanup in case stale cache has artefacts (e.g. trailing em dash).
+	for i := range lectures {
+		lectures[i].Title = scraper.CleanTitle(lectures[i].Title)
 	}
 	return lectures, nil
 }

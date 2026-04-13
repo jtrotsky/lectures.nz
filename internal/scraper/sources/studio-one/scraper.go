@@ -201,13 +201,16 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		}
 
 		// Speaker: event-host paragraph.
+		// HTML is often "—<br>Charlene Tedrow" so we scan all lines for
+		// the first one that isn't just a dash separator.
 		var speakers []model.Speaker
 		if hm := hostRe.FindStringSubmatch(chunk); hm != nil {
-			// Strip the "—" separator line; take only the first line as the name.
-			name := strings.Split(innerText(hm[1]), "\n")[0]
-			name = strings.TrimSpace(strings.Trim(name, "—–-"))
-			if name != "" {
-				speakers = []model.Speaker{{Name: name}}
+			for _, line := range strings.Split(innerText(hm[1]), "\n") {
+				name := strings.TrimSpace(strings.Trim(line, "—–-\t "))
+				if name != "" {
+					speakers = []model.Speaker{{Name: name}}
+					break
+				}
 			}
 		}
 

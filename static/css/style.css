@@ -325,10 +325,9 @@ body:has(.page-host) .site-header {
   list-style: none;
   cursor: pointer;
   color: var(--fg);
+  text-decoration: none;
   transition: opacity var(--transition);
 }
-
-.page-index .lecture-card::-webkit-details-marker { display: none; }
 
 .page-index .lecture-card:hover {
   opacity: 0.65;
@@ -353,6 +352,16 @@ body:has(.page-host) .site-header {
   letter-spacing: -0.02em;
   color: var(--fg);
   overflow-wrap: break-word;
+}
+
+.page-index .lecture-summary {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--fg);
+  opacity: 0.7;
+  margin: 0;
 }
 
 .page-index .lecture-meta {
@@ -386,28 +395,6 @@ body:has(.page-host) .site-header {
   flex-shrink: 0;
   white-space: nowrap;
   /* NO margin-left:auto — FREE flows naturally after venue */
-}
-
-/* Expanded card content */
-.lecture-expanded {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding-top: 20px;
-}
-
-.lecture-expanded-summary {
-  font-family: var(--font-sans);
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.4;
-  letter-spacing: -0.01em;
-  color: var(--fg);
-  opacity: 0.8;
-}
-
-.lecture-expanded-link {
-  align-self: flex-start;
 }
 
 /* ----- No results / empty ------------------------------------------- */
