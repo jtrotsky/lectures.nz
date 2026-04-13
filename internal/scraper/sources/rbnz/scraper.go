@@ -197,17 +197,16 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			title = strings.TrimSuffix(r.Title, " - Reserve Bank of New Zealand - Te Pūtea Matua")
 		}
 
-		summary := scraper.TruncateSummary(r.Excerpt, 200)
-
 		lectures = append(lectures, model.Lecture{
-			ID:        scraper.MakeID(eventURL),
-			Title:     scraper.CleanTitle(title),
-			Link:      eventURL,
-			TimeStart: startTime,
-			Summary:   summary,
-			Location:  "Wellington",
-			Free:      true,
-			HostSlug:  "rbnz",
+			ID:          scraper.MakeID(eventURL),
+			Title:       scraper.CleanTitle(title),
+			Link:        eventURL,
+			TimeStart:   startTime,
+			Description: r.Excerpt,
+			Summary:     scraper.TruncateSummary(r.Excerpt, 200),
+			Location:    "Wellington",
+			Free:        true,
+			HostSlug:    "rbnz",
 		})
 	}
 

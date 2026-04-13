@@ -160,11 +160,12 @@ func scrapeEventPage(ctx context.Context, eventURL string, loc *time.Location) (
 		Title:     scraper.CleanTitle(title),
 		Link:      eventURL,
 		TimeStart: t,
-		Summary:   scraper.TruncateSummary(summary, 200),
-		Location:  location,
-		Free:      free,
-		Cost:      cost,
-		HostSlug:  "auckland-art-gallery",
+		Description: summary,
+		Summary:     scraper.TruncateSummary(summary, 200),
+		Location:    location,
+		Free:        free,
+		Cost:        cost,
+		HostSlug:    "auckland-art-gallery",
 	}, nil
 }
 

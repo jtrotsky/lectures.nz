@@ -90,8 +90,10 @@ def _extract_json(raw: str) -> str:
 
 def enrich(lecture: dict) -> dict:
     title = lecture.get("title", "")
-    summary = lecture.get("summary", "")
+    description = lecture.get("description", "") or lecture.get("summary", "")
     host = lecture.get("host_slug", "")
+
+    is_thin = len(description.strip()) < 150
 
     prompt = f"""You are a curator for lectures.nz, a New Zealand public lectures website.
 
@@ -99,13 +101,14 @@ Given the event below, return ONLY a valid JSON object — no markdown, no expla
 
 Fields:
 - "event_type": One word classifying the event. Choose exactly one: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, other.
-- "summary": 2-3 clear sentences for a general audience. Preserve the source's key facts, people, and institutions. Remove hollow openers like "Join us", "We invite you to", "Details". Fix punctuation and style. Do not invent anything not in the source.
-- "speakers": Array of speaker objects, each with "name" (string) and "bio" (string, one sentence describing their role or affiliation). Extract names from the title or summary only. Return [] if no speaker is named.
+- "summary": One clear sentence (max 180 chars) for the index card. Capture the core topic and speaker if named. No hollow openers like "Join us" or "Discover". Do not invent anything not in the source.
+- "description": 2-4 sentences for the detail page. Preserve the source's voice, key facts, people, and institutions. Remove hollow openers. Fix punctuation. {"Expand this — the source text is very short, so infer reasonable context from the title and host, but do not invent specific claims." if is_thin else "Preserve the existing text closely — only clean up punctuation and remove hollow openers."}
+- "speakers": Array of speaker objects, each with "name" (string) and "bio" (string, one sentence). Extract from title or description only. Return [] if none named.
 
 Event:
   host: {host}
   title: {title}
-  summary: {summary}
+  description: {description}
 """
 
     if DRY_RUN:
@@ -122,6 +125,8 @@ Event:
             out["event_type"] = enriched["event_type"]
         if enriched.get("summary"):
             out["summary"] = enriched["summary"]
+        if enriched.get("description"):
+            out["description"] = enriched["description"]
         if enriched.get("speakers"):
             out["speakers"] = enriched["speakers"]
         return out
@@ -175,7 +180,7 @@ def main():
 
         # Cache the enriched fields keyed by ID.
         if lid:
-            cache[lid] = {k: result[k] for k in ("event_type", "summary", "speakers") if k in result}
+            cache[lid] = {k: result[k] for k in ("event_type", "summary", "description", "speakers") if k in result}
 
     # Persist updated cache.
     with open(CACHE, "w") as f:

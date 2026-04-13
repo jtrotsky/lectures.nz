@@ -195,18 +195,19 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 				}
 				t := time.Date(date.Year(), date.Month(), date.Day(), h, mn, 0, 0, loc)
 
-				summary := ""
+				rawDesc := ""
 				if lp.CardDescription != nil {
-					summary = scraper.TruncateSummary(dastText(lp.CardDescription.Value.Document.Children), 200)
+					rawDesc = dastText(lp.CardDescription.Value.Document.Children)
 				}
 				lectures = append(lectures, model.Lecture{
-					ID:        scraper.MakeID(eventURL + when.StartDate),
-					Title:     lp.PrimaryTitle,
-					Link:      eventURL,
-					TimeStart: t,
-					Summary:   summary,
-					Location:  "Te Papa Tongarewa, 55 Cable Street, Wellington",
-					HostSlug:  "te-papa",
+					ID:          scraper.MakeID(eventURL + when.StartDate),
+					Title:       lp.PrimaryTitle,
+					Link:        eventURL,
+					TimeStart:   t,
+					Description: rawDesc,
+					Summary:     scraper.TruncateSummary(rawDesc, 200),
+					Location:    "Te Papa Tongarewa, 55 Cable Street, Wellington",
+					HostSlug:    "te-papa",
 				})
 				break // only take the first date per event card
 			}

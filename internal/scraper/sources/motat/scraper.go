@@ -125,9 +125,10 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			Title:     node.Title,
 			Link:      link,
 			TimeStart: t,
-			Summary:   scraper.TruncateSummary(summary, 200),
-			Location:  location,
-			HostSlug:  "motat",
+			Description: summary,
+			Summary:     scraper.TruncateSummary(summary, 200),
+			Location:    location,
+			HostSlug:    "motat",
 		})
 	}
 

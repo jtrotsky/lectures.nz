@@ -178,14 +178,15 @@ func fetchDetail(ctx context.Context, link string, listingDate time.Time, loc *t
 	}
 
 	return model.Lecture{
-		ID:        scraper.MakeID(link),
-		Title:     scraper.CleanTitle(title),
-		Link:      link,
-		TimeStart: t,
-		Summary:   scraper.TruncateSummary(summary, 200),
-		Location:  "Wellington",
-		Free:      true,
-		Speakers:  speakers,
-		HostSlug:  "motu",
+		ID:          scraper.MakeID(link),
+		Title:       scraper.CleanTitle(title),
+		Link:        link,
+		TimeStart:   t,
+		Description: summary,
+		Summary:     scraper.TruncateSummary(summary, 200),
+		Location:    "Wellington",
+		Free:        true,
+		Speakers:    speakers,
+		HostSlug:    "motu",
 	}, true
 }

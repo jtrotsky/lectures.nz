@@ -9,8 +9,9 @@ type Lecture struct {
 	Link        string     `json:"link"`
 	TimeStart   time.Time  `json:"time_start"`
 	TimeEnd     *time.Time `json:"time_end,omitempty"`
-	Summary     string     `json:"summary,omitempty"`
-	SummaryHTML string     `json:"summary_html,omitempty"`
+	Summary     string     `json:"summary,omitempty"`      // short card text (1-2 sentences)
+	Description string     `json:"description,omitempty"`  // full body text for detail page
+	SummaryHTML string     `json:"summary_html,omitempty"` // legacy HTML summary from some scrapers
 	Free        bool       `json:"free"`
 	Cost        string     `json:"cost,omitempty"`
 	Location    string     `json:"location,omitempty"`

@@ -118,16 +118,17 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			location = strings.TrimSpace(locM[1])
 		}
 
-		summary := scraper.TruncateSummary(fetchSummary(ctx, eventURL), 200)
+		rawDesc := fetchSummary(ctx, eventURL)
 
 		lectures = append(lectures, model.Lecture{
-			ID:        scraper.MakeID(eventURL),
-			Title:     scraper.CleanTitle(title),
-			Link:      eventURL,
-			TimeStart: t,
-			Summary:   summary,
-			Location:  location,
-			HostSlug:  "nz-initiative",
+			ID:          scraper.MakeID(eventURL),
+			Title:       scraper.CleanTitle(title),
+			Link:        eventURL,
+			TimeStart:   t,
+			Description: rawDesc,
+			Summary:     scraper.TruncateSummary(rawDesc, 200),
+			Location:    location,
+			HostSlug:    "nz-initiative",
 		})
 	}
 

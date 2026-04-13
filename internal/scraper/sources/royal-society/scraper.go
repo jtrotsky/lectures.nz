@@ -198,8 +198,9 @@ func fetchDetail(ctx context.Context, link string, loc *time.Location) (model.Le
 		Title:     scraper.CleanTitle(title),
 		Link:      link,
 		TimeStart: t,
-		Summary:   scraper.TruncateSummary(summary, 200),
-		Location:  venue,
-		HostSlug:  "royal-society",
+		Description: summary,
+		Summary:     scraper.TruncateSummary(summary, 200),
+		Location:    venue,
+		HostSlug:    "royal-society",
 	}, true
 }

@@ -258,13 +258,14 @@ func fetchDetail(ctx context.Context, link string, loc *time.Location) (model.Le
 	}
 
 	lec := model.Lecture{
-		ID:        scraper.MakeID(link),
-		Title:     scraper.CleanTitle(title),
-		Link:      link,
-		TimeStart: t,
-		Summary:   scraper.TruncateSummary(summary, 200),
-		Location:  location,
-		HostSlug:  "nziia",
+		ID:          scraper.MakeID(link),
+		Title:       scraper.CleanTitle(title),
+		Link:        link,
+		TimeStart:   t,
+		Description: summary,
+		Summary:     scraper.TruncateSummary(summary, 200),
+		Location:    location,
+		HostSlug:    "nziia",
 	}
 	if speaker != "" {
 		lec.Speakers = []model.Speaker{{Name: speaker}}

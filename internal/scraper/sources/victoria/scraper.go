@@ -13,6 +13,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"net/url"
 	"strconv"
 	"strings"
 	"time"
@@ -205,6 +206,10 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		if eventURL == "" {
 			continue
 		}
+		// The Funnelback API sometimes returns percent-encoded URLs — decode them.
+		if decoded, err := url.QueryUnescape(eventURL); err == nil {
+			eventURL = decoded
+		}
 		if !strings.HasPrefix(eventURL, "http") {
 			eventURL = baseURL + eventURL
 		}
@@ -229,14 +234,15 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		free := md.Cost == "free"
 
 		lectures = append(lectures, model.Lecture{
-			ID:        scraper.MakeID(eventURL),
-			Title:     scraper.CleanTitle(title),
-			Link:      eventURL,
-			TimeStart: t,
-			Summary:   md.EventSummary,
-			Location:  location,
-			Free:      free,
-			HostSlug:  "victoria",
+			ID:          scraper.MakeID(eventURL),
+			Title:       scraper.CleanTitle(title),
+			Link:        eventURL,
+			TimeStart:   t,
+			Description: md.EventSummary,
+			Summary:     scraper.TruncateSummary(md.EventSummary, 200),
+			Location:    location,
+			Free:        free,
+			HostSlug:    "victoria",
 		})
 	}
 

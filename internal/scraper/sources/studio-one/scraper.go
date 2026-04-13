@@ -202,14 +202,15 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		free := costFreeRe.MatchString(chunk)
 
 		lectures = append(lectures, model.Lecture{
-			ID:        scraper.MakeID(title + t.Format("2006-01-02")),
-			Title:     scraper.CleanTitle(title),
-			Link:      link,
-			TimeStart: t,
-			Summary:   scraper.TruncateSummary(summary, 200),
-			Free:      free,
-			Location:  location,
-			HostSlug:  "studio-one",
+			ID:          scraper.MakeID(title + t.Format("2006-01-02")),
+			Title:       scraper.CleanTitle(title),
+			Link:        link,
+			TimeStart:   t,
+			Description: summary,
+			Summary:     scraper.TruncateSummary(summary, 200),
+			Free:        free,
+			Location:    location,
+			HostSlug:    "studio-one",
 		})
 	}
 

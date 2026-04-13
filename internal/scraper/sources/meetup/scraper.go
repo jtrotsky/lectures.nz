@@ -109,18 +109,19 @@ func scrapeGroup(ctx context.Context, g group) ([]model.Lecture, error) {
 		}
 
 		loc := buildLocation(e.Location)
-		summary := scraper.TruncateSummary(stripHTML(e.Description), 200)
+		rawDesc := stripHTML(e.Description)
 		free := e.IsAccessible == nil || *e.IsAccessible // default to free if unset
 
 		lectures = append(lectures, model.Lecture{
-			ID:        scraper.MakeID(e.URL),
-			Title:     scraper.CleanTitle(e.Name),
-			Link:      e.URL,
-			TimeStart: t,
-			Summary:   summary,
-			Location:  loc,
-			Free:      free,
-			HostSlug:  "meetup",
+			ID:          scraper.MakeID(e.URL),
+			Title:       scraper.CleanTitle(e.Name),
+			Link:        e.URL,
+			TimeStart:   t,
+			Description: rawDesc,
+			Summary:     scraper.TruncateSummary(rawDesc, 200),
+			Location:    loc,
+			Free:        free,
+			HostSlug:    "meetup",
 		})
 	}
 	return lectures, nil

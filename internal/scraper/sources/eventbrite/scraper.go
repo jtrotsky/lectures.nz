@@ -221,17 +221,16 @@ func convertEvent(e apiEvent) (model.Lecture, bool) {
 
 	location := buildLocation(e.Venue)
 
-	summary := scraper.TruncateSummary(e.Description.Text, 200)
-
 	return model.Lecture{
-		ID:        scraper.MakeID(e.URL),
-		Title:     scraper.CleanTitle(e.Name.Text),
-		Link:      e.URL,
-		TimeStart: t,
-		Summary:   summary,
-		Location:  location,
-		Free:      e.IsFree,
-		HostSlug:  "eventbrite",
+		ID:          scraper.MakeID(e.URL),
+		Title:       scraper.CleanTitle(e.Name.Text),
+		Link:        e.URL,
+		TimeStart:   t,
+		Description: e.Description.Text,
+		Summary:     scraper.TruncateSummary(e.Description.Text, 200),
+		Location:    location,
+		Free:        e.IsFree,
+		HostSlug:    "eventbrite",
 	}, true
 }
 

@@ -65,6 +65,8 @@
 
       {{if .Lecture.SummaryHTML}}
       <div class="lecture-hero-summary">{{.Lecture.SummaryHTML}}</div>
+      {{else if .Lecture.Description}}
+      <p class="lecture-hero-summary">{{.Lecture.Description}}</p>
       {{else if .Lecture.Summary}}
       <p class="lecture-hero-summary">{{.Lecture.Summary}}</p>
       {{end}}
