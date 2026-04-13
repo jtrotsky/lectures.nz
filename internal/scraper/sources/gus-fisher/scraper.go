@@ -167,14 +167,11 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			continue
 		}
 
-		// Description: remaining <p> tags in the next block.
-		var descParts []string
-		for _, pm := range pMatches[1:] {
-			if txt := innerText(pm[1]); txt != "" {
-				descParts = append(descParts, txt)
-			}
-		}
-		summary := strings.Join(descParts, " ")
+		// Description: all text in the next block after the date line.
+		// Content may use <div> tags instead of <p>, so strip the date line
+		// from the raw block text and take whatever remains.
+		allText := innerText(nextBlock)
+		summary := strings.TrimSpace(strings.TrimPrefix(allText, dateStr))
 
 		// Registration link: search forward from current position in raw HTML.
 		// Find the button link within a reasonable window.

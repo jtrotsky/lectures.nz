@@ -45,6 +45,8 @@ var (
 	h3Re = regexp.MustCompile(`(?i)<h3[^>]*class=['"]event-heading['"][^>]*>([\s\S]*?)</h3>`)
 	// tagStripRe removes HTML tags.
 	tagStripRe = regexp.MustCompile(`<[^>]+>`)
+	// hostRe extracts the event-host paragraph (speaker name).
+	hostRe = regexp.MustCompile(`(?i)<p[^>]*class=['"]event-host['"][^>]*>([\s\S]*?)</p>`)
 	// descRe extracts the first <p> inside event-description.
 	descRe = regexp.MustCompile(`(?i)<div[^>]*class=['"]event-description['"][^>]*>([\s\S]*?)</div>`)
 	// pRe extracts text from first <p>.
@@ -198,6 +200,17 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			}
 		}
 
+		// Speaker: event-host paragraph.
+		var speakers []model.Speaker
+		if hm := hostRe.FindStringSubmatch(chunk); hm != nil {
+			// Strip the "—" separator line; take only the first line as the name.
+			name := strings.Split(innerText(hm[1]), "\n")[0]
+			name = strings.TrimSpace(strings.Trim(name, "—–-"))
+			if name != "" {
+				speakers = []model.Speaker{{Name: name}}
+			}
+		}
+
 		// Cost.
 		free := costFreeRe.MatchString(chunk)
 
@@ -208,6 +221,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			TimeStart:   t,
 			Description: summary,
 			Summary:     scraper.TruncateSummary(summary, 200),
+			Speakers:    speakers,
 			Free:        free,
 			Location:    location,
 			HostSlug:    "studio-one",
