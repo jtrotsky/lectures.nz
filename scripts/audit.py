@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Print a coverage audit of data/lectures.json by source.
-No Claude needed — run this yourself anytime.
 
 Usage:
     python scripts/audit.py
@@ -18,32 +17,45 @@ with open(path) as f:
     lectures = json.load(f)
 
 by_host = defaultdict(list)
-for l in lectures:
-    by_host[l["host_slug"]].append(l)
+for lecture in lectures:
+    by_host[lecture["host_slug"]].append(lecture)
 
 print(f"\n{'Source':<28} {'Events':>6}  {'Summary':>7}  {'Speakers':>8}  {'Image':>5}")
 print("-" * 62)
 for host, lecs in sorted(by_host.items(), key=lambda x: -len(x[1])):
     n = len(lecs)
-    has_summary = sum(1 for l in lecs if l.get("summary", "").strip())
-    has_speakers = sum(1 for l in lecs if l.get("speakers"))
-    has_image = sum(1 for l in lecs if l.get("image", "").strip())
+    has_summary = sum(1 for lecture in lecs if lecture.get("summary", "").strip())
+    has_speakers = sum(1 for lecture in lecs if lecture.get("speakers"))
+    has_image = sum(1 for lecture in lecs if lecture.get("image", "").strip())
     print(f"{host:<28} {n:>6}  {has_summary:>7}  {has_speakers:>8}  {has_image:>5}")
 
 print("-" * 62)
-print(f"{'TOTAL':<28} {len(lectures):>6}  "
-      f"{sum(1 for l in lectures if l.get('summary','').strip()):>7}  "
-      f"{sum(1 for l in lectures if l.get('speakers')):>8}  "
-      f"{sum(1 for l in lectures if l.get('image','').strip()):>5}")
+print(
+    f"{'TOTAL':<28} {len(lectures):>6}  "
+    f"{sum(1 for lecture in lectures if lecture.get('summary', '').strip()):>7}  "
+    f"{sum(1 for lecture in lectures if lecture.get('speakers')):>8}  "
+    f"{sum(1 for lecture in lectures if lecture.get('image', '').strip()):>5}"
+)
 print()
 
 # Flag likely non-lectures
 print("Possible non-lecture events (check these):")
-noise_keywords = ["concert", "festival", "workshop", "open day", "school holiday",
-                  "tour", "performance", "exhibition", "live ", "farming", "printopia"]
-for l in lectures:
-    text = (l.get("title", "") + " " + l.get("summary", "")).lower()
+noise_keywords = [
+    "concert",
+    "festival",
+    "workshop",
+    "open day",
+    "school holiday",
+    "tour",
+    "performance",
+    "exhibition",
+    "live ",
+    "farming",
+    "printopia",
+]
+for lecture in lectures:
+    text = (lecture.get("title", "") + " " + lecture.get("summary", "")).lower()
     for kw in noise_keywords:
         if kw in text:
-            print(f"  [{l['host_slug']}] {l['title'][:70]}")
+            print(f"  [{lecture['host_slug']}] {lecture['title'][:70]}")
             break

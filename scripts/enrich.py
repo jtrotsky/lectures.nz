@@ -23,15 +23,17 @@ Environment variables:
 
 import json
 import os
+import re as _re
 import sys
 import urllib.request
-import urllib.error
 
 OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "qwen2.5:14b")
 DRY_RUN = os.environ.get("DRY_RUN", "0") == "1"
 FORCE_REFRESH = os.environ.get("FORCE_REFRESH", "0") == "1"
-REFRESH_SOURCE = os.environ.get("REFRESH_SOURCE", "")  # re-enrich events from this host_slug
+REFRESH_SOURCE = os.environ.get(
+    "REFRESH_SOURCE", ""
+)  # re-enrich events from this host_slug
 CACHE_ONLY = not OLLAMA_HOST  # apply cache without calling Ollama
 INPUT = "data/lectures.json"
 OUTPUT = "data/lectures-enriched.json"
@@ -39,14 +41,16 @@ CACHE = "data/enriched-cache.json"
 
 
 def ollama_chat(prompt: str) -> str:
-    payload = json.dumps({
-        "model": OLLAMA_MODEL,
-        "prompt": prompt,
-        "stream": False,
-        # Disable thinking tokens on reasoning models (qwen3, deepseek-r1).
-        # This keeps output clean JSON rather than <think>...</think> + JSON.
-        "think": False,
-    }).encode()
+    payload = json.dumps(
+        {
+            "model": OLLAMA_MODEL,
+            "prompt": prompt,
+            "stream": False,
+            # Disable thinking tokens on reasoning models (qwen3, deepseek-r1).
+            # This keeps output clean JSON rather than <think>...</think> + JSON.
+            "think": False,
+        }
+    ).encode()
     req = urllib.request.Request(
         f"{OLLAMA_HOST}/api/generate",
         data=payload,
@@ -85,15 +89,13 @@ def _extract_json(raw: str) -> str:
     start = raw.find("{")
     end = raw.rfind("}")
     if start != -1 and end != -1 and end > start:
-        raw = raw[start:end + 1]
+        raw = raw[start : end + 1]
 
     return raw.strip()
 
 
-import re as _re
-
 # HTML entity pattern (e.g. &mdash; &amp; &#8212;) and pure-punctuation names.
-_JUNK_SPEAKER_RE = _re.compile(r'^(&[a-z#0-9]+;|[—–\-\s\.,:;!?]+)$', _re.IGNORECASE)
+_JUNK_SPEAKER_RE = _re.compile(r"^(&[a-z#0-9]+;|[—–\-\s\.,:;!?]+)$", _re.IGNORECASE)
 
 
 def _clean_speakers(speakers: list) -> list:
@@ -170,14 +172,24 @@ def main():
     skipped = sum(1 for l in lectures if l.get("id") in cache)
     todo = len(lectures) - skipped
     if CACHE_ONLY:
-        print(f"Applying cache to {len(lectures)} lectures ({skipped} cached, {todo} unenriched)")
+        print(
+            f"Applying cache to {len(lectures)} lectures ({skipped} cached, {todo} unenriched)"
+        )
     elif FORCE_REFRESH:
-        print(f"FORCE_REFRESH: re-enriching all {len(lectures)} lectures using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
+        print(
+            f"FORCE_REFRESH: re-enriching all {len(lectures)} lectures using {OLLAMA_MODEL} @ {OLLAMA_HOST}"
+        )
     elif REFRESH_SOURCE:
-        source_count = sum(1 for l in lectures if l.get("host_slug", "") == REFRESH_SOURCE)
-        print(f"REFRESH_SOURCE={REFRESH_SOURCE}: re-enriching {source_count} events, {skipped - source_count} others cached, using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
+        source_count = sum(
+            1 for l in lectures if l.get("host_slug", "") == REFRESH_SOURCE
+        )
+        print(
+            f"REFRESH_SOURCE={REFRESH_SOURCE}: re-enriching {source_count} events, {skipped - source_count} others cached, using {OLLAMA_MODEL} @ {OLLAMA_HOST}"
+        )
     else:
-        print(f"Enriching {todo} lectures ({skipped} cached) using {OLLAMA_MODEL} @ {OLLAMA_HOST}")
+        print(
+            f"Enriching {todo} lectures ({skipped} cached) using {OLLAMA_MODEL} @ {OLLAMA_HOST}"
+        )
 
     enriched = []
     # Per-source stats: {slug: {"cached": int, "refreshed": int, "unenriched": int}}
@@ -187,9 +199,13 @@ def main():
         lid = lec.get("id", "")
         slug = lec.get("host_slug", "unknown")
         title = lec.get("title", "")[:50]
-        stats = source_stats.setdefault(slug, {"cached": 0, "refreshed": 0, "unenriched": 0})
+        stats = source_stats.setdefault(
+            slug, {"cached": 0, "refreshed": 0, "unenriched": 0}
+        )
 
-        is_source_refresh = REFRESH_SOURCE and lec.get("host_slug", "") == REFRESH_SOURCE
+        is_source_refresh = (
+            REFRESH_SOURCE and lec.get("host_slug", "") == REFRESH_SOURCE
+        )
         if lid and lid in cache and not FORCE_REFRESH and not is_source_refresh:
             print(f"[{i:3d}/{len(lectures)}] {title} (cached)")
             out = dict(lec)
@@ -211,7 +227,11 @@ def main():
 
         # Cache the enriched fields keyed by ID.
         if lid:
-            cache[lid] = {k: result[k] for k in ("event_type", "summary", "description", "speakers") if k in result}
+            cache[lid] = {
+                k: result[k]
+                for k in ("event_type", "summary", "description", "speakers")
+                if k in result
+            }
 
     # Persist updated cache.
     with open(CACHE, "w") as f:
