@@ -1,18 +1,18 @@
 // Command post publishes new lectures from data/ to a Bluesky account.
 //
 // It reads lectures-enriched.json (falling back to lectures.json), skips any
-// lecture already recorded in data/posted.json, and creates one Bluesky post
-// per new lecture.
+// lecture already recorded in data/posted.json, scores unposted upcoming
+// lectures by quality, and posts the top-scoring one (default: 1 per run).
 //
 // Required env vars:
 //
-//	BSKY_HANDLE       e.g. lectures.nz.bsky.social
+//	BSKY_HANDLE       e.g. lectures.nz
 //	BSKY_APP_PASSWORD app-password from Bluesky Settings → Privacy → App Passwords
 //
 // Optional:
 //
 //	DRY_RUN=1   print posts without publishing
-//	LIMIT=N     post at most N lectures (default: 5 per run to avoid spam)
+//	LIMIT=N     post at most N lectures (default: 1 per run)
 package main
 
 import (
@@ -23,6 +23,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 	"time"
@@ -33,7 +34,7 @@ import (
 const (
 	bskyHost        = "https://bsky.social"
 	postedPath      = "data/posted.json"
-	defaultLimit    = 3
+	defaultLimit     = 1
 	defaultDaysAhead = 14
 )
 
@@ -83,10 +84,11 @@ func run() error {
 	// Load posted log.
 	posted := loadPosted()
 
-	// Find unposted upcoming lectures within the relevance window.
+	// Find unposted upcoming lectures within the relevance window,
+	// ranked by quality score — best first.
 	now := time.Now()
 	cutoff := now.AddDate(0, 0, daysAhead)
-	var queue []model.Lecture
+	var candidates []model.Lecture
 	for _, l := range lectures {
 		if l.TimeStart.Before(now) || l.TimeStart.After(cutoff) {
 			continue
@@ -94,10 +96,20 @@ func run() error {
 		if _, done := posted[l.ID]; done {
 			continue
 		}
+		candidates = append(candidates, l)
+	}
+	sort.Slice(candidates, func(i, j int) bool {
+		return score(candidates[i], now) > score(candidates[j], now)
+	})
+	var queue []model.Lecture
+	for _, l := range candidates {
 		queue = append(queue, l)
 		if len(queue) >= limit {
 			break
 		}
+	}
+	if len(candidates) > 0 {
+		log.Printf("Scored %d candidates; top score=%d (%q)", len(candidates), score(candidates[0], now), candidates[0].Title)
 	}
 
 	if len(queue) == 0 {
@@ -255,6 +267,67 @@ func linkCardEmbed(uri, title, description string) map[string]any {
 			"description": description,
 		},
 	}
+}
+
+// score ranks a lecture by posting quality. Higher = more worth posting.
+//
+// Points are awarded for:
+//   - Source tier: universities (+3), research/policy orgs (+2), museums/cultural (+1)
+//   - Has named speaker(s) (+2)
+//   - Has a description longer than 50 chars (+1)
+//   - Free event (+1)
+//   - Has a physical location — not online-only (+1)
+//   - Sweet-spot timing: 3–10 days out (+1)
+//   - High-quality event type (lecture or seminar) (+1)
+func score(l model.Lecture, now time.Time) int {
+	s := 0
+
+	// Source tier.
+	switch l.HostSlug {
+	case "auckland", "aut", "otago", "victoria", "canterbury", "massey":
+		s += 3
+	case "royal-society", "rbnz", "nziia", "motu", "nz-initiative":
+		s += 2
+	case "te-papa", "auckland-museum", "auckland-art-gallery", "artgallery-nz",
+		"national-library", "public-record", "studio-one", "gus-fisher", "motat",
+		"ockham", "artspace":
+		s += 1
+	}
+
+	// Speaker quality signal.
+	if len(l.Speakers) > 0 {
+		s += 2
+	}
+
+	// Description richness.
+	if len(l.Description) > 50 {
+		s += 1
+	}
+
+	// Free event.
+	if l.Free {
+		s += 1
+	}
+
+	// Physical location (not online-only).
+	loc := strings.ToLower(l.Location)
+	if l.Location != "" && !strings.Contains(loc, "online") && !strings.Contains(loc, "zoom") {
+		s += 1
+	}
+
+	// Sweet-spot timing: 3–10 days out.
+	days := l.TimeStart.Sub(now).Hours() / 24
+	if days >= 3 && days <= 10 {
+		s += 1
+	}
+
+	// Event type quality.
+	switch l.EventType {
+	case "lecture", "seminar":
+		s += 1
+	}
+
+	return s
 }
 
 // shortLocation returns the first meaningful part of an address (city or venue).

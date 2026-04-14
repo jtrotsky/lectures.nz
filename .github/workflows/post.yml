@@ -1,9 +1,9 @@
 name: Post to Bluesky
 
 on:
-  # Run daily at 8am NZT (UTC+12) = 8pm UTC previous day
+  # Run daily at 7:30am NZT (UTC+12) = 7:30pm UTC previous day
   schedule:
-    - cron: '0 20 * * *'
+    - cron: '30 19 * * *'
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:
 
