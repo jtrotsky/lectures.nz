@@ -1160,7 +1160,6 @@ body:has(.page-host) .site-header {
   }
 
   .host-header-inner { flex-direction: column; }
-  .lecture-hero-actions { flex-direction: column; align-items: flex-start; }
   .lecture-site-header { gap: 16px; }
   .lecture-more-title { font-size: 1.5rem; }
 }

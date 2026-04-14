@@ -187,7 +187,7 @@
           visible[1].style.gridColumn = '2 / span 2';
         }
       } else if (visible.length === 4) {
-        visible[3].style.gridColumn = '1 / -1';
+        visible[3].style.gridColumn = '1 / 3';
       }
       // 3, 5, 6: no overrides — empty columns are acceptable
     });
