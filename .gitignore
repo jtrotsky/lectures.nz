@@ -1,6 +1,8 @@
 # Generated data (run `make collect` to regenerate)
 data/*
 !data/enriched-cache.json
+!data/descriptions-cache.json
+!data/posted.json
 
 # AI instructions
 .CLAUDE.md
@@ -14,6 +16,7 @@ public/
 *.exe
 *.test
 *.out
+/post
 
 # Editor
 .DS_Store
