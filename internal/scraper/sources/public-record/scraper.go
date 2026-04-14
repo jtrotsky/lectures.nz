@@ -53,6 +53,8 @@ var (
 	tagStripRe = regexp.MustCompile(`<[^>]+>`)
 	// nextPageRe detects whether a next page link exists.
 	nextPageRe = regexp.MustCompile(`(?i)pagination__item--next`)
+	// freeRe detects "free" in a pricing/admission context on the article page.
+	freeRe = regexp.MustCompile(`(?i)\bfree\b`)
 	// ordinalDateRe matches "1st May 2026", "11th Jul 2026", "2nd Jan 2025".
 	ordinalDateRe = regexp.MustCompile(`(?i)(\d{1,2})(?:st|nd|rd|th)?\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(\d{4})`)
 	// articleContentMarkerRe finds the article body div opening tag.
@@ -92,30 +94,40 @@ func parseOrdinalDate(s string, loc *time.Location) (time.Time, bool) {
 	return time.Date(year, month, day, 10, 0, 0, 0, loc), true // default 10am
 }
 
-// fetchSummary fetches an article page and returns the first paragraph of the article body.
-// It finds the article-template__content div, then extracts the first <p> after it.
-func fetchSummary(ctx context.Context, url string) string {
+type articleDetail struct {
+	description string
+	free        bool
+}
+
+// fetchDetail fetches a Public Record article page and returns the first
+// paragraph of the article body plus whether the event is free.
+func fetchDetail(ctx context.Context, url string) articleDetail {
 	body, err := scraper.Fetch(ctx, url)
 	if err != nil {
-		return ""
+		return articleDetail{}
 	}
 	loc := articleContentMarkerRe.FindIndex(body)
 	if loc == nil {
-		return ""
+		return articleDetail{}
 	}
-	// Search for the first non-empty <p> within 8 KB after the div opener.
 	end := loc[1] + 8192
 	if end > len(body) {
 		end = len(body)
 	}
-	all := pRe.FindAllSubmatch(body[loc[1]:end], -1)
+	content := body[loc[1]:end]
+
+	desc := ""
+	all := pRe.FindAllSubmatch(content, -1)
 	for _, pm := range all {
 		text := innerText(string(pm[1]))
 		if text != "" {
-			return text
+			desc = text
+			break
 		}
 	}
-	return ""
+
+	free := freeRe.Match(content)
+	return articleDetail{description: desc, free: free}
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
@@ -180,16 +192,17 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			}
 
 			link := baseURL + href
-			rawDesc := fetchSummary(ctx, link)
+			detail := fetchDetail(ctx, link)
 
 			lectures = append(lectures, model.Lecture{
 				ID:          scraper.MakeID(link),
 				Title:       scraper.CleanTitle(title),
 				Link:        link,
 				TimeStart:   t,
-				Description: rawDesc,
-				Summary:     scraper.TruncateSummary(rawDesc, 200),
+				Description: detail.description,
+				Summary:     scraper.TruncateSummary(detail.description, 200),
 				Location:    evtLocation,
+				Free:        detail.free,
 				HostSlug:    "public-record",
 			})
 		}

@@ -52,24 +52,41 @@ var (
 	locationRe    = regexp.MustCompile(`(?s)Location:.*?col-sm-9">(.*?)</div>`)
 	timeRe        = regexp.MustCompile(`(?i),\s*(\d{1,2}(?::\d{2})?(?:am|pm))`)
 	jsonLdDescRe  = regexp.MustCompile(`"description"\s*:\s*"((?:[^"\\]|\\.)*)"`)
+	jsonLdFreeRe  = regexp.MustCompile(`"isAccessibleForFree"\s*:\s*(true|false)`)
+	jsonLdPriceRe = regexp.MustCompile(`"price"\s*:\s*"?(\d+(?:\.\d+)?)"?`)
 )
 
-// fetchSummary fetches an event detail page and extracts the JSON-LD description.
-func fetchSummary(ctx context.Context, url string) string {
+type eventDetail struct {
+	description string
+	free        bool
+}
+
+// fetchDetail fetches an AUT event detail page and extracts description and
+// free status from the page's JSON-LD block.
+func fetchDetail(ctx context.Context, url string) eventDetail {
 	body, err := scraper.Fetch(ctx, url)
 	if err != nil {
-		return ""
+		return eventDetail{}
 	}
-	m := jsonLdDescRe.FindSubmatch(body)
-	if m == nil {
-		return ""
+
+	desc := ""
+	if m := jsonLdDescRe.FindSubmatch(body); m != nil {
+		unquoted, err := strconv.Unquote(`"` + string(m[1]) + `"`)
+		if err != nil {
+			desc = string(m[1])
+		} else {
+			desc = unquoted
+		}
 	}
-	// JSON-LD string values use JSON escaping — unquote them.
-	unquoted, err := strconv.Unquote(`"` + string(m[1]) + `"`)
-	if err != nil {
-		return string(m[1])
+
+	free := true // AUT public events are free unless pricing indicates otherwise
+	if m := jsonLdFreeRe.FindSubmatch(body); m != nil {
+		free = string(m[1]) == "true"
+	} else if m := jsonLdPriceRe.FindSubmatch(body); m != nil {
+		free = string(m[1]) == "0" || string(m[1]) == "0.00"
 	}
-	return unquoted
+
+	return eventDetail{description: desc, free: free}
 }
 
 // stripTags removes HTML tags and normalises whitespace.
@@ -200,15 +217,16 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			location += ", Auckland"
 		}
 
-		rawDesc := fetchSummary(ctx, eventURL)
+		detail := fetchDetail(ctx, eventURL)
 		lectures = append(lectures, model.Lecture{
 			ID:          scraper.MakeID(eventURL),
 			Title:       scraper.CleanTitle(title),
 			Link:        eventURL,
 			TimeStart:   t,
-			Description: rawDesc,
-			Summary:     scraper.TruncateSummary(rawDesc, 200),
+			Description: detail.description,
+			Summary:     scraper.TruncateSummary(detail.description, 200),
 			Location:    location,
+			Free:        detail.free,
 			HostSlug:    "aut",
 		})
 	}
