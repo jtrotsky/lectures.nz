@@ -385,13 +385,25 @@ func groupByDate(lectures []model.Lecture) []dateGroup {
 		nzLoc = time.UTC
 	}
 
+	now := time.Now().In(nzLoc)
+	todayKey := now.Format("2006-01-02")
+	tomorrowKey := now.AddDate(0, 0, 1).Format("2006-01-02")
+
 	for _, l := range lectures {
 		lTime := l.TimeStart.In(nzLoc)
 		key := lTime.Format("2006-01-02")
 
 		idx, exists := groupIndex[key]
 		if !exists {
-			label := lTime.Format("Monday 2 January")
+			var label string
+			switch key {
+			case todayKey:
+				label = "Today"
+			case tomorrowKey:
+				label = "Tomorrow"
+			default:
+				label = lTime.Format("Monday 2 January")
+			}
 			groups = append(groups, dateGroup{DateKey: key, DateLabel: label})
 			idx = len(groups) - 1
 			groupIndex[key] = idx

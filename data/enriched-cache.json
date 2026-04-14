@@ -176,17 +176,6 @@
     "summary": "2026 WSBG Climate Festival Fortnight at Victoria University",
     "description": "Wellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington supports Wellington City Council\u2019s first climate festival. Register here for more information."
   },
-  "3aba32013f4fbb71": {
-    "event_type": "lecture",
-    "summary": "Chelsea Winstanley ONZM explores visual sovereignty in 2026.",
-    "description": "Chelsea Winstanley ONZM presents on the concept of visual sovereignty and its implications for the future. The lecture delves into how indigenous perspectives will shape transcolonial dynamics by 2026.",
-    "speakers": [
-      {
-        "name": "Chelsea Winstanley ONZM",
-        "bio": "artist, activist"
-      }
-    ]
-  },
   "e48ddbbc834dc652": {
     "event_type": "lecture",
     "summary": "Otago's Deep-Sea Research Programme explores the Southern Ocean mysteries.",
@@ -713,6 +702,17 @@
       {
         "name": "Mahdis Azarmandi",
         "bio": "Peace and Conflict researcher"
+      }
+    ]
+  },
+  "3aba32013f4fbb71": {
+    "event_type": "lecture",
+    "summary": "Chelsea Winstanley ONZM discusses the concept of transcolonisation in a lecture about visual sovereignty.",
+    "description": "Visual Sovereignty is the topic of this thought-provoking lecture by Chelsea Winstanley ONZM. It explores the theme of Fast Forward 2026, focusing on the idea of transcolonisation and its implications for contemporary society.",
+    "speakers": [
+      {
+        "name": "Chelsea Winstanley ONZM",
+        "bio": "NZ media artist"
       }
     ]
   }

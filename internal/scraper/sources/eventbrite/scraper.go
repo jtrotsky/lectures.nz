@@ -221,9 +221,16 @@ func convertEvent(e apiEvent) (model.Lecture, bool) {
 
 	location := buildLocation(e.Venue)
 
+	cleanTitle, speakerSuffix := scraper.SplitTitleSpeaker(scraper.CleanTitle(e.Name.Text))
+
+	var speakers []model.Speaker
+	if speakerSuffix != "" {
+		speakers = []model.Speaker{{Name: speakerSuffix}}
+	}
+
 	return model.Lecture{
 		ID:          scraper.MakeID(e.URL),
-		Title:       scraper.CleanTitle(e.Name.Text),
+		Title:       cleanTitle,
 		Link:        e.URL,
 		TimeStart:   t,
 		Description: e.Description.Text,
@@ -231,6 +238,7 @@ func convertEvent(e apiEvent) (model.Lecture, bool) {
 		Location:    location,
 		Free:        e.IsFree,
 		HostSlug:    "eventbrite",
+		Speakers:    speakers,
 	}, true
 }
 

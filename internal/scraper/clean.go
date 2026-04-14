@@ -168,6 +168,20 @@ func trimDescriptiveSuffix(title string) string {
 	return strings.TrimSpace(title[:idx])
 }
 
+// SplitTitleSpeaker splits a title of the form "Event Title | Speaker Name"
+// into (title, speakerSuffix). If no pipe separator is present, speakerSuffix
+// is empty. The caller decides what to do with the speaker suffix (e.g. parse
+// it into a Speaker struct). Only splits on " | " with surrounding spaces to
+// avoid false positives on titles that use | as a bullet.
+func SplitTitleSpeaker(title string) (string, string) {
+	const sep = " | "
+	idx := strings.Index(title, sep)
+	if idx < 5 {
+		return title, ""
+	}
+	return strings.TrimSpace(title[:idx]), strings.TrimSpace(title[idx+len(sep):])
+}
+
 // stripTruncation removes trailing scraper artefacts like ", Fri..." or " F..."
 // that arise when a source page truncates its title text.
 func stripTruncation(s string) string {

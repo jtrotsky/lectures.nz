@@ -112,8 +112,12 @@ def enrich(lecture: dict) -> dict:
     title = lecture.get("title", "")
     description = lecture.get("description", "") or lecture.get("summary", "")
     host = lecture.get("host_slug", "")
+    speakers = lecture.get("speakers", [])
+    speaker_names = ", ".join(sp["name"] for sp in speakers if sp.get("name")) if speakers else ""
 
     is_thin = len(description.strip()) < 150
+
+    speakers_line = f"  speakers: {speaker_names}\n" if speaker_names else ""
 
     prompt = f"""You are a curator for lectures.nz, a New Zealand public lectures website.
 
@@ -121,14 +125,15 @@ Given the event below, return ONLY a valid JSON object — no markdown, no expla
 
 Fields:
 - "event_type": One word classifying the event. Choose exactly one: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, symposium, conference, other.
+- "title": The cleaned event title. Strip any speaker name appended after " | " (e.g. "Fast Forward 2026: Transcolonisation! | Chelsea Winstanley" → "Fast Forward 2026: Transcolonisation!"). Also strip trailing speaker credits like " with Jane Smith" or " — featuring Dr X" if the event name is clear without them. Do NOT rewrite, shorten, or rephrase the actual event name itself — only strip the speaker suffix. Return the original if no change needed.
 - "summary": One clear sentence (max 180 chars) for the index card. Capture the core topic and speaker if named. No hollow openers like "Join us" or "Discover". Do not invent anything not in the source.
 - "description": 2-4 sentences for the detail page. Preserve the source's voice, key facts, people, and institutions. Remove hollow openers. Fix punctuation. {"Expand this — the source text is very short, so infer reasonable context from the title and host, but do not invent specific claims." if is_thin else "Preserve the existing text closely — only clean up punctuation and remove hollow openers."}
-- "speakers": Array of speaker objects, each with "name" (string) and "bio" (string). Extract from title or description only. Return [] if none named. The "name" field must contain ONLY the person's name and honorific/title if given (e.g. "Dr Jane Smith" or "Professor John Doe") — never append event context, parenthetical notes, or topic references to the name. The "bio" field is a short role or affiliation, max 6 words (e.g. "former NZ diplomat", "Victoria University economist", "award-winning novelist"). Do not write a full sentence.
+- "speakers": Array of speaker objects, each with "name" (string) and "bio" (string). Extract from title, speakers, or description. Return [] if none named. The "name" field must contain ONLY the person's name and honorific/title if given (e.g. "Dr Jane Smith" or "Professor John Doe") — never append event context, parenthetical notes, or topic references to the name. The "bio" field is a short role or affiliation, max 6 words (e.g. "former NZ diplomat", "Victoria University economist", "award-winning novelist"). Do not write a full sentence.
 
 Event:
   host: {host}
   title: {title}
-  description: {description}
+{speakers_line}  description: {description}
 """
 
     if DRY_RUN:
@@ -143,6 +148,10 @@ Event:
         out = dict(lecture)
         if enriched.get("event_type"):
             out["event_type"] = enriched["event_type"]
+        # Only apply cleaned title if qwen actually stripped something (not just rephrased).
+        enriched_title = enriched.get("title", "").strip()
+        if enriched_title and enriched_title != title and len(enriched_title) < len(title):
+            out["title"] = enriched_title
         if enriched.get("summary"):
             out["summary"] = enriched["summary"]
         if enriched.get("description"):
