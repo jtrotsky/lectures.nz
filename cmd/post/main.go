@@ -129,7 +129,18 @@ func run() error {
 
 	// Post each lecture.
 	for _, l := range queue {
-		text, facets, embed := buildPost(l)
+		// Resolve source Bluesky handle → DID for mention facet (no auth needed).
+		var m *mention
+		if bskyHandle, ok := sourceHandles[l.HostSlug]; ok {
+			did, err := resolveHandle(bskyHandle)
+			if err != nil {
+				log.Printf("WARN: could not resolve @%s: %v", bskyHandle, err)
+			} else {
+				m = &mention{Handle: bskyHandle, DID: did}
+			}
+		}
+
+		text, facets, embed := buildPost(l, m)
 		if dryRun {
 			fmt.Printf("\n--- DRY RUN ---\n%s\n(%d chars)\n", text, len([]rune(text)))
 			continue
@@ -153,10 +164,26 @@ func run() error {
 	return nil
 }
 
+// mention holds a resolved Bluesky account for source tagging.
+type mention struct {
+	Handle string // e.g. "aucklanduni.bsky.social"
+	DID    string // e.g. "did:plc:..."
+}
+
+// sourceHandles maps host slugs to their official Bluesky handles.
+// Add more here as accounts are confirmed.
+var sourceHandles = map[string]string{
+	"auckland":       "aucklanduni.bsky.social",
+	"otago":          "universityofotago.bsky.social",
+	"auckland-museum": "aucklandmuseum.bsky.social",
+	"royal-society":  "royalsocietynz.bsky.social",
+	"nziia":          "nziia.bsky.social",
+}
+
 // buildPost formats a lecture as a Bluesky post (≤ 300 grapheme clusters).
-// Returns the post text, rich-text facets (hashtags), and a link card embed.
+// Returns the post text, rich-text facets (hashtags + optional mention), and a link card embed.
 // The URL is carried in the embed card, not the post text.
-func buildPost(l model.Lecture) (string, []map[string]any, map[string]any) {
+func buildPost(l model.Lecture, m *mention) (string, []map[string]any, map[string]any) {
 	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
 	if nzLoc == nil {
 		nzLoc = time.UTC
@@ -183,10 +210,13 @@ func buildPost(l model.Lecture) (string, []map[string]any, map[string]any) {
 	if tagLine != "" {
 		parts = append(parts, tagLine)
 	}
+	if m != nil {
+		parts = append(parts, "@"+m.Handle)
+	}
 
 	text := strings.Join(parts, "\n")
 
-	// Trim to 300 grapheme clusters — drop summary first, then tags.
+	// Trim to 300 grapheme clusters — drop summary first, then tags, keep mention.
 	runes := []rune(text)
 	if len(runes) > 300 {
 		var short []string
@@ -195,6 +225,9 @@ func buildPost(l model.Lecture) (string, []map[string]any, map[string]any) {
 		if tagLine != "" {
 			short = append(short, tagLine)
 		}
+		if m != nil {
+			short = append(short, "@"+m.Handle)
+		}
 		text = strings.Join(short, "\n")
 		runes = []rune(text)
 		if len(runes) > 300 {
@@ -202,11 +235,19 @@ func buildPost(l model.Lecture) (string, []map[string]any, map[string]any) {
 		}
 	}
 
-	// Build hashtag facets.
+	// Build facets: hashtags + mention.
 	facets := hashtagFacets(text, tags)
+	if m != nil {
+		if f := mentionFacet(text, "@"+m.Handle, m.DID); f != nil {
+			facets = append(facets, f)
+		}
+	}
+
+	// Link to the lectures.nz detail page (has add-to-calendar, full description).
+	listingURL := "https://lectures.nz/" + l.HostSlug + "/" + l.ID
 
 	// Build link card embed.
-	embed := linkCardEmbed(l.Link, l.Title, l.Summary)
+	embed := linkCardEmbed(listingURL, l.Title, l.Summary)
 
 	return text, facets, embed
 }
@@ -228,6 +269,56 @@ func cityHashtags(city string) []string {
 		return []string{tag}
 	}
 	return nil
+}
+
+// mentionFacet builds an ATproto rich-text facet for a @mention in text.
+func mentionFacet(text, atHandle, did string) map[string]any {
+	idx := strings.Index(text, atHandle)
+	if idx < 0 {
+		return nil
+	}
+	byteStart := len([]byte(text[:idx]))
+	byteEnd := byteStart + len([]byte(atHandle))
+	return map[string]any{
+		"$type": "app.bsky.richtext.facet",
+		"index": map[string]any{
+			"byteStart": byteStart,
+			"byteEnd":   byteEnd,
+		},
+		"features": []map[string]any{
+			{
+				"$type": "app.bsky.richtext.facet#mention",
+				"did":   did,
+			},
+		},
+	}
+}
+
+// resolveHandle resolves a Bluesky handle to a DID via the ATproto identity API.
+// No authentication required.
+func resolveHandle(handle string) (string, error) {
+	url := bskyHost + "/xrpc/com.atproto.identity.resolveHandle?handle=" + handle
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		return "", err
+	}
+	client := &http.Client{Timeout: 10 * time.Second}
+	resp, err := client.Do(req)
+	if err != nil {
+		return "", err
+	}
+	defer resp.Body.Close()
+	data, _ := io.ReadAll(resp.Body)
+	if resp.StatusCode >= 400 {
+		return "", fmt.Errorf("HTTP %d: %s", resp.StatusCode, strings.TrimSpace(string(data)))
+	}
+	var result struct {
+		DID string `json:"did"`
+	}
+	if err := json.Unmarshal(data, &result); err != nil {
+		return "", fmt.Errorf("parse: %w", err)
+	}
+	return result.DID, nil
 }
 
 // hashtagFacets builds ATproto rich-text facets for each #Tag found in text.
