@@ -201,6 +201,9 @@ var excludedEventTypes = map[string]bool{
 	"orientation": true,
 	"festival":    true,
 	"meetup":      true,
+	"symposium":   true,
+	"conference":  true,
+	"AGM":         true,
 }
 
 // filterByEventType removes events whose enrichment-assigned type is not

@@ -117,13 +117,13 @@ func run() error {
 
 	// Post each lecture.
 	for _, l := range queue {
-		text, facets := buildPost(l)
+		text, facets, embed := buildPost(l)
 		if dryRun {
 			fmt.Printf("\n--- DRY RUN ---\n%s\n(%d chars)\n", text, len([]rune(text)))
 			continue
 		}
 
-		uri, err := createPost(accessJWT, did, text, facets)
+		uri, err := createPost(accessJWT, did, text, facets, embed)
 		if err != nil {
 			log.Printf("WARN: failed to post %q: %v", l.Title, err)
 			continue
@@ -142,17 +142,25 @@ func run() error {
 }
 
 // buildPost formats a lecture as a Bluesky post (≤ 300 grapheme clusters).
-// Returns the text and any link facets for rich-text embedding.
-func buildPost(l model.Lecture) (string, []map[string]any) {
+// Returns the post text, rich-text facets (hashtags), and a link card embed.
+// The URL is carried in the embed card, not the post text.
+func buildPost(l model.Lecture) (string, []map[string]any, map[string]any) {
 	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
 	if nzLoc == nil {
 		nzLoc = time.UTC
 	}
 
+	city := shortLocation(l.Location)
 	dateLine := l.TimeStart.In(nzLoc).Format("Mon 2 Jan · 3:04pm")
-	if l.Location != "" {
-		dateLine += " · " + shortLocation(l.Location)
+	if city != "" {
+		dateLine += " · " + city
 	}
+
+	tags := cityHashtags(city)
+	if l.Free {
+		tags = append(tags, "#FreeEvent")
+	}
+	tagLine := strings.Join(tags, " ")
 
 	var parts []string
 	parts = append(parts, l.Title)
@@ -160,19 +168,21 @@ func buildPost(l model.Lecture) (string, []map[string]any) {
 	if l.Summary != "" {
 		parts = append(parts, l.Summary)
 	}
-	parts = append(parts, l.Link)
+	if tagLine != "" {
+		parts = append(parts, tagLine)
+	}
 
 	text := strings.Join(parts, "\n")
 
-	// Trim to 300 grapheme clusters if needed (Bluesky limit).
-	// We trim the summary first to preserve title, date, and link.
+	// Trim to 300 grapheme clusters — drop summary first, then tags.
 	runes := []rune(text)
 	if len(runes) > 300 {
-		// Recompose without summary, truncate if still over.
 		var short []string
 		short = append(short, l.Title)
 		short = append(short, dateLine)
-		short = append(short, l.Link)
+		if tagLine != "" {
+			short = append(short, tagLine)
+		}
 		text = strings.Join(short, "\n")
 		runes = []rune(text)
 		if len(runes) > 300 {
@@ -180,10 +190,71 @@ func buildPost(l model.Lecture) (string, []map[string]any) {
 		}
 	}
 
-	// Build a link facet so the URL is clickable.
-	facets := linkFacets(text, l.Link)
+	// Build hashtag facets.
+	facets := hashtagFacets(text, tags)
 
-	return text, facets
+	// Build link card embed.
+	embed := linkCardEmbed(l.Link, l.Title, l.Summary)
+
+	return text, facets, embed
+}
+
+// cityHashtags returns a hashtag for well-known NZ cities extracted from loc.
+func cityHashtags(city string) []string {
+	known := map[string]string{
+		"auckland":        "#Auckland",
+		"wellington":      "#Wellington",
+		"christchurch":    "#Christchurch",
+		"dunedin":         "#Dunedin",
+		"hamilton":        "#Hamilton",
+		"tauranga":        "#Tauranga",
+		"palmerston north": "#PalmerstonNorth",
+		"napier":          "#Napier",
+		"nelson":          "#Nelson",
+	}
+	if tag, ok := known[strings.ToLower(strings.TrimSpace(city))]; ok {
+		return []string{tag}
+	}
+	return nil
+}
+
+// hashtagFacets builds ATproto rich-text facets for each #Tag found in text.
+func hashtagFacets(text string, tags []string) []map[string]any {
+	var facets []map[string]any
+	for _, tag := range tags {
+		idx := strings.Index(text, tag)
+		if idx < 0 {
+			continue
+		}
+		byteStart := len([]byte(text[:idx]))
+		byteEnd := byteStart + len([]byte(tag))
+		facets = append(facets, map[string]any{
+			"$type": "app.bsky.richtext.facet",
+			"index": map[string]any{
+				"byteStart": byteStart,
+				"byteEnd":   byteEnd,
+			},
+			"features": []map[string]any{
+				{
+					"$type": "app.bsky.richtext.facet#tag",
+					"tag":   strings.TrimPrefix(tag, "#"),
+				},
+			},
+		})
+	}
+	return facets
+}
+
+// linkCardEmbed builds an app.bsky.embed.external record for a link preview card.
+func linkCardEmbed(uri, title, description string) map[string]any {
+	return map[string]any{
+		"$type": "app.bsky.embed.external",
+		"external": map[string]any{
+			"uri":         uri,
+			"title":       title,
+			"description": description,
+		},
+	}
 }
 
 // shortLocation returns the first meaningful part of an address (city or venue).
@@ -196,31 +267,6 @@ func shortLocation(loc string) string {
 	return strings.TrimSpace(loc)
 }
 
-// linkFacets builds an ATproto rich-text facet for the first occurrence of url in text.
-func linkFacets(text, url string) []map[string]any {
-	idx := strings.Index(text, url)
-	if idx < 0 {
-		return nil
-	}
-	// Byte offsets (ATproto uses UTF-8 byte offsets).
-	byteStart := len(text[:idx])
-	byteEnd := byteStart + len(url)
-	return []map[string]any{
-		{
-			"$type": "app.bsky.richtext.facet",
-			"index": map[string]any{
-				"byteStart": byteStart,
-				"byteEnd":   byteEnd,
-			},
-			"features": []map[string]any{
-				{
-					"$type": "app.bsky.richtext.facet#link",
-					"uri":   url,
-				},
-			},
-		},
-	}
-}
 
 // --- ATproto XRPC calls ---
 
@@ -243,7 +289,7 @@ func createSession(handle, password string) (accessJWT, did string, err error) {
 	return result.AccessJwt, result.DID, nil
 }
 
-func createPost(accessJWT, did, text string, facets []map[string]any) (string, error) {
+func createPost(accessJWT, did, text string, facets []map[string]any, embed map[string]any) (string, error) {
 	record := map[string]any{
 		"$type":     "app.bsky.feed.post",
 		"text":      text,
@@ -251,6 +297,9 @@ func createPost(accessJWT, did, text string, facets []map[string]any) (string, e
 	}
 	if len(facets) > 0 {
 		record["facets"] = facets
+	}
+	if embed != nil {
+		record["embed"] = embed
 	}
 
 	body, _ := json.Marshal(map[string]any{
