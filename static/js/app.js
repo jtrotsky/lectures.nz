@@ -171,7 +171,7 @@
       visible.forEach(function (item) { item.style.gridColumn = ''; });
 
       if (visible.length === 1) {
-        visible[0].style.gridColumn = '1 / -1';
+        visible[0].style.gridColumn = '1 / 3';
       } else if (visible.length === 2) {
         var lengths = visible.map(function(item) {
           var title = item.querySelector('.lecture-title');

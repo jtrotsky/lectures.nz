@@ -51,21 +51,39 @@ func main() {
 
 const descCachePath = "data/descriptions-cache.json"
 
-// loadDescCache reads the on-disk descriptions cache (URL → description text).
-func loadDescCache() map[string]string {
+// cachedDetail holds the description text and any speakers extracted from a
+// detail page. Replaces the old map[string]string format (URL → plain string).
+type cachedDetail struct {
+	Description string          `json:"description"`
+	Speakers    []model.Speaker `json:"speakers,omitempty"`
+}
+
+// loadDescCache reads the on-disk descriptions cache (URL → cachedDetail).
+// Migrates transparently from the old format (URL → plain string).
+func loadDescCache() map[string]cachedDetail {
 	data, err := os.ReadFile(descCachePath)
 	if err != nil {
-		return make(map[string]string)
+		return make(map[string]cachedDetail)
 	}
-	var m map[string]string
-	if err := json.Unmarshal(data, &m); err != nil {
-		return make(map[string]string)
+	// Try new format first.
+	var m map[string]cachedDetail
+	if json.Unmarshal(data, &m) == nil {
+		return m
 	}
-	return m
+	// Migrate from old format (map of plain strings).
+	var old map[string]string
+	if json.Unmarshal(data, &old) == nil {
+		m = make(map[string]cachedDetail, len(old))
+		for k, v := range old {
+			m[k] = cachedDetail{Description: v}
+		}
+		return m
+	}
+	return make(map[string]cachedDetail)
 }
 
 // saveDescCache writes the descriptions cache to disk.
-func saveDescCache(m map[string]string) {
+func saveDescCache(m map[string]cachedDetail) {
 	data, err := json.MarshalIndent(m, "", "  ")
 	if err != nil {
 		log.Printf("WARN: marshal descriptions cache: %v", err)
@@ -101,9 +119,9 @@ var skipDescFetch = map[string]bool{
 	"eventbrite": true, // JS-rendered; description already comes from API
 }
 
-// fillDescriptions fetches full descriptions for lectures with thin Description
-// fields (< 200 chars), using a URL-keyed cache to avoid repeat fetches.
-func fillDescriptions(ctx context.Context, lectures []model.Lecture, cache map[string]string) {
+// fillDescriptions fetches full descriptions (and speakers) for lectures with
+// thin Description fields (< 200 chars), using a URL-keyed cache.
+func fillDescriptions(ctx context.Context, lectures []model.Lecture, cache map[string]cachedDetail) {
 	const minLen = 200
 	fetched, hits := 0, 0
 	for i, l := range lectures {
@@ -114,8 +132,11 @@ func fillDescriptions(ctx context.Context, lectures []model.Lecture, cache map[s
 			continue
 		}
 		if cached, ok := cache[l.Link]; ok {
-			if len(cached) > len(lectures[i].Description) {
-				lectures[i].Description = cached
+			if len(cached.Description) > len(lectures[i].Description) {
+				lectures[i].Description = cached.Description
+			}
+			if len(lectures[i].Speakers) == 0 && len(cached.Speakers) > 0 {
+				lectures[i].Speakers = cached.Speakers
 			}
 			hits++
 			continue
@@ -123,16 +144,32 @@ func fillDescriptions(ctx context.Context, lectures []model.Lecture, cache map[s
 		body, err := scraper.Fetch(ctx, l.Link)
 		if err != nil {
 			log.Printf("DESC  [%s] fetch failed: %v", l.HostSlug, err)
-			cache[l.Link] = l.Description // cache to avoid retrying
+			cache[l.Link] = cachedDetail{Description: l.Description}
 			continue
 		}
+
 		desc := scraper.ExtractDescription(body)
-		// Only use the fetched description if it's genuinely better — not a
-		// navigation dump or error page.
-		if len(desc) > len(l.Description) && !scraper.LooksLikeGarbage(desc) {
-			lectures[i].Description = desc
+		if !scraper.LooksLikeGarbage(desc) {
+			if len(desc) > len(l.Description) {
+				lectures[i].Description = desc
+			} else if scraper.HasSpeakerInfo(desc) && !scraper.HasSpeakerInfo(l.Description) {
+				// Append "Presented by X" text so enrichment can see the speaker name.
+				lectures[i].Description = strings.TrimRight(l.Description, " .") + ". " + desc
+			}
 		}
-		cache[l.Link] = lectures[i].Description
+
+		// Extract speakers from the full page body when none are set.
+		if len(lectures[i].Speakers) == 0 {
+			if sp := scraper.ExtractSpeakers(body); len(sp) > 0 {
+				lectures[i].Speakers = sp
+				log.Printf("SPKR  [%s] %d speaker(s): %q", l.HostSlug, len(sp), l.Title[:min(50, len(l.Title))])
+			}
+		}
+
+		cache[l.Link] = cachedDetail{
+			Description: lectures[i].Description,
+			Speakers:    lectures[i].Speakers,
+		}
 		fetched++
 		log.Printf("DESC  [%s] fetched: %q", l.HostSlug, l.Title[:min(50, len(l.Title))])
 	}

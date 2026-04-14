@@ -33,11 +33,11 @@
   "2cff4af0fa8b324e": {
     "event_type": "seminar",
     "summary": "Professor Hella von Unger presents research in education.",
-    "description": "Victoria's School of Education hosts a seminar featuring visiting Professor Hella von Unger from Munich. The session focuses on educational research and includes networking with tea and coffee.",
+    "description": "Join the School of Education for a seminar featuring visiting Professor Hella von Unger from Munich. Professor von Unger will discuss her latest research findings in educational studies. The event includes refreshments and networking opportunities.",
     "speakers": [
       {
         "name": "Professor Hella von Unger",
-        "bio": "Munich University academic"
+        "bio": "Munich professor of education"
       }
     ]
   },
@@ -54,13 +54,59 @@
   },
   "db21f3bf1d770c7f": {
     "event_type": "lecture",
-    "summary": "Discussion on societal issues like poverty and climate change in Aotearoa.",
-    "description": "In Aotearoa, pressing problems such as poverty, inequity, ecological destruction, and climate change are well known. This lecture explores pathways towards a just society addressing these challenges."
+    "summary": "Exploring societal challenges in New Zealand.",
+    "description": "In Aotearoa, key issues like poverty, inequity, ecological destruction, and climate change are well understood but require urgent action. This lecture delves into these problems and potential solutions for a just society.",
+    "speakers": [
+      {
+        "name": "Boyd Scirkovich",
+        "bio": "Chief Economic Development and Investment Officer"
+      },
+      {
+        "name": "Marilyn Waring",
+        "bio": "feminist, former politician, author, academic"
+      },
+      {
+        "name": "James Belich",
+        "bio": "Historian"
+      },
+      {
+        "name": "Meihana Durie",
+        "bio": "CEO/Tumuaki Te W\u0101nanga o Raukawa"
+      },
+      {
+        "name": "Gareth Hughes",
+        "bio": "Director Wellbeing Economy Alliance Aotearoa NZ"
+      },
+      {
+        "name": "Bianca Elkington",
+        "bio": "General Manager Education and Employment, Te"
+      },
+      {
+        "name": "Clive Aspin and Heather Came",
+        "bio": "Marsden Project leads &lsquo;Honourable K\u0101wanatanga&rsquo"
+      },
+      {
+        "name": "Fleur Fitzsimons",
+        "bio": "National Secretary Public Service Association Te"
+      },
+      {
+        "name": "Edward Miller",
+        "bio": "Researcher, Centre for International Corporate Tax"
+      },
+      {
+        "name": "Rebecca Kiddle and James Berghan",
+        "bio": "Director and senior research fellow at"
+      },
+      {
+        "name": "Leslynne Jackson",
+        "bio": "Project Lead Maanaki T\u0101irawhiti"
+      }
+    ]
   },
   "e1cb94aaa2fee747": {
     "event_type": "lecture",
-    "summary": "Victoria hosts a lecture on strategic philanthropy in supply chains.",
-    "description": "Firms strategically use donations to trade partners' affiliated charities to achieve positive public perception and business objectives. Authors: Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste"
+    "summary": "Victoria hosts a lecture on philanthropy in supply chains.",
+    "description": "Victoria University presents 'Philanthropy Along the Supply Chain' by authors Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste. Abstract focuses on strategic use of donations to trade partners\u2019 affiliated charities."
   },
   "1e871946e014fdb7": {
     "event_type": "ceremony",
@@ -126,9 +172,9 @@
     "description": "Hackathons offer a platform for students to engage in creative problem-solving with real-world applications. An AUT event for those interested in technology, innovation, and collaborative challenges."
   },
   "1f6536ed97b55103": {
-    "event_type": "seminar",
-    "summary": "2026 WSBG Climate Festival Fortnight supported by Wellington City Council",
-    "description": "Wellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington is proud to support Wellington City Council\u2019s first 2026 WSBG Climate Festival Fortnight. Register here."
+    "event_type": "lecture",
+    "summary": "2026 WSBG Climate Festival Fortnight at Victoria University",
+    "description": "Wellington School of Business and Government (WSBG) at Te Herenga Waka\u2014Victoria University of Wellington supports Wellington City Council\u2019s first climate festival. Register here for more information."
   },
   "3aba32013f4fbb71": {
     "event_type": "lecture",
@@ -148,8 +194,14 @@
   },
   "aba91cecd08be353": {
     "event_type": "seminar",
-    "summary": "Victoria hosts seminar on arguing about morphemes.",
-    "description": "The School of Linguistics and Applied Language Studies at Victoria University hosts weekly seminars featuring a selection of visiting researchers as well as those from within the university."
+    "summary": "Victoria University hosts linguistics seminar on arguing about morphemes.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars, featuring a selection of visiting researchers and local experts. This week's topic explores the nuances and debates surrounding morphemes in linguistic theory.",
+    "speakers": [
+      {
+        "name": "Prof. Laurie Bauer",
+        "bio": "School of Linguistics and Applied Language"
+      }
+    ]
   },
   "b00b8f45e8db70bf": {
     "event_type": "seminar",
@@ -194,8 +246,14 @@
   },
   "2eea4335227e348d": {
     "event_type": "seminar",
-    "summary": "Victoria's linguistics seminar explores situational irony in satire.",
-    "description": "The School of Linguistics and Applied Language Studies at Victoria hosts weekly seminars featuring a selection of visiting researchers and local scholars. This week\u2019s discussion delves into the nuances of situational irony within satire."
+    "summary": "Dr Stephen Skalicky explores situational irony in satire.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring visiting researchers. This week's seminar is presented by Dr Stephen Skalicky from Victoria University of Wellington.",
+    "speakers": [
+      {
+        "name": "Dr Stephen Skalicky",
+        "bio": "LALS, Victoria University"
+      }
+    ]
   },
   "82e172e0631b1028": {
     "event_type": "workshop",
@@ -520,7 +578,7 @@
   },
   "2006b7e3c699fb83": {
     "event_type": "lecture",
-    "summary": "Inaugural lecture on human rights in taxation and commercial law by Professor Jonathan Barrett",
+    "summary": "Professor Jonathan Barrett on human rights in taxation and commercial law.",
     "description": "Respecting equal human dignity: taxation and commercial law in the human rights state. Professor Barrett\u2019s research concerns the practical application of human rights, particularly in legal contexts such as taxation and commercial law.",
     "speakers": [
       {
@@ -609,6 +667,52 @@
     "speakers": [
       {
         "name": "CHARLENE TEDROW"
+      }
+    ]
+  },
+  "a616ebba62bce37b": {
+    "event_type": "lecture",
+    "summary": "Webinar discussing NZ's $12B defence commitment and modernisation needs, featuring Major General John Howard and Sir Rod Drury.",
+    "description": "New Zealand has committed $12 billion to defence over four years, with a path to spending more than 2% of GDP within eight years. This webinar launches research on the need for institutional reforms beyond financial investment in modernizing defense capabilities. Speakers will discuss strategic areas like intelligence, space, domestic innovation and digital architecture.",
+    "speakers": [
+      {
+        "name": "Major General John Howard",
+        "bio": "retired military leader"
+      },
+      {
+        "name": "Sir Rod Drury",
+        "bio": "technology entrepreneur"
+      }
+    ]
+  },
+  "11dc8475abd89d26": {
+    "event_type": "workshop",
+    "summary": "Tamariki Time workshop at Te Papa, making nature picture frames.",
+    "description": "Engage in creative activities at Tamariki Time: Slow Burn \u2013 Ahi T\u0101mau. Create your own nature picture frame using native plants from Bush City."
+  },
+  "f3fabdf5c39be407": {
+    "event_type": "seminar",
+    "summary": "ArtSpace hosts late-night gallery events with Aotearoa Art Fair.",
+    "description": "Alongside Aotearoa Art Fair and neighbourhood gallery openings, the gallery will remain open until 8pm. Artists Selina Ershadi and Kaitohu Director Ruth Buchanan provide an informal introduction to The Blue Dome and its new commissions.",
+    "speakers": [
+      {
+        "name": "Selina Ershadi",
+        "bio": "Artist"
+      },
+      {
+        "name": "Ruth Buchanan",
+        "bio": "Kaitohu Director"
+      }
+    ]
+  },
+  "f97d2adb031d11ec": {
+    "event_type": "lecture",
+    "summary": "Mahdis Azarmandi lectures on Iran's war and peace issues through Peace and Conflict Studies.",
+    "description": "Drawing from her research within Peace and Conflict Studies, Mahdis Azarmandi will present a lecture that provides insight into the complex context influencing questions of war and peace in Iran. This event is hosted by ArtSpace.",
+    "speakers": [
+      {
+        "name": "Mahdis Azarmandi",
+        "bio": "Peace and Conflict researcher"
       }
     ]
   }

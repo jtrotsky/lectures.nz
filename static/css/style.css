@@ -99,6 +99,9 @@ body:has(.page-host) .site-header {
 
 .page-index {
   display: block;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ----- Hero ---------------------------------------------------------- */
@@ -304,9 +307,9 @@ body:has(.page-host) .site-header {
   padding: 24px 24px 40px 0;
 }
 
-/* Single card in a date group spans all columns */
+/* Single card in a date group spans 2 of 3 columns */
 .lecture-grid > .lecture-item:only-child {
-  grid-column: 1 / -1;
+  grid-column: 1 / 3;
 }
 
 /* ----- Lecture card (index page) ------------------------------------ */

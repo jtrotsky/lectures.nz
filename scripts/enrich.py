@@ -209,7 +209,11 @@ def main():
         if lid and lid in cache and not FORCE_REFRESH and not is_source_refresh:
             print(f"[{i:3d}/{len(lectures)}] {title} (cached)")
             out = dict(lec)
-            out.update(cache[lid])
+            cached_fields = cache[lid]
+            # Don't wipe collect-time speakers with an empty cached value.
+            if not cached_fields.get("speakers") and lec.get("speakers"):
+                cached_fields = {k: v for k, v in cached_fields.items() if k != "speakers"}
+            out.update(cached_fields)
             enriched.append(out)
             stats["cached"] += 1
             continue

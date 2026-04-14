@@ -48,7 +48,7 @@
           <h3 class="lecture-title">{{.Title}}</h3>
           {{if .Summary}}<p class="lecture-summary">{{.Summary}}</p>{{end}}
           <div class="lecture-meta">
-            <span class="meta-venue">{{if .Location}}{{.Location}}{{else}}{{.HostSlug}}{{end}}</span>
+            <span class="meta-venue">{{hostName $.Hosts .HostSlug}}</span>
             {{if .Free}}<span class="meta-free">FREE</span>{{else if .Cost}}<span class="meta-cost">{{.Cost}}</span>{{end}}
           </div>
         </a>

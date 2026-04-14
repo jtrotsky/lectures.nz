@@ -5,6 +5,8 @@ import (
 	"encoding/json"
 	"regexp"
 	"strings"
+
+	"github.com/jtrotsky/lectures.nz/internal/model"
 )
 
 // garbagePatterns are substrings that indicate the extracted text is navigation,
@@ -107,6 +109,101 @@ func extractJSONLDDescription(body []byte) string {
 		}
 	}
 	return best
+}
+
+var (
+	// presentedByRe matches "Presented by X" — captures the name and everything
+	// after it (including any affiliation line) using [\s\S] so CRLF is included.
+	presentedByRe = regexp.MustCompile(`(?i)presented by\s+([A-Z][^\n\r<,]{2,60})([\s\S]{0,150})?`)
+	// speakersListRe matches a "Speakers include:" paragraph followed by a <ul>.
+	speakersListRe = regexp.MustCompile(`(?i)speakers include[^<]*</p>\s*<ul[^>]*>([\s\S]*?)</ul>`)
+	// liContentRe extracts Name (bio) from a <li> element.
+	liContentRe = regexp.MustCompile(`(?i)<li[^>]*>\s*([^<(]+?)(?:\s*\(([^)]+)\))?\s*</li>`)
+)
+
+// HasSpeakerInfo returns true when text contains speaker-attribution keywords.
+func HasSpeakerInfo(text string) bool {
+	lower := strings.ToLower(text)
+	return strings.Contains(lower, "presented by") ||
+		strings.Contains(lower, "speakers include") ||
+		strings.Contains(lower, "speaker:")
+}
+
+// ExtractSpeakers attempts to pull speaker names and bios from an HTML page body.
+// It handles two patterns found on NZ academic event pages:
+//  1. "Presented by X, affiliation" — common for single-presenter seminars
+//  2. "Speakers include:" followed by <ul><li>Name (bio)</li></ul>
+func ExtractSpeakers(body []byte) []model.Speaker {
+	text := string(body)
+
+	// Pattern 1: single presenter via "Presented by" in meta or body.
+	if m := presentedByRe.FindStringSubmatch(text); m != nil {
+		name := normaliseSpaces(m[1])
+		bio := ""
+		if len(m) > 2 && m[2] != "" {
+			// m[2] is everything after the name — strip leading punctuation/whitespace
+			// then take the first clause as the affiliation.
+			rest := normaliseSpaces(m[2])
+			rest = strings.TrimLeft(rest, " ,;:\r\n")
+			// Stop at the next sentence boundary or HTML tag.
+			if idx := strings.IndexAny(rest, "<\n"); idx > 0 {
+				rest = rest[:idx]
+			}
+			bio = truncateWords(rest, 6)
+		}
+		if name != "" {
+			return []model.Speaker{{Name: name, Bio: bio}}
+		}
+	}
+
+	// Pattern 2: multi-speaker list following "Speakers include:".
+	if m := speakersListRe.FindStringSubmatch(text); m != nil {
+		var speakers []model.Speaker
+		for _, li := range liContentRe.FindAllStringSubmatch(m[1], -1) {
+			name := normaliseSpaces(tagRe.ReplaceAllString(li[1], ""))
+			bio := ""
+			if len(li) > 2 {
+				bio = truncateWords(normaliseSpaces(li[2]), 6)
+			}
+			if name != "" {
+				speakers = append(speakers, model.Speaker{Name: name, Bio: bio})
+			}
+		}
+		if len(speakers) > 0 {
+			return speakers
+		}
+	}
+
+	return nil
+}
+
+// normaliseSpaces collapses all whitespace to single spaces and trims the result.
+// Also handles literal escape sequences (\r\n, \n, \r) that some CMS systems
+// embed in HTML meta content attributes as plain text.
+func normaliseSpaces(s string) string {
+	// Replace literal escape sequences (4-char sequences like backslash-r-backslash-n).
+	s = strings.NewReplacer(`\r\n`, " ", `\r`, " ", `\n`, " ").Replace(s)
+	return strings.Join(strings.Fields(s), " ")
+}
+
+// truncateWords limits s to n words, then strips trailing punctuation and
+// hanging conjunctions that look odd at a cut point.
+func truncateWords(s string, n int) string {
+	words := strings.Fields(s)
+	if len(words) > n {
+		words = words[:n]
+	}
+	result := strings.Join(words, " ")
+	// Strip trailing punctuation.
+	result = strings.TrimRight(result, " ,;:.")
+	// Strip hanging conjunctions left by truncation.
+	for _, suffix := range []string{" and", " or", " &"} {
+		if strings.HasSuffix(result, suffix) {
+			result = strings.TrimRight(result[:len(result)-len(suffix)], " ,;:.")
+			break
+		}
+	}
+	return result
 }
 
 var (

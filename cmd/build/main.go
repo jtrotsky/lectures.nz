@@ -255,6 +255,14 @@ func templateFuncs() template.FuncMap {
 		"gcalURL":    gcalURL,
 		"outlookURL": outlookURL,
 		"yahooURL":   yahooURL,
+		"hostName": func(hosts []model.Host, slug string) string {
+			for _, h := range hosts {
+				if h.Slug == slug {
+					return h.Name
+				}
+			}
+			return slug
+		},
 	}
 }
 
