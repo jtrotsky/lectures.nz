@@ -202,6 +202,7 @@ var excludedEventTypes = map[string]bool{
 	"festival":    true,
 	"meetup":      true,
 	"symposium":   true,
+	"conference":  true,
 	"AGM":         true,
 }
 

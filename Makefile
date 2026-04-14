@@ -1,4 +1,4 @@
-.PHONY: collect build serve dev tidy setup
+.PHONY: collect build serve dev tidy setup post post-dry
 
 # Fetch events from all NZ sources → data/
 collect:
@@ -22,3 +22,11 @@ tidy:
 
 # First-time setup: tidy deps then run full dev pipeline
 setup: tidy dev
+
+# Post new lectures to Bluesky (requires BSKY_HANDLE + BSKY_APP_PASSWORD)
+post:
+	go run ./cmd/post
+
+# Preview posts without publishing
+post-dry:
+	DRY_RUN=1 go run ./cmd/post

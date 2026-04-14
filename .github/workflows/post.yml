@@ -1,0 +1,46 @@
+name: Post to Bluesky
+
+on:
+  # Run daily at 7:30am NZT (UTC+12) = 7:30pm UTC previous day
+  schedule:
+    - cron: '30 19 * * *'
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to commit updated posted.json
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Collect lectures
+        run: go run ./cmd/collect
+
+      - name: Apply enrichment cache (no Ollama in CI)
+        run: python3 scripts/enrich.py
+
+      - name: Post new lectures to Bluesky
+        env:
+          BSKY_HANDLE: ${{ secrets.BSKY_HANDLE }}
+          BSKY_APP_PASSWORD: ${{ secrets.BSKY_APP_PASSWORD }}
+        run: go run ./cmd/post
+
+      - name: Commit updated posted.json
+        run: |
+          git config user.name "lectures-bot"
+          git config user.email "hello@lectures.nz"
+          git add data/posted.json
+          git diff --cached --quiet || git commit -m "chore: update posted.json [skip ci]"
+          git push
