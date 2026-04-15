@@ -398,6 +398,8 @@ body:has(.page-host) .site-header {
   opacity: 0.5;
   flex-shrink: 0;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
   /* NO margin-left:auto — FREE flows naturally after venue */
 }
 
