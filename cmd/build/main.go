@@ -402,7 +402,7 @@ func groupByDate(lectures []model.Lecture) []dateGroup {
 			case tomorrowKey:
 				label = "Tomorrow"
 			default:
-				label = lTime.Format("Monday 2 January")
+				label = lTime.Format("Monday\n2 January")
 			}
 			groups = append(groups, dateGroup{DateKey: key, DateLabel: label})
 			idx = len(groups) - 1

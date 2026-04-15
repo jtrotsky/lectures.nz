@@ -288,7 +288,7 @@ body:has(.page-host) .site-header {
 }
 
 .date-border {
-  padding-top: 0;
+  padding-top: 4.5px;
 }
 
 .date-heading {
@@ -299,6 +299,7 @@ body:has(.page-host) .site-header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--fg);
+  white-space: pre-line;
 }
 
 .lecture-grid {
@@ -393,14 +394,18 @@ body:has(.page-host) .site-header {
   /* NO flex:1, NO white-space:nowrap, NO margin */
 }
 
-.page-index .meta-free,
+.page-index .meta-free {
+  opacity: 0.5;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .page-index .meta-cost {
   opacity: 0.5;
   flex-shrink: 0;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  /* NO margin-left:auto — FREE flows naturally after venue */
 }
 
 /* ----- No results / empty ------------------------------------------- */
@@ -1140,7 +1145,7 @@ body:has(.page-host) .site-header {
   }
 
   .date-border {
-    padding-top: 0;
+    padding-top: 4.5px;
   }
 
   .date-heading {
