@@ -32,6 +32,7 @@ type Speaker struct {
 type Host struct {
 	Slug        string    `json:"slug"`
 	Name        string    `json:"name"`
+	City        string    `json:"city,omitempty"`
 	Website     string    `json:"website"`
 	Description string    `json:"description,omitempty"`
 	Icon        string    `json:"icon,omitempty"`

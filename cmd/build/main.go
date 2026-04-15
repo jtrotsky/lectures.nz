@@ -261,6 +261,9 @@ func templateFuncs() template.FuncMap {
 		"hostName": func(hosts []model.Host, slug string) string {
 			for _, h := range hosts {
 				if h.Slug == slug {
+					if h.City != "" {
+						return h.Name + ", " + h.City
+					}
 					return h.Name
 				}
 			}
