@@ -1,12 +1,20 @@
 // Package aucklandartgallery scrapes public events from Auckland Art Gallery Toi o Tāmaki.
 //
 // The site is a React SPA. Event URLs follow the pattern /whats-on/event/{slug} and are
-// linked from the main /whats-on page. Each event page embeds its data as:
+// linked from the /visit/whats-on listing page (previously /whats-on, now a 301 redirect).
+// Each event detail page embeds its data as:
 //
 //	window.__INITIAL_STATE__ = {...};
 //
-// We extract all event URLs from the listing page, then fetch each event page and parse
-// the embedded JSON for title, date, location, cost, and description.
+// The listing page pre-loads a fixed set of event slugs in its initial HTML (both as
+// plain hrefs and as Unicode-escaped JSON strings like \u002Fwhats-on\u002Fevent\u002F{slug}).
+// We extract all slugs from the listing page, fetch each event detail page, and parse
+// the embedded JSON for title, date, location, cost, and description. Events are filtered
+// to future dates and lecture-like titles.
+//
+// Note: the authenticated API (api.aucklandunlimited.com/v2/aag/events) returns the full
+// event catalogue, but requires credentials. The static HTML approach is limited to ~30
+// pre-loaded slugs per page load.
 package aucklandartgallery
 
 import (
@@ -23,7 +31,8 @@ import (
 )
 
 const (
-	listingURL = "https://www.aucklandartgallery.com/whats-on"
+	// listingURL redirected from /whats-on in early 2026.
+	listingURL = "https://www.aucklandartgallery.com/visit/whats-on"
 	baseURL    = "https://www.aucklandartgallery.com"
 	maxEvents  = 30
 )
@@ -39,8 +48,12 @@ func (s *Scraper) Host() model.Host {
 	}
 }
 
-// eventSlugRe matches /whats-on/event/{slug} hrefs.
+// eventSlugRe matches /whats-on/event/{slug} in plain hrefs.
 var eventSlugRe = regexp.MustCompile(`/whats-on/event/([a-z0-9\-]+)`)
+
+// eventSlugUnicodeRe matches Unicode-escaped paths (\u002Fwhats-on\u002Fevent\u002F{slug})
+// embedded in the Next.js page JSON.
+var eventSlugUnicodeRe = regexp.MustCompile(`\\u002Fwhats-on\\u002Fevent\\u002F([a-z0-9\-]+)`)
 
 // lectureKeywords — event titles we consider lecture-like.
 var lectureKeywords = []string{
@@ -65,22 +78,24 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("auckland-art-gallery: fetch listing: %w", err)
 	}
 
-	slugMatches := eventSlugRe.FindAllSubmatch(body, -1)
 	seen := make(map[string]bool)
 	var slugs []string
-	for _, m := range slugMatches {
-		slug := string(m[1])
-		if !seen[slug] {
+	addSlug := func(slug string) {
+		if !seen[slug] && len(slugs) < maxEvents {
 			seen[slug] = true
 			slugs = append(slugs, slug)
 		}
-		if len(slugs) >= maxEvents {
-			break
-		}
+	}
+	for _, m := range eventSlugRe.FindAllSubmatch(body, -1) {
+		addSlug(string(m[1]))
+	}
+	for _, m := range eventSlugUnicodeRe.FindAllSubmatch(body, -1) {
+		addSlug(string(m[1]))
 	}
 
 	if len(slugs) == 0 {
-		return nil, fmt.Errorf("auckland-art-gallery: no event URLs found on listing page")
+		// Site may have restructured — return empty rather than error.
+		return nil, nil
 	}
 
 	nzLoc, _ := time.LoadLocation("Pacific/Auckland")

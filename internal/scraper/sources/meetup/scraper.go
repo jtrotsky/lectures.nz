@@ -1,16 +1,20 @@
 // Package meetup scrapes public events from curated Meetup.com groups.
 //
-// Meetup.com embeds structured event data as JSON-LD (schema.org/Event) in the
-// group events listing page, so no API key or JS execution is required.
+// Meetup.com embeds event data in the page as a Next.js Apollo client cache
+// under window.__NEXT_DATA__.props.pageProps.__APOLLO_STATE__. Each event
+// appears as an "Event:{id}" key in the flat Apollo cache object.
+//
+// The JSON-LD approach no longer works as Meetup removed Event schema from
+// their structured data (as of early 2026).
 //
 // To add a new group, append an entry to knownGroups.
 package meetup
 
 import (
-	"bytes"
 	"context"
 	"encoding/json"
 	"fmt"
+	"regexp"
 	"strings"
 	"time"
 
@@ -42,28 +46,44 @@ func (s *Scraper) Host() model.Host {
 	}
 }
 
-// ldEvent mirrors the schema.org/Event JSON-LD shape that Meetup.com embeds.
-type ldEvent struct {
-	Type        string  `json:"@type"`
-	Name        string  `json:"name"`
-	Description string  `json:"description"`
-	StartDate   string  `json:"startDate"`
-	EndDate     string  `json:"endDate"`
-	URL         string  `json:"url"`
-	IsAccessible *bool  `json:"isAccessibleForFree"`
-	Location    ldPlace `json:"location"`
+// apolloEvent mirrors the fields we need from each Apollo cache Event entry.
+type apolloEvent struct {
+	Typename    string `json:"__typename"`
+	ID          string `json:"id"`
+	Title       string `json:"title"`
+	EventURL    string `json:"eventUrl"`
+	Description string `json:"description"`
+	DateTime    string `json:"dateTime"`
+	EndTime     string `json:"endTime"`
+	IsOnline    bool   `json:"isOnline"`
+	EventType   string `json:"eventType"`
+	Status      string `json:"status"`
+	FeeSettings *struct {
+		Amount   float64 `json:"amount"`
+		Currency string  `json:"currency"`
+	} `json:"feeSettings"`
+	Venue *struct {
+		Ref string `json:"__ref"`
+	} `json:"venue"`
 }
 
-type ldPlace struct {
-	Type    string    `json:"@type"`
-	Name    string    `json:"name"`
-	Address ldAddress `json:"address"`
+// apolloVenue mirrors the venue fields we need.
+type apolloVenue struct {
+	Name    string `json:"name"`
+	Address string `json:"address"`
+	City    string `json:"city"`
 }
 
-type ldAddress struct {
-	StreetAddress   string `json:"streetAddress"`
-	AddressLocality string `json:"addressLocality"`
+// nextData is the minimal shape of window.__NEXT_DATA__ we care about.
+type nextData struct {
+	Props struct {
+		PageProps struct {
+			ApolloState map[string]json.RawMessage `json:"__APOLLO_STATE__"`
+		} `json:"pageProps"`
+	} `json:"props"`
 }
+
+var nextDataRe = regexp.MustCompile(`<script id="__NEXT_DATA__" type="application/json">(\{.*?\})</script>`)
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 	var all []model.Lecture
@@ -85,7 +105,7 @@ func scrapeGroup(ctx context.Context, g group) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("fetch: %w", err)
 	}
 
-	events, err := extractLDEvents(body)
+	events, venues, err := extractApolloEvents(body)
 	if err != nil {
 		return nil, fmt.Errorf("extract: %w", err)
 	}
@@ -97,10 +117,10 @@ func scrapeGroup(ctx context.Context, g group) ([]model.Lecture, error) {
 
 	var lectures []model.Lecture
 	for _, e := range events {
-		if strings.ToLower(e.Type) != "event" {
+		if e.Status != "ACTIVE" {
 			continue
 		}
-		t, err := parseDateTime(e.StartDate, nzLoc)
+		t, err := time.Parse(time.RFC3339, e.DateTime)
 		if err != nil {
 			continue
 		}
@@ -108,14 +128,14 @@ func scrapeGroup(ctx context.Context, g group) ([]model.Lecture, error) {
 			continue
 		}
 
-		loc := buildLocation(e.Location)
-		rawDesc := stripHTML(e.Description)
-		free := e.IsAccessible == nil || *e.IsAccessible // default to free if unset
+		loc := buildLocation(e, venues)
+		rawDesc := stripMarkdown(e.Description)
+		free := e.FeeSettings == nil || e.FeeSettings.Amount == 0
 
 		lectures = append(lectures, model.Lecture{
-			ID:          scraper.MakeID(e.URL),
-			Title:       scraper.CleanTitle(e.Name),
-			Link:        e.URL,
+			ID:          scraper.MakeID(e.EventURL),
+			Title:       scraper.CleanTitle(e.Title),
+			Link:        e.EventURL,
 			TimeStart:   t,
 			Description: rawDesc,
 			Summary:     scraper.TruncateSummary(rawDesc, 200),
@@ -127,87 +147,82 @@ func scrapeGroup(ctx context.Context, g group) ([]model.Lecture, error) {
 	return lectures, nil
 }
 
-// extractLDEvents pulls all schema.org/Event objects from JSON-LD script tags
-// in the page HTML. Meetup.com may emit a single object or an array.
-func extractLDEvents(body []byte) ([]ldEvent, error) {
-	const openTag = `<script type="application/ld+json">`
+// extractApolloEvents pulls events and venues from the Next.js Apollo cache embedded in the page.
+func extractApolloEvents(body []byte) ([]apolloEvent, map[string]apolloVenue, error) {
+	// The __NEXT_DATA__ script tag contains the full Apollo state.
+	// It can be very large; use a simple string search rather than regex to avoid
+	// backtracking issues on large pages.
+	const openTag = `<script id="__NEXT_DATA__" type="application/json">`
 	const closeTag = `</script>`
 
-	var all []ldEvent
-	remaining := body
-	for {
-		start := bytes.Index(remaining, []byte(openTag))
-		if start < 0 {
-			break
-		}
-		jsonStart := start + len(openTag)
-		end := bytes.Index(remaining[jsonStart:], []byte(closeTag))
-		if end < 0 {
-			break
-		}
-		chunk := bytes.TrimSpace(remaining[jsonStart : jsonStart+end])
-		remaining = remaining[jsonStart+end:]
+	start := strings.Index(string(body), openTag)
+	if start < 0 {
+		return nil, nil, fmt.Errorf("__NEXT_DATA__ not found")
+	}
+	jsonStart := start + len(openTag)
+	end := strings.Index(string(body)[jsonStart:], closeTag)
+	if end < 0 {
+		return nil, nil, fmt.Errorf("__NEXT_DATA__ closing tag not found")
+	}
 
-		// Try array first, then single object.
-		var arr []ldEvent
-		if err := json.Unmarshal(chunk, &arr); err == nil {
-			all = append(all, arr...)
-			continue
-		}
-		var single ldEvent
-		if err := json.Unmarshal(chunk, &single); err == nil {
-			all = append(all, single)
+	var nd nextData
+	if err := json.Unmarshal(body[jsonStart:jsonStart+end], &nd); err != nil {
+		return nil, nil, fmt.Errorf("unmarshal __NEXT_DATA__: %w", err)
+	}
+
+	apolloState := nd.Props.PageProps.ApolloState
+	if apolloState == nil {
+		return nil, nil, fmt.Errorf("__APOLLO_STATE__ not found")
+	}
+
+	var events []apolloEvent
+	venues := make(map[string]apolloVenue)
+
+	for key, raw := range apolloState {
+		if strings.HasPrefix(key, "Event:") {
+			var e apolloEvent
+			if err := json.Unmarshal(raw, &e); err == nil && e.Title != "" {
+				events = append(events, e)
+			}
+		} else if strings.HasPrefix(key, "Venue:") {
+			var v apolloVenue
+			if err := json.Unmarshal(raw, &v); err == nil {
+				venues[key] = v
+			}
 		}
 	}
-	return all, nil
+
+	return events, venues, nil
 }
 
-// parseDateTime parses an ISO 8601 datetime string, falling back to NZ local time.
-func parseDateTime(s string, loc *time.Location) (time.Time, error) {
-	// Try with timezone offset first (e.g. "2026-04-15T18:00:00+12:00").
-	if t, err := time.Parse(time.RFC3339, s); err == nil {
-		return t, nil
+func buildLocation(e apolloEvent, venues map[string]apolloVenue) string {
+	if e.IsOnline || e.EventType == "ONLINE" {
+		return "Online"
 	}
-	// Try without offset, interpret as NZ time.
-	if t, err := time.ParseInLocation("2006-01-02T15:04:05", s, loc); err == nil {
-		return t, nil
-	}
-	return time.Time{}, fmt.Errorf("unrecognised datetime: %q", s)
-}
-
-func buildLocation(p ldPlace) string {
-	parts := []string{}
-	if p.Name != "" {
-		parts = append(parts, p.Name)
-	}
-	if p.Address.StreetAddress != "" {
-		parts = append(parts, p.Address.StreetAddress)
-	}
-	if p.Address.AddressLocality != "" {
-		parts = append(parts, p.Address.AddressLocality)
-	}
-	if len(parts) == 0 {
-		return "Auckland"
-	}
-	return strings.Join(parts, ", ")
-}
-
-// stripHTML removes HTML tags from a string for use in plain-text summaries.
-func stripHTML(s string) string {
-	var b strings.Builder
-	inTag := false
-	for _, r := range s {
-		switch {
-		case r == '<':
-			inTag = true
-		case r == '>':
-			inTag = false
-			b.WriteRune(' ')
-		case !inTag:
-			b.WriteRune(r)
+	if e.Venue != nil && e.Venue.Ref != "" {
+		if v, ok := venues[e.Venue.Ref]; ok {
+			parts := []string{}
+			if v.Name != "" {
+				parts = append(parts, v.Name)
+			}
+			if v.Address != "" {
+				parts = append(parts, v.Address)
+			}
+			if v.City != "" {
+				parts = append(parts, v.City)
+			}
+			if len(parts) > 0 {
+				return strings.Join(parts, ", ")
+			}
 		}
 	}
-	// Collapse repeated spaces.
-	out := strings.Join(strings.Fields(b.String()), " ")
-	return out
+	return "Auckland"
+}
+
+// stripMarkdown removes Meetup's Markdown-like formatting from description text.
+func stripMarkdown(s string) string {
+	// Remove bold/italic markers.
+	s = strings.NewReplacer("**", "", "__", "", "\\(", "(", "\\)", ")", "\\-", "-", "\\,", ",").Replace(s)
+	// Collapse whitespace.
+	return strings.Join(strings.Fields(s), " ")
 }

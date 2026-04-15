@@ -43,7 +43,7 @@ var (
 	// Listing page: links and dates.
 	listHrefRe  = regexp.MustCompile(`<h3[^>]*>\s*<a\s+href="(/about-us/public-policy-seminars/events/[^"]+)"`)
 	listTitleRe = regexp.MustCompile(`<h3[^>]*>\s*<a[^>]*>([^<]+)</a>`)
-	listDateRe  = regexp.MustCompile(`<strong>([A-Za-z]+ \d{1,2}, \d{4})</strong>`)
+	listDateRe  = regexp.MustCompile(`<b>([A-Za-z]+ \d{1,2}, \d{4})</b>`)
 
 	// Detail page.
 	detailTitleRe = regexp.MustCompile(`<h1[^>]*>([^<]+)</h1>`)
