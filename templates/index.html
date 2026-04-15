@@ -49,7 +49,7 @@
           {{if .Summary}}<p class="lecture-summary">{{.Summary}}</p>{{end}}
           <div class="lecture-meta">
             <span class="meta-venue">{{hostName $.Hosts .HostSlug}}</span>
-            {{if .Free}}<span class="meta-free">FREE</span>{{else if .Cost}}<span class="meta-cost">{{.Cost}}</span>{{end}}
+            {{if .Free}}<span class="meta-free">FREE</span>{{else if .Cost}}<span class="meta-cost">🎟</span>{{end}}
           </div>
         </a>
         {{end}}
