@@ -1,9 +1,9 @@
 name: Post to Bluesky
 
 on:
-  # Run daily at 7:30am NZT (UTC+12) = 7:30pm UTC previous day
+  # Run every 2 days at 7:30am NZT (UTC+12) = 7:30pm UTC previous day
   schedule:
-    - cron: '30 19 * * *'
+    - cron: '30 19 */2 * *'
   # Allow manual trigger from GitHub Actions UI
   workflow_dispatch:
 
