@@ -189,12 +189,16 @@ func buildPost(l model.Lecture, m *mention) (string, []map[string]any, map[strin
 		nzLoc = time.UTC
 	}
 
-	city := shortLocation(l.Location)
+	venue := hostDisplayName[l.HostSlug]
+	if venue == "" {
+		venue = cityFromLocation(l.Location)
+	}
 	dateLine := l.TimeStart.In(nzLoc).Format("Mon 2 Jan · 3:04pm")
-	if city != "" {
-		dateLine += " · " + city
+	if venue != "" {
+		dateLine += " · " + venue
 	}
 
+	city := cityFromLocation(l.Location)
 	tags := cityHashtags(city)
 	if l.Free {
 		tags = append(tags, "#FreeEvent")
@@ -421,14 +425,39 @@ func score(l model.Lecture, now time.Time) int {
 	return s
 }
 
-// shortLocation returns the first meaningful part of an address (city or venue).
-func shortLocation(loc string) string {
+// hostDisplayName maps a host slug to a short display name for the post dateline.
+var hostDisplayName = map[string]string{
+	"auckland":         "University of Auckland",
+	"aut":              "Auckland University of Technology",
+	"canterbury":       "University of Canterbury",
+	"massey":           "Massey University",
+	"otago":            "University of Otago",
+	"victoria":         "Victoria University of Wellington",
+	"te-papa":          "Te Papa",
+	"auckland-museum":  "Auckland Museum",
+	"auckland-art-gallery": "Auckland Art Gallery",
+	"artgallery-nz":    "Art Gallery NZ",
+	"gus-fisher":       "Gus Fisher Gallery",
+	"motat":            "MOTAT",
+	"studio-one":       "Studio One Toi Tū",
+	"national-library": "National Library",
+	"public-record":    "Public Record",
+	"royal-society":    "Royal Society",
+	"nziia":            "NZ Institute of International Affairs",
+	"rbnz":             "Reserve Bank of NZ",
+	"motu":             "Motu Research",
+	"nz-initiative":    "NZ Initiative",
+	"ockham":           "Ockham Book Awards",
+	"artspace":         "Artspace Aotearoa",
+	"meetup":           "Meetup Auckland",
+	"eventbrite":       "Eventbrite NZ",
+}
+
+// cityFromLocation extracts the city from a location string (last comma-separated part).
+// Used for hashtag generation only.
+func cityFromLocation(loc string) string {
 	parts := strings.Split(loc, ",")
-	if len(parts) >= 2 {
-		// e.g. "University of Auckland, 22 Princes St, Auckland" → "Auckland"
-		return strings.TrimSpace(parts[len(parts)-1])
-	}
-	return strings.TrimSpace(loc)
+	return strings.TrimSpace(parts[len(parts)-1])
 }
 
 
