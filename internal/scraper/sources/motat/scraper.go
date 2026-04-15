@@ -139,13 +139,14 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		}
 
 		lectures = append(lectures, model.Lecture{
-			ID:        scraper.MakeID(link),
-			Title:     node.Title,
-			Link:      link,
-			TimeStart: t,
+			ID:          scraper.MakeID(link),
+			Title:       node.Title,
+			Link:        link,
+			TimeStart:   t,
 			Description: summary,
 			Summary:     scraper.TruncateSummary(summary, 200),
 			Location:    location,
+			Cost:        "Ticketed",
 			HostSlug:    "motat",
 		})
 	}
