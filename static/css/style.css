@@ -400,14 +400,6 @@ body:has(.page-host) .site-header {
   white-space: nowrap;
 }
 
-.page-index .meta-cost {
-  opacity: 0.5;
-  flex-shrink: 0;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-}
-
 /* ----- No results / empty ------------------------------------------- */
 .no-results {
   padding: 48px 24px;
