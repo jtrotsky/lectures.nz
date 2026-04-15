@@ -252,6 +252,27 @@ func loadHosts(path string) ([]model.Host, error) {
 
 // ----- Template handling ----------------------------------------------
 
+// hostCity maps host slugs to their city for venues where the name alone
+// doesn't make the location obvious (universities are excluded).
+var hostCity = map[string]string{
+	"artgallery-nz":    "Dunedin",
+	"artspace":         "Auckland",
+	"auckland-art-gallery": "Auckland",
+	"auckland-museum":  "Auckland",
+	"gus-fisher":       "Auckland",
+	"motat":            "Auckland",
+	"motu":             "Wellington",
+	"national-library": "Wellington",
+	"nziia":            "Wellington",
+	"nz-initiative":    "Wellington",
+	"ockham":           "Auckland",
+	"public-record":    "Wellington",
+	"rbnz":             "Wellington",
+	"royal-society":    "Wellington",
+	"studio-one":       "Auckland",
+	"te-papa":          "Wellington",
+}
+
 func templateFuncs() template.FuncMap {
 	return template.FuncMap{
 		"gt":         func(a, b int) bool { return a > b },
@@ -261,8 +282,8 @@ func templateFuncs() template.FuncMap {
 		"hostName": func(hosts []model.Host, slug string) string {
 			for _, h := range hosts {
 				if h.Slug == slug {
-					if h.City != "" {
-						return h.Name + ", " + h.City
+					if city := hostCity[slug]; city != "" {
+						return h.Name + ", " + city
 					}
 					return h.Name
 				}
