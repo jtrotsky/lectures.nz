@@ -1,21 +1,17 @@
 // Package aucklandmuseum scrapes public events from Auckland War Memorial Museum.
 //
-// The site is server-rendered ASP.NET. The what's-on page renders event cards as:
+// Two listing pages are scraped:
 //
-//	<div class="box generic columns one-third">
-//	  <div class="box-thumbnail"><a class="cat">Event</a>...</div>
-//	  <span>
-//	    <h3><a href="/visit/...">Title</a></h3>
-//	    <div class="date-location">
-//	      <div class="subtitle subtitle-date">TUE 14 APR, 6PM - 7.30PM</div>
-//	      <div class="subtitle subtitle-place">Room, Floor</div>
-//	    </div>
-//	    <p>Description</p>
-//	  </span>
-//	</div>
+//  1. https://www.aucklandmuseum.com/visit/whats-on
+//     Server-rendered ASP.NET. Cards use the marker "columns one-third" with <h3> titles.
 //
-// We include only "Event" category cards with a parseable specific date
-// (skipping "ON NOW", "DAILY …" and other non-dated formats).
+//  2. https://www.aucklandmuseum.com/visit/whats-on/evenings
+//     Same server, different layout. Cards use the marker "four columns alpha" with <h2> titles.
+//
+// Both share the same date/place subtitle format: "TUE 14 APR, 6PM - 7.30PM".
+//
+// All Auckland Museum events default to Cost="Ticketed" (paid admission or ticketed evening).
+// If the card description explicitly mentions "free" the event is marked Free=true instead.
 package aucklandmuseum
 
 import (
@@ -32,6 +28,7 @@ import (
 
 const (
 	listingURL   = "https://www.aucklandmuseum.com/visit/whats-on"
+	eveningsURL  = "https://www.aucklandmuseum.com/visit/whats-on/evenings"
 	baseURL      = "https://www.aucklandmuseum.com"
 	venueDefault = "Auckland War Memorial Museum, The Domain, Parnell, Auckland"
 )
@@ -51,14 +48,18 @@ func (s *Scraper) Host() model.Host {
 var (
 	// catRe extracts the category text from <a class="cat">.
 	catRe = regexp.MustCompile(`(?i)class="cat"[^>]*>([^<]+)<`)
-	// titleRe extracts the event title and relative href from <h3><a href="…">.
-	titleRe = regexp.MustCompile(`(?i)<h3[^>]*>\s*<a\s+href="([^"]+)"[^>]*>([^<]+)</a>`)
+	// titleH3Re extracts title/href from <h3><a href="…"> (main whats-on page).
+	titleH3Re = regexp.MustCompile(`(?i)<h3[^>]*>\s*<a\s+href="([^"]+)"[^>]*>([\s\S]*?)</a>`)
+	// titleH2Re extracts title/href from <h2><a href="…"> (evenings page).
+	titleH2Re = regexp.MustCompile(`(?i)<h2[^>]*>\s*<a\s+href="([^"]+)"[^>]*>([\s\S]*?)</a>`)
 	// dateRe extracts text from subtitle-date div.
 	dateRe = regexp.MustCompile(`(?i)class="subtitle subtitle-date"[^>]*>([^<]+)<`)
 	// placeRe extracts text from subtitle-place div.
 	placeRe = regexp.MustCompile(`(?i)class="subtitle subtitle-place"[^>]*>([^<]+)<`)
-	// descRe extracts the first <p> inside the span.
-	descRe = regexp.MustCompile(`(?i)<span[^>]*>[\s\S]*?<p[^>]*>([\s\S]*?)</p>`)
+	// descRe extracts the first <p> after the extra-info div.
+	descRe = regexp.MustCompile(`(?i)<p[^>]*>([\s\S]*?)</p>`)
+	// pastRe detects "Past Event" status labels.
+	pastRe = regexp.MustCompile(`(?i)past\s+event`)
 	// tagRe strips HTML tags.
 	tagRe = regexp.MustCompile(`<[^>]+>`)
 	// dateParsRe matches "TUE 14 APR" in the date string.
@@ -78,6 +79,8 @@ func innerText(html string) string {
 	s := tagRe.ReplaceAllString(html, " ")
 	s = strings.ReplaceAll(s, "&amp;", "&")
 	s = strings.ReplaceAll(s, "&nbsp;", " ")
+	s = strings.ReplaceAll(s, "&#39;", "'")
+	s = strings.ReplaceAll(s, "&ndash;", "–")
 	return strings.TrimSpace(strings.Join(strings.Fields(s), " "))
 }
 
@@ -86,7 +89,7 @@ func innerText(html string) string {
 func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
 	s = strings.ToUpper(s)
 	// Reject recurring/undated strings.
-	for _, skip := range []string{"ON NOW", "DAILY", "EVERY ", "WEEKENDS", "ONGOING"} {
+	for _, skip := range []string{"ON NOW", "DAILY", "EVERY ", "WEEKENDS", "ONGOING", "SOLD OUT"} {
 		if strings.Contains(s, skip) {
 			return time.Time{}, false
 		}
@@ -136,33 +139,56 @@ func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
 	return time.Date(year, month, day, hour, min, 0, 0, loc), true
 }
 
-const cardMarker = `columns one-third`
-
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	body, err := scraper.Fetch(ctx, listingURL)
-	if err != nil {
-		return nil, fmt.Errorf("auckland-museum: fetch: %w", err)
-	}
-
 	loc, _ := time.LoadLocation("Pacific/Auckland")
 	if loc == nil {
 		loc = time.UTC
 	}
 
-	chunks := strings.Split(string(body), cardMarker)
-
-	var lectures []model.Lecture
 	seen := make(map[string]bool)
+	var lectures []model.Lecture
+
+	// Main what's-on page: cards split by "columns one-third", titles in <h3>.
+	if lecs, err := scrapeListingPage(ctx, listingURL, "columns one-third", titleH3Re, true, loc, seen); err != nil {
+		return nil, fmt.Errorf("auckland-museum: %w", err)
+	} else {
+		lectures = append(lectures, lecs...)
+	}
+
+	// Evenings page: cards split by "four columns alpha", titles in <h2>.
+	if lecs, err := scrapeListingPage(ctx, eveningsURL, "four columns alpha", titleH2Re, false, loc, seen); err != nil {
+		// Non-fatal — log and continue with what we have.
+		fmt.Printf("auckland-museum: evenings fetch error: %v\n", err)
+	} else {
+		lectures = append(lectures, lecs...)
+	}
+
+	return lectures, nil
+}
+
+// scrapeListingPage fetches a single listing page and parses event cards.
+// requireEventCat: if true, only include cards with category "Event" (main page behaviour).
+func scrapeListingPage(ctx context.Context, url, cardMarker string, titleRe *regexp.Regexp, requireEventCat bool, loc *time.Location, seen map[string]bool) ([]model.Lecture, error) {
+	body, err := scraper.Fetch(ctx, url)
+	if err != nil {
+		return nil, fmt.Errorf("fetch %s: %w", url, err)
+	}
+
+	chunks := strings.Split(string(body), cardMarker)
+	var lectures []model.Lecture
 
 	for _, chunk := range chunks[1:] {
-		// Only include "Event" category cards.
-		catM := catRe.FindStringSubmatch(chunk)
-		if catM == nil {
+		// Skip past events.
+		if pastRe.MatchString(chunk) {
 			continue
 		}
-		cat := strings.TrimSpace(catM[1])
-		if !strings.EqualFold(cat, "event") {
-			continue
+
+		// Filter by "Event" category on the main page.
+		if requireEventCat {
+			catM := catRe.FindStringSubmatch(chunk)
+			if catM == nil || !strings.EqualFold(strings.TrimSpace(catM[1]), "event") {
+				continue
+			}
 		}
 
 		titleM := titleRe.FindStringSubmatch(chunk)
@@ -170,7 +196,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			continue
 		}
 		href := titleM[1]
-		title := strings.TrimSpace(titleM[2])
+		title := innerText(titleM[2])
 		if title == "" || seen[href] {
 			continue
 		}
@@ -183,14 +209,17 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		if !ok {
 			continue
 		}
+		if t.Before(time.Now()) {
+			continue
+		}
 
-		link := baseURL + href
 		seen[href] = true
+		link := baseURL + href
 
 		location := venueDefault
 		if placeM := placeRe.FindStringSubmatch(chunk); placeM != nil {
 			place := strings.TrimSpace(placeM[1])
-			if place != "" {
+			if place != "" && !strings.EqualFold(place, "sold out") {
 				location = place + ", Auckland War Memorial Museum"
 			}
 		}
@@ -200,14 +229,24 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			summary = innerText(dm[1])
 		}
 
+		// Default to ticketed; override only if explicitly described as free.
+		free := false
+		cost := "Ticketed"
+		if strings.Contains(strings.ToLower(summary), "free") || strings.Contains(strings.ToLower(title), "free") {
+			free = true
+			cost = ""
+		}
+
 		lectures = append(lectures, model.Lecture{
-			ID:        scraper.MakeID(link),
-			Title:     scraper.CleanTitle(title),
-			Link:      link,
-			TimeStart: t,
+			ID:          scraper.MakeID(link),
+			Title:       scraper.CleanTitle(title),
+			Link:        link,
+			TimeStart:   t,
 			Description: summary,
 			Summary:     scraper.TruncateSummary(summary, 200),
 			Location:    location,
+			Free:        free,
+			Cost:        cost,
 			HostSlug:    "auckland-museum",
 		})
 	}
