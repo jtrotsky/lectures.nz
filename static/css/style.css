@@ -398,7 +398,7 @@ body:has(.page-host) .site-header {
   opacity: 0.5;
   flex-shrink: 0;
   white-space: nowrap;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   /* NO margin-left:auto — FREE flows naturally after venue */
 }
@@ -1128,7 +1128,7 @@ body:has(.page-host) .site-header {
 
   .date-group {
     display: grid;
-    grid-template-columns: 134px 1fr;
+    grid-template-columns: 160px 1fr;
   }
 
   .section-date {
