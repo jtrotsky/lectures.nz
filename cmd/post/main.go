@@ -32,8 +32,8 @@ import (
 )
 
 const (
-	bskyHost        = "https://bsky.social"
-	postedPath      = "data/posted.json"
+	bskyHost         = "https://bsky.social"
+	postedPath       = "data/posted.json"
 	defaultLimit     = 1
 	defaultDaysAhead = 14
 )
@@ -46,8 +46,8 @@ func main() {
 
 // postedRecord is stored in data/posted.json, keyed by lecture ID.
 type postedRecord struct {
-	URI       string    `json:"uri"`
-	PostedAt  time.Time `json:"posted_at"`
+	URI      string    `json:"uri"`
+	PostedAt time.Time `json:"posted_at"`
 }
 
 func run() error {
@@ -173,11 +173,11 @@ type mention struct {
 // sourceHandles maps host slugs to their official Bluesky handles.
 // Add more here as accounts are confirmed.
 var sourceHandles = map[string]string{
-	"auckland":       "aucklanduni.bsky.social",
-	"otago":          "universityofotago.bsky.social",
+	"auckland":        "aucklanduni.bsky.social",
+	"otago":           "universityofotago.bsky.social",
 	"auckland-museum": "aucklandmuseum.bsky.social",
-	"royal-society":  "royalsocietynz.bsky.social",
-	"nziia":          "nziia.bsky.social",
+	"royal-society":   "royalsocietynz.bsky.social",
+	"nziia":           "nziia.bsky.social",
 }
 
 // buildPost formats a lecture as a Bluesky post (≤ 300 grapheme clusters).
@@ -202,6 +202,9 @@ func buildPost(l model.Lecture, m *mention) (string, []map[string]any, map[strin
 	tags := cityHashtags(city)
 	if l.Free {
 		tags = append(tags, "#FreeEvent")
+	}
+	if len(l.EventType) > 0 && l.EventType != "other" {
+		tags = append(tags, fmt.Sprintf("#%s", l.EventType))
 	}
 	tagLine := strings.Join(tags, " ")
 
@@ -259,15 +262,15 @@ func buildPost(l model.Lecture, m *mention) (string, []map[string]any, map[strin
 // cityHashtags returns a hashtag for well-known NZ cities extracted from loc.
 func cityHashtags(city string) []string {
 	known := map[string]string{
-		"auckland":        "#Auckland",
-		"wellington":      "#Wellington",
-		"christchurch":    "#Christchurch",
-		"dunedin":         "#Dunedin",
-		"hamilton":        "#Hamilton",
-		"tauranga":        "#Tauranga",
+		"auckland":         "#Auckland",
+		"wellington":       "#Wellington",
+		"christchurch":     "#Christchurch",
+		"dunedin":          "#Dunedin",
+		"hamilton":         "#Hamilton",
+		"tauranga":         "#Tauranga",
 		"palmerston north": "#PalmerstonNorth",
-		"napier":          "#Napier",
-		"nelson":          "#Nelson",
+		"napier":           "#Napier",
+		"nelson":           "#Nelson",
 	}
 	if tag, ok := known[strings.ToLower(strings.TrimSpace(city))]; ok {
 		return []string{tag}
@@ -427,30 +430,30 @@ func score(l model.Lecture, now time.Time) int {
 
 // hostDisplayName maps a host slug to a short display name for the post dateline.
 var hostDisplayName = map[string]string{
-	"auckland":         "University of Auckland",
-	"aut":              "Auckland University of Technology",
-	"canterbury":       "University of Canterbury",
-	"massey":           "Massey University",
-	"otago":            "University of Otago",
-	"victoria":         "Victoria University of Wellington",
-	"te-papa":          "Te Papa",
-	"auckland-museum":  "Auckland Museum",
+	"auckland":             "University of Auckland",
+	"aut":                  "Auckland University of Technology",
+	"canterbury":           "University of Canterbury",
+	"massey":               "Massey University",
+	"otago":                "University of Otago",
+	"victoria":             "Victoria University of Wellington",
+	"te-papa":              "Te Papa",
+	"auckland-museum":      "Auckland Museum",
 	"auckland-art-gallery": "Auckland Art Gallery",
-	"artgallery-nz":    "Art Gallery NZ",
-	"gus-fisher":       "Gus Fisher Gallery",
-	"motat":            "MOTAT",
-	"studio-one":       "Studio One Toi Tū",
-	"national-library": "National Library",
-	"public-record":    "Public Record",
-	"royal-society":    "Royal Society",
-	"nziia":            "NZ Institute of International Affairs",
-	"rbnz":             "Reserve Bank of NZ",
-	"motu":             "Motu Research",
-	"nz-initiative":    "NZ Initiative",
-	"ockham":           "Ockham Book Awards",
-	"artspace":         "Artspace Aotearoa",
-	"meetup":           "Meetup Auckland",
-	"eventbrite":       "Eventbrite NZ",
+	"artgallery-nz":        "Art Gallery NZ",
+	"gus-fisher":           "Gus Fisher Gallery",
+	"motat":                "MOTAT",
+	"studio-one":           "Studio One Toi Tū",
+	"national-library":     "National Library",
+	"public-record":        "Public Record",
+	"royal-society":        "Royal Society",
+	"nziia":                "NZ Institute of International Affairs",
+	"rbnz":                 "Reserve Bank of NZ",
+	"motu":                 "Motu Research",
+	"nz-initiative":        "NZ Initiative",
+	"ockham":               "Ockham Book Awards",
+	"artspace":             "Artspace Aotearoa",
+	"meetup":               "Meetup Auckland",
+	"eventbrite":           "Eventbrite NZ",
 }
 
 // cityFromLocation extracts the city from a location string (last comma-separated part).
@@ -459,7 +462,6 @@ func cityFromLocation(loc string) string {
 	parts := strings.Split(loc, ",")
 	return strings.TrimSpace(parts[len(parts)-1])
 }
-
 
 // --- ATproto XRPC calls ---
 
