@@ -204,7 +204,8 @@ func buildPost(l model.Lecture, m *mention) (string, []map[string]any, map[strin
 		tags = append(tags, "#FreeEvent")
 	}
 	if len(l.EventType) > 0 && l.EventType != "other" {
-		tags = append(tags, fmt.Sprintf("#%s", l.EventType))
+		eventTypeTag := strings.ReplaceAll(l.EventType, " ", "")
+		tags = append(tags, fmt.Sprintf("#%s", eventTypeTag))
 	}
 	tagLine := strings.Join(tags, " ")
 
