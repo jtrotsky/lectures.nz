@@ -20,12 +20,15 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"regexp"
 	"strings"
 	"time"
 
 	"github.com/jtrotsky/lectures.nz/internal/model"
 	"github.com/jtrotsky/lectures.nz/internal/scraper"
 )
+
+var tagRe = regexp.MustCompile(`<[^>]+>`)
 
 const apiBase = "https://www.eventbriteapi.com/v3"
 
@@ -58,9 +61,34 @@ func (s *Scraper) Host() model.Host {
 	}
 }
 
-// apiEventName holds the name text returned by Eventbrite.
+// apiEventName holds the name/description text returned by Eventbrite.
+// HTML is populated for the description field only.
 type apiEventName struct {
 	Text string `json:"text"`
+	HTML string `json:"html"`
+}
+
+// apiStructuredContent is the response from /v3/events/{id}/structured_content/.
+type apiStructuredContent struct {
+	Modules []apiModule `json:"modules"`
+}
+
+type apiModule struct {
+	Type string          `json:"type"`
+	Data json.RawMessage `json:"data"`
+}
+
+// apiSpeakersData is the data payload for a module of type "speakers".
+type apiSpeakersData struct {
+	Speakers struct {
+		Speakers []struct {
+			Profile struct {
+				Name        string       `json:"name"`
+				Headline    string       `json:"headline"` // role, e.g. "Keynote Speaker"
+				Description apiEventName `json:"description"`
+			} `json:"profile"`
+		} `json:"speakers"`
+	} `json:"speakers"`
 }
 
 // apiTime holds a local datetime string and timezone from Eventbrite.
@@ -179,6 +207,12 @@ func fetchOrganizerEvents(ctx context.Context, token string, org organizer) ([]m
 			if !ok {
 				continue
 			}
+			// Try structured content speakers if nothing came from the title.
+			if len(l.Speakers) == 0 {
+				if sps, err := fetchEventSpeakers(ctx, token, e.ID); err == nil && len(sps) > 0 {
+					l.Speakers = sps
+				}
+			}
 			lectures = append(lectures, l)
 		}
 		if !ap.Pagination.HasMoreItems {
@@ -187,6 +221,38 @@ func fetchOrganizerEvents(ctx context.Context, token string, org organizer) ([]m
 		page++
 	}
 	return lectures, nil
+}
+
+// fetchEventSpeakers calls the structured_content endpoint for a single event
+// and returns any speakers found in the "speakers" module.
+func fetchEventSpeakers(ctx context.Context, token, eventID string) ([]model.Speaker, error) {
+	u := fmt.Sprintf("%s/events/%s/structured_content/", apiBase, eventID)
+	var sc apiStructuredContent
+	if err := apiGet(ctx, token, u, &sc); err != nil {
+		return nil, err
+	}
+	for _, mod := range sc.Modules {
+		if mod.Type != "speakers" {
+			continue
+		}
+		var sd apiSpeakersData
+		if err := json.Unmarshal(mod.Data, &sd); err != nil {
+			continue
+		}
+		var speakers []model.Speaker
+		for _, sp := range sd.Speakers.Speakers {
+			name := strings.TrimSpace(sp.Profile.Name)
+			if name == "" {
+				continue
+			}
+			bio := strings.TrimSpace(sp.Profile.Headline)
+			speakers = append(speakers, model.Speaker{Name: name, Bio: bio})
+		}
+		if len(speakers) > 0 {
+			return speakers, nil
+		}
+	}
+	return nil, nil
 }
 
 // convertEvent converts an Eventbrite API event to a model.Lecture.
@@ -223,9 +289,22 @@ func convertEvent(e apiEvent) (model.Lecture, bool) {
 
 	cleanTitle, speakerSuffix := scraper.SplitTitleSpeaker(scraper.CleanTitle(e.Name.Text))
 
+	// Use description HTML stripped of tags when it's richer than plain text.
+	description := e.Description.Text
+	if e.Description.HTML != "" {
+		htmlStripped := strings.TrimSpace(tagRe.ReplaceAllString(e.Description.HTML, " "))
+		htmlStripped = strings.Join(strings.Fields(htmlStripped), " ")
+		if len(htmlStripped) > len(description) {
+			description = htmlStripped
+		}
+	}
+
+	// Speakers from title suffix; HTML description provides a fallback.
 	var speakers []model.Speaker
 	if speakerSuffix != "" {
 		speakers = []model.Speaker{{Name: speakerSuffix}}
+	} else if e.Description.HTML != "" {
+		speakers = scraper.ExtractSpeakers([]byte(e.Description.HTML))
 	}
 
 	return model.Lecture{
@@ -233,8 +312,8 @@ func convertEvent(e apiEvent) (model.Lecture, bool) {
 		Title:       cleanTitle,
 		Link:        e.URL,
 		TimeStart:   t,
-		Description: e.Description.Text,
-		Summary:     scraper.TruncateSummary(e.Description.Text, 200),
+		Description: description,
+		Summary:     scraper.TruncateSummary(description, 200),
 		Location:    location,
 		Free:        e.IsFree,
 		HostSlug:    "eventbrite",
