@@ -119,12 +119,40 @@ var skipDescFetch = map[string]bool{
 	"eventbrite": true, // JS-rendered; description already comes from API
 }
 
+// isEventbriteLink returns true when the URL points to an Eventbrite event page.
+func isEventbriteLink(link string) bool {
+	lower := strings.ToLower(link)
+	return strings.Contains(lower, "eventbrite.co.nz") || strings.Contains(lower, "eventbrite.com")
+}
+
 // fillDescriptions fetches full descriptions (and speakers) for lectures with
 // thin Description fields (< 200 chars), using a URL-keyed cache.
 func fillDescriptions(ctx context.Context, lectures []model.Lecture, cache map[string]cachedDetail) {
 	const minLen = 200
 	fetched, hits := 0, 0
 	for i, l := range lectures {
+		// Special case: Eventbrite links on non-Eventbrite host pages (e.g. Auckland Uni
+		// listing Eventbrite events). The description is skipped but speakers can be
+		// extracted from the artistInfo JSON embedded in the page HTML.
+		if l.Link != "" && isEventbriteLink(l.Link) && l.HostSlug != "eventbrite" && len(l.Speakers) == 0 {
+			if cached, ok := cache[l.Link]; ok {
+				if len(cached.Speakers) > 0 {
+					lectures[i].Speakers = cached.Speakers
+					hits++
+				}
+			} else {
+				if body, err := scraper.Fetch(ctx, l.Link); err == nil {
+					if sp := scraper.ExtractEventbriteSpeakers(body); len(sp) > 0 {
+						lectures[i].Speakers = sp
+						log.Printf("SPKR  [%s] %d speaker(s) via Eventbrite: %q", l.HostSlug, len(sp), l.Title[:min(50, len(l.Title))])
+					}
+					cache[l.Link] = cachedDetail{Description: l.Description, Speakers: lectures[i].Speakers}
+					fetched++
+				}
+			}
+			continue
+		}
+
 		if len(l.Description) >= minLen {
 			continue
 		}

@@ -283,8 +283,11 @@ func fetchStructuredContent(ctx context.Context, token, eventID string) (eventCo
 	}
 
 	// Strip HTML tags to get plain description text.
+	// Truncate to ~500 chars — structured content often includes speaker bios
+	// and venue directions that make the description excessively long.
 	description := strings.TrimSpace(tagRe.ReplaceAllString(combined, " "))
 	description = strings.Join(strings.Fields(description), " ")
+	description = scraper.TruncateSummary(description, 500)
 
 	return eventContent{Description: description, Speakers: speakers}, nil
 }

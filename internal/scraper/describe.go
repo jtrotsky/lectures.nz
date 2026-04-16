@@ -111,6 +111,28 @@ func extractJSONLDDescription(body []byte) string {
 	return best
 }
 
+// ebArtistRe extracts the JSON array from Eventbrite's embedded "artistInfo"
+// speakers block, which is present in the page HTML for events with speakers.
+var ebArtistRe = regexp.MustCompile(`"artistInfo":\{"artistType":"speakers","artists":\[([^\]]+)\]`)
+var ebNameRe = regexp.MustCompile(`"name":"([^"]+)"`)
+
+// ExtractEventbriteSpeakers parses the embedded artistInfo JSON from an
+// Eventbrite event page — used for events scraped by other hosts (e.g. Auckland
+// University) whose detail pages link out to Eventbrite.
+func ExtractEventbriteSpeakers(body []byte) []model.Speaker {
+	m := ebArtistRe.FindSubmatch(body)
+	if m == nil {
+		return nil
+	}
+	var speakers []model.Speaker
+	for _, nm := range ebNameRe.FindAllSubmatch(m[1], -1) {
+		if name := strings.TrimSpace(string(nm[1])); name != "" {
+			speakers = append(speakers, model.Speaker{Name: name})
+		}
+	}
+	return speakers
+}
+
 var (
 	// presentedByRe matches "Presented by X" — captures the name and everything
 	// after it (including any affiliation line) using [\s\S] so CRLF is included.
