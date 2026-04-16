@@ -125,6 +125,21 @@
     "description": "Tāmaki Paenga Hira Auckland War Memorial Museum hosts public talks, evening events, and cultural programmes exploring Aotearoa's natural and human history.",
     "lectures": [
       {
+        "id": "adb78f3c44febf5d",
+        "title": "AMI: The 2026 Hochstetter Lecture",
+        "link": "https://www.aucklandmuseum.com/visit/whats-on/members/The-2026-Hochstetter-Lecture",
+        "time_start": "2026-04-21T18:00:00+12:00",
+        "summary": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time.",
+        "description": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time.",
+        "free": false,
+        "cost": "Ticketed",
+        "location": "TE MATA TAIRONGO AUDITORIUM, LEVEL 2, Auckland War Memorial Museum",
+        "tags": [
+          "environment"
+        ],
+        "host_slug": "auckland-museum"
+      },
+      {
         "id": "021f448b54049758",
         "title": "A Day in the Life of an Archaeologist",
         "link": "https://www.aucklandmuseum.com/visit/whats-on/evenings/Twilight-Tuesday-with-Josh-Emmitt",
@@ -149,8 +164,8 @@
         "title": "Fast Forward 2026: Transcolonisation!",
         "link": "https://www.eventbrite.co.nz/e/fast-forward-2026-transcolonisation-chelsea-winstanley-onzm-tickets-1983737066968",
         "time_start": "2026-04-23T18:30:00+12:00",
-        "summary": "Visual Sovereignty",
-        "description": "Visual Sovereignty",
+        "summary": "Fast Forward 2026: Transcolonisation!",
+        "description": "Fast Forward 2026: Transcolonisation! Semester 1 In the Architecture NZ article Transcolonisation 1990-2020 , Anthony Hōete charted how architecture in Aotearoa was negotiating the complex entanglement of colonial inheritance and Indigenous resurgence. He described a 30-year trajectory in which design culture shifts from bicultural acknowledgement toward a more assertive Te Ao Māori architectural project, seeking to reconcile European traditions with Indigenous spatial knowledge.",
         "free": true,
         "location": "Design Lecture Theatre 423-348, 22 Symonds Street, Auckland",
         "speakers": [
@@ -232,6 +247,7 @@
         "title": "Information Session: Business Administration – Postgraduate Certificate in Business",
         "link": "https://www.massey.ac.nz/about/events/business-admin-info-session/",
         "time_start": "2026-05-06T19:00:00+12:00",
+        "description": "Join our online info session to explore the Business Administration – Postgraduate Certificate in Business and how it is a pathway to an Executive MBA.",
         "free": false,
         "location": "Online event",
         "host_slug": "massey"
@@ -241,6 +257,7 @@
         "title": "This Thinking Life: Indigeneity and AI webinar",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-indigeneity-and-ai-webinar/",
         "time_start": "2026-06-17T18:00:00+12:00",
+        "description": "Join us online for the first webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -253,6 +270,7 @@
         "title": "This Thinking Life: Indigenous psychologies, psychology and Te Tiriti",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-indigenous-psychologies-psychology-and-te-tiriti/",
         "time_start": "2026-06-18T18:00:00+12:00",
+        "description": "Join us online for the second webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -267,6 +285,7 @@
         "title": "This Thinking Life: AI and communication",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-ai-and-communication/",
         "time_start": "2026-06-24T18:00:00+12:00",
+        "description": "Join us online for the third webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -279,6 +298,7 @@
         "title": "This Thinking Life: Voting and elections in ancient Rome",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-voting-and-elections-in-ancient-rome/",
         "time_start": "2026-06-25T18:00:00+12:00",
+        "description": "Join us online for the fourth webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -291,6 +311,7 @@
         "title": "This Thinking Life: Rethinking ‘normal’ – the neurodivergent life",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-rethinking-normal-the-neurodivergent-life/",
         "time_start": "2026-07-01T18:00:00+12:00",
+        "description": "Join us online for the fifth webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -303,6 +324,7 @@
         "title": "This Thinking Life: Generative AI, contaminated information and rhubarb",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-generative-ai-contaminated-information-and-rhubarb/",
         "time_start": "2026-07-02T18:00:00+12:00",
+        "description": "Join us online for the sixth webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -315,6 +337,7 @@
         "title": "This Thinking Life: Challenging the patriarchy? A reassessment through the lens of ancient women",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-reassessment-through-the-lens-of-ancient-women/",
         "time_start": "2026-07-08T18:00:00+12:00",
+        "description": "Join us online for the seventh webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -327,6 +350,7 @@
         "title": "This Thinking Life: Sounds historical",
         "link": "https://www.massey.ac.nz/about/events/this-thinking-life-sounds-historical/",
         "time_start": "2026-07-09T18:00:00+12:00",
+        "description": "Join us online for the final webinar in the 'This Thinking Life' series.",
         "free": false,
         "location": "Online event",
         "tags": [
@@ -372,27 +396,6 @@
     "website": "https://www.nziia.org.nz/events",
     "description": "The New Zealand Institute of International Affairs hosts public lectures and forums on foreign policy, geopolitics, and international relations across New Zealand.",
     "lectures": [
-      {
-        "id": "77b0a203c71c3323",
-        "title": "Canada’s Perspectives on Indigenous Rights, UNDRIP, and International Indigenous Cooperation",
-        "link": "https://www.nziia.org.nz/events/address-by-he-keith-smith-high-commissioner/",
-        "time_start": "2026-04-16T19:30:00+12:00",
-        "summary": "This month’s meeting will begin with a short AGM, comprising the Chairman’s Report, the Treasurer’s Financial Report, and an election for vacancies on the Committee.",
-        "description": "This month’s meeting will begin with a short AGM, comprising the Chairman’s Report, the Treasurer’s Financial Report, and an election for vacancies on the Committee. The High Commissioner’s talk will offer an overview of Canada’s current approach to Indigenous rights, drawing on his personal experience as a member of Thessalon First Nation and his professional experience as a senior public servant, including leading the development of the Government of Canada’s action plan to achieve the objectives of the UN Declaration on the Rights of Indigenous Peoples (UNDRIP). His talk will cover Canada’s domestic commitments within a broader international context, with particular attention to cooperation between Indigenous peoples and governments, as well as synergies between Canada and Aotearoa New Zealand. Canada has played a leading role in the post-colonial world for recognising the rights of indigenous people. Indigenous Canadians comprise the First Nations, Inuit, and Métis, representing roughly 5% of the total Canadian population. There are over 600 recognized First Nations governments or bands with distinctive cultures, languages, music and other arts. The modern Indigenous right to self-government provides for Indigenous self-government in Canada - and the management of cultural, political, health and economic responsibilities within Indigenous communities. National Indigenous Peoples Day (21 June) recognizes the many cultures and the contributions of Indigenous peoples to the history of Canada. Coffee and tea are available from 7pm. Non-members are welcome, with a $5 koha. High school or UCOL students are welcome with free entry.",
-        "free": false,
-        "location": "Rosewood, 417 Queen Street, Kuripuni, Masterton",
-        "speakers": [
-          {
-            "name": "HE Keith Smith, High Commissioner for Canada in New Zealand"
-          }
-        ],
-        "tags": [
-          "arts-culture",
-          "history-society",
-          "politics-policy"
-        ],
-        "host_slug": "nziia"
-      },
       {
         "id": "0ce9fae1b4d99995",
         "title": "Global Tensions, Local Perspectives: Diaspora Communities in Uncertain Times",
@@ -473,6 +476,50 @@
     "name": "National Library of New Zealand",
     "website": "https://natlib.govt.nz/events",
     "description": "Te Puna Mātauranga o Aotearoa — the National Library hosts free public talks, exhibitions, and events celebrating New Zealand literature, history, and culture."
+  },
+  {
+    "slug": "treasury",
+    "name": "New Zealand Treasury",
+    "website": "https://www.eventbrite.co.nz/o/treasury-34223768069",
+    "description": "Te Tai Ōhanga — the New Zealand Treasury hosts free public guest lectures on economics, public policy, and fiscal matters.",
+    "lectures": [
+      {
+        "id": "543b9068d04b75b5",
+        "title": "Treasury Guest Lecture with Dr Alan Bollard",
+        "link": "https://www.eventbrite.co.nz/e/treasury-guest-lecture-with-dr-alan-bollard-in-person-attendance-tickets-1986962127210",
+        "time_start": "2026-04-30T13:30:00+12:00",
+        "summary": "The Weaponisation of Economics and How we Might Respond: The Art of Economic",
+        "description": "The Weaponisation of Economics and How we Might Respond: The Art of Economic",
+        "free": true,
+        "location": "The Treasury, level 3, 1 The Terrace, Wellington",
+        "speakers": [
+          {
+            "name": "Dr Alan Bollard"
+          }
+        ],
+        "tags": [
+          "arts-culture",
+          "politics-policy"
+        ],
+        "host_slug": "treasury"
+      },
+      {
+        "id": "97b507e8a2192a3a",
+        "title": "Treasury Guest Lecture with Professor Prasanna Gai",
+        "link": "https://www.eventbrite.co.nz/e/treasury-guest-lecture-with-professor-prasanna-gai-in-person-attendance-tickets-1987371020220",
+        "time_start": "2026-05-04T13:30:00+12:00",
+        "summary": "Shipping Lanes and Inflation-at-Risk: Hub Shocks and Optimal Monetary",
+        "description": "Shipping Lanes and Inflation-at-Risk: Hub Shocks and Optimal Monetary",
+        "free": true,
+        "location": "The Treasury, level 3, 1 The Terrace, Wellington",
+        "speakers": [
+          {
+            "name": "Professor Prasanna Gai"
+          }
+        ],
+        "host_slug": "treasury"
+      }
+    ]
   },
   {
     "slug": "ockham",
@@ -703,7 +750,7 @@
         "link": "https://www.nzinitiative.org.nz/events/webinar-god-defend-new-zealand-defence-modernisation-for-the-information-age/",
         "time_start": "2026-04-23T18:00:00+12:00",
         "summary": "Webinar: God Defend New Zealand: Defence Modernisation for the Information Age New Zealand has committed $12 billion to defence over four years, with a path to spending more than 2% of GDP within eight years.",
-        "description": "Webinar: God Defend New Zealand: Defence Modernisation for the Information Age New Zealand has committed $12 billion to defence over four years, with a path to spending more than 2% of GDP within eight years. That is a serious fiscal commitment. But will the money produce a defence force fit for the world we actually face? Join us for a webinar to launch our new research note, God Defend New Zealand . Major General (Retired) John Howard argues that more money is necessary but not sufficient. The real bottleneck is institutional: acquisition systems built for an earlier era, fragmented digital infrastructure, and policy settings that struggle to deliver information-age capability at the speed the strategic environment now demands. John, the author of the paper, will set out the case for treating the current defence uplift as an opportunity to modernise not just platforms but the policy and institutional machinery behind them. He recommends sharper investment in intelligence, space, domestic innovation and digital architecture, areas where a small state can generate disproportionate value for itself and its partners. John will be joined by Sir Rod Drury , who will offer a perspective on what defence modernisation looks like through the lens of technology, platforms and domestic innovation. Date:  Thursday, 23 April 2026 Time:  2:00pm Registration:  Please register for the webinar via this link Q\u0026A:  Submit your question in advance on Slido.com here or using code #2534902",
+        "description": "Webinar: God Defend New Zealand: Defence Modernisation for the Information Age New Zealand has committed $12 billion to defence over four years, with a path to spending more than 2% of GDP within eight years. That is a serious fiscal commitment. But will the money produce a defence force fit for the world we actually face? Join us for a webinar to launch our new research note, God Defend New Zealand . Major General (Retired) John Howard argues that more money is necessary but not sufficient. The real bottleneck is institutional: acquisition systems built for an earlier era, fragmented digital infrastructure, and policy settings that struggle to deliver information-age capability at the speed the strategic environment now demands. John, the author of the paper, will set out the case for treating the current defence uplift as an opportunity to modernise not just platforms but the policy and institutional machinery behind them. He recommends sharper investment in intelligence, space, domestic innovation and digital architecture, areas where a small state can generate disproportionate value for itself and its partners. Date:  Thursday, 23 April 2026 Time:  2:00pm Registration:  Please register for the webinar via this link Q\u0026A:  Submit your question in advance on Slido.com here or using code #2534902",
         "free": false,
         "location": "Webinar",
         "host_slug": "nz-initiative"
@@ -753,6 +800,11 @@
         "description": "This talk will present an overview of the enabling technology of photonics and the interplay between basic science and innovation.",
         "free": true,
         "location": "Fale Pasifika, University of Auckland, 20 Wynyard Street, Auckland",
+        "speakers": [
+          {
+            "name": "Professor John Dudley"
+          }
+        ],
         "tags": [
           "science-technology"
         ],
@@ -942,68 +994,6 @@
     "description": "Te Herenga Waka — Victoria University of Wellington hosts regular public lectures, seminars, and events across its faculties and research institutes.",
     "bluesky": "@victoriauniversity.bsky.social",
     "lectures": [
-      {
-        "id": "db21f3bf1d770c7f",
-        "title": "Kia Tika, Kia Pono—For A Just Society",
-        "link": "https://www.wgtn.ac.nz/fhss/about/events/kia-tika-kia-ponofor-a-just-society",
-        "time_start": "2026-04-16T14:00:00+12:00",
-        "summary": "In Aotearoa, we know very well what our most pressing problems are—poverty, inequity, ecological destruction, and climate change. But we are much less...",
-        "description": "In Aotearoa, we know very well what our most pressing problems are—poverty, inequity, ecological destruction, and climate change. But we are much less...",
-        "free": false,
-        "location": "Wellington",
-        "speakers": [
-          {
-            "name": "Boyd Scirkovich",
-            "bio": "Chief Economic Development and Investment Officer"
-          },
-          {
-            "name": "Marilyn Waring",
-            "bio": "feminist, former politician, author, academic"
-          },
-          {
-            "name": "James Belich",
-            "bio": "Historian"
-          },
-          {
-            "name": "Meihana Durie",
-            "bio": "CEO/Tumuaki Te Wānanga o Raukawa"
-          },
-          {
-            "name": "Gareth Hughes",
-            "bio": "Director Wellbeing Economy Alliance Aotearoa NZ"
-          },
-          {
-            "name": "Bianca Elkington",
-            "bio": "General Manager Education and Employment, Te"
-          },
-          {
-            "name": "Clive Aspin and Heather Came",
-            "bio": "Marsden Project leads \u0026lsquo;Honourable Kāwanatanga\u0026rsquo"
-          },
-          {
-            "name": "Fleur Fitzsimons",
-            "bio": "National Secretary Public Service Association Te"
-          },
-          {
-            "name": "Edward Miller",
-            "bio": "Researcher, Centre for International Corporate Tax"
-          },
-          {
-            "name": "Rebecca Kiddle and James Berghan",
-            "bio": "Director and senior research fellow at"
-          },
-          {
-            "name": "Leslynne Jackson",
-            "bio": "Project Lead Maanaki Tāirawhiti"
-          }
-        ],
-        "tags": [
-          "history-society",
-          "environment",
-          "philosophy-ideas"
-        ],
-        "host_slug": "victoria"
-      },
       {
         "id": "e1cb94aaa2fee747",
         "title": "Philanthropy Along the Supply Chain",

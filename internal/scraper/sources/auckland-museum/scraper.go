@@ -183,10 +183,16 @@ func scrapeListingPage(ctx context.Context, url, cardMarker string, titleRe *reg
 			continue
 		}
 
-		// Filter by "Event" category on the main page.
+		// Filter by category on the main page: include lecture/event categories,
+		// exclude non-lecture types like exhibitions, tours, and kids programmes.
 		if requireEventCat {
 			catM := catRe.FindStringSubmatch(chunk)
-			if catM == nil || !strings.EqualFold(strings.TrimSpace(catM[1]), "event") {
+			cat := ""
+			if catM != nil {
+				cat = strings.ToLower(strings.TrimSpace(catM[1]))
+			}
+			switch cat {
+			case "exhibition", "tour", "kids and family", "":
 				continue
 			}
 		}

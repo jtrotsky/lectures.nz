@@ -41,6 +41,7 @@ import (
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/artspace"
 	nzinitiative "github.com/jtrotsky/lectures.nz/internal/scraper/sources/nz-initiative"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/meetup"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/treasury"
 )
 
 func main() {
@@ -115,7 +116,6 @@ func skipDescDomain(link string) bool {
 // skipDescFetch lists host slugs whose detail pages reliably return unusable
 // content (JS-only rendering, bot detection, login walls, etc.).
 var skipDescFetch = map[string]bool{
-	"massey":     true, // returns "outdated browser" page
 	"eventbrite": true, // JS-rendered; description already comes from API
 }
 
@@ -242,6 +242,7 @@ func run() error {
 		&artspace.Scraper{},
 		&nzinitiative.Scraper{},
 		&meetup.Scraper{},
+		&treasury.Scraper{},
 	}
 
 	type result struct {
