@@ -49,6 +49,25 @@
     return null;
   }
 
+  function lectureCity(lecture) {
+    const locCity = extractCity(lecture.location || '');
+    if (locCity) return locCity;
+    const hostMap = window.HOST_CITY || {};
+    return hostMap[lecture.host_slug] || null;
+  }
+
+  function updateRSSLink(city) {
+    const link = document.getElementById('rss-link');
+    if (!link) return;
+    if (city) {
+      link.href = '/feed/' + city.toLowerCase() + '.xml';
+      link.textContent = city + ' RSS Feed';
+    } else {
+      link.href = '/rss.xml';
+      link.textContent = 'RSS Feed';
+    }
+  }
+
   function setCity(city) {
     activeCity = city || null;
     if (activeCity) {
@@ -57,6 +76,7 @@
       localStorage.removeItem(CITY_KEY);
     }
     renderCityPill();
+    updateRSSLink(activeCity);
     applyFilter();
   }
 
@@ -101,7 +121,7 @@
 
     const availableCities = new Set();
     for (const l of lectures) {
-      const c = extractCity(l.location || '');
+      const c = lectureCity(l);
       if (c) availableCities.add(c);
     }
 
@@ -146,8 +166,7 @@
       if (show && activeCity) {
         const id = item.dataset.id;
         const lecture = lectures.find(function (l) { return l.id === id; });
-        const itemCity = lecture ? extractCity(lecture.location || '') : null;
-        show = itemCity === activeCity;
+        show = lecture ? lectureCity(lecture) === activeCity : false;
       }
 
       item.hidden = !show;
@@ -225,6 +244,7 @@
   // ---- Init ------------------------------------------------------------
 
   renderCityPill();
+  updateRSSLink(activeCity);
 
   const initialTopic = getTopicFromURL();
   if (initialTopic) {

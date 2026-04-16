@@ -30,6 +30,7 @@ type templateData struct {
 	Hosts        []model.Host
 	Topics       []topics.Topic
 	LecturesJSON template.JS
+	HostCityJSON template.JS // {"slug": "City", ...} for JS city detection
 }
 
 // indexData extends templateData for the index page.
@@ -98,10 +99,15 @@ func run() error {
 	if err != nil {
 		return fmt.Errorf("marshal lectures json: %w", err)
 	}
+	hostCityJSONBytes, err := json.Marshal(hostCity)
+	if err != nil {
+		return fmt.Errorf("marshal host city json: %w", err)
+	}
 	base := templateData{
 		Hosts:        hosts,
 		Topics:       topics.All(),
 		LecturesJSON: template.JS(lecturesJSONBytes),
+		HostCityJSON: template.JS(hostCityJSONBytes),
 	}
 
 	// Index page.
@@ -119,11 +125,25 @@ func run() error {
 		return err
 	}
 
-	// RSS feed.
-	if err := writeRSS("public/rss.xml", lectures); err != nil {
+	// RSS feed — global.
+	if err := writeRSS("public/rss.xml", lectures, ""); err != nil {
 		return err
 	}
 	log.Printf("built public/rss.xml")
+
+	// RSS feeds — per city.
+	cities := uniqueCities(lectures)
+	if err := os.MkdirAll("public/feed", 0755); err != nil {
+		return fmt.Errorf("mkdir public/feed: %w", err)
+	}
+	for _, city := range cities {
+		slug := strings.ToLower(city)
+		path := fmt.Sprintf("public/feed/%s.xml", slug)
+		if err := writeRSS(path, lectures, city); err != nil {
+			return err
+		}
+		log.Printf("built %s", path)
+	}
 
 	// Host pages + lecture pages.
 	for _, h := range hosts {
@@ -252,25 +272,35 @@ func loadHosts(path string) ([]model.Host, error) {
 
 // ----- Template handling ----------------------------------------------
 
-// hostCity maps host slugs to their city for venues where the name alone
-// doesn't make the location obvious (universities are excluded).
+// hostCity maps host slugs to their city. Used both for display labels and
+// for generating per-city RSS feeds.
 var hostCity = map[string]string{
-	"artgallery-nz":    "Dunedin",
-	"artspace":         "Auckland",
+	// Auckland
+	"auckland":             "Auckland",
+	"aut":                  "Auckland",
+	"artspace":             "Auckland",
 	"auckland-art-gallery": "Auckland",
-	"auckland-museum":  "Auckland",
-	"gus-fisher":       "Auckland",
-	"motat":            "Auckland",
+	"auckland-museum":      "Auckland",
+	"gus-fisher":           "Auckland",
+	"meetup":               "Auckland",
+	"motat":                "Auckland",
+	"ockham":               "Auckland",
+	"studio-one":           "Auckland",
+	// Wellington
 	"motu":             "Wellington",
 	"national-library": "Wellington",
 	"nziia":            "Wellington",
 	"nz-initiative":    "Wellington",
-	"ockham":           "Auckland",
 	"public-record":    "Wellington",
 	"rbnz":             "Wellington",
 	"royal-society":    "Wellington",
-	"studio-one":       "Auckland",
 	"te-papa":          "Wellington",
+	"victoria":         "Wellington",
+	// Dunedin
+	"artgallery-nz": "Dunedin",
+	"otago":         "Dunedin",
+	// Christchurch
+	"canterbury": "Christchurch",
 }
 
 func templateFuncs() template.FuncMap {
@@ -486,30 +516,80 @@ func writeCalendar(path string, lectures []model.Lecture) error {
 
 // ----- RSS feed -------------------------------------------------------
 
-func writeRSS(path string, lectures []model.Lecture) error {
+// knownCities is the ordered list used to scan location strings for a city.
+var knownCities = []string{
+	"Auckland", "Wellington", "Christchurch", "Dunedin",
+	"Hamilton", "Tauranga", "Nelson", "Napier", "Palmerston North",
+}
+
+// lectureCity returns the city for a lecture. It checks the Location field
+// first (so events hosted by a multi-city org, e.g. NZIIA, resolve to the
+// actual event city), then falls back to the hostCity map.
+func lectureCity(l model.Lecture) string {
+	for _, c := range knownCities {
+		if strings.Contains(l.Location, c) {
+			return c
+		}
+	}
+	return hostCity[l.HostSlug]
+}
+
+// uniqueCities returns a sorted list of cities that have at least one lecture.
+func uniqueCities(lectures []model.Lecture) []string {
+	seen := map[string]bool{}
+	for _, l := range lectures {
+		if c := lectureCity(l); c != "" {
+			seen[c] = true
+		}
+	}
+	cities := make([]string, 0, len(seen))
+	for c := range seen {
+		cities = append(cities, c)
+	}
+	sort.Strings(cities)
+	return cities
+}
+
+// writeRSS writes an RSS feed for the given lectures. If city is non-empty,
+// only lectures from that city are included.
+func writeRSS(path string, lectures []model.Lecture, city string) error {
 	f, err := os.Create(path)
 	if err != nil {
 		return fmt.Errorf("create %s: %w", path, err)
 	}
 	defer f.Close()
 
-	fmt.Fprintf(f, `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>lectures.nz</title>
-    <link>https://lectures.nz</link>
-    <atom:link href="https://lectures.nz/rss.xml" rel="self" type="application/rss+xml"/>
-    <description>Upcoming public lectures in New Zealand</description>
-    <language>en-nz</language>
-`)
-
 	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
 	if nzLoc == nil {
 		nzLoc = time.UTC
 	}
 
+	var title, selfURL, description string
+	if city == "" {
+		title = "lectures.nz"
+		selfURL = "https://lectures.nz/rss.xml"
+		description = "Upcoming public lectures in New Zealand"
+	} else {
+		title = fmt.Sprintf("lectures.nz — %s", city)
+		selfURL = fmt.Sprintf("https://lectures.nz/feed/%s.xml", strings.ToLower(city))
+		description = fmt.Sprintf("Upcoming public lectures in %s", city)
+	}
+
+	fmt.Fprintf(f, `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>%s</title>
+    <link>https://lectures.nz</link>
+    <atom:link href="%s" rel="self" type="application/rss+xml"/>
+    <description>%s</description>
+    <language>en-nz</language>
+`, xmlEscape(title), selfURL, xmlEscape(description))
+
 	for _, l := range lectures {
-		title := xmlEscape(l.Title)
+		if city != "" && lectureCity(l) != city {
+			continue
+		}
+		itemTitle := xmlEscape(l.Title)
 		link := fmt.Sprintf("https://lectures.nz/%s/%s/", l.HostSlug, l.ID)
 		desc := xmlEscape(l.Summary)
 		pubDate := l.TimeStart.In(nzLoc).Format(time.RFC1123Z)
@@ -520,7 +600,7 @@ func writeRSS(path string, lectures []model.Lecture) error {
       <pubDate>%s</pubDate>
       <description>%s</description>
     </item>
-`, title, link, link, pubDate, desc)
+`, itemTitle, link, link, pubDate, desc)
 	}
 
 	fmt.Fprintf(f, `  </channel>
