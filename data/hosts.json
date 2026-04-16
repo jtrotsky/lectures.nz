@@ -664,25 +664,6 @@
         "host_slug": "studio-one"
       },
       {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -699,6 +680,25 @@
         "tags": [
           "arts-culture",
           "history-society"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -774,20 +774,6 @@
         "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland",
         "tags": [
           "arts-culture"
-        ],
-        "host_slug": "auckland"
-      },
-      {
-        "id": "0f1ea4588f7224e7",
-        "title": "WEN Outreach Workshop - Survive the Shake!",
-        "link": "https://www.eventbrite.co.nz/e/wen-outreach-workshop-survive-the-shake-tickets-1984933311969",
-        "time_start": "2026-04-19T10:00:00+12:00",
-        "summary": "Free half day workshop for year 9-10 women, where creativity meets engineering, includes a pizza lunch.",
-        "description": "Free half day workshop for year 9-10 women, where creativity meets engineering, includes a pizza lunch.",
-        "free": true,
-        "location": "University of Auckland Engineering Atrium, Level 3, Building 401, 5 Grafton Road, Auckland City., 5 Grafton Rd, Auckland",
-        "tags": [
-          "science-technology"
         ],
         "host_slug": "auckland"
       },

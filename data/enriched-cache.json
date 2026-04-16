@@ -729,5 +729,29 @@
   "95802a3f9566c770": {
     "summary": "Shakespeare as Reviser: The Merry Wives of Windsor",
     "description": "Shakespeare as Reviser: The Merry Wives of Windsor"
+  },
+  "adb78f3c44febf5d": {
+    "summary": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time.",
+    "description": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time."
+  },
+  "543b9068d04b75b5": {
+    "summary": "The Weaponisation of Economics and How we Might Respond: The Art of Economic",
+    "description": "The Weaponisation of Economics and How we Might Respond: The Art of Economic",
+    "speakers": [
+      {
+        "name": "Dr Alan Bollard"
+      }
+    ]
+  },
+  "97b507e8a2192a3a": {
+    "event_type": "lecture",
+    "summary": "Professor Prasanna Gai explores shipping lanes, inflation risk, and optimal monetary policy.",
+    "description": "Professor Prasanna Gai delves into the relationship between global shipping lanes and economic instability, focusing on hub shocks and their implications for monetary policy. This lecture is part of the Treasury's guest lecture series, featuring expert analysis from leading economists.",
+    "speakers": [
+      {
+        "name": "Professor Prasanna Gai",
+        "bio": "University economist"
+      }
+    ]
   }
 }
