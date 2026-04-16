@@ -78,14 +78,21 @@ type apiModule struct {
 	Data json.RawMessage `json:"data"`
 }
 
+// apiTextBody is the data payload for a module of type "text".
+type apiTextBody struct {
+	Body struct {
+		Text string `json:"text"` // HTML
+	} `json:"body"`
+}
+
 // apiSpeakersData is the data payload for a module of type "speakers".
+// Some events use this first-class module; others embed speaker info in text.
 type apiSpeakersData struct {
 	Speakers struct {
 		Speakers []struct {
 			Profile struct {
-				Name        string       `json:"name"`
-				Headline    string       `json:"headline"` // role, e.g. "Keynote Speaker"
-				Description apiEventName `json:"description"`
+				Name     string `json:"name"`
+				Headline string `json:"headline"` // role, e.g. "Keynote Speaker"
 			} `json:"profile"`
 		} `json:"speakers"`
 	} `json:"speakers"`
@@ -207,10 +214,14 @@ func fetchOrganizerEvents(ctx context.Context, token string, org organizer) ([]m
 			if !ok {
 				continue
 			}
-			// Try structured content speakers if nothing came from the title.
-			if len(l.Speakers) == 0 {
-				if sps, err := fetchEventSpeakers(ctx, token, e.ID); err == nil && len(sps) > 0 {
-					l.Speakers = sps
+			// Enrich description and speakers from structured content.
+			if sc, err := fetchStructuredContent(ctx, token, e.ID); err == nil {
+				if len(sc.Description) > len(l.Description) {
+					l.Description = sc.Description
+					l.Summary = scraper.TruncateSummary(sc.Description, 200)
+				}
+				if len(l.Speakers) == 0 && len(sc.Speakers) > 0 {
+					l.Speakers = sc.Speakers
 				}
 			}
 			lectures = append(lectures, l)
@@ -223,36 +234,59 @@ func fetchOrganizerEvents(ctx context.Context, token string, org organizer) ([]m
 	return lectures, nil
 }
 
-// fetchEventSpeakers calls the structured_content endpoint for a single event
-// and returns any speakers found in the "speakers" module.
-func fetchEventSpeakers(ctx context.Context, token, eventID string) ([]model.Speaker, error) {
+// eventContent holds the result of fetchStructuredContent.
+type eventContent struct {
+	Description string
+	Speakers    []model.Speaker
+}
+
+// fetchStructuredContent calls the structured_content endpoint and extracts
+// the full description (from text modules) and any speakers (from either
+// a first-class speakers module or patterns inside text HTML).
+func fetchStructuredContent(ctx context.Context, token, eventID string) (eventContent, error) {
 	u := fmt.Sprintf("%s/events/%s/structured_content/", apiBase, eventID)
 	var sc apiStructuredContent
 	if err := apiGet(ctx, token, u, &sc); err != nil {
-		return nil, err
+		return eventContent{}, err
 	}
+
+	var htmlParts []string
+	var speakers []model.Speaker
+
 	for _, mod := range sc.Modules {
-		if mod.Type != "speakers" {
-			continue
-		}
-		var sd apiSpeakersData
-		if err := json.Unmarshal(mod.Data, &sd); err != nil {
-			continue
-		}
-		var speakers []model.Speaker
-		for _, sp := range sd.Speakers.Speakers {
-			name := strings.TrimSpace(sp.Profile.Name)
-			if name == "" {
-				continue
+		switch mod.Type {
+		case "text":
+			var td apiTextBody
+			if err := json.Unmarshal(mod.Data, &td); err == nil && td.Body.Text != "" {
+				htmlParts = append(htmlParts, td.Body.Text)
 			}
-			bio := strings.TrimSpace(sp.Profile.Headline)
-			speakers = append(speakers, model.Speaker{Name: name, Bio: bio})
-		}
-		if len(speakers) > 0 {
-			return speakers, nil
+		case "speakers":
+			var sd apiSpeakersData
+			if err := json.Unmarshal(mod.Data, &sd); err == nil {
+				for _, sp := range sd.Speakers.Speakers {
+					if name := strings.TrimSpace(sp.Profile.Name); name != "" {
+						speakers = append(speakers, model.Speaker{
+							Name: name,
+							Bio:  strings.TrimSpace(sp.Profile.Headline),
+						})
+					}
+				}
+			}
 		}
 	}
-	return nil, nil
+
+	combined := strings.Join(htmlParts, "\n")
+
+	// If no first-class speakers module, try parsing speaker patterns from HTML.
+	if len(speakers) == 0 && combined != "" {
+		speakers = scraper.ExtractSpeakers([]byte(combined))
+	}
+
+	// Strip HTML tags to get plain description text.
+	description := strings.TrimSpace(tagRe.ReplaceAllString(combined, " "))
+	description = strings.Join(strings.Fields(description), " ")
+
+	return eventContent{Description: description, Speakers: speakers}, nil
 }
 
 // convertEvent converts an Eventbrite API event to a model.Lecture.
