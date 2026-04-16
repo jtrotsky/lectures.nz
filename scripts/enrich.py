@@ -126,7 +126,7 @@ def enrich(lecture: dict) -> dict:
 Given the event below, return ONLY a valid JSON object — no markdown, no explanation.
 
 Fields:
-- "event_type": One word classifying the event. Choose exactly one: lecture, seminar, panel, workshop, concert, market, ceremony, course, fitness, orientation, symposium, conference.
+- "event_type": One or two words classifying the event. Choose exactly one: lecture, seminar, panel, workshop, talk, symposium, fireside chat, chat, debate, forum, roundtable, reading, concert, market, ceremony, course, fitness, orientation, conference.
 - "title": The cleaned event title. Strip any speaker name appended after " | " (e.g. "Fast Forward 2026: Transcolonisation! | Chelsea Winstanley" → "Fast Forward 2026: Transcolonisation!"). Also strip trailing speaker credits like " with Jane Smith" or " — featuring Dr X" if the event name is clear without them. Do NOT rewrite, shorten, or rephrase the actual event name itself — only strip the speaker suffix. Return the original if no change needed.
 - "summary": One clear sentence (max 180 chars) for the index card. Capture the core topic and speaker if named. No hollow openers like "Join us" or "Discover". Do not invent anything not in the source.
 - "description": 2-4 sentences for the detail page. Preserve the source's voice, key facts, people, and institutions. Remove hollow openers. Fix punctuation. {"Expand this — the source text is very short, so infer reasonable context from the title and host, but do not invent specific claims." if is_thin else "Preserve the existing text closely — only clean up punctuation and remove hollow openers."}

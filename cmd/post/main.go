@@ -203,9 +203,8 @@ func buildPost(l model.Lecture, m *mention) (string, []map[string]any, map[strin
 	if l.Free {
 		tags = append(tags, "#FreeEvent")
 	}
-	if len(l.EventType) > 0 && l.EventType != "other" {
-		eventTypeTag := strings.ReplaceAll(l.EventType, " ", "")
-		tags = append(tags, fmt.Sprintf("#%s", eventTypeTag))
+	if tag, ok := eventTypeHashtag[l.EventType]; ok {
+		tags = append(tags, tag)
 	}
 	tagLine := strings.Join(tags, " ")
 
@@ -258,6 +257,23 @@ func buildPost(l model.Lecture, m *mention) (string, []map[string]any, map[strin
 	embed := linkCardEmbed(listingURL, l.Title, l.Summary)
 
 	return text, facets, embed
+}
+
+// eventTypeHashtag maps known Ollama-assigned event types to their Bluesky hashtag.
+// Only types in this map are hashtagged — unknown or excluded types are silently dropped.
+var eventTypeHashtag = map[string]string{
+	"lecture":       "#Lecture",
+	"seminar":       "#Seminar",
+	"panel":         "#Panel",
+	"workshop":      "#Workshop",
+	"talk":          "#Talk",
+	"symposium":     "#Symposium",
+	"fireside chat": "#FiresideChat",
+	"chat":          "#Chat",
+	"debate":        "#Debate",
+	"forum":         "#Forum",
+	"roundtable":    "#Roundtable",
+	"reading":       "#Reading",
 }
 
 // cityHashtags returns a hashtag for well-known NZ cities extracted from loc.
