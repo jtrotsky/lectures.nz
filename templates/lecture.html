@@ -76,16 +76,17 @@
       {{end}}
 
       <div class="lecture-hero-actions">
-        <a href="{{.Lecture.Link}}" class="btn btn-primary" target="_blank" rel="noopener">
+        <a href="{{.Lecture.Link}}" class="btn btn-primary" target="_blank" rel="noopener"
+           onclick="track('register_click', {host:'{{.Host.Slug}}', id:'{{.Lecture.ID}}'})">
           Register / More info →
         </a>
-        <details class="cal-picker">
+        <details class="cal-picker" ontoggle="if(this.open) track('calendar_open', {host:'{{.Host.Slug}}', id:'{{.Lecture.ID}}'})">
           <summary class="btn btn-secondary">Add to calendar</summary>
           <ul class="cal-picker-list">
-            <li><a href="{{gcalURL .Lecture}}" target="_blank" rel="noopener">Google Calendar</a></li>
-            <li><a href="{{outlookURL .Lecture}}" target="_blank" rel="noopener">Outlook</a></li>
-            <li><a href="{{yahooURL .Lecture}}" target="_blank" rel="noopener">Yahoo Calendar</a></li>
-            <li><a href="/{{.Host.Slug}}/{{.Lecture.ID}}/calendar.ics">Apple / iCal (.ics)</a></li>
+            <li><a href="{{gcalURL .Lecture}}" target="_blank" rel="noopener" onclick="track('calendar_add', {provider:'google'})">Google Calendar</a></li>
+            <li><a href="{{outlookURL .Lecture}}" target="_blank" rel="noopener" onclick="track('calendar_add', {provider:'outlook'})">Outlook</a></li>
+            <li><a href="{{yahooURL .Lecture}}" target="_blank" rel="noopener" onclick="track('calendar_add', {provider:'yahoo'})">Yahoo Calendar</a></li>
+            <li><a href="/{{.Host.Slug}}/{{.Lecture.ID}}/calendar.ics" onclick="track('calendar_add', {provider:'apple'})">Apple / iCal (.ics)</a></li>
           </ul>
         </details>
       </div>

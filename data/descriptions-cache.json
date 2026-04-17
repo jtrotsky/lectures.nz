@@ -17,6 +17,9 @@
   "https://artspace-aotearoa.nz/events/open-late": {
     "description": "Alongside Aotearoa Art Fair and neighbourhood gallery openings the gallery will remain open until 8pm. Join artist Selina Ershadi and Kaitohu Director Ruth Buchanan for drinks and an informal introduction to The Blue Dome and its newly commissioned …"
   },
+  "https://motat.nz/events/behind-the-scenes-collection-tour/": {
+    "description": "NOW SOLD OUT. A unique opportunity to discover the MOTAT collection like never before."
+  },
   "https://motat.nz/events/nga-k-rero-rererangi-aviation-conversations-2026/": {
     "description": "Enjoy an evening in the Aviation Hall with a panel discussion exploring aerial mapping technology."
   },
@@ -28,6 +31,18 @@
   },
   "https://publicrecord.nz/blogs/events-workshops/kintsugi-workshop-modernised-way-sat-14-june-25": {
     "description": "Public Record workshop at our gallery space     Kintsugi (Modernised - Mending method / Art form) Kintsugi (also known as Kintsukuroi) which loosely translates to \u0026#39;Golden Joinery\u0026#39; is the age-old Japanese art form of repairing broken ceramics in a way that is often considered more beautiful than when it was when whole."
+  },
+  "https://www.aut.ac.nz/events/future-environments-thought-leadership-whaikaha-ministry-of-disabled-people": {
+    "description": "Future Environments Thought Leadership session, in partnership with Whaikaha – Ministry of Disabled People, focused on accessible and inclusive design in ",
+    "speakers": [
+      {
+        "name": "Rebecca Elvy",
+        "bio": "Deputy Chief Executive Outreach and Innovation"
+      }
+    ]
+  },
+  "https://www.aut.ac.nz/events/great-graduates-speaker-series-we-counsel,-we-dont-cancel": {
+    "description": "What happens when disability is seen as a powerful cultural lens, not a problem to solve?Join fellow AUT graduates for our next Great Graduates Speaker Series e"
   },
   "https://www.aut.ac.nz/events/nz-podcasting-summit": {
     "description": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa\u0026hellip; as well as the podcast curious. Join us for a full day of co"
@@ -79,6 +94,9 @@
   "https://www.massey.ac.nz/about/events/business-admin-info-session/": {
     "description": "Join our online info session to explore the Business Administration – Postgraduate Certificate in Business and how it is a pathway to an Executive MBA."
   },
+  "https://www.massey.ac.nz/about/events/everything-but-the-medicine/": {
+    "description": "Lucy O’Hagan brings her acclaimed memoir, Everything But the Medicine: A Doctor’s Tale to life in a reading and performance."
+  },
   "https://www.massey.ac.nz/about/events/this-thinking-life-ai-and-communication/": {
     "description": "Join us online for the third webinar in the 'This Thinking Life' series."
   },
@@ -108,6 +126,12 @@
   },
   "https://www.royalsociety.org.nz/events/thin-ice-2026": {
     "description": "An urgent update on our changing climate"
+  },
+  "https://www.tepapa.govt.nz/visit/events/screening-sign-of-the-times-the-story-of-new-zealands-visual-language": {
+    "description": "Celebrate New Zealand Sign Language week with a special screening of the film  Sign of the Times – The Story of New Zealand’s Visual Language .\n"
+  },
+  "https://www.tepapa.govt.nz/visit/events/tamariki-time-sharing-stories-in-nzsl": {
+    "description": "A free interactive drop-in session for tamariki aged 5 and under. This month learn about sharing stories in New Zealand Sign language. "
   },
   "https://www.tepapa.govt.nz/visit/events/tamariki-time-slow-burn-ahi-tamau": {
     "description": "Join us for some creative fun and make your own nature picture frame with our native plants that we grow in Bush City!  "

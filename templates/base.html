@@ -80,5 +80,19 @@
     window.HOST_CITY = {{.HostCityJSON}};
   </script>
   <script src="/static/js/app.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "19fe5bab2fc94cc29240d959855f61b6"}'></script>
+  <script>
+    // Custom event helper — uses Cloudflare Zaraz (available on CF Pages).
+    // No-op if not on Cloudflare or in local dev.
+    function track(name, props) {
+      try {
+        if (window.zaraz && window.zaraz.track) {
+          window.zaraz.track(name, props || {});
+        }
+      } catch (e) {}
+    }
+  </script>
 </body>
 </html>

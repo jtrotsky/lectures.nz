@@ -23,6 +23,7 @@
     document.querySelectorAll('.topic-chip').forEach(function (btn) {
       btn.classList.toggle('topic-chip--active', btn.dataset.topic === slug);
     });
+    if (slug) track('topic_filter', { topic: slug });
     applyFilter();
     setTopicInURL(slug);
   }
@@ -75,6 +76,7 @@
     } else {
       localStorage.removeItem(CITY_KEY);
     }
+    track('city_filter', { city: activeCity || 'all' });
     renderCityPill();
     updateRSSLink(activeCity);
     applyFilter();
@@ -231,8 +233,17 @@
   // ---- Public API ------------------------------------------------------
 
   window.clearFilter = function () {
+    track('clear_filter');
     setTopic(null);
   };
+
+  // ---- Lecture card click tracking -------------------------------------
+
+  document.querySelectorAll('.lecture-item').forEach(function (card) {
+    card.addEventListener('click', function () {
+      track('lecture_click', { host: card.dataset.host || '', id: card.dataset.id || '' });
+    });
+  });
 
   // ---- City pill wiring ------------------------------------------------
 
