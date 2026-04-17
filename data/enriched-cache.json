@@ -753,5 +753,51 @@
         "bio": "University economist"
       }
     ]
+  },
+  "f9522d3572d03fb2": {
+    "summary": "Future Environments Thought Leadership session, in partnership with Whaikaha \u2013 Ministry of Disabled People, focused on accessible and inclusive design in",
+    "description": "Future Environments Thought Leadership session, in partnership with Whaikaha \u2013 Ministry of Disabled People, focused on accessible and inclusive design in ",
+    "speakers": [
+      {
+        "name": "Rebecca Elvy",
+        "bio": "Deputy Chief Executive Outreach and Innovation"
+      }
+    ]
+  },
+  "034e0f1e13de5956": {
+    "event_type": "ceremony",
+    "summary": "Commemorate ANZAC Day with dawn service, tours, performances.",
+    "description": "This Anzac Day, Auckland Museum hosts a day of commemoration featuring the Dawn Service, free guided tours, choral performances, and poetry readings. Entry to the museum is complimentary for all visitors on this day. The museum opens immediately after the Dawn Service."
+  },
+  "40f85f794ad4a481": {
+    "event_type": "lecture",
+    "summary": "Discussing disability as a cultural lens rather than a problem.",
+    "description": "What happens when disability is seen as a powerful cultural lens, not a problem to solve? Explore this perspective with fellow AUT graduates in the next Great Graduates Speaker Series event."
+  },
+  "0024c0284321b7e1": {
+    "event_type": "lecture",
+    "summary": "Explore MOTAT's collection in an exclusive behind-the-scenes tour.",
+    "description": "NOW SOLD OUT. A unique opportunity to discover the MOTAT collection like never before, offering a rare glimpse into its treasures and stories."
+  },
+  "c3fe748234d3e3ec": {
+    "event_type": "workshop",
+    "summary": "Interactive session for children to learn NZSL.",
+    "description": "A free interactive drop-in workshop for tamariki aged 5 and under, focusing on sharing stories in New Zealand Sign Language this month. Hosted by Te Papa."
+  },
+  "ca1f64f253399828": {
+    "event_type": "screening",
+    "summary": "Screening of a documentary on NZ sign language.",
+    "description": "Celebrate New Zealand Sign Language Week with a special screening of 'Sign of the Times \u2013 The Story of New Zealand\u2019s Visual Language,' exploring the history and significance of visual communication in New Zealand."
+  },
+  "200da7812a57519d": {
+    "event_type": "reading",
+    "summary": "Lucy O'Hagan reads from her memoir about medical experiences.",
+    "description": "Lucy O'Hagan presents her acclaimed memoir, 'Everything But the Medicine: A Doctor\u2019s Tale,' through a reading and performance. The event offers insights into her career as a doctor.",
+    "speakers": [
+      {
+        "name": "Dr Lucy O'Hagan",
+        "bio": "memoir author"
+      }
+    ]
   }
 }
