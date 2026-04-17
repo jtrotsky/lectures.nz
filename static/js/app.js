@@ -175,7 +175,15 @@
       if (show) visibleCount++;
     });
 
+    // Compute today's date key in NZ time (YYYY-MM-DD).
+    var nzDate = new Date().toLocaleDateString('en-CA', { timeZone: 'Pacific/Auckland' });
+
     document.querySelectorAll('.date-group').forEach(function (group) {
+      var dateKey = group.dataset.date || '';
+      if (dateKey && dateKey < nzDate) {
+        group.hidden = true;
+        return;
+      }
       group.hidden = group.querySelectorAll('.lecture-item:not([hidden])').length === 0;
     });
 
