@@ -628,8 +628,6 @@ body:has(.page-host) .site-header {
 .footer-right {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding-bottom: 2px;
 }
 
 .footer-resource {
