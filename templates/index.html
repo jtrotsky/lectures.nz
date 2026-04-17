@@ -45,7 +45,7 @@
           <p class="lecture-time">
             <time datetime="{{.TimeStart.Format "2006-01-02T15:04:05Z07:00"}}">{{.TimeStart.Format "3:04pm"}}</time>
           </p>
-          <h3 class="lecture-title">{{.Title}}</h3>
+          <h2 class="lecture-title">{{.Title}}</h2>
           {{if .Summary}}<p class="lecture-summary">{{.Summary}}</p>{{end}}
           <div class="lecture-meta">
             <span class="meta-venue">{{hostName $.Hosts .HostSlug}}</span>
