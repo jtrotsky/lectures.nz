@@ -16,7 +16,20 @@ public/
 *.exe
 *.test
 *.out
+/analytics
+/collect
+/build
+/enrich
 /post
+/serve
+
+# Keys / secrets
+*.gpg
+*.pem
+*.key
+
+# Local env (API keys — never commit)
+.env
 
 # Editor
 .DS_Store

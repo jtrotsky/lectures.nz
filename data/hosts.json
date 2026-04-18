@@ -223,20 +223,6 @@
     "description": "Gus Fisher Gallery at the University of Auckland hosts artist talks, film screenings, panel discussions, and public programmes in contemporary art.",
     "lectures": [
       {
-        "id": "8b30fa94d015ef93",
-        "title": "Welfare (1975)",
-        "link": "https://www.eventbrite.co.nz/e/welfare-1975-film-screening-with-rangi-white-tickets-1986282988889?aff=oddtdtcreator",
-        "time_start": "2026-04-18T18:00:00+12:00",
-        "summary": "For Tell us if something changes, artist Rangi White draws on the aesthetics of a Work and Income Office to consider how material and spatial conditions structure a person’s encounters with the state.",
-        "description": "For Tell us if something changes, artist Rangi White draws on the aesthetics of a Work and Income Office to consider how material and spatial conditions structure a person’s encounters with the state. Join us for a film screening of Welfare (1975) , with an introduction by White in a discussion of Aotearoa's welfare bureaucracies. Welfare, directed by Frederick Wiseman, explores the complexity of the welfare system, highlighting issues like housing, unemployment, and medical problems. It shows both welfare workers and clients struggling to navigate the laws and regulations that impact their lives.",
-        "free": true,
-        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
-        "tags": [
-          "arts-culture"
-        ],
-        "host_slug": "gus-fisher"
-      },
-      {
         "id": "0d0d2141e1bc8a11",
         "title": "Ersha Island",
         "link": "https://www.eventbrite.co.nz/e/ersha-island-performance-tickets-1987094839155?aff=oddtdtcreator",
@@ -690,25 +676,6 @@
         "host_slug": "studio-one"
       },
       {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -725,6 +692,25 @@
         "tags": [
           "arts-culture",
           "history-society"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -818,20 +804,6 @@
     "website": "https://unievents.auckland.ac.nz/",
     "description": "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
     "lectures": [
-      {
-        "id": "7879b554665913d7",
-        "title": "Welfare (1975) film screening",
-        "link": "https://www.eventbrite.co.nz/e/welfare-1975-film-screening-tickets-1986282988889",
-        "time_start": "2026-04-18T14:00:00+12:00",
-        "summary": "Join us for a film screening of Welfare, with an introduction by artist Rangi White in a discussion of Aotearoa's welfare bureaucracies",
-        "description": "Join us for a film screening of Welfare, with an introduction by artist Rangi White in a discussion of Aotearoa's welfare bureaucracies",
-        "free": true,
-        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland",
-        "tags": [
-          "arts-culture"
-        ],
-        "host_slug": "auckland"
-      },
       {
         "id": "0f1ea4588f7224e7",
         "title": "WEN Outreach Workshop - Survive the Shake!",

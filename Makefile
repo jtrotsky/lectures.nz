@@ -1,6 +1,8 @@
-.PHONY: collect build serve dev tidy setup post post-dry enrich enrich-dry enrich-force enrich-source enrich-check
+.PHONY: collect build serve dev tidy setup post post-dry enrich enrich-dry enrich-force enrich-source enrich-check analytics
 
-OLLAMA := http://100.74.102.54:11434
+# Load .env if present (provides OLLAMA_HOST, CF_* etc.)
+-include .env
+export
 
 # Fetch events from all NZ sources → data/
 collect:
@@ -34,19 +36,19 @@ setup: tidy dev
 #   make enrich-check                  ping         — check Ollama is reachable
 
 enrich:
-	OLLAMA_HOST=$(OLLAMA) python3 scripts/enrich.py
+	go run ./cmd/enrich
 
 enrich-dry:
-	DRY_RUN=1 python3 scripts/enrich.py
+	DRY_RUN=1 go run ./cmd/enrich
 
 enrich-force:
-	FORCE_REFRESH=1 OLLAMA_HOST=$(OLLAMA) python3 scripts/enrich.py
+	FORCE_REFRESH=1 go run ./cmd/enrich
 
 enrich-source:
-	REFRESH_SOURCE=$(SOURCE) OLLAMA_HOST=$(OLLAMA) python3 scripts/enrich.py
+	REFRESH_SOURCE=$(SOURCE) go run ./cmd/enrich
 
 enrich-check:
-	curl -sf $(OLLAMA)/api/tags | python3 -c "import json,sys; m=[x['name'] for x in json.load(sys.stdin)['models']]; print('Ollama reachable — models:', ', '.join(m))"
+	curl -sf $(OLLAMA_HOST)/api/tags | python3 -c "import json,sys; m=[x['name'] for x in json.load(sys.stdin)['models']]; print('Ollama reachable — models:', ', '.join(m))"
 
 # ---- Bluesky posting ----------------------------------------------------
 
@@ -57,3 +59,13 @@ post:
 # Preview posts without publishing
 post-dry:
 	DRY_RUN=1 go run ./cmd/post
+
+# ---- Analytics --------------------------------------------------------------
+#
+#   make analytics           last 30 days
+#   make analytics CF_DAYS=7 last 7 days
+#
+# Requires CF_ACCOUNT_ID and CF_API_TOKEN in .env (gitignored) or env.
+
+analytics:
+	go run ./cmd/analytics
