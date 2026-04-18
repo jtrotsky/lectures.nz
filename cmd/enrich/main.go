@@ -130,6 +130,16 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		fmt.Printf("Enriching %d lectures (%d cached) using %s @ %s\n", todo, cached, ollamaModel, ollamaHost)
 	}
 
+	// Warm up the model so it's loaded into memory before the main loop.
+	if !cacheOnly && !dryRun && todo > 0 {
+		fmt.Printf("Warming up %s...", ollamaModel)
+		if _, err := ollamaGenerate(ollamaHost, ollamaModel, "OK"); err != nil {
+			fmt.Printf(" failed (%v), continuing anyway\n", err)
+		} else {
+			fmt.Println(" ready")
+		}
+	}
+
 	stats := map[string]*sourceStats{}
 	enriched := make([]model.Lecture, 0, len(lectures))
 
@@ -166,7 +176,7 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "\n  WARN: %s: %v\n", truncate(lec.Title, 50), err)
 			enriched = append(enriched, lec)
-			st.refreshed++
+			st.unenriched++
 			continue
 		}
 		enriched = append(enriched, result)
@@ -333,7 +343,7 @@ func ollamaGenerate(host, mdl, prompt string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("marshal request: %w", err)
 	}
-	resp, err := (&http.Client{Timeout: 120 * time.Second}).Post(
+	resp, err := (&http.Client{Timeout: 5 * time.Minute}).Post(
 		host+"/api/generate", "application/json", bytes.NewReader(b),
 	)
 	if err != nil {

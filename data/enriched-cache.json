@@ -151,6 +151,11 @@
       }
     ]
   },
+  "27acf592ab1ec661": {
+    "event_type": "conference",
+    "summary": "Conference exploring critical reflections on development practices.",
+    "description": "This year’s theme, Rebalancing Worlds – Reworking Practice, invites us to reflect critically on development practice and explore pathways to more just and equitable futures in the field of international development. Organized by Victoria University's DEVNET program."
+  },
   "29e57fcd6effffcd": {
     "event_type": "market",
     "summary": "Queers \u0026 Wares is a market celebrating queer creativity, community, and connection. Browse unique handmade pieces, vintage clothing, and art from local artists."
@@ -496,6 +501,11 @@
       }
     ]
   },
+  "a2e7b0f7f3d197cd": {
+    "event_type": "ceremony",
+    "summary": "Ceremony marking the conclusion of teaching programmes.",
+    "description": "This ceremony marks the completion of Victoria University's Graduate Diploma of Teaching and Master of Teaching and Learning programmes, celebrating the achievements of graduating students."
+  },
   "a38c1adb5dea7997": {
     "event_type": "seminar",
     "summary": "NZ Podcasting Summit for industry professionals.",
@@ -563,6 +573,17 @@
   "be71cfa05e7f3e78": {
     "event_type": "workshop",
     "summary": "A practical nutrition workshop designed to help Auckland University students maintain a healthy diet while studying on campus."
+  },
+  "c1776f477373865c": {
+    "event_type": "lecture",
+    "summary": "Artist Rangi White introduces a film screening of Frederick Wiseman's Welfare, exploring Aotearoa’s welfare bureaucracies.",
+    "description": "Artist Rangi White draws on the aesthetics of a Work and Income Office to consider how material and spatial conditions structure a person’s encounters with the state. The event includes a film screening of 'Welfare (1975)' directed by Frederick Wiseman, which explores the complexity of the welfare system.",
+    "speakers": [
+      {
+        "name": "Rangi White",
+        "bio": "artist"
+      }
+    ]
   },
   "c286231c9816d9f2": {
     "event_type": "lecture",

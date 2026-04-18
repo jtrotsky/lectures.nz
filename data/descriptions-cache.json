@@ -151,6 +151,9 @@
   "https://www.wgtn.ac.nz/events/2026/05/inaugural-lecture-by-professor-jonathan-barrett": {
     "description": "Respecting equal human dignity: taxation and commercial law in the human rights stateProfessor Barrett’s research concerns the practical application of human rights, particularly..."
   },
+  "https://www.wgtn.ac.nz/events/2026/dates/graduate-diploma-of-teaching-and-master-of-teaching-and-learning-programmes-end": {
+    "description": ""
+  },
   "https://www.wgtn.ac.nz/fhss/about/events/kia-tika-kia-ponofor-a-just-society": {
     "description": "In Aotearoa, we know very well what our most pressing problems are—poverty, inequity, ecological destruction, and climate change. But we are much less...",
     "speakers": [
@@ -217,5 +220,8 @@
         "bio": "LALS, Victoria University of Wellington\","
       }
     ]
+  },
+  "https://www.wgtn.ac.nz/sgees/about/events/devnet-2026-conference": {
+    "description": "This year’s theme, Rebalancing Worlds – Reworking Practice, invites us to reflect critically on development practice and explore pathways to more just and..."
   }
 }
