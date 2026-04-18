@@ -21,16 +21,11 @@ jobs:
         with:
           go-version: '1.22'
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-
       - name: Collect lectures
         run: go run ./cmd/collect
 
       - name: Apply enrichment cache (no Ollama in CI)
-        run: python3 scripts/enrich.py
+        run: go run ./cmd/enrich
 
       - name: Post new lectures to Bluesky
         env:

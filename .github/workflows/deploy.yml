@@ -39,11 +39,10 @@ jobs:
         timeout-minutes: 5
 
       # Enrichment disabled until quality is validated — run locally:
-      #   python scripts/enrich.py && go run ./cmd/build  (review output)
+      #   make enrich && make build  (review output, then commit cache)
       #   then uncomment this step to go live.
       - name: Apply enrichment cache
-        run: |
-          python3 scripts/enrich.py
+        run: go run ./cmd/enrich
 
       - name: Build site
         run: go run ./cmd/build
