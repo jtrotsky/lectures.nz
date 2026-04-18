@@ -212,7 +212,7 @@ func min(a, b int) int {
 }
 
 func run() error {
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Minute)
 	defer cancel()
 
 	descCache := loadDescCache()

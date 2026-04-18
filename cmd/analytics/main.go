@@ -24,10 +24,11 @@ import (
 	"time"
 )
 
-const (
-	cfGraphQL = "https://api.cloudflare.com/client/v4/graphql"
-	siteTag   = "e5bd352daca74ac1bf35ee577666b44d"
-)
+const cfGraphQL = "https://api.cloudflare.com/client/v4/graphql"
+
+// defaultSiteTag is the lectures.nz CF Web Analytics site tag.
+// Override with CF_SITE_TAG env var.
+const defaultSiteTag = "e5bd352daca74ac1bf35ee577666b44d"
 
 // group is one row from a rumPageloadEventsAdaptiveGroups result.
 type group struct {
@@ -104,6 +105,10 @@ func main() {
 	if accountID == "" || apiToken == "" {
 		log.Fatal("CF_ACCOUNT_ID and CF_API_TOKEN must be set")
 	}
+	siteTag := os.Getenv("CF_SITE_TAG")
+	if siteTag == "" {
+		siteTag = defaultSiteTag
+	}
 
 	days := 30
 	if d := os.Getenv("CF_DAYS"); d != "" {
@@ -119,7 +124,7 @@ func main() {
 	fmt.Printf("\nlectures.nz — last %d days (%s → %s)\n", days, startDate, endDate)
 	fmt.Println(strings.Repeat("─", 60))
 
-	accounts, err := fetchStats(apiToken, accountID, startDate, endDate)
+	accounts, err := fetchStats(apiToken, accountID, siteTag, startDate, endDate)
 	if err != nil {
 		log.Fatalf("fetch: %v", err)
 	}
@@ -136,7 +141,7 @@ func main() {
 	fmt.Println()
 }
 
-func fetchStats(token, accountID, start, end string) ([]cfAccount, error) {
+func fetchStats(token, accountID, siteTag, start, end string) ([]cfAccount, error) {
 	payload := map[string]any{
 		"query": gqlQuery,
 		"variables": map[string]string{

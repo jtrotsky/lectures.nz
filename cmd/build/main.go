@@ -25,6 +25,15 @@ import (
 // templateDir holds the path to the templates directory, set in run().
 var templateDir string
 
+// nzLoc is the New Zealand timezone, used for formatting event times.
+var nzLoc = func() *time.Location {
+	loc, _ := time.LoadLocation("Pacific/Auckland")
+	if loc == nil {
+		return time.UTC
+	}
+	return loc
+}()
+
 // templateData is passed to every page template.
 type templateData struct {
 	Hosts        []model.Host
@@ -356,10 +365,6 @@ func gcalURL(l model.Lecture) string {
 // outlookURL returns an Outlook Web calendar "add event" URL.
 func outlookURL(l model.Lecture) string {
 	const fmt = "2006-01-02T15:04:05"
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
 	start := l.TimeStart.In(nzLoc).Format(fmt)
 	var end string
 	if l.TimeEnd != nil {
@@ -433,11 +438,6 @@ func groupByDate(lectures []model.Lecture) []dateGroup {
 	// Already sorted by time from collect.
 	groups := []dateGroup{}
 	groupIndex := map[string]int{}
-
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
 
 	now := time.Now().In(nzLoc)
 	todayKey := now.Format("2006-01-02")
@@ -558,11 +558,6 @@ func writeRSS(path string, lectures []model.Lecture, city string) error {
 		return fmt.Errorf("create %s: %w", path, err)
 	}
 	defer f.Close()
-
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
 
 	var title, selfURL, description string
 	if city == "" {

@@ -144,7 +144,8 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		st := stats[slug]
 
 		isSourceRefresh := refreshSource != "" && lec.HostSlug == refreshSource
-		inCache := lec.ID != "" && func() bool { _, ok := cache[lec.ID]; return ok }()
+		_, cached := cache[lec.ID]
+		inCache := lec.ID != "" && cached
 
 		if inCache && !forceRefresh && !isSourceRefresh {
 			fmt.Printf("[%3d/%d] %s (cached)\n", i+1, len(lectures), truncate(lec.Title, 50))
@@ -184,7 +185,9 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 
 	// Save cache.
 	if b, err := json.MarshalIndent(cache, "", "  "); err == nil {
-		os.WriteFile(cachePath, b, 0644)
+		if err := os.WriteFile(cachePath, b, 0644); err != nil {
+			log.Printf("warn: failed to save cache: %v", err)
+		}
 	}
 
 	// Save output.
@@ -326,7 +329,10 @@ func ollamaGenerate(host, mdl, prompt string) (string, error) {
 		"stream": false,
 		"think":  false, // suppress <think> tokens on reasoning models
 	}
-	b, _ := json.Marshal(payload)
+	b, err := json.Marshal(payload)
+	if err != nil {
+		return "", fmt.Errorf("marshal request: %w", err)
+	}
 	resp, err := (&http.Client{Timeout: 120 * time.Second}).Post(
 		host+"/api/generate", "application/json", bytes.NewReader(b),
 	)
@@ -334,7 +340,10 @@ func ollamaGenerate(host, mdl, prompt string) (string, error) {
 		return "", fmt.Errorf("ollama: %w", err)
 	}
 	defer resp.Body.Close()
-	body, _ := io.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return "", fmt.Errorf("ollama read body: %w", err)
+	}
 	var result struct {
 		Response string `json:"response"`
 	}
