@@ -135,10 +135,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("artgallery-nz: fetch listing: %w", err)
 	}
 
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 
 	// Split by the image-link class marker; each chunk is one card.
 	chunks := strings.Split(string(body), cardMarker)

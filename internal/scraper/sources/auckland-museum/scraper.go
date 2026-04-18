@@ -60,29 +60,11 @@ var (
 	descRe = regexp.MustCompile(`(?i)<p[^>]*>([\s\S]*?)</p>`)
 	// pastRe detects "Past Event" status labels.
 	pastRe = regexp.MustCompile(`(?i)past\s+event`)
-	// tagRe strips HTML tags.
-	tagRe = regexp.MustCompile(`<[^>]+>`)
 	// dateParsRe matches "TUE 14 APR" in the date string.
 	dateParsRe = regexp.MustCompile(`(?i)(\d{1,2})\s+(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)`)
 	// timeParsRe matches a start time like "6PM" or "6.30PM".
 	timeParsRe = regexp.MustCompile(`(?i)(\d{1,2})(?:[\.\:](\d{2}))?\s*(am|pm)`)
 )
-
-var monthMap = map[string]time.Month{
-	"jan": time.January, "feb": time.February, "mar": time.March,
-	"apr": time.April, "may": time.May, "jun": time.June,
-	"jul": time.July, "aug": time.August, "sep": time.September,
-	"oct": time.October, "nov": time.November, "dec": time.December,
-}
-
-func innerText(html string) string {
-	s := tagRe.ReplaceAllString(html, " ")
-	s = strings.ReplaceAll(s, "&amp;", "&")
-	s = strings.ReplaceAll(s, "&nbsp;", " ")
-	s = strings.ReplaceAll(s, "&#39;", "'")
-	s = strings.ReplaceAll(s, "&ndash;", "–")
-	return strings.TrimSpace(strings.Join(strings.Fields(s), " "))
-}
 
 // parseEventDate parses "TUE 14 APR, 6PM - 7.30PM".
 // Returns zero time if the date is not a specific future date (e.g. "ON NOW", "DAILY …").
@@ -100,7 +82,7 @@ func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
 		return time.Time{}, false
 	}
 	day, _ := strconv.Atoi(dm[1])
-	month, ok := monthMap[strings.ToLower(dm[2])]
+	month, ok := scraper.AbbrevMonthMap[strings.ToLower(dm[2])]
 	if !ok {
 		return time.Time{}, false
 	}
@@ -140,10 +122,7 @@ func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 
 	seen := make(map[string]bool)
 	var lectures []model.Lecture
@@ -202,7 +181,7 @@ func scrapeListingPage(ctx context.Context, url, cardMarker string, titleRe *reg
 			continue
 		}
 		href := titleM[1]
-		title := innerText(titleM[2])
+		title := scraper.InnerText(titleM[2])
 		if title == "" || seen[href] {
 			continue
 		}
@@ -232,7 +211,7 @@ func scrapeListingPage(ctx context.Context, url, cardMarker string, titleRe *reg
 
 		summary := ""
 		if dm := descRe.FindStringSubmatch(chunk); dm != nil {
-			summary = innerText(dm[1])
+			summary = scraper.InnerText(dm[1])
 		}
 
 		// Default to ticketed; override only if explicitly described as free.

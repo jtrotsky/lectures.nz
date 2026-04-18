@@ -52,28 +52,11 @@ var (
 	pAllRe = regexp.MustCompile(`(?i)<p[^>]*>([\s\S]*?)</p>`)
 	// btnRe extracts the href from et_pb_button anchor.
 	btnRe = regexp.MustCompile(`(?i)class="et_pb_button[^"]*"[^>]*href="([^"]+)"`)
-	// tagRe strips HTML tags.
-	tagRe = regexp.MustCompile(`<[^>]+>`)
 	// dateParsRe matches "11 April" or "18 April" in date strings.
 	dateParsRe = regexp.MustCompile(`(?i)(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)`)
 	// timeParsRe matches start time like "10.30am", "2pm".
 	timeParsRe = regexp.MustCompile(`(?i)(\d{1,2})(?:[\.\:](\d{2}))?\s*(am|pm)`)
 )
-
-var monthMap = map[string]time.Month{
-	"january": time.January, "february": time.February, "march": time.March,
-	"april": time.April, "may": time.May, "june": time.June,
-	"july": time.July, "august": time.August, "september": time.September,
-	"october": time.October, "november": time.November, "december": time.December,
-}
-
-func innerText(html string) string {
-	s := tagRe.ReplaceAllString(html, " ")
-	s = strings.ReplaceAll(s, "&amp;", "&")
-	s = strings.ReplaceAll(s, "&#8217;", "'")
-	s = strings.ReplaceAll(s, "&nbsp;", " ")
-	return strings.TrimSpace(strings.Join(strings.Fields(s), " "))
-}
 
 // parseDateStr parses "Saturday 11 April, 10.30am-11.30am" → time.Time.
 func parseDateStr(s string, loc *time.Location) (time.Time, bool) {
@@ -82,7 +65,7 @@ func parseDateStr(s string, loc *time.Location) (time.Time, bool) {
 		return time.Time{}, false
 	}
 	day, _ := strconv.Atoi(dm[1])
-	month, ok := monthMap[strings.ToLower(dm[2])]
+	month, ok := scraper.FullMonthMap[strings.ToLower(dm[2])]
 	if !ok {
 		return time.Time{}, false
 	}
@@ -129,10 +112,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("gus-fisher: fetch: %w", err)
 	}
 
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 
 	html := string(body)
 
@@ -149,7 +129,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		if h1M == nil {
 			continue
 		}
-		title := innerText(h1M[1])
+		title := scraper.InnerText(h1M[1])
 		if title == "" {
 			continue
 		}
@@ -160,7 +140,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		if len(pMatches) == 0 {
 			continue
 		}
-		dateStr := innerText(pMatches[0][1])
+		dateStr := scraper.InnerText(pMatches[0][1])
 
 		t, ok := parseDateStr(dateStr, loc)
 		if !ok {
@@ -170,7 +150,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		// Description: all text in the next block after the date line.
 		// Content may use <div> tags instead of <p>, so strip the date line
 		// from the raw block text and take whatever remains.
-		allText := innerText(nextBlock)
+		allText := scraper.InnerText(nextBlock)
 		summary := strings.TrimSpace(strings.TrimPrefix(allText, dateStr))
 
 		// Registration link: search forward from current position in raw HTML.

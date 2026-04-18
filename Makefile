@@ -1,4 +1,4 @@
-.PHONY: collect build serve dev tidy setup post post-dry enrich enrich-dry enrich-force enrich-source enrich-check analytics
+.PHONY: collect build serve dev tidy setup post post-dry enrich enrich-dry enrich-force enrich-source enrich-check analytics audit
 
 # Load .env if present (provides OLLAMA_HOST, CF_* etc.)
 -include .env
@@ -69,3 +69,11 @@ post-dry:
 
 analytics:
 	go run ./cmd/analytics
+
+# ---- Audit ------------------------------------------------------------------
+#
+#   make audit                           reads data/lectures-enriched.json
+#   make audit FILE=data/lectures.json   reads specified file
+
+audit:
+	go run ./cmd/audit $(FILE)

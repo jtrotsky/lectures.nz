@@ -67,28 +67,13 @@ var (
 	dateTimeRe     = regexp.MustCompile(`<h3[^>]*>([^<]+)</h3>`)
 	venueRe        = regexp.MustCompile(`sub-page-details-section--event__location-text[^>]*>([^<]+)</h4>`)
 	summaryBlockRe = regexp.MustCompile(`(?i)class="dn-s"[^>]*>([\s\S]*?)</div>`)
-	tagRe          = regexp.MustCompile(`<[^>]+>`)
+
 	inPersonRe     = regexp.MustCompile(`event__icon--in-person`)
 
 	// detailDateRe parses "Tuesday, 14 April 2026 5:30pm".
 	detailDateRe = regexp.MustCompile(`(?i)(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})`)
 	timeParsRe   = regexp.MustCompile(`(?i)(\d{1,2})(?::(\d{2}))?\s*(am|pm)`)
 )
-
-var fullMonthMap = map[string]time.Month{
-	"january": time.January, "february": time.February, "march": time.March,
-	"april": time.April, "may": time.May, "june": time.June,
-	"july": time.July, "august": time.August, "september": time.September,
-	"october": time.October, "november": time.November, "december": time.December,
-}
-
-func innerText(s string) string {
-	s = tagRe.ReplaceAllString(s, " ")
-	s = strings.ReplaceAll(s, "&amp;", "&")
-	s = strings.ReplaceAll(s, "&nbsp;", " ")
-	s = strings.ReplaceAll(s, "&#039;", "'")
-	return strings.TrimSpace(strings.Join(strings.Fields(s), " "))
-}
 
 // parseDetailDate parses "Tuesday, 14 April 2026 5:30pm".
 func parseDetailDate(s string, loc *time.Location) (time.Time, bool) {
@@ -97,7 +82,7 @@ func parseDetailDate(s string, loc *time.Location) (time.Time, bool) {
 		return time.Time{}, false
 	}
 	day, _ := strconv.Atoi(dm[1])
-	month, ok := fullMonthMap[strings.ToLower(dm[2])]
+	month, ok := scraper.FullMonthMap[strings.ToLower(dm[2])]
 	if !ok {
 		return time.Time{}, false
 	}
@@ -144,10 +129,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("nziia: fetch listing: %w", err)
 	}
 
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 	now := time.Now()
 
 	html := string(body)
@@ -254,7 +236,7 @@ func fetchDetail(ctx context.Context, link string, loc *time.Location) (model.Le
 	// Summary text.
 	var summary string
 	if sum := summaryBlockRe.FindStringSubmatch(content); sum != nil {
-		summary = innerText(sum[1])
+		summary = scraper.InnerText(sum[1])
 	}
 
 	lec := model.Lecture{

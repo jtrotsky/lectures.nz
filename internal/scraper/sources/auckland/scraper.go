@@ -116,10 +116,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("auckland: unmarshal: %w", err)
 	}
 
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
+	nzLoc := scraper.NZLocation
 
 	var lectures []model.Lecture
 	for _, e := range events {

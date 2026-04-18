@@ -156,10 +156,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("tepapa: unmarshal __NEXT_DATA__: %w", err)
 	}
 
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 
 	pages := nd.Props.PageProps.BodySubscription.InitialData.AllSubLandingPages
 	if len(pages) == 0 || len(pages[0].Content) == 0 {

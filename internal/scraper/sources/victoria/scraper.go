@@ -63,33 +63,6 @@ type vuwResponse struct {
 	} `json:"response"`
 }
 
-// parseTime12h parses a 12-hour time string like "10:00am", "12:30pm", "5:00pm".
-func parseTime12h(s string) (hour, min int, ok bool) {
-	s = strings.ToLower(strings.TrimSpace(s))
-	if s == "" {
-		return 0, 0, false
-	}
-	isPM := strings.HasSuffix(s, "pm")
-	s = strings.TrimSuffix(strings.TrimSuffix(s, "pm"), "am")
-	parts := strings.SplitN(s, ":", 2)
-	if len(parts) < 1 {
-		return 0, 0, false
-	}
-	h, err := strconv.Atoi(strings.TrimSpace(parts[0]))
-	if err != nil {
-		return 0, 0, false
-	}
-	mn := 0
-	if len(parts) == 2 {
-		mn, _ = strconv.Atoi(strings.TrimSpace(parts[1]))
-	}
-	if isPM && h != 12 {
-		h += 12
-	} else if !isPM && h == 12 {
-		h = 0
-	}
-	return h, mn, true
-}
 
 // adminKeywords identifies administrative/calendar events to exclude.
 var adminKeywords = []string{
@@ -137,10 +110,7 @@ func isOverseas(location string) bool {
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
+	nzLoc := scraper.NZLocation
 
 	now := time.Now().In(nzLoc)
 	// Format: DMMMYYYY e.g. "8Apr2026"
@@ -195,7 +165,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		month, _ := strconv.Atoi(startStr[4:6])
 		day, _ := strconv.Atoi(startStr[6:])
 
-		h, mn, ok := parseTime12h(md.EventStartTime)
+		h, mn, ok := scraper.ParseTime12h(md.EventStartTime)
 		if !ok {
 			h, mn = 12, 0
 		}

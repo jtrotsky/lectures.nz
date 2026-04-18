@@ -106,11 +106,7 @@ func containsString(haystack []string, needle string) bool {
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
-
+	nzLoc := scraper.NZLocation
 	now := time.Now().In(nzLoc)
 	nowMS := now.UnixMilli()
 

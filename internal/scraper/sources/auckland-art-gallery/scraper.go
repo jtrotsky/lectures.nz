@@ -98,10 +98,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, nil
 	}
 
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
+	nzLoc := scraper.NZLocation
 	now := time.Now()
 
 	var lectures []model.Lecture

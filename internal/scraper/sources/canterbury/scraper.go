@@ -41,10 +41,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 	// return parseCanterburyHTML(body)
 
 	now := time.Now()
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 
 	lectures := []model.Lecture{
 		{

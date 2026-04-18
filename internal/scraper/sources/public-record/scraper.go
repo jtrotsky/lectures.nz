@@ -49,8 +49,6 @@ var (
 	articleTitleRe = regexp.MustCompile(`(?i)class="card__heading[^"]*"[^>]*>[\s\S]*?<a[^>]*>([^<]+)</a>`)
 	// articleInfoRe extracts the article-card__info div content.
 	articleInfoRe = regexp.MustCompile(`(?i)class="article-card__info"[^>]*>([\s\S]*?)</div>`)
-	// tagStripRe removes HTML tags.
-	tagStripRe = regexp.MustCompile(`<[^>]+>`)
 	// nextPageRe detects whether a next page link exists.
 	nextPageRe = regexp.MustCompile(`(?i)pagination__item--next`)
 	// freeRe detects "free" in a pricing/admission context on the article page.
@@ -62,20 +60,6 @@ var (
 	pRe                    = regexp.MustCompile(`(?i)<p[^>]*>([\s\S]*?)</p>`)
 )
 
-var monthMap = map[string]time.Month{
-	"jan": time.January, "feb": time.February, "mar": time.March,
-	"apr": time.April, "may": time.May, "jun": time.June,
-	"jul": time.July, "aug": time.August, "sep": time.September,
-	"oct": time.October, "nov": time.November, "dec": time.December,
-}
-
-func innerText(html string) string {
-	s := tagStripRe.ReplaceAllString(html, " ")
-	s = strings.ReplaceAll(s, "&nbsp;", " ")
-	s = strings.ReplaceAll(s, "\u00a0", " ")
-	return strings.Join(strings.Fields(s), " ")
-}
-
 // parseOrdinalDate parses "1st May 2026" → time.Time.
 func parseOrdinalDate(s string, loc *time.Location) (time.Time, bool) {
 	m := ordinalDateRe.FindStringSubmatch(s)
@@ -83,7 +67,7 @@ func parseOrdinalDate(s string, loc *time.Location) (time.Time, bool) {
 		return time.Time{}, false
 	}
 	day, _ := strconv.Atoi(m[1])
-	month, ok := monthMap[strings.ToLower(m[2])]
+	month, ok := scraper.AbbrevMonthMap[strings.ToLower(m[2])]
 	if !ok {
 		return time.Time{}, false
 	}
@@ -119,7 +103,7 @@ func fetchDetail(ctx context.Context, url string) articleDetail {
 	desc := ""
 	all := pRe.FindAllSubmatch(content, -1)
 	for _, pm := range all {
-		text := innerText(string(pm[1]))
+		text := scraper.InnerText(string(pm[1]))
 		if text != "" {
 			desc = text
 			break
@@ -131,10 +115,7 @@ func fetchDetail(ctx context.Context, url string) articleDetail {
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 
 	seen := make(map[string]bool)
 	var lectures []model.Lecture
@@ -184,7 +165,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			if infoM == nil {
 				continue
 			}
-			dateText := innerText(infoM[1])
+			dateText := scraper.InnerText(infoM[1])
 
 			t, ok := parseOrdinalDate(dateText, loc)
 			if !ok {

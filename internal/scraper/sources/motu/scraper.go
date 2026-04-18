@@ -51,24 +51,11 @@ var (
 	speakerRe = regexp.MustCompile(`<p[^>]*><strong>([^<]+)</strong>`)
 	// Summary: first <p> after </h1>.
 	firstParaRe = regexp.MustCompile(`</h1>\s*(?:<[^/][^>]*>)*\s*<p[^>]*>([\s\S]*?)</p>`)
-	tagRe       = regexp.MustCompile(`<[^>]+>`)
+
 )
 
-func innerText(s string) string {
-	s = tagRe.ReplaceAllString(s, " ")
-	s = strings.ReplaceAll(s, "&amp;", "&")
-	s = strings.ReplaceAll(s, "&nbsp;", " ")
-	s = strings.ReplaceAll(s, "&#039;", "'")
-	s = strings.ReplaceAll(s, "&ndash;", "–")
-	s = strings.ReplaceAll(s, "&mdash;", "—")
-	return strings.TrimSpace(strings.Join(strings.Fields(s), " "))
-}
-
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 	now := time.Now().In(loc)
 
 	seen := make(map[string]bool)
@@ -153,7 +140,7 @@ func fetchDetail(ctx context.Context, link string, listingDate time.Time, loc *t
 	if tm == nil {
 		return model.Lecture{}, false
 	}
-	title := innerText(tm[1])
+	title := scraper.InnerText(tm[1])
 
 	// Use noon on the listing date as the start time (Motu rarely publishes a time).
 	t := time.Date(listingDate.Year(), listingDate.Month(), listingDate.Day(), 12, 0, 0, 0, loc)
@@ -161,7 +148,7 @@ func fetchDetail(ctx context.Context, link string, listingDate time.Time, loc *t
 	// Summary: first paragraph after the h1.
 	var summary string
 	if pm := firstParaRe.FindStringSubmatch(html); pm != nil {
-		summary = innerText(pm[1])
+		summary = scraper.InnerText(pm[1])
 	}
 
 	// Speakers: first <strong> in each <p> block, limited to a few.

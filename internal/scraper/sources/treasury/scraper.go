@@ -88,10 +88,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("treasury: fetch organiser page: %w", err)
 	}
 
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 	now := time.Now()
 
 	// Find and parse the JSON-LD ItemList block.

@@ -17,6 +17,7 @@ public/
 *.test
 *.out
 /analytics
+/audit
 /collect
 /build
 /enrich

@@ -53,10 +53,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, nil // bot-blocked — skip gracefully
 	}
 
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 	now := time.Now()
 
 	var lectures []model.Lecture
@@ -91,7 +88,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 
 		var summary string
 		if sm := summaryRe.FindSubmatch(article); sm != nil {
-			summary = scraper.TruncateSummary(stripTags(string(sm[1])), 200)
+			summary = scraper.TruncateSummary(scraper.InnerText(string(sm[1])), 200)
 		}
 
 		lectures = append(lectures, model.Lecture{
@@ -110,11 +107,3 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 	return lectures, nil
 }
 
-var tagRe = regexp.MustCompile(`<[^>]+>`)
-
-func stripTags(s string) string {
-	s = tagRe.ReplaceAllString(s, " ")
-	s = strings.ReplaceAll(s, "&amp;", "&")
-	s = strings.ReplaceAll(s, "&nbsp;", " ")
-	return strings.Join(strings.Fields(s), " ")
-}

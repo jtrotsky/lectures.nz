@@ -47,12 +47,7 @@ var (
 	dateRe = regexp.MustCompile(`(?s)class="tile-header text-meta"[^>]*>\s*([^<]+?)\s*<`)
 	// Title in <h3 class="tile-title"...>Title</h3>
 	titleRe = regexp.MustCompile(`(?s)class="tile-title"[^>]*>\s*([^<]+?)\s*<`)
-	tagRe   = regexp.MustCompile(`<[^>]+>`)
 )
-
-func stripTags(s string) string {
-	return strings.TrimSpace(strings.Join(strings.Fields(tagRe.ReplaceAllString(s, " ")), " "))
-}
 
 // workshopKeywords identifies hands-on workshops that aren't talks/lectures.
 var workshopKeywords = []string{"workshop", "craft club", "pinhole camera"}
@@ -68,10 +63,7 @@ func isWorkshop(title string) bool {
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
+	nzLoc := scraper.NZLocation
 	now := time.Now().In(nzLoc)
 
 	body, err := scraper.Fetch(ctx, listingURL)
@@ -113,7 +105,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		if titleM == nil {
 			continue
 		}
-		title := stripTags(titleM[1])
+		title := scraper.InnerText(titleM[1])
 
 		if isWorkshop(title) {
 			continue
@@ -148,5 +140,5 @@ func fetchSummary(ctx context.Context, eventURL string) string {
 	if m == nil {
 		return ""
 	}
-	return stripTags(string(m[1]))
+	return scraper.InnerText(string(m[1]))
 }

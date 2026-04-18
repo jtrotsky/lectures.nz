@@ -110,11 +110,6 @@ func scrapeGroup(ctx context.Context, g group) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("extract: %w", err)
 	}
 
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
-
 	var lectures []model.Lecture
 	for _, e := range events {
 		if e.Status != "ACTIVE" {

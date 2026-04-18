@@ -56,27 +56,13 @@ var (
 	titleRe   = regexp.MustCompile(`(?i)<h1[^>]*class="page-heading"[^>]*>([^<]+)</h1>`)
 	introRe   = regexp.MustCompile(`(?i)class="intro-content[^"]*"[^>]*>\s*<p[^>]*>([\s\S]*?)</p>`)
 	venueRe = regexp.MustCompile(`(?i)<p[^>]*class="speak-large"[^>]*>([\s\S]*?)</p>`)
-	tagRe     = regexp.MustCompile(`<[^>]+>`)
+
 
 	// dateParsRe parses "21 April, 2026" or "21 April 2026".
 	dateParsRe = regexp.MustCompile(`(?i)(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December),?\s+(\d{4})`)
 	// timeParsRe parses "6:15pm" or "6pm".
 	timeParsRe = regexp.MustCompile(`(?i)(\d{1,2})(?::(\d{2}))?\s*(am|pm)`)
 )
-
-var fullMonthMap = map[string]time.Month{
-	"january": time.January, "february": time.February, "march": time.March,
-	"april": time.April, "may": time.May, "june": time.June,
-	"july": time.July, "august": time.August, "september": time.September,
-	"october": time.October, "november": time.November, "december": time.December,
-}
-
-func innerText(s string) string {
-	s = tagRe.ReplaceAllString(s, " ")
-	s = strings.ReplaceAll(s, "&amp;", "&")
-	s = strings.ReplaceAll(s, "&nbsp;", " ")
-	return strings.TrimSpace(strings.Join(strings.Fields(s), " "))
-}
 
 // parseEventDate parses "6:15pm Tue 21 April, 2026".
 func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
@@ -85,7 +71,7 @@ func parseEventDate(s string, loc *time.Location) (time.Time, bool) {
 		return time.Time{}, false
 	}
 	day, _ := strconv.Atoi(dm[1])
-	month, ok := fullMonthMap[strings.ToLower(dm[2])]
+	month, ok := scraper.FullMonthMap[strings.ToLower(dm[2])]
 	if !ok {
 		return time.Time{}, false
 	}
@@ -117,10 +103,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		return nil, fmt.Errorf("royal-society: fetch listing: %w", err)
 	}
 
-	loc, _ := time.LoadLocation("Pacific/Auckland")
-	if loc == nil {
-		loc = time.UTC
-	}
+	loc := scraper.NZLocation
 
 	seen := make(map[string]bool)
 	var hrefs []string
@@ -177,8 +160,8 @@ func fetchDetail(ctx context.Context, link string, loc *time.Location) (model.Le
 	if len(venueMatches) < 2 {
 		return model.Lecture{}, false
 	}
-	venue := strings.TrimSpace(innerText(venueMatches[0][1]))
-	dateStr := strings.TrimSpace(innerText(venueMatches[1][1]))
+	venue := strings.TrimSpace(scraper.InnerText(venueMatches[0][1]))
+	dateStr := strings.TrimSpace(scraper.InnerText(venueMatches[1][1]))
 
 	t, ok := parseEventDate(dateStr, loc)
 	if !ok {
@@ -190,7 +173,7 @@ func fetchDetail(ctx context.Context, link string, loc *time.Location) (model.Le
 
 	var summary string
 	if im := introRe.FindStringSubmatch(html); im != nil {
-		summary = innerText(im[1])
+		summary = scraper.InnerText(im[1])
 	}
 
 	return model.Lecture{

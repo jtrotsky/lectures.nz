@@ -89,13 +89,6 @@ func fetchDetail(ctx context.Context, url string) eventDetail {
 	return eventDetail{description: desc, free: free}
 }
 
-// stripTags removes HTML tags and normalises whitespace.
-func stripTags(s string) string {
-	s = regexp.MustCompile(`<[^>]+>`).ReplaceAllString(s, " ")
-	s = strings.Join(strings.Fields(s), " ")
-	return strings.TrimSpace(s)
-}
-
 // parseAUTTime parses "Wednesday 22 Apr, 5:30pm" style strings.
 // Returns hour, minute in 24h and whether parsing succeeded.
 func parseAUTTime(s string) (int, int, bool) {
@@ -141,10 +134,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		section = section[:end]
 	}
 
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	if nzLoc == nil {
-		nzLoc = time.UTC
-	}
+	nzLoc := scraper.NZLocation
 	now := time.Now().In(nzLoc)
 
 	matches := eventListRe.FindAllStringSubmatch(section, -1)
@@ -185,13 +175,13 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			continue
 		}
 		eventURL := titleM[1]
-		title := stripTags(titleM[2])
+		title := scraper.InnerText(titleM[2])
 
 		// Extract start time.
 		dtM := dateTimeRe.FindStringSubmatch(block)
 		h, mn, ok := 0, 0, false
 		if dtM != nil {
-			h, mn, ok = parseAUTTime(stripTags(dtM[1]))
+			h, mn, ok = parseAUTTime(scraper.InnerText(dtM[1]))
 		}
 		if !ok {
 			h, mn = 12, 0
@@ -206,7 +196,7 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			raw := locM[1]
 			// Replace <br> with ", " then strip remaining tags.
 			raw = regexp.MustCompile(`(?i)<br\s*/?>(\s*<br\s*/?>)*`).ReplaceAllString(raw, ", ")
-			location = stripTags(raw)
+			location = scraper.InnerText(raw)
 			// Remove trailing NZ boilerplate
 			location = strings.TrimSuffix(location, ", Auckland , New Zealand")
 			location = strings.TrimSuffix(location, ", New Zealand")

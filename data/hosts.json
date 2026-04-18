@@ -805,20 +805,6 @@
     "description": "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
     "lectures": [
       {
-        "id": "0f1ea4588f7224e7",
-        "title": "WEN Outreach Workshop - Survive the Shake!",
-        "link": "https://www.eventbrite.co.nz/e/wen-outreach-workshop-survive-the-shake-tickets-1984933311969",
-        "time_start": "2026-04-19T10:00:00+12:00",
-        "summary": "Free half day workshop for year 9-10 women, where creativity meets engineering, includes a pizza lunch.",
-        "description": "Free half day workshop for year 9-10 women, where creativity meets engineering, includes a pizza lunch.",
-        "free": true,
-        "location": "University of Auckland Engineering Atrium, Level 3, Building 401, 5 Grafton Road, Auckland City., 5 Grafton Rd, Auckland",
-        "tags": [
-          "science-technology"
-        ],
-        "host_slug": "auckland"
-      },
-      {
         "id": "0c5a2aaa12aaa6f5",
         "title": "The Enabling Technology of Photonics",
         "link": "https://www.eventbrite.co.nz/e/the-enabling-technology-of-photonics-tickets-1984944877562",
