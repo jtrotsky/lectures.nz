@@ -284,9 +284,16 @@ func run() error {
 		log.Printf("OK    [%s]: %d lectures", r.host.Slug, len(r.lectures))
 		hostMap[r.host.Slug] = r.host
 
-		now := time.Now()
+		nzLoc, _ := time.LoadLocation("Pacific/Auckland")
+		if nzLoc == nil {
+			nzLoc = time.UTC
+		}
+		nowNZ := time.Now().In(nzLoc)
+		// Cutoff is start of today in NZ time so today's events are never skipped
+		// even when CI runs on UTC (where NZ "today" looks like UTC yesterday).
+		todayNZ := time.Date(nowNZ.Year(), nowNZ.Month(), nowNZ.Day(), 0, 0, 0, 0, nzLoc)
 		for _, l := range r.lectures {
-			if l.TimeStart.Before(now) {
+			if l.TimeStart.Before(todayNZ) {
 				continue // skip past events
 			}
 			if seen[l.ID] {
