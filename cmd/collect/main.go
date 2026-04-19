@@ -292,9 +292,14 @@ func run() error {
 		// Cutoff is start of today in NZ time so today's events are never skipped
 		// even when CI runs on UTC (where NZ "today" looks like UTC yesterday).
 		todayNZ := time.Date(nowNZ.Year(), nowNZ.Month(), nowNZ.Day(), 0, 0, 0, 0, nzLoc)
+		cutoffFuture := todayNZ.AddDate(0, 0, 90)
 		for _, l := range r.lectures {
 			if l.TimeStart.Before(todayNZ) {
 				continue // skip past events
+			}
+			if l.TimeStart.After(cutoffFuture) {
+				log.Printf("SKIP  [%s]: %q — date too far in future (%s)", l.HostSlug, l.Title, l.TimeStart.Format("2006-01-02"))
+				continue
 			}
 			if seen[l.ID] {
 				continue // dedup
