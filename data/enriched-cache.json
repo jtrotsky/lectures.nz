@@ -401,6 +401,17 @@
       }
     ]
   },
+  "7c6f453987ef3c34": {
+    "event_type": "film screening",
+    "summary": "Screening of Selina Ershadi's 'Fugue Notes' post-remastering.",
+    "description": "The first screening of Fugue Notes (2025), remastered for the London BFI Film Festival, is featured in the Anatomy of Place, Sites of Becoming section. This event showcases the film's narrative and visual evolution since its initial release.",
+    "speakers": [
+      {
+        "name": "Selina Ershadi",
+        "bio": "London BFI Film Festival"
+      }
+    ]
+  },
   "7fd7ba297f4c93f3": {
     "summary": "Details For many generations, Aotearoa has invested comparatively little, certainly by OECD standards, in research and development (R and D). Moreover, since 2020–21,..."
   },
@@ -725,6 +736,11 @@
       }
     ]
   },
+  "e7ee177f3796e430": {
+    "event_type": "lecture",
+    "summary": "An evening exploring the pauku's journey, history, and cultural significance at Auckland War Memorial Museum.",
+    "description": "At Tāmaki Paenga Hira Auckland War Memorial Museum, experience an enlightening session delving into the pauku's historical narrative, traditional practices of care, and profound mātauranga associated with this esteemed cloak."
+  },
   "e885f0a7f721ce37": {
     "event_type": "lecture",
     "summary": "Canterbury Water explores ecology, irrigation, and freshwater future.",
@@ -758,6 +774,11 @@
         "bio": "Kaitohu Director"
       }
     ]
+  },
+  "f575220e54475c4f": {
+    "event_type": "lecture",
+    "summary": "Massey University commemorates 50 years of Bachelor of Social Work.",
+    "description": "Celebrating the 50th anniversary of the Bachelor of Social Work qualification, this event series reflects on its past impact and envisions future directions for social work education and practice at Massey University."
   },
   "f9522d3572d03fb2": {
     "summary": "Future Environments Thought Leadership session, in partnership with Whaikaha – Ministry of Disabled People, focused on accessible and inclusive design in",

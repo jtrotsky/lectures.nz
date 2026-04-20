@@ -392,7 +392,7 @@ func linkCardEmbed(uri, title, description string) map[string]any {
 //   - Has a description longer than 50 chars (+1)
 //   - Free event (+1)
 //   - Has a physical location — not online-only (+1)
-//   - Sweet-spot timing: 3–10 days out (+1)
+//   - Urgency: 1–7 days out (+3), 8–14 days out (+1)
 //   - High-quality event type (lecture or seminar) (+1)
 func score(l model.Lecture, now time.Time) int {
 	s := 0
@@ -430,10 +430,13 @@ func score(l model.Lecture, now time.Time) int {
 		s += 1
 	}
 
-	// Sweet-spot timing: 3–10 days out.
+	// Urgency bonus: imminent events get a strong boost so posts go out while people can still attend.
 	days := l.TimeStart.Sub(now).Hours() / 24
-	if days >= 3 && days <= 10 {
-		s += 1
+	switch {
+	case days >= 1 && days <= 7:
+		s += 3 // happening this week — high urgency
+	case days > 7 && days <= 14:
+		s += 1 // coming up soon — mild preference
 	}
 
 	// Event type quality.

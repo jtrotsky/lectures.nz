@@ -89,7 +89,23 @@
             <li><a href="/{{.Host.Slug}}/{{.Lecture.ID}}/calendar.ics" onclick="track('calendar_add', {provider:'apple'})">Apple / iCal (.ics)</a></li>
           </ul>
         </details>
+        <button id="share-btn" class="btn btn-secondary" style="display:none">Share</button>
       </div>
+      <script>
+        (function() {
+          if (!navigator.share) return;
+          var btn = document.getElementById('share-btn');
+          btn.style.display = '';
+          btn.addEventListener('click', function() {
+            track('share_click', {host:'{{.Host.Slug}}', id:'{{.Lecture.ID}}'});
+            navigator.share({
+              title: '{{js .Lecture.Title}}',
+              text: '{{js .Lecture.Title}}',
+              url: window.location.href
+            });
+          });
+        })();
+      </script>
 
     </div>
   </section>
