@@ -83,6 +83,11 @@
       }
     ]
   },
+  "19b443dab561d5b4": {
+    "event_type": "festival",
+    "summary": "Celebrate New Zealand Sign Language Week with whānau-friendly activities at Te Papa's marae.",
+    "description": "Join Te Papa to celebrate New Zealand Sign Language Week. The day will feature whānau-friendly activities held on Rongomaraeroa, Te Papa’s marae. It’s a wonderful opportunity for families to engage with the community through the art of NZSL."
+  },
   "1e871946e014fdb7": {
     "event_type": "ceremony",
     "summary": "Celebrate the announcement of the 2026 Ockham New Zealand Book Awards longlist, featuring readings from authors in all four categories."
@@ -333,6 +338,17 @@
     "summary": "Authors discuss writing from the margins and global publishing.",
     "description": "A conversation with three New Zealand authors exploring themes of writing from the margins, finding readership, and telling Kiwi stories in a globalised publishing market. "
   },
+  "6c85bd14c67bf65d": {
+    "event_type": "talk",
+    "summary": "Neuroscientist Emeritus Professor Cliff Abraham discusses how nerve cells in the brain facilitate memory formation and forgetting.",
+    "description": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember—or forget.",
+    "speakers": [
+      {
+        "name": "Professor Cliff Abraham FRSNZ",
+        "bio": "Neuroscientist Emeritus"
+      }
+    ]
+  },
   "6edac8ffc7e3fbf6": {
     "event_type": "lecture",
     "summary": "Royal Society presents an urgent update on climate change.",
@@ -468,6 +484,21 @@
   "95802a3f9566c770": {
     "summary": "Shakespeare as Reviser: The Merry Wives of Windsor",
     "description": "Shakespeare as Reviser: The Merry Wives of Windsor"
+  },
+  "960eb2c54daf54c8": {
+    "event_type": "talk",
+    "summary": "An exploration of Hamlet’s journey dealing with loss, remarriage, and familial turmoil.",
+    "description": "Hamlet’s looking paler than usual. Their father’s dead, mother’s remarried, and... Content Forecast: Blood, violence, depictions of mental distress and death. R13.",
+    "speakers": [
+      {
+        "name": "THEATRE 318",
+        "bio": "Company"
+      },
+      {
+        "name": "319",
+        "bio": "Scenography in Produ"
+      }
+    ]
   },
   "968071dd09d57105": {
     "event_type": "festival",
