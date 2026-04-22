@@ -14,7 +14,7 @@
 //
 // Optional:
 //
-//	OLLAMA_MODEL     model to use (default: qwen2.5:14b)
+//	OLLAMA_MODEL     model to use (default: gemma4:e4b)
 //	DRY_RUN=1        print prompts, skip Ollama calls
 //	FORCE_REFRESH=1  re-enrich all, ignore cache
 //	REFRESH_SOURCE=X re-enrich only events from this host_slug
@@ -73,7 +73,7 @@ func main() {
 	ollamaHost := os.Getenv("OLLAMA_HOST")
 	ollamaModel := os.Getenv("OLLAMA_MODEL")
 	if ollamaModel == "" {
-		ollamaModel = "qwen2.5:14b"
+		ollamaModel = "gemma4:e4b"
 	}
 	dryRun := os.Getenv("DRY_RUN") == "1"
 	forceRefresh := os.Getenv("FORCE_REFRESH") == "1"
