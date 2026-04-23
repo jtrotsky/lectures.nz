@@ -139,6 +139,9 @@
   "https://www.royalsociety.org.nz/events/thin-ice-2026": {
     "description": "An urgent update on our changing climate"
   },
+  "https://www.tepapa.govt.nz/visit/events/he-kaupapa-waka-closing-korero": {
+    "description": "Join us as we mark the closing of the exhibition  He Kaupapa Waka , with an afternoon of talks and a rare opportunity to attend the closing ceremony.  "
+  },
   "https://www.tepapa.govt.nz/visit/events/nzsl-week-whanau-fun": {
     "description": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae. "
   },
@@ -247,5 +250,8 @@
   },
   "https://www.wgtn.ac.nz/sgees/about/events/devnet-2026-conference": {
     "description": "This year’s theme, Rebalancing Worlds – Reworking Practice, invites us to reflect critically on development practice and explore pathways to more just and..."
+  },
+  "https://www.wgtn.ac.nz/stout-centre/about/events/garrison-world-redcoat-soldiers-in-new-zealand-and-across-the-british-empire": {
+    "description": "Seminar Series: Between the Lines: Recent Books in New Zealand Studies Seminar 1 Garrison World: Redcoat Soldiers in New Zealand and across the..."
   }
 }
