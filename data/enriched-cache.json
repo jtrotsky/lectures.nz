@@ -255,6 +255,11 @@
     "summary": "Explore the impact of AI on communication at Massey University.",
     "description": "Join Massey University for a lecture delving into how artificial intelligence is transforming the way we communicate. The session will examine both positive and negative implications, encouraging critical thinking about our increasingly digital world."
   },
+  "481fca738bd99f86": {
+    "event_type": "talk",
+    "summary": "Mark the closing of the He Kaupapa Waka exhibition with an afternoon of talks and a closing ceremony.",
+    "description": "This event marks the official closing of the He Kaupapa Waka exhibition. Attendees can join for an afternoon featuring insightful talks and a rare opportunity to participate in the closing ceremony. This promises a meaningful conclusion to the exhibition."
+  },
   "52cbd11960f48258": {
     "event_type": "lecture",
     "summary": "Shaun Higgins discusses WWII POW art.",
@@ -263,6 +268,17 @@
       {
         "name": "Shaun Higgins",
         "bio": "Auckland Museum Curator"
+      }
+    ]
+  },
+  "541dc5ec63ddc292": {
+    "event_type": "talk",
+    "summary": "Curator Clinton Duffy guides attendees through the world of sharks at the Auckland Museum before the exhibition leaves for overseas.",
+    "description": "Before the Sharks exhibition heads overseas, join Clinton Duffy, Curator of Marine Biology, to meet some of the denizens of the marine collections at Auckland Museum. Attendees can dive deeper into the world of sharks from the safety of their seats and meet unique specimens like the Hammerhead Shark.",
+    "speakers": [
+      {
+        "name": "Clinton Duffy",
+        "bio": "Curator of Marine Biology"
       }
     ]
   },
@@ -626,6 +642,11 @@
         "bio": "artist"
       }
     ]
+  },
+  "c18c3e744bc93c82": {
+    "event_type": "seminar",
+    "summary": "Explore the history of redcoat soldiers in New Zealand and the wider British Empire.",
+    "description": "This seminar is part of the 'Between the Lines: Recent Books in New Zealand Studies' series. It examines the fascinating history of redcoat soldiers serving in New Zealand and across the broader British Empire."
   },
   "c286231c9816d9f2": {
     "event_type": "lecture",
