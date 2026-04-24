@@ -191,7 +191,67 @@
     "slug": "eventbrite",
     "name": "Eventbrite NZ",
     "website": "https://www.eventbrite.co.nz",
-    "description": "Public lectures and educational events from NZ institutions listed on Eventbrite."
+    "description": "Public lectures and educational events from NZ institutions listed on Eventbrite.",
+    "lectures": [
+      {
+        "id": "4dfb6447940ce651",
+        "title": "LNG and New Zealand's Energy Balancing Act: Lessons from Asia-Pacific",
+        "link": "https://www.eventbrite.co.nz/e/lng-and-new-zealands-energy-balancing-act-lessons-from-asia-pacific-tickets-1987464831813",
+        "time_start": "2026-05-14T16:00:00+12:00",
+        "summary": "Explores governance and operating experience across multiple regulatory environments, examining NZ's energy trilemma.",
+        "description": "Explores governance and operating experience across multiple regulatory environments, examining NZ's energy trilemma.",
+        "free": true,
+        "location": "Sir Owen G Glenn Building, Level 3, Room 325, 12 Grafton Road, Auckland",
+        "tags": [
+          "arts-culture",
+          "environment"
+        ],
+        "host_slug": "eventbrite"
+      },
+      {
+        "id": "a70971ae735940bb",
+        "title": "Indonesian Language Class",
+        "link": "https://www.eventbrite.co.nz/e/indonesian-language-class-tickets-1987028520795",
+        "time_start": "2026-06-03T17:00:00+12:00",
+        "summary": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore.",
+        "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes, whether you’re planning a holiday in Bali or a business trip to Jakarta.",
+        "free": false,
+        "location": "Sir Owen G Building, Auckland Business School, Room 349, Level 3, Auckland",
+        "tags": [
+          "literature-writing"
+        ],
+        "host_slug": "eventbrite"
+      },
+      {
+        "id": "6f04d15e54116813",
+        "title": "3MT Faculty Heat (Business, Economics  and Law)",
+        "link": "https://www.eventbrite.co.nz/e/3mt-faculty-heat-business-economics-and-law-tickets-1983836857444",
+        "time_start": "2026-06-08T09:00:00+12:00",
+        "summary": "Can you present your entire thesis in just 180 seconds? Ready to take the challenge?",
+        "description": "Can you present your entire thesis in just 180 seconds? Ready to take the challenge? Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law are invited to compete in our joint Three Minute Thesis (3MT) Heat. This is your opportunity to showcase your research in a dynamic, compelling way and earn a place in the University 3MT Final.",
+        "free": true,
+        "location": "The University of Auckland Business School, Decima Glenn, Level 3, 12 Grafton Road, Auckland",
+        "tags": [
+          "politics-policy"
+        ],
+        "host_slug": "eventbrite"
+      },
+      {
+        "id": "274567a260b0d69b",
+        "title": "Your chance to learn Thai!",
+        "link": "https://www.eventbrite.co.nz/e/your-chance-to-learn-thai-tickets-1987791126770",
+        "time_start": "2026-07-23T17:30:00+12:00",
+        "summary": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities.",
+        "description": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities. Learning Thai provides a meaningful way to experience this culture more deeply, whether for travel, personal interest, or future engagement with Thailand. Course Overview This introductory course is designed for complete beginners and those preparing to travel to Thailand.",
+        "free": false,
+        "location": "Sir Owen G Glenn Building, Room 349, Level 3, 12 Grafton Road, Auckland",
+        "tags": [
+          "arts-culture",
+          "history-society"
+        ],
+        "host_slug": "eventbrite"
+      }
+    ]
   },
   {
     "slug": "gus-fisher",
@@ -965,6 +1025,58 @@
           "health-medicine"
         ],
         "host_slug": "otago"
+      }
+    ]
+  },
+  {
+    "slug": "waikato",
+    "name": "University of Waikato",
+    "website": "https://www.waikato.ac.nz/news-events/events/lecture-series/",
+    "description": "The University of Waikato hosts free public lectures in Hamilton and Tauranga, featuring professorial lectures, research talks, and community events across its campuses.",
+    "lectures": [
+      {
+        "id": "600ca550291d52a4",
+        "title": "Hamilton Public Lecture by Professor Nicola Daly",
+        "link": "https://HPLnicoladaly.eventbrite.co.nz",
+        "time_start": "2026-05-12T17:30:00+12:00",
+        "summary": "We often underestimate picturebooks, but the truth is they reflect what we want to pass on to our tamariki-mokopuna; they are incredibly powerful.",
+        "description": "We often underestimate picturebooks, but the truth is they reflect what we want to pass on to our tamariki-mokopuna; they are incredibly powerful.",
+        "free": true,
+        "location": "Gallagher Academy of Performing Arts, Hamilton",
+        "tags": [
+          "literature-writing"
+        ],
+        "host_slug": "waikato"
+      },
+      {
+        "id": "0b472d46885f049a",
+        "title": "Hamilton Public Lecture by Professor Judy Bowen",
+        "link": "https://HPLjudybowen.eventbrite.co.nz",
+        "time_start": "2026-05-26T00:00:00+12:00",
+        "summary": "Technology is embedded into every part of our lives, but what can we do to make certain that it is reliable, usable and safe?",
+        "description": "Technology is embedded into every part of our lives, but what can we do to make certain that it is reliable, usable and safe?",
+        "free": true,
+        "location": "Gallagher Academy of Performing Arts, Hamilton",
+        "tags": [
+          "arts-culture",
+          "science-technology"
+        ],
+        "host_slug": "waikato"
+      },
+      {
+        "id": "7bf84ac607a16c8c",
+        "title": "Regulatory Law through the Lens of Law-in-Context' by Dr Simon Robb",
+        "link": "https://www.waikato.ac.nz/news-events/events/find-event/regulatory-law-through-the-lens-of-law-in-context-by-dr-simon-robb/",
+        "time_start": "2026-05-27T13:00:00+12:00",
+        "summary": "Dr Simon Robb has academic foundations in sociology and law and draws on his regulatory career to explore law-in-context insights that deepen understanding of governance and regulatory practice.",
+        "description": "The University of Waikato is a leading New Zealand university with campuses in Hamilton and Tauranga. We offer teaching and research across diverse disciplines, and support a vibrant community of students, academics, researchers, and global partners.",
+        "free": true,
+        "location": "Margaret Wilson Suite, N5.01, UoW, Hamilton Campus",
+        "tags": [
+          "history-society",
+          "politics-policy"
+        ],
+        "host_slug": "waikato"
       }
     ]
   },

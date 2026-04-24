@@ -28,6 +28,17 @@
       }
     ]
   },
+  "0b472d46885f049a": {
+    "event_type": "lecture",
+    "summary": "Professor Judy Bowen addresses the necessity of reliability, usability, and safety in our embedded technology.",
+    "description": "Technology is now embedded into every part of our lives. Professor Judy Bowen will explore crucial questions regarding how we can ensure that this pervasive technology remains reliable, usable, and safe for the public.",
+    "speakers": [
+      {
+        "name": "Professor Judy Bowen",
+        "bio": "Speaker"
+      }
+    ]
+  },
   "0c5a2aaa12aaa6f5": {
     "summary": "This talk will present an overview of the enabling technology of photonics and the interplay between basic science and innovation.",
     "description": "This talk will present an overview of the enabling technology of photonics and the interplay between basic science and innovation."
@@ -156,6 +167,11 @@
       }
     ]
   },
+  "274567a260b0d69b": {
+    "event_type": "course",
+    "summary": "Learn Thai, the language of 'The Land of Smiles,' in this introductory course for complete beginners.",
+    "description": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities. Learning Thai provides a meaningful way to experience this culture more deeply, whether for travel, personal interest, or future engagement with Thailand. This introductory course is designed for complete beginners and those preparing to travel to Thailand."
+  },
   "27acf592ab1ec661": {
     "event_type": "conference",
     "summary": "Conference exploring critical reflections on development practices.",
@@ -260,6 +276,11 @@
     "summary": "Mark the closing of the He Kaupapa Waka exhibition with an afternoon of talks and a closing ceremony.",
     "description": "This event marks the official closing of the He Kaupapa Waka exhibition. Attendees can join for an afternoon featuring insightful talks and a rare opportunity to participate in the closing ceremony. This promises a meaningful conclusion to the exhibition."
   },
+  "4dfb6447940ce651": {
+    "event_type": "lecture",
+    "summary": "This session explores governance and operating experience across various regulatory environments, examining New Zealand's energy trilemma.",
+    "description": "This lecture will explore the complex governance and operational experiences associated with Liquefied Natural Gas (LNG) across different regulatory environments. Attendees will examine New Zealand's unique energy trilemma in the context of the wider Asia-Pacific region."
+  },
   "52cbd11960f48258": {
     "event_type": "lecture",
     "summary": "Shaun Higgins discusses WWII POW art.",
@@ -323,6 +344,17 @@
       }
     ]
   },
+  "600ca550291d52a4": {
+    "event_type": "lecture",
+    "summary": "Professor Nicola Daly speaks on the powerful reflections of picturebooks regarding what we wish to pass on to our tamariki-mokopuna.",
+    "description": "Picturebooks are often underestimated, yet they hold incredible power. This talk explores how these seemingly simple books reflect the deepest values and hopes we wish to pass on to the next generations (tamariki-mokopuna). Join Professor Nicola Daly for an insightful look at the cultural weight within children's literature.",
+    "speakers": [
+      {
+        "name": "Professor Nicola Daly",
+        "bio": "academic expert"
+      }
+    ]
+  },
   "62204f2d9234daaf": {
     "event_type": "workshop",
     "summary": "Mandarin Corner workshop on Chinese gold-foil burning art.",
@@ -369,6 +401,11 @@
     "event_type": "lecture",
     "summary": "Royal Society presents an urgent update on climate change.",
     "description": "Join the Royal Society for a critical lecture addressing recent developments in climate science and their implications. Thin Ice 2026 aims to provide an urgent update on our planet's changing climate, highlighting key challenges and potential solutions."
+  },
+  "6f04d15e54116813": {
+    "event_type": "competition",
+    "summary": "Doctoral candidates from Business, Economics, and Law compete in the Three Minute Thesis (3MT) Heat to showcase their research.",
+    "description": "Can you present your entire thesis in just 180 seconds? Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law are invited to compete in our joint Three Minute Thesis (3MT) Heat. This is an opportunity to showcase research in a dynamic, compelling way and earn a place in the University 3MT Final."
   },
   "6f8154369b41962d": {
     "event_type": "lecture",
@@ -421,6 +458,17 @@
   "78c60ae414094338": {
     "event_type": "seminar",
     "summary": "A quiz event at the Aotearoa Art Fair challenging participants' knowledge of art. The event is hosted by ArtSpace."
+  },
+  "7bf84ac607a16c8c": {
+    "event_type": "lecture",
+    "summary": "Dr Simon Robb discusses regulatory law through the lens of law-in-context.",
+    "description": "The University of Waikato, located in Hamilton and Tauranga, is a leading New Zealand university. It offers teaching and research across diverse disciplines. The institution supports a vibrant community of students, academics, researchers, and global partners.",
+    "speakers": [
+      {
+        "name": "Dr Simon Robb",
+        "bio": "Speaker"
+      }
+    ]
   },
   "7c69365a7120b66f": {
     "event_type": "lecture",
@@ -583,6 +631,11 @@
         "bio": "technology entrepreneur"
       }
     ]
+  },
+  "a70971ae735940bb": {
+    "event_type": "workshop",
+    "summary": "Learn basic communication in Bahasa Indonesia, spoken by over 250 million people across Southeast Asia.",
+    "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia, and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes, whether you’re planning a holiday in Bali or a business trip to Jakarta."
   },
   "a7e028a3570d6069": {
     "event_type": "workshop",

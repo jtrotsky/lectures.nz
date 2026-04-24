@@ -42,6 +42,7 @@ import (
 	nzinitiative "github.com/jtrotsky/lectures.nz/internal/scraper/sources/nz-initiative"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/meetup"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/treasury"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/waikato"
 )
 
 func main() {
@@ -243,6 +244,7 @@ func run() error {
 		&nzinitiative.Scraper{},
 		&meetup.Scraper{},
 		&treasury.Scraper{},
+		&waikato.Scraper{},
 	}
 
 	type result struct {
