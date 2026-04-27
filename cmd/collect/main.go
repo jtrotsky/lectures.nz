@@ -40,6 +40,7 @@ import (
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/rbnz"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/artspace"
 	nzinitiative "github.com/jtrotsky/lectures.nz/internal/scraper/sources/nz-initiative"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/humanitix"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/meetup"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/treasury"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/waikato"
@@ -242,6 +243,7 @@ func run() error {
 		&rbnz.Scraper{},
 		&artspace.Scraper{},
 		&nzinitiative.Scraper{},
+		&humanitix.Scraper{},
 		&meetup.Scraper{},
 		&treasury.Scraper{},
 		&waikato.Scraper{},

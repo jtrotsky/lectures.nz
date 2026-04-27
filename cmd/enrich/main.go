@@ -272,6 +272,14 @@ func enrich(lec model.Lecture, host, model string, dryRun bool) (model.Lecture, 
 	if speakerNames != "" {
 		speakersLine = fmt.Sprintf("  speakers: %s\n", speakerNames)
 	}
+	locationLine := ""
+	if lec.Location != "" {
+		locationLine = fmt.Sprintf("  location: %s\n", lec.Location)
+	}
+	freeLine := ""
+	if lec.Free {
+		freeLine = "  admission: free\n"
+	}
 
 	prompt := fmt.Sprintf(`You are a curator for lectures.nz, a New Zealand public lectures website.
 
@@ -287,8 +295,8 @@ Fields:
 Event:
   host: %s
   title: %s
-%s  description: %s
-`, expansionInstruction, lec.HostSlug, lec.Title, speakersLine, desc)
+%s%s%s  description: %s
+`, expansionInstruction, effectiveHost(lec), lec.Title, speakersLine, locationLine, freeLine, desc)
 
 	if dryRun {
 		fmt.Printf("\n--- DRY RUN: %s ---\n", truncate(lec.Title, 60))
@@ -329,6 +337,15 @@ Event:
 		out.Speakers = cleanSpeakers(resp.Speakers)
 	}
 	return out, nil
+}
+
+// effectiveHost returns the organiser name if set, otherwise the host slug.
+// This gives Ollama the real institution name rather than the aggregator platform.
+func effectiveHost(lec model.Lecture) string {
+	if lec.Organiser != "" {
+		return lec.Organiser
+	}
+	return lec.HostSlug
 }
 
 // ollamaGenerate calls the Ollama /api/generate endpoint.

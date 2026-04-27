@@ -15,7 +15,7 @@
     <div class="lecture-hero-inner">
 
       <p class="lecture-host-label">
-        <a href="/{{.Host.Slug}}/">{{.Host.Name}}</a>
+        <a href="/{{.Host.Slug}}/">{{if .Lecture.Organiser}}{{.Lecture.Organiser}}{{else}}{{.Host.Name}}{{end}}</a>
       </p>
 
       <h1 class="lecture-hero-title">{{.Lecture.Title}}</h1>

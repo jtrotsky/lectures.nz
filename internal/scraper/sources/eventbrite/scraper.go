@@ -155,12 +155,13 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 		lecs, err := fetchOrganizerEvents(ctx, token, org)
 		if err != nil {
 			// Log but continue — one failing organizer shouldn't break the rest.
-			fmt.Printf("eventbrite: organizer %s (%s): %v\n", org.id, org.name, err)
+			fmt.Printf("eventbrite: organiser %s (%s): %v\n", org.id, org.name, err)
 			continue
 		}
 		for _, l := range lecs {
 			if !seen[l.ID] {
 				seen[l.ID] = true
+				l.Organiser = org.name
 				lectures = append(lectures, l)
 			}
 		}

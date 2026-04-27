@@ -19,6 +19,7 @@ type Lecture struct {
 	Speakers    []Speaker  `json:"speakers,omitempty"`
 	Tags        []string   `json:"tags,omitempty"`
 	HostSlug    string     `json:"host_slug"`
+	Organiser   string     `json:"organiser,omitempty"`  // real institution when host is an aggregator (e.g. Eventbrite, Humanitix)
 	EventType   string     `json:"event_type,omitempty"` // set by enrichment: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, other
 }
 

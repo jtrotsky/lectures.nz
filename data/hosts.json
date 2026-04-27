@@ -221,7 +221,8 @@
           "arts-culture",
           "environment"
         ],
-        "host_slug": "eventbrite"
+        "host_slug": "eventbrite",
+        "organiser": "University of Auckland, Business School"
       },
       {
         "id": "a70971ae735940bb",
@@ -235,7 +236,8 @@
         "tags": [
           "literature-writing"
         ],
-        "host_slug": "eventbrite"
+        "host_slug": "eventbrite",
+        "organiser": "University of Auckland, Business School"
       },
       {
         "id": "6f04d15e54116813",
@@ -249,7 +251,8 @@
         "tags": [
           "politics-policy"
         ],
-        "host_slug": "eventbrite"
+        "host_slug": "eventbrite",
+        "organiser": "University of Auckland, Business School"
       },
       {
         "id": "274567a260b0d69b",
@@ -264,7 +267,8 @@
           "arts-culture",
           "history-society"
         ],
-        "host_slug": "eventbrite"
+        "host_slug": "eventbrite",
+        "organiser": "University of Auckland, Business School"
       }
     ]
   },
@@ -287,6 +291,27 @@
           "arts-culture"
         ],
         "host_slug": "gus-fisher"
+      }
+    ]
+  },
+  {
+    "slug": "humanitix",
+    "name": "Humanitix NZ",
+    "website": "https://humanitix.com/nz",
+    "description": "Public lectures and educational events from NZ institutions listed on Humanitix.",
+    "lectures": [
+      {
+        "id": "ae1b385a7cc1d662",
+        "title": "Sir John Graham Lecture 2026",
+        "link": "https://events.humanitix.com/sir-john-graham-lecture-2026",
+        "time_start": "2026-07-17T18:00:00+12:00",
+        "time_end": "2026-07-17T23:00:00+12:00",
+        "summary": "Join us at this year’s Sir John Graham Lecture.",
+        "description": "Join us at this year’s Sir John Graham Lecture. ",
+        "free": false,
+        "location": "Pullman Auckland Hotel \u0026 Apartments, Auckland",
+        "host_slug": "humanitix",
+        "organiser": "Maxim Institute"
       }
     ]
   },
