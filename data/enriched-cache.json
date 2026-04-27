@@ -762,6 +762,17 @@
     "summary": "A free, interactive drop-in session for tamariki aged 5 and under to learn about sharing stories in New Zealand Sign language.",
     "description": "This is a free, interactive drop-in session designed for tamariki aged 5 and under. Attendees will learn about the joy and art of sharing stories using New Zealand Sign Language (NZSL). It's an accessible and engaging way for young children to connect with storytelling through sign language."
   },
+  "c918880121cd1fe6": {
+    "event_type": "lecture",
+    "summary": "Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment.",
+    "description": "This event is co-hosted by the New Zealand Asia Institute and the Global Studies Occasional Speaker Series. Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment. His remarks will highlight the value of working with like-minded partners in the Asia-Pacific region to uphold open, rules-based cooperation and deliver practical outcomes.",
+    "speakers": [
+      {
+        "name": "Lawrence",
+        "bio": "To be detailed"
+      }
+    ]
+  },
   "ca1f64f253399828": {
     "event_type": "talk",
     "summary": "A special screening celebrating New Zealand Sign Language week, featuring 'Sign of the Times – The Story of New Zealand’s Visual Language'.",
