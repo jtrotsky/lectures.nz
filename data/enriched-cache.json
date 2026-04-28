@@ -239,6 +239,21 @@
     "summary": "Mandarin Corner celebrates Mid-Autumn Festival with Chinese legends and traditions.",
     "description": "Celebrate the Mid-Autumn Festival and explore one of China’s most beloved traditions. Discover the legend of Chang’e, learn about mooncakes and festival customs. Hosted by Victoria University's Mandarin Corner."
   },
+  "2f6c979a89a98d02": {
+    "event_type": "lecture",
+    "summary": "An exploration of capacity mechanisms used to ensure electricity demand is met in markets dominated by renewable energy sources.",
+    "description": "Authors: Shaun McRae and Frank Wolak. Abstract Capacity mechanisms are an increasingly popular tool for ensuring that demand can be met as electricity...",
+    "speakers": [
+      {
+        "name": "Shaun McRae",
+        "bio": "Author"
+      },
+      {
+        "name": "Frank Wolak",
+        "bio": "Author"
+      }
+    ]
+  },
   "310f8cfdd19d4d16": {
     "event_type": "webinar",
     "summary": "Explore generative AI, contaminated information, and rhubarb in this webinar from the 'This Thinking Life' series.",
@@ -824,6 +839,11 @@
     "event_type": "talk",
     "summary": "A special screening celebrating New Zealand Sign Language week, featuring 'Sign of the Times – The Story of New Zealand’s Visual Language'.",
     "description": "Celebrate New Zealand Sign Language week with this special screening. The film, Sign of the Times – The Story of New Zealand’s Visual Language, provides a look into the evolution and cultural significance of NZSL. This event marks a dedicated celebration of the visual language of New Zealand."
+  },
+  "cce7967c19d96aa3": {
+    "event_type": "panel",
+    "summary": "A panel discussing the future of technology in Marlborough, hosted by Deloitte Techweek26 at Te Au Pūngao.",
+    "description": "Deloitte Techweek26 presents a panel on the future of tech in Marlborough. The event will be held at Te Au Pūngao, located at Level 1/33 Arthur Street, Blenheim Central, Blenheim 7201, New Zealand. This takes place on Monday, May 18th, 2026."
   },
   "ce1f249b3c34b63f": {
     "event_type": "workshop",
