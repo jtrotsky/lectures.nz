@@ -133,10 +133,11 @@ func fillDescriptions(ctx context.Context, lectures []model.Lecture, cache map[s
 	const minLen = 200
 	fetched, hits := 0, 0
 	for i, l := range lectures {
-		// Special case: Eventbrite links on non-Eventbrite host pages (e.g. Auckland Uni
-		// listing Eventbrite events). The description is skipped but speakers can be
-		// extracted from the artistInfo JSON embedded in the page HTML.
-		if l.Link != "" && isEventbriteLink(l.Link) && l.HostSlug != "eventbrite" && len(l.Speakers) == 0 {
+		// Special case: all Eventbrite event URLs — both Eventbrite-host events and
+		// non-Eventbrite hosts that link out to Eventbrite. Description comes from the
+		// API already; speakers are extracted from the artistInfo JSON embedded in the
+		// page HTML (present in the initial response even though the page is JS-rendered).
+		if l.Link != "" && isEventbriteLink(l.Link) && len(l.Speakers) == 0 {
 			if cached, ok := cache[l.Link]; ok {
 				if len(cached.Speakers) > 0 {
 					lectures[i].Speakers = cached.Speakers

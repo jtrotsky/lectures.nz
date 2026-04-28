@@ -317,6 +317,107 @@
     "description": "Public lectures and educational events from NZ institutions listed on Humanitix.",
     "lectures": [
       {
+        "id": "acb9de0bf9304fb7",
+        "title": "Deloitte Presents: Human × machine lab: Getting human and machine relationships right in HR and workforce decisions",
+        "link": "https://events.humanitix.com/deloitte-presents-human-machine-lab-getting-human-and-machine-relationships-right-in-hr-and-workforce-decisions",
+        "time_start": "2026-05-18T13:00:00+12:00",
+        "time_end": "2026-05-18T14:30:00+12:00",
+        "summary": "Human x Machines Lab: Redefining HR responsibilities",
+        "description": "Human x Machines Lab: Redefining HR responsibilities",
+        "free": true,
+        "location": "Deloitte Auckland, Auckland",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "1092d277ff445319",
+        "title": "Deloitte Presents: Perspectives in data: Building Aotearoa's future with Databricks and Tech Women",
+        "link": "https://events.humanitix.com/deloitte-presents-perspectives-in-data-building-aotearoa-s-future-with-databricks",
+        "time_start": "2026-05-18T15:00:00+12:00",
+        "time_end": "2026-05-18T16:30:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Perspectives in data: Building Aotearoa's future with Databricks and Tech Women (Auckland) hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Perspectives in data: Building Aotearoa's future with Databricks and Tech Women (Auckland) hosted by Deloitte Techweek26. Deloitte Auckland, Level 20/01 Queen Street, Auckland CBD, Auckland 1010, New Zealand. Monday 18th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Auckland, Auckland",
+        "tags": [
+          "science-technology"
+        ],
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "ba2dd526b346cb10",
+        "title": "Deloitte Presents: The art of the possible: Leveraging AI for energy resilient value chains",
+        "link": "https://events.humanitix.com/deloitte-presents-the-art-of-the-possible-leveraging-ai-for-energy-resilient-value-chains",
+        "time_start": "2026-05-19T07:00:00+12:00",
+        "time_end": "2026-05-19T09:30:00+12:00",
+        "summary": "Join us on the 19th of May for a dynamic discussion and a chance to network with innovators and change-makers.",
+        "description": "Join us on the 19th of May for a dynamic discussion and a chance to network with innovators and change-makers. ",
+        "free": true,
+        "location": "Deloitte Auckland, Auckland",
+        "tags": [
+          "arts-culture",
+          "environment"
+        ],
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "e42257690cdde024",
+        "title": "Deloitte Presents: Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
+        "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T17:00:00+12:00",
+        "summary": "Deloitte and ServiceNow, in partnership with the University of Canterbury, are throwing down a Techweek Appathon challenge to the students at UC!",
+        "description": "Deloitte and ServiceNow, in partnership with the University of Canterbury, are throwing down a Techweek Appathon challenge to the students at UC!",
+        "free": true,
+        "location": "Deloitte Christchurch, Christchurch",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "ced2707cbf21f28a",
+        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
+        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "93d3306be97bd05b",
+        "title": "Deloitte Presents: Your next customer may not be human!",
+        "link": "https://events.humanitix.com/deloitte-presents-your-next-customer-may-not-be-human",
+        "time_start": "2026-05-19T14:00:00+12:00",
+        "time_end": "2026-05-19T15:30:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Your next customer may not be human! hosted by Deloitte Techweek26. Deloitte Auckland, 01 Queen Street, Auckland CBD, Auckland 1010, New Zealand.",
+        "description": "Register on Humanitix - Deloitte Presents: Your next customer may not be human! hosted by Deloitte Techweek26. Deloitte Auckland, 01 Queen Street, Auckland CBD, Auckland 1010, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Auckland, Auckland",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "7423082faeba0062",
+        "title": "Deloitte presents: Vibe coding or tech debt? Building fast without paying later",
+        "link": "https://events.humanitix.com/deloitte-presents-vibe-coding-or-tech-debt-building-fast-without-paying-later",
+        "time_start": "2026-05-19T16:00:00+12:00",
+        "time_end": "2026-05-19T18:30:00+12:00",
+        "summary": "Register on Humanitix - Deloitte presents: Vibe coding or tech debt? Building fast without paying later hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte presents: Vibe coding or tech debt? Building fast without paying later hosted by Deloitte Techweek26. Deloitte Auckland, Level 20/01 Queen Street, Auckland CBD, Auckland 1010, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Auckland, Auckland",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "ae1b385a7cc1d662",
         "title": "Sir John Graham Lecture 2026",
         "link": "https://events.humanitix.com/sir-john-graham-lecture-2026",
@@ -760,6 +861,25 @@
         "host_slug": "studio-one"
       },
       {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -776,25 +896,6 @@
         "tags": [
           "arts-culture",
           "history-society"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -880,7 +981,25 @@
     "slug": "nz-initiative",
     "name": "The New Zealand Initiative",
     "website": "https://www.nzinitiative.org.nz/events/",
-    "description": "The New Zealand Initiative is a Wellington-based think tank hosting public lectures, seminars, and forums on economic policy, education, and governance."
+    "description": "The New Zealand Initiative is a Wellington-based think tank hosting public lectures, seminars, and forums on economic policy, education, and governance.",
+    "lectures": [
+      {
+        "id": "5506b567e7f48ff1",
+        "title": "Health Innovators Summit: Designing a World-Class Health System: A Global Blueprint for New Zealand",
+        "link": "https://www.nzinitiative.org.nz/events/health-innovators-summit/",
+        "time_start": "2026-05-05T18:00:00+12:00",
+        "summary": "This a unique opportunity to participate in an inspiring day of critical thinking and discourse, exploring ideas to create a high performing health system for New Zealand.",
+        "description": "This a unique opportunity to participate in an inspiring day of critical thinking and discourse, exploring ideas to create a high performing health system for New Zealand.   Our keynote speaker is one of the world’s foremost health policy experts and author of Which Country Has The World’s Best Health Care? , Dr Ezekiel Emanuel. Drawing from his extensive comparative study of 11 nations, this summit will move beyond simplistic rankings to identify and discuss the core components of world-class health systems.",
+        "free": false,
+        "location": "Auckland",
+        "tags": [
+          "arts-culture",
+          "health-medicine",
+          "philosophy-ideas"
+        ],
+        "host_slug": "nz-initiative"
+      }
+    ]
   },
   {
     "slug": "auckland",
@@ -919,17 +1038,6 @@
         "tags": [
           "arts-culture"
         ],
-        "host_slug": "auckland"
-      },
-      {
-        "id": "95802a3f9566c770",
-        "title": "2026 Alice Griffin Shakespeare Lecture",
-        "link": "https://www.eventbrite.co.nz/e/2026-alice-griffin-shakespeare-lecture-tickets-1985879327527",
-        "time_start": "2026-05-13T18:00:00+12:00",
-        "summary": "Shakespeare as Reviser: The Merry Wives of Windsor",
-        "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
-        "free": true,
-        "location": "B401-401, 20 Symonds Street, Auckland",
         "host_slug": "auckland"
       },
       {
@@ -1176,6 +1284,17 @@
         "tags": [
           "literature-writing"
         ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "af0a10e5eabd00ca",
+        "title": "Public Seminar | Professor Derick de Jongh",
+        "link": "https://www.wgtn.ac.nz/business/engage/events/visit-of-professor-derick-de-jongh-and-public-seminar-in-may",
+        "time_start": "2026-05-07T12:30:00+12:00",
+        "summary": "Distinctive contours of African vs Western leadership theories: The Case of Chief Albert LuthuliDerick's seminar will highlight a prominent leadership example from an...",
+        "description": "Distinctive contours of African vs Western leadership theories: The Case of Chief Albert LuthuliDerick's seminar will highlight a prominent leadership example from an...",
+        "free": true,
+        "location": "Wellington",
         "host_slug": "victoria"
       },
       {

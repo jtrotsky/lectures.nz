@@ -141,6 +141,13 @@ var (
 	speakersListRe = regexp.MustCompile(`(?i)speakers include[^<]*</p>\s*<ul[^>]*>([\s\S]*?)</ul>`)
 	// liContentRe extracts Name (bio) from a <li> element.
 	liContentRe = regexp.MustCompile(`(?i)<li[^>]*>\s*([^<(]+?)(?:\s*\(([^)]+)\))?\s*</li>`)
+	// bioHonourificRe matches a formal name at the start of a bio paragraph, preceded
+	// by an honorific. Catches "H.E. Mr Lawrence Meredith is the EU Ambassador..." or
+	// "Dr Jane Smith is a visiting researcher..." — the honorific guards against false
+	// positives like "New Zealand is the..." or "Auckland Museum is a...".
+	bioHonourificRe = regexp.MustCompile(
+		`(?m)(?:^|<p[^>]*>)\s*((?:H\.E\.|A/Prof\.?|Dr\.?|Prof(?:essor)?\.?|Ambassador|Sir|Dame)` +
+			`(?:\s+(?:Mr|Ms|Mrs|Miss)\.?)?\s+[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)+)\s+is\b`)
 )
 
 // HasSpeakerInfo returns true when text contains speaker-attribution keywords.
@@ -152,9 +159,10 @@ func HasSpeakerInfo(text string) bool {
 }
 
 // ExtractSpeakers attempts to pull speaker names and bios from an HTML page body.
-// It handles two patterns found on NZ academic event pages:
+// It handles three patterns found on NZ academic event pages:
 //  1. "Presented by X, affiliation" — common for single-presenter seminars
 //  2. "Speakers include:" followed by <ul><li>Name (bio)</li></ul>
+//  3. Bio opening "H.E. Mr Name is the [title]" — Eventbrite and similar bio paragraphs
 func ExtractSpeakers(body []byte) []model.Speaker {
 	text := string(body)
 
@@ -193,6 +201,14 @@ func ExtractSpeakers(body []byte) []model.Speaker {
 		}
 		if len(speakers) > 0 {
 			return speakers
+		}
+	}
+
+	// Pattern 3: honorific-prefixed bio opening — "H.E. Mr Lawrence Meredith is the
+	// EU Ambassador..." or "Dr Jane Smith is a visiting researcher...".
+	if m := bioHonourificRe.FindStringSubmatch(text); m != nil {
+		if name := normaliseSpaces(m[1]); name != "" {
+			return []model.Speaker{{Name: name}}
 		}
 	}
 

@@ -39,6 +39,8 @@ type organiser struct {
 // To add a new organiser, find their profile at events.humanitix.com/host/{slug}.
 var knownOrganisers = []organiser{
 	{"maxim-institute", "Maxim Institute"},
+	{"deloitte-techweek26", "Deloitte TechWeek26"},
+	{"nz-fabian-society", "NZ Fabian Society"},
 }
 
 // Scraper implements scraper.Scraper for Humanitix NZ.

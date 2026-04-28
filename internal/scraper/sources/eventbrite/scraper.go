@@ -93,12 +93,20 @@ type apiSpeakersData struct {
 	Speakers struct {
 		Speakers []struct {
 			Profile struct {
-				Name     string `json:"name"`
-				Headline string `json:"headline"` // role, e.g. "Keynote Speaker"
+				Name        string `json:"name"`
+				Headline    string `json:"headline"`    // short role, e.g. "Keynote Speaker"
+				Description string `json:"description"` // full bio paragraph, often "H.E. Mr Name is..."
 			} `json:"profile"`
 		} `json:"speakers"`
 	} `json:"speakers"`
 }
+
+// speakerBioRe matches a formal honorific-prefixed name at the start of a bio.
+// e.g. "H.E. Mr Lawrence Meredith is the EU Ambassador to New Zealand..."
+// or   "Dr Jane Smith is a visiting researcher at Victoria University..."
+var speakerBioRe = regexp.MustCompile(
+	`^((?:H\.E\.|A/Prof\.?|Dr\.?|Prof(?:essor)?\.?|Ambassador|Sir|Dame)` +
+		`(?:\s+(?:Mr|Ms|Mrs|Miss)\.?)?\s+[A-Z][a-zA-Z]+(?:\s+[A-Z][a-zA-Z]+)+)\s+is\b`)
 
 // apiTime holds a local datetime string and timezone from Eventbrite.
 type apiTime struct {
@@ -267,12 +275,23 @@ func fetchStructuredContent(ctx context.Context, token, eventID string) (eventCo
 			var sd apiSpeakersData
 			if err := json.Unmarshal(mod.Data, &sd); err == nil {
 				for _, sp := range sd.Speakers.Speakers {
-					if name := strings.TrimSpace(sp.Profile.Name); name != "" {
-						speakers = append(speakers, model.Speaker{
-							Name: name,
-							Bio:  strings.TrimSpace(sp.Profile.Headline),
-						})
+					name := strings.TrimSpace(sp.Profile.Name)
+					if name == "" {
+						continue
 					}
+					bio := strings.TrimSpace(sp.Profile.Headline)
+					// The bio description often opens with the speaker's formal name:
+					// "H.E. Mr Lawrence Meredith is the EU Ambassador to New Zealand..."
+					// Prefer that over the potentially-shortened profile name.
+					if bioDesc := strings.TrimSpace(tagRe.ReplaceAllString(sp.Profile.Description, " ")); bioDesc != "" {
+						bioDesc = strings.Join(strings.Fields(bioDesc), " ")
+						if m := speakerBioRe.FindStringSubmatch(bioDesc); m != nil {
+							if formal := strings.TrimSpace(m[1]); strings.Contains(formal, name) {
+								name = formal
+							}
+						}
+					}
+					speakers = append(speakers, model.Speaker{Name: name, Bio: bio})
 				}
 			}
 		}

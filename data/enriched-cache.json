@@ -22,8 +22,8 @@
   },
   "0625a85ce3dcc2fd": {
     "event_type": "talk",
-    "summary": "Explore the history and secrets behind the iconic Clock Tower in this captivating curator talk.",
-    "description": "Join us for a captivating journey through time to uncover the secrets behind the iconic Clock Tower. This curator talk will take attendees through the history of the landmark. It promises an insightful look at the structure's journey over the last century."
+    "summary": "A captivating journey through time uncovering the secrets behind the iconic Clock Tower.",
+    "description": "Join us for a captivating journey through time to uncover the secrets behind the iconic Clock Tower. This talk will explore the history and significance of this landmark structure. The event is hosted at the University of Auckland General Library."
   },
   "07ddca6f970286a6": {
     "event_type": "workshop",
@@ -49,12 +49,12 @@
   },
   "0c5a2aaa12aaa6f5": {
     "event_type": "talk",
-    "summary": "Professor John Dudley will present an overview of the enabling technology of photonics and the interplay between basic science and innovation.",
-    "description": "This talk provides an overview of the enabling technology of photonics. It will explore the critical interplay between fundamental basic science and real-world innovation in the field. Learn how photonics is driving technological advancement.",
+    "summary": "Professor John Dudley will give an overview of photonics, detailing the interplay between basic science and innovation.",
+    "description": "This talk provides an overview of photonics, exploring this enabling technology. It will detail the critical interplay that exists between fundamental basic science research and practical innovation within the field. Join us at the University of Auckland for this insightful presentation.",
     "speakers": [
       {
         "name": "Professor John Dudley",
-        "bio": "Academic expert in photonics technology"
+        "bio": "Speaker"
       }
     ]
   },
@@ -88,6 +88,11 @@
     "event_type": "workshop",
     "summary": "WEN Outreach Workshop on earthquake safety for young women.",
     "description": "A free half-day workshop for Year 9 and 10 female students focusing on earthquake preparedness through creative problem-solving activities in engineering. Includes a complimentary pizza lunch."
+  },
+  "1092d277ff445319": {
+    "event_type": "seminar",
+    "summary": "This seminar explores building Aotearoa's future using data, featuring Databricks and insights from Tech Women.",
+    "description": "Deloitte Techweek26 hosts \"Deloitte Presents: Perspectives in data: Building Aotearoa's future with Databricks and Tech Women\" at Deloitte Auckland. The event takes place on Monday, May 18th, 2026, at Level 20/01 Queen Street, Auckland CBD."
   },
   "11dc8475abd89d26": {
     "event_type": "workshop",
@@ -189,8 +194,8 @@
     ]
   },
   "274567a260b0d69b": {
-    "event_type": "workshop",
-    "summary": "Learn Thai, a language offering a deeper cultural experience of Thailand, for beginners and travelers.",
+    "event_type": "course",
+    "summary": "An introductory course for complete beginners to experience Thailand's rich culture through learning the Thai language.",
     "description": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities. Learning Thai provides a meaningful way to experience this culture more deeply, whether for travel, personal interest, or future engagement with Thailand. This introductory course is designed for complete beginners and those preparing to travel to Thailand."
   },
   "27acf592ab1ec661": {
@@ -299,9 +304,9 @@
     "description": "Join us to mark the closing of the He Kaupapa Waka exhibition. Attendees can look forward to an afternoon featuring talks and a rare opportunity to attend the closing ceremony, commemorating this important cultural display."
   },
   "4dfb6447940ce651": {
-    "event_type": "seminar",
-    "summary": "Examines governance and operating experience across regulatory environments, focusing on New Zealand's energy trilemma.",
-    "description": "This session explores the complex governance and operational experience surrounding Liquefied Natural Gas (LNG). Attendees will examine various regulatory environments to gain a deeper understanding of New Zealand's current energy trilemma. The discussion aims to draw crucial lessons from the broader Asia-Pacific region."
+    "event_type": "lecture",
+    "summary": "This lecture explores governance and operating experience across various regulatory environments, examining New Zealand's energy trilemma.",
+    "description": "This event explores the complex governance and operating experience across multiple regulatory environments impacting New Zealand's energy sector. Attendees will examine the core components of New Zealand's energy trilemma through case studies from the wider Asia-Pacific region. Hosted by the University of Auckland Business School, this discussion is central to understanding national energy security."
   },
   "52cbd11960f48258": {
     "event_type": "lecture",
@@ -334,6 +339,17 @@
       }
     ]
   },
+  "5506b567e7f48ff1": {
+    "event_type": "seminar",
+    "summary": "Explore ideas for a high-performing health system for New Zealand, featuring insights from global health policy expert Dr Ezekiel Emanuel.",
+    "description": "This is an inspiring day for critical thinking and discourse, exploring ideas to create a high-performing health system for New Zealand. Keynote speaker Dr Ezekiel Emanuel, one of the world’s foremost health policy experts and author of Which Country Has The World’s Best Health Care?, will draw from his extensive comparative study of 11 nations to identify and discuss core components of world-class health systems.",
+    "speakers": [
+      {
+        "name": "Dr Ezekiel Emanuel",
+        "bio": "world's foremost health policy expert"
+      }
+    ]
+  },
   "575e90640f923cd8": {
     "event_type": "workshop",
     "summary": "Join a cyanotype workshop to explore how science and creativity can coincide, guided by Lulu.",
@@ -347,8 +363,8 @@
   },
   "5b4464df305add17": {
     "event_type": "lecture",
-    "summary": "Professor Jennifer Miles-Chan delivers her Inaugural Lecture exploring connections between metabolism, academia, and everyday life.",
-    "description": "Professor Jennifer Miles-Chan will present her Inaugural Lecture. This talk will draw parallels between the processes of metabolism, the structures of academia, and the rhythms of everyday life, offering insights into what makes things count.",
+    "summary": "Professor Jennifer Miles-Chan delivers her Inaugural Lecture, exploring lessons found across metabolism, academia, and daily life.",
+    "description": "Professor Jennifer Miles-Chan will present her Inaugural Lecture, titled 'It’s the little things that count: lessons in metabolism, academia and life.' This lecture promises to draw insightful parallels between the processes of metabolism, the scholarly environment of academia, and the general rhythms of life itself.",
     "speakers": [
       {
         "name": "Professor Jennifer Miles-Chan",
@@ -426,16 +442,16 @@
   "6f04d15e54116813": {
     "event_type": "competition",
     "summary": "Doctoral candidates from Business, Economics, and Law compete in the Three Minute Thesis (3MT) Heat to showcase their research.",
-    "description": "Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law are invited to compete in the joint Three Minute Thesis (3MT) Heat. Can you present your entire thesis in just 180 seconds? This competition is an opportunity to showcase your research in a dynamic, compelling way and earn a place in the University 3MT Final."
+    "description": "Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law are invited to compete in the joint Three Minute Thesis (3MT) Heat. Present your entire thesis in just 180 seconds and take the challenge. This is an opportunity to showcase your research in a dynamic, compelling way and earn a place in the University 3MT Final."
   },
   "6f8154369b41962d": {
     "event_type": "lecture",
-    "summary": "Professor Clare McCann gives her Inaugural Lecture on the power of speech-language therapy.",
-    "description": "Professor Clare McCann will deliver her Inaugural Lecture, providing insights into the capabilities of speech-language therapists. This lecture will explore how communication skills can be leveraged to influence and persuade.",
+    "summary": "Professor Clare McCann delivers her Inaugural Lecture exploring the power and scope of speech-language therapists.",
+    "description": "Professor Clare McCann will deliver her Inaugural Lecture, addressing the fascinating and broad capabilities of speech-language therapists. This talk promises to explore the many ways these professionals can influence communication and perception.",
     "speakers": [
       {
         "name": "Professor Clare McCann",
-        "bio": "Academic lecturer"
+        "bio": "Delivering Inaugural Lecture"
       }
     ]
   },
@@ -453,6 +469,11 @@
         "bio": "NZIIA Chair"
       }
     ]
+  },
+  "7423082faeba0062": {
+    "event_type": "lecture",
+    "summary": "Deloitte Techweek26 explores the balance between rapid development and incurring technical debt.",
+    "description": "Deloitte Techweek26 presents: Vibe coding or tech debt? Building fast without paying later. This event is hosted by Deloitte Techweek26 and will take place at Deloitte Auckland, Level 20/01 Queen Street, Auckland CBD, Auckland 1010, New Zealand on Tuesday, May 19th, 2026."
   },
   "77b0a203c71c3323": {
     "event_type": "lecture",
@@ -566,6 +587,11 @@
       }
     ]
   },
+  "93d3306be97bd05b": {
+    "event_type": "talk",
+    "summary": "Deloitte Techweek26 presents a talk exploring the idea that a customer may not be human.",
+    "description": "Deloitte Techweek26 presents: Your next customer may not be human! This event is hosted by Deloitte Techweek26 and will take place at Deloitte Auckland, 01 Queen Street, Auckland CBD, Auckland 1010, New Zealand on Tuesday 19th May 2026."
+  },
   "95282080ccc6256f": {
     "event_type": "lecture",
     "summary": "Mr Frank Wilson discusses his experiences witnessing the Fall of Saigon in 1975 and its implications for New Zealand.",
@@ -579,12 +605,12 @@
   },
   "95802a3f9566c770": {
     "event_type": "lecture",
-    "summary": "A lecture exploring Shakespeare's role as a reviser through the lens of 'The Merry Wives of Windsor'.",
-    "description": "This lecture will delve into Shakespeare's practice as a reviser, focusing specifically on the play 'The Merry Wives of Windsor'. Join the discussion to explore the creative interpretations and adjustments made by Shakespeare throughout his works.",
+    "summary": "The 2026 Alice Griffin Shakespeare Lecture explores the concept of Shakespeare acting as a reviser through The Merry Wives of Windsor.",
+    "description": "This year's lecture, the 2026 Alice Griffin Shakespeare Lecture, will examine Shakespeare's role as a reviser. The focus of this scholarly discussion will be on 'The Merry Wives of Windsor,' exploring how Shakespeare's work itself suggests revisionary processes.",
     "speakers": [
       {
         "name": "Alice Griffin",
-        "bio": "Speaker, lecture topic expert"
+        "bio": "Lecturer"
       }
     ]
   },
@@ -669,8 +695,8 @@
   },
   "a70971ae735940bb": {
     "event_type": "course",
-    "summary": "Learn basic Indonesian communication skills useful for trips to Bali or business in Jakarta.",
-    "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia, and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes."
+    "summary": "Learn basic communication in Bahasa Indonesia, the language spoken by over 250 million people across Southeast Asia.",
+    "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes, whether you’re planning a holiday in Bali or a business trip to Jakarta."
   },
   "a7e028a3570d6069": {
     "event_type": "workshop",
@@ -692,6 +718,11 @@
     "summary": "Explore challenging the patriarchy by reassessing ancient women's lives in the 'This Thinking Life' series webinar.",
     "description": "This event is the seventh webinar in the 'This Thinking Life' series. Participants will engage with the topic of challenging the patriarchy through a reassessment of the lives and roles of ancient women. The discussion is designed for online attendance, fostering thoughtful examination of gender roles throughout history."
   },
+  "acb9de0bf9304fb7": {
+    "event_type": "seminar",
+    "summary": "Explore redefining HR responsibilities in the human-machine relationship at the Human x Machines Lab.",
+    "description": "This session, held at Deloitte Auckland, focuses on the Human x Machines Lab concept. Attendees will explore the critical area of redefining HR responsibilities. The event addresses how to best navigate the relationships between humans and machines within modern HR and workforce decision-making processes."
+  },
   "adb78f3c44febf5d": {
     "summary": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time.",
     "description": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time."
@@ -700,6 +731,17 @@
     "event_type": "lecture",
     "summary": "This year's Sir John Graham Lecture is hosted by the Maxim Institute in Auckland.",
     "description": "Join the Maxim Institute for this year’s Sir John Graham Lecture. This event is being held at the Pullman Auckland Hotel \u0026 Apartments in Auckland. Attendees will gain insight into the themes explored during this significant annual lecture series."
+  },
+  "af0a10e5eabd00ca": {
+    "event_type": "seminar",
+    "summary": "Professor Derick de Jongh will discuss distinctive contours of African vs Western leadership theories, using Chief Albert Luthuli as a case study.",
+    "description": "Distinctive contours of African vs Western leadership theories: The Case of Chief Albert Luthuli. Derick's seminar will highlight a prominent leadership example from an African context.",
+    "speakers": [
+      {
+        "name": "Professor Derick de Jongh",
+        "bio": "Scholar/Professor"
+      }
+    ]
   },
   "b00b8f45e8db70bf": {
     "event_type": "panel",
@@ -715,6 +757,11 @@
         "bio": "Author"
       }
     ]
+  },
+  "ba2dd526b346cb10": {
+    "event_type": "lecture",
+    "summary": "Deloitte Techweek26 explores how AI can be leveraged to build energy resilient value chains.",
+    "description": "This event, hosted by Deloitte Techweek26, will feature a dynamic discussion on May 19th. Attendees will explore the practical application of Artificial Intelligence in strengthening energy resilient value chains. It offers a chance to network with innovators and change-makers."
   },
   "bc36ce59b7e81181": {
     "event_type": "workshop",
@@ -763,13 +810,13 @@
     "description": "This is a free, interactive drop-in session designed for tamariki aged 5 and under. Attendees will learn about the joy and art of sharing stories using New Zealand Sign Language (NZSL). It's an accessible and engaging way for young children to connect with storytelling through sign language."
   },
   "c918880121cd1fe6": {
-    "event_type": "lecture",
-    "summary": "Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment.",
-    "description": "This event is co-hosted by the New Zealand Asia Institute and the Global Studies Occasional Speaker Series. Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment. His remarks will highlight the value of working with like-minded partners in the Asia-Pacific region to uphold open, rules-based cooperation and deliver practical outcomes.",
+    "event_type": "seminar",
+    "summary": "H.E. Mr Lawrence Meredith, EU Ambassador to New Zealand, will explore how Europe and New Zealand are strengthening ties in an interconnected global environment.",
+    "description": "Co-hosted by the New Zealand Asia Institute and the Global Studies Occasional Speaker Series, this event features H.E. Mr Lawrence Meredith, EU Ambassador to New Zealand. He will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment. His remarks will highlight the value of working with like-minded partners in the Asia-Pacific region to uphold open, rules-based cooperation and deliver practical outcomes.",
     "speakers": [
       {
-        "name": "Lawrence",
-        "bio": "To be detailed"
+        "name": "H.E. Mr Lawrence Meredith",
+        "bio": "EU Ambassador to New Zealand"
       }
     ]
   },
@@ -788,6 +835,11 @@
         "bio": "Artist practicing with malu"
       }
     ]
+  },
+  "ced2707cbf21f28a": {
+    "event_type": "lecture",
+    "summary": "Deloitte Techweek26 will present on Agentic blueprinting to help drive value from AI.",
+    "description": "Deloitte Techweek26 presents Agentic blueprinting: Driving value from AI. This event takes place at Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand, on Tuesday 19th May 2026. Attendees should register on Humanitix for event information."
   },
   "cee11c9c166f76f7": {
     "event_type": "lecture",
@@ -875,6 +927,11 @@
         "bio": "studio-one facilitator"
       }
     ]
+  },
+  "e42257690cdde024": {
+    "event_type": "workshop",
+    "summary": "A Techweek Appathon challenge hosted by Deloitte and ServiceNow for University of Canterbury students.",
+    "description": "Deloitte and ServiceNow are partnering with the University of Canterbury to host a Techweek Appathon challenge. This event challenges UC students to engage with cutting-edge technology in a hands-on development environment."
   },
   "e48ddbbc834dc652": {
     "event_type": "lecture",

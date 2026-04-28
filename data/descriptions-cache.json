@@ -26,6 +26,15 @@
   "https://artspace-aotearoa.nz/events/open-late": {
     "description": "Alongside Aotearoa Art Fair and neighbourhood gallery openings the gallery will remain open until 8pm. Join artist Selina Ershadi and Kaitohu Director Ruth Buchanan for drinks and an informal introduction to The Blue Dome and its newly commissioned …"
   },
+  "https://events.humanitix.com/deloitte-presents-human-machine-lab-getting-human-and-machine-relationships-right-in-hr-and-workforce-decisions": {
+    "description": "Human x Machines Lab: Redefining HR responsibilities"
+  },
+  "https://events.humanitix.com/deloitte-presents-the-art-of-the-possible-leveraging-ai-for-energy-resilient-value-chains": {
+    "description": "Join us on the 19th of May for a dynamic discussion and a chance to network with innovators and change-makers. "
+  },
+  "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon": {
+    "description": "Deloitte and ServiceNow, in partnership with the University of Canterbury, are throwing down a Techweek Appathon challenge to the students at UC!"
+  },
   "https://events.humanitix.com/sir-john-graham-lecture-2026": {
     "description": "Join us at this year’s Sir John Graham Lecture. "
   },
@@ -80,14 +89,23 @@
   "https://www.eventbrite.co.nz/e/2026-alice-griffin-shakespeare-lecture-tickets-1985879327527": {
     "description": "Shakespeare as Reviser: The Merry Wives of Windsor"
   },
+  "https://www.eventbrite.co.nz/e/3mt-faculty-heat-business-economics-and-law-tickets-1983836857444": {
+    "description": "Can you present your entire thesis in just 180 seconds? Ready to take the challenge? Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law are invited to compete in our joint Three Minute Thesis (3MT) Heat. This is your opportunity to showcase your research in a dynamic, compelling way and earn a place in the University 3MT Final."
+  },
   "https://www.eventbrite.co.nz/e/curator-talk-standing-tall-a-century-of-the-clock-tower-tickets-1983326863037": {
     "description": "Come join us for a captivating journey through time as we uncover the secrets behind the iconic Clock Tower in this curator talk!"
   },
   "https://www.eventbrite.co.nz/e/ersha-island-performance-tickets-1987094839155?aff=oddtdtcreator": {
     "description": "Join Tāmaki Makaurau musicians Ersha Island for an intimate performance in the gallery to celebrate the closing day of our current exhibition Dreaming from afar."
   },
+  "https://www.eventbrite.co.nz/e/indonesian-language-class-tickets-1987028520795": {
+    "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes, whether you’re planning a holiday in Bali or a business trip to Jakarta."
+  },
   "https://www.eventbrite.co.nz/e/its-the-little-things-that-count-lessons-in-metabolism-academia-and-life-tickets-1975871927123": {
     "description": "Professor Jennifer Miles-Chan's Inaugural Lecture"
+  },
+  "https://www.eventbrite.co.nz/e/lng-and-new-zealands-energy-balancing-act-lessons-from-asia-pacific-tickets-1987464831813": {
+    "description": "Explores governance and operating experience across multiple regulatory environments, examining NZ's energy trilemma."
   },
   "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659": {
     "description": "Professor Clare McCann's Inaugural Lecture"
@@ -100,6 +118,9 @@
       }
     ]
   },
+  "https://www.eventbrite.co.nz/e/the-european-union-asia-and-new-zealand-strengthening-dialogue-and-coope-tickets-1988140169767": {
+    "description": "This event is to be co-hosted by New Zealand Asia Institute and the Global Studies Occasional Speaker Series Synopsis Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment. His remarks will highlight the value of working with like-minded partners in the Asia-Pacific region to uphold open, rules-based cooperation and deliver practical outcomes."
+  },
   "https://www.eventbrite.co.nz/e/welfare-1975-film-screening-tickets-1986282988889": {
     "description": "Join us for a film screening of Welfare, with an introduction by artist Rangi White in a discussion of Aotearoa's welfare bureaucracies"
   },
@@ -108,6 +129,9 @@
   },
   "https://www.eventbrite.co.nz/e/wen-outreach-workshop-survive-the-shake-tickets-1984933311969": {
     "description": "Free half day workshop for year 9-10 women, where creativity meets engineering, includes a pizza lunch."
+  },
+  "https://www.eventbrite.co.nz/e/your-chance-to-learn-thai-tickets-1987791126770": {
+    "description": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities. Learning Thai provides a meaningful way to experience this culture more deeply, whether for travel, personal interest, or future engagement with Thailand. Course Overview This introductory course is designed for complete beginners and those preparing to travel to Thailand."
   },
   "https://www.massey.ac.nz/about/events/business-admin-info-session/": {
     "description": "Join our online info session to explore the Business Administration – Postgraduate Certificate in Business and how it is a pathway to an Executive MBA."
@@ -177,6 +201,9 @@
   },
   "https://www.wgtn.ac.nz/business/engage/events/philanthropy-along-the-supply-chain": {
     "description": "Authors: Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste Abstract Firms strategically use donations to trade partners’ affiliated charities to achieve..."
+  },
+  "https://www.wgtn.ac.nz/business/engage/events/visit-of-professor-derick-de-jongh-and-public-seminar-in-may": {
+    "description": "Distinctive contours of African vs Western leadership theories: The Case of Chief Albert LuthuliDerick's seminar will highlight a prominent leadership example from an..."
   },
   "https://www.wgtn.ac.nz/education/about/events/school-of-education-research-seminar": {
     "description": "We invite you to join us for a seminar with visiting Professor Hella von Unger, from Munich. We will have tea/coffee together at..."
