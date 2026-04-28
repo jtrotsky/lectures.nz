@@ -319,8 +319,9 @@ var hostCity = map[string]string{
 // buildSchemaJSON returns a Schema.org Event JSON-LD blob for a lecture page.
 func buildSchemaJSON(l model.Lecture, h model.Host) template.JS {
 	type schemaPlace struct {
-		Type string `json:"@type"`
-		Name string `json:"name"`
+		Type    string `json:"@type"`
+		Name    string `json:"name"`
+		Address string `json:"address,omitempty"`
 	}
 	type schemaOrg struct {
 		Type string `json:"@type"`
@@ -377,7 +378,7 @@ func buildSchemaJSON(l model.Lecture, h model.Host) template.JS {
 		e.EventAttendanceMode = "https://schema.org/OnlineEventAttendanceMode"
 	} else {
 		e.EventAttendanceMode = "https://schema.org/OfflineEventAttendanceMode"
-		e.Location = &schemaPlace{Type: "Place", Name: l.Location}
+		e.Location = &schemaPlace{Type: "Place", Name: l.Location, Address: l.Location}
 	}
 
 	for _, s := range l.Speakers {
