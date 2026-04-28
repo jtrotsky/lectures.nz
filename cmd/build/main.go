@@ -60,6 +60,7 @@ type lecturePageData struct {
 	Lecture      model.Lecture
 	Host         model.Host
 	MoreLectures []model.Lecture
+	SchemaJSON   template.JS
 }
 
 // dateGroup groups lectures under a formatted date heading.
@@ -191,6 +192,7 @@ func run() error {
 				Lecture:      l,
 				Host:         h,
 				MoreLectures: more,
+				SchemaJSON:   buildSchemaJSON(l, h),
 			}); err != nil {
 				return err
 			}
@@ -312,6 +314,81 @@ var hostCity = map[string]string{
 	"otago":         "Dunedin",
 	// Christchurch
 	"canterbury": "Christchurch",
+}
+
+// buildSchemaJSON returns a Schema.org Event JSON-LD blob for a lecture page.
+func buildSchemaJSON(l model.Lecture, h model.Host) template.JS {
+	type schemaPlace struct {
+		Type string `json:"@type"`
+		Name string `json:"name"`
+	}
+	type schemaOrg struct {
+		Type string `json:"@type"`
+		Name string `json:"name"`
+		URL  string `json:"url,omitempty"`
+	}
+	type schemaPerson struct {
+		Type string `json:"@type"`
+		Name string `json:"name"`
+	}
+	type schemaEvent struct {
+		Context             string         `json:"@context"`
+		Type                string         `json:"@type"`
+		Name                string         `json:"name"`
+		StartDate           string         `json:"startDate"`
+		EndDate             string         `json:"endDate,omitempty"`
+		EventStatus         string         `json:"eventStatus"`
+		EventAttendanceMode string         `json:"eventAttendanceMode"`
+		Location            *schemaPlace   `json:"location,omitempty"`
+		Description         string         `json:"description,omitempty"`
+		IsAccessibleForFree bool           `json:"isAccessibleForFree"`
+		URL                 string         `json:"url"`
+		Organizer           schemaOrg      `json:"organizer"`
+		Performer           []schemaPerson `json:"performer,omitempty"`
+		Image               string         `json:"image,omitempty"`
+	}
+
+	const iso = "2006-01-02T15:04:05Z07:00"
+
+	desc := l.Summary
+	if l.Description != "" {
+		desc = l.Description
+	}
+
+	e := schemaEvent{
+		Context:             "https://schema.org",
+		Type:                "Event",
+		Name:                l.Title,
+		StartDate:           l.TimeStart.Format(iso),
+		EventStatus:         "https://schema.org/EventScheduled",
+		URL:                 fmt.Sprintf("https://lectures.nz/%s/%s/", h.Slug, l.ID),
+		IsAccessibleForFree: l.Free,
+		Description:         desc,
+		Image:               l.Image,
+		Organizer:           schemaOrg{Type: "Organization", Name: h.Name, URL: h.Website},
+	}
+
+	if l.TimeEnd != nil {
+		e.EndDate = l.TimeEnd.Format(iso)
+	}
+
+	loc := strings.ToLower(l.Location)
+	if l.Location == "" || strings.Contains(loc, "online") || strings.Contains(loc, "zoom") || strings.Contains(loc, "virtual") {
+		e.EventAttendanceMode = "https://schema.org/OnlineEventAttendanceMode"
+	} else {
+		e.EventAttendanceMode = "https://schema.org/OfflineEventAttendanceMode"
+		e.Location = &schemaPlace{Type: "Place", Name: l.Location}
+	}
+
+	for _, s := range l.Speakers {
+		e.Performer = append(e.Performer, schemaPerson{Type: "Person", Name: s.Name})
+	}
+
+	b, err := json.MarshalIndent(e, "", "  ")
+	if err != nil {
+		return ""
+	}
+	return template.JS(b)
 }
 
 func templateFuncs() template.FuncMap {

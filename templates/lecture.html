@@ -2,6 +2,8 @@
 
 {{define "description"}}{{if .Lecture.Summary}}{{.Lecture.Summary}}{{else}}{{.Lecture.Title}} at {{.Host.Name}}.{{end}}{{end}}
 
+{{define "extra-head"}}<script type="application/ld+json">{{.SchemaJSON}}</script>{{end}}
+
 {{define "page-header"}}{{end}}
 
 {{define "main"}}
