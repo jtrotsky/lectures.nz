@@ -255,6 +255,21 @@
         "organiser": "University of Auckland, Business School"
       },
       {
+        "id": "6866a93602bd03ca",
+        "title": "Massey College of Creative Arts Experience Day",
+        "link": "https://www.eventbrite.co.nz/e/massey-college-of-creative-arts-experience-day-tickets-1987573254107",
+        "time_start": "2026-06-12T09:30:00+12:00",
+        "summary": "Experience Day is about getting a taste of the experience of being a student at Massey University Wellington's College of Creative Arts - Toi Rauwhārangi.",
+        "description": "Experience Day is about getting a taste of the experience of being a student at Massey University Wellington's College of Creative Arts - Toi Rauwhārangi. Join us from 9:30am - 3pm on June 12th for workshops, pizza, student panel talks and more! (Registration will open from 9am) Experience days are free to attend, but registration is essential to secure your spot on your chosen workshop. Please note, you can only attend one workshop on the day, so choose the one you are most excited about!",
+        "free": true,
+        "location": "Block 10, Massey University College of Creative Arts., Entrance D, Tasman Street, Wellington",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "eventbrite",
+        "organiser": "Toi Rāuwharangi College of Creative Arts, Massey University"
+      },
+      {
         "id": "274567a260b0d69b",
         "title": "Your chance to learn Thai!",
         "link": "https://www.eventbrite.co.nz/e/your-chance-to-learn-thai-tickets-1987791126770",
@@ -360,6 +375,19 @@
         "organiser": "Deloitte Techweek26"
       },
       {
+        "id": "ced2707cbf21f28a",
+        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
+        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "e42257690cdde024",
         "title": "Deloitte Presents: Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
         "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
@@ -372,19 +400,6 @@
         "tags": [
           "arts-culture"
         ],
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "ced2707cbf21f28a",
-        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
-        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
-        "time_start": "2026-05-19T09:00:00+12:00",
-        "time_end": "2026-05-19T10:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -692,7 +707,7 @@
         "id": "b00b8f45e8db70bf",
         "title": "In Conversation: The State of New Zealand Fiction",
         "link": "https://www.booksellers.co.nz/ockham",
-        "time_start": "2026-05-11T17:00:00+12:00",
+        "time_start": "2026-05-12T17:00:00+12:00",
         "summary": "A panel discussion with this year's fiction finalists exploring the themes, craft, and challenges of writing contemporary New Zealand fiction.",
         "description": "Authors’ creativity, intellect and determination recognised",
         "free": true,
@@ -822,25 +837,6 @@
         "host_slug": "studio-one"
       },
       {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -857,6 +853,25 @@
         "tags": [
           "arts-culture",
           "history-society"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -885,7 +900,7 @@
         "link": "https://www.tepapa.govt.nz/visit/events/he-kaupapa-waka-closing-korero",
         "time_start": "2026-05-03T13:00:00+12:00",
         "summary": "Join us as we mark the closing of the exhibition  He Kaupapa Waka , with an afternoon of talks and a rare opportunity to attend the closing ceremony.",
-        "description": "Join us as we mark the closing of the exhibition  He Kaupapa Waka , with an afternoon of talks and a rare opportunity to attend the closing ceremony.  ",
+        "description": "Join us as we mark the closing of the exhibition  He Kaupapa Waka , with an afternoon of talks and a rare opportunity to attend the closing ceremony.   ",
         "free": false,
         "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
         "tags": [
@@ -1049,7 +1064,7 @@
         "id": "e2788c45a4a1bec8",
         "title": "Building Back Better: 15 Years of Earthquake Engineering Lessons from Christchurch",
         "link": "https://www.canterbury.ac.nz/news-and-events/events",
-        "time_start": "2026-05-01T18:00:00+12:00",
+        "time_start": "2026-05-02T18:00:00+12:00",
         "summary": "Fifteen years after the 2011 Canterbury earthquakes, UC engineers reflect on what they learned, what changed in global building codes, and what still needs to happen.",
         "description": "From seminars and lectures to arts and sporting events there are lots of interesting events happening at UC all the time! See what's on or search for an event.",
         "free": true,
@@ -1070,7 +1085,7 @@
         "id": "86b784eecf036925",
         "title": "New Zealand's Space Future: From Rocket Lab to National Strategy",
         "link": "https://www.canterbury.ac.nz/news-and-events/events",
-        "time_start": "2026-05-07T17:30:00+12:00",
+        "time_start": "2026-05-08T17:30:00+12:00",
         "summary": "An exploration of New Zealand's rapidly growing space sector, the science enabled by domestic launch capability, and the policy frameworks governing our use of space.",
         "description": "From seminars and lectures to arts and sporting events there are lots of interesting events happening at UC all the time! See what's on or search for an event.",
         "free": true,
@@ -1085,7 +1100,7 @@
         "id": "e885f0a7f721ce37",
         "title": "Canterbury Water: Ecology, Irrigation, and the Future of Our Freshwater",
         "link": "https://www.canterbury.ac.nz/news-and-events/events",
-        "time_start": "2026-05-12T12:30:00+12:00",
+        "time_start": "2026-05-13T12:30:00+12:00",
         "summary": "Researchers and community voices discuss the competing demands on Canterbury's freshwater resources and what a sustainable future looks like for the region.",
         "description": "From seminars and lectures to arts and sporting events there are lots of interesting events happening at UC all the time! See what's on or search for an event.",
         "free": true,
@@ -1109,7 +1124,7 @@
         "id": "a0102426b2daac5e",
         "title": "Distinguished Lecture: The Brain in Pain — New Frontiers in Chronic Pain Research",
         "link": "https://www.otago.ac.nz/news/events",
-        "time_start": "2026-05-05T17:00:00+12:00",
+        "time_start": "2026-05-06T17:00:00+12:00",
         "summary": "The annual Otago Distinguished Lecture in Medicine explores breakthrough research into the neuroscience of chronic pain and emerging treatments.",
         "description": "#info-icon .st0{clip-path:url(#SVGID_00000117666420502436894470000000235553220004666525_);fill:#060D87;} #info-icon .st1{fill:#FFFFFF;} #nocircle-cross-red .st0{fill:#CE0407;} Red X icon #nocircle-tick-green .st0{fill:#86B239;} Green tick icon #nocircle-tick-yellow .cls-1{fill:#f9c000;} Yellow tick icon #tohu-white .st0{fill:#FFFFFF;} .st0{clip-path:url(#SVGID_00000100362243231890994470000006939516260031287192_);fill:#00508F;} .st1{fill:#FFFFFF;} Skip to main content --\u003e Current students Staff Alumni Library Contact --\u003e --\u003e Home Clear search Toggle search --\u003e --\u003e --\u003e Open search Close search Toggle hamburger menu --\u003e --\u003e --\u003e Open menu Close menu Toggle submenu Ngā tauira o āpōpō Future Students Return to previous menu Ngā tauira o āpōpō Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Toggle submenu Ako Ōtākou Learning and Teaching Return to previous menu Ako Ōtākou Learning and Teaching Toggle submenu Learning and teaching Return to previous menu Learning and teaching Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Toggle submenu Information for future students Return to previous menu Information for future students Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Toggle submenu Postgraduate study Return to previous menu Postgraduate study Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Toggle submenu Information for current students Return to previous menu Information for current students Exams Graduation Student Learning Development Textbooks Timetables Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic key dates Course Advice Services and support Toggle submenu Rangahau Research Return to previous menu Rangahau Research Toggle submenu Research Return to previous menu Research Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections Toggle submenu For researchers Return to previous menu For researchers For researchers Applying for research funding Funding opportunities Toggle submenu For postgraduate students Return to previous menu For postgraduate students For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Toggle submenu Departments and schools Return to previous menu Departments and schools Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research Toggle submenu Are you looking for... Return to previous menu Are you looking for... Research Expertise For students Research Awards Toggle submenu Māori ki Ōtākou Māori at Otago Return to previous menu Māori ki Ōtākou Māori at Otago Toggle submenu Māori at Otago Return to previous menu Māori at Otago Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Toggle submenu Māori student support services Return to previous menu Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori Toggle submenu Are you looking for... Return to previous menu Are you looking for... Student Accommodation Scholarships Subjects and Papers Toggle submenu Pacific ki Ōtākou Pacific at Otago Return to previous menu Pacific ki Ōtākou Pacific at Otago Toggle submenu Pacific at Otago Return to previous menu Pacific at Otago Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us Toggle submenu For current students Return to previous menu For current students For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Toggle submenu Te Whirika International Return to previous menu Te Whirika International Toggle submenu International at Otago Return to previous menu International at Otago International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Toggle submenu Future international students Return to previous menu Future international students Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Toggle submenu Current international students Return to previous menu Current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students Toggle submenu Are you looking for... Return to previous menu Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Toggle submenu Mō Ōtākou About Otago Return to previous menu Mō Ōtākou About Otago Toggle submenu About Otago Return to previous menu About Otago About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Toggle submenu Administration Return to previous menu Administration Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Toggle submenu Departments and Schools Return to previous menu Departments and Schools Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Toggle submenu Careers at Otago Return to previous menu Careers at Otago Careers at Otago Working at Otago Living in NZ Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington --\u003e Current students Staff Alumni Library Contact --\u003e Ngā tauira o āpōpō Future Students --\u003e Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days --\u003e Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Ako Ōtākou Learning and Teaching --\u003e Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Information for current students Exams Graduation Student Learning Development Textbooks Timetables --\u003e Are you looking for... Academic key dates Course Advice Services and support Rangahau Research --\u003e Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections For researchers Applying for research funding Funding opportunities For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research --\u003e Are you looking for... Research Expertise For students Research Awards Māori ki Ōtākou Māori at Otago --\u003e Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori --\u003e Are you looking for... Student Accommodation Scholarships Subjects and Papers Pacific ki Ōtākou Pacific at Otago --\u003e Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association --\u003e Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Te Whirika International --\u003e International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students --\u003e Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Mō Ōtākou About Otago --\u003e About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Careers at Otago Working at Otago Living in NZ --\u003e Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington function appendBreadcrumbs(breadcrumbListClass = 'ol.breadcrumb__list'){ const breadcrumbsList = document.querySelector(breadcrumbListClass); if(breadcrumbsList){ var breadcrumbListInnerHTML = breadcrumbsList.innerHTML; breadcrumbsList.innerHTML = breadcrumbListInnerHTML + ' News and events",
         "free": true,
@@ -1130,7 +1145,7 @@
         "id": "e48ddbbc834dc652",
         "title": "Secrets of the Southern Ocean: Otago's Deep-Sea Research Programme",
         "link": "https://www.otago.ac.nz/news/events",
-        "time_start": "2026-05-10T18:30:00+12:00",
+        "time_start": "2026-05-11T18:30:00+12:00",
         "summary": "Marine scientists share discoveries from recent voyages to the Southern Ocean, including new species, ecosystem dynamics, and implications for fisheries management.",
         "description": "#info-icon .st0{clip-path:url(#SVGID_00000117666420502436894470000000235553220004666525_);fill:#060D87;} #info-icon .st1{fill:#FFFFFF;} #nocircle-cross-red .st0{fill:#CE0407;} Red X icon #nocircle-tick-green .st0{fill:#86B239;} Green tick icon #nocircle-tick-yellow .cls-1{fill:#f9c000;} Yellow tick icon #tohu-white .st0{fill:#FFFFFF;} .st0{clip-path:url(#SVGID_00000100362243231890994470000006939516260031287192_);fill:#00508F;} .st1{fill:#FFFFFF;} Skip to main content --\u003e Current students Staff Alumni Library Contact --\u003e --\u003e Home Clear search Toggle search --\u003e --\u003e --\u003e Open search Close search Toggle hamburger menu --\u003e --\u003e --\u003e Open menu Close menu Toggle submenu Ngā tauira o āpōpō Future Students Return to previous menu Ngā tauira o āpōpō Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Toggle submenu Ako Ōtākou Learning and Teaching Return to previous menu Ako Ōtākou Learning and Teaching Toggle submenu Learning and teaching Return to previous menu Learning and teaching Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Toggle submenu Information for future students Return to previous menu Information for future students Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Toggle submenu Postgraduate study Return to previous menu Postgraduate study Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Toggle submenu Information for current students Return to previous menu Information for current students Exams Graduation Student Learning Development Textbooks Timetables Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic key dates Course Advice Services and support Toggle submenu Rangahau Research Return to previous menu Rangahau Research Toggle submenu Research Return to previous menu Research Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections Toggle submenu For researchers Return to previous menu For researchers For researchers Applying for research funding Funding opportunities Toggle submenu For postgraduate students Return to previous menu For postgraduate students For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Toggle submenu Departments and schools Return to previous menu Departments and schools Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research Toggle submenu Are you looking for... Return to previous menu Are you looking for... Research Expertise For students Research Awards Toggle submenu Māori ki Ōtākou Māori at Otago Return to previous menu Māori ki Ōtākou Māori at Otago Toggle submenu Māori at Otago Return to previous menu Māori at Otago Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Toggle submenu Māori student support services Return to previous menu Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori Toggle submenu Are you looking for... Return to previous menu Are you looking for... Student Accommodation Scholarships Subjects and Papers Toggle submenu Pacific ki Ōtākou Pacific at Otago Return to previous menu Pacific ki Ōtākou Pacific at Otago Toggle submenu Pacific at Otago Return to previous menu Pacific at Otago Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us Toggle submenu For current students Return to previous menu For current students For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Toggle submenu Te Whirika International Return to previous menu Te Whirika International Toggle submenu International at Otago Return to previous menu International at Otago International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Toggle submenu Future international students Return to previous menu Future international students Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Toggle submenu Current international students Return to previous menu Current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students Toggle submenu Are you looking for... Return to previous menu Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Toggle submenu Mō Ōtākou About Otago Return to previous menu Mō Ōtākou About Otago Toggle submenu About Otago Return to previous menu About Otago About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Toggle submenu Administration Return to previous menu Administration Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Toggle submenu Departments and Schools Return to previous menu Departments and Schools Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Toggle submenu Careers at Otago Return to previous menu Careers at Otago Careers at Otago Working at Otago Living in NZ Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington --\u003e Current students Staff Alumni Library Contact --\u003e Ngā tauira o āpōpō Future Students --\u003e Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days --\u003e Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Ako Ōtākou Learning and Teaching --\u003e Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Information for current students Exams Graduation Student Learning Development Textbooks Timetables --\u003e Are you looking for... Academic key dates Course Advice Services and support Rangahau Research --\u003e Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections For researchers Applying for research funding Funding opportunities For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research --\u003e Are you looking for... Research Expertise For students Research Awards Māori ki Ōtākou Māori at Otago --\u003e Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori --\u003e Are you looking for... Student Accommodation Scholarships Subjects and Papers Pacific ki Ōtākou Pacific at Otago --\u003e Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association --\u003e Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Te Whirika International --\u003e International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students --\u003e Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Mō Ōtākou About Otago --\u003e About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Careers at Otago Working at Otago Living in NZ --\u003e Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington function appendBreadcrumbs(breadcrumbListClass = 'ol.breadcrumb__list'){ const breadcrumbsList = document.querySelector(breadcrumbListClass); if(breadcrumbsList){ var breadcrumbListInnerHTML = breadcrumbsList.innerHTML; breadcrumbsList.innerHTML = breadcrumbListInnerHTML + ' News and events",
         "free": true,
@@ -1145,7 +1160,7 @@
         "id": "22b6c643fdffc426",
         "title": "Equity in Health: Progress and Challenges for Māori Wellbeing",
         "link": "https://www.otago.ac.nz/news/events",
-        "time_start": "2026-05-15T17:00:00+12:00",
+        "time_start": "2026-05-16T17:00:00+12:00",
         "summary": "A wānanga-style public discussion on the persistent health inequities facing Māori communities and what genuine system change would require.",
         "description": "#info-icon .st0{clip-path:url(#SVGID_00000117666420502436894470000000235553220004666525_);fill:#060D87;} #info-icon .st1{fill:#FFFFFF;} #nocircle-cross-red .st0{fill:#CE0407;} Red X icon #nocircle-tick-green .st0{fill:#86B239;} Green tick icon #nocircle-tick-yellow .cls-1{fill:#f9c000;} Yellow tick icon #tohu-white .st0{fill:#FFFFFF;} .st0{clip-path:url(#SVGID_00000100362243231890994470000006939516260031287192_);fill:#00508F;} .st1{fill:#FFFFFF;} Skip to main content --\u003e Current students Staff Alumni Library Contact --\u003e --\u003e Home Clear search Toggle search --\u003e --\u003e --\u003e Open search Close search Toggle hamburger menu --\u003e --\u003e --\u003e Open menu Close menu Toggle submenu Ngā tauira o āpōpō Future Students Return to previous menu Ngā tauira o āpōpō Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Toggle submenu Ako Ōtākou Learning and Teaching Return to previous menu Ako Ōtākou Learning and Teaching Toggle submenu Learning and teaching Return to previous menu Learning and teaching Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Toggle submenu Information for future students Return to previous menu Information for future students Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Toggle submenu Postgraduate study Return to previous menu Postgraduate study Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Toggle submenu Information for current students Return to previous menu Information for current students Exams Graduation Student Learning Development Textbooks Timetables Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic key dates Course Advice Services and support Toggle submenu Rangahau Research Return to previous menu Rangahau Research Toggle submenu Research Return to previous menu Research Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections Toggle submenu For researchers Return to previous menu For researchers For researchers Applying for research funding Funding opportunities Toggle submenu For postgraduate students Return to previous menu For postgraduate students For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Toggle submenu Departments and schools Return to previous menu Departments and schools Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research Toggle submenu Are you looking for... Return to previous menu Are you looking for... Research Expertise For students Research Awards Toggle submenu Māori ki Ōtākou Māori at Otago Return to previous menu Māori ki Ōtākou Māori at Otago Toggle submenu Māori at Otago Return to previous menu Māori at Otago Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Toggle submenu Māori student support services Return to previous menu Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori Toggle submenu Are you looking for... Return to previous menu Are you looking for... Student Accommodation Scholarships Subjects and Papers Toggle submenu Pacific ki Ōtākou Pacific at Otago Return to previous menu Pacific ki Ōtākou Pacific at Otago Toggle submenu Pacific at Otago Return to previous menu Pacific at Otago Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us Toggle submenu For current students Return to previous menu For current students For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Toggle submenu Te Whirika International Return to previous menu Te Whirika International Toggle submenu International at Otago Return to previous menu International at Otago International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Toggle submenu Future international students Return to previous menu Future international students Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Toggle submenu Current international students Return to previous menu Current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students Toggle submenu Are you looking for... Return to previous menu Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Toggle submenu Mō Ōtākou About Otago Return to previous menu Mō Ōtākou About Otago Toggle submenu About Otago Return to previous menu About Otago About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Toggle submenu Administration Return to previous menu Administration Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Toggle submenu Departments and Schools Return to previous menu Departments and Schools Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Toggle submenu Careers at Otago Return to previous menu Careers at Otago Careers at Otago Working at Otago Living in NZ Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington --\u003e Current students Staff Alumni Library Contact --\u003e Ngā tauira o āpōpō Future Students --\u003e Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days --\u003e Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Ako Ōtākou Learning and Teaching --\u003e Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Information for current students Exams Graduation Student Learning Development Textbooks Timetables --\u003e Are you looking for... Academic key dates Course Advice Services and support Rangahau Research --\u003e Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections For researchers Applying for research funding Funding opportunities For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research --\u003e Are you looking for... Research Expertise For students Research Awards Māori ki Ōtākou Māori at Otago --\u003e Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori --\u003e Are you looking for... Student Accommodation Scholarships Subjects and Papers Pacific ki Ōtākou Pacific at Otago --\u003e Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association --\u003e Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Te Whirika International --\u003e International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students --\u003e Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Mō Ōtākou About Otago --\u003e About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Careers at Otago Working at Otago Living in NZ --\u003e Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington function appendBreadcrumbs(breadcrumbListClass = 'ol.breadcrumb__list'){ const breadcrumbsList = document.querySelector(breadcrumbListClass); if(breadcrumbsList){ var breadcrumbListInnerHTML = breadcrumbsList.innerHTML; breadcrumbsList.innerHTML = breadcrumbListInnerHTML + ' News and events",
         "free": true,
@@ -1245,6 +1260,20 @@
         "host_slug": "victoria"
       },
       {
+        "id": "b06dbc473ad56b9a",
+        "title": "New Zealand Sign Language Week Taster Class",
+        "link": "https://www.wgtn.ac.nz/lals/about/events/2026-events/new-zealand-sign-language-week-taster-class",
+        "time_start": "2026-05-04T10:00:00+12:00",
+        "summary": "Come join us for a free 45-minute taster class to learn some basics. Learn how to greet, introduce yourself and use some everyday...",
+        "description": "Come join us for a free 45-minute taster class to learn some basics. Learn how to greet, introduce yourself and use some everyday...",
+        "free": true,
+        "location": "Wellington",
+        "tags": [
+          "literature-writing"
+        ],
+        "host_slug": "victoria"
+      },
+      {
         "id": "c18c3e744bc93c82",
         "title": "Garrison World: Redcoat Soldiers in New Zealand and across the British Empire",
         "link": "https://www.wgtn.ac.nz/stout-centre/about/events/garrison-world-redcoat-soldiers-in-new-zealand-and-across-the-british-empire",
@@ -1270,6 +1299,27 @@
         "host_slug": "victoria"
       },
       {
+        "id": "b3e2988035940c65",
+        "title": "Incidental Acquisition of Novel L2 Vocabulary from Authentic Materials",
+        "link": "https://www.wgtn.ac.nz/lals/about/events/2026-events/incidental-acquisition-of-novel-l2-vocabulary-from-authentic-materials",
+        "time_start": "2026-05-08T16:10:00+12:00",
+        "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the...",
+        "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Dr Mahnaz Aliyar, LALS, Victoria University of Wellington.",
+        "free": true,
+        "location": "Wellington",
+        "speakers": [
+          {
+            "name": "Dr Mahnaz Aliyar",
+            "bio": "LALS, Victoria University of Wellington.\", \"publisher\""
+          }
+        ],
+        "tags": [
+          "science-technology",
+          "literature-writing"
+        ],
+        "host_slug": "victoria"
+      },
+      {
         "id": "2f6c979a89a98d02",
         "title": "Reliability Options in Renewables-Dominated Electricity Markets",
         "link": "https://www.wgtn.ac.nz/business/engage/events/reliability-options-in-renewables-dominated-electricity-markets",
@@ -1281,6 +1331,21 @@
         "tags": [
           "environment",
           "literature-writing"
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "0ce3b2985b99250e",
+        "title": "Io as ‘the Soul of Things’: Māori Io Traditions beyond the Supreme God Debate",
+        "link": "https://www.wgtn.ac.nz/sacs/about/events/io-as-the-soul-of-things-maori-io-traditions-beyond-the-supreme-god-debate",
+        "time_start": "2026-05-13T12:00:00+12:00",
+        "summary": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa) - Senior Lecturer in Religion/Mātai Whairuataka - University of Otago/Ōtākou Whakaihu WakaFew debates in the study of...",
+        "description": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa) - Senior Lecturer in Religion/Mātai Whairuataka - University of Otago/Ōtākou Whakaihu WakaFew debates in the study of...",
+        "free": true,
+        "location": "Wellington",
+        "tags": [
+          "history-society",
+          "philosophy-ideas"
         ],
         "host_slug": "victoria"
       },

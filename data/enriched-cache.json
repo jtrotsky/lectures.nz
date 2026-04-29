@@ -58,6 +58,17 @@
       }
     ]
   },
+  "0ce3b2985b99250e": {
+    "event_type": "lecture",
+    "summary": "Dr Deane Galbraith explores Io traditions beyond the Supreme God Debate.",
+    "description": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa), Senior Lecturer in Religion/Mātai Whairuataka at the University of Otago/Ōtākou Whakaihu WakaFew, presents a look into the study of Io traditions.",
+    "speakers": [
+      {
+        "name": "Dr Deane Galbraith",
+        "bio": "Senior Lecturer in Religion"
+      }
+    ]
+  },
   "0ce9fae1b4d99995": {
     "event_type": "panel",
     "summary": "Panel discussion on diaspora communities navigating global tensions.",
@@ -423,6 +434,11 @@
     "summary": "Explore hackathon benefits and impacts.",
     "description": "Hackathons offer a platform for students to engage in creative problem-solving with real-world applications. An AUT event for those interested in technology, innovation, and collaborative challenges."
   },
+  "6866a93602bd03ca": {
+    "event_type": "seminar",
+    "summary": "Explore student life at Massey University Wellington's College of Creative Arts with workshops and panel talks.",
+    "description": "Experience Day offers a taste of being a student at Massey University Wellington's College of Creative Arts - Toi Rauhārangi. Join us from 9:30 am - 3 pm on June 12th for workshops, pizza, and student panel talks. Experience days are free to attend, but registration is essential to secure your spot on your chosen workshop."
+  },
   "69655c25a9a89e49": {
     "event_type": "lecture",
     "summary": "Explore the intricacies of voting and elections as they occurred in ancient Rome during this 'This Thinking Life' webinar.",
@@ -770,6 +786,22 @@
       {
         "name": "Pip Adam",
         "bio": "Author"
+      }
+    ]
+  },
+  "b06dbc473ad56b9a": {
+    "event_type": "workshop",
+    "summary": "Learn basic New Zealand Sign Language greetings and introductions in this free 45-minute taster class.",
+    "description": "Join this free 45-minute taster class hosted by Victoria University. Attendees will learn some basics of New Zealand Sign Language, covering essential skills like greetings and self-introductions. It is an accessible way for newcomers to explore the fundamentals of NZSL."
+  },
+  "b3e2988035940c65": {
+    "event_type": "seminar",
+    "summary": "Dr Mahnaz Aliyar presents on the incidental acquisition of novel L2 vocabulary from authentic materials.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Dr Mahnaz Aliyar, LALS, Victoria University of Wellington.",
+    "speakers": [
+      {
+        "name": "Dr Mahnaz Aliyar",
+        "bio": "LALS, Victoria University of Wellington"
       }
     ]
   },

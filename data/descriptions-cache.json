@@ -107,6 +107,9 @@
   "https://www.eventbrite.co.nz/e/lng-and-new-zealands-energy-balancing-act-lessons-from-asia-pacific-tickets-1987464831813": {
     "description": "Explores governance and operating experience across multiple regulatory environments, examining NZ's energy trilemma."
   },
+  "https://www.eventbrite.co.nz/e/massey-college-of-creative-arts-experience-day-tickets-1987573254107": {
+    "description": "Experience Day is about getting a taste of the experience of being a student at Massey University Wellington's College of Creative Arts - Toi Rauwhārangi. Join us from 9:30am - 3pm on June 12th for workshops, pizza, student panel talks and more! (Registration will open from 9am) Experience days are free to attend, but registration is essential to secure your spot on your chosen workshop. Please note, you can only attend one workshop on the day, so choose the one you are most excited about!"
+  },
   "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659": {
     "description": "Professor Clare McCann's Inaugural Lecture"
   },
@@ -275,6 +278,15 @@
       }
     ]
   },
+  "https://www.wgtn.ac.nz/lals/about/events/2026-events/incidental-acquisition-of-novel-l2-vocabulary-from-authentic-materials": {
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Dr Mahnaz Aliyar, LALS, Victoria University of Wellington.",
+    "speakers": [
+      {
+        "name": "Dr Mahnaz Aliyar",
+        "bio": "LALS, Victoria University of Wellington.\", \"publisher\""
+      }
+    ]
+  },
   "https://www.wgtn.ac.nz/lals/about/events/2026-events/is-there-situational-irony-in-satire": {
     "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Dr Stephen Skalicky, LALS, Victoria University of Wellington",
     "speakers": [
@@ -283,6 +295,12 @@
         "bio": "LALS, Victoria University of Wellington\","
       }
     ]
+  },
+  "https://www.wgtn.ac.nz/lals/about/events/2026-events/new-zealand-sign-language-week-taster-class": {
+    "description": "Come join us for a free 45-minute taster class to learn some basics. Learn how to greet, introduce yourself and use some everyday..."
+  },
+  "https://www.wgtn.ac.nz/sacs/about/events/io-as-the-soul-of-things-maori-io-traditions-beyond-the-supreme-god-debate": {
+    "description": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa) - Senior Lecturer in Religion/Mātai Whairuataka - University of Otago/Ōtākou Whakaihu WakaFew debates in the study of..."
   },
   "https://www.wgtn.ac.nz/sam/about/events/vamlet-dark-prince-of-denmark": {
     "description": "Content Forecast: Blood, violence, depictions of mental distress and death. R13.About the showHamlet’s looking paler than usual. Their father’s dead, mother’s remarried, and...",
