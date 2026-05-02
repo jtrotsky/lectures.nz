@@ -172,6 +172,11 @@
     "summary": "Explore Yongchun lacquer baskets and paint your own.",
     "description": "Discover the beauty of Yongchun Lacquer Baskets, a traditional craft from Fujian blending weaving and lacquer art. Learn about its cultural story and create your own lacquer basket under expert guidance."
   },
+  "21be6b77ec2e071a": {
+    "event_type": "lecture",
+    "summary": "Examines Southeast Asia's critical juncture amid global fragmentation, covering topics like the Iran War, Trump's tariffs, and the South China Sea.",
+    "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. The lecture will explore the impact of President Trump’s sweeping tariff agenda and transactional approach to allies."
+  },
   "22b6c643fdffc426": {
     "event_type": "lecture",
     "summary": "Professor Papaarangi Reid presents on the progress and ongoing challenges related to Māori wellbeing and health equity.",
@@ -213,6 +218,11 @@
     "event_type": "conference",
     "summary": "Conference exploring critical reflections on development practices.",
     "description": "This year’s theme, Rebalancing Worlds – Reworking Practice, invites us to reflect critically on development practice and explore pathways to more just and equitable futures in the field of international development. Organized by Victoria University's DEVNET program."
+  },
+  "283045f10f790cd0": {
+    "event_type": "seminar",
+    "summary": "Deloitte Techweek26 presents an examination of the future of Open Insurance within Aotearoa New Zealand.",
+    "description": "Deloitte Techweek26 presents: The Future of Open Insurance in Aotearoa New Zealand. The event will be held at Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand on Tuesday, 19th May 2026."
   },
   "29e57fcd6effffcd": {
     "event_type": "market",
@@ -465,6 +475,11 @@
       }
     ]
   },
+  "6cf49b2e5a77f75c": {
+    "event_type": "seminar",
+    "summary": "AUT Worldwide takes over campuses from May 5 to 7, welcoming students from nearly 140 countries.",
+    "description": "AUT Worldwide is back! Mark your calendars—AUT Worldwide is taking over our campuses from 5 to 7 May. With students from nearly 140 countries, AUT is hosting an incredible global experience."
+  },
   "6edac8ffc7e3fbf6": {
     "event_type": "lecture",
     "summary": "Royal Society presents an urgent update on climate change.",
@@ -485,6 +500,11 @@
         "bio": "Delivering Inaugural Lecture"
       }
     ]
+  },
+  "71fe220011968c3a": {
+    "event_type": "seminar",
+    "summary": "Learn about scholarship applications for school leavers for the year 2027 at Victoria University.",
+    "description": "Victoria University is hosting a session to guide school leavers through the scholarship application process for 2027. Attendees will receive vital information regarding available scholarships and the necessary application procedures. This is a key resource for students planning their post-secondary education."
   },
   "7215d531111a9854": {
     "event_type": "lecture",
@@ -902,6 +922,11 @@
     "summary": "International Research Symposium on work-integrated learning.",
     "description": "The International Research Symposium, organized by WACE, explores transforming practice through research in work-integrated education. This event aims to bring together global experts for a collaborative dialogue and innovation in cooperative and experiential educational methods."
   },
+  "dab41faa544e7e75": {
+    "event_type": "seminar",
+    "summary": "This session hosted by Deloitte Techweek26 will explore demographics, productivity, and AI choices facing New Zealand.",
+    "description": "Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ. The event is hosted by Deloitte Techweek26 and will be held at Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand on Wednesday 20th May 2026. Find event information to register."
+  },
   "db21f3bf1d770c7f": {
     "event_type": "lecture",
     "summary": "Exploring societal challenges in New Zealand.",
@@ -1044,6 +1069,17 @@
     "event_type": "celebration",
     "summary": "An event series reflecting on the past to inform the present and envision the future of the Bachelor of Social Work qualification.",
     "description": "This event series celebrates the 50th anniversary of the Bachelor of Social Work qualification. Attendees will reflect on the program's past to inform current practice and envision its future trajectory."
+  },
+  "f736386a033bed4f": {
+    "event_type": "seminar",
+    "summary": "Helen Howell will discuss visual priming and speech perception among Samoan speakers at the School of Linguistics and Applied Language Studies.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. This seminar is presented by Helen Howell, University of Potsdam.",
+    "speakers": [
+      {
+        "name": "Helen Howell",
+        "bio": "University of Potsdam"
+      }
+    ]
   },
   "f9522d3572d03fb2": {
     "summary": "Future Environments Thought Leadership session, in partnership with Whaikaha – Ministry of Disabled People, focused on accessible and inclusive design in",

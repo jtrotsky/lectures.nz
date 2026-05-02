@@ -59,6 +59,9 @@
   "https://www.aucklandmuseum.com/visit/whats-on/maori/Te-Reo-o-Te-Ao-Tawhito": {
     "description": "Join us at Tāmaki Paenga Hira Auckland War Memorial Museum for an evening hearing the journey of the pauku, its history, care and the important mātauranga surrounding this prestigious cloak."
   },
+  "https://www.aut.ac.nz/events/aut-worldwide": {
+    "description": "AUT Worldwide is back!!!Mark your calendars \u0026ndash; AUT Worldwide is taking over our campuses from 5 to 7 May. With students from nearly 140 countries, AUT is h"
+  },
   "https://www.aut.ac.nz/events/future-environments-thought-leadership-whaikaha-ministry-of-disabled-people": {
     "description": "Future Environments Thought Leadership session, in partnership with Whaikaha – Ministry of Disabled People, focused on accessible and inclusive design in ",
     "speakers": [
@@ -220,6 +223,9 @@
   "https://www.wgtn.ac.nz/events/2026/dates/graduate-diploma-of-teaching-and-master-of-teaching-and-learning-programmes-end": {
     "description": ""
   },
+  "https://www.wgtn.ac.nz/events/2026/dates/school-leaver-scholarships-applications-open-for-2027": {
+    "description": ""
+  },
   "https://www.wgtn.ac.nz/fhss/about/events/kia-tika-kia-ponofor-a-just-society": {
     "description": "In Aotearoa, we know very well what our most pressing problems are—poverty, inequity, ecological destruction, and climate change. But we are much less...",
     "speakers": [
@@ -299,6 +305,15 @@
   "https://www.wgtn.ac.nz/lals/about/events/2026-events/new-zealand-sign-language-week-taster-class": {
     "description": "Come join us for a free 45-minute taster class to learn some basics. Learn how to greet, introduce yourself and use some everyday..."
   },
+  "https://www.wgtn.ac.nz/lals/about/events/visual-priming-and-speech-perception-among-samoan-speakers": {
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Helen Howell, University of Potsdam",
+    "speakers": [
+      {
+        "name": "Helen Howell",
+        "bio": "University of Potsdam\", \"publisher\": { \"@type\""
+      }
+    ]
+  },
   "https://www.wgtn.ac.nz/sacs/about/events/io-as-the-soul-of-things-maori-io-traditions-beyond-the-supreme-god-debate": {
     "description": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa) - Senior Lecturer in Religion/Mātai Whairuataka - University of Otago/Ōtākou Whakaihu WakaFew debates in the study of..."
   },
@@ -316,5 +331,8 @@
   },
   "https://www.wgtn.ac.nz/stout-centre/about/events/garrison-world-redcoat-soldiers-in-new-zealand-and-across-the-british-empire": {
     "description": "Seminar Series: Between the Lines: Recent Books in New Zealand Studies Seminar 1 Garrison World: Redcoat Soldiers in New Zealand and across the..."
+  },
+  "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond": {
+    "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and..."
   }
 }
