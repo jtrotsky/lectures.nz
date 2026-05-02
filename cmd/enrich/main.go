@@ -45,19 +45,23 @@ const (
 
 // cacheEntry holds the enriched fields we persist between runs.
 type cacheEntry struct {
-	EventType   string          `json:"event_type,omitempty"`
-	Summary     string          `json:"summary,omitempty"`
-	Description string          `json:"description,omitempty"`
-	Speakers    []model.Speaker `json:"speakers,omitempty"`
+	EventType     string          `json:"event_type,omitempty"`
+	Summary       string          `json:"summary,omitempty"`
+	Description   string          `json:"description,omitempty"`
+	Speakers      []model.Speaker `json:"speakers,omitempty"`
+	Excluded      bool            `json:"excluded,omitempty"`
+	ExcludeReason string          `json:"exclude_reason,omitempty"`
 }
 
 // enrichResponse is what we expect back from Ollama (parsed from the JSON the model emits).
 type enrichResponse struct {
-	EventType   string          `json:"event_type"`
-	Title       string          `json:"title"`
-	Summary     string          `json:"summary"`
-	Description string          `json:"description"`
-	Speakers    []model.Speaker `json:"speakers"`
+	EventType     string          `json:"event_type"`
+	Title         string          `json:"title"`
+	Summary       string          `json:"summary"`
+	Description   string          `json:"description"`
+	Speakers      []model.Speaker `json:"speakers"`
+	Exclude       bool            `json:"exclude"`
+	ExcludeReason string          `json:"exclude_reason"`
 }
 
 // sourceStats tracks per-host counts for the summary table.
@@ -185,10 +189,12 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 
 		if lec.ID != "" {
 			cache[lec.ID] = cacheEntry{
-				EventType:   result.EventType,
-				Summary:     result.Summary,
-				Description: result.Description,
-				Speakers:    result.Speakers,
+				EventType:     result.EventType,
+				Summary:       result.Summary,
+				Description:   result.Description,
+				Speakers:      result.Speakers,
+				Excluded:      result.Excluded,
+				ExcludeReason: result.ExcludeReason,
 			}
 		}
 	}
@@ -241,14 +247,64 @@ func applyCache(lec model.Lecture, entry cacheEntry) model.Lecture {
 	if len(entry.Speakers) > 0 {
 		lec.Speakers = entry.Speakers
 	}
+	lec.Excluded = entry.Excluded
+	if entry.ExcludeReason != "" {
+		lec.ExcludeReason = entry.ExcludeReason
+	}
 	return lec
+}
+
+// navBoilerplateMarkers are strings that indicate a description field contains
+// website navigation/menu HTML rather than actual event content.
+var navBoilerplateMarkers = []string{
+	"skip to main content",
+	"toggle submenu",
+	"toggle hamburger menu",
+	"open menu close menu",
+	"see what's on or search for an event",
+	"lots of interesting events happening",
+}
+
+// stripNavBoilerplate returns "" if s looks like scraped navigation HTML rather
+// than event-specific text. Returns s unchanged otherwise.
+func stripNavBoilerplate(s string) string {
+	lower := strings.ToLower(s)
+	for _, marker := range navBoilerplateMarkers {
+		if strings.Contains(lower, marker) {
+			return ""
+		}
+	}
+	return s
 }
 
 // enrich calls Ollama to enrich a single lecture.
 func enrich(lec model.Lecture, host, model string, dryRun bool) (model.Lecture, error) {
-	desc := lec.Description
-	if desc == "" {
-		desc = lec.Summary
+	// Use description unless it's nav boilerplate, then fall back to summary.
+	rawDesc := stripNavBoilerplate(strings.TrimSpace(lec.Description))
+	rawSummary := strings.TrimSpace(lec.Summary)
+
+	// Build the source text block for the prompt.
+	// When both are present and different, pass them separately so the model
+	// can use whichever (or both) is more informative.
+	var sourceText string
+	switch {
+	case rawDesc != "" && rawSummary != "" && rawDesc != rawSummary:
+		sourceText = fmt.Sprintf("  source_summary: %s\n  source_description: %s", rawSummary, rawDesc)
+	case rawDesc != "":
+		sourceText = fmt.Sprintf("  source_description: %s", rawDesc)
+	case rawSummary != "":
+		sourceText = fmt.Sprintf("  source_description: %s", rawSummary)
+	}
+
+	usefulLen := len(rawDesc)
+	if usefulLen < 10 {
+		usefulLen = len(rawSummary)
+	}
+	isThin := usefulLen < 150
+
+	descInstruction := "If source_summary or source_description is already specific and well-written, preserve its essence closely — don't rewrite it into something vaguer. Clean up punctuation and remove hollow openers only."
+	if isThin {
+		descInstruction = "The source text is thin. Write about the topic's significance and what the audience will learn — not about the speaker's actions. Never pad with 'will speak on this topic', 'will present on', 'will discuss this subject', or any phrase that just restates the title. Write in active voice about the subject matter itself."
 	}
 
 	speakerNames := ""
@@ -260,12 +316,6 @@ func enrich(lec model.Lecture, host, model string, dryRun bool) (model.Lecture, 
 			}
 		}
 		speakerNames = strings.Join(names, ", ")
-	}
-
-	isThin := len(strings.TrimSpace(desc)) < 150
-	expansionInstruction := "Preserve the existing text closely — only clean up punctuation and remove hollow openers."
-	if isThin {
-		expansionInstruction = "Expand this — the source text is very short, so infer reasonable context from the title and host, but do not invent specific claims."
 	}
 
 	speakersLine := ""
@@ -283,20 +333,26 @@ func enrich(lec model.Lecture, host, model string, dryRun bool) (model.Lecture, 
 
 	prompt := fmt.Sprintf(`You are a curator for lectures.nz, a New Zealand public lectures website.
 
+lectures.nz lists public lectures, talks, seminars, panels, forums, and similar educational events.
+It does NOT list: campus festivals, cultural showcases, open days, orientation events, performances, concerts, markets, fitness classes, graduation ceremonies, or events with no lecture/talk component.
+When in doubt, include — but flag clear mismatches.
+
 Given the event below, return ONLY a valid JSON object — no markdown, no explanation.
 
 Fields:
-- "event_type": One or two words classifying the event. Choose exactly one: lecture, seminar, panel, workshop, talk, symposium, fireside chat, chat, debate, forum, roundtable, reading, concert, market, ceremony, course, fitness, orientation, conference.
+- "event_type": One or two words classifying the event. Choose exactly one: lecture, seminar, panel, workshop, talk, symposium, fireside chat, chat, debate, forum, roundtable, reading, concert, market, ceremony, course, fitness, orientation, festival, open day, conference.
+- "exclude": true if this event clearly does not belong on lectures.nz (e.g. campus festival, open day, cultural performance, market, fitness class, ceremony). false if it has any meaningful talk/lecture/seminar component, even if culturally themed.
+- "exclude_reason": a short phrase (max 8 words) if exclude is true, otherwise omit.
 - "title": The cleaned event title. Strip any speaker name appended after " | " (e.g. "Fast Forward 2026: Transcolonisation! | Chelsea Winstanley" → "Fast Forward 2026: Transcolonisation!"). Also strip trailing speaker credits like " with Jane Smith" or " — featuring Dr X" if the event name is clear without them. Do NOT rewrite, shorten, or rephrase the actual event name itself — only strip the speaker suffix. Return the original if no change needed.
-- "summary": One clear sentence (max 180 chars) for the index card. Capture the core topic and speaker if named. No hollow openers like "Join us" or "Discover". Do not invent anything not in the source.
-- "description": 2-4 sentences for the detail page. Preserve the source's voice, key facts, people, and institutions. Remove hollow openers. Fix punctuation. %s
-- "speakers": Array of speaker objects, each with "name" (string) and "bio" (string). Extract from title, speakers, or description. Return [] if none named. The "name" field must contain ONLY the person's name and honorific/title if given (e.g. "Dr Jane Smith" or "Professor John Doe") — never append event context, parenthetical notes, or topic references to the name. The "bio" field is a short role or affiliation, max 6 words (e.g. "former NZ diplomat", "Victoria University economist", "award-winning novelist"). Do not write a full sentence. Use "" if no bio information is available.
+- "summary": One clear sentence (max 180 chars) for the index card. Capture the core topic and speaker if known. No hollow openers ("Join us", "Discover", "Explore"). Do not invent anything not in the source. If source_summary is already good, you may use it directly.
+- "description": 2-4 sentences for the detail page. %s Begin with the event's intellectual substance — what question it addresses, what perspective it offers, or (for a named speaker) what they'll argue or present. Never start with what type of event it is ("The lecture", "This talk", "This seminar", "This event"). Never start with "Attendees will". Remove hollow marketing openers ("Join us", "This is a unique opportunity", "Don't miss"). Preserve specific people, institutions, and facts from the source.
+- "speakers": Array of {name, bio} objects. Extract from title, speakers field, or description. Return [] if none named. "name": person's full name including honorific prefix — keep "Dr", "Professor", "Sir", "Dame" if present in the source (e.g. "Dr Jane Smith", "Professor John Doe"). Never append role, topic, or parenthetical notes to the name. "bio": their specific role or affiliation as stated in the source, max 6 words (e.g. "Curator Archaeology, Auckland Museum"). Use "" if their role isn't mentioned — never use generic words like "speaker", "presenter", or "expert".
 
 Event:
   host: %s
   title: %s
-%s%s%s  description: %s
-`, expansionInstruction, effectiveHost(lec), lec.Title, speakersLine, locationLine, freeLine, desc)
+%s%s%s%s
+`, descInstruction, effectiveHost(lec), lec.Title, speakersLine, locationLine, freeLine, sourceText)
 
 	if dryRun {
 		fmt.Printf("\n--- DRY RUN: %s ---\n", truncate(lec.Title, 60))
@@ -322,6 +378,10 @@ Event:
 	out := lec
 	if resp.EventType != "" {
 		out.EventType = resp.EventType
+	}
+	out.Excluded = resp.Exclude
+	if resp.ExcludeReason != "" {
+		out.ExcludeReason = resp.ExcludeReason
 	}
 	// Only apply title if model stripped something (never allow lengthening).
 	if t := strings.TrimSpace(resp.Title); t != "" && t != lec.Title && len(t) < len(lec.Title) {

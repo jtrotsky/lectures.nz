@@ -85,6 +85,7 @@ func run() error {
 	if err != nil {
 		return fmt.Errorf("load lectures: %w", err)
 	}
+	lectures = filterByExcluded(lectures)
 	lectures = filterByTitle(lectures)
 	lectures = filterByEventType(lectures)
 	hosts, err := loadHosts("data/hosts.json")
@@ -206,6 +207,20 @@ func run() error {
 
 	log.Println("Build complete → public/")
 	return nil
+}
+
+// filterByExcluded removes events that enrichment explicitly flagged as not
+// suitable for lectures.nz (e.g. campus festivals, open days, performances).
+func filterByExcluded(lectures []model.Lecture) []model.Lecture {
+	out := lectures[:0]
+	for _, l := range lectures {
+		if l.Excluded {
+			log.Printf("SKIP  [%s] (excluded by enrichment): %q", l.HostSlug, l.Title)
+			continue
+		}
+		out = append(out, l)
+	}
+	return out
 }
 
 // filterByTitle removes events whose titles match the global exclusion list.

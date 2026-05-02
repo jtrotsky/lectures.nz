@@ -20,7 +20,9 @@ type Lecture struct {
 	Tags        []string   `json:"tags,omitempty"`
 	HostSlug    string     `json:"host_slug"`
 	Organiser   string     `json:"organiser,omitempty"`  // real institution when host is an aggregator (e.g. Eventbrite, Humanitix)
-	EventType   string     `json:"event_type,omitempty"` // set by enrichment: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, other
+	EventType   string     `json:"event_type,omitempty"` // set by enrichment: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, festival, open day, other
+	Excluded      bool   `json:"excluded,omitempty"`        // set by enrichment: true if event should not appear on lectures.nz
+	ExcludeReason string `json:"exclude_reason,omitempty"`  // short reason phrase from enrichment
 }
 
 // Speaker represents a speaker at a lecture.
