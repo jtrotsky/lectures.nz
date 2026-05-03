@@ -26,6 +26,7 @@ import (
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/motat"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/canterbury"
 	nationallibrary "github.com/jtrotsky/lectures.nz/internal/scraper/sources/national-library"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/objectspace"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/ockham"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/otago"
 	publicrecord "github.com/jtrotsky/lectures.nz/internal/scraper/sources/public-record"
@@ -223,6 +224,7 @@ func run() error {
 	scrapers := []scraper.Scraper{
 		&auckland.Scraper{},
 		&aut.Scraper{},
+		&objectspace.Scraper{},
 		&ockham.Scraper{},
 		&victoria.Scraper{},
 		&otago.Scraper{},

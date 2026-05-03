@@ -1,74 +1,46 @@
-// Package ockham scrapes events related to the Ockham New Zealand Book Awards
-// and associated literary lectures.
+// Package ockham scrapes the Ockham Lecture series from Objectspace gallery.
 //
-// TODO: The Booksellers NZ site (https://www.booksellers.co.nz/) hosts Ockham
-// award event listings. The events are likely under /events or /ockham-nz-book-awards.
-// Check:
-//   https://www.booksellers.co.nz/ockham
-//   https://www.booksellers.co.nz/events
+// The Ockham Lecture series is hosted at Objectspace (objectspace.org.nz) and
+// is sponsored by Ockham Residential. Events are listed on the Objectspace
+// events page alongside other gallery events. This scraper filters to events
+// whose title begins with "Ockham Lecture" and registers them under the ockham
+// host so the series appears as its own entry in the site.
 //
-// The site appears to use a standard CMS (possibly WordPress or similar).
-// Look for <article> tags with event schema markup or an RSS/JSON feed.
-//
-// For now this scraper returns realistic seed data.
+// All other Objectspace events are handled by the objectspace scraper.
 package ockham
 
 import (
 	"context"
-	"time"
+	"strings"
 
 	"github.com/jtrotsky/lectures.nz/internal/model"
-	"github.com/jtrotsky/lectures.nz/internal/scraper"
+	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/objectspace"
 )
 
-// Scraper implements scraper.Scraper for Ockham NZ literary events.
+// Scraper implements scraper.Scraper for the Ockham Lecture series.
 type Scraper struct{}
 
 func (s *Scraper) Host() model.Host {
 	return model.Host{
 		Slug:        "ockham",
-		Name:        "Ockham New Zealand Book Awards",
-		Website:     "https://www.booksellers.co.nz/ockham",
-		Description: "New Zealand's premier literary prize, celebrating the best in New Zealand literature with public events, readings, and lectures throughout the year.",
+		Name:        "Ockham Lecture Series",
+		Website:     "https://objectspace.org.nz/events",
+		Description: "The Ockham Lecture series is an annual programme of lectures and panel discussions at Objectspace Auckland, supported by Ockham Residential.",
 	}
 }
 
 func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
-	// TODO: Replace with real scraping.
-	// body, err := scraper.Fetch(ctx, "https://www.booksellers.co.nz/events")
-	// if err != nil { return nil, err }
-	// return parseOckhamHTML(body)
-
-	now := time.Now()
-	loc := scraper.NZLocation
-
-	lectures := []model.Lecture{
-		{
-			ID:        scraper.MakeID("https://www.booksellers.co.nz/ockham/2026/longlist-celebration"),
-			Title:     "Ockham NZ Book Awards 2026 Longlist Celebration",
-			Link:      "https://www.booksellers.co.nz/ockham",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+5, 18, 0, 0, 0, loc),
-			Summary:   "Join us to celebrate the announcement of the 2026 Ockham New Zealand Book Awards longlist, with readings from longlisted authors across all four categories.",
-			Free:      false,
-			Cost:      "$25 (includes welcome drink)",
-			Location:  "Auckland Writers Festival Hub, Aotea Centre, Auckland",
-			HostSlug:  "ockham",
-		},
-		{
-			ID:        scraper.MakeID("https://www.booksellers.co.nz/ockham/2026/fiction-panel"),
-			Title:     "In Conversation: The State of New Zealand Fiction",
-			Link:      "https://www.booksellers.co.nz/ockham",
-			TimeStart: time.Date(now.Year(), now.Month(), now.Day()+12, 17, 0, 0, 0, loc),
-			Summary:   "A panel discussion with this year's fiction finalists exploring the themes, craft, and challenges of writing contemporary New Zealand fiction.",
-			Free:      true,
-			Location:  "Wellington Central Library, 65 Victoria Street, Wellington",
-			Speakers: []model.Speaker{
-				{Name: "Paula Morris", Bio: "Award-winning New Zealand novelist and Creative Writing academic"},
-				{Name: "Pip Adam", Bio: "Author and publisher, longlisted for the Acorn Prize"},
-			},
-			HostSlug: "ockham",
-		},
+	all, err := objectspace.ScrapeAll(ctx)
+	if err != nil {
+		return nil, err
 	}
 
+	var lectures []model.Lecture
+	for _, l := range all {
+		if strings.HasPrefix(strings.ToLower(l.Title), "ockham lecture") {
+			l.HostSlug = "ockham"
+			lectures = append(lectures, l)
+		}
+	}
 	return lectures, nil
 }

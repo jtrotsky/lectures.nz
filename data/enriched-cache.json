@@ -292,6 +292,13 @@
       }
     ]
   },
+  "347ac28eebc4b22c": {
+    "event_type": "performance",
+    "summary": "Join us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.",
+    "description": "Join us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.\n\nAround Gamper’s furniture, Xin and Alistair will stage a live performance bringing together movement, sound and real-time composition.\n\nDrawing on ideas from Xin’s solo work Body Story , the performance moves between dance and live music, letting meaning emerge through presence, texture, and exchange. Built through a long creative relationship, the work is shaped by physicality, rhythm, improvisation, and close attention to what is unfolding in the room.\n\nJoin us to watch it unfold with a drink in hand.\n\nXin Ji is a dance artist, choreographer, and educator based in Tāmaki Makaurau Auckland. Trained in Chinese classical ballet at the Beijing Dance Academy, he began his professional career in Japan with Shiki Theatre Company before moving to Aotearoa to study contemporary dance at Unitec. He has performed with leading contemporary companies in Aotearoa, including Footnote and the New Zealand Dance Company, and currently lectures in dance at Unitec. His practice spans performance and choreography across stage and screen, with a strong focus on physicality, presence, and storytelling.\n\nAlistair Deverick is a musician and sound designer of Scottish and Welsh ancestry based in Tāmaki Makaurau Auckland. He is known for his innovative approach to rhythm and texture. As a versatile drummer and producer, he has performed with acts like The Ruby Suns and Neil Finn and has created solo work under the moniker Boycrush, blending electronic, pop, and experimental sounds. His work spans live performance, studio production, and sound design, showcasing a dynamic range of musical influences.\n\nOver many years of working together, Xin Ji and Alistair Deverick have developed a close creative relationship grounded in listening, responsiveness, and a shared feel for atmosphere. Their collaboration brings together movement and sound in ways that feel physical and immediate.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
+    "excluded": true,
+    "exclude_reason": "Not a lecture or talk component"
+  },
   "3755a9be782fce30": {
     "event_type": "workshop",
     "summary": "Victoria's Mandarin Corner explores Tai Chi basics.",
@@ -320,6 +327,22 @@
     "event_type": "lecture",
     "summary": "This lecture explores what happens when disability is viewed as a powerful cultural lens rather than merely a problem to solve.",
     "description": "What happens when disability is seen as a powerful cultural lens, not a problem to solve? Join fellow AUT graduates for this insightful Great Graduates Speaker Series event."
+  },
+  "458a181125ff16de": {
+    "event_type": "launch",
+    "summary": "A book launch celebrating Mike Austin's contribution to Oceanic and Pacific architecture research and education in Aotearoa.",
+    "description": "This book launch celebrates Mike Austin's significant contributions to research and understanding of Oceanic and Pacific architecture, as well as architecture education in Aotearoa. The book, compiled from Austin's photographic archive and former students' contributions, explores oceanic architectural routes. Speakers will include Albert L. Refiti, Icao Tiseli, and Mike Austin.",
+    "speakers": [
+      {
+        "name": "Albert L. Refiti"
+      },
+      {
+        "name": "Icao Tiseli"
+      },
+      {
+        "name": "Mike Austin"
+      }
+    ]
   },
   "47b8c89e63f1e5a3": {
     "event_type": "workshop",
@@ -576,6 +599,21 @@
     "summary": "This event screens 'fugue notes' (2025) by Selina Ershadi, which was remastered for the London BFI Film Festival.",
     "description": "The first screening of 'fugue notes' (2025) by Selina Ershadi. This film was included in the Anatomy of Place, Sites of Becoming section of the London BFI Film Festival."
   },
+  "7ee117204ef80cbf": {
+    "event_type": "workshop",
+    "summary": "This zine-making workshop explores whakapapa, whanaungatanga, kinship, histories, and friendships, guided by Kerry Ann Lee and Moira Clunie.",
+    "description": "This workshop explores what it means to be in a good relationship with one another by making zines. Led by Kerry Ann Lee and Moira Clunie, the session will explore playing with type, text, symbols, and images, and the role of zines in community building. Participants will craft graphic gestures of love, hate, solidarity, care, and support using DIY graphic design, collage, zine-making, and letterpress printing.",
+    "speakers": [
+      {
+        "name": "Kerry Ann Lee",
+        "bio": "Visual artist, designer, and researcher"
+      },
+      {
+        "name": "Moira Clunie",
+        "bio": "Zinester, letterpress printer, social change practitioner"
+      }
+    ]
+  },
   "7fd7ba297f4c93f3": {
     "summary": "Details For many generations, Aotearoa has invested comparatively little, certainly by OECD standards, in research and development (R and D). Moreover, since 2020–21,..."
   },
@@ -691,6 +729,17 @@
     "speakers": [
       {
         "name": "Professor Rae Frances Irvine"
+      }
+    ]
+  },
+  "a183aefe530f57d3": {
+    "event_type": "lecture",
+    "summary": "Designer and artist Kerry Ann Lee presents a talk exploring creative whakapapa across time, people, and places through printmaking and ornament.",
+    "description": "This talk explores the creative whakapapa across time, people, and places located at the heart of Lee’s work, which concerns placemaking through printmaking. Focusing on ornament, printmaking, and ephemera, Lee will present a narrative revealing emotional landscapes between the studio and wanderlust. Lee is a visual artist, designer, and researcher whose work explores cultural identity and heritage.",
+    "speakers": [
+      {
+        "name": "Kerry Ann Lee",
+        "bio": "Associate Professor in Design, Toi Rauwhārangi"
       }
     ]
   },
