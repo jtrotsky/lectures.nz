@@ -6,7 +6,7 @@
 //  2. Strips speaker suffixes from titles (e.g. "Event | Jane Smith")
 //  3. Writes a short summary (index card) and longer description (detail page)
 //
-// Settings are loaded from .env then overridden by real env vars.
+// Settings are loaded from ~/.config/lectures.nz/env then overridden by real env vars.
 //
 // Required:
 //
@@ -29,6 +29,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"path/filepath"
 	"regexp"
 	"sort"
 	"strings"
@@ -72,7 +73,7 @@ type sourceStats struct {
 }
 
 func main() {
-	loadDotEnv(".env")
+	loadDotEnv(filepath.Join(os.Getenv("HOME"), ".config/lectures.nz/env"))
 
 	ollamaHost := os.Getenv("OLLAMA_HOST")
 	ollamaModel := os.Getenv("OLLAMA_MODEL")

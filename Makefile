@@ -1,7 +1,7 @@
 .PHONY: collect build serve dev tidy setup post post-dry enrich enrich-dry enrich-force enrich-source enrich-check analytics audit
 
-# Load .env if present (provides OLLAMA_HOST, CF_* etc.)
--include .env
+# Load env file from outside the repo (provides OLLAMA_HOST, CF_* etc.)
+-include $(HOME)/.config/lectures.nz/env
 export
 
 # Fetch events from all NZ sources → data/
