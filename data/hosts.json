@@ -332,6 +332,19 @@
         "organiser": "Deloitte Techweek26"
       },
       {
+        "id": "ced2707cbf21f28a",
+        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
+        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "e42257690cdde024",
         "title": "Deloitte Presents: Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
         "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
@@ -344,19 +357,6 @@
         "tags": [
           "arts-culture"
         ],
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "ced2707cbf21f28a",
-        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
-        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
-        "time_start": "2026-05-19T09:00:00+12:00",
-        "time_end": "2026-05-19T10:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -636,6 +636,22 @@
           "politics-policy"
         ],
         "host_slug": "nziia"
+      },
+      {
+        "id": "af83032b7b0af944",
+        "title": "An address by Anna Fifield",
+        "link": "https://www.nziia.org.nz/events/an-address-by-anna-fifield-2/",
+        "time_start": "2026-05-21T14:00:00+12:00",
+        "summary": "Our speaker will be Anna Fifield , former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington.",
+        "description": "Our speaker will be Anna Fifield , former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington. The usual door charge of $8 will apply, to cover venue hire and afternoon tea costs",
+        "free": false,
+        "location": "Havelock North Club, 8 Campbell Street, Havelock North",
+        "speakers": [
+          {
+            "name": "Anna Fifield"
+          }
+        ],
+        "host_slug": "nziia"
       }
     ]
   },
@@ -880,7 +896,7 @@
         "link": "https://www.tepapa.govt.nz/visit/events/nzsl-week-whanau-fun",
         "time_start": "2026-05-09T10:00:00+12:00",
         "summary": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae.",
-        "description": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae. ",
+        "description": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae.  ",
         "free": false,
         "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
         "tags": [

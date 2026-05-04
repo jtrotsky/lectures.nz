@@ -6,7 +6,7 @@
   },
   "021f448b54049758": {
     "event_type": "talk",
-    "summary": "Dr Josh Emmitt discusses the daily life of a museum archaeologist, covering everything from digging into the past to challenging misconceptions.",
+    "summary": "Hear Dr Josh Emmitt discuss the daily journey of discovery, from excavating new information to challenging misconceptions in archaeology.",
     "description": "Digging into the past, excavating new information and challenging misconceptions is all in a day's work of a museum archaeologist. Dr Josh Emmitt, Curator Archaeology at Auckland Museum, takes attendees through his daily journey of discovery during this special talk for New Zealand Archaeology Week.",
     "speakers": [
       {
@@ -21,24 +21,24 @@
     "description": "This Anzac Day, Auckland Museum hosts a day of commemoration featuring the Dawn Service, free guided tours, choral performances, and poetry readings. Entry to the museum is complimentary for all visitors on this day. The museum opens immediately after the Dawn Service."
   },
   "0625a85ce3dcc2fd": {
-    "event_type": "talk",
-    "summary": "This talk reveals the history and secrets of the iconic Clock Tower.",
-    "description": "The Clock Tower offers a tangible link to Auckland's past. This presentation traces the development and significance of this architectural landmark over the last century. Attendees will gain insight into the engineering, cultural milestones, and stories embodied by this central city feature."
+    "event_type": "lecture",
+    "summary": "A captivating journey through time uncovering the secrets behind the iconic Clock Tower.",
+    "description": "This talk unveils the history and secrets of the iconic Clock Tower. Attendees will gain insights into the architectural significance and century-long story of this prominent local landmark. Discover the enduring narrative embedded within this Auckland fixture."
   },
   "07ddca6f970286a6": {
     "event_type": "workshop",
-    "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-    "description": "Participants explore foundational Siva Samoa steps and their cultural meanings—gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, attendees experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels.",
+    "summary": "A workshop exploring foundational Siva Samoa steps, connecting movement to cultural meaning, land, ocean, and ancestry.",
+    "description": "Participants explore foundational Siva Samoa steps and their cultural meanings, honouring connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, attendees experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body.",
     "speakers": [
       {
-        "name": "Charlene Tedrow"
+        "name": "CHARLENE TEDROW"
       }
     ]
   },
   "0b472d46885f049a": {
     "event_type": "lecture",
-    "summary": "Professor Judy Bowen addresses the reliability, usability, and safety of technology embedded in modern daily life.",
-    "description": "This talk examines the pervasive nature of technology in contemporary life. It addresses critical questions surrounding how to ensure that these deeply embedded systems remain reliable, usable, and fundamentally safe for all users. The discussion explores the societal challenges posed by technological dependency.",
+    "summary": "Professor Judy Bowen addresses the critical questions of ensuring technology is reliable, usable, and safe within our daily lives.",
+    "description": "Technology permeates every aspect of modern existence, raising vital questions about its inherent safety and reliability. This discussion explores the necessary frameworks to ensure that technological integration supports, rather than compromises, our everyday lives. Attendees will gain insights into making sure our technological reliance remains functional and secure.",
     "speakers": [
       {
         "name": "Professor Judy Bowen"
@@ -57,9 +57,9 @@
     ]
   },
   "0ce3b2985b99250e": {
-    "event_type": "talk",
-    "summary": "Explore Māori Io traditions, focusing on 'the Soul of Things' and moving beyond the concept of a Supreme God.",
-    "description": "This talk explores Māori Io traditions, examining the concept of 'the Soul of Things' and discussing the depth of belief beyond a singular Supreme God. Dr Deane Galbraith, a Senior Lecturer in Religion/Mātai Whairuataka at the University of Otago/Ōtākou Whakaihu WakaFew, will present these discussions.",
+    "event_type": "lecture",
+    "summary": "Dr Deane Galbraith presents insights into Māori Io traditions, focusing on the concept beyond the Supreme God debate.",
+    "description": "Dr Deane Galbraith, who is affiliated with Ngāpuhi, Te Rarawa and is a Senior Lecturer in Religion/Mātai Whairuataka at the University of Otago/Ōtākou Whakaihu WakaFew, will present insights into Māori Io traditions. The presentation will navigate debates within the study of this vital cultural topic.",
     "speakers": [
       {
         "name": "Dr Deane Galbraith",
@@ -100,8 +100,8 @@
   },
   "1092d277ff445319": {
     "event_type": "seminar",
-    "summary": "Deloitte presents a look at building Aotearoa's future using data, featuring Databricks and Tech Women.",
-    "description": "This event focuses on building Aotearoa's future through the lens of data, featuring insights from Databricks and Tech Women. The event is hosted by Deloitte Techweek26."
+    "summary": "Deloitte Presents: Perspectives in data: Building Aotearoa's future with Databricks and Tech Women, hosted by Deloitte Techweek26.",
+    "description": "This event, hosted by Deloitte Techweek26, focuses on perspectives in data and how it can build Aotearoa's future using Databricks and involving Tech Women. It will take place at Deloitte Auckland."
   },
   "11dc8475abd89d26": {
     "event_type": "workshop",
@@ -130,11 +130,11 @@
     ]
   },
   "19b443dab561d5b4": {
-    "event_type": "festival",
+    "event_type": "workshop",
     "summary": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae.",
-    "description": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae. ",
+    "description": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae.  ",
     "excluded": true,
-    "exclude_reason": "Campus festival or fun event"
+    "exclude_reason": "Not a formal lecture/talk component"
   },
   "1e871946e014fdb7": {
     "event_type": "ceremony",
@@ -147,8 +147,8 @@
   },
   "2006b7e3c699fb83": {
     "event_type": "lecture",
-    "summary": "Professor Jonathan Barrett will discuss respecting equal human dignity: taxation and commercial law in the human rights state.",
-    "description": "Professor Barrett's research concerns the practical application of human rights, particularly focusing on respecting equal human dignity through taxation and commercial law in the human rights state.",
+    "summary": "Professor Jonathan Barrett will discuss respecting equal human dignity through the lens of taxation and commercial law in the human rights state.",
+    "description": "Professor Barrett’s research concerns the practical application of human rights, particularly how the concept of respecting equal human dignity interacts with taxation and commercial law within a human rights state.",
     "speakers": [
       {
         "name": "Professor Jonathan Barrett"
@@ -157,8 +157,8 @@
   },
   "200da7812a57519d": {
     "event_type": "reading",
-    "summary": "Lucy O’Hagan performs her acclaimed memoir, Everything But the Medicine: A Doctor’s Tale.",
-    "description": "This reading brings Lucy O’Hagan’s acclaimed memoir, Everything But the Medicine: A Doctor’s Tale, to life through performance. The work offers an intimate look into a doctor’s experiences as chronicled by O’Hagan. Audience members will engage with the narrative that frames her professional life and personal reflections.",
+    "summary": "Lucy O’Hagan brings her acclaimed memoir, Everything But the Medicine: A Doctor’s Tale, to life in a reading and performance.",
+    "description": "The memoir recounts a doctor's experiences, offering a look into the complexities and realities of medical practice. The reading performance brings the deeply personal narrative of the book to the audience, exploring the challenges and human elements within the medical field.",
     "speakers": [
       {
         "name": "Lucy O’Hagan"
@@ -172,13 +172,13 @@
   },
   "21be6b77ec2e071a": {
     "event_type": "lecture",
-    "summary": "Examines Southeast Asia's critical juncture as world order fragments amid Trump's tariffs and the South China Sea.",
-    "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. The lecture will address the impact of President Trump’s sweeping tariff agenda and transactional approach to allies on the region."
+    "summary": "Examining Southeast Asia's critical juncture amidst global fragmentation, the lecture discusses the impact of the Iran War and Trump's tariffs.",
+    "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. The talk will examine the region's position amid geopolitical tensions, focusing on the impact of the Iran War and President Trump’s sweeping tariff agenda on its allies."
   },
   "22b6c643fdffc426": {
     "event_type": "forum",
-    "summary": "Professor Papaarangi Reid leads a wānanga-style discussion on the ongoing health inequities faced by Māori communities and the system changes required for wellbeing.",
-    "description": "This discussion examines the persistent health inequities confronting Māori communities. Participants will engage with the complex issues necessitating genuine, systemic change within the health sector to improve wellbeing outcomes. The conversation aims to foster a deep understanding of current disparities and pathways toward equity.",
+    "summary": "A wānanga-style public discussion examining persistent health inequities for Māori communities and the requirements for genuine system change.",
+    "description": "This wānanga-style discussion explores the persistent health inequities impacting Māori communities across Aotearoa. It critically examines the systemic barriers contributing to these disparities and outlines the necessary transformations for achieving genuine improvements in Māori wellbeing. Attendees will gain a deeper understanding of the determinants of Māori health and the policy shifts required.",
     "speakers": [
       {
         "name": "Professor Papaarangi Reid"
@@ -209,9 +209,9 @@
   "274567a260b0d69b": {
     "event_type": "course",
     "summary": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities.",
-    "description": "Thailand, often referred to as “The Land of Smiles,” boasts a rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities. This introductory course is designed for complete beginners and those preparing to travel to Thailand, offering a meaningful way to experience the culture more deeply.",
+    "description": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities. Learning Thai provides a meaningful way to experience this culture more deeply, whether for travel, personal interest, or future engagement with Thailand. Course Overview This introductory course is designed for complete beginners and those preparing to travel to Thailand.",
     "excluded": true,
-    "exclude_reason": "Focuses on language learning, not discussion/talk."
+    "exclude_reason": "Not a lecture or talk component"
   },
   "27acf592ab1ec661": {
     "event_type": "conference",
@@ -220,8 +220,8 @@
   },
   "283045f10f790cd0": {
     "event_type": "seminar",
-    "summary": "Deloitte Techweek26 hosts an event exploring the future landscape of open insurance within Aotearoa New Zealand.",
-    "description": "This seminar, hosted by Deloitte Techweek26, explores the future of open insurance across Aotearoa New Zealand. The event will take place at Deloitte Wellington on Tuesday, May 19th, 2026."
+    "summary": "Deloitte Techweek26 presents insights into the future of Open Insurance within Aotearoa New Zealand.",
+    "description": "The session explores the trajectory and potential of Open Insurance within Aotearoa New Zealand. Hosted by Deloitte Techweek26, the event is held at Deloitte Wellington on Tuesday, May 19th, 2026."
   },
   "29e57fcd6effffcd": {
     "event_type": "market",
@@ -229,8 +229,8 @@
   },
   "2cb1e777f13f1b20": {
     "event_type": "seminar",
-    "summary": "This webinar examines the concept of neurotypicality and explores alternative perspectives on the neurodivergent life experience.",
-    "description": "The discussion challenges conventional understandings of 'normal' by centering on the neurodivergent experience. Attendees will gain insight into how society constructs definitions of typical functioning and how these definitions impact individual identities. The session offers a framework for rethinking what constitutes a 'normal' life."
+    "summary": "The fifth webinar of the 'This Thinking Life' series explores the concept of rethinking what is considered 'normal' within the neurodivergent life.",
+    "description": "The seminar addresses the necessity of rethinking established societal norms regarding neurodivergence. Participants will explore how different perspectives challenge conventional ideas of 'normal' within the context of neurodiversity. This session encourages a deeper understanding of diverse human experiences and identities."
   },
   "2cff4af0fa8b324e": {
     "event_type": "seminar",
@@ -261,8 +261,8 @@
   },
   "2f6c979a89a98d02": {
     "event_type": "seminar",
-    "summary": "Shaun McRae and Frank Wolak discuss capacity mechanisms as tools for ensuring electricity demand is met in renewable-dominated markets.",
-    "description": "Capacity mechanisms are an increasingly popular tool for ensuring that demand can be met as electricity generation becomes dominated by renewable sources. The authors explore the implications of these mechanisms for grid reliability.",
+    "summary": "Shaun McRae and Frank Wolak discuss capacity mechanisms as tools to ensure electricity demand can be met in renewables-dominated markets.",
+    "description": "Capacity mechanisms are an increasingly popular tool for ensuring that demand can be met as electricity supply sources change. This session explores the reliability options available when transitioning towards electricity markets dominated by renewable sources.",
     "speakers": [
       {
         "name": "Shaun McRae"
@@ -274,8 +274,8 @@
   },
   "310f8cfdd19d4d16": {
     "event_type": "seminar",
-    "summary": "The sixth 'This Thinking Life' webinar explores the complex intersection of generative AI, the challenges of contaminated information, and rhubarb.",
-    "description": "The session examines the interplay between rapidly developing generative AI technologies and the subsequent proliferation of contaminated or misleading information across digital platforms. Participants will gain insight into critical evaluation skills necessary to navigate this complex information landscape, using rhubarb as a tangible metaphor for systemic breakdown or unexpected growth."
+    "summary": "This webinar addresses the themes of generative AI, contaminated information, and the unexpected role of rhubarb in contemporary discourse.",
+    "description": "This session tackles complex modern issues, examining how generative AI impacts the proliferation of contaminated information. The discussion connects these digital challenges to tangible concepts, using rhubarb as a focus point. Attendees gain insight into navigating truth in the age of advanced artificial intelligence."
   },
   "3119f8036c8cc821": {
     "event_type": "panel",
@@ -284,7 +284,7 @@
   },
   "3139979a01b04c3d": {
     "event_type": "workshop",
-    "summary": "This two-day workshop introduces participants to the traditional art practice of siapo-making as a living practice, exploring its history and cultural significance.",
+    "summary": "This two-day workshop introduces participants to the traditional art practice of siapo-making as a living practice.",
     "description": "This two-day workshop introduces participants to the traditional art practice of siapo-making as a living practice. Through talanoa, participants will explore the history of siapo in Sāmoa, its cultural significance, and the ways it continues to be reimagined today.",
     "speakers": [
       {
@@ -294,10 +294,20 @@
   },
   "347ac28eebc4b22c": {
     "event_type": "performance",
-    "summary": "Join us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.",
-    "description": "Join us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.\n\nAround Gamper’s furniture, Xin and Alistair will stage a live performance bringing together movement, sound and real-time composition.\n\nDrawing on ideas from Xin’s solo work Body Story , the performance moves between dance and live music, letting meaning emerge through presence, texture, and exchange. Built through a long creative relationship, the work is shaped by physicality, rhythm, improvisation, and close attention to what is unfolding in the room.\n\nJoin us to watch it unfold with a drink in hand.\n\nXin Ji is a dance artist, choreographer, and educator based in Tāmaki Makaurau Auckland. Trained in Chinese classical ballet at the Beijing Dance Academy, he began his professional career in Japan with Shiki Theatre Company before moving to Aotearoa to study contemporary dance at Unitec. He has performed with leading contemporary companies in Aotearoa, including Footnote and the New Zealand Dance Company, and currently lectures in dance at Unitec. His practice spans performance and choreography across stage and screen, with a strong focus on physicality, presence, and storytelling.\n\nAlistair Deverick is a musician and sound designer of Scottish and Welsh ancestry based in Tāmaki Makaurau Auckland. He is known for his innovative approach to rhythm and texture. As a versatile drummer and producer, he has performed with acts like The Ruby Suns and Neil Finn and has created solo work under the moniker Boycrush, blending electronic, pop, and experimental sounds. His work spans live performance, studio production, and sound design, showcasing a dynamic range of musical influences.\n\nOver many years of working together, Xin Ji and Alistair Deverick have developed a close creative relationship grounded in listening, responsiveness, and a shared feel for atmosphere. Their collaboration brings together movement and sound in ways that feel physical and immediate.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
+    "summary": "Dancer Xin Ji and musician Alistair Deverick stage a live performance exploring movement, sound, and real-time composition within Martino Gamper’s exhibition.",
+    "description": "Around Gamper’s furniture, Xin and Alistair will stage a live performance bringing together movement, sound, and real-time composition. Drawing on ideas from Xin’s solo work Body Story, the performance moves between dance and live music, letting meaning emerge through presence, texture, and exchange. Built through a long creative relationship, the work is shaped by physicality, rhythm, improvisation, and close attention to what is unfolding in the room.",
+    "speakers": [
+      {
+        "name": "Xin Ji",
+        "bio": "dance artist, choreographer, and educator"
+      },
+      {
+        "name": "Alistair Deverick",
+        "bio": "musician and sound designer"
+      }
+    ],
     "excluded": true,
-    "exclude_reason": "Not a lecture or talk component"
+    "exclude_reason": "Performance art, not a lecture or talk"
   },
   "3755a9be782fce30": {
     "event_type": "workshop",
@@ -319,9 +329,9 @@
     ]
   },
   "3dff430382117182": {
-    "event_type": "webinar",
-    "summary": "The inaugural 'This Thinking Life' webinar explores the complex intersection of Indigeneity and Artificial Intelligence.",
-    "description": "This webinar initiates the 'This Thinking Life' series by examining the crucial intersection between Indigenous knowledge systems and the rapidly advancing field of Artificial Intelligence. Participants will gain insight into the unique ethical, cultural, and technological challenges presented by this convergence."
+    "event_type": "seminar",
+    "summary": "This inaugural webinar explores the intersection of Indigeneity and Artificial Intelligence within the 'This Thinking Life' series.",
+    "description": "The series begins by examining the critical relationship between Indigenous knowledge systems and the rapid development of Artificial Intelligence. Participants will gain insight into the ethical considerations and perspectives required when integrating Indigenous ways of knowing with advanced technological tools."
   },
   "40f85f794ad4a481": {
     "event_type": "lecture",
@@ -329,18 +339,15 @@
     "description": "What happens when disability is seen as a powerful cultural lens, not a problem to solve? Join fellow AUT graduates for this insightful Great Graduates Speaker Series event."
   },
   "458a181125ff16de": {
-    "event_type": "launch",
-    "summary": "A book launch celebrating Mike Austin's contribution to Oceanic and Pacific architecture research and education in Aotearoa.",
-    "description": "This book launch celebrates Mike Austin's significant contributions to research and understanding of Oceanic and Pacific architecture, as well as architecture education in Aotearoa. The book, compiled from Austin's photographic archive and former students' contributions, explores oceanic architectural routes. Speakers will include Albert L. Refiti, Icao Tiseli, and Mike Austin.",
+    "event_type": "book launch",
+    "summary": "Celebrate the book launch for Oceanic Architectural Routes: The Work of Mike Austin, featuring contributions from Austin's former students and colleagues.",
+    "description": "The book launch celebrates Oceanic Architectural Routes: The Work of Mike Austin, bringing together contributions from Austin's former students and colleagues. The book is designed by Shaun Naufahu and features photographs from Austin's travels across the Oceanic region. Attendees will hear from Albert L. Refiti, Icao Tiseli, and Mike, alongside music from SANGUINE.",
     "speakers": [
       {
         "name": "Albert L. Refiti"
       },
       {
         "name": "Icao Tiseli"
-      },
-      {
-        "name": "Mike Austin"
       }
     ]
   },
@@ -349,9 +356,9 @@
     "summary": "A creative workshop using printmaking and mindfulness to explore the familiar paths that bring a sense of comfort and connection to our daily routines."
   },
   "47bff4f0c2afd6c2": {
-    "event_type": "talk",
-    "summary": "Examines the intersection of Artificial Intelligence with human communication in this webinar.",
-    "description": "The webinar explores the evolving relationship between artificial intelligence and human methods of communication. Participants will gain insight into how AI technologies are reshaping interpersonal and mediated exchanges in modern life. This discussion addresses the practical implications of AI in communication theory and practice."
+    "event_type": "seminar",
+    "summary": "The webinar examines the intersection of Artificial Intelligence and modern communication methods in the 'This Thinking Life' series.",
+    "description": "This session addresses the evolving relationship between Artificial Intelligence technologies and contemporary communication practices. Participants will gain insight into how AI reshapes the way information is exchanged and understood in modern society. The discussion explores the implications of these rapid technological changes for human interaction."
   },
   "481fca738bd99f86": {
     "event_type": "talk",
@@ -359,9 +366,9 @@
     "description": "The closing of the exhibition He Kaupapa Waka features an afternoon of talks marking the end of the display. This gathering offers attendees a rare opportunity to connect with the themes explored in the exhibition through discussion. The event serves as a concluding reflection on the cultural and historical significance of the waka."
   },
   "4dfb6447940ce651": {
-    "event_type": "lecture",
-    "summary": "The lecture explores how Asia-Pacific's LNG trends can assist New Zealand in maintaining a stable and strong energy sector.",
-    "description": "This presentation examines the current trends surrounding Liquefied Natural Gas (LNG) across the Asia-Pacific region. Attendees will gain insight into critical energy balancing strategies that New Zealand can adopt from international examples. The discussion illuminates the interplay between regional energy dynamics and national energy security."
+    "event_type": "seminar",
+    "summary": "This seminar explores how Asia-Pacific's LNG trends can help New Zealand maintain a stable and strong energy supply.",
+    "description": "The energy sector faces constant challenges regarding stability and supply. This discussion examines the broader trends in Liquefied Natural Gas (LNG) across the Asia-Pacific region. Attendees will gain insights into how international energy market dynamics shape New Zealand's path toward energy security and balance."
   },
   "52cbd11960f48258": {
     "event_type": "lecture",
@@ -376,8 +383,8 @@
   },
   "541dc5ec63ddc292": {
     "event_type": "talk",
-    "summary": "Clinton Duffy, Curator of Marine Biology, guides attendees through the marine collections before the Sharks exhibition travels overseas, allowing close encounters with specimens like the Hammerhead Shark.",
-    "description": "Before the Sharks exhibition heads overseas, join Clinton Duffy, Curator of Marine Biology, to explore the marine collections at Auckland Museum. Attendees will take a guided look into the world of sharks from their seats, and get to meet unique specimens, including the Hammerhead Shark.",
+    "summary": "Meet marine denizens and learn about sharks with Clinton Duffy, Curator of Marine Biology, before the Sharks exhibition leaves for overseas.",
+    "description": "Meet some of the marine collection denizens and dive deeper into the world of sharks during this guided talk. Clinton Duffy, Curator of Marine Biology, will present this before the Sharks exhibition heads overseas, and attendees can meet unique specimens like the Hammerhead Shark.",
     "speakers": [
       {
         "name": "Clinton Duffy",
@@ -396,30 +403,29 @@
   },
   "5506b567e7f48ff1": {
     "event_type": "seminar",
-    "summary": "Explore ideas for a high-performing health system for New Zealand, featuring insights from world-leading expert Dr Ezekiel Emanuel.",
-    "description": "This summit will move beyond simplistic rankings to identify and discuss the core components of world-class health systems, drawing from comparative studies of 11 nations. Keynote speaker Dr Ezekiel Emanuel is a foremost health policy expert and author of Which Country Has The World’s Best Health Care?",
+    "summary": "Explore ideas to create a high-performing health system for New Zealand, featuring insights from world health policy expert Dr Ezekiel Emanuel.",
+    "description": "Drawing from extensive comparative study of 11 nations, this summit will move beyond simplistic rankings to identify and discuss the core components of world-class health systems. The event features keynotes from Dr Ezekiel Emanuel, a world-renowned health policy expert and author of Which Country Has The World’s Best Health Care?",
     "speakers": [
       {
         "name": "Dr Ezekiel Emanuel",
-        "bio": "foremost health policy expert"
+        "bio": "world’s foremost health policy expert"
       }
     ]
   },
   "575e90640f923cd8": {
     "event_type": "workshop",
-    "summary": "Discover how science and creativity coincide in a cyanotype workshop, experimenting with natural materials to create unique prints.",
-    "description": "Discover how science and creativity coincide in this cyanotype workshop. Experiment with exposure, shadow, and UV light to create your own unique print using natural materials gathered from your surroundings. Lulu will guide participants through two hours of playful exploration, learning, and chats, perfect for anyone keen to try something new in a relaxed environment.",
+    "summary": "Discover how science and creativity can coincide through a cyanotype workshop, exploring UV light and natural materials.",
+    "description": "Discover how science and creativity can coincide in this cyanotype workshop. Experiment with exposure, shadow, and UV light to create unique prints using natural materials from your surroundings. Lulu will guide participants through two hours of playful exploration, learning, and conversation, perfect for making art in a relaxed environment.",
     "speakers": [
       {
-        "name": "LULU",
-        "bio": "Not specified"
+        "name": "LULU PDF"
       }
     ]
   },
   "5b4464df305add17": {
     "event_type": "lecture",
-    "summary": "Professor Jennifer Miles-Chan delivers her Inaugural Lecture exploring lessons found at the intersection of metabolism, academia, and life.",
-    "description": "This inaugural lecture by Professor Jennifer Miles-Chan examines the profound connections between our metabolic processes, the structure of academia, and the broader scope of life. The talk suggests that focusing on the seemingly small details—the 'little things'—reveals significant underlying principles applicable across these disparate fields.",
+    "summary": "Professor Jennifer Miles-Chan delivers her Inaugural Lecture exploring lessons found at the intersection of metabolism, academia, and everyday life.",
+    "description": "The lecture explores the interconnectedness of metabolism, academia, and life itself. Professor Miles-Chan draws insights from the biological processes of metabolism to offer new perspectives on academic practices and the nuances of daily existence. Attendees will gain a broader understanding of how fundamental biological concepts can illuminate broader human and societal experiences.",
     "speakers": [
       {
         "name": "Professor Jennifer Miles-Chan"
@@ -438,8 +444,8 @@
   },
   "600ca550291d52a4": {
     "event_type": "lecture",
-    "summary": "Professor Nicola Daly examines the surprising power of picturebooks in reflecting cultural values passed down to future generations.",
-    "description": "Picturebooks hold significant cultural weight, reflecting what communities wish to transmit to their descendants (tamariki-mokopuna). Understanding these narratives reveals much about the values and knowledge systems being passed down through generations. This exploration illuminates how seemingly simple books carry profound cultural messages.",
+    "summary": "Picturebooks are powerful cultural reflections of what we wish to pass on to future generations.",
+    "description": "Picturebooks are often underestimated, yet they hold significant power as cultural artifacts. They reveal the aspirations, values, and narratives a community wishes to transmit to its children and future generations. This discussion explores the deep reflective power embedded within this seemingly simple art form.",
     "speakers": [
       {
         "name": "Professor Nicola Daly"
@@ -468,12 +474,12 @@
     "summary": "Experience Day is about getting a taste of the experience of being a student at Massey University Wellington's College of Creative Arts - Toi Rauwhārangi.",
     "description": "Experience Day is about getting a taste of the experience of being a student at Massey University Wellington's College of Creative Arts - Toi Rauwhārangi. Join us from 9:30am - 3pm on June 12th for workshops, pizza, student panel talks and more! (Registration will open from 9am) Experience days are free to attend, but registration is essential to secure your spot on your chosen workshop. Please note, you can only attend one workshop on the day, so choose the one you are most excited about!",
     "excluded": true,
-    "exclude_reason": "Open day event structure described."
+    "exclude_reason": "Focuses on general student experience, not lecture content."
   },
   "69655c25a9a89e49": {
-    "event_type": "talk",
-    "summary": "The webinar explores the complex systems of voting and elections within ancient Roman society.",
-    "description": "This discussion examines the intricate political mechanics of voting and elections in ancient Rome. Attendees will learn about the structures that underpinned Roman democratic practices and how participation shaped civic life in the Republic and Empire."
+    "event_type": "seminar",
+    "summary": "This session explores the mechanics of voting and the political landscape of ancient Roman elections.",
+    "description": "The discussion examines the complex procedures of voting and the electoral processes that shaped the political life of ancient Rome. Attendees will gain insight into the systems used to conduct elections and the impact these votes had on Roman society."
   },
   "6a637e4eaaedf817": {
     "event_type": "festival",
@@ -489,21 +495,21 @@
   },
   "6c85bd14c67bf65d": {
     "event_type": "talk",
-    "summary": "Neuroscientist Emeritus Prof. Cliff Abraham discusses the nerve cell processes behind forming and forgetting memories.",
-    "description": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will discuss the neuroscientific processes that allow our brains to encode and subsequently forget memories. Learn how the nerve cells within our brains facilitate the complex mechanics of human memory.",
+    "summary": "Distinguished Professor Cliff Abraham will discuss the neuroscientific processes underlying how our brains form and lose memories.",
+    "description": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember—or forget.",
     "speakers": [
       {
-        "name": "Professor Cliff Abraham",
-        "bio": "Neuroscientist Emeritus FRSNZ"
+        "name": "Distinguished Professor Cliff Abraham",
+        "bio": "Neuroscientist Emeritus"
       }
     ]
   },
   "6cf49b2e5a77f75c": {
-    "event_type": "conference",
+    "event_type": "festival",
     "summary": "AUT Worldwide is back!!!Mark your calendars – AUT Worldwide is taking over our campuses from 5 to 7 May. With students from nearly 140 countries, AUT is h",
     "description": "AUT Worldwide is back!!!Mark your calendars \u0026ndash; AUT Worldwide is taking over our campuses from 5 to 7 May. With students from nearly 140 countries, AUT is h",
     "excluded": true,
-    "exclude_reason": "General institutional open event"
+    "exclude_reason": "Campus-wide celebration, not academic lecture."
   },
   "6edac8ffc7e3fbf6": {
     "event_type": "lecture",
@@ -511,30 +517,29 @@
     "description": "Join the Royal Society for a critical lecture addressing recent developments in climate science and their implications. Thin Ice 2026 aims to provide an urgent update on our planet's changing climate, highlighting key challenges and potential solutions."
   },
   "6f04d15e54116813": {
-    "event_type": "talk",
-    "summary": "Doctoral candidates from Business, Economics, and Law compete to present their entire thesis in just 180 seconds.",
-    "description": "Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law compete in the Three Minute Thesis (3MT) Heat. This challenge provides an opportunity to showcase research in a dynamic and compelling way, with the chance to earn a place in the University 3MT Final."
+    "event_type": "competition",
+    "summary": "Doctoral candidates compete in a Three Minute Thesis event, presenting their research in 180 seconds to advance to the University 3MT Final.",
+    "description": "Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law are invited to compete in the joint Three Minute Thesis (3MT) Heat. This event challenges participants to present their entire thesis in just 180 seconds, offering a chance to showcase research in a dynamic, compelling way and earn a place in the University 3MT Final."
   },
   "6f8154369b41962d": {
     "event_type": "lecture",
-    "summary": "Professor Clare McCann's Inaugural Lecture addresses the influence and potential of speech-language therapists.",
-    "description": "This lecture explores the persuasive power inherent in the communication skills of speech-language therapists. It addresses how subtle linguistic techniques can shape belief and behaviour in complex ways. Attendees will gain insight into the art and science of therapeutic communication.",
+    "summary": "Professor Clare McCann gives her inaugural lecture on the persuasive power of speech-language therapists.",
+    "description": "The lecture examines the persuasive abilities inherent in speech-language therapy. It explores how therapeutic communication techniques can influence perception and belief within an individual. Attendees will gain insight into the mechanisms through which language is used to enact change and influence understanding.",
     "speakers": [
       {
-        "name": "Professor Clare McCann",
-        "bio": "Inaugural Lecture"
+        "name": "Professor Clare McCann"
       }
     ]
   },
   "71fe220011968c3a": {
-    "event_type": "talk",
+    "event_type": "seminar",
     "excluded": true,
-    "exclude_reason": "Not a lecture or educational talk"
+    "exclude_reason": "Not a lecture or educational talk."
   },
   "7215d531111a9854": {
     "event_type": "lecture",
-    "summary": "NZIIA members attend the national AGM followed by an annual lecture featuring the Minister for Trade and Investment, Hon Todd McClay.",
-    "description": "The event includes the New Zealand Institute of International Affairs (NZIIA) national Annual General Meeting, featuring an address by NZIIA Chair Dr James Kember. This is followed by the annual lecture delivered by Hon Todd McClay, Minister for Trade and Investment.",
+    "summary": "NZIIA members can attend the Annual General Meeting, featuring an address by Dr James Kember, followed by an annual lecture with Hon Todd McClay, Minister for Trade and Investment.",
+    "description": "The New Zealand Institute of International Affairs (NZIIA) invites members to its national Annual General Meeting, which includes an address by NZIIA Chair Dr James Kember. This is followed by the annual lecture, featuring Hon Todd McClay, Minister for Trade and Investment. The event takes place across several locations.",
     "speakers": [
       {
         "name": "Hon Todd McClay",
@@ -544,8 +549,8 @@
   },
   "7423082faeba0062": {
     "event_type": "talk",
-    "summary": "Deloitte Techweek26 presents a talk on the trade-off between rapid development and accumulating technical debt.",
-    "description": "This session addresses the critical architectural dilemma of 'vibe coding' versus accruing technical debt while building fast. Join Deloitte Techweek26 for an exploration of sustainable, rapid development strategies."
+    "summary": "Deloitte Techweek26 explores the balance between building quickly and managing long-term technical debt.",
+    "description": "This talk addresses the tension between rapid development ('vibe coding') and accruing unsustainable 'tech debt' within technology projects. Hosted by Deloitte Techweek26, the event will explore strategies for building fast without incurring costs later."
   },
   "77b0a203c71c3323": {
     "event_type": "lecture",
@@ -575,8 +580,8 @@
   },
   "7bf84ac607a16c8c": {
     "event_type": "lecture",
-    "summary": "Dr Simon Robb explores law-in-context insights, drawing from his regulatory career, to deepen understanding of governance and regulatory practice.",
-    "description": "Dr Simon Robb draws on academic foundations in sociology and law, alongside his regulatory career, to explore insights into law-in-context. This discussion will deepen the understanding of governance and regulatory practice within the legal framework.",
+    "summary": "Dr Simon Robb explores law-in-context insights by drawing on his regulatory career and academic foundations in sociology and law to deepen understanding of governance and regulatory practice.",
+    "description": "Dr Simon Robb brings academic foundations in sociology and law to explore law-in-context insights. By drawing on his regulatory career, the talk aims to deepen understanding of governance and regulatory practice.",
     "speakers": [
       {
         "name": "Dr Simon Robb"
@@ -595,22 +600,23 @@
     ]
   },
   "7c6f453987ef3c34": {
-    "event_type": "talk",
-    "summary": "This event screens 'fugue notes' (2025) by Selina Ershadi, which was remastered for the London BFI Film Festival.",
-    "description": "The first screening of 'fugue notes' (2025) by Selina Ershadi. This film was included in the Anatomy of Place, Sites of Becoming section of the London BFI Film Festival."
+    "event_type": "screening",
+    "description": "Join us for the first screening of fugue notes (2025) by Selina Ershadi since its remastering for its inclusion in the London BFI Film Festival. This film was included in the Anatomy of Place, Sites of Becoming section of the festival which …",
+    "excluded": true,
+    "exclude_reason": "Not a lecture or talk component"
   },
   "7ee117204ef80cbf": {
     "event_type": "workshop",
-    "summary": "This zine-making workshop explores whakapapa, whanaungatanga, kinship, histories, and friendships, guided by Kerry Ann Lee and Moira Clunie.",
-    "description": "This workshop explores what it means to be in a good relationship with one another by making zines. Led by Kerry Ann Lee and Moira Clunie, the session will explore playing with type, text, symbols, and images, and the role of zines in community building. Participants will craft graphic gestures of love, hate, solidarity, care, and support using DIY graphic design, collage, zine-making, and letterpress printing.",
+    "summary": "This zine-making workshop explores whakapapa, whanaungatanga, kinship, and histories through DIY graphic design and printmaking.",
+    "description": "This workshop explores what it means to be in a good relationship with one another by playing with type, text, symbols, and images. Participants will use DIY graphic design, collage, zine-making, and letterpress printing to craft gestures of love, hate, solidarity, care, and support in print. Kerry Ann Lee is a visual artist and researcher whose work spans cultural identity and diaspora. Moira Clunie is a zinester and social change practitioner focused on rainbow/LGBTI+ connection.",
     "speakers": [
       {
         "name": "Kerry Ann Lee",
-        "bio": "Visual artist, designer, and researcher"
+        "bio": "Associate Professor in Design, Toi Rauwhārangi, College of Creative Arts at Te Kunenga ki Pūrehuroa Massey University"
       },
       {
         "name": "Moira Clunie",
-        "bio": "Zinester, letterpress printer, social change practitioner"
+        "bio": "zinester, letterpress printer, and social change practitioner"
       }
     ]
   },
@@ -632,9 +638,9 @@
     "description": "Join our Mandarin Corner for a relaxed meet-up to practise Mandarin with native speakers. Celebrate the Dragon Boat Festival and craft your own traditional herbal sachet."
   },
   "86b784eecf036925": {
-    "event_type": "lecture",
-    "summary": "This lecture explores New Zealand's rapidly growing space sector, its science capabilities enabled by domestic launch, and the governing policy frameworks.",
-    "description": "This exploration covers New Zealand's rapidly growing space sector, the science enabled by domestic launch capability, and the necessary policy frameworks governing the country's use of space."
+    "event_type": "talk",
+    "summary": "Explore New Zealand's rapidly growing space sector, the science enabled by domestic launch capability, and the policy frameworks governing space use.",
+    "description": "This session explores New Zealand's rapidly growing space sector. Attendees will gain insight into the science enabled by domestic launch capability and the policy frameworks governing our use of space."
   },
   "87635656d44c1448": {
     "event_type": "meetup",
@@ -669,13 +675,13 @@
   },
   "93d3306be97bd05b": {
     "event_type": "talk",
-    "summary": "This talk explores the idea that future customers may not be human, hosted by Deloitte Techweek26.",
-    "description": "This talk explores the possibility that future customers may not be human. Hosted by Deloitte Techweek26, the event takes place at Deloitte Auckland on Tuesday, May 19th, 2026."
+    "summary": "Deloitte Techweek26 explores the possibility of non-human customers, suggesting a focus on technological or AI-related consumer interaction.",
+    "description": "Deloitte Techweek26 presents a look at the future of customer relationships, exploring the premise that a customer might not be human. This talk will examine emerging trends in technology and consumer interaction."
   },
   "95282080ccc6256f": {
     "event_type": "talk",
-    "summary": "Former diplomat Frank Wilson discusses his experiences and the wider regional implications of the Fall of Saigon in 1975.",
-    "description": "Frank Wilson, a former senior New Zealand diplomat with a strong career background in Asia, will discuss his personal experiences and those of other New Zealanders during the Fall of Saigon in April 1975. He will explore what this event meant for New Zealand and its wider regional and international implications.",
+    "summary": "Former diplomat Frank Wilson speaks about his experiences witnessing the Fall of Saigon in 1975 and its implications for New Zealand.",
+    "description": "Frank Wilson, a former senior New Zealand diplomat with a strong career background in Asia, will discuss his experiences witnessing the Fall of Saigon in April 1975. He will cover his own accounts, those of other New Zealanders present, and the event's broader implications for New Zealand and the region.",
     "speakers": [
       {
         "name": "Mr Frank Wilson",
@@ -685,8 +691,13 @@
   },
   "95802a3f9566c770": {
     "event_type": "lecture",
-    "summary": "This lecture examines Shakespeare's role as a reviser through the lens of 'The Merry Wives of Windsor.'",
-    "description": "This lecture analyzes the intricate process of revision in Shakespeare's works, using 'The Merry Wives of Windsor' as a prime example. Attendees will gain insight into how Shakespeare reworked existing material, offering a deeper appreciation for the play's dramatic evolution and thematic depth. The examination illuminates revision as a core element of his creative process."
+    "summary": "This lecture examines Shakespeare's role as a reviser through the lens of *The Merry Wives of Windsor*.",
+    "description": "The lecture explores how Shakespeare operated as a reviser, using *The Merry Wives of Windsor* as a primary case study. It investigates the literary techniques and structural shifts inherent in revisionary practices within Shakespeare's canon. Attendees will gain insight into the nuances of dramatic adaptation and authorial intervention in theatre history.",
+    "speakers": [
+      {
+        "name": "Alice Griffin"
+      }
+    ]
   },
   "960eb2c54daf54c8": {
     "event_type": "talk",
@@ -699,7 +710,7 @@
       }
     ],
     "excluded": true,
-    "exclude_reason": "Performance/Theatre piece, not a talk."
+    "exclude_reason": "Performance/theatre show, not lecture"
   },
   "968071dd09d57105": {
     "event_type": "festival",
@@ -719,13 +730,13 @@
   },
   "9c702e965742d928": {
     "event_type": "talk",
-    "summary": "The final webinar in the 'This Thinking Life' series examines how things sound historical.",
-    "description": "This webinar concludes the 'This Thinking Life' series by examining the cultural phenomenon of sounds that evoke historical associations. Participants will explore the mechanisms by which auditory elements become attached to notions of history and time."
+    "summary": "The final webinar in the 'This Thinking Life' series explores the concept of 'sounds historical'.",
+    "description": "This session serves as the culmination of the 'This Thinking Life' webinar series. The discussion centers on the pervasive nature of sounds that evoke a sense of history or antiquity. Participants will examine how acoustic elements shape our perception of time and cultural memory."
   },
   "a0102426b2daac5e": {
     "event_type": "lecture",
-    "summary": "Professor Rae Frances Irvine explores breakthrough research into the neuroscience of chronic pain and emerging treatments.",
-    "description": "This lecture explores breakthrough research concerning the neuroscience of chronic pain. It examines current understandings of the complex mechanisms underpinning chronic pain and surveys emerging, innovative treatments. The session provides insight into the frontier of pain research.",
+    "summary": "Explore breakthrough research into the neuroscience of chronic pain and emerging treatments during the annual Otago Distinguished Lecture in Medicine.",
+    "description": "This lecture explores breakthrough research into the neuroscience of chronic pain and emerging treatment frontiers. Attendees will gain insight into the complex mechanisms that drive chronic pain perception and the latest scientific advancements aiming to treat these conditions. The session provides an update on the current state of chronic pain research.",
     "speakers": [
       {
         "name": "Professor Rae Frances Irvine"
@@ -734,19 +745,19 @@
   },
   "a183aefe530f57d3": {
     "event_type": "lecture",
-    "summary": "Designer and artist Kerry Ann Lee presents a talk exploring creative whakapapa across time, people, and places through printmaking and ornament.",
-    "description": "This talk explores the creative whakapapa across time, people, and places located at the heart of Lee’s work, which concerns placemaking through printmaking. Focusing on ornament, printmaking, and ephemera, Lee will present a narrative revealing emotional landscapes between the studio and wanderlust. Lee is a visual artist, designer, and researcher whose work explores cultural identity and heritage.",
+    "summary": "Designer and artist Kerry Ann Lee explores creative whakapapa through ornament, printmaking, and ephemera, focusing on placemaking.",
+    "description": "The talk explores the creative whakapapa across time, people and places located at the heart of Lee's work, which examines placemaking through printmaking. Focusing on ornament, printmaking, and ephemera, she presents a narrative revealing emotional landscapes between the studio and the call of wanderlust into the field.",
     "speakers": [
       {
         "name": "Kerry Ann Lee",
-        "bio": "Associate Professor in Design, Toi Rauwhārangi"
+        "bio": "Visual artist, designer, and researcher"
       }
     ]
   },
   "a244e0dfe41b06b5": {
     "event_type": "talk",
-    "summary": "Ruth Buchanan guides a tour of The Blue Dome exhibition, providing insight into Selina Ersahdi's new films and installations.",
-    "description": "Kaitohu Director Ruth Buchanan guides a tour of the exhibition The Blue Dome. Attendees will gain insight into the newly commissioned films and installation by artist Selina Ersahdi. Ruth will discuss the development of the films.",
+    "summary": "Ruth Buchanan guides attendees through 'The Blue Dome' exhibition, offering insight into Selina Ersahdi's newly commissioned films and installation.",
+    "description": "Ruth Buchanan will lead a tour of the exhibition 'The Blue Dome,' allowing attendees insight into the newly commissioned films and installation by artist Selina Ersahdi. During the tour, Ruth will discuss the development of the films.",
     "speakers": [
       {
         "name": "Ruth Buchanan",
@@ -761,8 +772,8 @@
   },
   "a38c1adb5dea7997": {
     "event_type": "conference",
-    "summary": "A full day event for podcast producers, presenters, practitioners, and providers from across Aotearoa, as well as podcast enthusiasts.",
-    "description": "This summit gathers podcast producers, presenters, practitioners, and providers from across Aotearoa, as well as those curious about podcasting. It promises a full day of collaborative learning and networking for the industry."
+    "summary": "A full day event for podcast producers, presenters, practitioners, and providers across Aotearoa and the podcast curious.",
+    "description": "This summit is for all podcast producers, presenters, practitioners, and providers from across Aotearoa, as well as anyone simply curious about podcasting. It promises a full day dedicated to the community."
   },
   "a616ebba62bce37b": {
     "event_type": "lecture",
@@ -780,11 +791,11 @@
     ]
   },
   "a70971ae735940bb": {
-    "event_type": "seminar",
+    "event_type": "workshop",
     "summary": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore.",
     "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes, whether you’re planning a holiday in Bali or a business trip to Jakarta.",
     "excluded": true,
-    "exclude_reason": "Not a lecture/talk component"
+    "exclude_reason": "Language class, not a lecture or talk"
   },
   "a7e028a3570d6069": {
     "event_type": "workshop",
@@ -803,13 +814,13 @@
   },
   "ac7d494ba6b6c5c1": {
     "event_type": "seminar",
-    "summary": "This webinar explores challenging the patriarchy by reassessing ancient women through academic lenses.",
-    "description": "This session tackles the concept of patriarchy by re-examining the roles and lives of women throughout ancient history. Participants will gain critical perspectives on how gender structures have been understood and challenged across civilizations."
+    "summary": "The seventh 'This Thinking Life' webinar reexamines the patriarchy by analyzing the perspectives and roles of ancient women.",
+    "description": "This seminar examines the persistent influence of patriarchal structures by applying a lens focused on ancient women. Participants will explore historical narratives to challenge modern understandings of gender roles. The discussion illuminates how historical scholarship informs contemporary critiques of gender inequality."
   },
   "acb9de0bf9304fb7": {
     "event_type": "seminar",
-    "summary": "This seminar addresses the critical challenge of redefining HR responsibilities in the age of human-machine relationships.",
-    "description": "The interplay between human capability and machine intelligence fundamentally changes how organizations manage their workforce. This discussion explores the core principles required to establish ethical and effective relationships between people and technology within HR practices. Attendees will gain insights into redesigning workforce decision-making processes for a hybrid human-machine future."
+    "summary": "This seminar addresses how to correctly manage relationships between humans and machines within HR and workforce decision-making processes.",
+    "description": "The intersection of human capability and machine intelligence is fundamentally reshaping Human Resources and workforce strategy. Participants will examine the critical responsibilities involved in designing ethical and effective human-machine interactions within organizational decision-making. This discussion provides frameworks for navigating technological integration while preserving the core elements of human capital management."
   },
   "adb78f3c44febf5d": {
     "summary": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time.",
@@ -817,16 +828,27 @@
   },
   "ae1b385a7cc1d662": {
     "event_type": "lecture",
-    "summary": "This lecture is part of the annual Sir John Graham Lecture series.",
-    "description": "The Sir John Graham Lecture provides an annual platform for significant academic discussion. Attendees will engage with a major theme or breakthrough concept presented at the Pullman Auckland Hotel \u0026 Apartments. This event offers insight into contemporary intellectual discourse."
+    "summary": "This is the annual Sir John Graham Lecture hosted by Maxim Institute.",
+    "description": "This event hosts the annual Sir John Graham Lecture, providing an in-depth examination of a significant topic in the current academic or cultural discourse. Attendees will gain specialized insights into the area of focus through expert presentation."
   },
   "af0a10e5eabd00ca": {
     "event_type": "seminar",
-    "summary": "Professor Derick de Jongh's seminar will highlight the distinctive contours of African vs Western leadership theories using Chief Albert Luthuli as a case study.",
-    "description": "Derick's seminar will highlight the distinctive contours of African vs Western leadership theories through the case of Chief Albert Luthuli.",
+    "summary": "Professor Derick de Jongh will examine the distinctive contours of African versus Western leadership theories, using the case of Chief Albert Luthuli.",
+    "description": "Professor Derick de Jongh will highlight a prominent leadership example from the case of Chief Albert Luthuli, examining the distinctive contours of African versus Western leadership theories.",
     "speakers": [
       {
         "name": "Professor Derick de Jongh"
+      }
+    ]
+  },
+  "af83032b7b0af944": {
+    "event_type": "talk",
+    "summary": "Anna Fifield, former Asia-Pacific Editor of the Washington Post, will deliver an address to the audience.",
+    "description": "Anna Fifield, former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington, will be the speaker. The usual door charge of $8 applies to cover venue hire and afternoon tea costs.",
+    "speakers": [
+      {
+        "name": "Anna Fifield",
+        "bio": "Former Asia-Pacific Editor of Washington Post"
       }
     ]
   },
@@ -848,27 +870,28 @@
     "summary": "Come join us for a free 45-minute taster class to learn some basics. Learn how to greet, introduce yourself and use some everyday...",
     "description": "Come join us for a free 45-minute taster class to learn some basics. Learn how to greet, introduce yourself and use some everyday...",
     "excluded": true,
-    "exclude_reason": "Activity focus, not academic talk."
+    "exclude_reason": "Skills workshop, not lecture content"
   },
   "b3e2988035940c65": {
     "event_type": "seminar",
-    "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring visiting researchers and those from the department, presented by Dr Mahnaz Aliyar.",
-    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the department. This seminar is presented by Dr Mahnaz Aliyar, affiliated with LALS, Victoria University of Wellington.",
+    "summary": "This seminar, hosted by the School of Linguistics and Applied Language Studies, features a discussion on the incidental acquisition of novel L2 vocabulary from authentic materials, presented by Dr Mahnaz Aliyar.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers and those from the school. Dr Mahnaz Aliyar will present on the incidental acquisition of novel L2 vocabulary from authentic materials.",
     "speakers": [
       {
-        "name": "Dr Mahnaz Aliyar"
+        "name": "Dr Mahnaz Aliyar",
+        "bio": "LALS, Victoria University of Wellington"
       }
     ]
   },
   "ba2dd526b346cb10": {
-    "event_type": "talk",
-    "summary": "This talk explores how leveraging Artificial Intelligence (AI) can build more resilient value chains within the energy sector.",
-    "description": "The session examines the crucial role of Artificial Intelligence in fortifying energy value chains against modern disruptions. Attendees will gain insights into practical applications of AI technologies aimed at achieving greater energy resilience across industries. The discussion focuses on how technological advancement meets global energy needs for sustainable operations."
+    "event_type": "seminar",
+    "summary": "This seminar explores how leveraging Artificial Intelligence can build energy resilient value chains.",
+    "description": "The session addresses the necessity of adapting value chains to build resilience against modern energy disruptions using AI. Participants will gain insight into practical applications of AI technologies for optimizing and strengthening energy infrastructure."
   },
   "bc36ce59b7e81181": {
     "event_type": "workshop",
-    "summary": "Learn about Kintsugi, the Japanese art of mending broken ceramics with gold, making the object more beautiful than before.",
-    "description": "Kintsugi, also known as Kintsukuroi, is an age-old Japanese art form. It involves repairing broken ceramics using a method that highlights the breaks with gold lacquer. This philosophy suggests that breakage and repair are part of the history of an object, making it more beautiful than when it was whole."
+    "summary": "A workshop exploring Kintsugi, the Japanese art form of repairing broken ceramics using gold, making the breaks beautiful.",
+    "description": "This workshop explores Kintsugi, also known as Kintsukuroi, an age-old Japanese art form. It involves repairing broken ceramics in a way considered more beautiful than when the object was whole. Kintsugi translates to 'Golden Joinery.'"
   },
   "be71cfa05e7f3e78": {
     "event_type": "workshop",
@@ -887,13 +910,13 @@
   },
   "c18c3e744bc93c82": {
     "event_type": "seminar",
-    "summary": "Examines the history of Redcoat soldiers stationed in New Zealand and across the wider British Empire.",
-    "description": "This seminar explores the multifaceted history of Redcoat soldiers, detailing their presence in New Zealand and across the broader British Empire. Attendees will gain insight into the military life, social integration, and historical significance of these troops within the colonial context. The discussion centers on primary sources and recent academic interpretations of military history in the Pacific."
+    "summary": "Examines the history of Redcoat soldiers stationed in New Zealand and throughout the British Empire.",
+    "description": "This seminar delves into the history of Redcoat soldiers across the British Empire, focusing specifically on their presence in New Zealand. Understanding the experiences of these troops reveals deeper insights into colonial administration and military life in the Pacific region. The discussion provides a focused look at archival research concerning these historical military populations."
   },
   "c286231c9816d9f2": {
-    "event_type": "seminar",
-    "summary": "This webinar explores the intersection of Indigenous psychologies, mainstream psychology, and the Treaty of Waitangi (Te Tiriti).",
-    "description": "This webinar examines the complex relationship between Western psychological frameworks and Indigenous knowledge systems. Participants will gain insight into how Te Tiriti informs the practice and understanding of psychology in Aotearoa New Zealand, fostering a critical dialogue about decolonization within the field."
+    "event_type": "talk",
+    "summary": "This webinar explores the intersection of Indigenous psychologies, mainstream psychology, and the principles of Te Tiriti.",
+    "description": "This session addresses the complex relationship between Western psychological frameworks and Indigenous knowledge systems within the context of Te Tiriti o Waitangi. Participants will gain insight into how decolonizing psychology can honor diverse understandings of wellbeing and identity. The discussion provides a crucial platform for comparative learning across epistemologies."
   },
   "c2fc63ea6435fa7c": {
     "event_type": "talk",
@@ -911,17 +934,17 @@
     "summary": "A free interactive drop-in session for tamariki aged 5 and under. This month learn about sharing stories in New Zealand Sign language.",
     "description": "A free interactive drop-in session for tamariki aged 5 and under. This month learn about sharing stories in New Zealand Sign language. ",
     "excluded": true,
-    "exclude_reason": "Drop-in session for young children"
+    "exclude_reason": "Activity for very young children"
   },
   "c6c4b309d0526a61": {
     "event_type": "concert",
     "summary": "In celebration of New Zealand Music Month, join Auckland Youth Choir for two special performances in two of the Museum's most iconic spaces: Te Ao Mārama South Atrium, accompanied by the rich tones of the Museum’s Fazioli grand piano, and the stunning acoustics of the Grand Foyer.",
     "description": "In celebration of New Zealand Music Month, join Auckland Youth Choir for two special performances in two of the Museum's most iconic spaces: Te Ao Mārama South Atrium, accompanied by the rich tones of the Museum’s Fazioli grand piano, and the stunning acoustics of the Grand Foyer.",
     "excluded": true,
-    "exclude_reason": "Performance, not academic talk component"
+    "exclude_reason": "Performance rather than academic lecture"
   },
   "c918880121cd1fe6": {
-    "event_type": "talk",
+    "event_type": "lecture",
     "summary": "Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment.",
     "description": "Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment. His remarks will highlight the value of working with like-minded partners in the Asia-Pacific region to uphold open, rules-based cooperation and deliver practical outcomes.",
     "speakers": [
@@ -931,29 +954,29 @@
     ]
   },
   "ca1f64f253399828": {
-    "event_type": "talk",
-    "summary": "This screening celebrates New Zealand Sign Language week by showcasing the film, Sign of the Times – The Story of New Zealand’s Visual Language.",
-    "description": "This screening celebrates New Zealand Sign Language week by presenting the film, Sign of the Times – The Story of New Zealand’s Visual Language. The film provides a look into the history and development of New Zealand’s visual language, offering insight into the cultural significance of sign language within Aotearoa."
+    "event_type": "screening",
+    "summary": "A special screening celebrates New Zealand Sign Language week by showcasing 'Sign of the Times – The Story of New Zealand’s Visual Language'.",
+    "description": "This film offers a deep look into the visual language that forms the core of New Zealand Sign Language. The screening is a celebration of Sign Language week, providing insight into the history and cultural significance of NZSL. The audience will gain an appreciation for the complexity and beauty of this unique form of visual communication."
   },
   "cce7967c19d96aa3": {
     "event_type": "panel",
-    "summary": "A panel discussion on the future of technology in the Marlborough region, hosted by Deloitte Techweek26.",
-    "description": "This panel discusses the future of technology within the Marlborough region. Hosted by Deloitte Techweek26, the event takes place at Te Au Pūngao in Blenheim."
+    "summary": "Deloitte presents a panel discussing the future of technology specifically within the Marlborough region.",
+    "description": "The panel will explore the future of technology in Marlborough. Hosted by Deloitte Techweek26, the event is located at Te Au Pūngao in Blenheim."
   },
   "ce1f249b3c34b63f": {
     "event_type": "workshop",
-    "summary": "The workshop explores the malu, the Samoan female tattoo, as a living archive of cultural knowledge and ancestral presence through embodied practice.",
-    "description": "Participants will explore how Indigenous knowledge is encoded in the body, and how these markings intersect with gender, identity, and sovereignty. Grounded in Rosanna Raymond's own malu and artistic practice, the workshop invites critical reflection on cultural appropriation, authorship, and the responsibilities of working with Indigenous visual systems.",
+    "summary": "This workshop centres the malu, the Samoan female tattoo, as a living archive of cultural knowledge and ancestral presence.",
+    "description": "This workshop centres the malu, the Samoan female tattoo, as a living archive of cultural knowledge and ancestral presence. Participants will explore how Indigenous knowledge is encoded in the body, through discussion, drawing, writing, and embodied practice. The session also invites critical reflection on cultural appropriation, authorship, and the responsibilities of working with Indigenous visual systems, grounded in Rosanna Raymond's own malu and artistic practice.",
     "speakers": [
       {
-        "name": "Rosanna Raymond"
+        "name": "ROSANNA RAYMOND"
       }
     ]
   },
   "ced2707cbf21f28a": {
     "event_type": "seminar",
-    "summary": "Deloitte Techweek26 hosts a presentation on agentic blueprinting to drive value from AI.",
-    "description": "Deloitte Techweek26 presents on agentic blueprinting, focusing on how to drive value from Artificial Intelligence. The event takes place at Deloitte Wellington on Tuesday, May 19th, 2026."
+    "summary": "Deloitte Techweek26 will discuss agentic blueprinting to drive value from AI.",
+    "description": "Deloitte Techweek26 is hosting a session on agentic blueprinting, focusing on how to drive value from Artificial Intelligence. The event will take place at Deloitte Wellington on Tuesday, May 19th, 2026."
   },
   "cee11c9c166f76f7": {
     "event_type": "lecture",
@@ -965,9 +988,9 @@
     "description": "The International Research Symposium, organized by WACE, explores transforming practice through research in work-integrated education. This event aims to bring together global experts for a collaborative dialogue and innovation in cooperative and experiential educational methods."
   },
   "dab41faa544e7e75": {
-    "event_type": "seminar",
-    "summary": "Demographics, productivity, and AI choices facing NZ will be discussed at an event hosted by Deloitte Techweek26.",
-    "description": "This session hosted by Deloitte Techweek26 examines the critical challenges facing New Zealand, including demographics, productivity levels, and the choices presented by artificial intelligence. The event takes place at Deloitte Wellington on Wednesday, May 20th, 2026."
+    "event_type": "talk",
+    "summary": "Deloitte Techweek26 examines demographics, productivity, and the impact of AI choices facing New Zealand.",
+    "description": "This talk, hosted by Deloitte Techweek26, will explore crucial topics facing New Zealand, specifically focusing on demographics, productivity challenges, and the implications of artificial intelligence."
   },
   "db21f3bf1d770c7f": {
     "event_type": "lecture",
@@ -1026,9 +1049,9 @@
     "description": "Victoria University presents 'Philanthropy Along the Supply Chain' by authors Huu Nhan Duong, Emdad Islam, Lubna Rahman, and Cara Vansteenkiste. Abstract focuses on strategic use of donations to trade partners’ affiliated charities."
   },
   "e2788c45a4a1bec8": {
-    "event_type": "seminar",
-    "summary": "Professor Stefano Pampanin discusses lessons learned from the 2011 Canterbury earthquakes regarding building codes and future engineering needs.",
-    "description": "Fifteen years after the 2011 Canterbury earthquakes, UC engineers reflect on what was learned, what has changed in global building codes, and what still needs to happen in the field.",
+    "event_type": "lecture",
+    "summary": "Professor Stefano Pampanin discusses engineering lessons learned 15 years after the 2011 Canterbury earthquakes, covering global code changes and future needs.",
+    "description": "Fifteen years after the 2011 Canterbury earthquakes, UC engineers reflect on what they learned, what changed in global building codes, and what still needs to happen.",
     "speakers": [
       {
         "name": "Professor Stefano Pampanin"
@@ -1048,13 +1071,13 @@
   },
   "e42257690cdde024": {
     "event_type": "workshop",
-    "summary": "Students from the University of Canterbury participate in a Techweek Appathon challenge hosted by Deloitte and ServiceNow.",
-    "description": "Participants engage in a hands-on Appathon challenge, fostering technological skill-building through the collaboration of Deloitte and ServiceNow. This event provides students with practical experience in developing applications using industry-leading platforms. The challenge format allows attendees to explore the frontiers of digital possibility in a collaborative, applied setting."
+    "summary": "Students at the University of Canterbury will participate in a Techweek Appathon challenge hosted by Deloitte and ServiceNow.",
+    "description": "This Techweek Appathon challenge, a collaboration between Deloitte, ServiceNow, and the University of Canterbury, challenges students to innovate using technology. Participants will engage in a hands-on development sprint to build functional applications. The event fosters practical technological problem-solving skills within a professional setting."
   },
   "e48ddbbc834dc652": {
-    "event_type": "lecture",
-    "summary": "Marine scientists will share recent deep-sea research discoveries from the Southern Ocean, covering new species, ecosystem dynamics, and fisheries management implications.",
-    "description": "Marine scientists will share discoveries from recent voyages to the Southern Ocean. The talk will cover findings related to new species identification, ecosystem dynamics, and the implications these findings hold for fisheries management."
+    "event_type": "talk",
+    "summary": "Marine scientists will share recent discoveries from voyages to the Southern Ocean, covering new species and ecosystem dynamics.",
+    "description": "Marine scientists will share discoveries from recent voyages to the Southern Ocean. The presentation will cover findings on new species, ecosystem dynamics, and the implications of this research for fisheries management."
   },
   "e63364a32a4ba7ef": {
     "event_type": "seminar",
@@ -1073,9 +1096,9 @@
     "description": "The Auckland War Memorial Museum invites you to hear about the journey of the pauku, its history, care, and the important mātauranga surrounding this prestigious cloak. Join us for an evening at Tāmaki Paenga Hira."
   },
   "e885f0a7f721ce37": {
-    "event_type": "seminar",
-    "summary": "Researchers and community voices discuss the competing demands on Canterbury's freshwater resources and what a sustainable future looks like for the region.",
-    "description": "This session brings together researchers and community voices to discuss the competing demands on Canterbury's freshwater resources. Participants will explore what a sustainable future looks like for the region's vital freshwater sources."
+    "event_type": "panel",
+    "summary": "Researchers and community voices will discuss the competing demands on Canterbury's freshwater resources and outline a sustainable future for the region.",
+    "description": "Researchers and community voices will discuss the competing demands on Canterbury's freshwater resources. The discussion will explore what a sustainable future looks like for the region."
   },
   "e8cbee17043daa26": {
     "event_type": "workshop",
@@ -1110,12 +1133,12 @@
     "event_type": "celebration",
     "description": "Join us in celebrating the 50th anniversary of the Bachelor of Social Work qualification with an event series reflecting on the past to inform the present and envision the future.",
     "excluded": true,
-    "exclude_reason": "Not a lecture or talk component."
+    "exclude_reason": "Not a lecture, talk, or seminar component"
   },
   "f736386a033bed4f": {
     "event_type": "seminar",
-    "summary": "Helen Howell discusses visual priming and speech perception among Samoan speakers at the School of Linguistics and Applied Language Studies.",
-    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars. Helen Howell, from the University of Potsdam, will present on the topic of visual priming and speech perception among Samoan speakers.",
+    "summary": "Helen Howell will present on visual priming and speech perception among Samoan speakers.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring visiting researchers and faculty members. Helen Howell will present on the topic of visual priming and speech perception among Samoan speakers.",
     "speakers": [
       {
         "name": "Helen Howell",
@@ -1135,24 +1158,23 @@
   },
   "f97d2adb031d11ec": {
     "event_type": "lecture",
-    "summary": "Mahdis Azarmandi presents a lecture on 'Inheriting Revolution—On Iran's question of war and peace,' drawing from her research in Peace and Conflict Studies.",
-    "description": "Drawing from her research within Peace and Conflict Studies, Mahdis Azarmandi will present a lecture providing insight into the complex context surrounding Iran's question of war and peace, framed by the theme of Inheriting Revolution.",
+    "summary": "Mahdis Azarmandi presents a lecture on Inheriting Revolution, exploring the complex context of war and peace in Iran.",
+    "description": "Mahdis Azarmandi will present a lecture titled Inheriting Revolution, drawing from her research within Peace and Conflict Studies. The talk provides insight into the complex context that plays a significant role in the question of war and peace in Iran.",
     "speakers": [
       {
-        "name": "Mahdis Azarmandi",
-        "bio": "Research in Peace and Conflict Studies"
+        "name": "Mahdis Azarmandi"
       }
     ]
   },
   "fdd4532b42c7f1b5": {
     "event_type": "seminar",
     "summary": "Explore the Business Administration – Postgraduate Certificate in Business and its pathway to an Executive MBA.",
-    "description": "Explore the Business Administration – Postgraduate Certificate in Business and learn how it can serve as a pathway towards an Executive MBA."
+    "description": "This online info session explores the Business Administration – Postgraduate Certificate in Business and details how it functions as a pathway toward an Executive MBA."
   },
   "fea2f6e6b34612a6": {
     "event_type": "reading",
-    "summary": "Ruth Buchanan presents a live interpretation of her artwork and published collection Evacuation Tapes, exploring the construction of the self.",
-    "description": "Kaitohu Director and artist Ruth Buchanan will present a live interpretation of her artwork and published collection Evacuation Tapes (2019). This spoken word work will explore the construction of the self and the ways in which our bodies and their...",
+    "summary": "Ruth Buchanan will present a live interpretation of her artwork and published collection Evacuation Tapes, exploring the construction of the self.",
+    "description": "Kaitohu Director and artist Ruth Buchanan will present a live interpretation of her artwork and published collection Evacuation Tapes (2019). This spoken word work will explore the construction of the self and the ways in which our bodies and their existence intersect.",
     "speakers": [
       {
         "name": "Ruth Buchanan",
@@ -1162,8 +1184,8 @@
   },
   "ff8ae22d11fe7fac": {
     "event_type": "workshop",
-    "summary": "Artists and filmmakers Selina Ershadi and Nova Paul lead a workshop for early career artists interested in using film to tell personal stories.",
-    "description": "Artists and filmmakers Selina Ershadi and Nova Paul will host this workshop for early career artists interested in moving image making. The session draws on the artists' interest in film as a key tool to tell personal stories.",
+    "summary": "Artists Selina Ershadi and Nova Paul lead a workshop exploring film as a tool for telling personal stories for early career artists.",
+    "description": "Artists and filmmakers Selina Ershadi and Nova Paul lead this one-day workshop for early career artists interested in moving image making. The workshop will draw on their interest in film as a key tool to tell personal stories.",
     "speakers": [
       {
         "name": "Selina Ershadi"

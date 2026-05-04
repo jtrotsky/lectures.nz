@@ -73,7 +73,7 @@ type sourceStats struct {
 }
 
 func main() {
-	loadDotEnv(filepath.Join(os.Getenv("HOME"), ".config/lectures.nz/env"))
+	loadDotEnv(filepath.Join(os.Getenv("HOME"), ".config/lectures.nz/.env"))
 
 	ollamaHost := os.Getenv("OLLAMA_HOST")
 	ollamaModel := os.Getenv("OLLAMA_MODEL")
@@ -136,7 +136,8 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 	}
 
 	// Warm up the model so it's loaded into memory before the main loop.
-	if !cacheOnly && !dryRun && todo > 0 {
+	// Also fire warmup when REFRESH_SOURCE is set — source events need Ollama even if todo=0.
+	if !cacheOnly && !dryRun && (todo > 0 || refreshSource != "") {
 		fmt.Printf("Warming up %s...", ollamaModel)
 		if _, err := ollamaGenerate(ollamaHost, ollamaModel, "OK"); err != nil {
 			fmt.Printf(" failed (%v), continuing anyway\n", err)
@@ -179,7 +180,7 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		fmt.Printf("[%3d/%d] %s", i+1, len(lectures), truncate(lec.Title, 50))
 		result, err := enrich(lec, ollamaHost, ollamaModel, dryRun)
 		if err != nil {
-			fmt.Fprintf(os.Stderr, "\n  WARN: %s: %v\n", truncate(lec.Title, 50), err)
+			fmt.Printf("\n  WARN: %s: %v\n", truncate(lec.Title, 50), err)
 			enriched = append(enriched, lec)
 			st.unenriched++
 			continue
