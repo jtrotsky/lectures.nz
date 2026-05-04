@@ -227,6 +227,17 @@
     "event_type": "market",
     "summary": "Queers \u0026 Wares is a market celebrating queer creativity, community, and connection. Browse unique handmade pieces, vintage clothing, and art from local artists."
   },
+  "2c5eaa40100d9760": {
+    "event_type": "seminar",
+    "summary": "This seminar explores the topic of decolonising the screen, presented as part of the Recent Books in New Zealand Studies Seminar Series.",
+    "description": "The Stout Centre’s seminar series continues with the forthcoming book on the topic of decolonising the screen. This event is part of the 'Between the Lines—Recent Books in New Zealand Studies Seminar Series.'",
+    "speakers": [
+      {
+        "name": "Leah Vonderheide",
+        "bio": "Presenter"
+      }
+    ]
+  },
   "2cb1e777f13f1b20": {
     "event_type": "seminar",
     "summary": "The fifth webinar of the 'This Thinking Life' series explores the concept of rethinking what is considered 'normal' within the neurodivergent life.",
@@ -957,6 +968,17 @@
     "event_type": "screening",
     "summary": "A special screening celebrates New Zealand Sign Language week by showcasing 'Sign of the Times – The Story of New Zealand’s Visual Language'.",
     "description": "This film offers a deep look into the visual language that forms the core of New Zealand Sign Language. The screening is a celebration of Sign Language week, providing insight into the history and cultural significance of NZSL. The audience will gain an appreciation for the complexity and beauty of this unique form of visual communication."
+  },
+  "cbe18b8db8f4d84b": {
+    "event_type": "lecture",
+    "summary": "Mike Seawright discusses his two decades of delivering humanitarian assistance to families in conflict zones, founding ReliefAid.",
+    "description": "Since leaving the corporate world over two decades ago, Mike Seawright has delivered humanitarian assistance to families in the world’s conflict zones. He has provided medical aid in Iraq, Yemen, Sudan, South Sudan, and Pakistan, and has led emergency interventions in Syria, Afghanistan, and Ukraine, founding ReliefAid to help those affected by war. ReliefAid has delivered life-saving aid to over 1.6 million people in various war-torn regions.",
+    "speakers": [
+      {
+        "name": "Mike Seawright",
+        "bio": "Founder and Executive Director ReliefAid"
+      }
+    ]
   },
   "cce7967c19d96aa3": {
     "event_type": "panel",
