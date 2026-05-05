@@ -112,7 +112,57 @@
     "slug": "auckland-museum",
     "name": "Auckland War Memorial Museum",
     "website": "https://www.aucklandmuseum.com/visit/whats-on",
-    "description": "Tāmaki Paenga Hira Auckland War Memorial Museum hosts public talks, evening events, and cultural programmes exploring Aotearoa's natural and human history."
+    "description": "Tāmaki Paenga Hira Auckland War Memorial Museum hosts public talks, evening events, and cultural programmes exploring Aotearoa's natural and human history.",
+    "lectures": [
+      {
+        "id": "c6c4b309d0526a61",
+        "title": "Auckland Youth Choir at Auckland Museum",
+        "link": "https://www.aucklandmuseum.com/visit/whats-on/Auckland-Youth-Choir-at-Auckland-Museum-2026",
+        "time_start": "2026-05-10T10:30:00+12:00",
+        "summary": "In celebration of New Zealand Music Month, join Auckland Youth Choir for two special performances in two of the Museum's most iconic spaces: Te Ao Mārama South Atrium, accompanied by the rich tones of the Museum’s Fazioli grand piano, and the stunning acoustics of the Grand Foyer.",
+        "description": "In celebration of New Zealand Music Month, join Auckland Youth Choir for two special performances in two of the Museum's most iconic spaces: Te Ao Mārama South Atrium, accompanied by the rich tones of the Museum’s Fazioli grand piano, and the stunning acoustics of the Grand Foyer.",
+        "free": false,
+        "cost": "Ticketed",
+        "location": "TE AO MĀRAMA SOUTH ATRIUM \u0026 GRAND FOYER, Auckland War Memorial Museum",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "auckland-museum"
+      },
+      {
+        "id": "a73df608b35aec92",
+        "title": "Ngā Kākano: Kạp‘ạki - To Embrace",
+        "link": "https://www.aucklandmuseum.com/visit/whats-on/Nga-Kakano-Kapaki-To-Embrace",
+        "time_start": "2026-05-12T18:00:00+12:00",
+        "summary": "Join us for Kạp‘ạki - To Embrace: In conversation with Rotuman artists Sofia Tekela-Smith and Maluseu Monise to celebrate Rotuman Language Week.",
+        "description": "Join us for Kạp‘ạki - To Embrace: In conversation with Rotuman artists Sofia Tekela-Smith and Maluseu Monise to celebrate Rotuman Language Week.",
+        "free": false,
+        "cost": "Ticketed",
+        "location": "ORIENTATION SPACE, TE AO MĀRAMA, Auckland War Memorial Museum",
+        "tags": [
+          "arts-culture",
+          "literature-writing"
+        ],
+        "host_slug": "auckland-museum"
+      },
+      {
+        "id": "541dc5ec63ddc292",
+        "title": "Close Encounters with the Shark Side",
+        "link": "https://www.aucklandmuseum.com/visit/whats-on/evenings/Twilight-Tuesday-with-Clinton_Duffy-SharkSide",
+        "time_start": "2026-05-26T18:00:00+12:00",
+        "summary": "One last time before the Sharks exhibition heads overseas, join Clinton Duffy, Curator of Marine Biology, and meet some of the denizens of the marine collections here at Auckland Museum.",
+        "description": "One last time before the Sharks exhibition heads overseas, join Clinton Duffy, Curator of Marine Biology, and meet some of the denizens of the marine collections here at Auckland Museum. From the safety of your seat, dive deeper into the world of sharks with this guided talk, and even meet some of our most unique specimens like the Hammerhead Shark!",
+        "free": false,
+        "cost": "Ticketed",
+        "location": "Orientation Space, Ground Floor, Auckland War Memorial Museum",
+        "tags": [
+          "arts-culture",
+          "science-technology",
+          "environment"
+        ],
+        "host_slug": "auckland-museum"
+      }
+    ]
   },
   {
     "slug": "eventbrite",
@@ -227,6 +277,19 @@
     "description": "Public lectures and educational events from NZ institutions listed on Humanitix.",
     "lectures": [
       {
+        "id": "172d5b8e75daafd4",
+        "title": "Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation",
+        "link": "https://events.humanitix.com/deloitte-presents-tech-for-good-hackathon-deloitte-aws-and-hynds-foundation-fq5wkslk",
+        "time_start": "2026-05-18T09:30:00+12:00",
+        "time_end": "2026-05-18T14:30:00+12:00",
+        "summary": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Wellington) hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Wellington) hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Monday 18th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "acb9de0bf9304fb7",
         "title": "Deloitte Presents: Human × machine lab: Getting human and machine relationships right in HR and workforce decisions",
         "link": "https://events.humanitix.com/deloitte-presents-human-machine-lab-getting-human-and-machine-relationships-right-in-hr-and-workforce-decisions",
@@ -270,7 +333,7 @@
       },
       {
         "id": "ba2dd526b346cb10",
-        "title": "Deloitte Presents: The art of the possible: Leveraging AI for energy resilient value chains",
+        "title": "Deloitte Presents: The Art of the Possible: Leveraging AI for Supply Chain Resilience",
         "link": "https://events.humanitix.com/deloitte-presents-the-art-of-the-possible-leveraging-ai-for-energy-resilient-value-chains",
         "time_start": "2026-05-19T07:00:00+12:00",
         "time_end": "2026-05-19T09:30:00+12:00",
@@ -279,8 +342,7 @@
         "free": true,
         "location": "Deloitte Auckland, Auckland",
         "tags": [
-          "arts-culture",
-          "environment"
+          "arts-culture"
         ],
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
@@ -315,6 +377,19 @@
         "organiser": "Deloitte Techweek26"
       },
       {
+        "id": "f71a004f91944e81",
+        "title": "Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation",
+        "link": "https://events.humanitix.com/deloitte-presents-tech-for-good-hackathon-deloitte-aws-and-hynds-foundation-hamilton",
+        "time_start": "2026-05-19T09:30:00+12:00",
+        "time_end": "2026-05-19T14:30:00+12:00",
+        "summary": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Hamilton) hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Hamilton) hosted by Deloitte Techweek26. Deloitte, The Deloitte House 24 Anzac Parade, Claudelands, Hamilton 3216, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte, Hamilton",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "93d3306be97bd05b",
         "title": "Deloitte Presents: Your next customer may not be human!",
         "link": "https://events.humanitix.com/deloitte-presents-your-next-customer-may-not-be-human",
@@ -337,32 +412,6 @@
         "description": "Register on Humanitix - Deloitte presents: Vibe coding or tech debt? Building fast without paying later hosted by Deloitte Techweek26. Deloitte Auckland, Level 20/01 Queen Street, Auckland CBD, Auckland 1010, New Zealand. Tuesday 19th May 2026. Find event information.",
         "free": true,
         "location": "Deloitte Auckland, Auckland",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "283045f10f790cd0",
-        "title": "Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand",
-        "link": "https://events.humanitix.com/deloitte-presents-the-future-of-open-insurance-in-aotearoa-new-zealand",
-        "time_start": "2026-05-19T17:00:00+12:00",
-        "time_end": "2026-05-19T19:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "dab41faa544e7e75",
-        "title": "Deloitte presents: We can’t hire our way out of this",
-        "link": "https://events.humanitix.com/deloitte-presents-we-can-t-hire-our-way-out-of-this-demographics-productivity-and-ai-choices-facing-nz",
-        "time_start": "2026-05-20T09:00:00+12:00",
-        "time_end": "2026-05-20T10:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Wednesday 20th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -781,6 +830,25 @@
         "host_slug": "studio-one"
       },
       {
+        "id": "0bdfb3b4492e9d85",
+        "title": "Nz Music Month",
+        "link": "https://ourauckland.aucklandcouncil.govt.nz/events/2026/04/emerging-artist-showcase-sounds-of-tamaki-makaurau/",
+        "time_start": "2026-05-16T00:00:00+12:00",
+        "summary": "Get ready to turn up the volume! Sounds of Tāmaki Makaurau is coming this NZ Music Month 2026!",
+        "description": "Get ready to turn up the volume! Sounds of Tāmaki Makaurau is coming this NZ Music Month 2026! This region-wide celebration will spotlight music-themed events and experiences, brought to life by Auckland Council. From community stages to creative experiences, the month will shine a light on local talent, including a special emerging artist series. Keep your ears open, exciting new voices are set to step into the spotlight at Studio One Toi Tū.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "SOUNDS OF TĀMAKI MAKAURAU"
+          }
+        ],
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
         "id": "3139979a01b04c3d",
         "title": "Tā: Siapo as a Living Practice",
         "link": "https://www.eventfinda.co.nz/2026/ta-siapo-as-living-practice-with-florence-ulutunu/auckland/ponsonby",
@@ -796,25 +864,6 @@
         ],
         "tags": [
           "arts-culture"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
         ],
         "host_slug": "studio-one"
       },
@@ -835,6 +884,25 @@
         "tags": [
           "arts-culture",
           "history-society"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -895,25 +963,7 @@
     "slug": "nz-initiative",
     "name": "The New Zealand Initiative",
     "website": "https://www.nzinitiative.org.nz/events/",
-    "description": "The New Zealand Initiative is a Wellington-based think tank hosting public lectures, seminars, and forums on economic policy, education, and governance.",
-    "lectures": [
-      {
-        "id": "5506b567e7f48ff1",
-        "title": "Health Innovators Summit: Designing a World-Class Health System: A Global Blueprint for New Zealand",
-        "link": "https://www.nzinitiative.org.nz/events/health-innovators-summit/",
-        "time_start": "2026-05-05T18:00:00+12:00",
-        "summary": "This a unique opportunity to participate in an inspiring day of critical thinking and discourse, exploring ideas to create a high performing health system for New Zealand.",
-        "description": "This a unique opportunity to participate in an inspiring day of critical thinking and discourse, exploring ideas to create a high performing health system for New Zealand.   Our keynote speaker is one of the world’s foremost health policy experts and author of Which Country Has The World’s Best Health Care? , Dr Ezekiel Emanuel. Drawing from his extensive comparative study of 11 nations, this summit will move beyond simplistic rankings to identify and discuss the core components of world-class health systems.",
-        "free": false,
-        "location": "Auckland",
-        "tags": [
-          "arts-culture",
-          "health-medicine",
-          "philosophy-ideas"
-        ],
-        "host_slug": "nz-initiative"
-      }
-    ]
+    "description": "The New Zealand Initiative is a Wellington-based think tank hosting public lectures, seminars, and forums on economic policy, education, and governance."
   },
   {
     "slug": "auckland",
@@ -936,28 +986,14 @@
         "host_slug": "auckland"
       },
       {
-        "id": "6f8154369b41962d",
-        "title": "Speech-language therapists can talk you into anything",
-        "link": "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659",
-        "time_start": "2026-05-14T17:00:00+12:00",
-        "summary": "Professor Clare McCann's Inaugural Lecture",
-        "description": "Professor Clare McCann's Inaugural Lecture",
+        "id": "95802a3f9566c770",
+        "title": "2026 Alice Griffin Shakespeare Lecture",
+        "link": "https://www.eventbrite.co.nz/e/2026-alice-griffin-shakespeare-lecture-tickets-1985879327527",
+        "time_start": "2026-05-13T18:00:00+12:00",
+        "summary": "Shakespeare as Reviser: The Merry Wives of Windsor",
+        "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
         "free": true,
-        "location": "FMHS Lecture Theatre, 505-007, Level 0, Grafton Campus, 85 Park Road, Auckland",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "auckland"
-      },
-      {
-        "id": "5b4464df305add17",
-        "title": "It’s the little things that count: lessons in metabolism, academia and life",
-        "link": "https://www.eventbrite.co.nz/e/its-the-little-things-that-count-lessons-in-metabolism-academia-and-life-tickets-1975871927123",
-        "time_start": "2026-05-21T17:30:00+12:00",
-        "summary": "Professor Jennifer Miles-Chan's Inaugural Lecture",
-        "description": "Professor Jennifer Miles-Chan's Inaugural Lecture",
-        "free": true,
-        "location": "SLT1 Lecture Theatre, 303-G01, Level 0, Science Centre, 38 Princes Street, Auckland",
+        "location": "B401-401, 20 Symonds Street, Auckland",
         "host_slug": "auckland"
       }
     ]
@@ -1223,6 +1259,20 @@
         "host_slug": "victoria"
       },
       {
+        "id": "ea1ea9dc21d3e573",
+        "title": "Trump 2.0 and the Indo-Pacific",
+        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/trump-2.0-and-the-indo-pacific",
+        "time_start": "2026-05-13T14:00:00+12:00",
+        "summary": "Given the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president, it can be difficult to distinguish between...",
+        "description": "Given the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president, it can be difficult to distinguish between...",
+        "free": false,
+        "location": "Wellington",
+        "tags": [
+          "environment"
+        ],
+        "host_slug": "victoria"
+      },
+      {
         "id": "2c5eaa40100d9760",
         "title": "Merata Mita—Decolonising the screen",
         "link": "https://www.wgtn.ac.nz/stout-centre/about/events/merata-mita-decolonising-the-screen",
@@ -1234,6 +1284,17 @@
         "tags": [
           "literature-writing"
         ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "21be6b77ec2e071a",
+        "title": "Southeast Asia at the Geostrategic Crossroads: The Iran War, Trump's Tariffs, the South China Sea and Beyond",
+        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond",
+        "time_start": "2026-05-14T17:30:00+12:00",
+        "summary": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
+        "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
+        "free": false,
+        "location": "Wellington",
         "host_slug": "victoria"
       },
       {
@@ -1250,17 +1311,6 @@
           "science-technology",
           "politics-policy"
         ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "21be6b77ec2e071a",
-        "title": "Southeast Asia at the Geostrategic Crossroads: The Iran War, Trump's Tariffs, the South China Sea and Beyond",
-        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond",
-        "time_start": "2026-05-14T17:30:00+12:00",
-        "summary": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "free": false,
-        "location": "Wellington",
         "host_slug": "victoria"
       },
       {
@@ -1285,6 +1335,35 @@
         "host_slug": "victoria"
       },
       {
+        "id": "b57944a3b4ba7563",
+        "title": "Familiarity Amidst Flux: The Navigation of Well-Being in Spiti Valley, India",
+        "link": "https://www.wgtn.ac.nz/sacs/about/events/familiarity-amidst-flux-the-navigation-of-well-being-in-spiti-valley-india",
+        "time_start": "2026-05-20T12:00:00+12:00",
+        "summary": "Hirdey Rampal - PhD candidate in Cultural Anthropology at Te Herenga Waka – Victoria University of WellingtonHow do people sustain well-being when the...",
+        "description": "Hirdey Rampal - PhD candidate in Cultural Anthropology at Te Herenga Waka – Victoria University of WellingtonHow do people sustain well-being when the...",
+        "free": true,
+        "location": "Wellington",
+        "tags": [
+          "arts-culture",
+          "history-society"
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "d877bcff9e529644",
+        "title": "Mr Ward's Map—Victorian Wellington street by street",
+        "link": "https://www.wgtn.ac.nz/stout-centre/about/events/mr-wards-map-victorian-wellington-street-by-street",
+        "time_start": "2026-05-20T16:10:00+12:00",
+        "summary": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesElizabeth Cox The Stout Centre’s seminar series highlighting recent books continues with Elizabeth Cox’s Mr...",
+        "description": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesElizabeth Cox The Stout Centre’s seminar series highlighting recent books continues with Elizabeth Cox’s Mr...",
+        "free": false,
+        "location": "Wellington",
+        "tags": [
+          "literature-writing"
+        ],
+        "host_slug": "victoria"
+      },
+      {
         "id": "960eb2c54daf54c8",
         "title": "Vamlet: Dark Prince of Denmark",
         "link": "https://www.wgtn.ac.nz/sam/about/events/vamlet-dark-prince-of-denmark",
@@ -1298,6 +1377,20 @@
             "name": "THEATRE 318 (Te Kāhui: Company) and 319 (Scenography in Produ",
             "bio": "ction)"
           }
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "9c3b2c04d77a480f",
+        "title": "Shaping Aotearoa New Zealand—The revolutionaries who reworked a national and its nulture",
+        "link": "https://www.wgtn.ac.nz/stout-centre/about/events/shaping-aotearoa-new-zealand-the-revolutionaries-who-reworked-a-national-and-its-culture",
+        "time_start": "2026-05-27T16:10:00+12:00",
+        "summary": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesColin James The Stout Centre’s seminar series highlighting recent books concludes with Colin James’ Shaping...",
+        "description": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesColin James The Stout Centre’s seminar series highlighting recent books concludes with Colin James’ Shaping...",
+        "free": false,
+        "location": "Wellington",
+        "tags": [
+          "literature-writing"
         ],
         "host_slug": "victoria"
       },

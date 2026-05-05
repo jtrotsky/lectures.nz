@@ -56,6 +56,9 @@
   "https://www.aucklandmuseum.com/visit/whats-on/Archaeology-Week-2026": {
     "description": "Join us this Archaeology Week for a family-friendly event offering a unique opportunity to become an archaeologist for the day! Explore the fascinating world of uncovering history."
   },
+  "https://www.aucklandmuseum.com/visit/whats-on/Nga-Kakano-Kapaki-To-Embrace": {
+    "description": "Join us for Kạp‘ạki - To Embrace: In conversation with Rotuman artists Sofia Tekela-Smith and Maluseu Monise to celebrate Rotuman Language Week."
+  },
   "https://www.aucklandmuseum.com/visit/whats-on/maori/Te-Reo-o-Te-Ao-Tawhito": {
     "description": "Join us at Tāmaki Paenga Hira Auckland War Memorial Museum for an evening hearing the journey of the pauku, its history, care and the important mātauranga surrounding this prestigious cloak."
   },
@@ -326,6 +329,9 @@
       }
     ]
   },
+  "https://www.wgtn.ac.nz/sacs/about/events/familiarity-amidst-flux-the-navigation-of-well-being-in-spiti-valley-india": {
+    "description": "Hirdey Rampal - PhD candidate in Cultural Anthropology at Te Herenga Waka – Victoria University of WellingtonHow do people sustain well-being when the..."
+  },
   "https://www.wgtn.ac.nz/sacs/about/events/io-as-the-soul-of-things-maori-io-traditions-beyond-the-supreme-god-debate": {
     "description": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa) - Senior Lecturer in Religion/Mātai Whairuataka - University of Otago/Ōtākou Whakaihu WakaFew debates in the study of..."
   },
@@ -347,7 +353,16 @@
   "https://www.wgtn.ac.nz/stout-centre/about/events/merata-mita-decolonising-the-screen": {
     "description": "Between the Lines—Recent Books in New Zealand Studies Seminar SeriesPresenter—Leah Vonderheide The Stout Centre’s seminar series continues with the forthcoming book on the..."
   },
+  "https://www.wgtn.ac.nz/stout-centre/about/events/mr-wards-map-victorian-wellington-street-by-street": {
+    "description": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesElizabeth Cox The Stout Centre’s seminar series highlighting recent books continues with Elizabeth Cox’s Mr..."
+  },
+  "https://www.wgtn.ac.nz/stout-centre/about/events/shaping-aotearoa-new-zealand-the-revolutionaries-who-reworked-a-national-and-its-culture": {
+    "description": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesColin James The Stout Centre’s seminar series highlighting recent books concludes with Colin James’ Shaping..."
+  },
   "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond": {
     "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and..."
+  },
+  "https://www.wgtn.ac.nz/strategic-studies/about/events/trump-2.0-and-the-indo-pacific": {
+    "description": "Given the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president, it can be difficult to distinguish between..."
   }
 }
