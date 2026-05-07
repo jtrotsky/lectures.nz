@@ -85,25 +85,19 @@
     "description": "AUT hosts public lectures, symposia, and open events across its Auckland campuses.",
     "lectures": [
       {
-        "id": "6cf49b2e5a77f75c",
-        "title": "AUT Worldwide",
-        "link": "https://www.aut.ac.nz/events/aut-worldwide",
-        "time_start": "2026-05-05T11:30:00+12:00",
-        "summary": "AUT Worldwide is back!!!Mark your calendars – AUT Worldwide is taking over our campuses from 5 to 7 May. With students from nearly 140 countries, AUT is h",
-        "description": "AUT Worldwide is back!!!Mark your calendars \u0026ndash; AUT Worldwide is taking over our campuses from 5 to 7 May. With students from nearly 140 countries, AUT is h",
+        "id": "33001181c2a3a6b3",
+        "title": "AUT Technology in Society",
+        "link": "https://www.aut.ac.nz/events/aut-technology-in-society-trust,-responsibility-and-opportunity-in-the-ai-enabled-world",
+        "time_start": "2026-05-14T17:00:00+12:00",
+        "summary": "Vice-Chancellor Damon Salesa will discuss AI and Data Sovereignty with a panel of industry experts and consider the critical need for trust and ethics",
+        "description": "Vice-Chancellor Damon Salesa will discuss\u0026nbsp;AI and Data Sovereignty\u0026nbsp;with a panel of industry experts and consider the critical need for trust and ethics",
         "free": true,
-        "location": "Auckland",
-        "host_slug": "aut"
-      },
-      {
-        "id": "a38c1adb5dea7997",
-        "title": "NZ Podcasting Summit",
-        "link": "https://www.aut.ac.nz/events/nz-podcasting-summit",
-        "time_start": "2026-05-09T09:00:00+12:00",
-        "summary": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa… as well as the podcast curious. Join us for a full day of co",
-        "description": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa\u0026hellip; as well as the podcast curious. Join us for a full day of co",
-        "free": true,
-        "location": "AUT City Campus, WG Building,, Auckland",
+        "location": "AUT City Campus, WG Building, 201, Auckland",
+        "tags": [
+          "science-technology",
+          "history-society",
+          "philosophy-ideas"
+        ],
         "host_slug": "aut"
       }
     ]
@@ -182,6 +176,18 @@
         "tags": [
           "environment"
         ],
+        "host_slug": "eventbrite",
+        "organiser": "University of Auckland, Business School"
+      },
+      {
+        "id": "aeb312a738e9e76d",
+        "title": "Joint Inventory-Routing Optimization for Battery Swapping Networks",
+        "link": "https://www.eventbrite.co.nz/e/joint-inventory-routing-optimization-for-battery-swapping-networks-tickets-1988796009401",
+        "time_start": "2026-05-19T11:30:00+12:00",
+        "summary": "Abstract The rapid expansion of electric vehicle battery-swapping networks is increasing pressure on urban power grids.",
+        "description": "Abstract The rapid expansion of electric vehicle battery-swapping networks is increasing pressure on urban power grids. We study a hybrid battery swapping-charging system with multiple local swapping stations (SSs) and one central charging station (CS). Depleted batteries are either charged at SSs or transported to the CS for centralized charging and periodic redistribution.",
+        "free": true,
+        "location": "Sir Owen G Glenn Building, Room 321, Level 3,, 12 Grafton Road, Auckland",
         "host_slug": "eventbrite",
         "organiser": "University of Auckland, Business School"
       },
@@ -277,19 +283,6 @@
     "description": "Public lectures and educational events from NZ institutions listed on Humanitix.",
     "lectures": [
       {
-        "id": "172d5b8e75daafd4",
-        "title": "Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation",
-        "link": "https://events.humanitix.com/deloitte-presents-tech-for-good-hackathon-deloitte-aws-and-hynds-foundation-fq5wkslk",
-        "time_start": "2026-05-18T09:30:00+12:00",
-        "time_end": "2026-05-18T14:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Wellington) hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Wellington) hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Monday 18th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
         "id": "acb9de0bf9304fb7",
         "title": "Deloitte Presents: Human × machine lab: Getting human and machine relationships right in HR and workforce decisions",
         "link": "https://events.humanitix.com/deloitte-presents-human-machine-lab-getting-human-and-machine-relationships-right-in-hr-and-workforce-decisions",
@@ -377,19 +370,6 @@
         "organiser": "Deloitte Techweek26"
       },
       {
-        "id": "f71a004f91944e81",
-        "title": "Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation",
-        "link": "https://events.humanitix.com/deloitte-presents-tech-for-good-hackathon-deloitte-aws-and-hynds-foundation-hamilton",
-        "time_start": "2026-05-19T09:30:00+12:00",
-        "time_end": "2026-05-19T14:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Hamilton) hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: Tech for good hackathon: Deloitte, AWS and Hynds Foundation (Hamilton) hosted by Deloitte Techweek26. Deloitte, The Deloitte House 24 Anzac Parade, Claudelands, Hamilton 3216, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte, Hamilton",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
         "id": "93d3306be97bd05b",
         "title": "Deloitte Presents: Your next customer may not be human!",
         "link": "https://events.humanitix.com/deloitte-presents-your-next-customer-may-not-be-human",
@@ -412,6 +392,32 @@
         "description": "Register on Humanitix - Deloitte presents: Vibe coding or tech debt? Building fast without paying later hosted by Deloitte Techweek26. Deloitte Auckland, Level 20/01 Queen Street, Auckland CBD, Auckland 1010, New Zealand. Tuesday 19th May 2026. Find event information.",
         "free": true,
         "location": "Deloitte Auckland, Auckland",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "283045f10f790cd0",
+        "title": "Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand",
+        "link": "https://events.humanitix.com/deloitte-presents-the-future-of-open-insurance-in-aotearoa-new-zealand",
+        "time_start": "2026-05-19T17:00:00+12:00",
+        "time_end": "2026-05-19T19:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "dab41faa544e7e75",
+        "title": "Deloitte presents: We can’t hire our way out of this",
+        "link": "https://events.humanitix.com/deloitte-presents-we-can-t-hire-our-way-out-of-this-demographics-productivity-and-ai-choices-facing-nz",
+        "time_start": "2026-05-20T09:00:00+12:00",
+        "time_end": "2026-05-20T10:30:00+12:00",
+        "summary": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Wednesday 20th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -442,16 +448,6 @@
     "website": "https://www.massey.ac.nz/about/events/",
     "description": "Massey University hosts public lectures, seminars, and events across its Auckland, Palmerston North, and Wellington campuses.",
     "lectures": [
-      {
-        "id": "fdd4532b42c7f1b5",
-        "title": "Information Session: Business Administration – Postgraduate Certificate in Business",
-        "link": "https://www.massey.ac.nz/about/events/business-admin-info-session/",
-        "time_start": "2026-05-06T19:00:00+12:00",
-        "description": "Join our online info session to explore the Business Administration – Postgraduate Certificate in Business and how it is a pathway to an Executive MBA.",
-        "free": false,
-        "location": "Online event",
-        "host_slug": "massey"
-      },
       {
         "id": "200da7812a57519d",
         "title": "Everything but the medicine - A doctor's tale",
@@ -606,22 +602,6 @@
     "description": "The New Zealand Institute of International Affairs hosts public lectures and forums on foreign policy, geopolitics, and international relations across New Zealand.",
     "lectures": [
       {
-        "id": "95282080ccc6256f",
-        "title": "The Fall of Saigon - 50 years on",
-        "link": "https://www.nziia.org.nz/events/the-fall-of-saigon-50-years-on/",
-        "time_start": "2026-05-07T14:00:00+12:00",
-        "summary": "Mr Wilson is a former senior New Zealand diplomat, with a strong career background in Asia. The topic of his talk will be The Fall of Saigon - 50 years On.",
-        "description": "Mr Wilson is a former senior New Zealand diplomat, with a strong career background in Asia. The topic of his talk will be The Fall of Saigon - 50 years On. Frank Wilson witnessed the fall of Saigon in April 1975. He will talk about his own experiences, that of some other New Zealanders there at the time, and what the fall of Saigon meant for New Zealand, and its wider regional and international implications. As usual, our meeting will be held at the Havelock North Club (8 Campbell Street), starting at 2pm, running through until about 3.30pm (including afternoon tea). The standard door charge of $8 will apply, to cover venue and afternoon tea costs. Image by Dragfyre - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=12883660",
-        "free": false,
-        "location": "Havelock North Club, 4 Campbell Street, Havelock North",
-        "speakers": [
-          {
-            "name": "Mr Frank Wilson"
-          }
-        ],
-        "host_slug": "nziia"
-      },
-      {
         "id": "7215d531111a9854",
         "title": "NZIIA AGM and Annual Lecture 2026",
         "link": "https://www.nziia.org.nz/events/nziia-agm-and-annual-lecture-2026/",
@@ -641,12 +621,33 @@
         "host_slug": "nziia"
       },
       {
+        "id": "90ea9f9ec069e662",
+        "title": "Artificial Intelligence and the Future of Government: International Perspectives",
+        "link": "https://www.nziia.org.nz/events/artificial-intelligence-and-the-future-of-government-international-perspectives/",
+        "time_start": "2026-05-20T17:10:00+12:00",
+        "summary": "NZIIA Wellington Branch and the Embassy of Germany is delighted to welcome members and guests to an upcoming event \"Artificial Intelligence and the Future of Government: International Perspectives\".",
+        "description": "NZIIA Wellington Branch and the Embassy of Germany is delighted to welcome members and guests to an upcoming event \"Artificial Intelligence and the Future of Government: International Perspectives\". Artificial intelligence is rapidly reshaping how governments operate, raising profound questions about efficiency, accountability, and the future of public decision-making. As states explore the use of AI in areas such as taxation, regulatory approvals, and public administration, the implications extend far beyond technology—touching on fundamental principles of the rule of law, transparency, and democratic legitimacy. In this short keynote, Prof. Dr. Martin Kment (University of Augsburg, Germany) will discuss artificial intelligence and examine its emerging role in government decision-making processes. Drawing on international developments, particularly in Europe, he will explore where and how AI is already being applied in the public sector and what this means for legal and administrative systems. His address will also engage with deeper normative and legal-philosophical questions, including whether—and to what extent—we should permit AI to make decisions traditionally reserved for human authorities, from administrative rulings to matters of justice. Following the keynote Prof Kment will join a panel with Paula Riano AI Strategy Advisor at Five New Zealand Consultancy, Auckland and Pedro Ramirez, Digital Strategy Practitioner – AI Work Programme, Department of Internal Affairs. At the conclusion of the Panel and a short Q\u0026A there will be a networking reception kindly sponsored by the Embassy of the Federal Republic of Germany. TERMS AND CONDITIONS Registrations are required to attend this event as there is limited capacity. No walk ups allowed. If in person tickets are exhausted please register to attend online. One ticket per person. Each ticket must contain your full first name and surname (that matches your ID), email address and phone number. If, after registering, you are unable to attend please have the courtesy to cancel your ticket via Humantitix to enable others on the waiting list to attend. In keeping with NZIIA practice, unauthorised recording of this event (either audio or video) is not permitted. Members and guests are reminded to adhere to the NZIIA Code of Conduct. For any queries please email: info@nziiawellington.org.nz BIOGRAPHIES OF OUR SPEAKERS Prof. Dr. Martin Kment, LL.M. (Cambridge) Martin Kment is Managing Director of the Institute for Environmental Law at the University of Augsburg, and holds the Chair of Public Law, European Law, Environmental Law, and Planning Law. He founded the German Environmental and Infrastructure Law Conference, serves on the board of the German Society for Environmental Law, and is a member of the Scientific Advisory Board of the German Academy for Spatial Development. His research interests are wide-ranging, spanning environmental and infrastructure law, as well as energy law and artificial intelligence (AI) law. Martin Kment has published extensively across all of these core research areas. In the AI field, his most prominent work is his 2022 monograph Artificial Intelligence and Algorithms in the Application of Law. Currently, Martin Kment holds an appointment as Visitor in Residence at Victoria University of Wellington’s Faculty of Law, where he is conducting research on the Rights of Nature. Paula Riano, AI Strategy Advisor at Five NZ Consultancy Paula Riano is an AI Strategy Advisor with over 20 years of experience helping organisations move beyond the pilot stage and realise the full value of artificial intelligence. With a background in electronics engineering and a career spanning agile transformation, AI programme delivery, and organisational change, she brings both technical depth and human-centred expertise to the challenge of sustainable AI adoption. Most recently, Paula co-designed AI Compass, a strategic platform helping New Zealand organisations baseline their AI maturity and build a clear roadmap from proof of concept to production scale. Paula has led AI change programmes and engineering project delivery for some of New Zealand's and the world's leading organisations. Her particular strength lies in enabling people to own their AI journey, translating complex technical concepts into clear business language and building the organisational capability needed for AI to take root and scale. As AI Strategy Advisor at Five NZ, Paula works with organisations across industries to assess AI maturity, align executive teams, and build measurable paths from strategy to scale. Pedro Ramirez (Biography to be updated soon) Digital Strategy Practitioner – AI Work Programme, Department of Internal Affairs",
+        "free": false,
+        "location": "RHLT2, Rutherford House, Pipitea Campus, Victoria University of Wellington or via Zoom",
+        "speakers": [
+          {
+            "name": "Prof. Dr. Martin Kment, LL.M. (Cambridge), Managing Director,  Institute for Environmental Law, University of Augsburg"
+          }
+        ],
+        "tags": [
+          "arts-culture",
+          "science-technology",
+          "politics-policy"
+        ],
+        "host_slug": "nziia"
+      },
+      {
         "id": "af83032b7b0af944",
         "title": "An address by Anna Fifield",
         "link": "https://www.nziia.org.nz/events/an-address-by-anna-fifield-2/",
         "time_start": "2026-05-21T14:00:00+12:00",
         "summary": "Our speaker will be Anna Fifield , former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington.",
-        "description": "Our speaker will be Anna Fifield , former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington. Anna was a foreign correspondent for international newspapers for 20 years, writing for the Financial Times and the Washington Post on postings in Seoul, Tehran, Beirut, Washington DC, Tokyo and, most recently, Beijing. She was a Nieman journalism fellow at Harvard University in 2013-14 and was awarded Stanford University's Shorenstein Prize in 2018 for her reporting on Asia. Her highly acclaimed book \"The Great Successor: The Secret Rise and Rule of Kim Jong-Un\" has been translated into 24 languages. The usual door charge of $8 will apply, to cover venue hire and afternoon tea costs",
+        "description": "Our speaker will be Anna Fifield , former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington. Anna was a foreign correspondent for international newspapers for 20 years, writing for the Financial Times and the Washington Post on postings in Seoul, Tehran, Beirut, Washington DC, Tokyo and, most recently, Beijing. She was a Nieman journalism fellow at Harvard University in 2013-14 and was awarded Stanford University's Shorenstein Journalism Award in 2018 for her reporting on Asia. Her highly acclaimed book \"The Great Successor: The Secret Rise and Rule of Kim Jong-Un\" has been translated into 24 languages. The usual door charge of $8 will apply, to cover venue hire and afternoon tea costs",
         "free": false,
         "location": "Havelock North Club, 8 Campbell Street, Havelock North",
         "speakers": [
@@ -662,7 +663,7 @@
         "link": "https://www.nziia.org.nz/events/address-by-mike-seawright/",
         "time_start": "2026-06-04T14:00:00+12:00",
         "summary": "Since leaving the corporate world behind over two decades ago, Mike has been delivering humanitarian assistance to families living in the world’s conflict zones.",
-        "description": "Since leaving the corporate world behind over two decades ago, Mike has been delivering humanitarian assistance to families living in the world’s conflict zones. He has provided medical aid in Iraq, Yemen, Sudan, South Sudan and Pakistan, economic development and energy projects in Afghanistan and most recently emergency humanitarian aid, leading multiple interventions in Syria, Afghanistan and Ukraine. Frustrated that not enough was being done to help families affected by war and conflict Mike founded ReliefAid. With a simple vision of helping families who had no one else to turn to, ReliefAid has delivered life-saving aid to over 1.6 million people in war-torn Gaza, Syria, Lebanon Afghanistan, and Ukraine, and they are not stopping there. While his work surrounds him in war and conflict Mike counts himself lucky to bear witness to what he calls “the very best of humanity”. When not travelling to oversee ReliefAid’s international interventions he lives in Auckland with his family. The usual door charge of $8 will apply, to cover venue hire and afternoon tea costs",
+        "description": "Since leaving the corporate world behind over two decades ago, Mike has been delivering humanitarian assistance to families living in the world’s conflict zones. He has provided medical aid in Iraq, Yemen, Sudan, South Sudan and Pakistan, economic development and energy projects in Afghanistan and most recently emergency humanitarian aid, leading multiple interventions in Syria, Afghanistan and Ukraine. Frustrated that not enough was being done to help families affected by war and conflict Mike founded ReliefAid. With a simple vision of helping families who had no one else to turn to, ReliefAid has delivered life-saving aid to over 1.6 million people in war-torn Gaza, Syria, Lebanon, Afghanistan and Ukraine, and they are not stopping there. While his work surrounds him in war and conflict, Mike counts himself lucky to bear witness to what he calls “the very best of humanity”. When not travelling to oversee ReliefAid’s international interventions he lives in Auckland with his family. The usual door charge of $8 will apply, to cover venue hire and afternoon tea costs",
         "free": false,
         "location": "Havelock North Club, 8 Campbell Street, Havelock North",
         "speakers": [
@@ -693,29 +694,17 @@
     "description": "Objectspace is an Auckland gallery dedicated to design and craft. It hosts the Ockham Lecture series, book launches, artist talks, and public workshops.",
     "lectures": [
       {
-        "id": "458a181125ff16de",
-        "title": "Book Launch: Oceanic Architectural Routes: The Work of Mike Austin",
-        "link": "https://www.eventbrite.co.nz/e/book-launch-oceanic-architectural-routes-the-work-of-mike-austin-tickets-1987660010598?aff=oddtdtcreator\u0026amp;keep_tld=true",
-        "time_start": "2026-05-06T18:00:00+12:00",
-        "summary": "After three years in the making, we welcome you to the book launch for Oceanic Architectural Routes: The Work of Mike Austin .",
-        "description": "After three years in the making, we welcome you to the book launch for Oceanic Architectural Routes: The Work of Mike Austin .\n\nJoin us to raise a glass to Mike and his significant contribution to research and understandings around Oceanic and Pacific architecture, and to architecture education in Aotearoa.\n\nWe'll hear from Albert L. Refiti, Icao Tiseli and Mike, set against music from SANGUINE, which UTR describes as 'stone cold funk elevated by Pacific soul dreaminess...'\n\nFind out more about the book and pre-order your copy here .\n\nJumping off from Objectspace's 2022 exhibition Oceanic Architectural Routes and the digitisation of Mike Austin’s photographic archive, this book brings together contributions from Austin’s former students and colleagues Rau Hoskins, Albert L. Refiti, Sarah Treadwell, Lynda Simmons, and Icao Tiseli.\n\nIt is edited by Albert L. Refiti, Victoria McAdam and Emily Parr, and is published in partnership between Objectspace and the AUT Vā Moana Research Centre.\n\nThe Oceanic Architectural Routes book is designed by Shaun Naufahu and illustrated with photographs taken by Austin during his extensive travels around the Oceanic region (which were primary source materials for his popular courses at the University of Auckland School of Architecture and will be familiar to many) alongside exhibition documentation and sourced imagery.\n\nIt has been produced with the generous support of Noel Lane Architects, The Warren Trust, and a 2024 Contestable Fund Grant from Copyright Licensing New Zealand.",
-        "free": false,
-        "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
-        "tags": [
-          "environment",
-          "literature-writing"
-        ],
-        "host_slug": "objectspace"
-      },
-      {
         "id": "7ee117204ef80cbf",
         "title": "Love is an action: A zine-making workshop with Kerry Ann Lee and Moira Clunie",
         "link": "https://www.eventbrite.co.nz/e/love-is-an-action-zine-making-workshop-with-kerry-ann-lee-and-moira-clunie-tickets-1988049878704?aff=oddtdtcreator",
         "time_start": "2026-05-10T13:00:00+12:00",
-        "summary": "What does it mean to be in good relationship with one another?",
-        "description": "What does it mean to be in good relationship with one another?\n\nJoin us for a special zine-making workshop exploring whakapapa, whanaungatanga, kinship, histories, mysteries, futures, friendships and affinities.\n\nLed by Kerry Ann Lee and Moira Clunie, the session will explore the potential of playing with type, text, symbols and images, and the role of zines in community building, as keepsakes and love letters to the world.\n\nThrough DIY graphic design, collage, zine-making, and letterpress printing, participants will come together to craft graphic gestures of love, hate, solidarity, care and support in print.\n\nGet your $15 tickets here. All equipment and materials will be provided, as well as tea, snacks and coffee. Mothers and significant others welcome!\n\nKerry Ann Lee is a visual artist, designer and researcher whose interdisciplinary practice spans art, design and publishing. Her work explores cultural identity, diaspora and heritage, drawing on Chinese New Zealand histories and global perspectives. Her creative collaborations have included projects with the Smithsonian Asian Pacific American Center, residencies at the School of Visual Arts NYC, SOMA México, Taipei Artist Village, Santa Fe Art Institute and Yellow Brick Athens, presentations at Booked: Hong Kong Art Book Fair and Sprint Milano, and exhibitions at the Beijing International Art Biennale, Shanghai Art Museum and Te Papa Tongarewa Museum of New Zealand. As Associate Professor in Design, she teaches Illustration, Visual Communication Design and Critical and Contextual Studies across various undergraduate and postgraduate programmes at Toi Rauwhārangi, College of Creative Arts at Te Kunenga ki Pūrehuroa Massey University.\n\nMoira Clunie is a zinester, letterpress printer and social change practitioner based in Tāmaki Makaurau Auckland. Lately they’ve been printing propaganda about trans rights and Tiriti justice, and reflecting on 27 years of making zines. Their day job focuses on building connection and safety for rainbow/LGBTI+ people across Aotearoa.\n\nKerry Ann and Moira are old pals. Moira founded Moon Rocket (2000) and Kerry Ann, Red Letter Distro (2001). They last collaborated 20 years ago – on the first zinefest that Moira and friends organised called Small Print.",
+        "summary": "This workshop is now full booked, to be added to the waitlist please email info@objectspace.org.nz.\n\nWhat does it mean to be in good relationship with one another?",
+        "description": "This workshop is now full booked, to be added to the waitlist please email info@objectspace.org.nz.\n\nWhat does it mean to be in good relationship with one another?\n\nJoin us for a special zine-making workshop exploring whakapapa, whanaungatanga, kinship, histories, mysteries, futures, friendships and affinities.\n\nLed by Kerry Ann Lee and Moira Clunie, the session will explore the potential of playing with type, text, symbols and images, and the role of zines in community building, as keepsakes and love letters to the world.\n\nThrough DIY graphic design, collage, zine-making, and letterpress printing, participants will come together to craft graphic gestures of love, hate, solidarity, care and support in print.\n\nGet your $15 tickets here. All equipment and materials will be provided, as well as tea, snacks and coffee. Mothers and significant others welcome!\n\nKerry Ann Lee is a visual artist, designer and researcher whose interdisciplinary practice spans art, design and publishing. Her work explores cultural identity, diaspora and heritage, drawing on Chinese New Zealand histories and global perspectives. Her creative collaborations have included projects with the Smithsonian Asian Pacific American Center, residencies at the School of Visual Arts NYC, SOMA México, Taipei Artist Village, Santa Fe Art Institute and Yellow Brick Athens, presentations at Booked: Hong Kong Art Book Fair and Sprint Milano, and exhibitions at the Beijing International Art Biennale, Shanghai Art Museum and Te Papa Tongarewa Museum of New Zealand. As Associate Professor in Design, she teaches Illustration, Visual Communication Design and Critical and Contextual Studies across various undergraduate and postgraduate programmes at Toi Rauwhārangi, College of Creative Arts at Te Kunenga ki Pūrehuroa Massey University.\n\nMoira Clunie is a zinester, letterpress printer and social change practitioner based in Tāmaki Makaurau Auckland. Lately they’ve been printing propaganda about trans rights and Tiriti justice, and reflecting on 27 years of making zines. Their day job focuses on building connection and safety for rainbow/LGBTI+ people across Aotearoa.\n\nKerry Ann and Moira are old pals. Moira founded Moon Rocket (2000) and Kerry Ann, Red Letter Distro (2001). They last collaborated 20 years ago – on the first zinefest that Moira and friends organised called Small Print.",
         "free": false,
         "location": "Level one, Objectspace, 13 Rose Road, Ponsonby",
+        "tags": [
+          "literature-writing"
+        ],
         "host_slug": "objectspace"
       },
       {
@@ -723,12 +712,13 @@
         "title": "Movement and music in Endgrained: Xin Ji and Alistair Deverick",
         "link": "https://www.eventbrite.co.nz/e/movement-and-music-in-endgrained-xin-ji-and-alistair-deverick-tickets-1988045572825?aff=oddtdtcreator",
         "time_start": "2026-05-20T18:00:00+12:00",
-        "summary": "Join us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.",
-        "description": "Join us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.\n\nAround Gamper’s furniture, Xin and Alistair will stage a live performance bringing together movement, sound and real-time composition.\n\nDrawing on ideas from Xin’s solo work Body Story , the performance moves between dance and live music, letting meaning emerge through presence, texture, and exchange. Built through a long creative relationship, the work is shaped by physicality, rhythm, improvisation, and close attention to what is unfolding in the room.\n\nJoin us to watch it unfold with a drink in hand.\n\nXin Ji is a dance artist, choreographer, and educator based in Tāmaki Makaurau Auckland. Trained in Chinese classical ballet at the Beijing Dance Academy, he began his professional career in Japan with Shiki Theatre Company before moving to Aotearoa to study contemporary dance at Unitec. He has performed with leading contemporary companies in Aotearoa, including Footnote and the New Zealand Dance Company, and currently lectures in dance at Unitec. His practice spans performance and choreography across stage and screen, with a strong focus on physicality, presence, and storytelling.\n\nAlistair Deverick is a musician and sound designer of Scottish and Welsh ancestry based in Tāmaki Makaurau Auckland. He is known for his innovative approach to rhythm and texture. As a versatile drummer and producer, he has performed with acts like The Ruby Suns and Neil Finn and has created solo work under the moniker Boycrush, blending electronic, pop, and experimental sounds. His work spans live performance, studio production, and sound design, showcasing a dynamic range of musical influences.\n\nOver many years of working together, Xin Ji and Alistair Deverick have developed a close creative relationship grounded in listening, responsiveness, and a shared feel for atmosphere. Their collaboration brings together movement and sound in ways that feel physical and immediate.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
+        "summary": "This event is now fully booked, to be added to the waitlist please email /* =0;i-=2){r+=e.charAt(i);}return r;}('\\u003ejaD/2\\u003cnzWnn.8gSr6o\\'.",
+        "description": "This event is now fully booked, to be added to the waitlist please email /* =0;i-=2){r+=e.charAt(i);}return r;}('\\u003ejaD/2\\u003cnzWnn.8gSr6o\\'.uevcSagpusYticzedj8bnoE@ToufHngiz\\u003e2\\\"jrye3n\\\"e1pboUo5nv\\\"Y=olTeFry t\\\"okpnxa4lrbj_w\\\"A=ctveHg\\u003eraaftV 8\\\"SzYnj.5gPr0om.De6cRaApXs0trcweujtb\\u003coT@roafKn8id:BomtylgiIaWm9\\\"2=Tfce@rWhs Yav\\u003cV'); document.getElementById('x-protectfilter-1').removeAttribute('id'); }/*]]\u003e*/ .\n\nJoin us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.\n\nAround Gamper’s furniture, Xin and Alistair will stage a live performance bringing together movement, sound and real-time composition.\n\nDrawing on ideas from Xin’s solo work Body Story , the performance moves between dance and live music, letting meaning emerge through presence, texture, and exchange. Built through a long creative relationship, the work is shaped by physicality, rhythm, improvisation, and close attention to what is unfolding in the room.\n\nJoin us to watch it unfold with a drink in hand.\n\nXin Ji is a dance artist, choreographer, and educator based in Tāmaki Makaurau Auckland. Trained in Chinese classical ballet at the Beijing Dance Academy, he began his professional career in Japan with Shiki Theatre Company before moving to Aotearoa to study contemporary dance at Unitec. He has performed with leading contemporary companies in Aotearoa, including Footnote and the New Zealand Dance Company, and currently lectures in dance at Unitec. His practice spans performance and choreography across stage and screen, with a strong focus on physicality, presence, and storytelling.\n\nAlistair Deverick is a musician and sound designer of Scottish and Welsh ancestry based in Tāmaki Makaurau Auckland. He is known for his innovative approach to rhythm and texture. As a versatile drummer and producer, he has performed with acts like The Ruby Suns and Neil Finn and has created solo work under the moniker Boycrush, blending electronic, pop, and experimental sounds. His work spans live performance, studio production, and sound design, showcasing a dynamic range of musical influences.\n\nOver many years of working together, Xin Ji and Alistair Deverick have developed a close creative relationship grounded in listening, responsiveness, and a shared feel for atmosphere. Their collaboration brings together movement and sound in ways that feel physical and immediate.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
         "free": false,
         "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
         "tags": [
-          "arts-culture"
+          "arts-culture",
+          "literature-writing"
         ],
         "host_slug": "objectspace"
       }
@@ -868,6 +858,25 @@
         "host_slug": "studio-one"
       },
       {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -884,25 +893,6 @@
         "tags": [
           "arts-culture",
           "history-society"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -972,20 +962,6 @@
     "description": "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
     "lectures": [
       {
-        "id": "0625a85ce3dcc2fd",
-        "title": "Curator talk – Standing tall: a century of the Clock Tower",
-        "link": "https://www.eventbrite.co.nz/e/curator-talk-standing-tall-a-century-of-the-clock-tower-tickets-1983326863037",
-        "time_start": "2026-05-07T10:30:00+12:00",
-        "summary": "Come join us for a captivating journey through time as we uncover the secrets behind the iconic Clock Tower in this curator talk!",
-        "description": "Come join us for a captivating journey through time as we uncover the secrets behind the iconic Clock Tower in this curator talk!",
-        "free": true,
-        "location": "University of Auckland General Library, 5 Alfred Street, Auckland",
-        "tags": [
-          "arts-culture"
-        ],
-        "host_slug": "auckland"
-      },
-      {
         "id": "95802a3f9566c770",
         "title": "2026 Alice Griffin Shakespeare Lecture",
         "link": "https://www.eventbrite.co.nz/e/2026-alice-griffin-shakespeare-lecture-tickets-1985879327527",
@@ -994,6 +970,34 @@
         "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
         "free": true,
         "location": "B401-401, 20 Symonds Street, Auckland",
+        "host_slug": "auckland"
+      },
+      {
+        "id": "6f8154369b41962d",
+        "title": "Speech-language therapists can talk you into anything",
+        "link": "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659",
+        "time_start": "2026-05-14T17:00:00+12:00",
+        "summary": "Professor Clare McCann's Inaugural Lecture",
+        "description": "Professor Clare McCann's Inaugural Lecture",
+        "free": true,
+        "location": "FMHS Lecture Theatre, 505-007, Level 0, Grafton Campus, 85 Park Road, Auckland",
+        "tags": [
+          "literature-writing"
+        ],
+        "host_slug": "auckland"
+      },
+      {
+        "id": "ff3963329dd882d8",
+        "title": "Governance in the Fourth Dimension",
+        "link": "https://www.eventbrite.co.nz/e/governance-in-the-fourth-dimension-tickets-1988893292377",
+        "time_start": "2026-05-20T17:30:00+12:00",
+        "summary": "Public Lecture: Professor Andrew A. Schwartz (University of Colorado)",
+        "description": "Public Lecture: Professor Andrew A. Schwartz (University of Colorado)",
+        "free": true,
+        "location": "Stone Lecture Theatre (801-316), Auckland Law School, Auckland",
+        "tags": [
+          "arts-culture"
+        ],
         "host_slug": "auckland"
       }
     ]
@@ -1008,7 +1012,7 @@
         "id": "e2788c45a4a1bec8",
         "title": "Building Back Better: 15 Years of Earthquake Engineering Lessons from Christchurch",
         "link": "https://www.canterbury.ac.nz/news-and-events/events",
-        "time_start": "2026-05-07T18:00:00+12:00",
+        "time_start": "2026-05-10T18:00:00+12:00",
         "summary": "Fifteen years after the 2011 Canterbury earthquakes, UC engineers reflect on what they learned, what changed in global building codes, and what still needs to happen.",
         "description": "From seminars and lectures to arts and sporting events there are lots of interesting events happening at UC all the time! See what's on or search for an event.",
         "free": true,
@@ -1029,7 +1033,7 @@
         "id": "86b784eecf036925",
         "title": "New Zealand's Space Future: From Rocket Lab to National Strategy",
         "link": "https://www.canterbury.ac.nz/news-and-events/events",
-        "time_start": "2026-05-13T17:30:00+12:00",
+        "time_start": "2026-05-16T17:30:00+12:00",
         "summary": "An exploration of New Zealand's rapidly growing space sector, the science enabled by domestic launch capability, and the policy frameworks governing our use of space.",
         "description": "From seminars and lectures to arts and sporting events there are lots of interesting events happening at UC all the time! See what's on or search for an event.",
         "free": true,
@@ -1044,7 +1048,7 @@
         "id": "e885f0a7f721ce37",
         "title": "Canterbury Water: Ecology, Irrigation, and the Future of Our Freshwater",
         "link": "https://www.canterbury.ac.nz/news-and-events/events",
-        "time_start": "2026-05-18T12:30:00+12:00",
+        "time_start": "2026-05-21T12:30:00+12:00",
         "summary": "Researchers and community voices discuss the competing demands on Canterbury's freshwater resources and what a sustainable future looks like for the region.",
         "description": "From seminars and lectures to arts and sporting events there are lots of interesting events happening at UC all the time! See what's on or search for an event.",
         "free": true,
@@ -1068,7 +1072,7 @@
         "id": "a0102426b2daac5e",
         "title": "Distinguished Lecture: The Brain in Pain — New Frontiers in Chronic Pain Research",
         "link": "https://www.otago.ac.nz/news/events",
-        "time_start": "2026-05-11T17:00:00+12:00",
+        "time_start": "2026-05-14T17:00:00+12:00",
         "summary": "The annual Otago Distinguished Lecture in Medicine explores breakthrough research into the neuroscience of chronic pain and emerging treatments.",
         "description": "#info-icon .st0{clip-path:url(#SVGID_00000117666420502436894470000000235553220004666525_);fill:#060D87;} #info-icon .st1{fill:#FFFFFF;} #nocircle-cross-red .st0{fill:#CE0407;} Red X icon #nocircle-tick-green .st0{fill:#86B239;} Green tick icon #nocircle-tick-yellow .cls-1{fill:#f9c000;} Yellow tick icon #tohu-white .st0{fill:#FFFFFF;} .st0{clip-path:url(#SVGID_00000100362243231890994470000006939516260031287192_);fill:#00508F;} .st1{fill:#FFFFFF;} Skip to main content --\u003e Current students Staff Alumni Library Contact --\u003e --\u003e Home Clear search Toggle search --\u003e --\u003e --\u003e Open search Close search Toggle hamburger menu --\u003e --\u003e --\u003e Open menu Close menu Toggle submenu Ngā tauira o āpōpō Future Students Return to previous menu Ngā tauira o āpōpō Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Toggle submenu Ako Ōtākou Learning and Teaching Return to previous menu Ako Ōtākou Learning and Teaching Toggle submenu Learning and teaching Return to previous menu Learning and teaching Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Toggle submenu Information for future students Return to previous menu Information for future students Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Toggle submenu Postgraduate study Return to previous menu Postgraduate study Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Toggle submenu Information for current students Return to previous menu Information for current students Exams Graduation Student Learning Development Textbooks Timetables Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic key dates Course Advice Services and support Toggle submenu Rangahau Research Return to previous menu Rangahau Research Toggle submenu Research Return to previous menu Research Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections Toggle submenu For researchers Return to previous menu For researchers For researchers Applying for research funding Funding opportunities Toggle submenu For postgraduate students Return to previous menu For postgraduate students For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Toggle submenu Departments and schools Return to previous menu Departments and schools Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research Toggle submenu Are you looking for... Return to previous menu Are you looking for... Research Expertise For students Research Awards Toggle submenu Māori ki Ōtākou Māori at Otago Return to previous menu Māori ki Ōtākou Māori at Otago Toggle submenu Māori at Otago Return to previous menu Māori at Otago Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Toggle submenu Māori student support services Return to previous menu Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori Toggle submenu Are you looking for... Return to previous menu Are you looking for... Student Accommodation Scholarships Subjects and Papers Toggle submenu Pacific ki Ōtākou Pacific at Otago Return to previous menu Pacific ki Ōtākou Pacific at Otago Toggle submenu Pacific at Otago Return to previous menu Pacific at Otago Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us Toggle submenu For current students Return to previous menu For current students For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Toggle submenu Te Whirika International Return to previous menu Te Whirika International Toggle submenu International at Otago Return to previous menu International at Otago International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Toggle submenu Future international students Return to previous menu Future international students Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Toggle submenu Current international students Return to previous menu Current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students Toggle submenu Are you looking for... Return to previous menu Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Toggle submenu Mō Ōtākou About Otago Return to previous menu Mō Ōtākou About Otago Toggle submenu About Otago Return to previous menu About Otago About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Toggle submenu Administration Return to previous menu Administration Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Toggle submenu Departments and Schools Return to previous menu Departments and Schools Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Toggle submenu Careers at Otago Return to previous menu Careers at Otago Careers at Otago Working at Otago Living in NZ Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington --\u003e Current students Staff Alumni Library Contact --\u003e Ngā tauira o āpōpō Future Students --\u003e Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days --\u003e Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Ako Ōtākou Learning and Teaching --\u003e Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Information for current students Exams Graduation Student Learning Development Textbooks Timetables --\u003e Are you looking for... Academic key dates Course Advice Services and support Rangahau Research --\u003e Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections For researchers Applying for research funding Funding opportunities For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research --\u003e Are you looking for... Research Expertise For students Research Awards Māori ki Ōtākou Māori at Otago --\u003e Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori --\u003e Are you looking for... Student Accommodation Scholarships Subjects and Papers Pacific ki Ōtākou Pacific at Otago --\u003e Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association --\u003e Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Te Whirika International --\u003e International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students --\u003e Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Mō Ōtākou About Otago --\u003e About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Careers at Otago Working at Otago Living in NZ --\u003e Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington function appendBreadcrumbs(breadcrumbListClass = 'ol.breadcrumb__list'){ const breadcrumbsList = document.querySelector(breadcrumbListClass); if(breadcrumbsList){ var breadcrumbListInnerHTML = breadcrumbsList.innerHTML; breadcrumbsList.innerHTML = breadcrumbListInnerHTML + ' News and events",
         "free": true,
@@ -1089,7 +1093,7 @@
         "id": "e48ddbbc834dc652",
         "title": "Secrets of the Southern Ocean: Otago's Deep-Sea Research Programme",
         "link": "https://www.otago.ac.nz/news/events",
-        "time_start": "2026-05-16T18:30:00+12:00",
+        "time_start": "2026-05-19T18:30:00+12:00",
         "summary": "Marine scientists share discoveries from recent voyages to the Southern Ocean, including new species, ecosystem dynamics, and implications for fisheries management.",
         "description": "#info-icon .st0{clip-path:url(#SVGID_00000117666420502436894470000000235553220004666525_);fill:#060D87;} #info-icon .st1{fill:#FFFFFF;} #nocircle-cross-red .st0{fill:#CE0407;} Red X icon #nocircle-tick-green .st0{fill:#86B239;} Green tick icon #nocircle-tick-yellow .cls-1{fill:#f9c000;} Yellow tick icon #tohu-white .st0{fill:#FFFFFF;} .st0{clip-path:url(#SVGID_00000100362243231890994470000006939516260031287192_);fill:#00508F;} .st1{fill:#FFFFFF;} Skip to main content --\u003e Current students Staff Alumni Library Contact --\u003e --\u003e Home Clear search Toggle search --\u003e --\u003e --\u003e Open search Close search Toggle hamburger menu --\u003e --\u003e --\u003e Open menu Close menu Toggle submenu Ngā tauira o āpōpō Future Students Return to previous menu Ngā tauira o āpōpō Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Toggle submenu Ako Ōtākou Learning and Teaching Return to previous menu Ako Ōtākou Learning and Teaching Toggle submenu Learning and teaching Return to previous menu Learning and teaching Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Toggle submenu Information for future students Return to previous menu Information for future students Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Toggle submenu Postgraduate study Return to previous menu Postgraduate study Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Toggle submenu Information for current students Return to previous menu Information for current students Exams Graduation Student Learning Development Textbooks Timetables Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic key dates Course Advice Services and support Toggle submenu Rangahau Research Return to previous menu Rangahau Research Toggle submenu Research Return to previous menu Research Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections Toggle submenu For researchers Return to previous menu For researchers For researchers Applying for research funding Funding opportunities Toggle submenu For postgraduate students Return to previous menu For postgraduate students For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Toggle submenu Departments and schools Return to previous menu Departments and schools Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research Toggle submenu Are you looking for... Return to previous menu Are you looking for... Research Expertise For students Research Awards Toggle submenu Māori ki Ōtākou Māori at Otago Return to previous menu Māori ki Ōtākou Māori at Otago Toggle submenu Māori at Otago Return to previous menu Māori at Otago Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Toggle submenu Māori student support services Return to previous menu Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori Toggle submenu Are you looking for... Return to previous menu Are you looking for... Student Accommodation Scholarships Subjects and Papers Toggle submenu Pacific ki Ōtākou Pacific at Otago Return to previous menu Pacific ki Ōtākou Pacific at Otago Toggle submenu Pacific at Otago Return to previous menu Pacific at Otago Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us Toggle submenu For current students Return to previous menu For current students For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Toggle submenu Te Whirika International Return to previous menu Te Whirika International Toggle submenu International at Otago Return to previous menu International at Otago International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Toggle submenu Future international students Return to previous menu Future international students Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Toggle submenu Current international students Return to previous menu Current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students Toggle submenu Are you looking for... Return to previous menu Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Toggle submenu Mō Ōtākou About Otago Return to previous menu Mō Ōtākou About Otago Toggle submenu About Otago Return to previous menu About Otago About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Toggle submenu Administration Return to previous menu Administration Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Toggle submenu Departments and Schools Return to previous menu Departments and Schools Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Toggle submenu Careers at Otago Return to previous menu Careers at Otago Careers at Otago Working at Otago Living in NZ Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington --\u003e Current students Staff Alumni Library Contact --\u003e Ngā tauira o āpōpō Future Students --\u003e Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days --\u003e Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Ako Ōtākou Learning and Teaching --\u003e Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Information for current students Exams Graduation Student Learning Development Textbooks Timetables --\u003e Are you looking for... Academic key dates Course Advice Services and support Rangahau Research --\u003e Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections For researchers Applying for research funding Funding opportunities For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research --\u003e Are you looking for... Research Expertise For students Research Awards Māori ki Ōtākou Māori at Otago --\u003e Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori --\u003e Are you looking for... Student Accommodation Scholarships Subjects and Papers Pacific ki Ōtākou Pacific at Otago --\u003e Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association --\u003e Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Te Whirika International --\u003e International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students --\u003e Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Mō Ōtākou About Otago --\u003e About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Careers at Otago Working at Otago Living in NZ --\u003e Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington function appendBreadcrumbs(breadcrumbListClass = 'ol.breadcrumb__list'){ const breadcrumbsList = document.querySelector(breadcrumbListClass); if(breadcrumbsList){ var breadcrumbListInnerHTML = breadcrumbsList.innerHTML; breadcrumbsList.innerHTML = breadcrumbListInnerHTML + ' News and events",
         "free": true,
@@ -1104,7 +1108,7 @@
         "id": "22b6c643fdffc426",
         "title": "Equity in Health: Progress and Challenges for Māori Wellbeing",
         "link": "https://www.otago.ac.nz/news/events",
-        "time_start": "2026-05-21T17:00:00+12:00",
+        "time_start": "2026-05-24T17:00:00+12:00",
         "summary": "A wānanga-style public discussion on the persistent health inequities facing Māori communities and what genuine system change would require.",
         "description": "#info-icon .st0{clip-path:url(#SVGID_00000117666420502436894470000000235553220004666525_);fill:#060D87;} #info-icon .st1{fill:#FFFFFF;} #nocircle-cross-red .st0{fill:#CE0407;} Red X icon #nocircle-tick-green .st0{fill:#86B239;} Green tick icon #nocircle-tick-yellow .cls-1{fill:#f9c000;} Yellow tick icon #tohu-white .st0{fill:#FFFFFF;} .st0{clip-path:url(#SVGID_00000100362243231890994470000006939516260031287192_);fill:#00508F;} .st1{fill:#FFFFFF;} Skip to main content --\u003e Current students Staff Alumni Library Contact --\u003e --\u003e Home Clear search Toggle search --\u003e --\u003e --\u003e Open search Close search Toggle hamburger menu --\u003e --\u003e --\u003e Open menu Close menu Toggle submenu Ngā tauira o āpōpō Future Students Return to previous menu Ngā tauira o āpōpō Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Toggle submenu Ako Ōtākou Learning and Teaching Return to previous menu Ako Ōtākou Learning and Teaching Toggle submenu Learning and teaching Return to previous menu Learning and teaching Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Toggle submenu Information for future students Return to previous menu Information for future students Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Toggle submenu Postgraduate study Return to previous menu Postgraduate study Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Toggle submenu Information for current students Return to previous menu Information for current students Exams Graduation Student Learning Development Textbooks Timetables Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic key dates Course Advice Services and support Toggle submenu Rangahau Research Return to previous menu Rangahau Research Toggle submenu Research Return to previous menu Research Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections Toggle submenu For researchers Return to previous menu For researchers For researchers Applying for research funding Funding opportunities Toggle submenu For postgraduate students Return to previous menu For postgraduate students For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Toggle submenu Departments and schools Return to previous menu Departments and schools Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research Toggle submenu Are you looking for... Return to previous menu Are you looking for... Research Expertise For students Research Awards Toggle submenu Māori ki Ōtākou Māori at Otago Return to previous menu Māori ki Ōtākou Māori at Otago Toggle submenu Māori at Otago Return to previous menu Māori at Otago Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Toggle submenu Māori student support services Return to previous menu Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori Toggle submenu Are you looking for... Return to previous menu Are you looking for... Student Accommodation Scholarships Subjects and Papers Toggle submenu Pacific ki Ōtākou Pacific at Otago Return to previous menu Pacific ki Ōtākou Pacific at Otago Toggle submenu Pacific at Otago Return to previous menu Pacific at Otago Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us Toggle submenu For current students Return to previous menu For current students For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association Toggle submenu Are you looking for... Return to previous menu Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Toggle submenu Te Whirika International Return to previous menu Te Whirika International Toggle submenu International at Otago Return to previous menu International at Otago International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Toggle submenu Future international students Return to previous menu Future international students Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Toggle submenu Current international students Return to previous menu Current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students Toggle submenu Are you looking for... Return to previous menu Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Toggle submenu Mō Ōtākou About Otago Return to previous menu Mō Ōtākou About Otago Toggle submenu About Otago Return to previous menu About Otago About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Toggle submenu Administration Return to previous menu Administration Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Toggle submenu Departments and Schools Return to previous menu Departments and Schools Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Toggle submenu Careers at Otago Return to previous menu Careers at Otago Careers at Otago Working at Otago Living in NZ Toggle submenu Are you looking for... Return to previous menu Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington --\u003e Current students Staff Alumni Library Contact --\u003e Ngā tauira o āpōpō Future Students --\u003e Future Students Why Otago? Subjects About Dunedin Accommodation Entry requirements Fees and scholarships Key dates for applications Preparing for university Connect with us International students Postgraduate PHD programme Summer school Open days --\u003e Are you looking for... Otago MBA University of Otago, Christchurch University of Otago, Wellington Ako Ōtākou Learning and Teaching --\u003e Learning and teaching Departments and schools Subjects and papers Qualifications Continuing education Distance learning Summer school Student exchange Academic integrity Scholarships Student grievances University communications Information for future students Enrolment Entrance requirements Fees guide Planning your degree Terminology Postgraduate study Graduate research Research Masters PhD Coursework postgraduate Information for current students Exams Graduation Student Learning Development Textbooks Timetables --\u003e Are you looking for... Academic key dates Course Advice Services and support Rangahau Research --\u003e Research DVC's welcome Our people at Research and Enterprise Research collaboration Research strengths Research highlights Research consultation with Māori Pacific Research Protocol Research Integrity Office Facilities and special collections For researchers Applying for research funding Funding opportunities For postgraduate students Graduate Research School Library services for research Otago Post PhD Research masters' Scholarships Departments and schools Otago Business School research Health Sciences research Humanities research at Otago Division of Sciences research --\u003e Are you looking for... Research Expertise For students Research Awards Māori ki Ōtākou Māori at Otago --\u003e Māori at Otago Māori strategic framework Mana whenua Te Ao Māori Rangahau Māori Kaimahi Tauira Māori student support services Māori Centre Māori Liaison Officers Māori Resources Collection Te Rōpū Māori Student Association Office of DVC Māori --\u003e Are you looking for... Student Accommodation Scholarships Subjects and Papers Pacific ki Ōtākou Pacific at Otago --\u003e Pacific at Otago Pacific Development at Otago Thinking of Otago? News and events Pacific staff Pacific research Kickstart 101 Contact us For current students Pacific Islands Centre Va'a o Tautai student support - Division of Health Sciences Pacific at University of Otago Wellington Student Learning Centre International Office Fiji Club Pacific Island Health Professional Students Association Samoan Students Association Tongan Students Association --\u003e Are you looking for... Academic Support Subjects and Papers Scholarships Student Accommodation Student Health Te Whirika International --\u003e International at Otago International strategy and partnerships Contact the International Office Information for Education Consultants Future international students Why choose Otago? Subjects and study options Entrance requirements How to apply Scholarships for international students International tuition fees Incoming Exchange and Study Abroad students Prepare for Otago Accommodation and living costs Visa and insurance Meet Otago in your country Chat with our current international students Current international students International student advisers Visa renewal and passports Insurance claims Student health Semester exchange for Otago students For all current students --\u003e Are you looking for... Key dates for new international students Search for papers Pathway and English Language Centre Student exchange partner universities Mō Ōtākou About Otago --\u003e About Otago Welcome History City and region Campuses and maps News and events Quick statistics Accommodation Otago Fellows Administration Official documents Administrative resources Structure University Council and Committees Service divisions Policy database Otago's commitment to social responsibility Visitors' Centre Departments and Schools Otago Business School Division of Health Sciences Division of Humanities Division of Sciences Careers at Otago Working at Otago Living in NZ --\u003e Are you looking for... Otago Open Days University of Otago, Christchurch University of Otago, Wellington function appendBreadcrumbs(breadcrumbListClass = 'ol.breadcrumb__list'){ const breadcrumbsList = document.querySelector(breadcrumbListClass); if(breadcrumbsList){ var breadcrumbListInnerHTML = breadcrumbsList.innerHTML; breadcrumbsList.innerHTML = breadcrumbListInnerHTML + ' News and events",
         "free": true,
@@ -1182,31 +1186,6 @@
     "description": "Te Herenga Waka — Victoria University of Wellington hosts regular public lectures, seminars, and events across its faculties and research institutes.",
     "bluesky": "@victoriauniversity.bsky.social",
     "lectures": [
-      {
-        "id": "c18c3e744bc93c82",
-        "title": "Garrison World: Redcoat Soldiers in New Zealand and across the British Empire",
-        "link": "https://www.wgtn.ac.nz/stout-centre/about/events/garrison-world-redcoat-soldiers-in-new-zealand-and-across-the-british-empire",
-        "time_start": "2026-05-06T16:10:00+12:00",
-        "summary": "Seminar Series: Between the Lines: Recent Books in New Zealand Studies Seminar 1 Garrison World: Redcoat Soldiers in New Zealand and across the...",
-        "description": "Seminar Series: Between the Lines: Recent Books in New Zealand Studies Seminar 1 Garrison World: Redcoat Soldiers in New Zealand and across the...",
-        "free": false,
-        "location": "Wellington",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "af0a10e5eabd00ca",
-        "title": "Public Seminar | Professor Derick de Jongh",
-        "link": "https://www.wgtn.ac.nz/business/engage/events/visit-of-professor-derick-de-jongh-and-public-seminar-in-may",
-        "time_start": "2026-05-07T12:30:00+12:00",
-        "summary": "Distinctive contours of African vs Western leadership theories: The Case of Chief Albert LuthuliDerick's seminar will highlight a prominent leadership example from an...",
-        "description": "Distinctive contours of African vs Western leadership theories: The Case of Chief Albert LuthuliDerick's seminar will highlight a prominent leadership example from an...",
-        "free": true,
-        "location": "Wellington",
-        "host_slug": "victoria"
-      },
       {
         "id": "b3e2988035940c65",
         "title": "Incidental Acquisition of Novel L2 Vocabulary from Authentic Materials",
@@ -1364,6 +1343,17 @@
         "host_slug": "victoria"
       },
       {
+        "id": "7458408263065f34",
+        "title": "The Cold War, the Bomb, and the Professors Who Turned around CIA",
+        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/the-cold-war,-the-bomb,-and-the-professors-who-turned-around-cia",
+        "time_start": "2026-05-21T17:30:00+12:00",
+        "summary": "The attack on Pearl Harbour in December 1941 established a lasting fear in the U.S of strategic surprise, which led to the concept...",
+        "description": "Dr Peter Grace will talk about his new book, The Intelligence Intellectuals, and explore professors' involvement in the making of the CIA.",
+        "free": false,
+        "location": "Wellington",
+        "host_slug": "victoria"
+      },
+      {
         "id": "960eb2c54daf54c8",
         "title": "Vamlet: Dark Prince of Denmark",
         "link": "https://www.wgtn.ac.nz/sam/about/events/vamlet-dark-prince-of-denmark",
@@ -1401,6 +1391,34 @@
         "time_start": "2026-06-01T00:01:00+12:00",
         "free": false,
         "location": "Wellington",
+        "host_slug": "victoria"
+      },
+      {
+        "id": "bca72501b20fb8eb",
+        "title": "Postgraduate Information Webinar",
+        "link": "https://www.wgtn.ac.nz/events/2026/06/postgraduate-information-webinar",
+        "time_start": "2026-06-18T18:00:00+12:00",
+        "summary": "Come along to our online postgraduate webinar. Learn about choosing programmes, career pathways, and exploring your research interests. Hosted online via zoom, this...",
+        "description": "Come along to our online postgraduate webinar. Learn about choosing programmes, career pathways, and exploring your research interests. Hosted online via zoom, this...",
+        "free": false,
+        "location": "Wellington",
+        "tags": [
+          "science-technology"
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "287e6037f1b214e7",
+        "title": "The future of coral reefs",
+        "link": "https://www.wgtn.ac.nz/events/2026/07/coral-reef-lecture",
+        "time_start": "2026-07-27T17:30:00+12:00",
+        "summary": "Coral reefs are home to an estimated 25 percent of marine species, a critical coastal defence, and a food and income source for...",
+        "description": "Following the 16th International Coral Reef Symposium hosted at Victoria University of Wellington, join the President of the International Coral Reef Society.",
+        "free": false,
+        "location": "Hunter Council Chamber, Hunter Building, Kelburn campus",
+        "tags": [
+          "environment"
+        ],
         "host_slug": "victoria"
       }
     ]

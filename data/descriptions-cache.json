@@ -62,6 +62,9 @@
   "https://www.aucklandmuseum.com/visit/whats-on/maori/Te-Reo-o-Te-Ao-Tawhito": {
     "description": "Join us at Tāmaki Paenga Hira Auckland War Memorial Museum for an evening hearing the journey of the pauku, its history, care and the important mātauranga surrounding this prestigious cloak."
   },
+  "https://www.aut.ac.nz/events/aut-technology-in-society-trust,-responsibility-and-opportunity-in-the-ai-enabled-world": {
+    "description": "Vice-Chancellor Damon Salesa will discuss\u0026nbsp;AI and Data Sovereignty\u0026nbsp;with a panel of industry experts and consider the critical need for trust and ethics"
+  },
   "https://www.aut.ac.nz/events/aut-worldwide": {
     "description": "AUT Worldwide is back!!!Mark your calendars \u0026ndash; AUT Worldwide is taking over our campuses from 5 to 7 May. With students from nearly 140 countries, AUT is h"
   },
@@ -107,11 +110,17 @@
   "https://www.eventbrite.co.nz/e/ersha-island-performance-tickets-1987094839155?aff=oddtdtcreator": {
     "description": "Join Tāmaki Makaurau musicians Ersha Island for an intimate performance in the gallery to celebrate the closing day of our current exhibition Dreaming from afar."
   },
+  "https://www.eventbrite.co.nz/e/governance-in-the-fourth-dimension-tickets-1988893292377": {
+    "description": "Public Lecture: Professor Andrew A. Schwartz (University of Colorado)"
+  },
   "https://www.eventbrite.co.nz/e/indonesian-language-class-tickets-1987028520795": {
     "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes, whether you’re planning a holiday in Bali or a business trip to Jakarta."
   },
   "https://www.eventbrite.co.nz/e/its-the-little-things-that-count-lessons-in-metabolism-academia-and-life-tickets-1975871927123": {
     "description": "Professor Jennifer Miles-Chan's Inaugural Lecture"
+  },
+  "https://www.eventbrite.co.nz/e/joint-inventory-routing-optimization-for-battery-swapping-networks-tickets-1988796009401": {
+    "description": "Abstract The rapid expansion of electric vehicle battery-swapping networks is increasing pressure on urban power grids. We study a hybrid battery swapping-charging system with multiple local swapping stations (SSs) and one central charging station (CS). Depleted batteries are either charged at SSs or transported to the CS for centralized charging and periodic redistribution."
   },
   "https://www.eventbrite.co.nz/e/lng-and-new-zealands-energy-balancing-act-lessons-from-asia-pacific-tickets-1987464831813": {
     "description": "Explores governance and operating experience across multiple regulatory environments, examining NZ's energy trilemma."
@@ -234,6 +243,12 @@
   },
   "https://www.wgtn.ac.nz/events/2026/05/inaugural-lecture-by-professor-jonathan-barrett": {
     "description": "Respecting equal human dignity: taxation and commercial law in the human rights stateProfessor Barrett’s research concerns the practical application of human rights, particularly..."
+  },
+  "https://www.wgtn.ac.nz/events/2026/06/postgraduate-information-webinar": {
+    "description": "Come along to our online postgraduate webinar. Learn about choosing programmes, career pathways, and exploring your research interests. Hosted online via zoom, this..."
+  },
+  "https://www.wgtn.ac.nz/events/2026/07/coral-reef-lecture": {
+    "description": "Following the 16th International Coral Reef Symposium hosted at Victoria University of Wellington, join the President of the International Coral Reef Society."
   },
   "https://www.wgtn.ac.nz/events/2026/dates/graduate-diploma-of-teaching-and-master-of-teaching-and-learning-programmes-end": {
     "description": ""
@@ -361,6 +376,9 @@
   },
   "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond": {
     "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and..."
+  },
+  "https://www.wgtn.ac.nz/strategic-studies/about/events/the-cold-war,-the-bomb,-and-the-professors-who-turned-around-cia": {
+    "description": "Dr Peter Grace will talk about his new book, The Intelligence Intellectuals, and explore professors' involvement in the making of the CIA."
   },
   "https://www.wgtn.ac.nz/strategic-studies/about/events/trump-2.0-and-the-indo-pacific": {
     "description": "Given the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president, it can be difficult to distinguish between..."

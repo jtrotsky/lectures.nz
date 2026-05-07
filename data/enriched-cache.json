@@ -45,6 +45,18 @@
       }
     ]
   },
+  "0bdfb3b4492e9d85": {
+    "event_type": "festival",
+    "summary": "Get ready to turn up the volume! Sounds of Tāmaki Makaurau is coming this NZ Music Month 2026!",
+    "description": "Get ready to turn up the volume! Sounds of Tāmaki Makaurau is coming this NZ Music Month 2026! This region-wide celebration will spotlight music-themed events and experiences, brought to life by Auckland Council. From community stages to creative experiences, the month will shine a light on local talent, including a special emerging artist series. Keep your ears open, exciting new voices are set to step into the spotlight at Studio One Toi Tū.",
+    "speakers": [
+      {
+        "name": "SOUNDS OF TĀMAKI MAKAURAU"
+      }
+    ],
+    "excluded": true,
+    "exclude_reason": "Celebration of music, not a talk component."
+  },
   "0c5a2aaa12aaa6f5": {
     "event_type": "talk",
     "summary": "Professor John Dudley will give an overview of photonics, detailing the interplay between basic science and innovation.",
@@ -223,6 +235,11 @@
     "summary": "Deloitte Techweek26 presents insights into the future of Open Insurance within Aotearoa New Zealand.",
     "description": "The session explores the trajectory and potential of Open Insurance within Aotearoa New Zealand. Hosted by Deloitte Techweek26, the event is held at Deloitte Wellington on Tuesday, May 19th, 2026."
   },
+  "287e6037f1b214e7": {
+    "event_type": "seminar",
+    "summary": "Experts will discuss the state of coral reefs, which are vital for marine life, coastal defense, and food sources.",
+    "description": "Following the 16th International Coral Reef Symposium hosted at Victoria University of Wellington, this session will address the critical state of coral reefs. These ecosystems are home to an estimated 25 percent of marine species and serve as a vital coastal defense and food source."
+  },
   "29e57fcd6effffcd": {
     "event_type": "market",
     "summary": "Queers \u0026 Wares is a market celebrating queer creativity, community, and connection. Browse unique handmade pieces, vintage clothing, and art from local artists."
@@ -300,6 +317,17 @@
     "speakers": [
       {
         "name": "FLORENCE ULUTUNU"
+      }
+    ]
+  },
+  "33001181c2a3a6b3": {
+    "event_type": "panel",
+    "summary": "Vice-Chancellor Damon Salesa discusses AI and Data Sovereignty with industry experts, focusing on the critical need for trust and ethics.",
+    "description": "Vice-Chancellor Damon Salesa will discuss AI and Data Sovereignty with a panel of industry experts. The discussion will explore the critical need for trust and ethics surrounding these technologies.",
+    "speakers": [
+      {
+        "name": "Damon Salesa",
+        "bio": "Vice-Chancellor"
       }
     ]
   },
@@ -563,6 +591,16 @@
     "summary": "Deloitte Techweek26 explores the balance between building quickly and managing long-term technical debt.",
     "description": "This talk addresses the tension between rapid development ('vibe coding') and accruing unsustainable 'tech debt' within technology projects. Hosted by Deloitte Techweek26, the event will explore strategies for building fast without incurring costs later."
   },
+  "7458408263065f34": {
+    "event_type": "talk",
+    "summary": "The attack on Pearl Harbour in December 1941 established a lasting U.S. fear of strategic surprise, influencing the formation of intelligence structures.",
+    "description": "The Cold War, the Bomb, and the Professors Who Turned around CIA examines the deep roots of modern intelligence agencies. The attack on Pearl Harbour in December 1941 established a lasting fear in the U.S. of strategic surprise, leading to profound changes in national security policy. Discover the key roles played by university professors in the making of the CIA and the concept of intelligence gathering.",
+    "speakers": [
+      {
+        "name": "Dr Peter Grace"
+      }
+    ]
+  },
   "77b0a203c71c3323": {
     "event_type": "lecture",
     "summary": "Canada's High Commissioner discusses Indigenous rights and UNDRIP.",
@@ -684,6 +722,25 @@
       }
     ]
   },
+  "90ea9f9ec069e662": {
+    "event_type": "panel",
+    "summary": "Prof. Dr. Martin Kment discusses AI's emerging role in government decision-making, examining implications for law, transparency, and democracy.",
+    "description": "Artificial intelligence is rapidly reshaping how governments operate, raising profound questions about efficiency, accountability, and the future of public decision-making. Prof. Dr. Martin Kment will discuss AI and examine its emerging role in government decision-making processes, drawing on international developments. Following the keynote, he will join a panel with Paula Riano and Pedro Ramirez to discuss these issues further.",
+    "speakers": [
+      {
+        "name": "Prof. Dr. Martin Kment",
+        "bio": "Managing Director, Institute for Environmental Law, University of Augsburg"
+      },
+      {
+        "name": "Paula Riano",
+        "bio": "AI Strategy Advisor at Five New Zealand Consultancy"
+      },
+      {
+        "name": "Pedro Ramirez",
+        "bio": "Digital Strategy Practitioner – AI Work Programme, Department of Internal Affairs"
+      }
+    ]
+  },
   "93d3306be97bd05b": {
     "event_type": "talk",
     "summary": "Deloitte Techweek26 explores the possibility of non-human customers, suggesting a focus on technological or AI-related consumer interaction.",
@@ -736,6 +793,16 @@
       {
         "name": "Professor Prasanna Gai",
         "bio": "University economist"
+      }
+    ]
+  },
+  "9c3b2c04d77a480f": {
+    "event_type": "seminar",
+    "summary": "Colin James discusses the recent book 'Shaping Aotearoa New Zealand: The revolutionaries who reworked a national and its culture' as part of the Seminar Series—Between the Lines.",
+    "description": "Colin James presents on 'Shaping Aotearoa New Zealand—The revolutionaries who reworked a national and its nulture' as part of the Seminar Series—Between the Lines. This series highlights recent books in New Zealand Studies.",
+    "speakers": [
+      {
+        "name": "Colin James"
       }
     ]
   },
@@ -808,6 +875,21 @@
     "excluded": true,
     "exclude_reason": "Language class, not a lecture or talk"
   },
+  "a73df608b35aec92": {
+    "event_type": "talk",
+    "summary": "Conversations with Rotuman artists Sofia Tekela-Smith and Maluseu Monise celebrating Rotuman Language Week.",
+    "description": "Kạp‘ạki - To Embrace: An in-conversation piece celebrating Rotuman Language Week, featuring Rotuman artists Sofia Tekela-Smith and Maluseu Monise.",
+    "speakers": [
+      {
+        "name": "Sofia Tekela-Smith",
+        "bio": "Rotuman artist"
+      },
+      {
+        "name": "Maluseu Monise",
+        "bio": "Rotuman artist"
+      }
+    ]
+  },
   "a7e028a3570d6069": {
     "event_type": "workshop",
     "summary": "This workshop introduces participants to the world of Chinese martial arts through guided movements, cultural insights, and educational sessions."
@@ -841,6 +923,11 @@
     "event_type": "lecture",
     "summary": "This is the annual Sir John Graham Lecture hosted by Maxim Institute.",
     "description": "This event hosts the annual Sir John Graham Lecture, providing an in-depth examination of a significant topic in the current academic or cultural discourse. Attendees will gain specialized insights into the area of focus through expert presentation."
+  },
+  "aeb312a738e9e76d": {
+    "event_type": "seminar",
+    "summary": "This session addresses how the rapid expansion of electric vehicle battery-swapping networks is pressuring urban power grids.",
+    "description": "The rapid expansion of electric vehicle battery-swapping networks is increasing pressure on urban power grids. The study examines a hybrid battery swapping-charging system involving multiple local swapping stations (SSs) and one central charging station (CS). Depleted batteries can be charged at the SSs or transported to the CS for centralized charging and redistribution."
   },
   "af0a10e5eabd00ca": {
     "event_type": "seminar",
@@ -894,6 +981,17 @@
       }
     ]
   },
+  "b57944a3b4ba7563": {
+    "event_type": "talk",
+    "summary": "PhD candidate Hirdey Rampal discusses how people sustain well-being while navigating change in Spiti Valley, India.",
+    "description": "Hirdey Rampal, a PhD candidate in Cultural Anthropology at Te Herenga Waka – Victoria University of Wellington, explores how people sustain well-being when faced with flux in Spiti Valley, India.",
+    "speakers": [
+      {
+        "name": "Hirdey Rampal",
+        "bio": "PhD candidate in Cultural Anthropology"
+      }
+    ]
+  },
   "ba2dd526b346cb10": {
     "event_type": "seminar",
     "summary": "This seminar explores how leveraging Artificial Intelligence can build energy resilient value chains.",
@@ -903,6 +1001,11 @@
     "event_type": "workshop",
     "summary": "A workshop exploring Kintsugi, the Japanese art form of repairing broken ceramics using gold, making the breaks beautiful.",
     "description": "This workshop explores Kintsugi, also known as Kintsukuroi, an age-old Japanese art form. It involves repairing broken ceramics in a way considered more beautiful than when the object was whole. Kintsugi translates to 'Golden Joinery.'"
+  },
+  "bca72501b20fb8eb": {
+    "event_type": "seminar",
+    "summary": "Learn about choosing postgraduate programmes, career pathways, and exploring research interests at this online webinar.",
+    "description": "This online webinar will guide attendees through choosing postgraduate programmes, mapping out potential career pathways, and exploring various research interests."
   },
   "be71cfa05e7f3e78": {
     "event_type": "workshop",
@@ -1003,6 +1106,17 @@
   "cee11c9c166f76f7": {
     "event_type": "lecture",
     "summary": "Explore the world of sharks from prehistoric times to today in a theatrical journey. Dive into deep waters without the need for a wetsuit or breathing apparatus."
+  },
+  "d877bcff9e529644": {
+    "event_type": "seminar",
+    "summary": "Elizabeth Cox discusses 'Mr Ward's Map—Victorian Wellington street by street' as part of the Stout Centre’s seminar series.",
+    "description": "Elizabeth Cox presents on 'Mr Ward's Map—Victorian Wellington street by street' during the Seminar Series—Between the Lines—Recent Books in New Zealand Studies. This event is part of the Stout Centre’s seminar series highlighting recent books in New Zealand Studies.",
+    "speakers": [
+      {
+        "name": "Elizabeth Cox",
+        "bio": "N/A"
+      }
+    ]
   },
   "d92b21fc2b42ebf3": {
     "event_type": "seminar",
@@ -1132,6 +1246,11 @@
       }
     ]
   },
+  "ea1ea9dc21d3e573": {
+    "event_type": "talk",
+    "summary": "An examination of the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president.",
+    "description": "The talk explores the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president, highlighting the difficulty in distinguishing between various geopolitical signals."
+  },
   "ec949af9f84b83e4": {
     "event_type": "seminar",
     "summary": "Explore the future of fitness and discover the innovative world of sports technology through a weekend filled with engaging activities."
@@ -1201,6 +1320,17 @@
       {
         "name": "Ruth Buchanan",
         "bio": "Kaitohu Director and artist"
+      }
+    ]
+  },
+  "ff3963329dd882d8": {
+    "event_type": "lecture",
+    "summary": "Professor Andrew A. Schwartz addresses the complexities of governance structures across conceptual dimensions.",
+    "description": "The lecture explores the multifaceted nature of governance by examining its theoretical extension into the 'Fourth Dimension.' Participants will gain insight into how existing governance models adapt to abstract or multi-dimensional complexities, as presented by Professor Andrew A. Schwartz.",
+    "speakers": [
+      {
+        "name": "Professor Andrew A. Schwartz",
+        "bio": "University of Colorado"
       }
     ]
   },
