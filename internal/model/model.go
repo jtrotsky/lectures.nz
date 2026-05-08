@@ -21,8 +21,17 @@ type Lecture struct {
 	HostSlug    string     `json:"host_slug"`
 	Organiser   string     `json:"organiser,omitempty"`  // real institution when host is an aggregator (e.g. Eventbrite, Humanitix)
 	EventType   string     `json:"event_type,omitempty"` // set by enrichment: lecture, seminar, panel, workshop, concert, market, ceremony, fitness, orientation, festival, open day, other
-	Excluded      bool   `json:"excluded,omitempty"`        // set by enrichment: true if event should not appear on lectures.nz
-	ExcludeReason string `json:"exclude_reason,omitempty"`  // short reason phrase from enrichment
+	Excluded      bool   `json:"excluded,omitempty"`         // set by enrichment: true if event should not appear on lectures.nz
+	ExcludeReason string `json:"exclude_reason,omitempty"`   // short reason phrase from enrichment
+	CleanTitle    string `json:"clean_title,omitempty"`      // enrichment-corrected title; use for display if set
+}
+
+// DisplayTitle returns CleanTitle if set, otherwise Title.
+func (l Lecture) DisplayTitle() string {
+	if l.CleanTitle != "" {
+		return l.CleanTitle
+	}
+	return l.Title
 }
 
 // Speaker represents a speaker at a lecture.

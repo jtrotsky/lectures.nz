@@ -108,7 +108,7 @@ func run() error {
 
 	byCityName := map[string][]model.Lecture{}
 	for _, l := range lectures {
-		if l.Excluded {
+		if l.Excluded || excludedEventType(l.EventType) {
 			continue
 		}
 		t := l.TimeStart.In(nzLoc)
@@ -170,78 +170,145 @@ func buildSubject(city string, from, to time.Time) string {
 	return fmt.Sprintf("%s lectures · %d %s – %d %s", city, from.Day(), from.Format("Jan"), to.Day(), to.Format("Jan"))
 }
 
+// excludedEventType mirrors the build's excludedEventTypes filter.
+var excludedEventTypes = map[string]bool{
+	"market": true, "concert": true, "ceremony": true, "fitness": true,
+	"orientation": true, "festival": true, "meetup": true, "conference": true,
+	"course": true, "AGM": true, "class": true, "workshop": true,
+}
+
+func excludedEventType(t string) bool { return t != "" && excludedEventTypes[t] }
+
+// dateLabel returns "Today", "Tomorrow", day name (within a week), or "Mon 2 Jan".
+func dateLabel(t, now time.Time) string {
+	tDate := t.Truncate(24 * time.Hour)
+	nowDate := now.Truncate(24 * time.Hour)
+	diff := int(tDate.Sub(nowDate).Hours() / 24)
+	switch diff {
+	case 0:
+		return "Today"
+	case 1:
+		return "Tomorrow"
+	}
+	if diff < 7 {
+		return t.Format("Monday")
+	}
+	return t.Format("Monday 2 January")
+}
+
+type dateGroup struct {
+	Label    string
+	Lectures []model.Lecture
+}
+
+func groupByDate(lectures []model.Lecture, now time.Time, loc *time.Location) []dateGroup {
+	var groups []dateGroup
+	idx := map[string]int{}
+	for _, l := range lectures {
+		t := l.TimeStart.In(loc)
+		key := t.Format("2006-01-02")
+		if i, ok := idx[key]; ok {
+			groups[i].Lectures = append(groups[i].Lectures, l)
+		} else {
+			idx[key] = len(groups)
+			groups = append(groups, dateGroup{
+				Label:    dateLabel(t, now),
+				Lectures: []model.Lecture{l},
+			})
+		}
+	}
+	return groups
+}
+
 func buildBody(city string, lectures []model.Lecture, from, to time.Time) string {
-	var b strings.Builder
+	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
+	now := from.In(nzLoc)
 
 	dateRange := fmt.Sprintf("%d–%d %s", from.Day(), to.Day(), from.Format("January"))
 	if from.Month() != to.Month() {
 		dateRange = fmt.Sprintf("%d %s – %d %s", from.Day(), from.Format("Jan"), to.Day(), to.Format("Jan"))
 	}
 
+	groups := groupByDate(lectures, now, nzLoc)
+
+	var b strings.Builder
 	b.WriteString(`<!DOCTYPE html>
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#f5f0f3;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-<table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f0f3;padding:32px 0;">
+<body style="margin:0;padding:0;background:#e8dfe5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#e8dfe5;padding:24px 0 40px;">
 <tr><td align="center">
-<table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#efe6eb;">`)
+<table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">`)
 
 	// Header
 	fmt.Fprintf(&b, `
-<tr><td style="padding:32px 32px 0;">
-  <a href="https://lectures.nz" style="font-family:Georgia,serif;font-size:28px;font-weight:400;color:#000;text-decoration:none;letter-spacing:-0.02em;">lectures.nz</a>
+<tr><td style="padding:32px 32px 20px;">
+  <a href="https://lectures.nz" style="font-family:Georgia,'Times New Roman',serif;font-size:32px;font-weight:400;color:#000;text-decoration:none;letter-spacing:-0.02em;">lectures.nz</a>
 </td></tr>
-<tr><td style="padding:8px 32px 24px;border-bottom:1px solid rgba(0,0,0,0.15);">
-  <p style="margin:0;font-size:14px;color:rgba(0,0,0,0.55);text-transform:uppercase;letter-spacing:0.05em;font-weight:500;">%s · %s</p>
+<tr><td style="padding:0 32px 24px;border-bottom:1px solid rgba(0,0,0,0.12);">
+  <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:rgba(0,0,0,0.45);text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">%s &nbsp;·&nbsp; %s</p>
 </td></tr>`, city, dateRange)
 
-	// Lectures
-	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
-	for _, l := range lectures {
-		t := l.TimeStart.In(nzLoc)
-		dateStr := t.Format("Monday 2 January")
-		timeStr := t.Format("3:04pm")
-
-		summary := l.Summary
-		if summary == "" {
-			summary = l.Description
-		}
-		if len(summary) > 160 {
-			summary = summary[:157] + "…"
-		}
-
+	// Date groups
+	for _, g := range groups {
+		// Date heading
 		fmt.Fprintf(&b, `
-<tr><td style="padding:24px 32px;border-bottom:1px solid rgba(0,0,0,0.08);">
-  <p style="margin:0 0 4px;font-size:11px;color:rgba(0,0,0,0.45);text-transform:uppercase;letter-spacing:0.06em;font-weight:500;">%s at %s</p>
-  <h2 style="margin:0 0 6px;font-family:Georgia,serif;font-size:20px;font-weight:400;line-height:1.3;color:#000;">
-    <a href="%s" style="color:#380d25;text-decoration:none;">%s</a>
-  </h2>`,
-			html.EscapeString(dateStr),
-			html.EscapeString(timeStr),
-			html.EscapeString(l.Link),
-			html.EscapeString(l.Title),
-		)
+<tr><td style="padding:24px 32px 0;">
+  <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(0,0,0,0.35);">%s</p>
+</td></tr>`, html.EscapeString(g.Label))
 
-		if l.Location != "" {
-			fmt.Fprintf(&b, `<p style="margin:0 0 8px;font-size:12px;color:rgba(0,0,0,0.5);">%s</p>`, html.EscapeString(l.Location))
+		for _, l := range g.Lectures {
+			t := l.TimeStart.In(nzLoc)
+			timeStr := t.Format("3:04pm")
+
+			summary := l.Summary
+			if summary == "" {
+				summary = l.Description
+			}
+			if len(summary) > 180 {
+				summary = summary[:177] + "…"
+			}
+
+			// Host/organiser line
+			organiser := l.Organiser
+			if organiser == "" {
+				organiser = l.HostSlug
+			}
+
+			fmt.Fprintf(&b, `
+<tr><td style="padding:12px 32px 20px;border-bottom:1px solid rgba(0,0,0,0.08);">
+  <table width="100%%" cellpadding="0" cellspacing="0">
+  <tr><td>
+    <p style="margin:0 0 2px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:rgba(0,0,0,0.4);">%s</p>
+    <h2 style="margin:0 0 6px;font-family:Georgia,'Times New Roman',serif;font-size:19px;font-weight:400;line-height:1.3;color:#000;">
+      <a href="%s" style="color:#380d25;text-decoration:none;">%s</a>
+    </h2>`,
+				html.EscapeString(timeStr),
+				html.EscapeString(l.Link),
+				html.EscapeString(l.DisplayTitle()),
+			)
+
+			if l.Location != "" {
+				fmt.Fprintf(&b, `<p style="margin:0 0 6px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;color:rgba(0,0,0,0.45);">%s</p>`, html.EscapeString(l.Location))
+			}
+
+			if summary != "" {
+				fmt.Fprintf(&b, `<p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.55;color:rgba(0,0,0,0.65);">%s</p>`, html.EscapeString(summary))
+			}
+
+			b.WriteString(`</td></tr></table></td></tr>`)
 		}
-
-		if summary != "" {
-			fmt.Fprintf(&b, `<p style="margin:0;font-size:14px;line-height:1.5;color:rgba(0,0,0,0.75);">%s</p>`, html.EscapeString(summary))
-		}
-
-		b.WriteString(`</td></tr>`)
 	}
 
 	// Footer
 	b.WriteString(`
-<tr><td style="padding:24px 32px;">
-  <p style="margin:0 0 8px;font-size:13px;color:rgba(0,0,0,0.6);">
-    <a href="https://lectures.nz" style="color:#380d25;">View all upcoming lectures →</a>
-  </p>
-  <p style="margin:0;font-size:11px;color:rgba(0,0,0,0.4);">
-    You're receiving this because you subscribed at lectures.nz.<br>
-    <a href="{{unsubscribe_url}}" style="color:rgba(0,0,0,0.4);">Unsubscribe</a>
+<tr><td style="padding:28px 32px 0;">
+  <a href="https://lectures.nz" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:#380d25;text-decoration:none;">View all lectures →</a>
+</td></tr>
+<tr><td style="padding:16px 32px 32px;">
+  <p style="margin:0;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:11px;color:rgba(0,0,0,0.35);line-height:1.6;">
+    You subscribed at lectures.nz &nbsp;·&nbsp;
+    <a href="{{unsubscribe_url}}" style="color:rgba(0,0,0,0.35);text-decoration:underline;">Unsubscribe</a>
   </p>
 </td></tr>
 </table>

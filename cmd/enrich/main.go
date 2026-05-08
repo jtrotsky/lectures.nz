@@ -47,6 +47,7 @@ const (
 // cacheEntry holds the enriched fields we persist between runs.
 type cacheEntry struct {
 	EventType     string          `json:"event_type,omitempty"`
+	CleanTitle    string          `json:"clean_title,omitempty"`
 	Summary       string          `json:"summary,omitempty"`
 	Description   string          `json:"description,omitempty"`
 	Speakers      []model.Speaker `json:"speakers,omitempty"`
@@ -57,7 +58,7 @@ type cacheEntry struct {
 // enrichResponse is what we expect back from Ollama (parsed from the JSON the model emits).
 type enrichResponse struct {
 	EventType     string          `json:"event_type"`
-	Title         string          `json:"title"`
+	CleanTitle    string          `json:"clean_title"`
 	Summary       string          `json:"summary"`
 	Description   string          `json:"description"`
 	Speakers      []model.Speaker `json:"speakers"`
@@ -192,6 +193,7 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		if lec.ID != "" {
 			cache[lec.ID] = cacheEntry{
 				EventType:     result.EventType,
+				CleanTitle:    result.CleanTitle,
 				Summary:       result.Summary,
 				Description:   result.Description,
 				Speakers:      result.Speakers,
@@ -239,6 +241,9 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 func applyCache(lec model.Lecture, entry cacheEntry) model.Lecture {
 	if entry.EventType != "" {
 		lec.EventType = entry.EventType
+	}
+	if entry.CleanTitle != "" {
+		lec.CleanTitle = entry.CleanTitle
 	}
 	if entry.Summary != "" {
 		lec.Summary = entry.Summary
@@ -345,7 +350,7 @@ Fields:
 - "event_type": One or two words classifying the event. Choose exactly one: lecture, seminar, panel, workshop, talk, symposium, fireside chat, chat, debate, forum, roundtable, reading, concert, market, ceremony, course, fitness, orientation, festival, open day, conference.
 - "exclude": true if this event clearly does not belong on lectures.nz (e.g. campus festival, open day, cultural performance, market, fitness class, ceremony). false if it has any meaningful talk/lecture/seminar component, even if culturally themed.
 - "exclude_reason": a short phrase (max 8 words) if exclude is true, otherwise omit.
-- "title": The cleaned event title. Strip any speaker name appended after " | " (e.g. "Fast Forward 2026: Transcolonisation! | Chelsea Winstanley" → "Fast Forward 2026: Transcolonisation!"). Also strip trailing speaker credits like " with Jane Smith" or " — featuring Dr X" if the event name is clear without them. Do NOT rewrite, shorten, or rephrase the actual event name itself — only strip the speaker suffix. Return the original if no change needed.
+- "clean_title": The corrected event title, or omit if no correction needed. Make only these corrections: (1) strip speaker names appended after " | " or as " with Jane Smith" / " — featuring Dr X" suffixes — only when the event name is clear without them; (2) strip sponsor/organiser prefixes such as "Deloitte Presents:", "X Presents:", "Sponsor: " — where the real event name follows; (3) fix obvious typos or casing errors e.g. "Nz" → "NZ", "nulture" → "culture", "a national and" → "a nation and"; (4) fix obvious character-encoding artefacts such as dot-below characters (ạ, ị, ọ, ụ) in what is clearly a Māori or English word — use context to judge; preserve them if the event is genuinely in a language that uses those characters. Never rewrite, shorten, or rephrase the actual event name beyond these corrections. Omit this field entirely if the title needs no correction.
 - "summary": One clear sentence (max 180 chars) for the index card. Capture the core topic and speaker if known. No hollow openers ("Join us", "Discover", "Explore"). Do not invent anything not in the source. If source_summary is already good, you may use it directly.
 - "description": 2-4 sentences for the detail page. %s Begin with the event's intellectual substance — what question it addresses, what perspective it offers, or (for a named speaker) what they'll argue or present. Never start with what type of event it is ("The lecture", "This talk", "This seminar", "This event"). Never start with "Attendees will". Remove hollow marketing openers ("Join us", "This is a unique opportunity", "Don't miss"). Preserve specific people, institutions, and facts from the source.
 - "speakers": Array of {name, bio} objects. Extract from title, speakers field, or description. Return [] if none named. "name": person's full name including honorific prefix — keep "Dr", "Professor", "Sir", "Dame" if present in the source (e.g. "Dr Jane Smith", "Professor John Doe"). Never append role, topic, or parenthetical notes to the name. "bio": their specific role or affiliation as stated in the source, max 6 words (e.g. "Curator Archaeology, Auckland Museum"). Use "" if their role isn't mentioned — never use generic words like "speaker", "presenter", or "expert".
@@ -385,9 +390,8 @@ Event:
 	if resp.ExcludeReason != "" {
 		out.ExcludeReason = resp.ExcludeReason
 	}
-	// Only apply title if model stripped something (never allow lengthening).
-	if t := strings.TrimSpace(resp.Title); t != "" && t != lec.Title && len(t) < len(lec.Title) {
-		out.Title = t
+	if t := strings.TrimSpace(resp.CleanTitle); t != "" && t != lec.Title {
+		out.CleanTitle = t
 	}
 	if resp.Summary != "" {
 		out.Summary = resp.Summary

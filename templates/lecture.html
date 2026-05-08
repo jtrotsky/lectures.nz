@@ -1,6 +1,6 @@
-{{define "title"}}{{.Lecture.Title}} — lectures.nz{{end}}
+{{define "title"}}{{.Lecture.DisplayTitle}} — lectures.nz{{end}}
 
-{{define "description"}}{{if .Lecture.Summary}}{{.Lecture.Summary}}{{else}}{{.Lecture.Title}} at {{.Host.Name}}.{{end}}{{end}}
+{{define "description"}}{{if .Lecture.Summary}}{{.Lecture.Summary}}{{else}}{{.Lecture.DisplayTitle}} at {{.Host.Name}}.{{end}}{{end}}
 
 {{define "extra-head"}}<script type="application/ld+json">{{.SchemaJSON}}</script>{{end}}
 
@@ -20,7 +20,7 @@
         <a href="/{{.Host.Slug}}/">{{if .Lecture.Organiser}}{{.Lecture.Organiser}}{{else}}{{.Host.Name}}{{end}}</a>
       </p>
 
-      <h1 class="lecture-hero-title">{{.Lecture.Title}}</h1>
+      <h1 class="lecture-hero-title">{{.Lecture.DisplayTitle}}</h1>
 
       <div class="lecture-hero-meta">
         <div class="lecture-meta-row">
