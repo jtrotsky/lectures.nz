@@ -48,6 +48,8 @@ func (s *Scraper) Host() model.Host {
 var (
 	findEventRe  = regexp.MustCompile(`href="(https://www\.waikato\.ac\.nz/news-events/events/find-event/[^"]+)"`)
 	h1Re         = regexp.MustCompile(`(?s)<h1[^>]*>(.*?)</h1>`)
+	// bySpeakerRe matches " by Professor/Dr X" speaker attribution suffixes.
+	bySpeakerRe  = regexp.MustCompile(`(?i)\s*'?\s*\bby\s+(Professor|Prof\b|Associate Professor|Dr\.?)\s+\S.*$`)
 	infoListRe   = regexp.MustCompile(`(?s)<ul class="event__info-list">(.*?)</ul>`)
 	liRe         = regexp.MustCompile(`(?s)<li>(.*?)</li>`)
 	descParaRe   = regexp.MustCompile(`(?s)<p class="restricted-width-element">(.*?)</p>`)
@@ -171,7 +173,7 @@ func scrapeEvent(ctx context.Context, eventURL string) (model.Lecture, bool, err
 
 	return model.Lecture{
 		ID:          scraper.MakeID(eventURL), // stable: keyed to the Waikato page URL
-		Title:       scraper.CleanTitle(title),
+		Title:       scraper.CleanTitle(bySpeakerRe.ReplaceAllString(title, "")),
 		Link:        link,
 		TimeStart:   t,
 		Description: desc,

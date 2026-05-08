@@ -62,6 +62,8 @@ var (
 	dateParsRe = regexp.MustCompile(`(?i)(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December),?\s+(\d{4})`)
 	// timeParsRe parses "6:15pm" or "6pm".
 	timeParsRe = regexp.MustCompile(`(?i)(\d{1,2})(?::(\d{2}))?\s*(am|pm)`)
+	// citySuffixRe strips " - CITYNAME" appended by Royal Society for multi-city tours.
+	citySuffixRe = regexp.MustCompile(`(?i)\s*-\s*(AUCKLAND|WELLINGTON|CHRISTCHURCH|DUNEDIN|HAMILTON|TAURANGA|NELSON|NAPIER|PALMERSTON NORTH|LOWER HUTT)\s*$`)
 )
 
 // parseEventDate parses "6:15pm Tue 21 April, 2026".
@@ -143,7 +145,7 @@ func fetchDetail(ctx context.Context, link string, loc *time.Location) (model.Le
 	if titleM == nil {
 		return model.Lecture{}, false
 	}
-	title := strings.TrimSpace(titleM[1])
+	title := citySuffixRe.ReplaceAllString(strings.TrimSpace(titleM[1]), "")
 
 	// Scope venue/datetime extraction to the div.venue block.
 	venueBlock := html

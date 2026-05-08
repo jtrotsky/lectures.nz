@@ -29,6 +29,10 @@ import (
 
 const hostBase = "https://events.humanitix.com/host"
 
+// sponsorPrefixRe matches "Sponsor Presents: " watermarks that appear in
+// Humanitix event titles (e.g. "Deloitte Presents: ").
+var sponsorPrefixRe = regexp.MustCompile(`(?i)^[\w\s]+\bpresents:\s+`)
+
 // organiser is a curated NZ educational Humanitix organiser.
 type organiser struct {
 	slug string // e.g. "maxim-institute"
@@ -235,7 +239,7 @@ func scrapeEvent(ctx context.Context, eventURL string) (model.Lecture, bool, err
 	location := buildLocation(ev.Location)
 	organiserName := extractOrganiser(body)
 	description := html.UnescapeString(ev.Description)
-	cleanTitle, speakerSuffix := scraper.SplitTitleSpeaker(scraper.CleanTitle(ev.Name))
+	cleanTitle, speakerSuffix := scraper.SplitTitleSpeaker(scraper.CleanTitle(sponsorPrefixRe.ReplaceAllString(ev.Name, "")))
 
 	var speakers []model.Speaker
 	if speakerSuffix != "" {

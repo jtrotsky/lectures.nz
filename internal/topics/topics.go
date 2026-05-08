@@ -70,6 +70,19 @@ var excludeKeywords = []string{
 	"quiz",
 	// Museum activity weekends (not lectures)
 	"sports tech", // MOTAT weekend activity series
+	// Language classes (not lectures)
+	"language class",
+	"learn thai",
+	"learn mandarin",
+	"learn chinese",
+	"learn japanese",
+	// Postgraduate / institutional admin events
+	"three minute thesis",
+	"3mt ",              // Three Minute Thesis heats (space avoids partial matches)
+	"postgraduate information",
+	"scholarship applications",
+	"school-leaver",
+	"experience day",   // e.g. "Massey College of Creative Arts Experience Day"
 }
 
 // IsExcluded reports whether a lecture title looks like a non-lecture event
