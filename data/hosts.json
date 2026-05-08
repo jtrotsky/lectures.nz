@@ -214,67 +214,6 @@
         ],
         "host_slug": "eventbrite",
         "organiser": "University of Auckland, Business School"
-      },
-      {
-        "id": "a70971ae735940bb",
-        "title": "Indonesian Language Class",
-        "link": "https://www.eventbrite.co.nz/e/indonesian-language-class-tickets-1987028520795",
-        "time_start": "2026-06-03T17:00:00+12:00",
-        "summary": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore.",
-        "description": "Bahasa Indonesia, or the language of Indonesia, is spoken by more than 250 million people in Southeast Asia, primarily Indonesia, Malaysia and Singapore. Historically a trading language that linked people across maritime Southeast Asia, contemporary Indonesian is relatively easy to pick up for basic communication purposes, whether you’re planning a holiday in Bali or a business trip to Jakarta.",
-        "free": false,
-        "location": "Sir Owen G Building, Auckland Business School, Room 349, Level 3, Auckland",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "eventbrite",
-        "organiser": "University of Auckland, Business School"
-      },
-      {
-        "id": "6f04d15e54116813",
-        "title": "3MT Faculty Heat (Business, Economics  and Law)",
-        "link": "https://www.eventbrite.co.nz/e/3mt-faculty-heat-business-economics-and-law-tickets-1983836857444",
-        "time_start": "2026-06-08T09:00:00+12:00",
-        "summary": "Can you present your entire thesis in just 180 seconds? Ready to take the challenge?",
-        "description": "Can you present your entire thesis in just 180 seconds? Ready to take the challenge? Doctoral candidates from the Faculty of Business and Economics and the Faculty of Law are invited to compete in our joint Three Minute Thesis (3MT) Heat. This is your opportunity to showcase your research in a dynamic, compelling way and earn a place in the University 3MT Final.",
-        "free": true,
-        "location": "The University of Auckland Business School, Decima Glenn, Level 3, 12 Grafton Road, Auckland",
-        "tags": [
-          "politics-policy"
-        ],
-        "host_slug": "eventbrite",
-        "organiser": "University of Auckland, Business School"
-      },
-      {
-        "id": "6866a93602bd03ca",
-        "title": "Massey College of Creative Arts Experience Day",
-        "link": "https://www.eventbrite.co.nz/e/massey-college-of-creative-arts-experience-day-tickets-1987573254107",
-        "time_start": "2026-06-12T09:30:00+12:00",
-        "summary": "Experience Day is about getting a taste of the experience of being a student at Massey University Wellington's College of Creative Arts - Toi Rauwhārangi.",
-        "description": "Experience Day is about getting a taste of the experience of being a student at Massey University Wellington's College of Creative Arts - Toi Rauwhārangi. Join us from 9:30am - 3pm on June 12th for workshops, pizza, student panel talks and more! (Registration will open from 9am) Experience days are free to attend, but registration is essential to secure your spot on your chosen workshop. Please note, you can only attend one workshop on the day, so choose the one you are most excited about!",
-        "free": true,
-        "location": "Block 10, Massey University College of Creative Arts., Entrance D, Tasman Street, Wellington",
-        "tags": [
-          "arts-culture"
-        ],
-        "host_slug": "eventbrite",
-        "organiser": "Toi Rāuwharangi College of Creative Arts, Massey University"
-      },
-      {
-        "id": "274567a260b0d69b",
-        "title": "Your chance to learn Thai!",
-        "link": "https://www.eventbrite.co.nz/e/your-chance-to-learn-thai-tickets-1987791126770",
-        "time_start": "2026-07-23T17:30:00+12:00",
-        "summary": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities.",
-        "description": "Thailand, often referred to as “The Land of Smiles,” is known for its rich cultural heritage, striking temples, world-renowned cuisine, and welcoming communities. Learning Thai provides a meaningful way to experience this culture more deeply, whether for travel, personal interest, or future engagement with Thailand. Course Overview This introductory course is designed for complete beginners and those preparing to travel to Thailand.",
-        "free": false,
-        "location": "Sir Owen G Glenn Building, Room 349, Level 3, 12 Grafton Road, Auckland",
-        "tags": [
-          "arts-culture",
-          "history-society"
-        ],
-        "host_slug": "eventbrite",
-        "organiser": "University of Auckland, Business School"
       }
     ]
   },
@@ -329,7 +268,7 @@
     "lectures": [
       {
         "id": "acb9de0bf9304fb7",
-        "title": "Deloitte Presents: Human × machine lab: Getting human and machine relationships right in HR and workforce decisions",
+        "title": "Human × machine lab: Getting human and machine relationships right in HR and workforce decisions",
         "link": "https://events.humanitix.com/deloitte-presents-human-machine-lab-getting-human-and-machine-relationships-right-in-hr-and-workforce-decisions",
         "time_start": "2026-05-18T13:00:00+12:00",
         "time_end": "2026-05-18T14:30:00+12:00",
@@ -342,7 +281,7 @@
       },
       {
         "id": "1092d277ff445319",
-        "title": "Deloitte Presents: Perspectives in data: Building Aotearoa's future with Databricks and Tech Women",
+        "title": "Perspectives in data: Building Aotearoa's future with Databricks and Tech Women",
         "link": "https://events.humanitix.com/deloitte-presents-perspectives-in-data-building-aotearoa-s-future-with-databricks",
         "time_start": "2026-05-18T15:00:00+12:00",
         "time_end": "2026-05-18T16:30:00+12:00",
@@ -358,7 +297,7 @@
       },
       {
         "id": "cce7967c19d96aa3",
-        "title": "Deloitte presents: Regional tech panel: Future of tech in Marlborough",
+        "title": "Regional tech panel: Future of tech in Marlborough",
         "link": "https://events.humanitix.com/deloitte-presents-regional-tech-panel-future-of-tech-in-marlborough",
         "time_start": "2026-05-18T16:30:00+12:00",
         "time_end": "2026-05-18T18:00:00+12:00",
@@ -371,7 +310,7 @@
       },
       {
         "id": "ba2dd526b346cb10",
-        "title": "Deloitte Presents: The Art of the Possible: Leveraging AI for Supply Chain Resilience",
+        "title": "The Art of the Possible: Leveraging AI for Supply Chain Resilience",
         "link": "https://events.humanitix.com/deloitte-presents-the-art-of-the-possible-leveraging-ai-for-energy-resilient-value-chains",
         "time_start": "2026-05-19T07:00:00+12:00",
         "time_end": "2026-05-19T09:30:00+12:00",
@@ -387,7 +326,7 @@
       },
       {
         "id": "ced2707cbf21f28a",
-        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
+        "title": "Agentic blueprinting: Driving value from AI",
         "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
         "time_start": "2026-05-19T09:00:00+12:00",
         "time_end": "2026-05-19T10:00:00+12:00",
@@ -400,7 +339,7 @@
       },
       {
         "id": "e42257690cdde024",
-        "title": "Deloitte Presents: Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
+        "title": "Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
         "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
         "time_start": "2026-05-19T09:00:00+12:00",
         "time_end": "2026-05-19T17:00:00+12:00",
@@ -416,7 +355,7 @@
       },
       {
         "id": "93d3306be97bd05b",
-        "title": "Deloitte Presents: Your next customer may not be human!",
+        "title": "Your next customer may not be human!",
         "link": "https://events.humanitix.com/deloitte-presents-your-next-customer-may-not-be-human",
         "time_start": "2026-05-19T14:00:00+12:00",
         "time_end": "2026-05-19T15:30:00+12:00",
@@ -429,7 +368,7 @@
       },
       {
         "id": "7423082faeba0062",
-        "title": "Deloitte presents: Vibe coding or tech debt? Building fast without paying later",
+        "title": "Vibe coding or tech debt? Building fast without paying later",
         "link": "https://events.humanitix.com/deloitte-presents-vibe-coding-or-tech-debt-building-fast-without-paying-later",
         "time_start": "2026-05-19T16:00:00+12:00",
         "time_end": "2026-05-19T18:30:00+12:00",
@@ -828,7 +767,7 @@
     "lectures": [
       {
         "id": "6c85bd14c67bf65d",
-        "title": "Our Mysterious Brain: The Making and Breaking of Memories - AUCKLAND",
+        "title": "Our Mysterious Brain: The Making and Breaking of Memories",
         "link": "https://www.royalsociety.org.nz/events/our-mysterious-brain-the-making-and-breaking-of-memories-auckland",
         "time_start": "2026-05-19T18:00:00+12:00",
         "summary": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember – or forget.",
@@ -904,25 +843,6 @@
         "host_slug": "studio-one"
       },
       {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -939,6 +859,25 @@
         "tags": [
           "arts-culture",
           "history-society"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -1024,14 +963,17 @@
     "description": "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
     "lectures": [
       {
-        "id": "95802a3f9566c770",
-        "title": "2026 Alice Griffin Shakespeare Lecture",
-        "link": "https://www.eventbrite.co.nz/e/2026-alice-griffin-shakespeare-lecture-tickets-1985879327527",
-        "time_start": "2026-05-13T18:00:00+12:00",
-        "summary": "Shakespeare as Reviser: The Merry Wives of Windsor",
-        "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
+        "id": "6f8154369b41962d",
+        "title": "Speech-language therapists can talk you into anything",
+        "link": "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659",
+        "time_start": "2026-05-14T17:00:00+12:00",
+        "summary": "Professor Clare McCann's Inaugural Lecture",
+        "description": "Professor Clare McCann's Inaugural Lecture",
         "free": true,
-        "location": "B401-401, 20 Symonds Street, Auckland",
+        "location": "FMHS Lecture Theatre, 505-007, Level 0, Grafton Campus, 85 Park Road, Auckland",
+        "tags": [
+          "literature-writing"
+        ],
         "host_slug": "auckland"
       },
       {
@@ -1097,7 +1039,7 @@
     "lectures": [
       {
         "id": "600ca550291d52a4",
-        "title": "Hamilton Public Lecture by Professor Nicola Daly",
+        "title": "Hamilton Public Lecture",
         "link": "https://HPLnicoladaly.eventbrite.co.nz",
         "time_start": "2026-05-12T17:30:00+12:00",
         "summary": "We often underestimate picturebooks, but the truth is they reflect what we want to pass on to our tamariki-mokopuna; they are incredibly powerful.",
@@ -1111,7 +1053,7 @@
       },
       {
         "id": "0b472d46885f049a",
-        "title": "Hamilton Public Lecture by Professor Judy Bowen",
+        "title": "Hamilton Public Lecture",
         "link": "https://HPLjudybowen.eventbrite.co.nz",
         "time_start": "2026-05-26T00:00:00+12:00",
         "summary": "Technology is embedded into every part of our lives, but what can we do to make certain that it is reliable, usable and safe?",
@@ -1126,7 +1068,7 @@
       },
       {
         "id": "7bf84ac607a16c8c",
-        "title": "Regulatory Law through the Lens of Law-in-Context' by Dr Simon Robb",
+        "title": "Regulatory Law through the Lens of Law-in-Context'",
         "link": "https://www.waikato.ac.nz/news-events/events/find-event/regulatory-law-through-the-lens-of-law-in-context-by-dr-simon-robb/",
         "time_start": "2026-05-27T13:00:00+12:00",
         "summary": "Dr Simon Robb has academic foundations in sociology and law and draws on his regulatory career to explore law-in-context insights that deepen understanding of governance and regulatory practice.",
@@ -1337,29 +1279,6 @@
         "location": "Wellington",
         "tags": [
           "literature-writing"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "71fe220011968c3a",
-        "title": "School-leaver scholarship applications open for 2027",
-        "link": "https://www.wgtn.ac.nz/events/2026/dates/school-leaver-scholarships-applications-open-for-2027",
-        "time_start": "2026-06-01T00:01:00+12:00",
-        "free": false,
-        "location": "Wellington",
-        "host_slug": "victoria"
-      },
-      {
-        "id": "bca72501b20fb8eb",
-        "title": "Postgraduate Information Webinar",
-        "link": "https://www.wgtn.ac.nz/events/2026/06/postgraduate-information-webinar",
-        "time_start": "2026-06-18T18:00:00+12:00",
-        "summary": "Come along to our online postgraduate webinar. Learn about choosing programmes, career pathways, and exploring your research interests. Hosted online via zoom, this...",
-        "description": "Come along to our online postgraduate webinar. Learn about choosing programmes, career pathways, and exploring your research interests. Hosted online via zoom, this...",
-        "free": false,
-        "location": "Wellington",
-        "tags": [
-          "science-technology"
         ],
         "host_slug": "victoria"
       },

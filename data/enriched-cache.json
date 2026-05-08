@@ -117,6 +117,13 @@
     "summary": "Perspectives in data: Building Aotearoa's future with Databricks and Tech Women, hosted by Deloitte Techweek26.",
     "description": "This session addresses perspectives in data, focusing on building Aotearoa's future using Databricks and involving Tech Women, hosted by Deloitte Techweek26."
   },
+  "110751ff6112b13a": {
+    "event_type": "festival",
+    "summary": "Come celebrate archaeology with us!",
+    "description": "Visit the Canterbury Museum Pop-Up for collection highlights and temporary exhibitions while our main building is redeveloped.",
+    "excluded": true,
+    "exclude_reason": "Cultural showcase/festival focus"
+  },
   "11dc8475abd89d26": {
     "event_type": "workshop",
     "summary": "Tamariki Time workshop at Te Papa, making nature picture frames.",
@@ -164,6 +171,11 @@
   "1e871946e014fdb7": {
     "event_type": "ceremony",
     "summary": "Celebrate the announcement of the 2026 Ockham New Zealand Book Awards longlist, featuring readings from authors in all four categories."
+  },
+  "1f65330f90ae035b": {
+    "event_type": "panel",
+    "summary": "This panel explores the role of dyslexic thinking in modern business, leadership, and innovation, presenting it as a potential strategic advantage.",
+    "description": "The discussion examines how the cognitive patterns associated with dyslexia might translate into novel approaches for modern business challenges. Participants will explore how diverse thinking styles, including those often associated with dyslexia, can drive innovation and reshape leadership strategies. The session provides insights into harnessing this perspective for organizational advantage."
   },
   "1f6536ed97b55103": {
     "event_type": "lecture",
@@ -425,6 +437,11 @@
     "summary": "This talk examines Asia-Pacific LNG trends to understand how New Zealand can maintain energy security and stability.",
     "description": "The energy sector faces complex challenges regarding reliable and sustainable supply. This discussion analyzes the recent trends in Liquefied Natural Gas (LNG) across the Asia-Pacific region. Attendees will gain insight into how international energy dynamics can inform and strengthen New Zealand's own national energy balancing strategies."
   },
+  "4eb49528e01bc8dd": {
+    "event_type": "symposium",
+    "summary": "This symposium will bring together researchers to discuss cutting-edge work in cosmology, particle astrophysics, and general relativity, covering topics like dark matter and gravitational waves.",
+    "description": "This symposium integrates the International Symposium on Cosmology and Particle Astrophysics (CosPA2026) and the Australasian Conference on General Relativity and Gravitation (ACGRG13v). The event aims to convene theorists, experimentalists, and observers to discuss cutting-edge observations and theoretical developments across cosmology, particle physics, and gravity. Key areas of discussion include classical and quantum theories of gravity, dark matter, and gravitational waves."
+  },
   "52cbd11960f48258": {
     "event_type": "lecture",
     "summary": "Shaun Higgins discusses WWII POW art.",
@@ -602,6 +619,11 @@
         "bio": "Minister for Trade and Investment"
       }
     ]
+  },
+  "730748b019323c6f": {
+    "event_type": "talk",
+    "summary": "Ara Poutama Aotearoa (Department of Corrections) presents research on using COBRA database data and GIS mapping to better understand and reduce prison violence.",
+    "description": "Ara Poutama Aotearoa (Department of Corrections) tracks every violent incident in prison through the COBRA database. This research looks at how that data can be combined with mapping tech (GIS) to better understand and help reduce prison violence."
   },
   "7423082faeba0062": {
     "event_type": "talk",
