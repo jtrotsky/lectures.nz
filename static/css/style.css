@@ -239,10 +239,11 @@ body:has(.page-host) .site-header {
 /* ----- Filters bar -------------------------------------------------- */
 .filters-bar {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 0 24px 12px;
     position: relative;
+    gap: 24px;
 }
 
 .city-pill {
@@ -566,6 +567,69 @@ body:has(.page-host) .site-header {
 .btn-subscribe:hover {
     opacity: 0.85;
 }
+
+/* ----- Weekly digest signup (filters bar) --------------------------- */
+.digest-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.digest-label {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+}
+
+.digest-row {
+    display: flex;
+}
+
+.digest-input {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    border: 1px solid var(--fg);
+    border-right: none;
+    background: transparent;
+    color: var(--fg);
+    outline: none;
+    width: 200px;
+}
+
+.digest-input::placeholder {
+    color: var(--fg-muted);
+}
+
+.digest-btn {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border: 1px solid var(--fg);
+    background: var(--fg);
+    color: var(--bg);
+    cursor: pointer;
+    transition: opacity var(--transition);
+    white-space: nowrap;
+}
+
+.digest-btn:hover   { opacity: 0.75; }
+.digest-btn:disabled { opacity: 0.45; cursor: default; }
+
+.digest-msg {
+    font-size: 0.72rem;
+    min-height: 1em;
+    margin: 0;
+}
+.digest-msg--ok  { color: #2a6636; }
+.digest-msg--err { color: #8b1a1a; }
 
 /* ----- Footer ------------------------------------------------------- */
 .site-footer {

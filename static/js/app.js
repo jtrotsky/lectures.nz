@@ -79,7 +79,27 @@
     track('city_filter', { city: activeCity || 'all' });
     renderCityPill();
     updateRSSLink(activeCity);
+    updateDigestSignup(activeCity);
     applyFilter();
+  }
+
+  function updateDigestSignup(city) {
+    const signup = document.getElementById('digest-signup');
+    if (!signup) return;
+    const label = document.getElementById('digest-label');
+    const msg = document.getElementById('digest-msg');
+    const eligibleCities = window.SUBSCRIBE_CITIES || [];
+
+    if (!city || eligibleCities.indexOf(city.toLowerCase()) === -1) {
+      signup.hidden = true;
+      return;
+    }
+
+    signup.hidden = false;
+    if (label) label.textContent = city + ' weekly digest';
+    if (msg) { msg.textContent = ''; msg.className = 'digest-msg'; }
+    const btn = document.getElementById('digest-btn');
+    if (btn) { btn.disabled = false; btn.textContent = 'Subscribe'; }
   }
 
   function renderCityPill() {
@@ -260,10 +280,51 @@
     cityPill.addEventListener('click', showCityPicker);
   }
 
+  // ---- Weekly digest signup --------------------------------------------
+
+  const digestBtn = document.getElementById('digest-btn');
+  if (digestBtn) {
+    digestBtn.addEventListener('click', function () {
+      const email = document.getElementById('digest-email').value.trim();
+      const msg = document.getElementById('digest-msg');
+      if (!email) return;
+      const city = (activeCity || '').toLowerCase();
+      digestBtn.disabled = true;
+      digestBtn.textContent = 'Subscribing…';
+      fetch('/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, city: city }),
+      })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.ok) {
+          msg.textContent = 'Subscribed! Check your inbox to confirm.';
+          msg.className = 'digest-msg digest-msg--ok';
+          document.getElementById('digest-email').value = '';
+          digestBtn.textContent = 'Subscribed';
+          track('digest_subscribe', { city: city });
+        } else {
+          msg.textContent = data.error || 'Something went wrong.';
+          msg.className = 'digest-msg digest-msg--err';
+          digestBtn.disabled = false;
+          digestBtn.textContent = 'Subscribe';
+        }
+      })
+      .catch(function () {
+        msg.textContent = 'Something went wrong — please try again.';
+        msg.className = 'digest-msg digest-msg--err';
+        digestBtn.disabled = false;
+        digestBtn.textContent = 'Subscribe';
+      });
+    });
+  }
+
   // ---- Init ------------------------------------------------------------
 
   renderCityPill();
   updateRSSLink(activeCity);
+  updateDigestSignup(activeCity);
 
   const initialTopic = getTopicFromURL();
   if (initialTopic) {
