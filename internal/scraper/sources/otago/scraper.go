@@ -1,10 +1,11 @@
 // Package otago scrapes public lecture events from the University of Otago.
 //
-// Otago's events page (https://www.otago.ac.nz/news/events) is protected by
-// Cloudflare's managed challenge — curl receives a JS challenge page, not event
-// listings. No bypass was found without a headless browser.
+// Otago's entire otago.ac.nz domain is behind Cloudflare's managed challenge —
+// all subpaths (events, search, homepage) return a JS challenge page.
+// Their iCal feed (/news/events/public-lectures?format=ical) exists but is
+// equally blocked. No accessible API or feed was found.
 //
-// Returns 0 events until a scraping approach is found.
+// Returns 0 events until Otago's Cloudflare config changes or another feed appears.
 package otago
 
 import (
