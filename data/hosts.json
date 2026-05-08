@@ -144,6 +144,29 @@
     ]
   },
   {
+    "slug": "canterbury-museum",
+    "name": "Canterbury Museum",
+    "city": "Christchurch",
+    "website": "https://www.canterburymuseum.com/visit/whats-on/",
+    "description": "Canterbury Museum (Te Papa o Ōtautahi) hosts public programmes, talks, and events celebrating the natural and cultural heritage of Canterbury and the Pacific.",
+    "lectures": [
+      {
+        "id": "110751ff6112b13a",
+        "title": "Ōtautahi Christchurch Festival of Archaeology",
+        "link": "https://www.canterburymuseum.com/visit/whats-on/ōtautahi-christchurch-festival-of-archaeology",
+        "time_start": "2026-05-09T11:00:00+12:00",
+        "summary": "Come celebrate archaeology with us!",
+        "description": "Visit the Canterbury Museum Pop-Up for collection highlights and temporary exhibitions while our main building is redeveloped.",
+        "free": true,
+        "location": "Te Whare Waiutuutu Kate Sheppard House, 83 Clyde Road, Christchurch",
+        "tags": [
+          "history-society"
+        ],
+        "host_slug": "canterbury-museum"
+      }
+    ]
+  },
+  {
     "slug": "eventbrite",
     "name": "Eventbrite NZ",
     "website": "https://www.eventbrite.co.nz",
@@ -356,6 +379,19 @@
         "organiser": "Deloitte Techweek26"
       },
       {
+        "id": "ced2707cbf21f28a",
+        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
+        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "e42257690cdde024",
         "title": "Deloitte Presents: Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
         "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
@@ -368,19 +404,6 @@
         "tags": [
           "arts-culture"
         ],
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "ced2707cbf21f28a",
-        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
-        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
-        "time_start": "2026-05-19T09:00:00+12:00",
-        "time_end": "2026-05-19T10:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -1016,20 +1039,6 @@
         "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
         "free": true,
         "location": "B401-401, 20 Symonds Street, Auckland",
-        "host_slug": "auckland"
-      },
-      {
-        "id": "6f8154369b41962d",
-        "title": "Speech-language therapists can talk you into anything",
-        "link": "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659",
-        "time_start": "2026-05-14T17:00:00+12:00",
-        "summary": "Professor Clare McCann's Inaugural Lecture",
-        "description": "Professor Clare McCann's Inaugural Lecture",
-        "free": true,
-        "location": "FMHS Lecture Theatre, 505-007, Level 0, Grafton Campus, 85 Park Road, Auckland",
-        "tags": [
-          "literature-writing"
-        ],
         "host_slug": "auckland"
       },
       {

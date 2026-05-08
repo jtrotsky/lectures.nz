@@ -25,6 +25,7 @@ import (
 	gusfisher "github.com/jtrotsky/lectures.nz/internal/scraper/sources/gus-fisher"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/motat"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/canterbury"
+	canterburymuseum "github.com/jtrotsky/lectures.nz/internal/scraper/sources/canterbury-museum"
 	nationallibrary "github.com/jtrotsky/lectures.nz/internal/scraper/sources/national-library"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/objectspace"
 	"github.com/jtrotsky/lectures.nz/internal/scraper/sources/ockham"
@@ -229,6 +230,7 @@ func run() error {
 		&victoria.Scraper{},
 		&otago.Scraper{},
 		&canterbury.Scraper{},
+		&canterburymuseum.Scraper{},
 		&aucklandartgallery.Scraper{},
 		&tepapa.Scraper{},
 		&nationallibrary.Scraper{},
