@@ -148,6 +148,11 @@
     "excluded": true,
     "exclude_reason": "Not a formal lecture/talk component"
   },
+  "1e4c2168b36632c7": {
+    "event_type": "talk",
+    "summary": "Celebrate the opening of Gus Fisher Gallery’s winter exhibitions, featuring Claude Cahun and Marcel Moore, alongside Lucy Meyle’s 'Phone Tree'.",
+    "description": "Studies for a Keepsake marks the first exhibition of pioneering French Surrealists Claude Cahun (1894-1954) and Marcel Moore (1892-1972) in Aotearoa. Additionally, Tāmaki Makaurau artist Lucy Meyle presents 'Phone Tree', which explores moth traps through drawing, casting, and lacework."
+  },
   "1e871946e014fdb7": {
     "event_type": "ceremony",
     "summary": "Celebrate the announcement of the 2026 Ockham New Zealand Book Awards longlist, featuring readings from authors in all four categories."
@@ -270,6 +275,11 @@
         "bio": "Munich professor of education"
       }
     ]
+  },
+  "2d964e637ef86463": {
+    "event_type": "talk",
+    "summary": "Film screening of 'Speaking in Stone,' a short film commissioned following the death of sculptor John Edgar ONZM, presented at Martino Gamper’s exhibition Endgrained.",
+    "description": "The film 'Speaking in Stone' was commissioned after the death of renowned sculptor John Edgar ONZM. It captures the essence of the artist's life and studio environment, which remains filled with unfinished work. Directed by Greg Wood with music by Peter Hobbs, the film presents visual encounters alongside a soundscape composed from tools and sounds recorded at the sculptor's workshop."
   },
   "2eea4335227e348d": {
     "event_type": "seminar",
@@ -894,6 +904,21 @@
     "event_type": "workshop",
     "summary": "This workshop introduces participants to the world of Chinese martial arts through guided movements, cultural insights, and educational sessions."
   },
+  "a99209c8cf951dc1": {
+    "event_type": "talk",
+    "summary": "Lisa Beauchamp and Ruth Minh Ha will lead a guided tour of Studies for a Keepsake: Claude Cahun and Marcel Moore, discussing the curatorial framework of the first Aotearoa exhibition.",
+    "description": "Lisa Beauchamp, Curator of Contemporary Art at Gus Fisher Gallery, and Ruth Minh Ha, Assistant Curator at Irene Fisher, will lead a guided tour through the exhibition Studies for a Keepsake: Claude Cahun and Marcel Moore. They will discuss the curatorial framework that shaped the first Aotearoa exhibition featuring these pioneering artists.",
+    "speakers": [
+      {
+        "name": "Lisa Beauchamp",
+        "bio": "Curator of Contemporary Art at Gus Fisher Gallery"
+      },
+      {
+        "name": "Ruth Minh Ha",
+        "bio": "Assistant Curator at Irene Fisher"
+      }
+    ]
+  },
   "aba91cecd08be353": {
     "event_type": "seminar",
     "summary": "Victoria University hosts linguistics seminar on arguing about morphemes.",
@@ -914,6 +939,12 @@
     "event_type": "seminar",
     "summary": "This seminar addresses how to correctly manage relationships between humans and machines within HR and workforce decision-making processes.",
     "description": "The intersection of human capability and machine intelligence is fundamentally reshaping Human Resources and workforce strategy. Participants will examine the critical responsibilities involved in designing ethical and effective human-machine interactions within organizational decision-making. This discussion provides frameworks for navigating technological integration while preserving the core elements of human capital management."
+  },
+  "acc08f44e4d1fa88": {
+    "event_type": "talk",
+    "description": "Annual Pass Donate Search Visit Plan Your Visit Opening Hours Prices Location \u0026amp; Parking Food and Drink Tram Information Map Accessibility What\u0026#x27;s On Events Exhibitions Experiences Te Puawānanga Science and Technology Centre LIVE Days Learning Programmes Online Workshops STEAM Cells Tech Kits Solve for Tomorrow Booking Information Innovation Forge Collection \u0026amp; Stories Collections Online Stories Walsh Memorial Library Collection Offer Support \u0026amp; Join Adopt A Tram Donate Bequests Partnerships Careers Volunteers Shop TICKETS Annual Pass const t=\"undefined\"!=typeof HTMLImageElement\u0026\u0026\"loading\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\"img[data-main-image]\");for(let e of t){e.dataset.src\u0026\u0026(e.setAttribute(\"src\",e.dataset.src),e.removeAttribute(\"data-src\")),e.dataset.srcset\u0026\u0026(e.setAttribute(\"srcset\",e.dataset.srcset),e.removeAttribute(\"data-srcset\"));const t=e.parentNode.querySelectorAll(\"source[data-srcset]\");for(let e of t)e.setAttribute(\"srcset\",e.dataset.srcset),e.removeAttribute(\"data-srcset\");e.complete\u0026\u0026(e.style.opacity=1,e.parentNode.parentNode.querySelector(\"[data-placeholder-image]\").style.opacity=0)}} 04 - 05 June 6pm - 9pm | 06 June 6pm - 10pm MOTAT After Dark BOOK NOW Date \u0026amp; Time 04 - 05 June 6pm - 9pm | 06 June 6pm - 10pm",
+    "excluded": true,
+    "exclude_reason": "General public event, not educational lecture."
   },
   "adb78f3c44febf5d": {
     "summary": "Join Dr Pilar Villamor for the annual Hochstetter Lecture, as she reviews 25 years of trenching active faults in volcanic environments and how a scientist's perspective on tectonics close to volcanoes changed through that time.",
@@ -1042,6 +1073,11 @@
         "bio": "Kaiāwhina Whakaaturanga Assistant Curator"
       }
     ]
+  },
+  "c33d0f15166dfb58": {
+    "event_type": "talk",
+    "summary": "The talk will deep dive into the history, significant figures, and contemporary developments in botanical art and illustration.",
+    "description": "This event will deep dive into the history, significant figures and contemporary developments in botanical art and illustration."
   },
   "c3fe748234d3e3ec": {
     "event_type": "workshop",
@@ -1304,6 +1340,16 @@
     "speakers": [
       {
         "name": "Mahdis Azarmandi"
+      }
+    ]
+  },
+  "f97ff68eb8b1af43": {
+    "event_type": "talk",
+    "summary": "This discussion explores the life and significant photographic contributions of Leslie Adkin, a notable early photographer in New Zealand's history.",
+    "description": "This session provides a deep dive into the photographic career of Leslie Adkin, examining his role as one of New Zealand's finest early photographers. Attendees will gain insight into the historical context and lasting visual record provided by Adkin's work.",
+    "speakers": [
+      {
+        "name": "Leslie Adkin"
       }
     ]
   },

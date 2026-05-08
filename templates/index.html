@@ -17,21 +17,23 @@
   </header>
 
   <div class="filters-bar">
-    <div class="digest-signup" id="digest-signup" hidden>
-      <span class="digest-label" id="digest-label">Weekly digest</span>
-      <div class="digest-row">
-        <input type="email" id="digest-email" class="digest-input" placeholder="your@email.com" autocomplete="email">
-        <button type="button" id="digest-btn" class="digest-btn">Subscribe</button>
+    <div class="filters-right">
+      <button id="city-pill" class="city-pill" type="button">
+        <svg class="city-pill-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span class="city-pill-label">All cities</span>
+      </button>
+      <div class="digest-signup" id="digest-signup" hidden>
+        <span class="digest-label" id="digest-label">Weekly digest</span>
+        <div class="digest-row">
+          <input type="email" id="digest-email" class="digest-input" placeholder="your@email.com" autocomplete="email">
+          <button type="button" id="digest-btn" class="digest-btn">Subscribe</button>
+        </div>
+        <p class="digest-msg" id="digest-msg" aria-live="polite"></p>
       </div>
-      <p class="digest-msg" id="digest-msg" aria-live="polite"></p>
     </div>
-    <button id="city-pill" class="city-pill" type="button">
-      <svg class="city-pill-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-        <circle cx="12" cy="10" r="3"/>
-      </svg>
-      <span class="city-pill-label">All cities</span>
-    </button>
   </div>
 
   <div class="lectures-container" id="lectures-container">

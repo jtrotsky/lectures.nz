@@ -239,11 +239,17 @@ body:has(.page-host) .site-header {
 /* ----- Filters bar -------------------------------------------------- */
 .filters-bar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-start;
     padding: 0 24px 12px;
     position: relative;
-    gap: 24px;
+}
+
+.filters-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
 }
 
 .city-pill {
@@ -572,8 +578,12 @@ body:has(.page-host) .site-header {
 .digest-signup {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 6px;
-    flex: 1;
+}
+
+.digest-signup[hidden] {
+    display: none;
 }
 
 .digest-label {

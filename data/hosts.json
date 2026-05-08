@@ -12,16 +12,6 @@
     "description": "Artspace Aotearoa in Tāmaki Makaurau hosts artist talks, lectures, curator tours, and public programmes alongside its contemporary art exhibitions.",
     "lectures": [
       {
-        "id": "ff8ae22d11fe7fac",
-        "title": "In Focus: The image that moves me with Selina Ershadi and Nova Paul",
-        "link": "https://artspace-aotearoa.nz/events/in-focus-the-image-that-moves-me",
-        "time_start": "2026-05-08T18:00:00+12:00",
-        "description": "Join artists and filmmakers Selina Ershadi and Nova Paul for a one-day workshop for early career artists with an interest in moving image making. This workshop will draw on Selina and Nova’s interest in film as a key tool to tell personal stories …",
-        "free": true,
-        "location": "Artspace Aotearoa, 292 Karangahape Road, Auckland",
-        "host_slug": "artspace"
-      },
-      {
         "id": "a244e0dfe41b06b5",
         "title": "Kaitohu Director’s exhibition tour",
         "link": "https://artspace-aotearoa.nz/events/kaitohu-director-s-exhibition-tour",
@@ -85,19 +75,14 @@
     "description": "AUT hosts public lectures, symposia, and open events across its Auckland campuses.",
     "lectures": [
       {
-        "id": "33001181c2a3a6b3",
-        "title": "AUT Technology in Society",
-        "link": "https://www.aut.ac.nz/events/aut-technology-in-society-trust,-responsibility-and-opportunity-in-the-ai-enabled-world",
-        "time_start": "2026-05-14T17:00:00+12:00",
-        "summary": "Vice-Chancellor Damon Salesa will discuss AI and Data Sovereignty with a panel of industry experts and consider the critical need for trust and ethics",
-        "description": "Vice-Chancellor Damon Salesa will discuss\u0026nbsp;AI and Data Sovereignty\u0026nbsp;with a panel of industry experts and consider the critical need for trust and ethics",
+        "id": "a38c1adb5dea7997",
+        "title": "NZ Podcasting Summit",
+        "link": "https://www.aut.ac.nz/events/nz-podcasting-summit",
+        "time_start": "2026-05-09T09:00:00+12:00",
+        "summary": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa… as well as the podcast curious. Join us for a full day of co",
+        "description": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa\u0026hellip; as well as the podcast curious. Join us for a full day of co",
         "free": true,
-        "location": "AUT City Campus, WG Building, 201, Auckland",
-        "tags": [
-          "science-technology",
-          "history-society",
-          "philosophy-ideas"
-        ],
+        "location": "AUT City Campus, WG Building,, Auckland",
         "host_slug": "aut"
       }
     ]
@@ -274,7 +259,37 @@
     "slug": "gus-fisher",
     "name": "Gus Fisher Gallery",
     "website": "https://gusfishergallery.auckland.ac.nz/upcoming-events/",
-    "description": "Gus Fisher Gallery at the University of Auckland hosts artist talks, film screenings, panel discussions, and public programmes in contemporary art."
+    "description": "Gus Fisher Gallery at the University of Auckland hosts artist talks, film screenings, panel discussions, and public programmes in contemporary art.",
+    "lectures": [
+      {
+        "id": "1e4c2168b36632c7",
+        "title": "Studies for a keepsake",
+        "link": "https://gusfishergallery.auckland.ac.nz/upcoming-exhibitions/",
+        "time_start": "2026-05-28T18:00:00+12:00",
+        "summary": "You’re warmly invited to celebrate the opening of Gus Fisher Gallery’s winter exhibitions programme – Studies for a Keepsake: Claude Cahun and Marcel Moore and Phone Tree.",
+        "description": "You’re warmly invited to celebrate the opening of Gus Fisher Gallery’s winter exhibitions programme – Studies for a Keepsake: Claude Cahun and Marcel Moore and Phone Tree. Studies for a Keepsake marks the first exhibition of pioneering French Surrealists Claude Cahun (1894-1954) and Marcel Moore (1892-1972) in Aotearoa. For The Changing Room, Tāmaki Makaurau artist Lucy Meyle presents Phone Tree, which explores moth traps through drawing, casting and lacework. All are welcome, we look forward to welcoming you back into the gallery.",
+        "free": true,
+        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "gus-fisher"
+      },
+      {
+        "id": "a99209c8cf951dc1",
+        "title": "Co-curator tour",
+        "link": "https://gusfishergallery.auckland.ac.nz/studies-for-a-keepsake-claude-cahun-and-marcel-moore/",
+        "time_start": "2026-05-30T18:00:00+12:00",
+        "summary": "Join us for a conversation between Gus Fisher Gallery’s Curator of Contemporary Art Lisa Beauchamp and Irene Fisher Assistant Curator Ruth Minh Ha, who will lead a guided exhibition tour of Studies for a Keepsake: Claude Cahun and Marcel Moore, speaking to the curatorial framework that shaped the first Aotearoa exhibition of these pioneering artists.",
+        "description": "Join us for a conversation between Gus Fisher Gallery’s Curator of Contemporary Art Lisa Beauchamp and Irene Fisher Assistant Curator Ruth Minh Ha, who will lead a guided exhibition tour of Studies for a Keepsake: Claude Cahun and Marcel Moore, speaking to the curatorial framework that shaped the first Aotearoa exhibition of these pioneering artists. All are welcome.",
+        "free": true,
+        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "gus-fisher"
+      }
+    ]
   },
   {
     "slug": "humanitix",
@@ -396,32 +411,6 @@
         "organiser": "Deloitte Techweek26"
       },
       {
-        "id": "283045f10f790cd0",
-        "title": "Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand",
-        "link": "https://events.humanitix.com/deloitte-presents-the-future-of-open-insurance-in-aotearoa-new-zealand",
-        "time_start": "2026-05-19T17:00:00+12:00",
-        "time_end": "2026-05-19T19:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "dab41faa544e7e75",
-        "title": "Deloitte presents: We can’t hire our way out of this",
-        "link": "https://events.humanitix.com/deloitte-presents-we-can-t-hire-our-way-out-of-this-demographics-productivity-and-ai-choices-facing-nz",
-        "time_start": "2026-05-20T09:00:00+12:00",
-        "time_end": "2026-05-20T10:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Wednesday 20th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
         "id": "ae1b385a7cc1d662",
         "title": "Sir John Graham Lecture 2026",
         "link": "https://events.humanitix.com/sir-john-graham-lecture-2026",
@@ -440,7 +429,20 @@
     "slug": "motat",
     "name": "MOTAT",
     "website": "https://motat.nz/events/",
-    "description": "The Museum of Transport and Technology hosts public lectures, panel discussions, science programmes, and special events celebrating innovation and technology."
+    "description": "The Museum of Transport and Technology hosts public lectures, panel discussions, science programmes, and special events celebrating innovation and technology.",
+    "lectures": [
+      {
+        "id": "acc08f44e4d1fa88",
+        "title": "MOTAT After Dark",
+        "link": "https://motat.nz/events/motat-after-dark/",
+        "time_start": "2026-06-04T10:00:00+12:00",
+        "description": "Annual Pass Donate Search Visit Plan Your Visit Opening Hours Prices Location \u0026amp; Parking Food and Drink Tram Information Map Accessibility What\u0026#x27;s On Events Exhibitions Experiences Te Puawānanga Science and Technology Centre LIVE Days Learning Programmes Online Workshops STEAM Cells Tech Kits Solve for Tomorrow Booking Information Innovation Forge Collection \u0026amp; Stories Collections Online Stories Walsh Memorial Library Collection Offer Support \u0026amp; Join Adopt A Tram Donate Bequests Partnerships Careers Volunteers Shop TICKETS Annual Pass const t=\"undefined\"!=typeof HTMLImageElement\u0026\u0026\"loading\"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll(\"img[data-main-image]\");for(let e of t){e.dataset.src\u0026\u0026(e.setAttribute(\"src\",e.dataset.src),e.removeAttribute(\"data-src\")),e.dataset.srcset\u0026\u0026(e.setAttribute(\"srcset\",e.dataset.srcset),e.removeAttribute(\"data-srcset\"));const t=e.parentNode.querySelectorAll(\"source[data-srcset]\");for(let e of t)e.setAttribute(\"srcset\",e.dataset.srcset),e.removeAttribute(\"data-srcset\");e.complete\u0026\u0026(e.style.opacity=1,e.parentNode.parentNode.querySelector(\"[data-placeholder-image]\").style.opacity=0)}} 04 - 05 June 6pm - 9pm | 06 June 6pm - 10pm MOTAT After Dark BOOK NOW Date \u0026amp; Time 04 - 05 June 6pm - 9pm | 06 June 6pm - 10pm",
+        "free": false,
+        "cost": "Ticketed",
+        "location": "MOTAT, 805 Great North Road, Western Springs, Auckland",
+        "host_slug": "motat"
+      }
+    ]
   },
   {
     "slug": "massey",
@@ -721,6 +723,20 @@
           "literature-writing"
         ],
         "host_slug": "objectspace"
+      },
+      {
+        "id": "2d964e637ef86463",
+        "title": "Screening within Endgrained: Speaking in Stone",
+        "link": "https://www.eventbrite.co.nz/e/screening-within-endgrained-speaking-in-stone-tickets-1989061651945?aff=oddtdtcreator\u0026amp;keep_tld=true",
+        "time_start": "2026-05-23T17:15:00+12:00",
+        "summary": "Join us at Objectspace for a film screening of Speaking in Stone, a short film commissioned after the untimely death of renowned and much admired sculptor John Edgar ONZM.",
+        "description": "Join us at Objectspace for a film screening of Speaking in Stone, a short film commissioned after the untimely death of renowned and much admired sculptor John Edgar ONZM.\n\nSpeaking in Stone is directed by Greg Wood with music by Peter Hobbs and has a run time of 19 minutes and 38 seconds. Find out more below.\n\nGuests are welcome to arrive from 4pm for drinks and refreshments. Speeches will begin at 5pm, followed by the screening at 5.15pm, with drinks and mingling to continue afterwards .\n\nThis screening will take place within Martino Gamper’s solo exhibition Endgrained .\n\nJohn Edgar’s studio in West Auckland, once a large industrial ship-building warehouse, had become a vast repository of his copious and prolific creative life. In the aftermath of his death, all those close to him were confronted with the ’remains of the day’ . Every corner and surface echoed that he was no longer here – that the unfinished work would remain – unfinished. Yet all of it demanded attention, recording and processing.\n\nThis was the impetus for Speaking In Stone. Both film-maker Greg Wood and composer Peter Hobbs were given free rein. Neither knew the artist, nor had ever met him. As such, this film is their response to what they encountered in and around the sculptor’s workshop and environs. With utmost sensitivity and subtlety, they have captured the essence of the artist at a time and place that he conjured in his material vision.\n\nThe visual encounters in these spaces are presented alongside a soundscape composed with music and instruments created from tools and sounds recorded at John Edgar's sculpture workshop.\n\nJohn Edgar 1950 – 2021 John Edgar was a sculptor and environmentalist who started out as a scientist – a background that truly defined his approach to creative work. Edgar was meticulous, rigorous, methodical, disciplined, curious and driven. He was influential, immensely talented and achieved a great deal in his lifetime, with at least four decades of making and exhibiting, sales and commissioned work in the private and public sectors.\n\nEdgar was a full-time practicing artist (always an exacting schedule) yet made time to nurture and mentor others and lend his support and effort to causes for which he was passionately aligned. He belonged to communities in many disciplines, highly regarded by all, his contribution was immense and his loss is still unspeakable for those whose lives he touched.\n\nEdgar was made an Officer of the New Zealand Order of Merit for his services to art, in particular to sculpture, in 2009.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
+        "free": false,
+        "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "objectspace"
       }
     ]
   },
@@ -858,25 +874,6 @@
         "host_slug": "studio-one"
       },
       {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -893,6 +890,25 @@
         "tags": [
           "arts-culture",
           "history-society"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
         ],
         "host_slug": "studio-one"
       }
@@ -943,6 +959,36 @@
         "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
         "tags": [
           "arts-culture",
+          "literature-writing"
+        ],
+        "host_slug": "te-papa"
+      },
+      {
+        "id": "f97ff68eb8b1af43",
+        "title": "Leslie Adkin: Local History Discussion",
+        "link": "https://www.tepapa.govt.nz/visit/events/leslie-adkin-local-history-discussion",
+        "time_start": "2026-05-20T17:30:00+12:00",
+        "summary": "Join us for a deep dive discussion on one of New Zealand’s finest early photographers,  Leslie Adkin .",
+        "description": "Join us for a deep dive discussion on one of New Zealand’s finest early photographers,  Leslie Adkin .",
+        "free": false,
+        "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
+        "tags": [
+          "history-society"
+        ],
+        "host_slug": "te-papa"
+      },
+      {
+        "id": "c33d0f15166dfb58",
+        "title": "Botanical Illustration and Art: Author Talk",
+        "link": "https://www.tepapa.govt.nz/visit/events/botanical-illustration-and-art-author-talk",
+        "time_start": "2026-05-26T17:30:00+12:00",
+        "summary": "Join us for this free event that will deep dive into the history, significant figures and contemporary developments in  botanical art and illustration .",
+        "description": "Join us for this free event that will deep dive into the history, significant figures and contemporary developments in  botanical art and illustration . ",
+        "free": false,
+        "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
+        "tags": [
+          "arts-culture",
+          "history-society",
           "literature-writing"
         ],
         "host_slug": "te-papa"
