@@ -321,6 +321,7 @@ var hostCity = map[string]string{
 	"ockham":               "Auckland",
 	"studio-one":           "Auckland",
 	// Wellington
+	"gns":              "Wellington",
 	"motu":             "Wellington",
 	"national-library": "Wellington",
 	"nziia":            "Wellington",

@@ -279,6 +279,13 @@
     ]
   },
   {
+    "slug": "gns",
+    "name": "GNS Science",
+    "city": "Wellington",
+    "website": "https://www.gns.cri.nz/news/",
+    "description": "GNS Science (now part of Earth Sciences New Zealand) hosts public talks, webinars, and community events on earthquakes, volcanoes, climate, and geoscience."
+  },
+  {
     "slug": "gus-fisher",
     "name": "Gus Fisher Gallery",
     "website": "https://gusfishergallery.auckland.ac.nz/upcoming-events/",
@@ -379,6 +386,19 @@
         "organiser": "Deloitte Techweek26"
       },
       {
+        "id": "ced2707cbf21f28a",
+        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
+        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "e42257690cdde024",
         "title": "Deloitte Presents: Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
         "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
@@ -391,19 +411,6 @@
         "tags": [
           "arts-culture"
         ],
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "ced2707cbf21f28a",
-        "title": "Deloitte Presents: Agentic blueprinting: Driving value from AI",
-        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
-        "time_start": "2026-05-19T09:00:00+12:00",
-        "time_end": "2026-05-19T10:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -897,6 +904,25 @@
         "host_slug": "studio-one"
       },
       {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -915,25 +941,6 @@
           "history-society"
         ],
         "host_slug": "studio-one"
-      },
-      {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
       }
     ]
   },
@@ -943,20 +950,6 @@
     "website": "https://www.tepapa.govt.nz/visit/events",
     "description": "The Museum of New Zealand Te Papa Tongarewa hosts lectures, symposia, and public programmes exploring Aotearoa's natural and cultural heritage.",
     "lectures": [
-      {
-        "id": "c3fe748234d3e3ec",
-        "title": "Tamariki Time: Sharing stories in NZSL",
-        "link": "https://www.tepapa.govt.nz/visit/events/tamariki-time-sharing-stories-in-nzsl",
-        "time_start": "2026-05-08T10:00:00+12:00",
-        "summary": "A free interactive drop-in session for tamariki aged 5 and under. This month learn about sharing stories in New Zealand Sign language.",
-        "description": "A free interactive drop-in session for tamariki aged 5 and under. This month learn about sharing stories in New Zealand Sign language. ",
-        "free": false,
-        "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "te-papa"
-      },
       {
         "id": "19b443dab561d5b4",
         "title": "NZSL Week: Whānau Fun",
@@ -1039,20 +1032,6 @@
         "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
         "free": true,
         "location": "B401-401, 20 Symonds Street, Auckland",
-        "host_slug": "auckland"
-      },
-      {
-        "id": "6f8154369b41962d",
-        "title": "Speech-language therapists can talk you into anything",
-        "link": "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659",
-        "time_start": "2026-05-14T17:00:00+12:00",
-        "summary": "Professor Clare McCann's Inaugural Lecture",
-        "description": "Professor Clare McCann's Inaugural Lecture",
-        "free": true,
-        "location": "FMHS Lecture Theatre, 505-007, Level 0, Grafton Campus, 85 Park Road, Auckland",
-        "tags": [
-          "literature-writing"
-        ],
         "host_slug": "auckland"
       },
       {
@@ -1159,6 +1138,21 @@
           "politics-policy"
         ],
         "host_slug": "waikato"
+      },
+      {
+        "id": "730748b019323c6f",
+        "title": "Understanding prison violence using data and maps",
+        "link": "https://www.waikato.ac.nz/news-events/events/find-event/understanding-prison-violence-using-data-and-maps/",
+        "time_start": "2026-05-28T00:00:00+12:00",
+        "summary": "Ara Poutama Aotearoa (Department of Corrections) tracks every violent incident in prison through the COBRA database.",
+        "description": "Ara Poutama Aotearoa (Department of Corrections) tracks every violent incident in prison through the COBRA database. This research looks at how that data can be combined with mapping tech (GIS) to better understand — and help reduce — prison violence.",
+        "free": false,
+        "location": "Online, Hamilton",
+        "tags": [
+          "arts-culture",
+          "science-technology"
+        ],
+        "host_slug": "waikato"
       }
     ]
   },
@@ -1169,27 +1163,6 @@
     "description": "Te Herenga Waka — Victoria University of Wellington hosts regular public lectures, seminars, and events across its faculties and research institutes.",
     "bluesky": "@victoriauniversity.bsky.social",
     "lectures": [
-      {
-        "id": "b3e2988035940c65",
-        "title": "Incidental Acquisition of Novel L2 Vocabulary from Authentic Materials",
-        "link": "https://www.wgtn.ac.nz/lals/about/events/2026-events/incidental-acquisition-of-novel-l2-vocabulary-from-authentic-materials",
-        "time_start": "2026-05-08T16:10:00+12:00",
-        "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the...",
-        "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Dr Mahnaz Aliyar, LALS, Victoria University of Wellington.",
-        "free": true,
-        "location": "Wellington",
-        "speakers": [
-          {
-            "name": "Dr Mahnaz Aliyar",
-            "bio": "LALS, Victoria University of Wellington.\", \"publisher\""
-          }
-        ],
-        "tags": [
-          "science-technology",
-          "literature-writing"
-        ],
-        "host_slug": "victoria"
-      },
       {
         "id": "2f6c979a89a98d02",
         "title": "Reliability Options in Renewables-Dominated Electricity Markets",
