@@ -50,6 +50,80 @@
       <div class="footer-top">
         <div class="footer-left">
           <h2 class="footer-brand">Lectures NZ</h2>
+          <form class="subscribe-form" id="subscribe-form">
+            <label for="subscribe-email" class="subscribe-label">Get weekly email updates</label>
+            <div class="subscribe-row">
+              <input id="subscribe-email" type="email" name="email" placeholder="your@email.com" required class="subscribe-input" autocomplete="email">
+              <select id="subscribe-city" name="city" class="subscribe-select" required>
+                <option value="" disabled selected>City</option>
+                <option value="auckland">Auckland</option>
+                <option value="wellington">Wellington</option>
+                <option value="christchurch">Christchurch</option>
+                <option value="dunedin">Dunedin</option>
+                <option value="hamilton">Hamilton</option>
+                <option value="all-nz">All NZ</option>
+              </select>
+              <button type="submit" class="subscribe-btn">Subscribe</button>
+            </div>
+            <p class="subscribe-msg" id="subscribe-msg" aria-live="polite"></p>
+          </form>
+          <script>
+            (function() {
+              var cities = window.SUBSCRIBE_CITIES || [];
+              var form = document.getElementById('subscribe-form');
+              var select = document.getElementById('subscribe-city');
+
+              // Hide city options with no upcoming lectures, remove form if nothing qualifies
+              var options = select.querySelectorAll('option[value]:not([value=""])');
+              var visible = 0;
+              options.forEach(function(opt) {
+                if (opt.value === 'all-nz') { visible++; return; }
+                if (cities.indexOf(opt.value) === -1) {
+                  opt.remove();
+                } else {
+                  visible++;
+                }
+              });
+              if (visible <= 1) {
+                form.style.display = 'none';
+              }
+            })();
+
+            document.getElementById('subscribe-form').addEventListener('submit', function(e) {
+              e.preventDefault();
+              var btn = this.querySelector('.subscribe-btn');
+              var msg = document.getElementById('subscribe-msg');
+              var email = document.getElementById('subscribe-email').value;
+              var city = document.getElementById('subscribe-city').value;
+              btn.disabled = true;
+              btn.textContent = 'Subscribing…';
+              fetch('/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email, city: city }),
+              })
+              .then(function(r) { return r.json(); })
+              .then(function(data) {
+                if (data.ok) {
+                  msg.textContent = 'Subscribed! Check your inbox to confirm.';
+                  msg.className = 'subscribe-msg subscribe-msg--ok';
+                  e.target.reset();
+                  btn.textContent = 'Subscribed';
+                } else {
+                  msg.textContent = data.error || 'Something went wrong.';
+                  msg.className = 'subscribe-msg subscribe-msg--err';
+                  btn.disabled = false;
+                  btn.textContent = 'Subscribe';
+                }
+              })
+              .catch(function() {
+                msg.textContent = 'Something went wrong — please try again.';
+                msg.className = 'subscribe-msg subscribe-msg--err';
+                btn.disabled = false;
+                btn.textContent = 'Subscribe';
+              });
+            });
+          </script>
         </div>
         <div class="footer-right">
           <div class="footer-resource">
@@ -78,6 +152,7 @@
   <script>
     window.LECTURES_DATA = {{.LecturesJSON}};
     window.HOST_CITY = {{.HostCityJSON}};
+    window.SUBSCRIBE_CITIES = {{.SubscribeCitiesJSON}};
   </script>
   <script src="/static/js/app.js"></script>
   <!-- Cloudflare Web Analytics -->

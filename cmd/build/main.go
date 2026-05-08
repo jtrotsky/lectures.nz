@@ -36,10 +36,11 @@ var nzLoc = func() *time.Location {
 
 // templateData is passed to every page template.
 type templateData struct {
-	Hosts        []model.Host
-	Topics       []topics.Topic
-	LecturesJSON template.JS
-	HostCityJSON template.JS // {"slug": "City", ...} for JS city detection
+	Hosts               []model.Host
+	Topics              []topics.Topic
+	LecturesJSON        template.JS
+	HostCityJSON        template.JS // {"slug": "City", ...} for JS city detection
+	SubscribeCitiesJSON template.JS // ["auckland", ...] cities with ≥4 lectures in next 14 days
 }
 
 // indexData extends templateData for the index page.
@@ -114,11 +115,16 @@ func run() error {
 	if err != nil {
 		return fmt.Errorf("marshal host city json: %w", err)
 	}
+	subscribeCitiesJSONBytes, err := json.Marshal(subscribeCities(lectures))
+	if err != nil {
+		return fmt.Errorf("marshal subscribe cities json: %w", err)
+	}
 	base := templateData{
-		Hosts:        hosts,
-		Topics:       topics.All(),
-		LecturesJSON: template.JS(lecturesJSONBytes),
-		HostCityJSON: template.JS(hostCityJSONBytes),
+		Hosts:               hosts,
+		Topics:              topics.All(),
+		LecturesJSON:        template.JS(lecturesJSONBytes),
+		HostCityJSON:        template.JS(hostCityJSONBytes),
+		SubscribeCitiesJSON: template.JS(subscribeCitiesJSONBytes),
 	}
 
 	// Index page.
@@ -329,6 +335,8 @@ var hostCity = map[string]string{
 	"otago":         "Dunedin",
 	// Christchurch
 	"canterbury": "Christchurch",
+	// Hamilton
+	"waikato": "Hamilton",
 }
 
 // buildSchemaJSON returns a Schema.org Event JSON-LD blob for a lecture page.
@@ -627,6 +635,40 @@ func lectureCity(l model.Lecture) string {
 		}
 	}
 	return hostCity[l.HostSlug]
+}
+
+// subscribeCities returns the lowercase city tags that have at least 4 lectures
+// in the next 14 days — used to gate the newsletter subscribe dropdown.
+func subscribeCities(lectures []model.Lecture) []string {
+	const minLectures = 4
+	const days = 14
+	nzLoc, _ := time.LoadLocation("Pacific/Auckland")
+	now := time.Now().In(nzLoc)
+	cutoff := now.AddDate(0, 0, days)
+
+	counts := map[string]int{}
+	for _, l := range lectures {
+		if l.Excluded {
+			continue
+		}
+		t := l.TimeStart.In(nzLoc)
+		if t.Before(now) || t.After(cutoff) {
+			continue
+		}
+		if c := lectureCity(l); c != "" {
+			counts[strings.ToLower(c)]++
+		}
+	}
+
+	// Return in a stable order matching the subscribe form options.
+	ordered := []string{"auckland", "wellington", "christchurch", "dunedin", "hamilton"}
+	eligible := make([]string, 0, len(ordered))
+	for _, tag := range ordered {
+		if counts[tag] >= minLectures {
+			eligible = append(eligible, tag)
+		}
+	}
+	return eligible
 }
 
 // uniqueCities returns a sorted list of cities that have at least one lecture.
