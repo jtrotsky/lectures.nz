@@ -30,6 +30,7 @@
   <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+  <script>window.SUBSCRIBE_CITIES = {{.SubscribeCitiesJSON}};</script>
   {{block "extra-head" .}}{{end}}
 </head>
 <body>
@@ -152,7 +153,6 @@
   <script>
     window.LECTURES_DATA = {{.LecturesJSON}};
     window.HOST_CITY = {{.HostCityJSON}};
-    window.SUBSCRIBE_CITIES = {{.SubscribeCitiesJSON}};
   </script>
   <script src="/static/js/app.js"></script>
   <!-- Cloudflare Web Analytics -->
