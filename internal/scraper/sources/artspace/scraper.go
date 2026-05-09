@@ -94,13 +94,6 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			// Try without year (shouldn't happen but guard anyway).
 			continue
 		}
-		// Default to 18:00 if no time is available.
-		t = time.Date(t.Year(), t.Month(), t.Day(), 18, 0, 0, 0, nzLoc)
-
-		if t.Before(now) {
-			continue
-		}
-
 		titleM := titleRe.FindStringSubmatch(block)
 		if titleM == nil {
 			continue
@@ -111,15 +104,25 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 			continue
 		}
 
-		rawDesc := fetchSummary(ctx, eventURL)
+		detail := fetchDetail(ctx, eventURL)
+
+		hour, minute := 18, 0
+		if detail.hour >= 0 {
+			hour, minute = detail.hour, detail.minute
+		}
+		t = time.Date(t.Year(), t.Month(), t.Day(), hour, minute, 0, 0, nzLoc)
+
+		if t.Before(now) {
+			continue
+		}
 
 		lectures = append(lectures, model.Lecture{
 			ID:          scraper.MakeID(eventURL),
 			Title:       scraper.CleanTitle(title),
 			Link:        eventURL,
 			TimeStart:   t,
-			Description: rawDesc,
-			Summary:     scraper.TruncateSummary(rawDesc, 200),
+			Description: detail.description,
+			Summary:     scraper.TruncateSummary(detail.description, 200),
 			Location:    "Artspace Aotearoa, 292 Karangahape Road, Auckland",
 			Free:        true,
 			HostSlug:    "artspace",
@@ -129,16 +132,36 @@ func (s *Scraper) Scrape(ctx context.Context) ([]model.Lecture, error) {
 	return lectures, nil
 }
 
-var summaryRe = regexp.MustCompile(`(?s)<h1[^>]*>.*?</h1>\s*(?:<[^/][^>]*>)*\s*<p[^>]*>([\s\S]*?)</p>`)
+var (
+	summaryRe = regexp.MustCompile(`(?s)<h1[^>]*>.*?</h1>\s*(?:<[^/][^>]*>)*\s*<p[^>]*>([\s\S]*?)</p>`)
+	// Matches "2:00pm – 3:00pm", "6:00pm – 7:00pm", or bare "6:00pm" in a <span class="value"> element.
+	timeValueRe = regexp.MustCompile(`<span class="value">(\d{1,2}:\d{2}(?:am|pm))(?:\s*[–-]|</span>)`)
+)
 
-func fetchSummary(ctx context.Context, eventURL string) string {
+type detailInfo struct {
+	description string
+	// hour and minute from the detail page; -1 if not found.
+	hour, minute int
+}
+
+func fetchDetail(ctx context.Context, eventURL string) detailInfo {
+	info := detailInfo{hour: -1, minute: -1}
 	body, err := scraper.Fetch(ctx, eventURL)
 	if err != nil {
-		return ""
+		return info
 	}
-	m := summaryRe.FindSubmatch(body)
-	if m == nil {
-		return ""
+
+	if m := summaryRe.FindSubmatch(body); m != nil {
+		info.description = scraper.InnerText(string(m[1]))
 	}
-	return scraper.InnerText(string(m[1]))
+
+	if m := timeValueRe.FindSubmatch(body); m != nil {
+		t, err := time.Parse("3:04pm", string(m[1]))
+		if err == nil {
+			info.hour = t.Hour()
+			info.minute = t.Minute()
+		}
+	}
+
+	return info
 }
