@@ -897,6 +897,13 @@
       }
     ]
   },
+  "95f7437bef738575": {
+    "event_type": "concert",
+    "summary": "New Zealand String Quartet at Toi Tauranga Art GalleryStorytellers: Transform in Tauranga\nBehind every piece of music is a story and across their 2026 Season, the New Zealand String Quartet (NZSQ) is diving into them.",
+    "description": "New Zealand String Quartet at Toi Tauranga Art GalleryStorytellers: Transform in Tauranga\nBehind every piece of music is a story and across their 2026 Season, the New Zealand String Quartet (NZSQ) is diving into them. Join them at Toi Tauranga Art Gallery for an evening exploring a rich cross-section of compositional voices and celebrating the art of storytelling through music.\nProgramme\n\nHenry Purcell Fantasias\nAnthony Ritchie Perpetual Motion and Last Dance from String Quartet No.3, ‘In Time’\nFanny Mendelssohn String Quartet in E flat major\nInterval\nSalina Fisher Heal\n\nBenjamin Britten String Quartet No. 2, in C major (Op. 36)\n\n\nTransform opens with Anthony Ritchie, one of Aotearoa’s most eminent composers, celebrating playful melodic lines and infectious rhythm in Perpetual Motion and Last Dance from String Quartet No. 3. Fanny Mendelssohn’s only string quartet showcases her poetic, passionate and introspective voice, too long overlooked in the shadow of her brother, Felix. Salina Fisher’s soothing tribute to grief and loss in Heal serves as a poignant companion to Benjamin Britten’s second string quartet. Written in the immediate aftermath of the Second World War and widely regarded as one of the most extraordinary pieces of the twentieth century, Britten offers a powerful reflection of his inner feelings and a moving tribute to his compositional idol, Henry Purcell.\nThe concert programme, crafted in the NZSQ's signature style, aims to engage audiences of all levels of familiarity with chamber music. Each piece of music is preceded by a lively and informative introduction delivered by the Quartet members themselves. These introductions seek to shed light on the stories behind the music, making it an enriching experience suitable for all audiences.",
+    "excluded": true,
+    "exclude_reason": "Not a lecture or talk event"
+  },
   "960eb2c54daf54c8": {
     "event_type": "talk",
     "summary": "Content Forecast: Blood, violence, depictions of mental distress and death. R13.About the showHamlet’s looking paler than usual. Their father’s dead, mother’s remarried, and...",
@@ -923,6 +930,21 @@
       {
         "name": "Professor Prasanna Gai",
         "bio": "University economist"
+      }
+    ]
+  },
+  "9a2dcb9e71e8b234": {
+    "event_type": "talk",
+    "summary": "Discussion on the latest in AI-assisted coding, featuring talks by John Gregoriadis and Nik Wakelin.",
+    "description": "This gathering aims to discuss and swap notes on AI-assisted coding in a collegial atmosphere with prepared talks and open discussion. Topics include John Gregoriadis' talk on what happens when a worm drives Claude, and Nik Wakelin's presentation on Rare Candy: Power-Levelling Spreadsheet Agents.",
+    "speakers": [
+      {
+        "name": "John Gregoriadis",
+        "bio": "Prosaic"
+      },
+      {
+        "name": "Nik Wakelin",
+        "bio": "Sterling"
       }
     ]
   },
@@ -1422,6 +1444,16 @@
       {
         "name": "Catherine Grant Makokera",
         "bio": "Executive Director, NZIIA"
+      }
+    ]
+  },
+  "e67ad4ca1b438be0": {
+    "event_type": "lecture",
+    "summary": "Emeritus Distinguished Professor Cliff Abraham FRSNZ will speak about mysterious brains and new treatment ideas from his research team.",
+    "description": "Emeritus Distinguished Professor Cliff Abraham FRSNZ will speak about our mysterious brains, and ideas for new treatments emerging from the discoveries made by his research team. This lecture is presented by the Royal Society Te Apārangi and the Auckland Museum Institute.",
+    "speakers": [
+      {
+        "name": "Emeritus Distinguished Professor Cliff Abraham FRSNZ"
       }
     ]
   },
