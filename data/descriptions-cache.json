@@ -335,6 +335,24 @@
       }
     ]
   },
+  "https://www.wgtn.ac.nz/lals/about/events/2026-events/coik-derived-forms-and-the-learner": {
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Professor Kevin Parent, Maritime English Language \u0026 Literature, Korea Maritime and Ocean University",
+    "speakers": [
+      {
+        "name": "Professor Kevin Parent",
+        "bio": "\\u00a0Maritime English Language \u0026 Literature, Korea"
+      }
+    ]
+  },
+  "https://www.wgtn.ac.nz/lals/about/events/2026-events/ian-gordon-fellow-public-lecture-2026-rethinking-language-delay-in-multilingual-children-towards-more-equitable-assessment": {
+    "description": "Speaker Dr Rowena Garcia is a researcher in the Language Development and Multilingualism research group at the Leibniz‑Centre General Linguistics in Berlin, Germany,. Presented by Dr Rowena Garcia, Ian Gordon Fellow 2026",
+    "speakers": [
+      {
+        "name": "Dr Rowena Garcia",
+        "bio": "Ian Gordon Fellow 2026\", \"publisher\": {"
+      }
+    ]
+  },
   "https://www.wgtn.ac.nz/lals/about/events/2026-events/incidental-acquisition-of-novel-l2-vocabulary-from-authentic-materials": {
     "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Dr Mahnaz Aliyar, LALS, Victoria University of Wellington.",
     "speakers": [
@@ -356,6 +374,15 @@
   "https://www.wgtn.ac.nz/lals/about/events/2026-events/new-zealand-sign-language-week-taster-class": {
     "description": "Come join us for a free 45-minute taster class to learn some basics. Learn how to greet, introduce yourself and use some everyday..."
   },
+  "https://www.wgtn.ac.nz/lals/about/events/2026-events/phd-student-flash-talks": {
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by LALS PhD students, Victoria University of Wellington",
+    "speakers": [
+      {
+        "name": "LALS PhD students",
+        "bio": "Victoria University of Wellington\", \"publisher\": {"
+      }
+    ]
+  },
   "https://www.wgtn.ac.nz/lals/about/events/visual-priming-and-speech-perception-among-samoan-speakers": {
     "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Helen Howell, University of Potsdam",
     "speakers": [
@@ -364,6 +391,17 @@
         "bio": "University of Potsdam\", \"publisher\": { \"@type\""
       }
     ]
+  },
+  "https://www.wgtn.ac.nz/law/news-and-events/events/the-universal-purposes,-structure,-and-values-of-contract-law": {
+    "description": "Lecretia Seales Memorial Lecture in Law Reform The Lecretia Seales Memorial Lecture in Law Reform will be delivered by Yvette Tinsley FRSNZ. Many...",
+    "speakers": [
+      {
+        "name": "Professor Yvette Tinsley FRSNZ"
+      }
+    ]
+  },
+  "https://www.wgtn.ac.nz/sacs/about/events/all-things-are-possible-charismatic-christianity-and-the-uncontrollability-of-the-american-political-order": {
+    "description": "Prof Michael Wilkinson - Dean of the Faculty of Humanities and Social Sciences and Professor of Sociology at Trinity Western University, British Columbia..."
   },
   "https://www.wgtn.ac.nz/sacs/about/events/familiarity-amidst-flux-the-navigation-of-well-being-in-spiti-valley-india": {
     "description": "Hirdey Rampal - PhD candidate in Cultural Anthropology at Te Herenga Waka – Victoria University of WellingtonHow do people sustain well-being when the..."

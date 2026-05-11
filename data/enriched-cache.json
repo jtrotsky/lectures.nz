@@ -4,6 +4,18 @@
     "summary": "Discover the MOTAT collection like never before during this unique behind-the-scenes tour.",
     "description": "This is a unique opportunity to explore the MOTAT collection from behind the scenes. Attendees will get an exclusive look at the museum's vast holdings, discovering items and areas usually kept private from the general public. Don't miss these special extra dates for an unparalleled deep dive into the collection."
   },
+  "019098f2d8065563": {
+    "event_type": "workshop",
+    "clean_title": "Learn to Bead Flowers with Kathryn Tsui",
+    "summary": "Exhibiting artist Kathryn Tsui shares French flower beading techniques from her botanical work, Silk Blossom, during a hands-on workshop.",
+    "description": "Exhibiting artist Kathryn Tsui shares French flower beading techniques found in her latest botanical work, Silk Blossom, which is featured in her Lustre Harbour exhibition. Attendees will learn to bead various flowers and make a small posy to take home. No previous beading experience is required.",
+    "speakers": [
+      {
+        "name": "Kathryn Tsui",
+        "bio": "Exhibiting artist"
+      }
+    ]
+  },
   "021f448b54049758": {
     "event_type": "talk",
     "summary": "Hear Dr Josh Emmitt discuss the daily journey of discovery, from excavating new information to challenging misconceptions in archaeology.",
@@ -32,6 +44,17 @@
     "speakers": [
       {
         "name": "CHARLENE TEDROW"
+      }
+    ]
+  },
+  "0886d1278e580c7a": {
+    "event_type": "seminar",
+    "summary": "The School of Linguistics and Applied Language Studies hosts a seminar featuring Professor Kevin Parent on COIK Derived Forms and the Learner.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring visiting researchers and internal faculty. Professor Kevin Parent, from Maritime English Language \u0026 Literature, Korea Maritime and Ocean University, will present on COIK Derived Forms and the Learner.",
+    "speakers": [
+      {
+        "name": "Professor Kevin Parent",
+        "bio": "Maritime English Language \u0026 Literature, Korea Maritime and Ocean University"
       }
     ]
   },
@@ -129,6 +152,37 @@
     "summary": "Tamariki Time workshop at Te Papa, making nature picture frames.",
     "description": "Engage in creative activities at Tamariki Time: Slow Burn – Ahi Tāmau. Create your own nature picture frame using native plants from Bush City."
   },
+  "1544df24ce1b2b71": {
+    "event_type": "talk",
+    "summary": "This series features three conversations with exhibiting artists Jaime Jenkins, Kathryn Tsui, and Heidi Brickell, with guest speakers.",
+    "description": "This event features three conversations with exhibiting artists Jaime Jenkins, Kathryn Tsui, and Heidi Brickell. Topics include Jaime Jenkins with Karl Chitham, Kathryn Tsui with Claire Regnault, and Heidi Brickell with Van Mei. These talks explore art, textiles, and Māori culture.",
+    "speakers": [
+      {
+        "name": "Jaime Jenkins",
+        "bio": "Tauranga Moana-based artist creating ceramic works"
+      },
+      {
+        "name": "Karl Chitham",
+        "bio": "Director of The Dowse Art Museum"
+      },
+      {
+        "name": "Kathryn Tsui",
+        "bio": "Contemporary textile-based artist"
+      },
+      {
+        "name": "Claire Regnault",
+        "bio": "Exhibition \u0026 Programmes Manager at Tauranga Museum"
+      },
+      {
+        "name": "Heidi Brickell",
+        "bio": "Contemporary visual artist based in Ōtaki"
+      },
+      {
+        "name": "Van Mei",
+        "bio": "Curator of Heidi Brickell’s major installation"
+      }
+    ]
+  },
   "184d6aaa593d1460": {
     "event_type": "lecture",
     "summary": "Professor Alexandra Andhov discusses 'Big Tech: Too Big To Fail?' in her inaugural lecture.",
@@ -147,6 +201,17 @@
     "speakers": [
       {
         "name": "FLORENCE ULUTUNU"
+      }
+    ]
+  },
+  "19a74f9595c01aa3": {
+    "event_type": "lecture",
+    "summary": "Dr Rowena Garcia discusses rethinking language delay in multilingual children, focusing on more equitable assessment methods.",
+    "description": "Dr Rowena Garcia, a researcher in the Language Development and Multilingualism research group at the Leibniz-Centre General Linguistics in Berlin, Germany, will discuss rethinking language delay in multilingual children. The lecture focuses on moving towards more equitable assessment methods.",
+    "speakers": [
+      {
+        "name": "Dr Rowena Garcia",
+        "bio": "Researcher at Leibniz-Centre General Linguistics"
       }
     ]
   },
@@ -264,6 +329,16 @@
     "event_type": "talk",
     "summary": "This talk addresses the vital role of coral reefs, which support 25% of marine species and provide coastal defense and food sources.",
     "description": "Following the 16th International Coral Reef Symposium hosted at Victoria University of Wellington, this presentation will cover the critical ecological, defensive, and economic importance of coral reefs."
+  },
+  "28f6911d7417f99b": {
+    "event_type": "lecture",
+    "summary": "Professor Yvette Tinsley FRSNZ delivers the Lecretia Seales Memorial Lecture in Law Reform on reforming remand in prison.",
+    "description": "The lecture addresses the ongoing challenge of reforming remand processes within the prison system. It examines the complexities of the legal frameworks surrounding pre-trial detention and the continuous need for systemic solutions. Attendees will gain insight into key areas of law reform related to custody and imprisonment.",
+    "speakers": [
+      {
+        "name": "Professor Yvette Tinsley FRSNZ"
+      }
+    ]
   },
   "29e57fcd6effffcd": {
     "event_type": "market",
@@ -653,6 +728,18 @@
       }
     ]
   },
+  "7825a7304dae88ab": {
+    "event_type": "lecture",
+    "clean_title": "All Things Are Possible: Charismatic Christianity and the Uncontrollability of the American Political Order",
+    "summary": "Prof Michael Wilkinson examines charismatic Christianity and the concept of uncontrollability within the American political order.",
+    "description": "Professor Michael Wilkinson discusses charismatic Christianity and the notion of uncontrollability as it pertains to the American political order. He is Dean of the Faculty of Humanities and Social Sciences and Professor of Sociology at Trinity Western University, British Columbia.",
+    "speakers": [
+      {
+        "name": "Prof Michael Wilkinson",
+        "bio": "Dean of the Faculty of Humanities and Social Sciences and Professor of Sociology at Trinity Western University, British Columbia"
+      }
+    ]
+  },
   "7879b554665913d7": {
     "event_type": "film",
     "summary": "Screening of 'Welfare' (1975) with introduction and discussion on Aotearoa's welfare systems.",
@@ -854,6 +941,17 @@
     "event_type": "lecture",
     "summary": "The final webinar in the 'This Thinking Life' series examines the historical dimensions of sound.",
     "description": "This webinar completes the 'This Thinking Life' series, focusing on the historical aspects of sound. Participants will gain an understanding of how the perception and use of sound have evolved throughout history."
+  },
+  "9f89787accb1ccaa": {
+    "event_type": "seminar",
+    "summary": "Sara Meymand discusses New Zealand's pro-active trade strategy to navigate the increasingly turbulent and uncertain global trade environment.",
+    "description": "New Zealand's economy relies heavily on international trade, which is currently facing severe disruption from war, unilateral action, and protectionism. This session addresses what New Zealand can do in this volatile landscape. The nation has adopted a pro-active strategy focused on three elements: shoring up the rules, building economic resilience, and growing trade relationships through innovative partnerships.",
+    "speakers": [
+      {
+        "name": "Sara Meymand",
+        "bio": "Divisional Manager, Trade Policy and Negotiations, NZ Ministry of Foreign Affairs and Trade"
+      }
+    ]
   },
   "a0102426b2daac5e": {
     "event_type": "lecture",
@@ -1132,6 +1230,29 @@
     "excluded": true,
     "exclude_reason": "Performance event, not academic talk"
   },
+  "c88ef837a7d3266d": {
+    "event_type": "lecture",
+    "clean_title": "An address by Mr Daniel Sloper",
+    "summary": "Daniel Sloper will outline Australia and New Zealand relations, shared international interests, and Australia's approach to the Indo-Pacific.",
+    "description": "Daniel Sloper, a senior career officer with the Department of Foreign Affairs and Trade (DFAT), will provide an outline of Australia and New Zealand relations, shared international interests, and key elements in Australia's approach to the Indo-Pacific. The presentation will cover current international issues and the relationship between Australia and New Zealand.",
+    "speakers": [
+      {
+        "name": "Daniel Sloper",
+        "bio": "Australian High Commissioner to New Zealand"
+      }
+    ]
+  },
+  "c8de454565e4f841": {
+    "event_type": "lecture",
+    "summary": "Dr. Penelope Jackson presents a four-part lecture series introducing art history, covering topics from picture analysis to art crime.",
+    "description": "Dr. Penelope Jackson presents a four-part lecture series: Unpackaging the Picture, Women and Art, Collections and Exhibitions, and Art and Crime. The series offers deep dives into artwork analysis, gender representation, curatorial practices, and the field of art crime.",
+    "speakers": [
+      {
+        "name": "Dr. Penelope Jackson",
+        "bio": "Former Toi Tauranga Art Gallery Director and Curator"
+      }
+    ]
+  },
   "c918880121cd1fe6": {
     "event_type": "lecture",
     "summary": "Lawrence explores how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment.",
@@ -1301,6 +1422,17 @@
       {
         "name": "Catherine Grant Makokera",
         "bio": "Executive Director, NZIIA"
+      }
+    ]
+  },
+  "e70fc01d90e7bacb": {
+    "event_type": "seminar",
+    "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring visiting researchers and LALS PhD students.",
+    "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the program. These talks are presented by LALS PhD students at Victoria University of Wellington.",
+    "speakers": [
+      {
+        "name": "LALS PhD students",
+        "bio": "Victoria University of Wellington\", \"publisher\": {"
       }
     ]
   },

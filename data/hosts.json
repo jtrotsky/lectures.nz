@@ -6,6 +6,19 @@
     "description": "Art Gallery New Zealand hosts public talks, workshops, and events celebrating art and culture.",
     "lectures": [
       {
+        "id": "019098f2d8065563",
+        "title": "SOLD OUT Learn to Bead Flowers with Kathryn Tsui",
+        "link": "https://artgallery.org.nz/products/learn-to-bead-flowers-workshop-with-artist-kathryn-tsui",
+        "time_start": "2026-06-06T10:00:00+12:00",
+        "summary": "SOLD OUT\nJoin exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.",
+        "description": "SOLD OUT\nJoin exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.\nDuring this workshop you will learn to bead various flowers and make a small posy to take home. No previous beading experience is required, but bring nimble fingers, a dash of patience and your reading glasses! \nThis workshop is designed for those aged 15 years and older. Starting at 1pm there will be a a 15-minute break, with all the material provided in the ticket price. \nGet in quick as there's only 12 spots available!",
+        "free": false,
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "artgallery-nz"
+      },
+      {
         "id": "1544df24ce1b2b71",
         "title": "Top Floor Talks: Jaime Jenkins, Kathryn Tsui, Heidi Brickell",
         "link": "https://artgallery.org.nz/products/in-conversation-artists-and-curators-for-autumn-winter-2026",
@@ -13,19 +26,6 @@
         "summary": "Top Floor Talks return on Sat 6 Jun, 10.30–11.30am.",
         "description": "Top Floor Talks return on Sat 6 Jun, 10.30–11.30am.\\nEnjoy this series of three conversations by exhibiting artists Jaime Jenkins, Kathryn Tsui, and Heidi Brickell, alongside their curator or guest speaker.\\nThis event is free to attend with no registration required, but always welcomed. We encourage you to stay and listen to all three conversations across the morning. 10.30–10.50am: Jaime Jenkins in conversation with Karl ChithamJaime Jenkins is a Tauranga Moana-based artist who creates hand-built ceramic works and installations. Having graduated from Toi Ohomai with an Advanced Diploma in Visual Art, she has gone on to develop a unique 3-dimensional visual language that explores form and environment.\\nKarl Chitham (Te Uriroroi, Ngāpuhi) ONZM is Director of The Dowse Art Museum. A curator and writer, he co-authored Crafting Aotearoa: A Cultural History of New Zealand and the Wider Moana Oceania and has curated major exhibitions including Whetūrangitia\\/Made As Stars and Reuben Paterson: The Only Dream Left and 'Whenua Hou: New Māori ceramics' as director and curator at Tauranga Art Gallery. Chitham has held roles in universities, museums and art galleries and is a trustee of Wairau Māori Art Gallery, the first dedicated public Māori art gallery in Aotearoa.\\n10.50–11.10am: Kathryn Tsui in conversation with Claire RegnaultKathryn Tsui is a contemporary textile-based artist currently living in Te Tara o te Ika a Māui, Coromandel Peninsula. Primarily working in handweaving and beading, her practice is interested in the histories of textiles, and how these threads relate to migration, domestic labour and cultural interchange. Underpinning her practice is the study of Chinese material culture, as well as Aotearoa New Zealand’s art, craft and architectural histories.\\nClaire Regnault is the Exhibition \\u0026amp; Programmes Manager at Tauranga Museum and an Honorary Research Associate at Te Papa, where she worked as a senior curator in the History for fifteen years. A specialist in dress histories, her book Dressed: fashionable dress in Aotearoa New Zealand 1840-1910 (2021) won the award for Best Illustrated Non-Fiction at the 2022 Ockham Book Awards. She is President of Costume \\u0026amp; Textiles Aotearoa New Zealand.\\n11.10–11.30am: Heidi Brickell in conversation with Van MeiHeidi Brickell (Te Hika o Pāpāuma, Ngāti Kahungunu, Rongomaiwahine, Rangitāne, Ngāi Tara, Ngāti Apakura, Airihi, Kōtirana, Ingarangi, Tiamana) is a contemporary visual artist based in Ōtaki, with a background in Māori education and te reo Māori revitalisation.Van Mei is the curator of Heidi Brickell’s major installation, presented in Toi Tauranga Art Gallery's Craigs Investment Partners Gallery.",
         "free": false,
-        "host_slug": "artgallery-nz"
-      },
-      {
-        "id": "019098f2d8065563",
-        "title": "Learn to Bead Flowers with Kathryn Tsui",
-        "link": "https://artgallery.org.nz/products/learn-to-bead-flowers-workshop-with-artist-kathryn-tsui",
-        "time_start": "2026-06-06T10:00:00+12:00",
-        "summary": "Join exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.",
-        "description": "Join exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.\nDuring this workshop you will learn to bead various flowers and make a small posy to take home. No previous beading experience is required, but bring nimble fingers, a dash of patience and your reading glasses! \nThis workshop is designed for those aged 15 years and older. Starting at 1pm there will be a a 15-minute break, with all the material provided in the ticket price. \nGet in quick as there's only 12 spots available!",
-        "free": false,
-        "tags": [
-          "arts-culture"
-        ],
         "host_slug": "artgallery-nz"
       },
       {
@@ -101,14 +101,19 @@
     "description": "AUT hosts public lectures, symposia, and open events across its Auckland campuses.",
     "lectures": [
       {
-        "id": "a38c1adb5dea7997",
-        "title": "NZ Podcasting Summit",
-        "link": "https://www.aut.ac.nz/events/nz-podcasting-summit",
-        "time_start": "2026-05-09T09:00:00+12:00",
-        "summary": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa… as well as the podcast curious. Join us for a full day of co",
-        "description": "Calling all podcast producers, presenters, practitioners and providers from across Aotearoa\u0026hellip; as well as the podcast curious. Join us for a full day of co",
+        "id": "33001181c2a3a6b3",
+        "title": "AUT Technology in Society",
+        "link": "https://www.aut.ac.nz/events/aut-technology-in-society-trust,-responsibility-and-opportunity-in-the-ai-enabled-world",
+        "time_start": "2026-05-14T17:00:00+12:00",
+        "summary": "Vice-Chancellor Damon Salesa will discuss AI and Data Sovereignty with a panel of industry experts and consider the critical need for trust and ethics",
+        "description": "Vice-Chancellor Damon Salesa will discuss\u0026nbsp;AI and Data Sovereignty\u0026nbsp;with a panel of industry experts and consider the critical need for trust and ethics",
         "free": true,
-        "location": "AUT City Campus, WG Building,, Auckland",
+        "location": "AUT City Campus, WG Building, 201, Auckland",
+        "tags": [
+          "science-technology",
+          "history-society",
+          "philosophy-ideas"
+        ],
         "host_slug": "aut"
       }
     ]
@@ -119,21 +124,6 @@
     "website": "https://www.aucklandmuseum.com/visit/whats-on",
     "description": "Tāmaki Paenga Hira Auckland War Memorial Museum hosts public talks, evening events, and cultural programmes exploring Aotearoa's natural and human history.",
     "lectures": [
-      {
-        "id": "c6c4b309d0526a61",
-        "title": "Auckland Youth Choir at Auckland Museum",
-        "link": "https://www.aucklandmuseum.com/visit/whats-on/Auckland-Youth-Choir-at-Auckland-Museum-2026",
-        "time_start": "2026-05-10T10:30:00+12:00",
-        "summary": "In celebration of New Zealand Music Month, join Auckland Youth Choir for two special performances in two of the Museum's most iconic spaces: Te Ao Mārama South Atrium, accompanied by the rich tones of the Museum’s Fazioli grand piano, and the stunning acoustics of the Grand Foyer.",
-        "description": "In celebration of New Zealand Music Month, join Auckland Youth Choir for two special performances in two of the Museum's most iconic spaces: Te Ao Mārama South Atrium, accompanied by the rich tones of the Museum’s Fazioli grand piano, and the stunning acoustics of the Grand Foyer.",
-        "free": false,
-        "cost": "Ticketed",
-        "location": "TE AO MĀRAMA SOUTH ATRIUM \u0026 GRAND FOYER, Auckland War Memorial Museum",
-        "tags": [
-          "arts-culture"
-        ],
-        "host_slug": "auckland-museum"
-      },
       {
         "id": "a73df608b35aec92",
         "title": "Ngā Kākano: Kạp‘ạki - To Embrace",
@@ -335,6 +325,19 @@
         "organiser": "Deloitte Techweek26"
       },
       {
+        "id": "ced2707cbf21f28a",
+        "title": "Agentic blueprinting: Driving value from AI",
+        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
         "id": "e42257690cdde024",
         "title": "Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
         "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
@@ -347,19 +350,6 @@
         "tags": [
           "arts-culture"
         ],
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "ced2707cbf21f28a",
-        "title": "Agentic blueprinting: Driving value from AI",
-        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
-        "time_start": "2026-05-19T09:00:00+12:00",
-        "time_end": "2026-05-19T10:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -429,19 +419,6 @@
     "website": "https://www.massey.ac.nz/about/events/",
     "description": "Massey University hosts public lectures, seminars, and events across its Auckland, Palmerston North, and Wellington campuses.",
     "lectures": [
-      {
-        "id": "200da7812a57519d",
-        "title": "Everything but the medicine - A doctor's tale",
-        "link": "https://www.massey.ac.nz/about/events/everything-but-the-medicine/",
-        "time_start": "2026-05-11T11:30:00+12:00",
-        "description": "Lucy O’Hagan brings her acclaimed memoir, Everything But the Medicine: A Doctor’s Tale to life in a reading and performance.",
-        "free": false,
-        "location": "Wool Building Movie Theatre (WB1)",
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "massey"
-      },
       {
         "id": "f575220e54475c4f",
         "title": "Celebrate 50 years Bachelor of Social Work | 1976–1985",
@@ -655,6 +632,46 @@
         "host_slug": "nziia"
       },
       {
+        "id": "c88ef837a7d3266d",
+        "title": "An address by Mr Daniel Sloper PSM",
+        "link": "https://www.nziia.org.nz/events/an-address-by-mr-daniel-sloper-psm/",
+        "time_start": "2026-05-21T17:30:00+12:00",
+        "summary": "Mr Sloper PSM, is a senior career officer with the Department of Foreign Affairs and Trade (DFAT).",
+        "description": "Mr Sloper PSM, is a senior career officer with the Department of Foreign Affairs and Trade (DFAT). He was most recently First Assistant Secretary, East Asia Division with oversight of relations with China, Hong Kong and Taiwan. He will provide an outline of Australia and New Zealand relations, our shared interests internationally, key elements in Australia's approach to the Indo-Pacific and more broadly and also touch on current international issues. We expect his presentation will be wide ranging covering the relationship between Australia and New Zealand. (more details below) Get your questions ready. This is at the Golf Club where our numbers are restricted to 100. We expect it will be a popular event so please register early Registrations are reserved for members for ONE week and then we will extend the invitation to casual attendees. Please let us know if your plans change and you can no longer come as there will probably be someone keen to take your place. Please note this event will be at the NELSON GOLF CLUB",
+        "free": false,
+        "location": "Nelson Golf Club, 38 Bolt Road, Tahuanui, Nelson",
+        "speakers": [
+          {
+            "name": "Mr Daniel Sloper PSM, Australian High Commissioner to New Zealand"
+          }
+        ],
+        "tags": [
+          "arts-culture",
+          "politics-policy"
+        ],
+        "host_slug": "nziia"
+      },
+      {
+        "id": "9f89787accb1ccaa",
+        "title": "Navigating uncertainty: New Zealand's Trade Strategy in a volatile global trade environment",
+        "link": "https://www.nziia.org.nz/events/navigating-uncertainty-new-zealands-trade-strategy-in-a-volatile-global-trade-environment/",
+        "time_start": "2026-05-21T19:30:00+12:00",
+        "summary": "As members will be well aware, New Zealand is a geographically distant country that depends on its connections with the rest of the world.",
+        "description": "As members will be well aware, New Zealand is a geographically distant country that depends on its connections with the rest of the world. Trade plays a key role in lifting our ability to generate a higher quality and standard of living – it makes up 60 per cent of the country’s total economic activity and the export economy supports 1 in 4 Kiwi jobs. The rules-based trading system has served New Zealand well – a global project of rules, predictability, deepening economic ties, and sustainable development through the progressive liberalisation of trade between all nations. Readers will be familiar with the World Trade Organisation and New Zealand’s long-standing network of free trade agreements; the new Free Trade Agreement with India and our one with Singapore are currently in the headlines. Yet the world’s trading environment has been severely disrupted, not only by war, but also by unilateral trade action and increasing protectionism from major countries. We are trading in a landscape that once felt stable, but is now fluid, uneven, and reshaping itself. The environment is marked by heightened uncertainty and changing expectations. The reality we face is not temporary disruption, but a persistent shift that requires steady judgment, sharp awareness, and deliberate adaptation. So, for us, the question is what can New Zealand do? In today’s increasingly turbulent international trade environment, New Zealand has adopted a pro-active trade strategy to respond to and navigate the headwinds. This is based around three central elements: shoring up the rules, building economic resilience, and growing trade relationships through innovative partnerships. Our speaker is a career diplomat, specialising in trade policy. Sara has recently served as New Zealand’s Ambassador to Mexico (2021-2024), following previous postings to the New Zealand Mission to the EU in Brussels, and to the New Zealand Embassy in Washington DC. Sara has a Bachelor of Laws and a Bachelor of Commerce (Economics) from Otago University and a Master’s in Public Administration from the Harvard Kennedy School of Government. The usual rules of public discourse apply. Coffee and tea are available from 7pm. Non-members are welcome, with a $5 koha. High school or UCOL students are welcome with free entry.",
+        "free": false,
+        "location": "Rosewood, 417 Queen Street, Kuripuni, Masterton",
+        "speakers": [
+          {
+            "name": "Sara Meymand, Divisional Manager, Trade Policy and Negotiations, New Zealand Ministry of Foreign Affairs and Trade"
+          }
+        ],
+        "tags": [
+          "environment",
+          "politics-policy"
+        ],
+        "host_slug": "nziia"
+      },
+      {
         "id": "cbe18b8db8f4d84b",
         "title": "An address by Mike Seawright",
         "link": "https://www.nziia.org.nz/events/address-by-mike-seawright/",
@@ -691,20 +708,6 @@
     "description": "Objectspace is an Auckland gallery dedicated to design and craft. It hosts the Ockham Lecture series, book launches, artist talks, and public workshops.",
     "lectures": [
       {
-        "id": "7ee117204ef80cbf",
-        "title": "Love is an action: A zine-making workshop with Kerry Ann Lee and Moira Clunie",
-        "link": "https://www.eventbrite.co.nz/e/love-is-an-action-zine-making-workshop-with-kerry-ann-lee-and-moira-clunie-tickets-1988049878704?aff=oddtdtcreator",
-        "time_start": "2026-05-10T13:00:00+12:00",
-        "summary": "This workshop is now full booked, to be added to the waitlist please email info@objectspace.org.nz.\n\nWhat does it mean to be in good relationship with one another?",
-        "description": "This workshop is now full booked, to be added to the waitlist please email info@objectspace.org.nz.\n\nWhat does it mean to be in good relationship with one another?\n\nJoin us for a special zine-making workshop exploring whakapapa, whanaungatanga, kinship, histories, mysteries, futures, friendships and affinities.\n\nLed by Kerry Ann Lee and Moira Clunie, the session will explore the potential of playing with type, text, symbols and images, and the role of zines in community building, as keepsakes and love letters to the world.\n\nThrough DIY graphic design, collage, zine-making, and letterpress printing, participants will come together to craft graphic gestures of love, hate, solidarity, care and support in print.\n\nGet your $15 tickets here. All equipment and materials will be provided, as well as tea, snacks and coffee. Mothers and significant others welcome!\n\nKerry Ann Lee is a visual artist, designer and researcher whose interdisciplinary practice spans art, design and publishing. Her work explores cultural identity, diaspora and heritage, drawing on Chinese New Zealand histories and global perspectives. Her creative collaborations have included projects with the Smithsonian Asian Pacific American Center, residencies at the School of Visual Arts NYC, SOMA México, Taipei Artist Village, Santa Fe Art Institute and Yellow Brick Athens, presentations at Booked: Hong Kong Art Book Fair and Sprint Milano, and exhibitions at the Beijing International Art Biennale, Shanghai Art Museum and Te Papa Tongarewa Museum of New Zealand. As Associate Professor in Design, she teaches Illustration, Visual Communication Design and Critical and Contextual Studies across various undergraduate and postgraduate programmes at Toi Rauwhārangi, College of Creative Arts at Te Kunenga ki Pūrehuroa Massey University.\n\nMoira Clunie is a zinester, letterpress printer and social change practitioner based in Tāmaki Makaurau Auckland. Lately they’ve been printing propaganda about trans rights and Tiriti justice, and reflecting on 27 years of making zines. Their day job focuses on building connection and safety for rainbow/LGBTI+ people across Aotearoa.\n\nKerry Ann and Moira are old pals. Moira founded Moon Rocket (2000) and Kerry Ann, Red Letter Distro (2001). They last collaborated 20 years ago – on the first zinefest that Moira and friends organised called Small Print.",
-        "free": false,
-        "location": "Level one, Objectspace, 13 Rose Road, Ponsonby",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "objectspace"
-      },
-      {
         "id": "347ac28eebc4b22c",
         "title": "Movement and music in Endgrained: Xin Ji and Alistair Deverick",
         "link": "https://www.eventbrite.co.nz/e/movement-and-music-in-endgrained-xin-ji-and-alistair-deverick-tickets-1988045572825?aff=oddtdtcreator",
@@ -739,23 +742,7 @@
     "slug": "ockham",
     "name": "Ockham Lecture Series",
     "website": "https://objectspace.org.nz/events",
-    "description": "The Ockham Lecture series is an annual programme of lectures and panel discussions at Objectspace Auckland, supported by Ockham Residential.",
-    "lectures": [
-      {
-        "id": "a183aefe530f57d3",
-        "title": "Ockham Lecture: Connections between Connections with Kerry Ann Lee",
-        "link": "https://www.eventbrite.co.nz/e/ockham-lecture-connections-between-connections-with-kerry-ann-lee-tickets-1988050599861?aff=oddtdtcreator",
-        "time_start": "2026-05-11T18:00:00+12:00",
-        "summary": "Join us for an Ockham Lecture with designer and artist Kerry Ann Lee.",
-        "description": "Join us for an Ockham Lecture with designer and artist Kerry Ann Lee.\n\nOur current exhibition, A Chop That Breathes spans several years of research by Kerry Ann Lee – the latest outcome of a ‘localised transnational intergenerational story about placemaking through printmaking.’\n\nThis talk will explore the creative whakapapa across time, people and places located at the heart of this work. Focusing on ornament, printmaking, and ephemera, Lee willl present a narrative that reveals emotional landscapes living in the space between the studio and the pull of wanderlust into the field.\n\nKerry Ann Lee is a visual artist, designer and researcher whose interdisciplinary practice spans art, design and publishing. Her work explores cultural identity, diaspora and heritage, drawing on Chinese New Zealand histories and global perspectives. Her creative collaborations have included projects with the Smithsonian Asian Pacific American Center, residencies at the School of Visual Arts NYC, SOMA México, Taipei Artist Village, Santa Fe Art Institute and Yellow Brick Athens, presentations at Booked: Hong Kong Art Book Fair and Sprint Milano, and exhibitions at the Beijing International Art Biennale, Shanghai Art Museum and Te Papa Tongarewa Museum of New Zealand.\n\nAs Associate Professor in Design, she teaches Illustration, Visual Communication Design and Critical and Contextual Studies across various undergraduate and postgraduate programmes at Toi Rauwhārangi, College of Creative Arts at Te Kunenga ki Pūrehuroa Massey University.\n\nKerry Ann Lee draws on shared experiences with Guy Ngan as inspiration for A Chop That Breathes . They both are from Te Whanganui a Tara Wellington, share Cantonese heritage, and are alumni from Ngā Pae Māhutonga, the Wellington School of Design at Massey University. Like Ngan, Lee’s work is informed by cultural hybridity in Aotearoa, the Asia-Pacific and beyond.\n\nThe Ockham Lecture series is an annual programme of lectures and panel discussions across different themes that critically engage with craft, design and architecture. This programme is supported by Objectspace's Lead Partner Ockham Residential.",
-        "free": false,
-        "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
-        "tags": [
-          "arts-culture"
-        ],
-        "host_slug": "ockham"
-      }
-    ]
+    "description": "The Ockham Lecture series is an annual programme of lectures and panel discussions at Objectspace Auckland, supported by Ockham Residential."
   },
   {
     "slug": "public-record",
@@ -789,20 +776,7 @@
     "slug": "royal-society",
     "name": "Royal Society Te Apārangi",
     "website": "https://www.royalsociety.org.nz/events",
-    "description": "Royal Society Te Apārangi hosts public events exploring science, research, and ideas shaping New Zealand and the world.",
-    "lectures": [
-      {
-        "id": "6c85bd14c67bf65d",
-        "title": "Our Mysterious Brain: The Making and Breaking of Memories",
-        "link": "https://www.royalsociety.org.nz/events/our-mysterious-brain-the-making-and-breaking-of-memories-auckland",
-        "time_start": "2026-05-19T18:00:00+12:00",
-        "summary": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember – or forget.",
-        "description": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember – or forget.",
-        "free": false,
-        "location": "Auckland War Memorial Museum Auditorium Auckland Museum, Museum Circuit, Parnell, Auckland 1010, New Zealand",
-        "host_slug": "royal-society"
-      }
-    ]
+    "description": "Royal Society Te Apārangi hosts public events exploring science, research, and ideas shaping New Zealand and the world."
   },
   {
     "slug": "studio-one",
@@ -810,26 +784,6 @@
     "website": "https://www.studioone.org.nz/events/",
     "description": "Studio One Toi Tū is Auckland's community arts centre in Grey Lynn, hosting talks, workshops, exhibitions, and cultural events.",
     "lectures": [
-      {
-        "id": "575e90640f923cd8",
-        "title": "Women \u0026 Non-binary Artist Hui: Cyanotype Workshop",
-        "link": "https://www.eventfinda.co.nz/2026/women-non-binary-artist-hui-series-cyanotype-workshop/auckland/ponsonby",
-        "time_start": "2026-05-09T00:00:00+12:00",
-        "summary": "In this cyanotype workshop you’ll discover how science and creativity can coincide.",
-        "description": "In this cyanotype workshop you’ll discover how science and creativity can coincide. Experiment with exposure, shadow, and UV light to create your own unique print using natural materials gathered from your surroundings. Lulu will guide you through two hours of playful exploration, learning, and good chats, perfect for anyone keen to try something new and make art in a relaxed, supportive environment.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "LULU PDF"
-          }
-        ],
-        "tags": [
-          "arts-culture",
-          "science-technology"
-        ],
-        "host_slug": "studio-one"
-      },
       {
         "id": "0bdfb3b4492e9d85",
         "title": "Nz Music Month",
@@ -869,25 +823,6 @@
         "host_slug": "studio-one"
       },
       {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
-      },
-      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -906,6 +841,25 @@
           "history-society"
         ],
         "host_slug": "studio-one"
+      },
+      {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
+        ],
+        "host_slug": "studio-one"
       }
     ]
   },
@@ -916,41 +870,12 @@
     "description": "The Museum of New Zealand Te Papa Tongarewa hosts lectures, symposia, and public programmes exploring Aotearoa's natural and cultural heritage.",
     "lectures": [
       {
-        "id": "19b443dab561d5b4",
-        "title": "NZSL Week: Whānau Fun",
-        "link": "https://www.tepapa.govt.nz/visit/events/nzsl-week-whanau-fun",
-        "time_start": "2026-05-09T10:00:00+12:00",
-        "summary": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae.",
-        "description": "Celebrate New Zealand Sign Language Week with whānau-friendly activities on Rongomaraeroa, Te Papa’s marae.  ",
-        "free": false,
-        "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "te-papa"
-      },
-      {
-        "id": "ca1f64f253399828",
-        "title": "Screening: Sign of the Times – The Story of New Zealand’s Visual Language",
-        "link": "https://www.tepapa.govt.nz/visit/events/screening-sign-of-the-times-the-story-of-new-zealands-visual-language",
-        "time_start": "2026-05-09T12:30:00+12:00",
-        "summary": "Celebrate New Zealand Sign Language week with a special screening of the film  Sign of the Times – The Story of New Zealand’s Visual Language .",
-        "description": "Celebrate New Zealand Sign Language week with a special screening of the film  Sign of the Times – The Story of New Zealand’s Visual Language .\n",
-        "free": false,
-        "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
-        "tags": [
-          "arts-culture",
-          "literature-writing"
-        ],
-        "host_slug": "te-papa"
-      },
-      {
         "id": "f97ff68eb8b1af43",
         "title": "Leslie Adkin: Local History Discussion",
         "link": "https://www.tepapa.govt.nz/visit/events/leslie-adkin-local-history-discussion",
         "time_start": "2026-05-20T17:30:00+12:00",
-        "summary": "Join us for a deep dive discussion on one of New Zealand’s finest early photographers,  Leslie Adkin .",
-        "description": "Join us for a deep dive discussion on one of New Zealand’s finest early photographers,  Leslie Adkin .",
+        "summary": "Join Te Papa Press for a deep dive discussion on one of New Zealand’s finest early photographers, Leslie Adkin.  This event is at the Te Matapihi ki te Ao Nui | Wellington’s Central Library.",
+        "description": "Join Te Papa Press for a deep dive discussion on one of New Zealand’s finest early photographers, Leslie Adkin.  This event is at the Te Matapihi ki te Ao Nui | Wellington’s Central Library.\n",
         "free": false,
         "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
         "tags": [
@@ -963,8 +888,8 @@
         "title": "Botanical Illustration and Art: Author Talk",
         "link": "https://www.tepapa.govt.nz/visit/events/botanical-illustration-and-art-author-talk",
         "time_start": "2026-05-26T17:30:00+12:00",
-        "summary": "Join us for this free event that will deep dive into the history, significant figures and contemporary developments in  botanical art and illustration .",
-        "description": "Join us for this free event that will deep dive into the history, significant figures and contemporary developments in  botanical art and illustration . ",
+        "summary": "Join Te Papa Press for this free event that will deep dive into the history, significant figures and contemporary developments in botanical art and illustration.",
+        "description": "Join Te Papa Press for this free event that will deep dive into the history, significant figures and contemporary developments in botanical art and illustration.  \n\nThis event is at Te Matapihi ki te Ao Nui | Wellington’s Central Library.",
         "free": false,
         "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
         "tags": [
@@ -997,20 +922,6 @@
         "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
         "free": true,
         "location": "B401-401, 20 Symonds Street, Auckland",
-        "host_slug": "auckland"
-      },
-      {
-        "id": "6f8154369b41962d",
-        "title": "Speech-language therapists can talk you into anything",
-        "link": "https://www.eventbrite.co.nz/e/speech-language-therapists-can-talk-you-into-anything-tickets-1975871437659",
-        "time_start": "2026-05-14T17:00:00+12:00",
-        "summary": "Professor Clare McCann's Inaugural Lecture",
-        "description": "Professor Clare McCann's Inaugural Lecture",
-        "free": true,
-        "location": "FMHS Lecture Theatre, 505-007, Level 0, Grafton Campus, 85 Park Road, Auckland",
-        "tags": [
-          "literature-writing"
-        ],
         "host_slug": "auckland"
       },
       {
@@ -1201,6 +1112,17 @@
         "host_slug": "victoria"
       },
       {
+        "id": "21be6b77ec2e071a",
+        "title": "Southeast Asia at the Geostrategic Crossroads: The Iran War, Trump's Tariffs, the South China Sea and Beyond",
+        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond",
+        "time_start": "2026-05-14T17:30:00+12:00",
+        "summary": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
+        "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
+        "free": false,
+        "location": "Wellington",
+        "host_slug": "victoria"
+      },
+      {
         "id": "2006b7e3c699fb83",
         "title": "Inaugural Lecture by Professor Jonathan Barrett",
         "link": "https://www.wgtn.ac.nz/events/2026/05/inaugural-lecture-by-professor-jonathan-barrett",
@@ -1214,17 +1136,6 @@
           "science-technology",
           "politics-policy"
         ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "21be6b77ec2e071a",
-        "title": "Southeast Asia at the Geostrategic Crossroads: The Iran War, Trump's Tariffs, the South China Sea and Beyond",
-        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond",
-        "time_start": "2026-05-14T17:30:00+12:00",
-        "summary": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "free": false,
-        "location": "Wellington",
         "host_slug": "victoria"
       },
       {
@@ -1289,6 +1200,27 @@
         "host_slug": "victoria"
       },
       {
+        "id": "0886d1278e580c7a",
+        "title": "COIK Derived Forms and the Learner",
+        "link": "https://www.wgtn.ac.nz/lals/about/events/2026-events/coik-derived-forms-and-the-learner",
+        "time_start": "2026-05-22T13:10:00+12:00",
+        "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the...",
+        "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by Professor Kevin Parent, Maritime English Language \u0026 Literature, Korea Maritime and Ocean University",
+        "free": true,
+        "location": "Wellington",
+        "speakers": [
+          {
+            "name": "Professor Kevin Parent",
+            "bio": "\\u00a0Maritime English Language \u0026 Literature, Korea"
+          }
+        ],
+        "tags": [
+          "science-technology",
+          "literature-writing"
+        ],
+        "host_slug": "victoria"
+      },
+      {
         "id": "960eb2c54daf54c8",
         "title": "Vamlet: Dark Prince of Denmark",
         "link": "https://www.wgtn.ac.nz/sam/about/events/vamlet-dark-prince-of-denmark",
@@ -1306,6 +1238,22 @@
         "host_slug": "victoria"
       },
       {
+        "id": "7825a7304dae88ab",
+        "title": "“All Things Are Possible: Charismatic Christianity and the Uncontrollability of the American Political Order\"",
+        "link": "https://www.wgtn.ac.nz/sacs/about/events/all-things-are-possible-charismatic-christianity-and-the-uncontrollability-of-the-american-political-order",
+        "time_start": "2026-05-27T16:00:00+12:00",
+        "summary": "Prof Michael Wilkinson - Dean of the Faculty of Humanities and Social Sciences and Professor of Sociology at Trinity Western University, British Columbia...",
+        "description": "Prof Michael Wilkinson - Dean of the Faculty of Humanities and Social Sciences and Professor of Sociology at Trinity Western University, British Columbia...",
+        "free": true,
+        "location": "Wellington",
+        "tags": [
+          "science-technology",
+          "history-society",
+          "politics-policy"
+        ],
+        "host_slug": "victoria"
+      },
+      {
         "id": "9c3b2c04d77a480f",
         "title": "Shaping Aotearoa New Zealand—The revolutionaries who reworked a national and its nulture",
         "link": "https://www.wgtn.ac.nz/stout-centre/about/events/shaping-aotearoa-new-zealand-the-revolutionaries-who-reworked-a-national-and-its-culture",
@@ -1316,6 +1264,68 @@
         "location": "Wellington",
         "tags": [
           "literature-writing"
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "e70fc01d90e7bacb",
+        "title": "PhD Student Flash Talks",
+        "link": "https://www.wgtn.ac.nz/lals/about/events/2026-events/phd-student-flash-talks",
+        "time_start": "2026-05-29T13:10:00+12:00",
+        "summary": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the...",
+        "description": "The School of Linguistics and Applied Language Studies hosts weekly seminars featuring a selection of visiting researchers as well as those from the. Presented by LALS PhD students, Victoria University of Wellington",
+        "free": true,
+        "location": "Wellington",
+        "speakers": [
+          {
+            "name": "LALS PhD students",
+            "bio": "Victoria University of Wellington\", \"publisher\": {"
+          }
+        ],
+        "tags": [
+          "science-technology",
+          "literature-writing"
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "28f6911d7417f99b",
+        "title": "A problem is solved by continuing to find solutions: reforming remand in prison",
+        "link": "https://www.wgtn.ac.nz/law/news-and-events/events/the-universal-purposes,-structure,-and-values-of-contract-law",
+        "time_start": "2026-06-18T17:15:00+12:00",
+        "summary": "Lecretia Seales Memorial Lecture in Law Reform The Lecretia Seales Memorial Lecture in Law Reform will be delivered by Yvette Tinsley FRSNZ. Many...",
+        "description": "Lecretia Seales Memorial Lecture in Law Reform The Lecretia Seales Memorial Lecture in Law Reform will be delivered by Yvette Tinsley FRSNZ. Many...",
+        "free": false,
+        "location": "Wellington",
+        "speakers": [
+          {
+            "name": "Professor Yvette Tinsley FRSNZ"
+          }
+        ],
+        "tags": [
+          "politics-policy"
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "19a74f9595c01aa3",
+        "title": "Ian Gordon Fellow Public Lecture 2026: Rethinking language delay in multilingual children: Towards more equitable assessment",
+        "link": "https://www.wgtn.ac.nz/lals/about/events/2026-events/ian-gordon-fellow-public-lecture-2026-rethinking-language-delay-in-multilingual-children-towards-more-equitable-assessment",
+        "time_start": "2026-06-22T18:00:00+12:00",
+        "summary": "Speaker Dr Rowena Garcia is a researcher in the Language Development and Multilingualism research group at the Leibniz‑Centre General Linguistics in Berlin, Germany,...",
+        "description": "Speaker Dr Rowena Garcia is a researcher in the Language Development and Multilingualism research group at the Leibniz‑Centre General Linguistics in Berlin, Germany,. Presented by Dr Rowena Garcia, Ian Gordon Fellow 2026",
+        "free": true,
+        "location": "Wellington",
+        "speakers": [
+          {
+            "name": "Dr Rowena Garcia",
+            "bio": "Ian Gordon Fellow 2026\", \"publisher\": {"
+          }
+        ],
+        "tags": [
+          "science-technology",
+          "literature-writing",
+          "philosophy-ideas"
         ],
         "host_slug": "victoria"
       },
