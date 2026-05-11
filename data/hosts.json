@@ -955,6 +955,17 @@
     "description": "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
     "lectures": [
       {
+        "id": "95802a3f9566c770",
+        "title": "2026 Alice Griffin Shakespeare Lecture",
+        "link": "https://www.eventbrite.co.nz/e/2026-alice-griffin-shakespeare-lecture-tickets-1985879327527",
+        "time_start": "2026-05-13T18:00:00+12:00",
+        "summary": "Shakespeare as Reviser: The Merry Wives of Windsor",
+        "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
+        "free": true,
+        "location": "B401-401, 20 Symonds Street, Auckland",
+        "host_slug": "auckland"
+      },
+      {
         "id": "ff3963329dd882d8",
         "title": "Governance in the Fourth Dimension",
         "link": "https://www.eventbrite.co.nz/e/governance-in-the-fourth-dimension-tickets-1988893292377",
@@ -1142,17 +1153,6 @@
         "host_slug": "victoria"
       },
       {
-        "id": "21be6b77ec2e071a",
-        "title": "Southeast Asia at the Geostrategic Crossroads: The Iran War, Trump's Tariffs, the South China Sea and Beyond",
-        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond",
-        "time_start": "2026-05-14T17:30:00+12:00",
-        "summary": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "free": false,
-        "location": "Wellington",
-        "host_slug": "victoria"
-      },
-      {
         "id": "2006b7e3c699fb83",
         "title": "Inaugural Lecture by Professor Jonathan Barrett",
         "link": "https://www.wgtn.ac.nz/events/2026/05/inaugural-lecture-by-professor-jonathan-barrett",
@@ -1166,6 +1166,17 @@
           "science-technology",
           "politics-policy"
         ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "21be6b77ec2e071a",
+        "title": "Southeast Asia at the Geostrategic Crossroads: The Iran War, Trump's Tariffs, the South China Sea and Beyond",
+        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond",
+        "time_start": "2026-05-14T17:30:00+12:00",
+        "summary": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
+        "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
+        "free": false,
+        "location": "Wellington",
         "host_slug": "victoria"
       },
       {

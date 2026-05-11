@@ -73,6 +73,8 @@ type sourceStats struct {
 	unenriched int
 }
 
+func lecCity(slug string) string { return model.HostCity(slug) }
+
 func main() {
 	loadDotEnv(filepath.Join(os.Getenv("HOME"), ".config/lectures.nz/.env"))
 
@@ -150,6 +152,14 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 	stats := map[string]*sourceStats{}
 	enriched := make([]model.Lecture, 0, len(lectures))
 
+	// newLectures collects lectures enriched this run (not from cache).
+	type newEntry struct {
+		city  string
+		title string
+		slug  string
+	}
+	var newLectures []newEntry
+
 	for i, lec := range lectures {
 		slug := lec.HostSlug
 		if slug == "" {
@@ -165,7 +175,6 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		inCache := lec.ID != "" && cached
 
 		if inCache && !forceRefresh && !isSourceRefresh {
-			fmt.Printf("[%3d/%d] %s (cached)\n", i+1, len(lectures), truncate(lec.Title, 50))
 			out := applyCache(lec, cache[lec.ID])
 			enriched = append(enriched, out)
 			st.cached++
@@ -178,7 +187,8 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 			continue
 		}
 
-		fmt.Printf("[%3d/%d] %s", i+1, len(lectures), truncate(lec.Title, 50))
+		city := lecCity(slug)
+		fmt.Printf("[%3d/%d] %-4s %s", i+1, len(lectures), city, truncate(lec.Title, 50))
 		result, err := enrich(lec, ollamaHost, ollamaModel, dryRun)
 		if err != nil {
 			fmt.Printf("\n  WARN: %s: %v\n", truncate(lec.Title, 50), err)
@@ -189,6 +199,7 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		enriched = append(enriched, result)
 		fmt.Println(" ✓")
 		st.refreshed++
+		newLectures = append(newLectures, newEntry{city: city, title: result.DisplayTitle(), slug: slug})
 
 		if lec.ID != "" {
 			cache[lec.ID] = cacheEntry{
@@ -219,6 +230,37 @@ func run(ollamaHost, ollamaModel string, dryRun, forceRefresh bool, refreshSourc
 		return fmt.Errorf("write %s: %w", outputPath, err)
 	}
 	fmt.Printf("\nWrote %s\n", outputPath)
+
+	// New lectures this run.
+	fmt.Printf("\n── New this run (%d) %s\n", len(newLectures), strings.Repeat("─", 40))
+	if len(newLectures) == 0 {
+		fmt.Println("  (none — all lectures were cached)")
+	} else {
+		for _, e := range newLectures {
+			fmt.Printf("  [%-3s] %s  (%s)\n", e.city, truncate(e.title, 55), e.slug)
+		}
+	}
+
+	// Cached lectures by city.
+	cachedByCity := map[string]int{}
+	for slug, s := range stats {
+		if s.cached > 0 {
+			cachedByCity[lecCity(slug)] += s.cached
+		}
+	}
+	totalCached := 0
+	for _, n := range cachedByCity {
+		totalCached += n
+	}
+	fmt.Printf("\n── Cached (%d) %s\n", totalCached, strings.Repeat("─", 44))
+	cities := make([]string, 0, len(cachedByCity))
+	for c := range cachedByCity {
+		cities = append(cities, c)
+	}
+	sort.Strings(cities)
+	for _, c := range cities {
+		fmt.Printf("  %-4s %d\n", c, cachedByCity[c])
+	}
 
 	// Per-source summary table.
 	slugs := make([]string, 0, len(stats))
