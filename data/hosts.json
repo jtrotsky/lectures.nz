@@ -6,6 +6,16 @@
     "description": "Art Gallery New Zealand hosts public talks, workshops, and events celebrating art and culture.",
     "lectures": [
       {
+        "id": "1544df24ce1b2b71",
+        "title": "Top Floor Talks: Jaime Jenkins, Kathryn Tsui, Heidi Brickell",
+        "link": "https://artgallery.org.nz/products/in-conversation-artists-and-curators-for-autumn-winter-2026",
+        "time_start": "2026-06-06T10:00:00+12:00",
+        "summary": "Top Floor Talks return on Sat 6 Jun, 10.30–11.30am.",
+        "description": "Top Floor Talks return on Sat 6 Jun, 10.30–11.30am.\\nEnjoy this series of three conversations by exhibiting artists Jaime Jenkins, Kathryn Tsui, and Heidi Brickell, alongside their curator or guest speaker.\\nThis event is free to attend with no registration required, but always welcomed. We encourage you to stay and listen to all three conversations across the morning. 10.30–10.50am: Jaime Jenkins in conversation with Karl ChithamJaime Jenkins is a Tauranga Moana-based artist who creates hand-built ceramic works and installations. Having graduated from Toi Ohomai with an Advanced Diploma in Visual Art, she has gone on to develop a unique 3-dimensional visual language that explores form and environment.\\nKarl Chitham (Te Uriroroi, Ngāpuhi) ONZM is Director of The Dowse Art Museum. A curator and writer, he co-authored Crafting Aotearoa: A Cultural History of New Zealand and the Wider Moana Oceania and has curated major exhibitions including Whetūrangitia\\/Made As Stars and Reuben Paterson: The Only Dream Left and 'Whenua Hou: New Māori ceramics' as director and curator at Tauranga Art Gallery. Chitham has held roles in universities, museums and art galleries and is a trustee of Wairau Māori Art Gallery, the first dedicated public Māori art gallery in Aotearoa.\\n10.50–11.10am: Kathryn Tsui in conversation with Claire RegnaultKathryn Tsui is a contemporary textile-based artist currently living in Te Tara o te Ika a Māui, Coromandel Peninsula. Primarily working in handweaving and beading, her practice is interested in the histories of textiles, and how these threads relate to migration, domestic labour and cultural interchange. Underpinning her practice is the study of Chinese material culture, as well as Aotearoa New Zealand’s art, craft and architectural histories.\\nClaire Regnault is the Exhibition \\u0026amp; Programmes Manager at Tauranga Museum and an Honorary Research Associate at Te Papa, where she worked as a senior curator in the History for fifteen years. A specialist in dress histories, her book Dressed: fashionable dress in Aotearoa New Zealand 1840-1910 (2021) won the award for Best Illustrated Non-Fiction at the 2022 Ockham Book Awards. She is President of Costume \\u0026amp; Textiles Aotearoa New Zealand.\\n11.10–11.30am: Heidi Brickell in conversation with Van MeiHeidi Brickell (Te Hika o Pāpāuma, Ngāti Kahungunu, Rongomaiwahine, Rangitāne, Ngāi Tara, Ngāti Apakura, Airihi, Kōtirana, Ingarangi, Tiamana) is a contemporary visual artist based in Ōtaki, with a background in Māori education and te reo Māori revitalisation.Van Mei is the curator of Heidi Brickell’s major installation, presented in Toi Tauranga Art Gallery's Craigs Investment Partners Gallery.",
+        "free": false,
+        "host_slug": "artgallery-nz"
+      },
+      {
         "id": "019098f2d8065563",
         "title": "SOLD OUT Learn to Bead Flowers with Kathryn Tsui",
         "link": "https://artgallery.org.nz/products/learn-to-bead-flowers-workshop-with-artist-kathryn-tsui",
@@ -16,16 +26,6 @@
         "tags": [
           "arts-culture"
         ],
-        "host_slug": "artgallery-nz"
-      },
-      {
-        "id": "1544df24ce1b2b71",
-        "title": "Top Floor Talks: Jaime Jenkins, Kathryn Tsui, Heidi Brickell",
-        "link": "https://artgallery.org.nz/products/in-conversation-artists-and-curators-for-autumn-winter-2026",
-        "time_start": "2026-06-06T10:00:00+12:00",
-        "summary": "Top Floor Talks return on Sat 6 Jun, 10.30–11.30am.",
-        "description": "Top Floor Talks return on Sat 6 Jun, 10.30–11.30am.\\nEnjoy this series of three conversations by exhibiting artists Jaime Jenkins, Kathryn Tsui, and Heidi Brickell, alongside their curator or guest speaker.\\nThis event is free to attend with no registration required, but always welcomed. We encourage you to stay and listen to all three conversations across the morning. 10.30–10.50am: Jaime Jenkins in conversation with Karl ChithamJaime Jenkins is a Tauranga Moana-based artist who creates hand-built ceramic works and installations. Having graduated from Toi Ohomai with an Advanced Diploma in Visual Art, she has gone on to develop a unique 3-dimensional visual language that explores form and environment.\\nKarl Chitham (Te Uriroroi, Ngāpuhi) ONZM is Director of The Dowse Art Museum. A curator and writer, he co-authored Crafting Aotearoa: A Cultural History of New Zealand and the Wider Moana Oceania and has curated major exhibitions including Whetūrangitia\\/Made As Stars and Reuben Paterson: The Only Dream Left and 'Whenua Hou: New Māori ceramics' as director and curator at Tauranga Art Gallery. Chitham has held roles in universities, museums and art galleries and is a trustee of Wairau Māori Art Gallery, the first dedicated public Māori art gallery in Aotearoa.\\n10.50–11.10am: Kathryn Tsui in conversation with Claire RegnaultKathryn Tsui is a contemporary textile-based artist currently living in Te Tara o te Ika a Māui, Coromandel Peninsula. Primarily working in handweaving and beading, her practice is interested in the histories of textiles, and how these threads relate to migration, domestic labour and cultural interchange. Underpinning her practice is the study of Chinese material culture, as well as Aotearoa New Zealand’s art, craft and architectural histories.\\nClaire Regnault is the Exhibition \\u0026amp; Programmes Manager at Tauranga Museum and an Honorary Research Associate at Te Papa, where she worked as a senior curator in the History for fifteen years. A specialist in dress histories, her book Dressed: fashionable dress in Aotearoa New Zealand 1840-1910 (2021) won the award for Best Illustrated Non-Fiction at the 2022 Ockham Book Awards. She is President of Costume \\u0026amp; Textiles Aotearoa New Zealand.\\n11.10–11.30am: Heidi Brickell in conversation with Van MeiHeidi Brickell (Te Hika o Pāpāuma, Ngāti Kahungunu, Rongomaiwahine, Rangitāne, Ngāi Tara, Ngāti Apakura, Airihi, Kōtirana, Ingarangi, Tiamana) is a contemporary visual artist based in Ōtaki, with a background in Māori education and te reo Māori revitalisation.Van Mei is the curator of Heidi Brickell’s major installation, presented in Toi Tauranga Art Gallery's Craigs Investment Partners Gallery.",
-        "free": false,
         "host_slug": "artgallery-nz"
       },
       {
@@ -111,25 +111,7 @@
     "slug": "aut",
     "name": "Auckland University of Technology",
     "website": "https://www.aut.ac.nz/events",
-    "description": "AUT hosts public lectures, symposia, and open events across its Auckland campuses.",
-    "lectures": [
-      {
-        "id": "33001181c2a3a6b3",
-        "title": "AUT Technology in Society",
-        "link": "https://www.aut.ac.nz/events/aut-technology-in-society-trust,-responsibility-and-opportunity-in-the-ai-enabled-world",
-        "time_start": "2026-05-14T17:00:00+12:00",
-        "summary": "Vice-Chancellor Damon Salesa will discuss AI and Data Sovereignty with a panel of industry experts and consider the critical need for trust and ethics",
-        "description": "Vice-Chancellor Damon Salesa will discuss\u0026nbsp;AI and Data Sovereignty\u0026nbsp;with a panel of industry experts and consider the critical need for trust and ethics",
-        "free": true,
-        "location": "AUT City Campus, WG Building, 201, Auckland",
-        "tags": [
-          "science-technology",
-          "history-society",
-          "philosophy-ideas"
-        ],
-        "host_slug": "aut"
-      }
-    ]
+    "description": "AUT hosts public lectures, symposia, and open events across its Auckland campuses."
   },
   {
     "slug": "auckland-museum",
@@ -137,22 +119,6 @@
     "website": "https://www.aucklandmuseum.com/visit/whats-on",
     "description": "Tāmaki Paenga Hira Auckland War Memorial Museum hosts public talks, evening events, and cultural programmes exploring Aotearoa's natural and human history.",
     "lectures": [
-      {
-        "id": "a73df608b35aec92",
-        "title": "Ngā Kākano: Kạp‘ạki - To Embrace",
-        "link": "https://www.aucklandmuseum.com/visit/whats-on/Nga-Kakano-Kapaki-To-Embrace",
-        "time_start": "2026-05-12T18:00:00+12:00",
-        "summary": "Join us for Kạp‘ạki - To Embrace: In conversation with Rotuman artists Sofia Tekela-Smith and Maluseu Monise to celebrate Rotuman Language Week.",
-        "description": "Join us for Kạp‘ạki - To Embrace: In conversation with Rotuman artists Sofia Tekela-Smith and Maluseu Monise to celebrate Rotuman Language Week.",
-        "free": false,
-        "cost": "Ticketed",
-        "location": "ORIENTATION SPACE, TE AO MĀRAMA, Auckland War Memorial Museum",
-        "tags": [
-          "arts-culture",
-          "literature-writing"
-        ],
-        "host_slug": "auckland-museum"
-      },
       {
         "id": "e67ad4ca1b438be0",
         "title": "The 2025 Rutherford Medal Lecture",
@@ -192,7 +158,38 @@
     "name": "Canterbury Museum",
     "city": "Christchurch",
     "website": "https://www.canterburymuseum.com/visit/whats-on/",
-    "description": "Canterbury Museum (Te Papa o Ōtautahi) hosts public programmes, talks, and events celebrating the natural and cultural heritage of Canterbury and the Pacific."
+    "description": "Canterbury Museum (Te Papa o Ōtautahi) hosts public programmes, talks, and events celebrating the natural and cultural heritage of Canterbury and the Pacific.",
+    "lectures": [
+      {
+        "id": "4f8ea77f3e04f52a",
+        "title": "Selwyn in the Spotlight",
+        "link": "https://www.canterburymuseum.com/visit/whats-on/selwyn-in-time",
+        "time_start": "2026-06-16T10:00:00+12:00",
+        "summary": "Discover the history of Selwyn through a rich tapestry of objects from the Canterbury Museum collection.",
+        "description": "Visit the Canterbury Museum Pop-Up for collection highlights and temporary exhibitions while our main building is redeveloped.",
+        "free": true,
+        "location": "Botanic Gardens kiosk, Christchurch",
+        "tags": [
+          "history-society"
+        ],
+        "host_slug": "canterbury-museum"
+      },
+      {
+        "id": "97596c30c0db365a",
+        "title": "Digging Deep",
+        "link": "https://www.canterburymuseum.com/visit/whats-on/digging-deep",
+        "time_start": "2026-07-21T10:00:00+12:00",
+        "summary": "Senior Curator Julia Bradshaw reveals how she discovered the hidden histories of women on the New Zealand goldfields for her latest book.",
+        "description": "Senior Curator Julia Bradshaw reveals how she discovered the hidden histories of women on the New Zealand goldfields for her latest book.",
+        "free": true,
+        "location": "Botanic Gardens kiosk, Christchurch, Christchurch",
+        "tags": [
+          "arts-culture",
+          "literature-writing"
+        ],
+        "host_slug": "canterbury-museum"
+      }
+    ]
   },
   {
     "slug": "eventbrite",
@@ -200,21 +197,6 @@
     "website": "https://www.eventbrite.co.nz",
     "description": "Public lectures and educational events from NZ institutions listed on Eventbrite.",
     "lectures": [
-      {
-        "id": "4dfb6447940ce651",
-        "title": "LNG and New Zealand's Energy Balancing Act: Lessons from Asia-Pacific",
-        "link": "https://www.eventbrite.co.nz/e/lng-and-new-zealands-energy-balancing-act-lessons-from-asia-pacific-tickets-1987464831813",
-        "time_start": "2026-05-14T16:00:00+12:00",
-        "summary": "Dive into how Asia-Pacific's LNG trends can help New Zealand keep its energy game strong and steady.",
-        "description": "Dive into how Asia-Pacific's LNG trends can help New Zealand keep its energy game strong and steady.",
-        "free": true,
-        "location": "Sir Owen G Glenn Building, 12 Grafton Road, Auckland",
-        "tags": [
-          "environment"
-        ],
-        "host_slug": "eventbrite",
-        "organiser": "University of Auckland, Business School"
-      },
       {
         "id": "aeb312a738e9e76d",
         "title": "Joint Inventory-Routing Optimization for Battery Swapping Networks",
@@ -259,12 +241,12 @@
     "description": "Gus Fisher Gallery at the University of Auckland hosts artist talks, film screenings, panel discussions, and public programmes in contemporary art.",
     "lectures": [
       {
-        "id": "1e4c2168b36632c7",
-        "title": "Studies for a keepsake",
+        "id": "ff996b40a131258f",
+        "title": "Studies for a keepsake \u0026 phone tree",
         "link": "https://gusfishergallery.auckland.ac.nz/upcoming-exhibitions/",
         "time_start": "2026-05-28T18:00:00+12:00",
         "summary": "You’re warmly invited to celebrate the opening of Gus Fisher Gallery’s winter exhibitions programme – Studies for a Keepsake: Claude Cahun and Marcel Moore and Phone Tree.",
-        "description": "You’re warmly invited to celebrate the opening of Gus Fisher Gallery’s winter exhibitions programme – Studies for a Keepsake: Claude Cahun and Marcel Moore and Phone Tree. Studies for a Keepsake marks the first exhibition of pioneering French Surrealists Claude Cahun (1894-1954) and Marcel Moore (1892-1972) in Aotearoa. For The Changing Room, Tāmaki Makaurau artist Lucy Meyle presents Phone Tree, which explores moth traps through drawing, casting and lacework. All are welcome, we look forward to welcoming you back into the gallery.",
+        "description": "You’re warmly invited to celebrate the opening of Gus Fisher Gallery’s winter exhibitions programme – Studies for a Keepsake: Claude Cahun and Marcel Moore and Phone Tree. Studies for a Keepsake marks the first exhibition of pioneering French Surrealists Claude Cahun (1894-1954) and Marcel Moore (1892-1972) in Aotearoa. For The Changing Room, Tāmaki Makaurau artist Lucy Meyle presents Phone Tree, which explores moth traps through drawing, casting and lacework. All are welcome.",
         "free": true,
         "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
         "tags": [
@@ -275,10 +257,24 @@
       {
         "id": "a99209c8cf951dc1",
         "title": "Co-curator tour",
-        "link": "https://gusfishergallery.auckland.ac.nz/studies-for-a-keepsake-claude-cahun-and-marcel-moore/",
+        "link": "https://www.eventbrite.co.nz/e/co-curator-tour-tickets-1989354319321?aff=oddtdtcreator",
         "time_start": "2026-05-30T18:00:00+12:00",
         "summary": "Join us for a conversation between Gus Fisher Gallery’s Curator of Contemporary Art Lisa Beauchamp and Irene Fisher Assistant Curator Ruth Minh Ha, who will lead a guided exhibition tour of Studies for a Keepsake: Claude Cahun and Marcel Moore, speaking to the curatorial framework that shaped the first Aotearoa exhibition of these pioneering artists.",
         "description": "Join us for a conversation between Gus Fisher Gallery’s Curator of Contemporary Art Lisa Beauchamp and Irene Fisher Assistant Curator Ruth Minh Ha, who will lead a guided exhibition tour of Studies for a Keepsake: Claude Cahun and Marcel Moore, speaking to the curatorial framework that shaped the first Aotearoa exhibition of these pioneering artists. All are welcome.",
+        "free": true,
+        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "gus-fisher"
+      },
+      {
+        "id": "0a2d8414d25922e3",
+        "title": "Lucy Meyle",
+        "link": "https://www.eventbrite.co.nz/e/artist-talk-with-lucy-meyle-tickets-1989354458738?aff=oddtdtcreator",
+        "time_start": "2026-06-06T18:00:00+12:00",
+        "summary": "Join Lucy Meyle for an artist talk discussing her newly commissioned exhibition Phone Tree as part of The Changing Room 2026, proudly supported by The Chartwell Trust. All are welcome.",
+        "description": "Join Lucy Meyle for an artist talk discussing her newly commissioned exhibition Phone Tree as part of The Changing Room 2026, proudly supported by The Chartwell Trust. All are welcome. Lucy Meyle is an artist from Tāmaki Makaurau Auckland whose practice explores ways of considering and relating to animals. Working in sculpture and publication, Meyle often draws together the archival, the observed and the absurd into material relation. Recent exhibitions include Pause, act, void, event (Govett Brewster Art Gallery, Ngāmotu New Plymouth), the castle and the goat (Goya Curtain, Tokyo), Spring Time is Heart-break (Te Puna o Waiwhetū, Ōtautahi Christchurch), Memories of a Naturalist (Dunedin Public Art Gallery, Ōtepoti Dunedin), wiggling together, falling apart (Michael Lett (Tāmaki Makaurau Auckland), and Mews room (play_station gallery, Te Whanganui-a-Tara Wellington).",
         "free": true,
         "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
         "tags": [
@@ -353,19 +349,6 @@
         "organiser": "Deloitte Techweek26"
       },
       {
-        "id": "ced2707cbf21f28a",
-        "title": "Agentic blueprinting: Driving value from AI",
-        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
-        "time_start": "2026-05-19T09:00:00+12:00",
-        "time_end": "2026-05-19T10:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
         "id": "e42257690cdde024",
         "title": "Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
         "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
@@ -378,6 +361,19 @@
         "tags": [
           "arts-culture"
         ],
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "ced2707cbf21f28a",
+        "title": "Agentic blueprinting: Driving value from AI",
+        "link": "https://events.humanitix.com/deloitte-presents-agentic-blueprinting-driving-value-from-ai",
+        "time_start": "2026-05-19T09:00:00+12:00",
+        "time_end": "2026-05-19T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: Agentic blueprinting: Driving value from AI hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -604,25 +600,6 @@
     "description": "The New Zealand Institute of International Affairs hosts public lectures and forums on foreign policy, geopolitics, and international relations across New Zealand.",
     "lectures": [
       {
-        "id": "7215d531111a9854",
-        "title": "NZIIA AGM and Annual Lecture 2026",
-        "link": "https://www.nziia.org.nz/events/nziia-agm-and-annual-lecture-2026/",
-        "time_start": "2026-05-13T16:00:00+12:00",
-        "summary": "NZIIA members are warmly invited to attend the national Annual General Meeting of the New Zealand Institute of International Affairs, followed by our annual lecture.",
-        "description": "NZIIA members are warmly invited to attend the national Annual General Meeting of the New Zealand Institute of International Affairs, followed by our annual lecture. TIMING: 4-5pm, AGM including an address by NZIIA Chair Dr James Kember and Executive Director - at at RHMZ03, Mezzanine Level, Rutherford House, 33 Bunny Street Wellington 6-7pm, Annual lecture, with Hon Todd McClay, Minister for Trade and Investment - at the Grand Hall, Parliament Buildings, Molesworth Street. 7pm - 8pm, drinks reception - at the Grand Hall, Parliament Buildings, Molesworth Street. Free to attend, although contributions towards event costs and ongoing running of NZIIA are welcome. If you are attending both the AGM and Annual Lecture, please register for both options. There were 11 nominations for three NZIIA Board places up for election this year. Members will be notified of the election results at the AGM. The AGM Agenda is available here . The minutes of the last AGM held in 2025 are available here . Corporate and institutional members should specify in writing who their appointed delegate is for the AGM. This information, notice of attendance at the AGM and forms for proxy voting at the AGM can be received by the Executive Director up to 1 hour before the start of the event. Please send apologies to nziia@vuw.ac.nz.",
-        "free": false,
-        "location": "Room 3, Mezzanine Level (RHMZ03), Rutherford House, 33 Bunny Street, Wellington, 6011 and Parliament Buildings (and online via Zoom)",
-        "speakers": [
-          {
-            "name": "Hon Todd McClay, Minister for Trade and Investment"
-          }
-        ],
-        "tags": [
-          "politics-policy"
-        ],
-        "host_slug": "nziia"
-      },
-      {
         "id": "90ea9f9ec069e662",
         "title": "Artificial Intelligence and the Future of Government: International Perspectives",
         "link": "https://www.nziia.org.nz/events/artificial-intelligence-and-the-future-of-government-international-perspectives/",
@@ -700,6 +677,44 @@
         "host_slug": "nziia"
       },
       {
+        "id": "d0d02b887b512695",
+        "title": "The Rising Relevance of DEI in a Divided World: Why Diversity Matters When It’s Most Challenged",
+        "link": "https://www.nziia.org.nz/events/the-rising-relevance-of-dei-in-a-divided-world-why-diversity-matters-when-its-most-challenged/",
+        "time_start": "2026-05-26T17:10:00+12:00",
+        "summary": "NZIIA Wellington Branch and the Embassy of the Kingdom of the Netherlands is delighted to welcome members and guests to an upcoming event \" The Rising Relevance of DEI in a Divided World: Why Diversity Matters When It’s Most Challenged” .",
+        "description": "NZIIA Wellington Branch and the Embassy of the Kingdom of the Netherlands is delighted to welcome members and guests to an upcoming event \" The Rising Relevance of DEI in a Divided World: Why Diversity Matters When It’s Most Challenged” . Diversity, Equity, and Inclusion (DEI) is at a pivotal moment globally. While significant progress has been made through activism, policy, and public discourse, that progress is increasingly being met with complexity, resistance, and shifting societal expectations. The evening will open with a short keynote address from HE Ard van der Vorst, Ambassador of the Netherlands , offering perspectives on the evolving global DEI landscape and the challenges and opportunities facing diverse societies today. Following the keynote the Ambassador will join a panel with HE Keith Smith, Canadian High Commissioner to New Zealand and Louisa Wall, Former MP \u0026 Chair of Tūwharetoa Iwi Māori Partnership Board moderated by NZIIA Wellington Chair, Angus Middleton. Drawing on perspectives from the Netherlands, Canada, and Aotearoa New Zealand, the conversation will explore how DEI evolves from advocacy into enduring societal progress. Speakers will reflect on lessons learned across different national contexts, the importance of resilience in the face of backlash, and why progress must be continuously renewed rather than assumed. Grounded in lived experience, diplomacy, leadership, and public service, the discussion will also consider what makes New Zealand’s approach distinctive, what it can learn from global peers, and how increasingly diverse societies can move forward together—even amid differing perspectives and growing polarization. Following a short Q\u0026A, there will be a networking reception kindly sponsored by the Embassy of the Kingdom of the Netherlands offering an opportunity for thoughtful dialogue, international insight, and meaningful connection. TERMS AND CONDITIONS Registrations are required to attend this event as there is limited capacity. No walk ups allowed. Non members may attend by paying the registration fee. Full time students are entitled to free NZIIA Wellington student membership by first registering at https://www.nziia.org.nz/membership-form/ One ticket per person. Each ticket must contain your full first name and surname (that matches your ID), email address and phone number. If, after registering, you are unable to attend please have the courtesy to cancel your ticket via Humantitix to enable others on the waiting list to attend. In keeping with NZIIA practice, unauthorised recording of this event (either audio or video) is not permitted. Members and guests are reminded to adhere to the NZIIA Code of Conduct. For any queries please email: info@nziiawellington.org.nz BIOGRAPHIES OF OUR SPEAKERS HE Ard van der Vorst, Ambassador of the Netherlands to New Zealand Ard M.M. van der Vorst is the Ambassador of the Kingdom of the Netherlands to New Zealand, Fiji, the Cook Islands, Samoa, Tonga, and Tuvalu. In this role, he serves as the senior Dutch government representative in the South Pacific, leading a dynamic team dedicated to strengthening diplomatic relations between the Netherlands and the region. His mission focuses on strengthening the bilateral ties, promoting Dutch trade and investment, supporting Dutch nationals, advancing public diplomacy on key global issues, and fostering scientific and research cooperation. Before his current assignment in Wellington, Ard held several key diplomatic positions, including Consul General in Atlanta from 2018 to 2022, and Head of the Spokesman Office and Newsroom at the Dutch Ministry of Foreign Affairs in The Hague from 2015 to 2018. He also served as the Dutch Consul in San Francisco from 2012 to 2015. In these roles, Ard was instrumental in enhancing communication, advancing foreign policy, and strengthening economic relations for the Netherlands. Ard’s career also includes significant experience in development cooperation and political affairs. As Head of Development Cooperation at the Netherlands Representative Office in Ramallah, he focused on the West Bank, Gaza, and East Jerusalem, overseeing projects aimed at improving the region's development and security. He has also worked on Western Balkan Affairs in The Hague, where he coordinated policies related to security, development cooperation, trade, and European Union relations. Ard joined the Dutch Ministry of Foreign Affairs in 1997 and has since served in several international postings, including in Nigeria and Albania, where he gained extensive experience in diplomatic relations and policy development. A native of Breda, the Netherlands, Ard holds a Master’s degree in Public Administration from the University of Leiden. He is accompanied on his international postings by his husband, Pieter Lewis. HE Keith Smith, Canadian High Commissioner to New Zealand , University of Ottawa, 1997) has held various positions within Indigenous and Northern Affairs Canada, including as director of Intergovernmental and International Relations. From 2013 to 2016, he was the director of Policy, Research and International at the Canadian Human Rights Commission (CHRC). He also served as the director general of Policy and Communications at the CHRC. From 2016 to 2018, he worked for the Minister of Justice and Attorney General of Canada as the director of policy. In this role, he dealt with a wide range of justice files, including an Indigenous rights framework, criminal justice system and family law reform, 2SLGBTQI+ issues and international human rights and justice matters. He joined Justice Canada in August 2021 as the director general of the UN Declaration Act Implementation Secretariat, leading on the development of a whole-of-government action plan to achieve the objectives of the UN Declaration on the Rights of Indigenous Peoples. He is a member of the Thessalon First Nation, a signatory to the Robinson Huron Treaty. Louisa Wall, Former MP \u0026 Chair of Tūwharetoa Iwi Māori Partnership Board Louisa Wall (Ngāti Tūwharetoa, Waikato, Ngāti Hineuru) is former MP (2008–2022) and former inaugural Ambassador for Pacific Gender Equality (Tuia Tāngata). She currently chairs the Tūwharetoa Iwi Māori Partnership Board, advancing iwi priorities and Te Tiriti-based accountability within the health system. A leading advocate for human rights and inclusion, Louisa is recognised for her role in key legislative reforms including Marriage Equality, Safe Areas around abortion facilities, and protections against image-based sexual abuse. She brings extensive experience across governance, diplomacy, and community leadership, with a longstanding commitment to equity and social change.",
+        "free": false,
+        "location": "RHLT1, Rutherford House, Pipitea Campus, Victoria University of Wellington",
+        "speakers": [
+          {
+            "name": "HE Ard van der Vorst, Ambassador of Netherland to New Zealand"
+          }
+        ],
+        "tags": [
+          "history-society"
+        ],
+        "host_slug": "nziia"
+      },
+      {
+        "id": "db5889a757d9158b",
+        "title": "From Colony to Independence: Reflections on Guyana at 60",
+        "link": "https://www.nziia.org.nz/events/from-colony-to-independence-reflections-on-guyana-at-60/",
+        "time_start": "2026-05-27T17:10:00+12:00",
+        "summary": "The NZIIA Wellington Branch in partnership with the Caribbean Council (NZ) cordially invites you to join a special roundtable discussion to mark Guyana's 60th Anniversary of Independence.",
+        "description": "The NZIIA Wellington Branch in partnership with the Caribbean Council (NZ) cordially invites you to join a special roundtable discussion to mark Guyana's 60th Anniversary of Independence. Mona Williams, a former presenter with the British Guiana Broadcasting Service (BGBS), will share her firsthand recollections of the transition from British rule to self-government when broadcasting the handover live in 1966. Her Excellency Linda Te Puni, New Zealand High Commissioner to Guyana and New Zealand's Head of Mission to the Caribbean, will also speak about New Zealand's relationship with Guyana, including reflections from her visit to Georgetown earlier this year. Located on the northern coast of South America, Guyana is one of the world's fastest-growing economies due to massive offshore oil discoveries which have transformed the country in recent years. Previously known as British Guiana, it is the only country in mainland South America to have English as the official language. Since 1966 it has been an independent nation known as Guyana. Catering: Non alcoholic drinks and light catering Dress: Smart Casual Format: Short presentation from Mona Williams and HE Linda Te Puni NZ High Commissioner to Guyana (Caribbean). A roundtable will be moderated by Karim Dickie NZIIA Board Member and President of the Caribbean Council NZ. Registration: by Expression of Interest (EOI) below including a short explanation why you would like to attend . SUBMIT AN EXPRESSION OF INTEREST HERE Terms and conditions Expressions of interest should include a brief note why you are interested in attending this roundtable . Please click on the link above OR email info@nziiawellington.org.nz with \"Expression of Interest for Guyana Roundtable\" in the subject header together with your name, phone number and reason why you would like to attend this roundtable. Places are limited due to capacity . This event is for NZIIA Wellington Branch members or Wellington student members only. Please note, successful applicants will will advised on a rolling basis until 22 May 2026. NZIIA Code of Conduct applies and the Institute expects a high standard of behaviour from members. This event will be run under Chatham House rules. https://www.chathamhouse.org/about-us/chatham-house-rule .",
+        "free": false,
+        "location": "RH105, Rutherford House, Te Herenga Waka - Victoria University of Wellington",
+        "speakers": [
+          {
+            "name": "HE Linda Te Puni, NZ High Commissioner to Guyana (Caribbean)"
+          }
+        ],
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "nziia"
+      },
+      {
         "id": "cbe18b8db8f4d84b",
         "title": "An address by Mike Seawright",
         "link": "https://www.nziia.org.nz/events/address-by-mike-seawright/",
@@ -757,6 +772,34 @@
         "time_start": "2026-05-23T17:15:00+12:00",
         "summary": "Join us at Objectspace for a film screening of Speaking in Stone, a short film commissioned after the untimely death of renowned and much admired sculptor John Edgar ONZM.",
         "description": "Join us at Objectspace for a film screening of Speaking in Stone, a short film commissioned after the untimely death of renowned and much admired sculptor John Edgar ONZM.\n\nSpeaking in Stone is directed by Greg Wood with music by Peter Hobbs and has a run time of 19 minutes and 38 seconds. Find out more below.\n\nGuests are welcome to arrive from 4pm for drinks and refreshments. Speeches will begin at 5pm, followed by the screening at 5.15pm, with drinks and mingling to continue afterwards .\n\nThis screening will take place within Martino Gamper’s solo exhibition Endgrained .\n\nJohn Edgar’s studio in West Auckland, once a large industrial ship-building warehouse, had become a vast repository of his copious and prolific creative life. In the aftermath of his death, all those close to him were confronted with the ’remains of the day’ . Every corner and surface echoed that he was no longer here – that the unfinished work would remain – unfinished. Yet all of it demanded attention, recording and processing.\n\nThis was the impetus for Speaking In Stone. Both film-maker Greg Wood and composer Peter Hobbs were given free rein. Neither knew the artist, nor had ever met him. As such, this film is their response to what they encountered in and around the sculptor’s workshop and environs. With utmost sensitivity and subtlety, they have captured the essence of the artist at a time and place that he conjured in his material vision.\n\nThe visual encounters in these spaces are presented alongside a soundscape composed with music and instruments created from tools and sounds recorded at John Edgar's sculpture workshop.\n\nJohn Edgar 1950 – 2021 John Edgar was a sculptor and environmentalist who started out as a scientist – a background that truly defined his approach to creative work. Edgar was meticulous, rigorous, methodical, disciplined, curious and driven. He was influential, immensely talented and achieved a great deal in his lifetime, with at least four decades of making and exhibiting, sales and commissioned work in the private and public sectors.\n\nEdgar was a full-time practicing artist (always an exacting schedule) yet made time to nurture and mentor others and lend his support and effort to causes for which he was passionately aligned. He belonged to communities in many disciplines, highly regarded by all, his contribution was immense and his loss is still unspeakable for those whose lives he touched.\n\nEdgar was made an Officer of the New Zealand Order of Merit for his services to art, in particular to sculpture, in 2009.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
+        "free": false,
+        "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "objectspace"
+      },
+      {
+        "id": "c9def2d66c729f3b",
+        "title": "50/50 Booster Bingo",
+        "link": "https://www.eventbrite.co.nz/e/5050-booster-bingo-tickets-1989441111920?aff=oddtdtcreator",
+        "time_start": "2026-05-28T18:00:00+12:00",
+        "summary": "Join us for the classic of all fundraisers – bingo , but with an Objectspace twist! We’re hosting a bingo night as part of our crowdfunder 50/50 — For Makers and Objectspace .",
+        "description": "Join us for the classic of all fundraisers – bingo , but with an Objectspace twist! We’re hosting a bingo night as part of our crowdfunder 50/50 — For Makers and Objectspace .\n\nInvite a mate or two to take your place in Martino Gamper’s Endgrained (only 50 seats!) and test your luck.\n\nSpecial guests will join us to call the rounds and there will be seriously good prizes, including works by Aotearoa’s best makers (such as jewellery titans Judy Darragh and Warwick Freeman). We’ll reveal the prizes over the coming weeks, but expect this will sell out – get your tickets now .\n\nYour $35 ticket includes 3 bingo cards, and you can purchase more cards throughout the evening – all proceeds will go towards our 50/50 fundraiser. Plus, there’s a special raffle to be won for those making a donation on the night. Win/win!\n\nWhat you need to know:\n\n• Tickets are $35, which includes 3 bingo cards. Purchase a 5 card bundle for $40 on the night, or individual cards for $10 – all proceeds go towards our fundraiser.\n\n• Rounds: We'll aim to play 10 rounds (time allowing), and you can play several cards in each round to maximise your chance to win.\n\n• Hospitality: We’ll be running a cash bar for drinks and kai (again supporting our fundraiser).\n\nThis event will mark half-time for our biggest fundraising campaign ever. Join us for a fun night to support our efforts and have a great time doing so!",
+        "free": false,
+        "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "objectspace"
+      },
+      {
+        "id": "08d7a1e1edb97a95",
+        "title": "Whittling in Endgrained: Workshop with Courtney Petley",
+        "link": "https://www.eventbrite.co.nz/e/whittling-in-endgrained-workshop-with-courtney-petley-tickets-1989280147471?aff=oddtdtcreator",
+        "time_start": "2026-05-31T18:00:00+12:00",
+        "summary": "Join us at Objectspace for a whittling 101 workshop with woodworker Courtney Petley, set within Martino Gamper’s Endgrained .",
+        "description": "Join us at Objectspace for a whittling 101 workshop with woodworker Courtney Petley, set within Martino Gamper’s Endgrained .\n\nThis 2-hour relaxed, hands on session will be an introduction to carving with a straight knife.\n\nWorking with small lengths of timber, participants will learn how to read the grain and use a range of simple cuts to shape the wood by hand.\n\nMore exploratory than outcome-driven, it feels like a fitting complement to Endgrained – a chance to spend time with timber in a direct and tactile way, and to understand grain not just visually, but through the hand.\n\nThis workshop is aimed at beginners but can be tailored to suit those with more experience. It is suitable for adults and children aged 12+.\n\nGet your $10.00 tickets here , with all tools, equipment and materials provided.\n\nCourtney Petley is a self-taught woodworker living in Tāmaki Makaurau Auckland. For over 10 years Courtney has worked with reclaimed native timber to create utensils for your kitchen and objects for your home, all carved by hand. Courtney is also passionate about teaching, and sharing the skill of spoon carving and runs other classes from her Cross St workshop.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
         "free": false,
         "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
         "tags": [
@@ -955,17 +998,6 @@
     "description": "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
     "lectures": [
       {
-        "id": "95802a3f9566c770",
-        "title": "2026 Alice Griffin Shakespeare Lecture",
-        "link": "https://www.eventbrite.co.nz/e/2026-alice-griffin-shakespeare-lecture-tickets-1985879327527",
-        "time_start": "2026-05-13T18:00:00+12:00",
-        "summary": "Shakespeare as Reviser: The Merry Wives of Windsor",
-        "description": "Shakespeare as Reviser: The Merry Wives of Windsor",
-        "free": true,
-        "location": "B401-401, 20 Symonds Street, Auckland",
-        "host_slug": "auckland"
-      },
-      {
         "id": "ff3963329dd882d8",
         "title": "Governance in the Fourth Dimension",
         "link": "https://www.eventbrite.co.nz/e/governance-in-the-fourth-dimension-tickets-1988893292377",
@@ -974,6 +1006,20 @@
         "description": "Public Lecture: Professor Andrew A. Schwartz (University of Colorado)",
         "free": true,
         "location": "Stone Lecture Theatre (801-316), Auckland Law School, Auckland",
+        "tags": [
+          "arts-culture"
+        ],
+        "host_slug": "auckland"
+      },
+      {
+        "id": "01ba68fa99e683e9",
+        "title": "Artist talk with Lucy Meyle",
+        "link": "https://www.eventbrite.co.nz/e/artist-talk-with-lucy-meyle-tickets-1989354458738",
+        "time_start": "2026-06-06T14:00:00+12:00",
+        "summary": "Join Lucy Meyle for an artist talk discussing her new exhibition Phone Tree for The Changing Room at Gus Fisher Gallery.",
+        "description": "Join Lucy Meyle for an artist talk discussing her new exhibition Phone Tree for The Changing Room at Gus Fisher Gallery.",
+        "free": true,
+        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland",
         "tags": [
           "arts-culture"
         ],
@@ -1026,20 +1072,6 @@
     "website": "https://www.waikato.ac.nz/news-events/events/lecture-series/",
     "description": "The University of Waikato hosts free public lectures in Hamilton and Tauranga, featuring professorial lectures, research talks, and community events across its campuses.",
     "lectures": [
-      {
-        "id": "600ca550291d52a4",
-        "title": "Hamilton Public Lecture",
-        "link": "https://HPLnicoladaly.eventbrite.co.nz",
-        "time_start": "2026-05-12T17:30:00+12:00",
-        "summary": "We often underestimate picturebooks, but the truth is they reflect what we want to pass on to our tamariki-mokopuna; they are incredibly powerful.",
-        "description": "We often underestimate picturebooks, but the truth is they reflect what we want to pass on to our tamariki-mokopuna; they are incredibly powerful.",
-        "free": true,
-        "location": "Gallagher Academy of Performing Arts, Hamilton",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "waikato"
-      },
       {
         "id": "0b472d46885f049a",
         "title": "Hamilton Public Lecture",
@@ -1094,91 +1126,6 @@
     "description": "Te Herenga Waka — Victoria University of Wellington hosts regular public lectures, seminars, and events across its faculties and research institutes.",
     "bluesky": "@victoriauniversity.bsky.social",
     "lectures": [
-      {
-        "id": "2f6c979a89a98d02",
-        "title": "Reliability Options in Renewables-Dominated Electricity Markets",
-        "link": "https://www.wgtn.ac.nz/business/engage/events/reliability-options-in-renewables-dominated-electricity-markets",
-        "time_start": "2026-05-12T12:30:00+12:00",
-        "summary": "Authors: Shaun McRae and Frank Wolak Abstract Capacity mechanisms are an increasingly popular tool for ensuring that demand can be met as electricity...",
-        "description": "Authors: Shaun McRae and Frank Wolak Abstract Capacity mechanisms are an increasingly popular tool for ensuring that demand can be met as electricity...",
-        "free": false,
-        "location": "Wellington",
-        "tags": [
-          "environment",
-          "literature-writing"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "0ce3b2985b99250e",
-        "title": "Io as ‘the Soul of Things’: Māori Io Traditions beyond the Supreme God Debate",
-        "link": "https://www.wgtn.ac.nz/sacs/about/events/io-as-the-soul-of-things-maori-io-traditions-beyond-the-supreme-god-debate",
-        "time_start": "2026-05-13T12:00:00+12:00",
-        "summary": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa) - Senior Lecturer in Religion/Mātai Whairuataka - University of Otago/Ōtākou Whakaihu WakaFew debates in the study of...",
-        "description": "Dr Deane Galbraith (Ngāpuhi, Te Rarawa) - Senior Lecturer in Religion/Mātai Whairuataka - University of Otago/Ōtākou Whakaihu WakaFew debates in the study of...",
-        "free": true,
-        "location": "Wellington",
-        "tags": [
-          "history-society",
-          "philosophy-ideas"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "ea1ea9dc21d3e573",
-        "title": "Trump 2.0 and the Indo-Pacific",
-        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/trump-2.0-and-the-indo-pacific",
-        "time_start": "2026-05-13T14:00:00+12:00",
-        "summary": "Given the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president, it can be difficult to distinguish between...",
-        "description": "Given the speed, volatility, and unpredictable nature of America during Donald Trump's second term as president, it can be difficult to distinguish between...",
-        "free": false,
-        "location": "Wellington",
-        "tags": [
-          "environment"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "2c5eaa40100d9760",
-        "title": "Merata Mita—Decolonising the screen",
-        "link": "https://www.wgtn.ac.nz/stout-centre/about/events/merata-mita-decolonising-the-screen",
-        "time_start": "2026-05-13T16:10:00+12:00",
-        "summary": "Between the Lines—Recent Books in New Zealand Studies Seminar SeriesPresenter—Leah Vonderheide The Stout Centre’s seminar series continues with the forthcoming book on the...",
-        "description": "Between the Lines—Recent Books in New Zealand Studies Seminar SeriesPresenter—Leah Vonderheide The Stout Centre’s seminar series continues with the forthcoming book on the...",
-        "free": false,
-        "location": "Wellington",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "2006b7e3c699fb83",
-        "title": "Inaugural Lecture by Professor Jonathan Barrett",
-        "link": "https://www.wgtn.ac.nz/events/2026/05/inaugural-lecture-by-professor-jonathan-barrett",
-        "time_start": "2026-05-14T17:30:00+12:00",
-        "summary": "Respecting equal human dignity: taxation and commercial law in the human rights stateProfessor Barrett’s research concerns the practical application of human rights, particularly...",
-        "description": "Respecting equal human dignity: taxation and commercial law in the human rights stateProfessor Barrett’s research concerns the practical application of human rights, particularly...",
-        "free": false,
-        "location": "Rutherford House, Lecture Theatre 2 (RHLT2) Bunny Street, Pipitea Campus",
-        "tags": [
-          "arts-culture",
-          "science-technology",
-          "politics-policy"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "21be6b77ec2e071a",
-        "title": "Southeast Asia at the Geostrategic Crossroads: The Iran War, Trump's Tariffs, the South China Sea and Beyond",
-        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/southeast-asia-at-the-geostrategic-crossroads-the-iran-war,-trumps-tariffs,-the-south-china-sea-and-beyond",
-        "time_start": "2026-05-14T17:30:00+12:00",
-        "summary": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "description": "As world order fragments, Southeast Asia finds itself at a critical juncture. President Trump’s sweeping tariff agenda and transactional approach to allies and...",
-        "free": false,
-        "location": "Wellington",
-        "host_slug": "victoria"
-      },
       {
         "id": "f736386a033bed4f",
         "title": "Visual priming and speech perception among Samoan speakers",
@@ -1241,6 +1188,21 @@
         "host_slug": "victoria"
       },
       {
+        "id": "77330f286faf5a82",
+        "title": "Frontline Thinking: Latvia and the New Security Landscape",
+        "link": "https://www.wgtn.ac.nz/strategic-studies/about/events/frontline-thinking-latvia-and-the-new-security-landscape",
+        "time_start": "2026-05-22T10:30:00+12:00",
+        "summary": "In this talk, Ivars Lasis will explore the shifting geopolitical landscape shaped by strategic competition between Russia, China, and the United States, and...",
+        "description": "A talk about the geopolitical landscape and implications by Ivars Lasis, Under Secretary of State – Political director, Ministry of Foreign Affairs of Latvia.",
+        "free": false,
+        "location": "Wellington",
+        "tags": [
+          "politics-policy",
+          "philosophy-ideas"
+        ],
+        "host_slug": "victoria"
+      },
+      {
         "id": "0886d1278e580c7a",
         "title": "COIK Derived Forms and the Learner",
         "link": "https://www.wgtn.ac.nz/lals/about/events/2026-events/coik-derived-forms-and-the-learner",
@@ -1275,6 +1237,26 @@
             "name": "THEATRE 318 (Te Kāhui: Company) and 319 (Scenography in Produ",
             "bio": "ction)"
           }
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "d254fbb72deef899",
+        "title": "What's History to Do with Criminology?",
+        "link": "https://www.wgtn.ac.nz/sacs/about/events/whats-history-to-do-with-criminology",
+        "time_start": "2026-05-27T12:00:00+12:00",
+        "summary": "Dr Roberto Catello - Senior Lecturer in Criminology, School of Social and Cultural Studies at Victoria University of WellingtonIn this session, I discuss...",
+        "description": "Dr Roberto Catello - Senior Lecturer in Criminology, School of Social and Cultural Studies at Victoria University of WellingtonIn this session, I discuss...",
+        "free": true,
+        "location": "Wellington",
+        "speakers": [
+          {
+            "name": "Dr Roberto Catello"
+          }
+        ],
+        "tags": [
+          "arts-culture",
+          "history-society"
         ],
         "host_slug": "victoria"
       },
@@ -1348,6 +1330,20 @@
           "science-technology",
           "literature-writing",
           "philosophy-ideas"
+        ],
+        "host_slug": "victoria"
+      },
+      {
+        "id": "d7d6860ab1c7e819",
+        "title": "Inaugural Lecture by Professor Giacomo Lichtner",
+        "link": "https://www.wgtn.ac.nz/events/2026/06/inaugural-lecture-by-professor-giacomo-lichtner",
+        "time_start": "2026-06-25T17:30:00+12:00",
+        "summary": "Encounters with the historical imaginationIn this inaugural professorial lecture, historian Giacomo Lichtner considers the contested roles that imagination plays in history: from filling...",
+        "description": "Encounters with the historical imaginationIn this inaugural professorial lecture, historian Giacomo Lichtner considers the contested roles that imagination plays in history: from filling...",
+        "free": false,
+        "location": "Hunter Council Chamber, Level 2, Hunter Building, Gate 2, Kelburn Parade",
+        "tags": [
+          "history-society"
         ],
         "host_slug": "victoria"
       },
