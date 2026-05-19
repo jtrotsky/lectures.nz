@@ -26,6 +26,9 @@
   "https://artspace-aotearoa.nz/events/open-late": {
     "description": "Alongside Aotearoa Art Fair and neighbourhood gallery openings the gallery will remain open until 8pm. Join artist Selina Ershadi and Kaitohu Director Ruth Buchanan for drinks and an informal introduction to The Blue Dome and its newly commissioned …"
   },
+  "https://events.humanitix.com/deloitte-presents-building-enterprise-ready-ai-agents-from-foundations-to-scale": {
+    "description": "As AI and AI Agents proliferate, the enterprise is challenged to make smart technology choices and establish platforms for running and managing Agents."
+  },
   "https://events.humanitix.com/deloitte-presents-human-machine-lab-getting-human-and-machine-relationships-right-in-hr-and-workforce-decisions": {
     "description": "Human x Machines Lab: Redefining HR responsibilities"
   },
@@ -164,6 +167,9 @@
   "https://www.eventbrite.co.nz/e/movement-and-music-in-endgrained-xin-ji-and-alistair-deverick-tickets-1988045572825?aff=oddtdtcreator": {
     "description": "Join us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.\n\nAround Gamper’s furniture, Xin and Alistair will stage a live performance bringing together movement, sound and real-time composition.\n\nDrawing on ideas from Xin’s solo work Body Story , the performance moves between dance and live music, letting meaning emerge through presence, texture, and exchange. Built through a long creative relationship, the work is shaped by physicality, rhythm, improvisation, and close attention to what is unfolding in the room.\n\nJoin us to watch it unfold with a drink in hand.\n\nXin Ji is a dance artist, choreographer, and educator based in Tāmaki Makaurau Auckland. Trained in Chinese classical ballet at the Beijing Dance Academy, he began his professional career in Japan with Shiki Theatre Company before moving to Aotearoa to study contemporary dance at Unitec. He has performed with leading contemporary companies in Aotearoa, including Footnote and the New Zealand Dance Company, and currently lectures in dance at Unitec. His practice spans performance and choreography across stage and screen, with a strong focus on physicality, presence, and storytelling.\n\nAlistair Deverick is a musician and sound designer of Scottish and Welsh ancestry based in Tāmaki Makaurau Auckland. He is known for his innovative approach to rhythm and texture. As a versatile drummer and producer, he has performed with acts like The Ruby Suns and Neil Finn and has created solo work under the moniker Boycrush, blending electronic, pop, and experimental sounds. His work spans live performance, studio production, and sound design, showcasing a dynamic range of musical influences.\n\nOver many years of working together, Xin Ji and Alistair Deverick have developed a close creative relationship grounded in listening, responsiveness, and a shared feel for atmosphere. Their collaboration brings together movement and sound in ways that feel physical and immediate.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific ."
   },
+  "https://www.eventbrite.co.nz/e/nature-nerds-network-marine-conservation-workshop-tickets-1989267924913": {
+    "description": "A day-long workshop for young adults; let your inner nature nerd shine \u0026 explore our moana at Te Hāwere a Maki Goat Island Marine Reserve"
+  },
   "https://www.eventbrite.co.nz/e/ockham-lecture-connections-between-connections-with-kerry-ann-lee-tickets-1988050599861?aff=oddtdtcreator": {
     "description": "Join us for an Ockham Lecture with designer and artist Kerry Ann Lee.\n\nOur current exhibition, A Chop That Breathes spans several years of research by Kerry Ann Lee – the latest outcome of a ‘localised transnational intergenerational story about placemaking through printmaking.’\n\nThis talk will explore the creative whakapapa across time, people and places located at the heart of this work. Focusing on ornament, printmaking, and ephemera, Lee willl present a narrative that reveals emotional landscapes living in the space between the studio and the pull of wanderlust into the field.\n\nKerry Ann Lee is a visual artist, designer and researcher whose interdisciplinary practice spans art, design and publishing. Her work explores cultural identity, diaspora and heritage, drawing on Chinese New Zealand histories and global perspectives. Her creative collaborations have included projects with the Smithsonian Asian Pacific American Center, residencies at the School of Visual Arts NYC, SOMA México, Taipei Artist Village, Santa Fe Art Institute and Yellow Brick Athens, presentations at Booked: Hong Kong Art Book Fair and Sprint Milano, and exhibitions at the Beijing International Art Biennale, Shanghai Art Museum and Te Papa Tongarewa Museum of New Zealand.\n\nAs Associate Professor in Design, she teaches Illustration, Visual Communication Design and Critical and Contextual Studies across various undergraduate and postgraduate programmes at Toi Rauwhārangi, College of Creative Arts at Te Kunenga ki Pūrehuroa Massey University.\n\nKerry Ann Lee draws on shared experiences with Guy Ngan as inspiration for A Chop That Breathes . They both are from Te Whanganui a Tara Wellington, share Cantonese heritage, and are alumni from Ngā Pae Māhutonga, the Wellington School of Design at Massey University. Like Ngan, Lee’s work is informed by cultural hybridity in Aotearoa, the Asia-Pacific and beyond.\n\nThe Ockham Lecture series is an annual programme of lectures and panel discussions across different themes that critically engage with craft, design and architecture. This programme is supported by Objectspace's Lead Partner Ockham Residential."
   },
@@ -204,6 +210,15 @@
   },
   "https://www.massey.ac.nz/about/events/celebrate-50-years-bachelor-of-social-work/": {
     "description": "Join us in celebrating the 50th anniversary of the Bachelor of Social Work qualification with an event series reflecting on the past to inform the present and envision the future."
+  },
+  "https://www.massey.ac.nz/about/events/creativity-in-the-community-showcase/": {
+    "description": "Join our Wellington Creativity in the Community students as they show how creativity helps us work together to address issues like homelessness and climate change.",
+    "speakers": [
+      {
+        "name": "arrangement with Playmarket) and 1 group has been working on",
+        "bio": "a dance piece about true love"
+      }
+    ]
   },
   "https://www.massey.ac.nz/about/events/everything-but-the-medicine/": {
     "description": "Lucy O’Hagan brings her acclaimed memoir, Everything But the Medicine: A Doctor’s Tale to life in a reading and performance."
@@ -291,6 +306,9 @@
   },
   "https://www.wgtn.ac.nz/events/2026/06/postgraduate-information-webinar": {
     "description": "Come along to our online postgraduate webinar. Learn about choosing programmes, career pathways, and exploring your research interests. Hosted online via zoom, this..."
+  },
+  "https://www.wgtn.ac.nz/events/2026/06/question-and-answer-session": {
+    "description": "An informal 'ask me anything' session with Dr Nicola Hoggard Creegan, Co-Director of New Zealand Christians in Science and one of Aotearoa's leading..."
   },
   "https://www.wgtn.ac.nz/events/2026/07/coral-reef-lecture": {
     "description": "Following the 16th International Coral Reef Symposium hosted at Victoria University of Wellington, join the President of the International Coral Reef Society."

@@ -514,6 +514,13 @@
     "summary": "This lecture explores what happens when disability is viewed as a powerful cultural lens rather than merely a problem to solve.",
     "description": "What happens when disability is seen as a powerful cultural lens, not a problem to solve? Join fellow AUT graduates for this insightful Great Graduates Speaker Series event."
   },
+  "44e56d2a649a4c17": {
+    "event_type": "talk",
+    "summary": "\\n\\n\\n\\n\\n\\n\\n\\n\\nTo celebrate our seasonal opening event, join exhibiting artist Madison Kelly in the Meldrum Gallery for a percussive activation of the exhibition Toko by and by on Sat 6 Jun, 10.",
+    "description": "\\n\\n\\n\\n\\n\\n\\n\\n\\nTo celebrate our seasonal opening event, join exhibiting artist Madison Kelly in the Meldrum Gallery for a percussive activation of the exhibition Toko by and by on Sat 6 Jun, 10.10–10.25am. Using a range of traditional percussion accessories alongside handmade toko\\/sticks sourced from the coastline of Ōtepoti Dunedin, this short performance by Madison Kelly sonically explores the intertidal data and whakapapa of Te Awa Moana, Otago Harbour.\\n\\n\\n\\n\\n\\n\\n\\n\\n\\nThis event is free, but with limited spaces available registration is a must — secure your spot early! We look forward to seeing you there.\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",
+    "excluded": true,
+    "exclude_reason": "It is a performance, not a lecture."
+  },
   "458a181125ff16de": {
     "event_type": "book launch",
     "summary": "Celebrate the book launch for Oceanic Architectural Routes: The Work of Mike Austin, featuring contributions from Austin's former students and colleagues.",
@@ -608,6 +615,11 @@
       }
     ]
   },
+  "5986fb749885d822": {
+    "event_type": "talk",
+    "summary": "Discussing the future of bio-innovation, from research findings to achieving global impact.",
+    "description": "The talk will cover the journey of bio-innovation, addressing the pathway from fundamental research findings to achieving tangible global impact. The event is hosted by Deloitte Techweek26."
+  },
   "5b4464df305add17": {
     "event_type": "lecture",
     "summary": "Professor Jennifer Miles-Chan delivers her Inaugural Lecture exploring lessons found at the intersection of metabolism, academia, and everyday life.",
@@ -638,6 +650,17 @@
       }
     ]
   },
+  "606a3447e58cc906": {
+    "event_type": "forum",
+    "summary": "An informal 'ask me anything' session with Dr Nicola Hoggard Creegan regarding NZ Christians in Science.",
+    "description": "This is an informal 'ask me anything' session with Dr Nicola Hoggard Creegan, Co-Director of New Zealand Christians in Science and one of Aotearoa's leading.",
+    "speakers": [
+      {
+        "name": "Dr Nicola Hoggard Creegan",
+        "bio": "Co-Director of New Zealand Christians in Science"
+      }
+    ]
+  },
   "61b44da4b6ece3fd": {
     "event_type": "festival",
     "summary": "Join us this Archaeology Week for a family-friendly event offering a unique opportunity to become an archaeologist for the day! Explore the fascinating world of uncovering history.",
@@ -654,6 +677,17 @@
     "event_type": "lecture",
     "summary": "Explore hackathon benefits and impacts.",
     "description": "Hackathons offer a platform for students to engage in creative problem-solving with real-world applications. An AUT event for those interested in technology, innovation, and collaborative challenges."
+  },
+  "6400ba7800c63337": {
+    "event_type": "talk",
+    "summary": "Professor Cheng-Chwee Kuik discusses hedging in International Relations, arguing it is a pragmatic, insurance-maximizing behavior in uncertain global power shifts.",
+    "description": "Hedging is a concept in International Relations, though not a new behavior in world politics. This talk challenges characterizations of hedging as speculative, indecisive, or naïve. Drawing on cross-disciplinary insights, the speaker argues hedging is best understood as an instinctive, insurance-maximising behavior governments use to preserve agency by avoiding alignment with any single great power.",
+    "speakers": [
+      {
+        "name": "Professor Cheng-Chwee Kuik",
+        "bio": "Professor of International Relations at IKMAS, UKM"
+      }
+    ]
   },
   "6866a93602bd03ca": {
     "event_type": "festival",
@@ -673,6 +707,11 @@
     "description": "Printopia Festival returns for its fifth edition from 1–3 May 2026, celebrating contemporary printmaking across Aotearoa and the Asia Pacific. Now a recognised regional arts event, the Festival presents its signature programme including the country’s largest print fair, live printing, artist talks and hands-on workshops. New for 2026 are curated exhibitions, guided gallery tours and experimental performances that expand how print is experienced. Taking place across four central Auckland venues, Printopia invites audiences to connect, explore and be inspired.",
     "excluded": true,
     "exclude_reason": "Not a lecture or talk component"
+  },
+  "6b4f398206491f34": {
+    "event_type": "workshop",
+    "summary": "Explore the moana of Te Hāwere a Maki Goat Island Marine Reserve in a day-long workshop for young adults.",
+    "description": "This workshop immerses participants in the local marine environment of Te Hāwere a Maki Goat Island Marine Reserve. Attendees will engage in activities designed for young adults to deepen their understanding of marine conservation. The session focuses on hands-on exploration of the moana, providing insight into local conservation efforts."
   },
   "6c5fc1c057bcfa78": {
     "event_type": "panel",
@@ -1519,6 +1558,18 @@
       }
     ]
   },
+  "de9a05f7bbbe2ecb": {
+    "event_type": "showcase",
+    "description": "Join our Wellington Creativity in the Community students as they show how creativity helps us work together to address issues like homelessness and climate change.",
+    "speakers": [
+      {
+        "name": "arrangement with Playmarket) and 1 group has been working on",
+        "bio": "a dance piece about true love"
+      }
+    ],
+    "excluded": true,
+    "exclude_reason": "Lacks core academic talk component"
+  },
   "e1cb94aaa2fee747": {
     "event_type": "lecture",
     "summary": "Victoria hosts a lecture on philanthropy in supply chains.",
@@ -1636,6 +1687,11 @@
     "event_type": "seminar",
     "summary": "This event series reflects on the 50th anniversary of the Bachelor of Social Work qualification to inform the present and envision the future.",
     "description": "This event series celebrates the 50th anniversary of the Bachelor of Social Work qualification. The event reflects on the past while aiming to inform the present and envision the future of the field."
+  },
+  "f67191f4d37e6306": {
+    "event_type": "talk",
+    "summary": "This talk explores how data can build Aotearoa's future, featuring insights from Databricks and Tech Women.",
+    "description": "This event will discuss perspectives on how data can build Aotearoa's future, featuring Databricks and Tech Women. It is hosted by Deloitte Techweek26 at Deloitte Wellington."
   },
   "f736386a033bed4f": {
     "event_type": "seminar",
