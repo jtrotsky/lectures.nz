@@ -115,6 +115,11 @@
     "excluded": true,
     "exclude_reason": "Music celebration/event, not a lecture."
   },
+  "0c389f8f29f28445": {
+    "event_type": "talk",
+    "summary": "Performers will bring to life a selection of remarkable letters from the collections of the Alexander Turnbull Library.",
+    "description": "Performers will bring to life a selection of remarkable letters from the collections of the Alexander Turnbull Library."
+  },
   "0c5a2aaa12aaa6f5": {
     "event_type": "talk",
     "summary": "Professor John Dudley will give an overview of photonics, detailing the interplay between basic science and innovation.",
@@ -216,6 +221,13 @@
         "bio": "Curator of Heidi Brickell’s major installation"
       }
     ]
+  },
+  "16c7eef600e6dd14": {
+    "event_type": "workshop",
+    "summary": "Let your imagination run wild in this moth-making workshop!",
+    "description": "Let your imagination run wild in this moth-making workshop! Inspired by Phone Tree , Lucy Meyle’s exhibition in The Changing Room , participants will be provided with a range of materials drawn from the installation to create a handcrafted moth sculpture. Considering ideas of animal agency and the fictional lives of moths, this drop-in workshop encourages playful personification as you sculpt a moth companion to take home. All materials provided. While this event is suitable for all ages, participants aged under age 16 must be accompanied by a parent or guardian.",
+    "excluded": true,
+    "exclude_reason": "Not a lecture or talk component"
   },
   "184d6aaa593d1460": {
     "event_type": "lecture",
@@ -490,6 +502,16 @@
     "summary": "Victoria's Mandarin Corner explores Tai Chi basics.",
     "description": "Victoria University hosts a Mandarin Corner session focused on Tai Chi, inviting participants to practice this traditional Chinese martial art. The event combines language immersion with cultural experience through guided Tai Chi movements."
   },
+  "3756099d4a3535cb": {
+    "event_type": "workshop",
+    "summary": "Receive expert advice regarding your business idea for the Velocity $100k Challenge during this workshop.",
+    "description": "This workshop provides direct expert guidance for individuals with business concepts entering the Velocity $100k Challenge. Participants can receive tailored advice to strengthen their ideas and improve their pitch viability within the competition framework. Attendees will gain actionable insights into developing a fundable business proposition."
+  },
+  "3780163ccbc1a9d4": {
+    "event_type": "panel",
+    "summary": "Leaders and practitioners will explore the relationship between AI and neurodiversity in this panel discussion.",
+    "description": "This panel discussion brings together leaders, practitioners, and advocates to explore the powerful two-way relationship between AI and neurodiversity."
+  },
   "39f8376b33a79ab2": {
     "event_type": "lecture",
     "summary": "Archivists discuss new discoveries at the Alexander Turnbull Library.",
@@ -562,6 +584,11 @@
     "event_type": "talk",
     "summary": "Discover the history of Selwyn through a rich tapestry of objects from the Canterbury Museum collection.",
     "description": "This event showcases highlights from the Canterbury Museum's collection related to Selwyn. Attendees can view artifacts at the Canterbury Museum Pop-Up location, offering a glimpse into the museum's holdings while the main building undergoes redevelopment. It provides an opportunity to engage with the rich material culture surrounding Selwyn's history."
+  },
+  "52697805af2d6d51": {
+    "event_type": "talk",
+    "summary": "This talk, hosted by Deloitte Techweek26, will discuss the necessity of governance when working with Databricks.",
+    "description": "The session, hosted by Deloitte Techweek26, explores why governance is essential for utilizing Databricks effectively. The event will take place at Deloitte, Otago House Level 13/481 Moray Place, Central Dunedin, Dunedin 9016, New Zealand."
   },
   "52cbd11960f48258": {
     "event_type": "lecture",
@@ -637,6 +664,16 @@
       {
         "name": "Sahana Rahman",
         "bio": "Textile and community artist specializing in Bengali embroidery."
+      }
+    ]
+  },
+  "5f8d1f5fcc149271": {
+    "event_type": "seminar",
+    "summary": "Professor Katharine McKinnon examines governance and development within the pluriverse, drawing insights from livelihood programs in the Solomon Islands and Timor Leste.",
+    "description": "This seminar explores the intersection of governance and development through the lens of the pluriverse. Attendees will gain insights from livelihood programs implemented in the Solomon Islands and Timor Leste, understanding complex development dynamics across multiple systems.",
+    "speakers": [
+      {
+        "name": "Professor Katharine McKinnon"
       }
     ]
   },
@@ -965,6 +1002,11 @@
     "summary": "The event discusses the possibility that future customers may be non-human, hosted by Deloitte Techweek26.",
     "description": "Deloitte Techweek26 presents 'Your next customer may not be human!'. This discussion explores the future of customer interaction, suggesting that the next generation of customers may not be human in nature. The event takes place at Deloitte Auckland on Tuesday, May 19th, 2026."
   },
+  "93da3753c490e3b1": {
+    "event_type": "talk",
+    "summary": "Deloitte Techweek26 explores the 'Plug-and-Play myth' by uncovering the often hidden costs associated with off-the-shelf software.",
+    "description": "This session explores the 'Plug-and-Play myth' by uncovering the hidden costs associated with off-the-shelf software. The event is hosted by Deloitte Techweek26 and will take place at Deloitte Wellington on Friday, May 22nd, 2026."
+  },
   "95282080ccc6256f": {
     "event_type": "talk",
     "summary": "Former diplomat Frank Wilson speaks about his experiences witnessing the Fall of Saigon in 1975 and its implications for New Zealand.",
@@ -1064,6 +1106,13 @@
     "summary": "The final webinar in the 'This Thinking Life' series examines the historical dimensions of sound.",
     "description": "This webinar completes the 'This Thinking Life' series, focusing on the historical aspects of sound. Participants will gain an understanding of how the perception and use of sound have evolved throughout history."
   },
+  "9e0dbc22b82315af": {
+    "event_type": "workshop",
+    "summary": "Create your own moth sculpture, inspired by Lucy Meyle's exhibition Phone Tree in The Changing Room",
+    "description": "Create your own moth sculpture, inspired by Lucy Meyle's exhibition Phone Tree in The Changing Room",
+    "excluded": true,
+    "exclude_reason": "Hands-on craft activity, not a lecture"
+  },
   "9f89787accb1ccaa": {
     "event_type": "seminar",
     "summary": "Sara Meymand discusses New Zealand's pro-active trade strategy to navigate the increasingly turbulent and uncertain global trade environment.",
@@ -1097,6 +1146,12 @@
       }
     ]
   },
+  "a21af95e686ba9e0": {
+    "event_type": "talk",
+    "clean_title": "From code to capability: The new role of engineers",
+    "summary": "Deloitte Techweek26 explores the new role of engineers in a session titled \"From code to capability: The new role of engineers\".",
+    "description": "Deloitte Techweek26 will discuss the evolving role of engineers. The event takes place at Deloitte Wellington on Friday, May 22nd, 2026."
+  },
   "a244e0dfe41b06b5": {
     "event_type": "talk",
     "summary": "Ruth Buchanan guides attendees through the 'The Blue Dome' exhibition, offering insight into Selina Ersahdi’s newly commissioned films and installations.",
@@ -1117,6 +1172,17 @@
     "event_type": "conference",
     "summary": "A full day event for podcast producers, presenters, practitioners, providers, and the podcast curious across Aotearoa.",
     "description": "This event is for podcast producers, presenters, practitioners, providers from across Aotearoa, and those just curious about podcasts. It is a full day dedicated to the podcasting industry."
+  },
+  "a42a7517ba0436f1": {
+    "event_type": "talk",
+    "summary": "This event features the premiere screening of the docuseries 'Girls Mean Business,' starring Joelle Holland, founder and CEO of Hawiiki Pēpi.",
+    "description": "Attend the premiere screening of the docuseries: Girls Mean Business, featuring Joelle Holland, founder and CEO of Hawiiki Pēpi. The series aims to inspire the next generation of female entrepreneurs by offering workshops on entrepreneurial mindset and financial literacy to Year 7 and 8 girls.",
+    "speakers": [
+      {
+        "name": "Joelle Holland",
+        "bio": "founder and CEO of Hawiiki Pēpi"
+      }
+    ]
   },
   "a616ebba62bce37b": {
     "event_type": "lecture",
@@ -1558,6 +1624,11 @@
       }
     ]
   },
+  "de087257616a2971": {
+    "event_type": "talk",
+    "summary": "Learn how AI capability can lift productivity, presented at Deloitte Techweek26.",
+    "description": "The discussion will cover how AI capability can move from mere skills to actual productivity gains. This event is hosted by Deloitte Techweek26 and takes place at Deloitte Auckland."
+  },
   "de9a05f7bbbe2ecb": {
     "event_type": "showcase",
     "description": "Join our Wellington Creativity in the Community students as they show how creativity helps us work together to address issues like homelessness and climate change.",
@@ -1569,6 +1640,17 @@
     ],
     "excluded": true,
     "exclude_reason": "Lacks core academic talk component"
+  },
+  "de9ee3f1faf86b38": {
+    "event_type": "talk",
+    "summary": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham discusses the processes behind how our brain's nerve cells allow us to form or forget memories.",
+    "description": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember – or forget.",
+    "speakers": [
+      {
+        "name": "Distinguished Professor Cliff Abraham",
+        "bio": "Neuroscientist Emeritus"
+      }
+    ]
   },
   "e1cb94aaa2fee747": {
     "event_type": "lecture",
@@ -1703,6 +1785,12 @@
         "bio": "University of Potsdam"
       }
     ]
+  },
+  "f7f6795f76be68b6": {
+    "event_type": "workshop",
+    "clean_title": "Beyond Access: Getting Real Value from Copilot",
+    "summary": "Learn practical Microsoft 365 Copilot tips and tricks to cut administration, write faster, and convert meetings into actionable items.",
+    "description": "The session focuses on extracting practical value from Microsoft 365 Copilot. Attendees will gain actionable tips and tricks to significantly streamline administrative tasks, accelerate writing processes, and ensure meetings translate directly into concrete actions. This provides a practical pathway to maximizing productivity using Copilot technology."
   },
   "f9522d3572d03fb2": {
     "summary": "Future Environments Thought Leadership session, in partnership with Whaikaha – Ministry of Disabled People, focused on accessible and inclusive design in",

@@ -6,12 +6,12 @@
     "description": "Art Gallery New Zealand hosts public talks, workshops, and events celebrating art and culture.",
     "lectures": [
       {
-        "id": "44e56d2a649a4c17",
-        "title": "Performance: Madison Kelly, Toko by and by",
-        "link": "https://artgallery.org.nz/products/performance-madison-kelly-toko-by-and-by",
+        "id": "019098f2d8065563",
+        "title": "SOLD OUT Learn to Bead Flowers with Kathryn Tsui",
+        "link": "https://artgallery.org.nz/products/learn-to-bead-flowers-workshop-with-artist-kathryn-tsui",
         "time_start": "2026-06-06T10:00:00+12:00",
-        "summary": "\\n\\n\\n\\n\\n\\n\\n\\n\\nTo celebrate our seasonal opening event, join exhibiting artist Madison Kelly in the Meldrum Gallery for a percussive activation of the exhibition Toko by and by on Sat 6 Jun, 10.",
-        "description": "\\n\\n\\n\\n\\n\\n\\n\\n\\nTo celebrate our seasonal opening event, join exhibiting artist Madison Kelly in the Meldrum Gallery for a percussive activation of the exhibition Toko by and by on Sat 6 Jun, 10.10–10.25am. Using a range of traditional percussion accessories alongside handmade toko\\/sticks sourced from the coastline of Ōtepoti Dunedin, this short performance by Madison Kelly sonically explores the intertidal data and whakapapa of Te Awa Moana, Otago Harbour.\\n\\n\\n\\n\\n\\n\\n\\n\\n\\nThis event is free, but with limited spaces available registration is a must — secure your spot early! We look forward to seeing you there.\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n",
+        "summary": "SOLD OUT\nJoin exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.",
+        "description": "SOLD OUT\nJoin exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.\nDuring this workshop you will learn to bead various flowers and make a small posy to take home. No previous beading experience is required, but bring nimble fingers, a dash of patience and your reading glasses! \nThis workshop is designed for those aged 15 years and older. Starting at 1pm there will be a a 15-minute break, with all the material provided in the ticket price. \nGet in quick as there's only 12 spots available!",
         "free": false,
         "tags": [
           "arts-culture"
@@ -29,12 +29,12 @@
         "host_slug": "artgallery-nz"
       },
       {
-        "id": "019098f2d8065563",
-        "title": "SOLD OUT Learn to Bead Flowers with Kathryn Tsui",
-        "link": "https://artgallery.org.nz/products/learn-to-bead-flowers-workshop-with-artist-kathryn-tsui",
+        "id": "44e56d2a649a4c17",
+        "title": "Performance: Madison Kelly, Toko by and by",
+        "link": "https://artgallery.org.nz/products/performance-madison-kelly-toko-by-and-by",
         "time_start": "2026-06-06T10:00:00+12:00",
-        "summary": "SOLD OUT\nJoin exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.",
-        "description": "SOLD OUT\nJoin exhibiting artist Kathryn Tsui on Sat 6 Jun, 1–4pm, as she shares French flower beading techniques found in her latest botanical work Silk Blossom, featured in her Lustre Harbour exhibition.\nDuring this workshop you will learn to bead various flowers and make a small posy to take home. No previous beading experience is required, but bring nimble fingers, a dash of patience and your reading glasses! \nThis workshop is designed for those aged 15 years and older. Starting at 1pm there will be a a 15-minute break, with all the material provided in the ticket price. \nGet in quick as there's only 12 spots available!",
+        "summary": "To celebrate our seasonal opening event, join exhibiting artist Madison Kelly in the Meldrum Gallery for a percussive activation of the exhibition Toko by and by on Sat 6 Jun, 10.10–10.25am.",
+        "description": "To celebrate our seasonal opening event, join exhibiting artist Madison Kelly in the Meldrum Gallery for a percussive activation of the exhibition Toko by and by on Sat 6 Jun, 10.10–10.25am. Using a range of traditional percussion accessories alongside handmade toko\\/sticks sourced from the coastline of Ōtepoti Dunedin, this short performance by Madison Kelly sonically explores the intertidal data and whakapapa of Te Awa Moana, Otago Harbour.\\nThis event is free, but with limited spaces available registration is a must — secure your spot early! We look forward to seeing you there.",
         "free": false,
         "tags": [
           "arts-culture"
@@ -88,7 +88,7 @@
       },
       {
         "id": "7c6f453987ef3c34",
-        "title": "Film screening of fugue notes",
+        "title": "fugue notes film screening with live voice over",
         "link": "https://artspace-aotearoa.nz/events/film-screening-of-fugue-notes",
         "time_start": "2026-06-25T18:00:00+12:00",
         "description": "Join us for the first screening of fugue notes (2025) by Selina Ershadi since its remastering for its inclusion in the London BFI Film Festival. This film was included in the Anatomy of Place, Sites of Becoming section of the festival which …",
@@ -133,21 +133,6 @@
     "description": "Tāmaki Paenga Hira Auckland War Memorial Museum hosts public talks, evening events, and cultural programmes exploring Aotearoa's natural and human history.",
     "lectures": [
       {
-        "id": "e67ad4ca1b438be0",
-        "title": "The 2025 Rutherford Medal Lecture",
-        "link": "https://www.aucklandmuseum.com/visit/whats-on/members/The-2025-Rutherford-Medal-Lecture",
-        "time_start": "2026-05-19T18:00:00+12:00",
-        "summary": "The Royal Society Te Apārangi and the Auckland Museum Institute are delighted to present the 2025 Rutherford Medal recipient, Emeritus Distinguished Professor Cliff Abraham FRSNZ, in a special public lecture.",
-        "description": "The Royal Society Te Apārangi and the Auckland Museum Institute are delighted to present the 2025 Rutherford Medal recipient, Emeritus Distinguished Professor Cliff Abraham FRSNZ, in a special public lecture. Professor Abraham will be speaking about our mysterious brains, and ideas for new treatments emerging from the discoveries made by his research team.",
-        "free": false,
-        "cost": "Ticketed",
-        "location": "Te Mata Tairongo Auditorium, Level 2, Auckland War Memorial Museum",
-        "tags": [
-          "history-society"
-        ],
-        "host_slug": "auckland-museum"
-      },
-      {
         "id": "541dc5ec63ddc292",
         "title": "Close Encounters with the Shark Side",
         "link": "https://www.aucklandmuseum.com/visit/whats-on/evenings/Twilight-Tuesday-with-Clinton_Duffy-SharkSide",
@@ -162,6 +147,18 @@
           "science-technology",
           "environment"
         ],
+        "host_slug": "auckland-museum"
+      },
+      {
+        "id": "0c389f8f29f28445",
+        "title": "Letters Out Loud",
+        "link": "https://www.aucklandmuseum.com/visit/whats-on/evenings/Letters-Out-Loud",
+        "time_start": "2026-06-30T18:30:00+12:00",
+        "summary": "Join us for an enchanting evening as well-known performers bring to life a selection of remarkable letters from the collections of the Alexander Turnbull Library.",
+        "description": "Join us for an enchanting evening as well-known performers bring to life a selection of remarkable letters from the collections of the Alexander Turnbull Library.",
+        "free": false,
+        "cost": "Ticketed",
+        "location": "TE MATA TAIRONGO AUDITORIUM, Auckland War Memorial Museum",
         "host_slug": "auckland-museum"
       }
     ]
@@ -211,30 +208,14 @@
     "description": "Public lectures and educational events from NZ institutions listed on Eventbrite.",
     "lectures": [
       {
-        "id": "aeb312a738e9e76d",
-        "title": "Joint Inventory-Routing Optimization for Battery Swapping Networks",
-        "link": "https://www.eventbrite.co.nz/e/joint-inventory-routing-optimization-for-battery-swapping-networks-tickets-1988796009401",
-        "time_start": "2026-05-19T11:30:00+12:00",
-        "summary": "Abstract The rapid expansion of electric vehicle battery-swapping networks is increasing pressure on urban power grids.",
-        "description": "Abstract The rapid expansion of electric vehicle battery-swapping networks is increasing pressure on urban power grids. We study a hybrid battery swapping-charging system with multiple local swapping stations (SSs) and one central charging station (CS). Depleted batteries are either charged at SSs or transported to the CS for centralized charging and periodic redistribution.",
+        "id": "a42a7517ba0436f1",
+        "title": "Girls Mean Business",
+        "link": "https://www.eventbrite.co.nz/e/girls-mean-business-tickets-1989624558614",
+        "time_start": "2026-06-11T17:30:00+12:00",
+        "summary": "You are invited to the premiere screening of our new docuseries: Girls Mean Business featuring Joelle Holland founder and CEO of Hawiiki Pēpi .",
+        "description": "You are invited to the premiere screening of our new docuseries: Girls Mean Business featuring Joelle Holland founder and CEO of Hawiiki Pēpi . Girls Mean Business a ims to inspire the next generation of female entrepreneurs, offering workshops on entrepreneurial mindset and financial literacy to Year 7 and 8 girls. Programme We hope you can join us.",
         "free": true,
-        "location": "Sir Owen G Glenn Building, Room 321, Level 3,, 12 Grafton Road, Auckland",
-        "host_slug": "eventbrite",
-        "organiser": "University of Auckland, Business School"
-      },
-      {
-        "id": "c918880121cd1fe6",
-        "title": "The European Union, Asia and New Zealand",
-        "link": "https://www.eventbrite.co.nz/e/the-european-union-asia-and-new-zealand-strengthening-dialogue-and-coope-tickets-1988140169767",
-        "time_start": "2026-05-21T12:00:00+12:00",
-        "summary": "This event is to be co-hosted by New Zealand Asia Institute and the Global Studies Occasional Speaker Series Synopsis Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment.",
-        "description": "This event is to be co-hosted by New Zealand Asia Institute and the Global Studies Occasional Speaker Series Synopsis Lawrence will explore how Europe and New Zealand are strengthening ties in an increasingly interconnected and contested global environment. His remarks will highlight the value of working with like-minded partners in the Asia-Pacific region to uphold open, rules-based cooperation and deliver practical outcomes.",
-        "free": true,
-        "location": "The University of Auckland Business School, Decima Glenn Room, Level 3, Sir Owen G Glenn Building, Auckland",
-        "tags": [
-          "environment",
-          "politics-policy"
-        ],
+        "location": "University of Auckland Business School, Sir Owen G Glenn Building, Level 0, 12 Grafton Road, Auckland",
         "host_slug": "eventbrite",
         "organiser": "University of Auckland, Business School"
       }
@@ -287,12 +268,23 @@
         "link": "https://www.eventbrite.co.nz/e/artist-talk-with-lucy-meyle-tickets-1989354458738?aff=oddtdtcreator",
         "time_start": "2026-06-06T18:00:00+12:00",
         "summary": "Join Lucy Meyle for an artist talk discussing her newly commissioned exhibition Phone Tree as part of The Changing Room 2026, proudly supported by The Chartwell Trust. All are welcome.",
-        "description": "Join Lucy Meyle for an artist talk discussing her newly commissioned exhibition Phone Tree as part of The Changing Room 2026, proudly supported by The Chartwell Trust. All are welcome. Lucy Meyle is an artist from Tāmaki Makaurau Auckland whose practice explores ways of considering and relating to animals. Working in sculpture and publication, Meyle often draws together the archival, the observed and the absurd into material relation. Recent exhibitions include Pause, act, void, event (Govett Brewster Art Gallery, Ngāmotu New Plymouth), the castle and the goat (Goya Curtain, Tokyo), Spring Time is Heart-break (Te Puna o Waiwhetū, Ōtautahi Christchurch), Memories of a Naturalist (Dunedin Public Art Gallery, Ōtepoti Dunedin), wiggling together, falling apart (Michael Lett (Tāmaki Makaurau Auckland), and Mews room (play_station gallery, Te Whanganui-a-Tara Wellington).",
+        "description": "Join Lucy Meyle for an artist talk discussing her newly commissioned exhibition Phone Tree as part of The Changing Room 2026, proudly supported by The Chartwell Trust. All are welcome. Lucy Meyle is an artist from Tāmaki Makaurau Auckland whose practice explores ways of considering and relating to animals. Working in sculpture and publication, Meyle often draws together the archival, the observed and the absurd into material relation. Recent exhibitions include Pause, act, void, event (Govett Brewster Art Gallery, Ngāmotu New Plymouth), the castle and the goat (Goya Curtain, Tokyo), Spring Time is Heart-break (Te Puna o Waiwhetū, Ōtautahi Christchurch), Memories of a Naturalist (Dunedin Public Art Gallery, Ōtepoti Dunedin), wiggling together, falling apart (Michael Lett, Tāmaki Makaurau Auckland), and Mews room (play_station gallery, Te Whanganui-a-Tara Wellington).",
         "free": true,
         "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
         "tags": [
           "arts-culture"
         ],
+        "host_slug": "gus-fisher"
+      },
+      {
+        "id": "16c7eef600e6dd14",
+        "title": "Moth-Making",
+        "link": "https://www.eventbrite.co.nz/e/moth-making-workshop-tickets-1990058928827?aff=oddtdtcreator",
+        "time_start": "2026-06-06T18:00:00+12:00",
+        "summary": "Let your imagination run wild in this moth-making workshop!",
+        "description": "Let your imagination run wild in this moth-making workshop! Inspired by Phone Tree , Lucy Meyle’s exhibition in The Changing Room , participants will be provided with a range of materials drawn from the installation to create a handcrafted moth sculpture. Considering ideas of animal agency and the fictional lives of moths, this drop-in workshop encourages playful personification as you sculpt a moth companion to take home. All materials provided. While this event is suitable for all ages, participants aged under age 16 must be accompanied by a parent or guardian.",
+        "free": true,
+        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland CBD",
         "host_slug": "gus-fisher"
       }
     ]
@@ -304,119 +296,89 @@
     "description": "Public lectures and educational events from NZ institutions listed on Humanitix.",
     "lectures": [
       {
-        "id": "e42257690cdde024",
-        "title": "Uncover the art of the possible: Deloitte x ServiceNow UC student appathon",
-        "link": "https://events.humanitix.com/deloitte-presents-uncover-the-art-of-the-possible-deloitte-x-servicenow-uc-student-appathon",
-        "time_start": "2026-05-19T09:00:00+12:00",
-        "time_end": "2026-05-19T17:00:00+12:00",
-        "summary": "Deloitte and ServiceNow, in partnership with the University of Canterbury, are throwing down a Techweek Appathon challenge to the students at UC!",
-        "description": "Deloitte and ServiceNow, in partnership with the University of Canterbury, are throwing down a Techweek Appathon challenge to the students at UC!",
+        "id": "93da3753c490e3b1",
+        "title": "The Plug-and-Play myth - Uncovering the hidden costs of off-the-shelf software",
+        "link": "https://events.humanitix.com/deloitte-presents-the-plug-and-play-myth-uncovering-the-hidden-costs-of-off-the-shelf-software",
+        "time_start": "2026-05-22T08:30:00+12:00",
+        "time_end": "2026-05-22T10:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents:  The Plug-and-Play myth - Uncovering the hidden costs of off-the-shelf software hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents:  The Plug-and-Play myth - Uncovering the hidden costs of off-the-shelf software hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Friday 22nd May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "tags": [
+          "science-technology"
+        ],
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "52697805af2d6d51",
+        "title": "It’s a no-go without governance with Databricks",
+        "link": "https://events.humanitix.com/deloitte-presents-it-is-a-no-go-without-governance",
+        "time_start": "2026-05-22T09:00:00+12:00",
+        "time_end": "2026-05-22T10:30:00+12:00",
+        "summary": "Register on Humanitix - Deloitte presents: It’s a no-go without governance with Databricks hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte presents: It’s a no-go without governance with Databricks hosted by Deloitte Techweek26. Deloitte, Otago House Level 13/481 Moray Place, Central Dunedin, Dunedin 9016, New Zealand. Friday 22nd May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte, Dunedin",
+        "tags": [
+          "science-technology"
+        ],
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "a21af95e686ba9e0",
+        "title": "From code to capability: The new role of engineers - Wellington",
+        "link": "https://events.humanitix.com/from-code-to-capability-the-new-role-of-engineers-wellington",
+        "time_start": "2026-05-22T10:00:00+12:00",
+        "time_end": "2026-05-22T11:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: From code to capability: The new role of engineers - Wellington hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: From code to capability: The new role of engineers - Wellington hosted by Deloitte Techweek26. Deloitte Wellington, Level 1/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Friday 22nd May 2026. Find event information.",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "f7f6795f76be68b6",
+        "title": "Beyond Access: - Getting Real Value from Copilot",
+        "link": "https://events.humanitix.com/deloitte-presents-beyond-access-getting-real-value-from-copilot",
+        "time_start": "2026-05-22T11:00:00+12:00",
+        "time_end": "2026-05-22T12:30:00+12:00",
+        "summary": "Cut admin, write faster, and turn meetings into action—learn practical Microsoft 365 Copilot tips and tricks.",
+        "description": "Cut admin, write faster, and turn meetings into action—learn practical Microsoft 365 Copilot tips and tricks.",
         "free": true,
         "location": "Deloitte Christchurch, Christchurch",
+        "host_slug": "humanitix",
+        "organiser": "Deloitte Techweek26"
+      },
+      {
+        "id": "3780163ccbc1a9d4",
+        "title": "Build the right thing, build the thing right: Agentic spec-driven development",
+        "link": "https://events.humanitix.com/deloitte-presents-build-the-right-thing-build-the-thing-right-agentic-spec-driven-development",
+        "time_start": "2026-05-22T14:00:00+12:00",
+        "time_end": "2026-05-22T18:00:00+12:00",
+        "summary": "Join us for a panel discussion bringing together leaders, practitioners and advocates to explore the powerful two‑way relationship between AI and neurodiversity",
+        "description": "Join us for a panel discussion bringing together leaders, practitioners and advocates to explore the powerful two‑way relationship between AI and neurodiversity",
+        "free": true,
+        "location": "Deloitte Wellington, Wellington",
         "tags": [
-          "arts-culture"
+          "history-society"
         ],
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
       {
-        "id": "7423082faeba0062",
-        "title": "Vibe coding or tech debt? Building fast without paying later",
-        "link": "https://events.humanitix.com/deloitte-presents-vibe-coding-or-tech-debt-building-fast-without-paying-later",
-        "time_start": "2026-05-19T16:00:00+12:00",
-        "time_end": "2026-05-19T18:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: Vibe coding or tech debt? Building fast without paying later hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: Vibe coding or tech debt? Building fast without paying later hosted by Deloitte Techweek26. Deloitte Auckland, Level 20/01 Queen Street, Auckland CBD, Auckland 1010, New Zealand. Tuesday 19th May 2026. Find event information.",
+        "id": "de087257616a2971",
+        "title": "From skills to scale: AI capability that actually lifts productivity",
+        "link": "https://events.humanitix.com/deloitte-presents-from-skills-to-scale-ai-capability-that-actually-lifts-productivity",
+        "time_start": "2026-05-22T15:30:00+12:00",
+        "time_end": "2026-05-22T17:00:00+12:00",
+        "summary": "Register on Humanitix - Deloitte Presents: From skills to scale: AI capability that actually lifts productivity (Auckland \u0026 Online) hosted by Deloitte Techweek26.",
+        "description": "Register on Humanitix - Deloitte Presents: From skills to scale: AI capability that actually lifts productivity (Auckland \u0026 Online) hosted by Deloitte Techweek26. Deloitte Auckland, 01 Queen Street, Auckland CBD, Auckland 1010, New Zealand. Friday 22nd May 2026. Find event information.",
         "free": true,
         "location": "Deloitte Auckland, Auckland",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "283045f10f790cd0",
-        "title": "The Future of Open Insurance in Aotearoa New Zealand",
-        "link": "https://events.humanitix.com/deloitte-presents-the-future-of-open-insurance-in-aotearoa-new-zealand",
-        "time_start": "2026-05-19T17:00:00+12:00",
-        "time_end": "2026-05-19T19:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: The Future of Open Insurance in Aotearoa New Zealand hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Tuesday 19th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "dab41faa544e7e75",
-        "title": "We can’t hire our way out of this",
-        "link": "https://events.humanitix.com/deloitte-presents-we-can-t-hire-our-way-out-of-this-demographics-productivity-and-ai-choices-facing-nz",
-        "time_start": "2026-05-20T09:00:00+12:00",
-        "time_end": "2026-05-20T10:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ (Wellington and Online) hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: We can’t hire our way out of this - demographics, productivity and AI choices facing NZ (Wellington and Online) hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Wednesday 20th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "9982030537bd9f14",
-        "title": "Building enterprise‑ready AI agents: From foundations to scale",
-        "link": "https://events.humanitix.com/deloitte-presents-building-enterprise-ready-ai-agents-from-foundations-to-scale",
-        "time_start": "2026-05-20T16:00:00+12:00",
-        "time_end": "2026-05-20T17:00:00+12:00",
-        "summary": "As AI and AI Agents proliferate, the enterprise is challenged to make smart technology choices and establish platforms for running and managing Agents.",
-        "description": "As AI and AI Agents proliferate, the enterprise is challenged to make smart technology choices and establish platforms for running and managing Agents.",
-        "free": true,
-        "location": "Deloitte Auckland, Auckland",
-        "tags": [
-          "arts-culture",
-          "science-technology"
-        ],
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "54aacd738fcfc7ac",
-        "title": "Regional tech panel: Future of tech in Taupō",
-        "link": "https://events.humanitix.com/deloitte-presents-regional-tech-panel-future-of-tech-in-taup",
-        "time_start": "2026-05-20T16:30:00+12:00",
-        "time_end": "2026-05-20T18:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte Presents: Regional tech panel: Future of tech in Taupō hosted by Deloitte Techweek26. Lake Taupo Yacht Club, 9 Ferry Road, Taupō 3330, New Zealand.",
-        "description": "Register on Humanitix - Deloitte Presents: Regional tech panel: Future of tech in Taupō hosted by Deloitte Techweek26. Lake Taupo Yacht Club, 9 Ferry Road, Taupō 3330, New Zealand. Wednesday 20th May 2026. Find event information.",
-        "free": true,
-        "location": "Lake Taupo Yacht Club, Taupō",
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "f67191f4d37e6306",
-        "title": "Perspectives in data: Building Aotearoa's future with Databricks and Tech Women",
-        "link": "https://events.humanitix.com/deloitte-presents-perspectives-in-data-building-aotearoa-s-future-with-databricks-wellington",
-        "time_start": "2026-05-20T17:00:00+12:00",
-        "time_end": "2026-05-20T18:30:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents:  Perspectives in data: Building Aotearoa's future with Databricks and Tech Women (Wellington) hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents:  Perspectives in data: Building Aotearoa's future with Databricks and Tech Women (Wellington) hosted by Deloitte Techweek26. Deloitte Wellington, Level 12/20 Customhouse Quay, Wellington Central, Wellington 6011, New Zealand. Wednesday 20th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Wellington, Wellington",
-        "tags": [
-          "science-technology"
-        ],
-        "host_slug": "humanitix",
-        "organiser": "Deloitte Techweek26"
-      },
-      {
-        "id": "5986fb749885d822",
-        "title": "The future of bio-innovation: From research to global impact",
-        "link": "https://events.humanitix.com/deloitte-presents-the-future-of-bio-innovation-from-research-to-global-impact",
-        "time_start": "2026-05-20T17:30:00+12:00",
-        "time_end": "2026-05-20T19:00:00+12:00",
-        "summary": "Register on Humanitix - Deloitte presents: The future of bio-innovation: From research to global impact hosted by Deloitte Techweek26.",
-        "description": "Register on Humanitix - Deloitte presents: The future of bio-innovation: From research to global impact hosted by Deloitte Techweek26. Deloitte Christchurch, 151 Cambridge Terrace, Christchurch Central City, Christchurch 8013, New Zealand. Wednesday 20th May 2026. Find event information.",
-        "free": true,
-        "location": "Deloitte Christchurch, Christchurch",
-        "tags": [
-          "science-technology"
-        ],
         "host_slug": "humanitix",
         "organiser": "Deloitte Techweek26"
       },
@@ -461,19 +423,6 @@
     "description": "Massey University hosts public lectures, seminars, and events across its Auckland, Palmerston North, and Wellington campuses.",
     "lectures": [
       {
-        "id": "f575220e54475c4f",
-        "title": "Celebrate 50 years Bachelor of Social Work | 1976–1985",
-        "link": "https://www.massey.ac.nz/about/events/celebrate-50-years-bachelor-of-social-work/",
-        "time_start": "2026-05-21T12:00:00+12:00",
-        "description": "Join us in celebrating the 50th anniversary of the Bachelor of Social Work qualification with an event series reflecting on the past to inform the present and envision the future.",
-        "free": false,
-        "location": "Online event",
-        "tags": [
-          "history-society"
-        ],
-        "host_slug": "massey"
-      },
-      {
         "id": "de9a05f7bbbe2ecb",
         "title": "Creativity in the community showcase",
         "link": "https://www.massey.ac.nz/about/events/creativity-in-the-community-showcase/",
@@ -489,6 +438,19 @@
         ],
         "tags": [
           "history-society"
+        ],
+        "host_slug": "massey"
+      },
+      {
+        "id": "5f8d1f5fcc149271",
+        "title": "International Development seminar",
+        "link": "https://www.massey.ac.nz/about/events/international-development-seminar/",
+        "time_start": "2026-05-29T14:00:00+12:00",
+        "description": "Governance and development in the pluriverse: insights from livelihood programs in Solomon Islands and Timor Leste. Professor Katharine McKinnon",
+        "free": false,
+        "location": "SST3.07 and Online",
+        "tags": [
+          "politics-policy"
         ],
         "host_slug": "massey"
       },
@@ -636,62 +598,6 @@
     "description": "The New Zealand Institute of International Affairs hosts public lectures and forums on foreign policy, geopolitics, and international relations across New Zealand.",
     "lectures": [
       {
-        "id": "af83032b7b0af944",
-        "title": "An address by Anna Fifield",
-        "link": "https://www.nziia.org.nz/events/an-address-by-anna-fifield-2/",
-        "time_start": "2026-05-21T14:00:00+12:00",
-        "summary": "Our speaker will be Anna Fifield , former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington.",
-        "description": "Our speaker will be Anna Fifield , former Asia-Pacific Editor of the Washington Post (until February this year), and before that Editor of the Dominion Post in Wellington. Anna was a foreign correspondent for international newspapers for 20 years, writing for the Financial Times and the Washington Post on postings in Seoul, Tehran, Beirut, Washington DC, Tokyo and, most recently, Beijing. She was a Nieman journalism fellow at Harvard University in 2013-14 and was awarded Stanford University's Shorenstein Journalism Award in 2018 for her reporting on Asia. Her highly acclaimed book \"The Great Successor: The Secret Rise and Rule of Kim Jong-Un\" has been translated into 24 languages. The usual door charge of $8 will apply, to cover venue hire and afternoon tea costs",
-        "free": false,
-        "location": "Havelock North Club, 8 Campbell Street, Havelock North",
-        "speakers": [
-          {
-            "name": "Anna Fifield"
-          }
-        ],
-        "host_slug": "nziia"
-      },
-      {
-        "id": "c88ef837a7d3266d",
-        "title": "An address by Mr Daniel Sloper PSM",
-        "link": "https://www.nziia.org.nz/events/an-address-by-mr-daniel-sloper-psm/",
-        "time_start": "2026-05-21T17:30:00+12:00",
-        "summary": "Mr Sloper PSM, is a senior career officer with the Department of Foreign Affairs and Trade (DFAT).",
-        "description": "Mr Sloper PSM, is a senior career officer with the Department of Foreign Affairs and Trade (DFAT). He was most recently First Assistant Secretary, East Asia Division with oversight of relations with China, Hong Kong and Taiwan. He will provide an outline of Australia and New Zealand relations, our shared interests internationally, key elements in Australia's approach to the Indo-Pacific and more broadly and also touch on current international issues. We expect his presentation will be wide ranging covering the relationship between Australia and New Zealand. (more details below) Get your questions ready. This is at the Golf Club where our numbers are restricted to 100. We expect it will be a popular event so please register early Registrations are reserved for members for ONE week and then we will extend the invitation to casual attendees. Please let us know if your plans change and you can no longer come as there will probably be someone keen to take your place. Please note this event will be at the NELSON GOLF CLUB",
-        "free": false,
-        "location": "Nelson Golf Club, 38 Bolt Road, Tahuanui, Nelson",
-        "speakers": [
-          {
-            "name": "Mr Daniel Sloper PSM, Australian High Commissioner to New Zealand"
-          }
-        ],
-        "tags": [
-          "arts-culture",
-          "politics-policy"
-        ],
-        "host_slug": "nziia"
-      },
-      {
-        "id": "9f89787accb1ccaa",
-        "title": "Navigating uncertainty: New Zealand's Trade Strategy in a volatile global trade environment",
-        "link": "https://www.nziia.org.nz/events/navigating-uncertainty-new-zealands-trade-strategy-in-a-volatile-global-trade-environment/",
-        "time_start": "2026-05-21T19:30:00+12:00",
-        "summary": "As members will be well aware, New Zealand is a geographically distant country that depends on its connections with the rest of the world.",
-        "description": "As members will be well aware, New Zealand is a geographically distant country that depends on its connections with the rest of the world. Trade plays a key role in lifting our ability to generate a higher quality and standard of living – it makes up 60 per cent of the country’s total economic activity and the export economy supports 1 in 4 Kiwi jobs. The rules-based trading system has served New Zealand well – a global project of rules, predictability, deepening economic ties, and sustainable development through the progressive liberalisation of trade between all nations. Readers will be familiar with the World Trade Organisation and New Zealand’s long-standing network of free trade agreements; the new Free Trade Agreement with India and our one with Singapore are currently in the headlines. Yet the world’s trading environment has been severely disrupted, not only by war, but also by unilateral trade action and increasing protectionism from major countries. We are trading in a landscape that once felt stable, but is now fluid, uneven, and reshaping itself. The environment is marked by heightened uncertainty and changing expectations. The reality we face is not temporary disruption, but a persistent shift that requires steady judgment, sharp awareness, and deliberate adaptation. So, for us, the question is what can New Zealand do? In today’s increasingly turbulent international trade environment, New Zealand has adopted a pro-active trade strategy to respond to and navigate the headwinds. This is based around three central elements: shoring up the rules, building economic resilience, and growing trade relationships through innovative partnerships. Our speaker is a career diplomat, specialising in trade policy. Sara has recently served as New Zealand’s Ambassador to Mexico (2021-2024), following previous postings to the New Zealand Mission to the EU in Brussels, and to the New Zealand Embassy in Washington DC. Sara has a Bachelor of Laws and a Bachelor of Commerce (Economics) from Otago University and a Master’s in Public Administration from the Harvard Kennedy School of Government. The usual rules of public discourse apply. Coffee and tea are available from 7pm. Non-members are welcome, with a $5 koha. High school or UCOL students are welcome with free entry.",
-        "free": false,
-        "location": "Rosewood, 417 Queen Street, Kuripuni, Masterton",
-        "speakers": [
-          {
-            "name": "Sara Meymand, Divisional Manager, Trade Policy and Negotiations, New Zealand Ministry of Foreign Affairs and Trade"
-          }
-        ],
-        "tags": [
-          "environment",
-          "politics-policy"
-        ],
-        "host_slug": "nziia"
-      },
-      {
         "id": "6400ba7800c63337",
         "title": "Strategic Hedging in Trump 2.0",
         "link": "https://www.nziia.org.nz/events/strategic-hedging-in-trump-2-0/",
@@ -785,21 +691,6 @@
     "description": "Objectspace is an Auckland gallery dedicated to design and craft. It hosts the Ockham Lecture series, book launches, artist talks, and public workshops.",
     "lectures": [
       {
-        "id": "347ac28eebc4b22c",
-        "title": "Movement and music in Endgrained: Xin Ji and Alistair Deverick",
-        "link": "https://www.eventbrite.co.nz/e/movement-and-music-in-endgrained-xin-ji-and-alistair-deverick-tickets-1988045572825?aff=oddtdtcreator",
-        "time_start": "2026-05-20T18:00:00+12:00",
-        "summary": "This event is now fully booked, to be added to the waitlist please email /* =0;i-=2){r+=e.charAt(i);}return r;}('\\u003ejaD/2\\u003cnzWnn.8gSr6o\\'.",
-        "description": "This event is now fully booked, to be added to the waitlist please email /* =0;i-=2){r+=e.charAt(i);}return r;}('\\u003ejaD/2\\u003cnzWnn.8gSr6o\\'.uevcSagpusYticzedj8bnoE@ToufHngiz\\u003e2\\\"jrye3n\\\"e1pboUo5nv\\\"Y=olTeFry t\\\"okpnxa4lrbj_w\\\"A=ctveHg\\u003eraaftV 8\\\"SzYnj.5gPr0om.De6cRaApXs0trcweujtb\\u003coT@roafKn8id:BomtylgiIaWm9\\\"2=Tfce@rWhs Yav\\u003cV'); document.getElementById('x-protectfilter-1').removeAttribute('id'); }/*]]\u003e*/ .\n\nJoin us at Objectspace for a performance within Martino Gamper’s exhibition Endgrained , presented by dancer Xin Ji and musician Alistair Deverick.\n\nAround Gamper’s furniture, Xin and Alistair will stage a live performance bringing together movement, sound and real-time composition.\n\nDrawing on ideas from Xin’s solo work Body Story , the performance moves between dance and live music, letting meaning emerge through presence, texture, and exchange. Built through a long creative relationship, the work is shaped by physicality, rhythm, improvisation, and close attention to what is unfolding in the room.\n\nJoin us to watch it unfold with a drink in hand.\n\nXin Ji is a dance artist, choreographer, and educator based in Tāmaki Makaurau Auckland. Trained in Chinese classical ballet at the Beijing Dance Academy, he began his professional career in Japan with Shiki Theatre Company before moving to Aotearoa to study contemporary dance at Unitec. He has performed with leading contemporary companies in Aotearoa, including Footnote and the New Zealand Dance Company, and currently lectures in dance at Unitec. His practice spans performance and choreography across stage and screen, with a strong focus on physicality, presence, and storytelling.\n\nAlistair Deverick is a musician and sound designer of Scottish and Welsh ancestry based in Tāmaki Makaurau Auckland. He is known for his innovative approach to rhythm and texture. As a versatile drummer and producer, he has performed with acts like The Ruby Suns and Neil Finn and has created solo work under the moniker Boycrush, blending electronic, pop, and experimental sounds. His work spans live performance, studio production, and sound design, showcasing a dynamic range of musical influences.\n\nOver many years of working together, Xin Ji and Alistair Deverick have developed a close creative relationship grounded in listening, responsiveness, and a shared feel for atmosphere. Their collaboration brings together movement and sound in ways that feel physical and immediate.\n\nPublic Programming for Martino Gamper: Endgrained is supported by the British Council New Zealand and the Pacific .",
-        "free": false,
-        "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
-        "tags": [
-          "arts-culture",
-          "literature-writing"
-        ],
-        "host_slug": "objectspace"
-      },
-      {
         "id": "2d964e637ef86463",
         "title": "Screening within Endgrained: Speaking in Stone",
         "link": "https://www.eventbrite.co.nz/e/screening-within-endgrained-speaking-in-stone-tickets-1989061651945?aff=oddtdtcreator\u0026amp;keep_tld=true",
@@ -819,7 +710,7 @@
         "link": "https://www.eventbrite.co.nz/e/5050-booster-bingo-tickets-1989441111920?aff=oddtdtcreator",
         "time_start": "2026-05-28T18:00:00+12:00",
         "summary": "Join us for the classic of all fundraisers – bingo , but with an Objectspace twist! We’re hosting a bingo night as part of our crowdfunder 50/50 — For Makers and Objectspace .",
-        "description": "Join us for the classic of all fundraisers – bingo , but with an Objectspace twist! We’re hosting a bingo night as part of our crowdfunder 50/50 — For Makers and Objectspace .\n\nInvite a mate or two to take your place in Martino Gamper’s Endgrained (only 50 seats!) and test your luck.\n\nSpecial guests will join us to call the rounds and there will be seriously good prizes, including works by Aotearoa’s best makers (such as jewellery titans Judy Darragh and Warwick Freeman). We’ll reveal the prizes over the coming weeks, but expect this will sell out – get your tickets now .\n\nYour $35 ticket includes 3 bingo cards, and you can purchase more cards throughout the evening – all proceeds will go towards our 50/50 fundraiser. Plus, there’s a special raffle to be won for those making a donation on the night. Win/win!\n\nWhat you need to know:\n\n• Tickets are $35, which includes 3 bingo cards. Purchase a 5 card bundle for $40 on the night, or individual cards for $10 – all proceeds go towards our fundraiser.\n\n• Rounds: We'll aim to play 10 rounds (time allowing), and you can play several cards in each round to maximise your chance to win.\n\n• Hospitality: We’ll be running a cash bar for drinks and kai (again supporting our fundraiser).\n\nThis event will mark half-time for our biggest fundraising campaign ever. Join us for a fun night to support our efforts and have a great time doing so!",
+        "description": "Join us for the classic of all fundraisers – bingo , but with an Objectspace twist! We’re hosting a bingo night as part of our crowdfunder 50/50 — For Makers and Objectspace .\n\nInvite a mate or two to take your place in Martino Gamper’s Endgrained (only 50 seats!) and test your luck.\n\nSpecial guests will join us to call the rounds and there will be seriously good prizes, including works by Aotearoa’s best makers (such as jewellery titans Judy Darragh and Warwick Freeman). One lucky person who makes a donation to boosted on the night will take away an Endgrained hook made by Martino Gamper.\n\nYour $35 ticket includes 3 bingo cards, and you can purchase more cards throughout the evening – all proceeds will go towards our 50/50 fundraiser. Win/win!\n\nWhat you need to know:\n\n• Tickets are $35, which includes 3 bingo cards. Purchase a 5 card bundle for $40 on the night, or individual cards for $10 – all proceeds go towards our fundraiser.\n\n• Rounds: We'll aim to play 10 rounds (time allowing), and you can play several cards in each round to maximise your chance to win.\n\n• Hospitality: We’ll be running a cash bar for drinks and kai (again supporting our fundraiser).\n\nThis event will mark half-time for our biggest fundraising campaign ever. Join us for a fun night to support our efforts and have a great time doing so!",
         "free": false,
         "location": "Objectspace, Ockham Gallery, Ground Floor. 13 Rose Road, Ponsonby",
         "tags": [
@@ -884,14 +775,14 @@
     "description": "Royal Society Te Apārangi hosts public events exploring science, research, and ideas shaping New Zealand and the world.",
     "lectures": [
       {
-        "id": "6c85bd14c67bf65d",
+        "id": "de9ee3f1faf86b38",
         "title": "Our Mysterious Brain: The Making and Breaking of Memories",
-        "link": "https://www.royalsociety.org.nz/events/our-mysterious-brain-the-making-and-breaking-of-memories-auckland",
-        "time_start": "2026-05-19T18:00:00+12:00",
+        "link": "https://www.royalsociety.org.nz/events/our-mysterious-brain-the-making-and-breaking-of-memories-christchurch",
+        "time_start": "2026-05-27T17:30:00+12:00",
         "summary": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember – or forget.",
         "description": "Neuroscientist Emeritus Distinguished Professor Cliff Abraham FRSNZ will talk about what happens to the nerve cells in our brains to allow us to remember – or forget.",
         "free": false,
-        "location": "Auckland War Memorial Museum Auditorium Auckland Museum, Museum Circuit, Parnell, Auckland 1010, New Zealand",
+        "location": "Rolleston Lecture Theatre, University of Otago, Christchurch Campus 2 Riccarton Avenue, Christchurch 8011",
         "host_slug": "royal-society"
       }
     ]
@@ -922,6 +813,25 @@
         "host_slug": "studio-one"
       },
       {
+        "id": "07ddca6f970286a6",
+        "title": "Siva Mo Lou Soifua Manuia",
+        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
+        "time_start": "2026-06-04T00:00:00+12:00",
+        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
+        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
+        "free": true,
+        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
+        "speakers": [
+          {
+            "name": "CHARLENE TEDROW"
+          }
+        ],
+        "tags": [
+          "health-medicine"
+        ],
+        "host_slug": "studio-one"
+      },
+      {
         "id": "ce1f249b3c34b63f",
         "title": "Mamalu – A Lineage Embodied",
         "link": "https://www.eventfinda.co.nz/2026/mamalu-lineage-embodied-with-rosanna-raymond/auckland/ponsonby",
@@ -940,25 +850,6 @@
           "history-society"
         ],
         "host_slug": "studio-one"
-      },
-      {
-        "id": "07ddca6f970286a6",
-        "title": "Siva Mo Lou Soifua Manuia",
-        "link": "https://www.eventfinda.co.nz/2026/siva-mo-lou-soifua-manuia-with-charlene-tedrow/auckland/ponsonby",
-        "time_start": "2026-06-04T00:00:00+12:00",
-        "summary": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing.",
-        "description": "This workshop offers a nurturing journey into Siva Samoa, where movement supports wellbeing. Participants explore foundational Siva Samoa steps and their cultural meanings — gestures that honour connections to land, ocean, sky, ancestry, and community. Through soft hands, grounded feet, and mindful breath, they experience how movement mirrors the natural world. Rooted in traditional practice, the session invites people to slow down, reconnect, and honour the body. Open to all levels. Let them Siva for health, language, and collective wellbeing.",
-        "free": true,
-        "location": "Studio One Toi Tū, 1 Summer Street, Grey Lynn, Auckland",
-        "speakers": [
-          {
-            "name": "CHARLENE TEDROW"
-          }
-        ],
-        "tags": [
-          "health-medicine"
-        ],
-        "host_slug": "studio-one"
       }
     ]
   },
@@ -968,20 +859,6 @@
     "website": "https://www.tepapa.govt.nz/visit/events",
     "description": "The Museum of New Zealand Te Papa Tongarewa hosts lectures, symposia, and public programmes exploring Aotearoa's natural and cultural heritage.",
     "lectures": [
-      {
-        "id": "f97ff68eb8b1af43",
-        "title": "Leslie Adkin: Local History Discussion",
-        "link": "https://www.tepapa.govt.nz/visit/events/leslie-adkin-local-history-discussion",
-        "time_start": "2026-05-20T17:30:00+12:00",
-        "summary": "Join Te Papa Press for a deep dive discussion on one of New Zealand’s finest early photographers, Leslie Adkin.  This event is at the Te Matapihi ki te Ao Nui | Wellington’s Central Library.",
-        "description": "Join Te Papa Press for a deep dive discussion on one of New Zealand’s finest early photographers, Leslie Adkin.  This event is at the Te Matapihi ki te Ao Nui | Wellington’s Central Library.\n",
-        "free": false,
-        "location": "Te Papa Tongarewa, 55 Cable Street, Wellington",
-        "tags": [
-          "history-society"
-        ],
-        "host_slug": "te-papa"
-      },
       {
         "id": "c33d0f15166dfb58",
         "title": "Botanical Illustration and Art: Author Talk",
@@ -1013,14 +890,14 @@
     "description": "New Zealand's leading research-intensive university, offering a wide range of public lectures, seminars, and community events.",
     "lectures": [
       {
-        "id": "ff3963329dd882d8",
-        "title": "Governance in the Fourth Dimension",
-        "link": "https://www.eventbrite.co.nz/e/governance-in-the-fourth-dimension-tickets-1988893292377",
-        "time_start": "2026-05-20T17:30:00+12:00",
-        "summary": "Public Lecture: Professor Andrew A. Schwartz (University of Colorado)",
-        "description": "Public Lecture: Professor Andrew A. Schwartz (University of Colorado)",
+        "id": "9e0dbc22b82315af",
+        "title": "Moth-making workshop",
+        "link": "https://www.eventbrite.co.nz/e/moth-making-workshop-tickets-1990058928827",
+        "time_start": "2026-06-06T10:30:00+12:00",
+        "summary": "Create your own moth sculpture, inspired by Lucy Meyle's exhibition Phone Tree in The Changing Room",
+        "description": "Create your own moth sculpture, inspired by Lucy Meyle's exhibition Phone Tree in The Changing Room",
         "free": true,
-        "location": "Stone Lecture Theatre (801-316), Auckland Law School, Auckland",
+        "location": "Gus Fisher Gallery, 74 Shortland Street, Auckland",
         "tags": [
           "arts-culture"
         ],
@@ -1038,6 +915,17 @@
         "tags": [
           "arts-culture"
         ],
+        "host_slug": "auckland"
+      },
+      {
+        "id": "3756099d4a3535cb",
+        "title": "$100k Challenge Workshop",
+        "link": "https://www.eventbrite.co.nz/e/100k-challenge-workshop-tickets-1990064135400",
+        "time_start": "2026-08-04T17:00:00+12:00",
+        "summary": "Do you want advice from experts about your idea for the Velocity $100k Challenge? This is your opportunity!",
+        "description": "Do you want advice from experts about your idea for the Velocity $100k Challenge? This is your opportunity!",
+        "free": true,
+        "location": "Unleash space, 20 Symonds Street, Auckland",
         "host_slug": "auckland"
       }
     ]
@@ -1141,35 +1029,6 @@
     "description": "Te Herenga Waka — Victoria University of Wellington hosts regular public lectures, seminars, and events across its faculties and research institutes.",
     "bluesky": "@victoriauniversity.bsky.social",
     "lectures": [
-      {
-        "id": "b57944a3b4ba7563",
-        "title": "Familiarity Amidst Flux: The Navigation of Well-Being in Spiti Valley, India",
-        "link": "https://www.wgtn.ac.nz/sacs/about/events/familiarity-amidst-flux-the-navigation-of-well-being-in-spiti-valley-india",
-        "time_start": "2026-05-20T12:00:00+12:00",
-        "summary": "Hirdey Rampal - PhD candidate in Cultural Anthropology at Te Herenga Waka – Victoria University of WellingtonHow do people sustain well-being when the...",
-        "description": "Hirdey Rampal - PhD candidate in Cultural Anthropology at Te Herenga Waka – Victoria University of WellingtonHow do people sustain well-being when the...",
-        "free": true,
-        "location": "Wellington",
-        "tags": [
-          "arts-culture",
-          "history-society"
-        ],
-        "host_slug": "victoria"
-      },
-      {
-        "id": "d877bcff9e529644",
-        "title": "Mr Ward's Map—Victorian Wellington street by street",
-        "link": "https://www.wgtn.ac.nz/stout-centre/about/events/mr-wards-map-victorian-wellington-street-by-street",
-        "time_start": "2026-05-20T16:10:00+12:00",
-        "summary": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesElizabeth Cox The Stout Centre’s seminar series highlighting recent books continues with Elizabeth Cox’s Mr...",
-        "description": "Seminar Series—Between the Lines—Recent Books in New Zealand StudiesElizabeth Cox The Stout Centre’s seminar series highlighting recent books continues with Elizabeth Cox’s Mr...",
-        "free": false,
-        "location": "Wellington",
-        "tags": [
-          "literature-writing"
-        ],
-        "host_slug": "victoria"
-      },
       {
         "id": "7458408263065f34",
         "title": "The Cold War, the Bomb, and the Professors Who Turned around CIA",
